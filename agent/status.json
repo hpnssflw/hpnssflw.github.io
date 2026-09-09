@@ -3,15 +3,15 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 37,
-      "in_window": 37,
-      "kept": 0,
-      "new": 29
+      "collected": 31,
+      "in_window": 31,
+      "kept": 1,
+      "new": 23
     },
     "data-viz": {
       "collected": 4,
       "in_window": 4,
-      "kept": 0,
+      "kept": 1,
       "new": 3
     },
     "full-stack": {
@@ -22,119 +22,117 @@
     }
   },
   "last_email_at": null,
-  "pending_email_count": 51,
+  "pending_email_count": 53,
   "recent_events": [
     {
       "reason": "below_relevance",
       "title": "Show HN: Interactive Tree of Life",
       "topic": "full-stack",
-      "ts": "2026-09-09T18:55:11.079873+00:00",
+      "ts": "2026-09-09T22:04:24.885868+00:00",
       "verdict": "drop"
+    },
+    {
+      "score": 7,
+      "source": "hn",
+      "title": "27.5KB language-agnostic WebGPU syntax highlighter",
+      "topic": "data-viz",
+      "ts": "2026-09-09T22:04:20.960298+00:00",
+      "verdict": "kept"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: OwnTime \u2013 a chess clock for your day's priorities",
       "topic": "data-viz",
-      "ts": "2026-09-09T18:55:08.324501+00:00",
+      "ts": "2026-09-09T22:04:20.960276+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "WebLLM: high-performance in-browser LLM inference engine",
       "topic": "data-viz",
-      "ts": "2026-09-09T18:55:08.324480+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "27.5KB language-agnostic WebGPU syntax highlighter",
-      "topic": "data-viz",
-      "ts": "2026-09-09T18:55:08.324429+00:00",
+      "ts": "2026-09-09T22:04:20.960198+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "HomeOS \u2013 A self-hosted family dashboard for a kitchen touchscreen",
       "topic": "data-viz",
-      "ts": "2026-09-09T18:55:01.547905+00:00",
+      "ts": "2026-09-09T22:04:17.942500+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "Texas Data Center Map: See where data centers are operating or planned",
+      "score": 9,
+      "source": "hn",
+      "title": "Show HN: Self-hosted company OS, Claude Code and Codex agents in departments",
       "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355458+00:00",
+      "ts": "2026-09-09T22:04:16.752965+00:00",
+      "verdict": "kept"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Google Maps Showing 'Lake America' in U.S.",
+      "topic": "ai-agents",
+      "ts": "2026-09-09T22:04:16.752951+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Sky Map 2000 \u2013 Star Atlas and Planetarium",
       "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355445+00:00",
+      "ts": "2026-09-09T22:04:16.752938+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Google Maps Now Shows 'Lake America' in US, Not 'Lake Ontario'",
       "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355432+00:00",
+      "ts": "2026-09-09T22:04:16.752925+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Google Maps Renames Lake Ontario to Lake America",
       "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355418+00:00",
+      "ts": "2026-09-09T22:04:16.752912+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "MapQuest app surges to No. 1 in Navigation after refusing to rename Lake Ontario",
       "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355400+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Google Maps changed to show Lake Ontario as Lake America",
-      "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355388+00:00",
+      "ts": "2026-09-09T22:04:16.752897+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "UN to vote on adopting new world map that shows Africa's true scale",
       "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355375+00:00",
+      "ts": "2026-09-09T22:04:16.752880+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I attended the State of the Map conference",
       "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355362+00:00",
+      "ts": "2026-09-09T22:04:16.752867+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
+      "topic": "ai-agents",
+      "ts": "2026-09-09T22:04:16.752854+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Google Maps renames \"Lake Ontario\" to \"Lake America\" faster than US Government",
       "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355348+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "How Swiss tables work in Go built-in map",
-      "topic": "ai-agents",
-      "ts": "2026-09-09T18:55:00.355336+00:00",
+      "ts": "2026-09-09T22:04:16.752840+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-05T01:46:42.164249+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-05T07:54:04.205293+00:00"
@@ -226,19 +224,23 @@
     {
       "kept": 0,
       "ts": "2026-09-09T18:54:47.987434+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-09-09T22:04:02.666883+00:00"
     }
   ],
-  "streak": 130,
+  "streak": 131,
   "topics": [
     {
-      "collected": 37,
-      "kept": 0,
+      "collected": 31,
+      "kept": 1,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
     },
     {
       "collected": 4,
-      "kept": 0,
+      "kept": 1,
       "name": "Data Viz",
       "slug": "data-viz"
     },
@@ -249,5 +251,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-09T18:54:47.987434+00:00"
+  "updated_at": "2026-09-09T22:04:02.666883+00:00"
 }
