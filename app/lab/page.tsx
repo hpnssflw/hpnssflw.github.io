@@ -5,6 +5,12 @@ import { getAllPosts } from "@/lib/posts";
 export const metadata: Metadata = {
   title: "LAB",
   description: "Notes from running things in production.",
+  openGraph: {
+    title: "LAB — Artem Polozov",
+    description: "Notes from running things in production.",
+    type: "website",
+    url: "/lab/",
+  },
 };
 
 export default function LabIndexPage() {

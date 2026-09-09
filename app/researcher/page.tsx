@@ -4,6 +4,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "RESEARCHER",
   description: "Data viz, full-stack architecture, and AI agent engineering.",
+  openGraph: {
+    title: "RESEARCHER — Artem Polozov",
+    description: "Data viz, full-stack architecture, and AI agent engineering.",
+    type: "website",
+    url: "/researcher/",
+  },
 };
 
 export default function ResearcherIndexPage() {

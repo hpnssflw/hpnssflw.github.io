@@ -7,6 +7,7 @@ import {
   type SparkCell,
   STATUS_URL,
   fmtCountdown,
+  isAgentStatus,
   isStale,
   nextRunAt,
   sparklineCells,
@@ -48,8 +49,10 @@ export default function AgentWidget({ variant }: { variant: Variant }) {
         if (!res.ok) throw new Error(`status fetch failed: ${res.status}`);
         return res.json();
       })
-      .then((data: AgentStatus) => {
-        if (!cancelled) setStatus(data);
+      .then((data: unknown) => {
+        if (cancelled) return;
+        if (isAgentStatus(data)) setStatus(data);
+        else setFailed(true);
       })
       .catch(() => {
         if (!cancelled) setFailed(true);

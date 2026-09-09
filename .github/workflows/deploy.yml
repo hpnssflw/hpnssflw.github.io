@@ -12,7 +12,9 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # Don't cancel an in-flight deploy — a cancelled deploy-pages mid-upload
+  # can leave a partial deployment. Matches GitHub's Pages starter workflow.
+  cancel-in-progress: false
 
 jobs:
   build:

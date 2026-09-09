@@ -491,6 +491,9 @@ a:focus-visible {
 
 /* --- Post ------------------------------------------------------ */
 
+/* Top padding trimmed 140 -> 120 (and 88 -> 64 on mobile, below) for the
+   same reason as #hero and .standalone: the shared header now occupies
+   the space the old pages left with bare padding. */
 .post {
   padding: 120px 0 160px;
 }

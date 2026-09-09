@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   type AgentStatus,
   fmtCountdown,
+  isAgentStatus,
   isStale,
   nextRunAt,
   sparklineCells,
@@ -22,6 +23,35 @@ function makeStatus(overrides: Partial<AgentStatus> = {}): AgentStatus {
     ...overrides,
   };
 }
+
+describe("isAgentStatus", () => {
+  const good = {
+    ...makeStatus({
+      topics: [{ slug: "ai-agents", name: "AI Agents", collected: 3, kept: 1 }],
+      funnel: { "ai-agents": { collected: 3, in_window: 3, new: 2, kept: 1 } },
+    }),
+  };
+
+  it("accepts a well-formed payload", () => {
+    expect(isAgentStatus(good)).toBe(true);
+  });
+
+  it("rejects non-objects and nulls", () => {
+    expect(isAgentStatus(null)).toBe(false);
+    expect(isAgentStatus("nope")).toBe(false);
+    expect(isAgentStatus(undefined)).toBe(false);
+  });
+
+  it("rejects missing or wrong-typed collections", () => {
+    expect(isAgentStatus({ ...good, run_history: undefined })).toBe(false);
+    expect(isAgentStatus({ ...good, topics: {} })).toBe(false);
+    expect(isAgentStatus({ ...good, funnel: null })).toBe(false);
+  });
+
+  it("rejects a topic with no matching funnel entry", () => {
+    expect(isAgentStatus({ ...good, funnel: {} })).toBe(false);
+  });
+});
 
 describe("isStale", () => {
   const status = makeStatus({ updated_at: "2026-09-09T08:00:00+00:00" });

@@ -44,6 +44,33 @@ export interface AgentStatus {
 
 const SPARK_GLYPHS = ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"];
 
+/**
+ * Structural guard for a fetched `status.json`. The old widget rendered
+ * everything inside the fetch `.then()`, so any shape drift landed in
+ * `.catch()` → "agent status unavailable". The component renders fields
+ * during React render now, so the shape has to be checked before it is
+ * accepted, or a bad payload would white-screen the route instead.
+ */
+export function isAgentStatus(value: unknown): value is AgentStatus {
+  if (typeof value !== "object" || value === null) return false;
+  const s = value as Record<string, unknown>;
+  return (
+    typeof s.cadence_hours === "number" &&
+    typeof s.streak === "number" &&
+    typeof s.pending_email_count === "number" &&
+    typeof s.updated_at === "string" &&
+    Array.isArray(s.topics) &&
+    Array.isArray(s.run_history) &&
+    Array.isArray(s.recent_events) &&
+    typeof s.funnel === "object" &&
+    s.funnel !== null &&
+    (s.topics as TopicStatus[]).every(
+      (t) => t && typeof t.slug === "string" && s.funnel != null &&
+        typeof (s.funnel as Record<string, unknown>)[t.slug] === "object",
+    )
+  );
+}
+
 /** Stale once the last run is older than two cadence windows. */
 export function isStale(status: AgentStatus, now: number = Date.now()): boolean {
   const updated = new Date(status.updated_at).getTime();
