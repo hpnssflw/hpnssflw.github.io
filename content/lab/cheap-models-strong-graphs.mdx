@@ -1,0 +1,61 @@
+---
+title: Cheap Models, Strong Graphs
+date: "2026-08"
+tag: AI AGENTS
+excerpt: Three months running agents in production taught me the model matters less than I thought.
+subtitle: Three months of running AI agents in production, condensed into three decisions that held up and one that didn't.
+description: Three months of running AI agents in production, condensed into three decisions that held up and one that didn't.
+---
+
+The first version of the system was built around the assumption that quality
+comes from the model. Every failure got the same treatment: upgrade the model,
+widen the context, add another instruction to the prompt. It worked, in the
+sense that the failure went away and a new one arrived in its place.
+
+What actually fixed things was the opposite move — pulling intelligence out of
+the model and putting it into the structure around it. Three decisions from that
+period held up.
+
+## <Num>01</Num>Small steps beat large context
+
+A single node that reads a document, decides what to do, and does it fails in
+ways nobody can debug. The same work split across four nodes — extract, classify,
+plan, execute — fails in exactly one place, and that place is visible in the
+trace. Splitting the graph made the cheap model good enough for every individual
+step, because no step required holding the whole problem at once.
+
+## <Num>02</Num>Validation is not the model's job
+
+Asking a model to check its own output is asking the same failure mode to catch
+itself. Every boundary between nodes got a schema, and every schema violation got
+a retry with the error text appended. The retry rate is a real number that shows
+up on a dashboard — which means it can be watched, and it turned out to be the
+single most useful health signal in the system.
+
+## <Num>03</Num>Determinism where it's free
+
+A surprising share of what looked like reasoning was routing: _which_ handler,
+_which_ format, _which_ branch. None of that needs a model. Every decision that
+could be expressed as a rule became a rule, and the model was left with the part
+that genuinely required judgment. Latency dropped, cost dropped, and — the part I
+didn't expect — accuracy went up, because the deterministic paths stopped
+drifting between runs.
+
+## <Num>04</Num>And one that didn't: the shared memory layer
+
+The idea was that agents would write observations into a common store and read
+each other's context — cheap coordination, no orchestration. In practice it
+became a place where wrong facts went to become permanent. One bad extraction
+early in a run poisoned every downstream decision, and nothing in the system had
+the authority to say a stored fact was wrong.
+
+It got replaced with explicit hand-offs: each node receives exactly what the
+previous node produced, nothing more. Less elegant, more plumbing, and
+immediately debuggable — you can point at the edge where the wrong value entered.
+
+## What I'd tell myself in May
+
+The model is a component, not the architecture. Once the graph is right, the
+difference between an expensive model and a cheap one is smaller than the
+difference between a good graph and a bad one — and the graph is the part you
+actually control.
