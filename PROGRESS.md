@@ -2,26 +2,41 @@
 
 ## Site — Digital Craftsman + LAB + RESEARCHER
 
-**Status: built.**
+**Status: migrated to Next.js.**
 
-- Homepage: hero, RESEARCHER topics (with descriptions), LAB feed preview.
-- `lab/` — blog listing + one post ("Cheap Models, Strong Graphs", tagged `AI AGENTS`).
-- `researcher/` — topics hub page + a single link ("A Research Agent") to the
-  agent's plan on `researcher/agent.html`.
-- No build step, no JS, no automated tests (plain static HTML/CSS).
-- No GitHub remote configured yet — all work is committed directly to `master`.
+- Next.js App Router + TypeScript, statically exported (`output: 'export'`,
+  `trailingSlash: true`), deployed to GitHub Pages by
+  `.github/workflows/deploy.yml` on every push to `main`.
+- Routes: `/` (hero, RESEARCHER preview, LAB feed, agent widget),
+  `/lab/` + `/lab/[slug]/` (MDX posts from `content/lab/`, one so far —
+  "Cheap Models, Strong Graphs"), `/researcher/`, `/researcher/agent/`
+  (the agent plan page + live dashboard).
+- One persistent header (`components/SiteHeader.tsx`) and footer, rendered
+  by the root layout — this replaced the old ad-hoc per-page back links.
+  All nav is `next/link` (client-side).
+- The agent status widget is now `components/AgentWidget.tsx` +
+  `lib/agent-status.ts` (was `assets/agent-widget.js`); it still
+  client-fetches the same `status.json` from the `agent-data` branch.
+- Design system: `app/globals.css`, ported ~verbatim from the original
+  `styles.css` (token scale + "case" system unchanged).
+- Tests: `npm test` (Vitest) covers `lib/posts` and `lib/agent-status`.
+- Old `.html` URLs are kept alive by redirect stubs in `public/`.
+- Migration spec+plan: `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`
+  and `.claude/plans/lucky-rolling-aurora.md`.
 
 Design history for the site lives in `docs/superpowers/specs/` and
 `docs/superpowers/plans/` (one spec+plan pair per feature, in the order
 they were built). `landing-plan.md` at the repo root is the original design
 brief this all started from — see the note at its top for what's since
-changed.
+changed. The specs written before the Next.js move describe pages by their
+old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
 
 ## Research Agent
 
 **Status: Task 6 of 6 code-complete — one verification step deferred.**
 
-- Narrative plan (public, on the site): `researcher/agent.html`
+- Narrative plan (public, on the site): `app/researcher/agent/page.tsx`,
+  rendered at `/researcher/agent/`
 - Technical plan (background/design, not the task list): `docs/agent-plan.md`
 - Canonical implementation plan (the actual step-by-step tasks):
   `docs/superpowers/plans/2026-08-12-research-agent.md` — supersedes the
@@ -252,8 +267,14 @@ ledger at `.superpowers/sdd/2026-08-15-agent-status-widget/progress.md`
 (git-ignored) has the full task-by-task history if ever needed, and can
 be deleted once nobody expects to reference it.
 
+**Site (Next.js migration): shipped.** The static HTML site is now a
+statically-exported Next.js app, deployed to Pages by
+`.github/workflows/deploy.yml`. Nothing to resume — see the Site section
+at the top of this file. Plan:
+`.claude/plans/lucky-rolling-aurora.md`; spec:
+`docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`.
+
 **General:** see `CLAUDE.md` for this repo's actual conventions —
-`CLAUDE.md` itself was updated as part of the widget plan's final review
-to reflect the GitHub remote and `main` branch (commits still go directly
-to `main`, no PR flow, just under a new branch name and with a remote
-now attached).
+`CLAUDE.md` was rewritten for the Next.js move (build step, Pages
+Actions deploy, `npm` verification commands). Commits still go directly
+to `main`, no PR flow.

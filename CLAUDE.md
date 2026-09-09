@@ -1,9 +1,9 @@
 # CLAUDE.md
 
-Artem Polozov's personal site (static HTML/CSS: landing page, LAB blog,
-RESEARCHER section) plus a planned research/scraping agent that feeds his
-own writing. One repo, two initiatives — see `PROGRESS.md` for status of
-each.
+Artem Polozov's personal site (Next.js App Router, TypeScript, statically
+exported: landing page, LAB blog, RESEARCHER section) plus a
+research/scraping agent that feeds his own writing. One repo, two
+initiatives — see `PROGRESS.md` for status of each.
 
 ## Session start protocol
 
@@ -14,13 +14,23 @@ each.
 
 ## Conventions actually used in this repo
 
-- **A GitHub remote is configured** (`hpnssflw/webpage`), set up for the
-  agent's GitHub Actions workflow. Work still happens directly on `main`
-  (renamed from `master`) — no feature branches, no PRs — unless the user
-  explicitly asks for that workflow. `gh` commands are now a normal part
-  of managing the agent's GitHub Actions workflow, secrets, and repo
-  settings; they are not something to avoid. Do not invoke a generic
-  branch-per-task → PR → merge flow by default; it doesn't apply here.
+- **The site is a Next.js app** (App Router, TypeScript) that is
+  **statically exported** (`output: 'export'` in `next.config.mjs`) and
+  served by GitHub Pages via `.github/workflows/deploy.yml` (build type:
+  "GitHub Actions"). Every push to `main` rebuilds and redeploys. The
+  design history is in `docs/superpowers/specs/` and
+  `docs/superpowers/plans/`; the migration itself is
+  `2026-09-09-nextjs-migration-design.md`.
+- Because it's a static export, **do not use features that need a Node
+  server**: no dynamic route without `generateStaticParams` +
+  `dynamicParams = false`, no Route Handlers that read `Request`, no
+  `redirects`/`rewrites`/`headers` in config, no Server Actions. Client
+  data fetching (the agent widget) is fine.
+- **The GitHub remote is `hpnssflw/hpnssflw.github.io`** (a user site —
+  served at the domain root, so no `basePath`). Work happens directly on
+  `main` — no feature branches, no PRs — unless the user explicitly asks
+  for that workflow. `gh` is a normal part of managing Pages settings,
+  Actions, and secrets for both the site deploy and the agent workflow.
 - Commit in small, focused commits. Stage only the files relevant to the
   change — this repo has a habitually-uncommitted local
   `.claude/settings.local.json`; never stage it.
@@ -35,26 +45,42 @@ each.
   `"Reconcile status docs with Task N shipping"`. This does not relax the
   rule below it — confirm the *next* task with the user before writing any
   of its code; only the commits for the task just finished are automatic.
-- The site has no build step and no automated test suite. Verify site
-  changes by serving locally and curling the result:
+- **Verify site changes** by building and serving the export, plus the
+  test suite:
   ```
-  python -m http.server 5678 --bind 127.0.0.1
+  npm run dev             # iterate locally (http://localhost:3000)
+  npm run build           # static export into out/
+  npm run serve           # serve out/ exactly as Pages will
+  npm test                # Vitest — lib/posts, lib/agent-status
   ```
-  (bind explicitly to `127.0.0.1` — port 8000 is occupied by an unrelated
-  process on this machine, and other binds have hung the TCP handshake in
-  this environment before.)
-- The public plan page (`researcher/agent.html`) and `docs/agent-plan.md`
-  describe the same agent at two levels of detail (narrative vs.
-  technical). Keep them in sync at a high level whenever the agent's
-  design changes materially — they don't need to match word-for-word.
+  (`next dev` occasionally hangs the TCP handshake in this environment;
+  if a port won't come up, kill node and retry, or verify against
+  `npm run build` + `npm run serve` instead.)
+- The public plan page (`app/researcher/agent/page.tsx`) and
+  `docs/agent-plan.md` describe the same agent at two levels of detail
+  (narrative vs. technical). Keep them in sync at a high level whenever
+  the agent's design changes materially — they don't need to match
+  word-for-word.
 
 ## Do not
 
-- Don't add a build step, framework, or JS to the static site without
-  being asked — it's deliberately plain HTML/CSS. (`assets/agent-widget.js`
-  is a sanctioned, one-time exception per
-  `docs/superpowers/specs/2026-08-15-agent-status-widget-design.md` — it
-  doesn't license adding more JS elsewhere, and it isn't a mistake to
-  "fix" by removing.)
+- Don't add Tailwind, a CSS-in-JS runtime, or a component library. The
+  design is a hand-built token + "case" system in `app/globals.css`
+  (ported from the original `styles.css`) — extend it in that file.
+- Don't add heavyweight dependencies without being asked — the site is
+  deliberately close to plain HTML/CSS, just built through Next now.
+- Don't touch the agent (`agent/`, Python) or its
+  `.github/workflows/agent-run.yml` when doing site work — they are a
+  separate initiative, on the `agent-data` branch for state.
 - Don't start implementing the agent without confirming the task with the
   user first, even if `docs/agent-plan.md` makes the next step obvious.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

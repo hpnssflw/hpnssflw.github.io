@@ -1,8 +1,9 @@
 # Research Agent — Technical Plan
 
 This is the **canonical, implementation-facing** version of the plan. The
-public-facing narrative version lives at `researcher/agent.html` on the
-site — keep the two in sync at a high level (goal, sources, pipeline,
+public-facing narrative version lives at `app/researcher/agent/page.tsx`
+(rendered at `/researcher/agent/`) on the site — keep the two in sync at a
+high level (goal, sources, pipeline,
 stack) whenever this changes materially; they don't need to match
 word-for-word.
 
