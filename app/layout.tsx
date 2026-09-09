@@ -1,8 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import PageFrame from "@/components/PageFrame";
 
 export const metadata: Metadata = {
-  title: "Artem Polozov — Digital Craftsman",
+  title: {
+    default: "Artem Polozov — Digital Craftsman",
+    template: "%s — Artem Polozov",
+  },
   description:
     "Web products, data visualization, systems integration, AI agent orchestration.",
 };
@@ -18,7 +24,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        <PageFrame>
+          {children}
+          <SiteFooter />
+        </PageFrame>
+      </body>
     </html>
   );
 }
