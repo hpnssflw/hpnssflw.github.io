@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
+import AgentWidget from "@/components/AgentWidget";
 
 export default function HomePage() {
   const posts = getAllPosts();
@@ -62,7 +63,7 @@ export default function HomePage() {
               </span>
             </li>
           </ul>
-          <div id="agent-widget" />
+          <AgentWidget variant="compact" />
         </div>
       </section>
 

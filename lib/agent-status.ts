@@ -1,0 +1,91 @@
+export const STATUS_URL =
+  "https://raw.githubusercontent.com/hpnssflw/hpnssflw.github.io/agent-data/agent/status.json";
+
+export interface RunHistoryEntry {
+  kept: number;
+  ts: string;
+}
+
+export interface TopicStatus {
+  slug: string;
+  name: string;
+  collected: number;
+  kept: number;
+}
+
+export interface FunnelCounts {
+  collected: number;
+  in_window: number;
+  new: number;
+  kept: number;
+}
+
+export interface RecentEvent {
+  ts: string;
+  verdict: "kept" | "drop";
+  topic: string;
+  title: string;
+  reason?: string;
+  score?: number;
+}
+
+export interface AgentStatus {
+  cadence_hours: number;
+  email_cadence_hours: number;
+  streak: number;
+  pending_email_count: number;
+  updated_at: string;
+  last_email_at: string | null;
+  topics: TopicStatus[];
+  funnel: Record<string, FunnelCounts>;
+  recent_events: RecentEvent[];
+  run_history: RunHistoryEntry[];
+}
+
+const SPARK_GLYPHS = ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"];
+
+/** Stale once the last run is older than two cadence windows. */
+export function isStale(status: AgentStatus, now: number = Date.now()): boolean {
+  const updated = new Date(status.updated_at).getTime();
+  const staleAfterMs = status.cadence_hours * 2 * 3600 * 1000;
+  return now - updated > staleAfterMs;
+}
+
+export interface SparkCell {
+  glyph: string;
+  /** kept === 0 — rendered in the red "zero" colour. */
+  zero: boolean;
+}
+
+export function sparklineCells(history: RunHistoryEntry[]): SparkCell[] {
+  if (!history.length) return [];
+  const max = Math.max(1, ...history.map((h) => h.kept));
+  return history.map((run) => {
+    if (run.kept === 0) return { glyph: "▁", zero: true };
+    const level = Math.min(
+      SPARK_GLYPHS.length - 1,
+      Math.round((run.kept / max) * (SPARK_GLYPHS.length - 1)),
+    );
+    return { glyph: SPARK_GLYPHS[level], zero: false };
+  });
+}
+
+function pad(n: number): string {
+  return String(n).padStart(2, "0");
+}
+
+export function fmtCountdown(seconds: number): string {
+  if (seconds <= 0) return "due now";
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = Math.floor(seconds % 60);
+  return `${pad(h)}:${pad(m)}:${pad(s)}`;
+}
+
+/** Epoch ms of the next expected run. */
+export function nextRunAt(status: AgentStatus): number {
+  return (
+    new Date(status.updated_at).getTime() +
+    status.cadence_hours * 3600 * 1000
+  );
+}

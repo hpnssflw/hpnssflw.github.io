@@ -797,8 +797,9 @@ footer a {
 
 /* The dashboard status word ("online" / "stale") is lowercase in the
    markup and uppercased here — presentational only, matching the case
-   system rather than transforming the string in JS. */
-.agent-dashboard-header {
+   system rather than doing .toUpperCase() on the string in JS as the
+   old widget script did. */
+.agent-status-word {
   text-transform: uppercase;
 }
 
