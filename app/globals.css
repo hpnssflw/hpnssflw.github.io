@@ -88,7 +88,8 @@ body {
    they keep a common left edge. Inner blocks stay constrained by their own
    max-width, so line length never follows the container. The `.home` class
    is set by components/PageFrame.tsx on the "/" route only. */
-.home .wrap {
+.home .wrap,
+.home .site-header-inner {
   max-width: var(--measure-wide);
 }
 
@@ -162,7 +163,7 @@ a:focus-visible {
 }
 
 .site-header-inner {
-  max-width: var(--measure-wide);
+  max-width: var(--measure);
   margin: 0 auto;
   padding: 22px var(--gutter);
   display: flex;

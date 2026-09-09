@@ -33,8 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SiteHeader />
         <PageFrame>
+          <SiteHeader />
           {children}
           <SiteFooter />
         </PageFrame>
