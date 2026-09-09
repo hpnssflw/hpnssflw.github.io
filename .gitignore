@@ -1,6 +1,13 @@
 .superpowers/
 .worktrees/
 
+# Next.js site
+/node_modules/
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
 # Generated status report (status-report skill) — regenerate on demand.
 STATUS.html
 
