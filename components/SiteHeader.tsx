@@ -12,7 +12,10 @@ function normalize(path: string): string {
 export default function SiteHeader() {
   const pathname = normalize(usePathname());
 
-  const isHome = pathname === "/";
+  // The home page carries the name in its hero — a header there would just
+  // repeat it. Every other route gets the shared nav.
+  if (pathname === "/") return null;
+
   const inLab = pathname === "/lab" || pathname.startsWith("/lab/");
   const inResearcher =
     pathname === "/researcher" || pathname.startsWith("/researcher/");
@@ -20,11 +23,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <Link
-          className="brand"
-          href="/"
-          aria-current={isHome ? "page" : undefined}
-        >
+        <Link className="brand" href="/">
           Artem Polozov
         </Link>
         <nav>

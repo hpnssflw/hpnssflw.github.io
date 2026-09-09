@@ -88,8 +88,7 @@ body {
    they keep a common left edge. Inner blocks stay constrained by their own
    max-width, so line length never follows the container. The `.home` class
    is set by components/PageFrame.tsx on the "/" route only. */
-.home .wrap,
-.home .site-header-inner {
+.home .wrap {
   max-width: var(--measure-wide);
 }
 
@@ -155,8 +154,10 @@ a:focus-visible {
 
 /* --- Site header --------------------------------------------------
    New with the Next.js move: one persistent nav, rendered by the root
-   layout for every route, replacing the old ad-hoc per-page back links.
-   Static (not sticky); mono/uppercase to match the rest of the chrome. */
+   layout on every route except "/" (the home hero already carries the
+   name — SiteHeader returns null there). Replaces the old ad-hoc
+   per-page back links. Static (not sticky); mono/uppercase to match the
+   rest of the chrome. */
 
 .site-header {
   border-bottom: 1px solid #2a2a2a;
@@ -204,8 +205,10 @@ a:focus-visible {
 
 /* --- Hero ------------------------------------------------------ */
 
+/* The home page renders no site header (SiteHeader returns null on "/"),
+   so the hero keeps the original full top padding. */
 #hero {
-  padding: 120px 0 100px;
+  padding: 200px 0 100px;
 }
 
 @keyframes fade-in-up {
@@ -492,9 +495,9 @@ a:focus-visible {
 
 /* --- Post ------------------------------------------------------ */
 
-/* Top padding trimmed 140 -> 120 (and 88 -> 64 on mobile, below) for the
-   same reason as #hero and .standalone: the shared header now occupies
-   the space the old pages left with bare padding. */
+/* Top padding trimmed 140 -> 120 (and 88 -> 64 on mobile, below): the
+   shared header now occupies some of the space the old standalone pages
+   left with bare padding. Same reasoning for .standalone. */
 .post {
   padding: 120px 0 160px;
 }
@@ -616,7 +619,7 @@ footer a {
   }
 
   #hero {
-    padding: 72px 0 64px;
+    padding: 112px 0 64px;
   }
 
   /* Not enough width for two columns — the grid collapses back to normal
