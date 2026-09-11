@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Interactive Tree of Life",
       "topic": "full-stack",
-      "ts": "2026-09-11T01:50:33.407146+00:00",
+      "ts": "2026-09-11T08:23:07.843438+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: OwnTime \u2013 a chess clock for your day's priorities",
       "topic": "data-viz",
-      "ts": "2026-09-11T01:50:30.882467+00:00",
+      "ts": "2026-09-11T08:23:05.106326+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-11T01:50:29.198977+00:00",
+      "ts": "2026-09-11T08:23:03.583273+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "WebLLM: high-performance in-browser LLM inference engine",
       "topic": "data-viz",
-      "ts": "2026-09-11T01:50:29.198964+00:00",
+      "ts": "2026-09-11T08:23:03.583261+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "HomeOS \u2013 A self-hosted family dashboard for a kitchen touchscreen",
       "topic": "data-viz",
-      "ts": "2026-09-11T01:50:29.198944+00:00",
+      "ts": "2026-09-11T08:23:03.583239+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Reactor Atlas",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965771+00:00",
+      "ts": "2026-09-11T08:23:02.170436+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Sky Map 2000 \u2013 Star Atlas and Planetarium",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965758+00:00",
+      "ts": "2026-09-11T08:23:02.170423+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "UN to vote on adopting new world map that shows Africa's true scale",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965745+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
-      "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965731+00:00",
+      "ts": "2026-09-11T08:23:02.170410+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Google Maps renames \"Lake Ontario\" to \"Lake America\" faster than US Government",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965717+00:00",
+      "ts": "2026-09-11T08:23:02.170396+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "How Swiss tables work in Go built-in map",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965700+00:00",
+      "ts": "2026-09-11T08:23:02.170384+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Thanks to Lake Ontario, MapQuest is popular all over again",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965660+00:00",
+      "ts": "2026-09-11T08:23:02.170370+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Topologist's Map of the World",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965647+00:00",
+      "ts": "2026-09-11T08:23:02.170358+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965634+00:00",
+      "ts": "2026-09-11T08:23:02.170345+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Movie Scene Map \u2013 13,312 films, series, games, anime and manga",
       "topic": "ai-agents",
-      "ts": "2026-09-11T01:50:27.965621+00:00",
+      "ts": "2026-09-11T08:23:02.170332+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
+      "topic": "ai-agents",
+      "ts": "2026-09-11T08:23:02.170318+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-06T08:10:51.968173+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-06T14:31:59.767448+00:00"
@@ -226,9 +222,13 @@
     {
       "kept": 0,
       "ts": "2026-09-11T01:50:14.774721+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-11T08:22:51.958003+00:00"
     }
   ],
-  "streak": 137,
+  "streak": 138,
   "topics": [
     {
       "collected": 35,
@@ -249,5 +249,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-11T01:50:14.774721+00:00"
+  "updated_at": "2026-09-11T08:22:51.958003+00:00"
 }
