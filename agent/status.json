@@ -3,10 +3,10 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 35,
-      "in_window": 35,
+      "collected": 37,
+      "in_window": 37,
       "kept": 0,
-      "new": 23
+      "new": 26
     },
     "data-viz": {
       "collected": 4,
@@ -15,10 +15,10 @@
       "new": 1
     },
     "full-stack": {
-      "collected": 1,
-      "in_window": 1,
+      "collected": 2,
+      "in_window": 2,
       "kept": 0,
-      "new": 1
+      "new": 2
     }
   },
   "last_email_at": null,
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Interactive Tree of Life",
       "topic": "full-stack",
-      "ts": "2026-09-11T15:25:40.853570+00:00",
+      "ts": "2026-09-11T18:50:26.337287+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
+      "topic": "full-stack",
+      "ts": "2026-09-11T18:50:26.337217+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: OwnTime \u2013 a chess clock for your day's priorities",
       "topic": "data-viz",
-      "ts": "2026-09-11T15:25:38.153094+00:00",
+      "ts": "2026-09-11T18:50:22.370546+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-11T15:25:35.961418+00:00",
+      "ts": "2026-09-11T18:50:20.644678+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "WebLLM: high-performance in-browser LLM inference engine",
       "topic": "data-viz",
-      "ts": "2026-09-11T15:25:35.961406+00:00",
+      "ts": "2026-09-11T18:50:20.644666+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "HomeOS \u2013 A self-hosted family dashboard for a kitchen touchscreen",
       "topic": "data-viz",
-      "ts": "2026-09-11T15:25:35.961388+00:00",
+      "ts": "2026-09-11T18:50:20.644644+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "The UN challenges five centuries of cartography",
+      "topic": "ai-agents",
+      "ts": "2026-09-11T18:50:19.219435+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Icy Moons Are Ocean Worlds",
+      "topic": "ai-agents",
+      "ts": "2026-09-11T18:50:19.219423+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Global warming will exceed 1.5-degree limit, UN says",
       "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457417+00:00",
+      "ts": "2026-09-11T18:50:19.219409+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Reactor Atlas",
       "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457405+00:00",
+      "ts": "2026-09-11T18:50:19.219393+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Sky Map 2000 \u2013 Star Atlas and Planetarium",
       "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457392+00:00",
+      "ts": "2026-09-11T18:50:19.219381+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "UN to vote on adopting new world map that shows Africa's true scale",
       "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457379+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
-      "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457366+00:00",
+      "ts": "2026-09-11T18:50:19.219368+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "How Swiss tables work in Go built-in map",
       "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457353+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Thanks to Lake Ontario, MapQuest is popular all over again",
-      "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457341+00:00",
+      "ts": "2026-09-11T18:50:19.219356+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Topologist's Map of the World",
       "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457329+00:00",
+      "ts": "2026-09-11T18:50:19.219344+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457316+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Movie Scene Map \u2013 13,312 films, series, games, anime and manga",
-      "topic": "ai-agents",
-      "ts": "2026-09-11T15:25:34.457303+00:00",
+      "ts": "2026-09-11T18:50:19.219331+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-09-06T17:50:26.476278+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-06T21:48:37.183503+00:00"
@@ -226,12 +222,16 @@
     {
       "kept": 0,
       "ts": "2026-09-11T15:25:13.710288+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-11T18:50:08.711427+00:00"
     }
   ],
-  "streak": 139,
+  "streak": 140,
   "topics": [
     {
-      "collected": 35,
+      "collected": 37,
       "kept": 0,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
@@ -243,11 +243,11 @@
       "slug": "data-viz"
     },
     {
-      "collected": 1,
+      "collected": 2,
       "kept": 0,
       "name": "Full-Stack Architecture",
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-11T15:25:13.710288+00:00"
+  "updated_at": "2026-09-11T18:50:08.711427+00:00"
 }
