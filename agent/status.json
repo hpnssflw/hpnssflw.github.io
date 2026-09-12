@@ -3,10 +3,10 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 32,
-      "in_window": 32,
+      "collected": 33,
+      "in_window": 33,
       "kept": 0,
-      "new": 21
+      "new": 22
     },
     "data-viz": {
       "collected": 4,
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-11T22:04:35.234659+00:00",
+      "ts": "2026-09-12T01:56:09.725447+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Biff 2.0 (Clojure web framework)",
       "topic": "data-viz",
-      "ts": "2026-09-11T22:04:32.311860+00:00",
+      "ts": "2026-09-12T01:56:06.995287+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-11T22:04:30.383174+00:00",
+      "ts": "2026-09-12T01:56:04.296823+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "WebLLM: high-performance in-browser LLM inference engine",
       "topic": "data-viz",
-      "ts": "2026-09-11T22:04:30.383158+00:00",
+      "ts": "2026-09-12T01:56:04.296800+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "HomeOS \u2013 A self-hosted family dashboard for a kitchen touchscreen",
       "topic": "data-viz",
-      "ts": "2026-09-11T22:04:30.383123+00:00",
+      "ts": "2026-09-12T01:56:04.296780+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "The UN challenges five centuries of cartography",
       "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090407+00:00",
+      "ts": "2026-09-12T01:56:03.022002+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090394+00:00",
+      "ts": "2026-09-12T01:56:03.021989+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Global warming will exceed 1.5-degree limit, UN says",
       "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090381+00:00",
+      "ts": "2026-09-12T01:56:03.021970+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Reactor Atlas",
       "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090368+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Texas Data Center Map: See where data centers are operating or planned",
-      "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090355+00:00",
+      "ts": "2026-09-12T01:56:03.021934+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Sky Map 2000 \u2013 Star Atlas and Planetarium",
       "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090341+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome maps 9B DNA variants",
-      "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090323+00:00",
+      "ts": "2026-09-12T01:56:03.021921+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "UN to vote on adopting new world map that shows Africa's true scale",
       "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090307+00:00",
+      "ts": "2026-09-12T01:56:03.021907+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "AlphaGenome maps 9B DNA variants",
+      "topic": "ai-agents",
+      "ts": "2026-09-12T01:56:03.021894+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
       "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090292+00:00",
+      "ts": "2026-09-12T01:56:03.021879+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "How Swiss tables work in Go built-in map",
       "topic": "ai-agents",
-      "ts": "2026-09-11T22:04:29.090279+00:00",
+      "ts": "2026-09-12T01:56:03.021860+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Live map of public transport in Belgium",
+      "topic": "ai-agents",
+      "ts": "2026-09-12T01:56:03.021846+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-07T01:38:35.288052+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-09-07T08:42:22.255944+00:00"
@@ -226,12 +222,16 @@
     {
       "kept": 0,
       "ts": "2026-09-11T22:04:17.894699+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-12T01:55:49.280981+00:00"
     }
   ],
-  "streak": 141,
+  "streak": 142,
   "topics": [
     {
-      "collected": 32,
+      "collected": 33,
       "kept": 0,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
@@ -249,5 +249,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-11T22:04:17.894699+00:00"
+  "updated_at": "2026-09-12T01:55:49.280981+00:00"
 }
