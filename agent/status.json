@@ -9,16 +9,16 @@
       "new": 21
     },
     "data-viz": {
-      "collected": 4,
-      "in_window": 4,
+      "collected": 2,
+      "in_window": 2,
       "kept": 0,
       "new": 1
     },
     "full-stack": {
-      "collected": 1,
-      "in_window": 1,
+      "collected": 2,
+      "in_window": 2,
       "kept": 0,
-      "new": 1
+      "new": 2
     }
   },
   "last_email_at": null,
@@ -26,115 +26,111 @@
   "recent_events": [
     {
       "reason": "below_relevance",
+      "title": "Show HN: Interactive Tree of Life",
+      "topic": "full-stack",
+      "ts": "2026-09-12T14:33:03.752569+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-12T08:11:52.634463+00:00",
+      "ts": "2026-09-12T14:33:03.752505+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Biff 2.0 (Clojure web framework)",
       "topic": "data-viz",
-      "ts": "2026-09-12T08:11:49.045784+00:00",
+      "ts": "2026-09-12T14:33:00.679382+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-12T08:11:46.415856+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "WebLLM: high-performance in-browser LLM inference engine",
-      "topic": "data-viz",
-      "ts": "2026-09-12T08:11:46.415846+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "HomeOS \u2013 A self-hosted family dashboard for a kitchen touchscreen",
-      "topic": "data-viz",
-      "ts": "2026-09-12T08:11:46.415831+00:00",
+      "ts": "2026-09-12T14:32:58.750798+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262840+00:00",
+      "ts": "2026-09-12T14:32:57.720149+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Global warming will exceed 1.5-degree limit, UN says",
       "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262829+00:00",
+      "ts": "2026-09-12T14:32:57.720135+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Reactor Atlas",
       "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262820+00:00",
+      "ts": "2026-09-12T14:32:57.720123+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Texas Data Center Map: See where data centers are operating or planned",
+      "topic": "ai-agents",
+      "ts": "2026-09-12T14:32:57.720109+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Sky Map 2000 \u2013 Star Atlas and Planetarium",
       "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262810+00:00",
+      "ts": "2026-09-12T14:32:57.720096+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "UN to vote on adopting new world map that shows Africa's true scale",
       "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262799+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome maps 9B DNA variants",
-      "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262789+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
-      "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262775+00:00",
+      "ts": "2026-09-12T14:32:57.720081+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "How Swiss tables work in Go built-in map",
       "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262765+00:00",
+      "ts": "2026-09-12T14:32:57.720062+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262755+00:00",
+      "ts": "2026-09-12T14:32:57.720048+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
+      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
       "topic": "ai-agents",
-      "ts": "2026-09-12T08:11:45.262745+00:00",
+      "ts": "2026-09-12T14:32:57.720034+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Compute polynomials twice as fast",
+      "topic": "ai-agents",
+      "ts": "2026-09-12T14:32:57.720021+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Syq \u2013 copy files between machines fast (better than rsync)",
+      "topic": "ai-agents",
+      "ts": "2026-09-12T14:32:57.720007+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-07T16:46:19.412515+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-07T22:21:28.890469+00:00"
@@ -226,9 +222,13 @@
     {
       "kept": 0,
       "ts": "2026-09-12T08:11:33.960321+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-12T14:32:47.939692+00:00"
     }
   ],
-  "streak": 143,
+  "streak": 144,
   "topics": [
     {
       "collected": 32,
@@ -237,17 +237,17 @@
       "slug": "ai-agents"
     },
     {
-      "collected": 4,
+      "collected": 2,
       "kept": 0,
       "name": "Data Viz",
       "slug": "data-viz"
     },
     {
-      "collected": 1,
+      "collected": 2,
       "kept": 0,
       "name": "Full-Stack Architecture",
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-12T08:11:33.960321+00:00"
+  "updated_at": "2026-09-12T14:32:47.939692+00:00"
 }
