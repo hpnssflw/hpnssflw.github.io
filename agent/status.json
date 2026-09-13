@@ -6,7 +6,7 @@
       "collected": 30,
       "in_window": 30,
       "kept": 0,
-      "new": 20
+      "new": 22
     },
     "data-viz": {
       "collected": 2,
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Interactive Tree of Life",
       "topic": "full-stack",
-      "ts": "2026-09-13T08:36:03.400124+00:00",
+      "ts": "2026-09-13T15:13:30.070480+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-13T08:36:03.400050+00:00",
+      "ts": "2026-09-13T15:13:30.070415+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Biff 2.0 (Clojure web framework)",
       "topic": "data-viz",
-      "ts": "2026-09-13T08:35:59.164916+00:00",
+      "ts": "2026-09-13T15:13:26.930922+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-13T08:35:57.204995+00:00",
+      "ts": "2026-09-13T15:13:25.280744+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Asahi Linux on M3",
+      "topic": "ai-agents",
+      "ts": "2026-09-13T15:13:23.960789+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
+      "topic": "ai-agents",
+      "ts": "2026-09-13T15:13:23.960780+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Woman who exposed FBI official for working with Russian oligarch found dead",
+      "topic": "ai-agents",
+      "ts": "2026-09-13T15:13:23.960770+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "The UN challenges five centuries of cartography",
+      "topic": "ai-agents",
+      "ts": "2026-09-13T15:13:23.960759+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.489073+00:00",
+      "ts": "2026-09-13T15:13:23.960750+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Global warming will exceed 1.5-degree limit, UN says",
       "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.489060+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Reactor Atlas",
-      "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.489047+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Sky Map 2000 \u2013 Star Atlas and Planetarium",
-      "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.489030+00:00",
+      "ts": "2026-09-13T15:13:23.960741+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "UN to vote on adopting new world map that shows Africa's true scale",
       "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.489016+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "How Swiss tables work in Go built-in map",
-      "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.489003+00:00",
+      "ts": "2026-09-13T15:13:23.960732+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.488991+00:00",
+      "ts": "2026-09-13T15:13:23.960723+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
       "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.488978+00:00",
+      "ts": "2026-09-13T15:13:23.960713+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Compute polynomials twice as fast",
       "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.488964+00:00",
+      "ts": "2026-09-13T15:13:23.960704+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Syq \u2013 copy files between machines fast (better than rsync)",
       "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.488951+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: A browser IDE for m68000, Z80 assembly (and more), with graphics",
-      "topic": "ai-agents",
-      "ts": "2026-09-13T08:35:55.488939+00:00",
+      "ts": "2026-09-13T15:13:23.960694+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-08T19:05:03.113617+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-08T22:06:55.604259+00:00"
@@ -226,9 +222,13 @@
     {
       "kept": 0,
       "ts": "2026-09-13T08:35:38.702369+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-13T15:13:11.174945+00:00"
     }
   ],
-  "streak": 148,
+  "streak": 149,
   "topics": [
     {
       "collected": 30,
@@ -249,5 +249,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-13T08:35:38.702369+00:00"
+  "updated_at": "2026-09-13T15:13:11.174945+00:00"
 }
