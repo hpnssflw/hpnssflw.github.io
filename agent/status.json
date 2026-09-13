@@ -3,10 +3,10 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 31,
-      "in_window": 31,
+      "collected": 30,
+      "in_window": 30,
       "kept": 0,
-      "new": 21
+      "new": 20
     },
     "data-viz": {
       "collected": 2,
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Interactive Tree of Life",
       "topic": "full-stack",
-      "ts": "2026-09-13T01:48:53.176844+00:00",
+      "ts": "2026-09-13T08:36:03.400124+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-13T01:48:53.176781+00:00",
+      "ts": "2026-09-13T08:36:03.400050+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Biff 2.0 (Clojure web framework)",
       "topic": "data-viz",
-      "ts": "2026-09-13T01:48:49.211543+00:00",
+      "ts": "2026-09-13T08:35:59.164916+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-13T01:48:46.817498+00:00",
+      "ts": "2026-09-13T08:35:57.204995+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051220+00:00",
+      "ts": "2026-09-13T08:35:55.489073+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Global warming will exceed 1.5-degree limit, UN says",
       "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051207+00:00",
+      "ts": "2026-09-13T08:35:55.489060+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Reactor Atlas",
       "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051194+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Texas Data Center Map: See where data centers are operating or planned",
-      "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051179+00:00",
+      "ts": "2026-09-13T08:35:55.489047+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Sky Map 2000 \u2013 Star Atlas and Planetarium",
       "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051160+00:00",
+      "ts": "2026-09-13T08:35:55.489030+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "UN to vote on adopting new world map that shows Africa's true scale",
       "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051141+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
-      "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051099+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome maps 9B DNA variants",
-      "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051086+00:00",
+      "ts": "2026-09-13T08:35:55.489016+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "How Swiss tables work in Go built-in map",
       "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051073+00:00",
+      "ts": "2026-09-13T08:35:55.489003+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051060+00:00",
+      "ts": "2026-09-13T08:35:55.488991+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
+      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
       "topic": "ai-agents",
-      "ts": "2026-09-13T01:48:45.051046+00:00",
+      "ts": "2026-09-13T08:35:55.488978+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Compute polynomials twice as fast",
+      "topic": "ai-agents",
+      "ts": "2026-09-13T08:35:55.488964+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Syq \u2013 copy files between machines fast (better than rsync)",
+      "topic": "ai-agents",
+      "ts": "2026-09-13T08:35:55.488951+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: A browser IDE for m68000, Z80 assembly (and more), with graphics",
+      "topic": "ai-agents",
+      "ts": "2026-09-13T08:35:55.488939+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-08T15:33:13.824552+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-08T19:05:03.113617+00:00"
@@ -226,12 +222,16 @@
     {
       "kept": 0,
       "ts": "2026-09-13T01:48:33.313189+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-13T08:35:38.702369+00:00"
     }
   ],
-  "streak": 147,
+  "streak": 148,
   "topics": [
     {
-      "collected": 31,
+      "collected": 30,
       "kept": 0,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
@@ -249,5 +249,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-13T01:48:33.313189+00:00"
+  "updated_at": "2026-09-13T08:35:38.702369+00:00"
 }
