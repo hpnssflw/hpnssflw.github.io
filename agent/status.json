@@ -3,10 +3,10 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 30,
-      "in_window": 30,
+      "collected": 31,
+      "in_window": 31,
       "kept": 0,
-      "new": 24
+      "new": 25
     },
     "data-viz": {
       "collected": 1,
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-13T21:53:37.290989+00:00",
+      "ts": "2026-09-14T02:06:36.200986+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-13T21:53:33.934640+00:00",
+      "ts": "2026-09-14T02:06:32.665342+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "US Customs supervisor busted for stealing hardware from Homeland Security PCs",
+      "title": "Why Bullshit Jobs Are (Finally) Dying [video]",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557311+00:00",
+      "ts": "2026-09-14T02:06:30.752785+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Casablanca: How an unproduced play marched into movie history",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557298+00:00",
+      "ts": "2026-09-14T02:06:30.752778+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557285+00:00",
+      "ts": "2026-09-14T02:06:30.752770+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557271+00:00",
+      "ts": "2026-09-14T02:06:30.752762+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Woman who exposed FBI official for working with Russian oligarch found dead",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557257+00:00",
+      "ts": "2026-09-14T02:06:30.752754+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "The UN challenges five centuries of cartography",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557240+00:00",
+      "ts": "2026-09-14T02:06:30.752745+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557227+00:00",
+      "ts": "2026-09-14T02:06:30.752736+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Global warming will exceed 1.5-degree limit, UN says",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557214+00:00",
+      "ts": "2026-09-14T02:06:30.752728+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "UN to vote on adopting new world map that shows Africa's true scale",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557201+00:00",
+      "ts": "2026-09-14T02:06:30.752720+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557188+00:00",
+      "ts": "2026-09-14T02:06:30.752710+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "AlphaGenome maps 9B DNA variants",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557175+00:00",
+      "ts": "2026-09-14T02:06:30.752703+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557163+00:00",
+      "ts": "2026-09-14T02:06:30.752696+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
       "topic": "ai-agents",
-      "ts": "2026-09-13T21:53:32.557150+00:00",
+      "ts": "2026-09-14T02:06:30.752688+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-09T08:26:10.221532+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-09T15:28:05.972847+00:00"
@@ -226,12 +222,16 @@
     {
       "kept": 0,
       "ts": "2026-09-13T21:53:17.078470+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-14T02:06:14.594899+00:00"
     }
   ],
-  "streak": 151,
+  "streak": 152,
   "topics": [
     {
-      "collected": 30,
+      "collected": 31,
       "kept": 0,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
@@ -249,5 +249,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-13T21:53:17.078470+00:00"
+  "updated_at": "2026-09-14T02:06:14.594899+00:00"
 }
