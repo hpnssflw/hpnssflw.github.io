@@ -3,10 +3,10 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 32,
-      "in_window": 32,
-      "kept": 0,
-      "new": 26
+      "collected": 36,
+      "in_window": 36,
+      "kept": 3,
+      "new": 29
     },
     "data-viz": {
       "collected": 1,
@@ -22,119 +22,118 @@
     }
   },
   "last_email_at": null,
-  "pending_email_count": 57,
+  "pending_email_count": 60,
   "recent_events": [
     {
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-14T09:20:33.157267+00:00",
+      "ts": "2026-09-14T17:10:37.149860+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-14T09:20:30.041956+00:00",
+      "ts": "2026-09-14T17:10:34.305740+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "Why Bullshit Jobs Are (Finally) Dying [video]",
+      "score": 6,
+      "source": "hn",
+      "title": "Astra and Fable still hack on simple variants of alignment evals from 2025",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738836+00:00",
-      "verdict": "drop"
+      "ts": "2026-09-14T17:10:32.995458+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 8,
+      "source": "hn",
+      "title": "Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama",
+      "topic": "ai-agents",
+      "ts": "2026-09-14T17:10:32.995445+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "hn",
+      "title": "Bad benchmarks and evals: Senior SWE-Bench, napkin math, and winter tires",
+      "topic": "ai-agents",
+      "ts": "2026-09-14T17:10:32.995428+00:00",
+      "verdict": "kept"
     },
     {
       "reason": "below_relevance",
       "title": "Child Sexual Abuse Material Persists on X",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738823+00:00",
+      "ts": "2026-09-14T17:10:32.995415+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Casablanca: How an unproduced play marched into movie history",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738810+00:00",
+      "ts": "2026-09-14T17:10:32.995402+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Why Emacs Consult async searches feel slow and how to speed them up",
+      "topic": "ai-agents",
+      "ts": "2026-09-14T17:10:32.995390+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738797+00:00",
+      "ts": "2026-09-14T17:10:32.995377+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Asahi Linux on M3",
+      "topic": "ai-agents",
+      "ts": "2026-09-14T17:10:32.995365+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738784+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Woman who exposed FBI official for working with Russian oligarch found dead",
-      "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738770+00:00",
+      "ts": "2026-09-14T17:10:32.995352+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "The UN challenges five centuries of cartography",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738755+00:00",
+      "ts": "2026-09-14T17:10:32.995339+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738739+00:00",
+      "ts": "2026-09-14T17:10:32.995326+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Global warming will exceed 1.5-degree limit, UN says",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738721+00:00",
+      "ts": "2026-09-14T17:10:32.995312+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Live map of public transport in Belgium",
+      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
       "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738708+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
-      "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738695+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Compute polynomials twice as fast",
-      "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738682+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Syq \u2013 copy files between machines fast (better than rsync)",
-      "topic": "ai-agents",
-      "ts": "2026-09-14T09:20:28.738668+00:00",
+      "ts": "2026-09-14T17:10:32.995299+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-09T18:54:47.987434+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-09T22:04:02.666883+00:00"
@@ -226,13 +225,17 @@
     {
       "kept": 0,
       "ts": "2026-09-14T09:20:12.995887+00:00"
+    },
+    {
+      "kept": 3,
+      "ts": "2026-09-14T17:10:09.041768+00:00"
     }
   ],
-  "streak": 153,
+  "streak": 154,
   "topics": [
     {
-      "collected": 32,
-      "kept": 0,
+      "collected": 36,
+      "kept": 3,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
     },
@@ -249,5 +252,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-14T09:20:12.995887+00:00"
+  "updated_at": "2026-09-14T17:10:09.041768+00:00"
 }

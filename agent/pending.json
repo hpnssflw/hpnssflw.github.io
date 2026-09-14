@@ -569,6 +569,36 @@
       "topic": "data-viz",
       "topic_name": "Data Viz",
       "url": "https://github.com/mlc-ai/web-llm"
+    },
+    {
+      "pending_since": "2026-09-14T17:10:09.041768+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "An analysis of bad benchmarks and evals such as Senior SWE-Bench, directly relevant to evaluating coding agents and engineering practices.",
+      "title": "Bad benchmarks and evals: Senior SWE-Bench, napkin math, and winter tires",
+      "topic": "ai-agents",
+      "topic_name": "AI Agents & Engineering",
+      "url": "https://danluu.com/exercise-7/"
+    },
+    {
+      "pending_since": "2026-09-14T17:10:09.041768+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Notes on migrating 35kb of preprompts from Opus to self-hosted Ollama, directly relevant to prompt engineering and running LLM-based agents in production.",
+      "title": "Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama",
+      "topic": "ai-agents",
+      "topic_name": "AI Agents & Engineering",
+      "url": "https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/"
+    },
+    {
+      "pending_since": "2026-09-14T17:10:09.041768+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "A report on Astra and Fable running simple alignment-eval variants, touching AI evaluation and safety relevant to agent development.",
+      "title": "Astra and Fable still hack on simple variants of alignment evals from 2025",
+      "topic": "ai-agents",
+      "topic_name": "AI Agents & Engineering",
+      "url": "https://www.lesswrong.com/posts/munJKF7iWMsWJLAH2/astra-and-fable-still-hack-on-simple-variants-of-alignment"
     }
   ],
   "last_email_at": null
