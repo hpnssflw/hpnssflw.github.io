@@ -3,8 +3,8 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 38,
-      "in_window": 38,
+      "collected": 37,
+      "in_window": 37,
       "kept": 0,
       "new": 28
     },
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-15T02:13:31.953028+00:00",
+      "ts": "2026-09-15T09:02:37.249041+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-15T02:13:29.047834+00:00",
+      "ts": "2026-09-15T09:02:31.220002+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Why Bullshit Jobs Are (Finally) Dying [video]",
+      "topic": "ai-agents",
+      "ts": "2026-09-15T09:02:29.582108+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Child Sexual Abuse Material Persists on X",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275461+00:00",
+      "ts": "2026-09-15T09:02:29.582096+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Casablanca: How an unproduced play marched into movie history",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275448+00:00",
+      "ts": "2026-09-15T09:02:29.582083+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Why Emacs Consult async searches feel slow and how to speed them up",
+      "topic": "ai-agents",
+      "ts": "2026-09-15T09:02:29.582071+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275435+00:00",
+      "ts": "2026-09-15T09:02:29.582058+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Asahi Linux on M3",
+      "topic": "ai-agents",
+      "ts": "2026-09-15T09:02:29.582041+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275421+00:00",
+      "ts": "2026-09-15T09:02:29.582028+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "The UN challenges five centuries of cartography",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275409+00:00",
+      "ts": "2026-09-15T09:02:29.582016+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275394+00:00",
+      "ts": "2026-09-15T09:02:29.582004+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Global warming will exceed 1.5-degree limit, UN says",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275376+00:00",
+      "ts": "2026-09-15T09:02:29.581991+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275362+00:00",
+      "ts": "2026-09-15T09:02:29.581977+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "AlphaGenome maps 9B DNA variants",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275349+00:00",
+      "ts": "2026-09-15T09:02:29.581965+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275336+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
-      "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275323+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
-      "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275305+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Compute polynomials twice as fast",
-      "topic": "ai-agents",
-      "ts": "2026-09-15T02:13:27.275266+00:00",
+      "ts": "2026-09-15T09:02:29.581951+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-09-10T08:28:12.519648+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-10T15:23:43.041686+00:00"
@@ -226,12 +222,16 @@
     {
       "kept": 0,
       "ts": "2026-09-15T02:13:13.154936+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-15T09:02:04.272871+00:00"
     }
   ],
-  "streak": 156,
+  "streak": 157,
   "topics": [
     {
-      "collected": 38,
+      "collected": 37,
       "kept": 0,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
@@ -249,5 +249,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-15T02:13:13.154936+00:00"
+  "updated_at": "2026-09-15T09:02:04.272871+00:00"
 }
