@@ -3,10 +3,10 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 38,
-      "in_window": 38,
+      "collected": 32,
+      "in_window": 32,
       "kept": 0,
-      "new": 29
+      "new": 24
     },
     "data-viz": {
       "collected": 1,
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-15T19:20:43.614322+00:00",
+      "ts": "2026-09-15T22:31:02.347933+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-15T19:20:41.117612+00:00",
+      "ts": "2026-09-15T22:30:59.434233+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Child Sexual Abuse Material Persists on X",
+      "title": "How much oil-market buffer is left?",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814911+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Casablanca: How an unproduced play marched into movie history",
-      "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814899+00:00",
+      "ts": "2026-09-15T22:30:57.913287+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "25 Years of Mass Surveillance Is Enough [Auth: Cindy Cohn; Bruce Schneier]",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814886+00:00",
+      "ts": "2026-09-15T22:30:57.913278+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814874+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
-      "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814861+00:00",
+      "ts": "2026-09-15T22:30:57.913269+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "The UN challenges five centuries of cartography",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814849+00:00",
+      "ts": "2026-09-15T22:30:57.913261+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814834+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
-      "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814821+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AlphaGenome maps 9B DNA variants",
-      "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814809+00:00",
+      "ts": "2026-09-15T22:30:57.913252+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814797+00:00",
+      "ts": "2026-09-15T22:30:57.913243+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
+      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814784+00:00",
+      "ts": "2026-09-15T22:30:57.913233+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Compute polynomials twice as fast",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814772+00:00",
+      "ts": "2026-09-15T22:30:57.913223+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: Syq \u2013 copy files between machines fast (better than rsync)",
+      "title": "Show HN: VODForge \u2013 a free local desktop UI for YouTube video/playlist downloads",
       "topic": "ai-agents",
-      "ts": "2026-09-15T19:20:39.814759+00:00",
+      "ts": "2026-09-15T22:30:57.913213+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "We Must Return to the Office to Use AI in Person",
+      "topic": "ai-agents",
+      "ts": "2026-09-15T22:30:57.913203+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
+      "topic": "ai-agents",
+      "ts": "2026-09-15T22:30:57.913192+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "AlphaGenome maps 9B DNA variants",
+      "topic": "ai-agents",
+      "ts": "2026-09-15T22:30:57.913183+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
+      "topic": "ai-agents",
+      "ts": "2026-09-15T22:30:57.913174+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-09-10T22:01:49.684171+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-11T01:50:14.774721+00:00"
@@ -226,12 +222,16 @@
     {
       "kept": 0,
       "ts": "2026-09-15T19:20:28.976799+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-15T22:30:39.286736+00:00"
     }
   ],
-  "streak": 159,
+  "streak": 160,
   "topics": [
     {
-      "collected": 38,
+      "collected": 32,
       "kept": 0,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
@@ -249,5 +249,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-15T19:20:28.976799+00:00"
+  "updated_at": "2026-09-15T22:30:39.286736+00:00"
 }
