@@ -619,6 +619,166 @@
       "topic": "ai-agents",
       "topic_name": "AI Agents & Engineering",
       "url": "https://github.com/pizza-bot-app/pizza-bot"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Open-source Qwen3-based speech models (TTS and ASR) optimized for high accuracy, low latency, and cost.",
+      "title": "Show HN: Nari Qwen3-TTS and Qwen3-ASR \u2013 High accuracy, low latency and cost",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "YuE2 is a frontier music generation model that uses symbolic planning.",
+      "title": "YuE2 \u00b7 Frontier Music with Symbolic Planning",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://map-yue2.github.io/"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "An opinion piece calling for US open-weight AI labs to distill frontier models, touching on model efficiency and policy.",
+      "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "AgentVerse-OS is a personal cloud OS for developers with AI agents, a comprehensive tool.",
+      "title": "agentverse-os/AgentVerse-OS",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/agentverse-os/AgentVerse-OS"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Engrim is a local-first SQLite memory engine for AI CLIs, a developer tool.",
+      "title": "Show HN: Engrim \u2013 A universal, local-first SQLite memory engine for AI CLIs",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/timgordontg/engrim"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "EterDB is a Postgres fork for easier incident recovery, a database tool.",
+      "title": "Show HN: EterDB, a Postgres fork that makes it easy to recover from incidents",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://eterdb.com/"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Filament is a fast data movement engine in Go, an open-source tool.",
+      "title": "Show HN: Filament \u2013 Fast data movement engine in Go",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/galaxy-io/filament"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "holo-card-studio generates editable Blender cards and Three.js pages, a web dev tool.",
+      "title": "EverettFish/holo-card-studio",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/EverettFish/holo-card-studio"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "rune is a development environment for professionals, a dev tool.",
+      "title": "unstablebuild/rune",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/unstablebuild/rune"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "anything2explainer turns topics into narrated explainer videos using Remotion, a creative tool.",
+      "title": "Vincentwei1021/anything2explainer",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/Vincentwei1021/anything2explainer"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "tokentab is a CLI for tracking AI coding assistant costs, a developer tool.",
+      "title": "crwdla/tokentab",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/crwdla/tokentab"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Shopify acquiring Tailwind CSS, a major web product and front-end architecture event highly relevant to web trends and tooling.",
+      "title": "Shopify acquires Tailwind",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Shopify's migration from React Native back to native Swift and Kotlin, a significant mobile/web architecture and product technology trend.",
+      "title": "Shopify is moving from React Native back to Swift and Kotlin",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://shopify.engineering/back-to-native"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "Ask HN thread where founders share micro-SaaS projects, tech stacks, and revenue, directly relevant to product and web business trends.",
+      "title": "Ask HN: Show your micro-SaaS",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://news.ycombinator.com/item?id=49590656"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "Investigation into why Google still serves dubious ads, touching on search, advertising, and SEO-adjacent platform integrity issues.",
+      "title": "Why is Google still serving dodgy ads?",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://www.atomic14.com/2026/09/13/why-is-google-still-serving-dodgy-ads"
+    },
+    {
+      "pending_since": "2026-09-16T15:41:52.087909+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "Interactive visualization imagining the speed of light at 5 km/h, a strong data visualization project relevant to web-based visuals.",
+      "title": "Show HN: What if the speed of light was 5 km/h?",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://rivendell.dmitrybrant.com/relativity/"
     }
   ],
   "last_email_at": null

@@ -2,139 +2,140 @@
   "cadence_hours": 4,
   "email_cadence_hours": 24,
   "funnel": {
-    "ai-agents": {
-      "collected": 34,
-      "in_window": 34,
-      "kept": 0,
+    "ai-engineering": {
+      "collected": 35,
+      "in_window": 35,
+      "kept": 3,
+      "new": 26
+    },
+    "tooling": {
+      "collected": 52,
+      "in_window": 52,
+      "kept": 8,
+      "new": 50
+    },
+    "web-products": {
+      "collected": 27,
+      "in_window": 27,
+      "kept": 5,
       "new": 25
-    },
-    "data-viz": {
-      "collected": 1,
-      "in_window": 1,
-      "kept": 0,
-      "new": 0
-    },
-    "full-stack": {
-      "collected": 1,
-      "in_window": 1,
-      "kept": 0,
-      "new": 1
     }
   },
   "last_email_at": null,
-  "pending_email_count": 62,
+  "pending_email_count": 78,
   "recent_events": [
     {
-      "reason": "below_relevance",
-      "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
-      "topic": "full-stack",
-      "ts": "2026-09-16T08:54:33.839321+00:00",
-      "verdict": "drop"
+      "score": 6,
+      "source": "hn",
+      "title": "Show HN: What if the speed of light was 5 km/h?",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594122+00:00",
+      "verdict": "kept"
     },
     {
-      "reason": "seen",
-      "title": "27.5KB language-agnostic WebGPU syntax highlighter",
-      "topic": "data-viz",
-      "ts": "2026-09-16T08:54:30.501203+00:00",
-      "verdict": "drop"
+      "score": 6,
+      "source": "hn",
+      "title": "Why is Google still serving dodgy ads?",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594111+00:00",
+      "verdict": "kept"
     },
     {
-      "reason": "below_relevance",
-      "title": "Why Emacs Consult async searches feel slow and how to speed them up",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961974+00:00",
-      "verdict": "drop"
+      "score": 7,
+      "source": "hn",
+      "title": "Ask HN: Show your micro-SaaS",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594101+00:00",
+      "verdict": "kept"
     },
     {
-      "reason": "below_relevance",
-      "title": "How much oil-market buffer is left?",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961962+00:00",
-      "verdict": "drop"
+      "score": 8,
+      "source": "hn",
+      "title": "Shopify is moving from React Native back to Swift and Kotlin",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594090+00:00",
+      "verdict": "kept"
     },
     {
-      "reason": "below_relevance",
-      "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961949+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "25 Years of Mass Surveillance Is Enough [Auth: Cindy Cohn; Bruce Schneier]",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961937+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Smartphone makers don't bother to comply with EU repairability requirements",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961924+00:00",
-      "verdict": "drop"
+      "score": 9,
+      "source": "hn",
+      "title": "Shopify acquires Tailwind",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594077+00:00",
+      "verdict": "kept"
     },
     {
       "reason": "below_relevance",
-      "title": "Asahi Linux on M3",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961910+00:00",
+      "title": "Everyone should slow down AI development except for me",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594058+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "The UN challenges five centuries of cartography",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961898+00:00",
+      "title": "I can't stop thinking about Papua New Guinea",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594045+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Icy Moons Are Ocean Worlds",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961886+00:00",
+      "title": "On the Navier\u2013Stokes Millennium Prize Problem",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594033+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "An interactive world map of the stories cultures have told",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961872+00:00",
+      "title": "Navier-Stokes \u2013 Tristan Buckmaster [pdf]",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594016+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Live map of public transport in Belgium",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961859+00:00",
+      "title": "Ask HN: Can we please limit the AI news flood?",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.594004+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961846+00:00",
+      "title": "I have a theory that software drives people insane",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.593992+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: Compute polynomials twice as fast",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961832+00:00",
+      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.593979+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: A browser IDE for m68000, Z80 assembly (and more), with graphics",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T08:54:28.961808+00:00",
+      "title": "Keep Our Servers Running",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.593966+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.593954+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: DOOM in the kernel, or fibers in eBPF",
+      "topic": "web-products",
+      "ts": "2026-09-16T15:42:48.593941+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-11T15:25:13.710288+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-11T18:50:08.711427+00:00"
@@ -226,28 +227,32 @@
     {
       "kept": 0,
       "ts": "2026-09-16T08:54:15.597774+00:00"
+    },
+    {
+      "kept": 16,
+      "ts": "2026-09-16T15:41:52.087909+00:00"
     }
   ],
-  "streak": 162,
+  "streak": 163,
   "topics": [
     {
-      "collected": 34,
-      "kept": 0,
-      "name": "AI Agents & Engineering",
-      "slug": "ai-agents"
+      "collected": 35,
+      "kept": 3,
+      "name": "AI Engineering",
+      "slug": "ai-engineering"
     },
     {
-      "collected": 1,
-      "kept": 0,
-      "name": "Data Viz",
-      "slug": "data-viz"
+      "collected": 52,
+      "kept": 8,
+      "name": "Tooling",
+      "slug": "tooling"
     },
     {
-      "collected": 1,
-      "kept": 0,
-      "name": "Full-Stack Architecture",
-      "slug": "full-stack"
+      "collected": 27,
+      "kept": 5,
+      "name": "Web Products",
+      "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-16T08:54:15.597774+00:00"
+  "updated_at": "2026-09-16T15:41:52.087909+00:00"
 }
