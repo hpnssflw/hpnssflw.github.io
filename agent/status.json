@@ -3,10 +3,10 @@
   "email_cadence_hours": 24,
   "funnel": {
     "ai-agents": {
-      "collected": 35,
-      "in_window": 35,
-      "kept": 1,
-      "new": 27
+      "collected": 34,
+      "in_window": 34,
+      "kept": 0,
+      "new": 25
     },
     "data-viz": {
       "collected": 1,
@@ -28,114 +28,109 @@
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "full-stack",
-      "ts": "2026-09-16T02:06:31.096734+00:00",
+      "ts": "2026-09-16T08:54:33.839321+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "27.5KB language-agnostic WebGPU syntax highlighter",
       "topic": "data-viz",
-      "ts": "2026-09-16T02:06:27.784149+00:00",
-      "verdict": "drop"
-    },
-    {
-      "score": 10,
-      "source": "hn",
-      "title": "Show HN: Pizza Bot \u2013 An inbox for AI agents that work in the background",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951986+00:00",
-      "verdict": "kept"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "High-performance garbage collection for C++",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951975+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "US Customs supervisor busted for stealing hardware from Homeland Security PCs",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951966+00:00",
+      "ts": "2026-09-16T08:54:30.501203+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why Emacs Consult async searches feel slow and how to speed them up",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951959+00:00",
+      "ts": "2026-09-16T08:54:28.961974+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "How much oil-market buffer is left?",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951952+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "25 Years of Mass Surveillance Is Enough [Auth: Cindy Cohn; Bruce Schneier]",
-      "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951945+00:00",
+      "ts": "2026-09-16T08:54:28.961962+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951938+00:00",
+      "ts": "2026-09-16T08:54:28.961949+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "25 Years of Mass Surveillance Is Enough [Auth: Cindy Cohn; Bruce Schneier]",
+      "topic": "ai-agents",
+      "ts": "2026-09-16T08:54:28.961937+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Smartphone makers don't bother to comply with EU repairability requirements",
+      "topic": "ai-agents",
+      "ts": "2026-09-16T08:54:28.961924+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Asahi Linux on M3",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951931+00:00",
+      "ts": "2026-09-16T08:54:28.961910+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "The UN challenges five centuries of cartography",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951925+00:00",
+      "ts": "2026-09-16T08:54:28.961898+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Icy Moons Are Ocean Worlds",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951918+00:00",
+      "ts": "2026-09-16T08:54:28.961886+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "We Must Return to the Office to Use AI in Person",
+      "title": "An interactive world map of the stories cultures have told",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951911+00:00",
+      "ts": "2026-09-16T08:54:28.961872+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "When code is a maze, smart developers make maps (2025)",
+      "title": "Live map of public transport in Belgium",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951903+00:00",
+      "ts": "2026-09-16T08:54:28.961859+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
+      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
       "topic": "ai-agents",
-      "ts": "2026-09-16T02:06:25.951895+00:00",
+      "ts": "2026-09-16T08:54:28.961846+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Compute polynomials twice as fast",
+      "topic": "ai-agents",
+      "ts": "2026-09-16T08:54:28.961832+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: A browser IDE for m68000, Z80 assembly (and more), with graphics",
+      "topic": "ai-agents",
+      "ts": "2026-09-16T08:54:28.961808+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-11T08:22:51.958003+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-11T15:25:13.710288+00:00"
@@ -227,13 +222,17 @@
     {
       "kept": 1,
       "ts": "2026-09-16T02:06:04.905189+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-16T08:54:15.597774+00:00"
     }
   ],
-  "streak": 161,
+  "streak": 162,
   "topics": [
     {
-      "collected": 35,
-      "kept": 1,
+      "collected": 34,
+      "kept": 0,
       "name": "AI Agents & Engineering",
       "slug": "ai-agents"
     },
@@ -250,5 +249,5 @@
       "slug": "full-stack"
     }
   ],
-  "updated_at": "2026-09-16T02:06:04.905189+00:00"
+  "updated_at": "2026-09-16T08:54:15.597774+00:00"
 }
