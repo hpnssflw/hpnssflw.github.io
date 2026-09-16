@@ -1,0 +1,9 @@
+name: AI Engineering
+description: >
+  Agent and automated pipelines and harnesses, LLM assistants,
+  self-hosted/private AI platform development, and LLM/inference
+  optimization.
+keywords: [agent framework, tool use, evals, MCP, LLM inference, self-hosted AI]
+
+sources:
+  hacker_news: { min_points: 30 }

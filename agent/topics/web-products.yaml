@@ -1,0 +1,8 @@
+name: Web Products
+description: >
+  Product and web trends, securities & market data, data visualization,
+  browser performance, web architecture, and SEO.
+keywords: [web product, market data, data visualization, browser performance, SEO]
+
+sources:
+  hacker_news: { min_points: 30 }

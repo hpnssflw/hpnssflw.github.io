@@ -1,0 +1,8 @@
+name: Tooling
+description: >
+  Trending GitHub repos and web development tools.
+keywords: [dev tool, CLI, open source library, developer tooling]
+
+sources:
+  hacker_news: { min_points: 30 }
+  github_trending: { min_stars: 200 }
