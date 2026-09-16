@@ -20,11 +20,12 @@ for his own LAB writing, not a LAB post itself.
 
 ## Topics (fixed set, matches the site's RESEARCHER section)
 
-- **Data Viz** — BI dashboards, browser graphics, render-engine performance.
-- **Full-Stack Architecture** — trends, architectures, best practices and
-  patterns across the modern web stack.
-- **AI Agents & Engineering** — trends, architectures and patterns for
-  building and running agents in production.
+- **Web Products** — product and web trends, securities & market data,
+  data visualization, browser performance, web architecture, and SEO.
+- **AI Engineering** — agent and automated pipelines and harnesses, LLM
+  assistants, self-hosted/private AI platform development, and
+  LLM/inference optimization.
+- **Tooling** — trending GitHub repos and web development tools.
 
 ## Sources
 
@@ -76,7 +77,8 @@ contracts — this section is superseded there.
 
 - `DEEPSEEK_API_KEY` — DeepSeek, for summarization/ranking.
 - `BRAVE_API_KEY` — the web search connector.
-- `GITHUB_TOKEN` — optional; raises the release-watching connector's rate limit.
+- `GITHUB_TOKEN` — optional; raises the GitHub-trending connector's rate
+  limit (and, later, the release-watching connector's).
 - SMTP host, port, user, password — delivery.
 
 `agent/.env` is gitignored.

@@ -4,11 +4,11 @@ import AgentWidget from "@/components/AgentWidget";
 export const metadata: Metadata = {
   title: "A Research Agent",
   description:
-    "A living plan for a background agent that watches data viz, full-stack architecture, and AI engineering.",
+    "A living plan for a background agent that watches web products, AI engineering, and tooling.",
   openGraph: {
     title: "A Research Agent",
     description:
-      "A living plan for a background agent that watches data viz, full-stack architecture, and AI engineering.",
+      "A living plan for a background agent that watches web products, AI engineering, and tooling.",
     type: "article",
   },
 };
@@ -19,8 +19,8 @@ export default function ResearchAgentPage() {
       <div className="wrap">
         <h1>A Research Agent</h1>
         <p className="subtitle">
-          A living plan for a background agent that watches data viz, full-stack
-          architecture, and AI engineering so research doesn&apos;t compete with
+          A living plan for a background agent that watches web products, AI
+          engineering, and tooling so research doesn&apos;t compete with
           writing time.
         </p>
 
@@ -33,11 +33,11 @@ export default function ResearchAgentPage() {
           <p>
             The agent&apos;s only job is to read so I don&apos;t have to read
             everything myself. It checks every few hours; a curated digest of
-            what actually moved in data viz, full-stack architecture, and AI
-            engineering — links and a sentence each — rolls up once a day.
-            Nothing is emailed until it&apos;s ready, but nothing here is private
-            either — the agent&apos;s full working state (what it found, ranked,
-            and is holding for the next digest) is public the moment it&apos;s
+            what actually moved in web products, AI engineering, and tooling
+            — links and a sentence each — rolls up once a day. Nothing is
+            emailed until it&apos;s ready, but nothing here is private either
+            — the agent&apos;s full working state (what it found, ranked, and
+            is holding for the next digest) is public the moment it&apos;s
             written, not just the summary status the widget above shows. Raw
             material for LAB posts, not a LAB post itself.
           </p>

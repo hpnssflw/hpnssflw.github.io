@@ -43,23 +43,23 @@ export default function HomePage() {
           </p>
           <ul className="topics">
             <li>
-              <span className="topic-name">Data Viz</span>
+              <span className="topic-name">Web Products</span>
               <span className="topic-gloss">
-                BI dashboards, browser graphics, render-engine performance.
+                product and web trends, market data, data visualization,
+                browser performance, web architecture, SEO.
               </span>
             </li>
             <li>
-              <span className="topic-name">Full-Stack Architecture</span>
+              <span className="topic-name">AI Engineering</span>
               <span className="topic-gloss">
-                trends, architectures, best practices and patterns across the
-                modern web stack.
+                agent and automated pipelines, LLM assistants, self-hosted
+                AI platforms, inference optimization.
               </span>
             </li>
             <li>
-              <span className="topic-name">AI Agents &amp; Engineering</span>
+              <span className="topic-name">Tooling</span>
               <span className="topic-gloss">
-                trends, architectures and patterns for building and running
-                agents in production.
+                trending GitHub repos, web development tools.
               </span>
             </li>
           </ul>

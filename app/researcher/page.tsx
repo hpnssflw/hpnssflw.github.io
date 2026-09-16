@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "RESEARCHER",
-  description: "Data viz, full-stack architecture, and AI agent engineering.",
+  description: "Web products, AI engineering, and tooling.",
   openGraph: {
     title: "RESEARCHER — Artem Polozov",
-    description: "Data viz, full-stack architecture, and AI agent engineering.",
+    description: "Web products, AI engineering, and tooling.",
     type: "website",
     url: "/researcher/",
   },
@@ -19,25 +19,25 @@ export default function ResearcherIndexPage() {
         <p className="section-label">Researcher</p>
         <ul className="topics">
           <li>
-            <span className="topic-name">Data Viz</span>
+            <span className="topic-name">Web Products</span>
             <span className="topic-gloss">
-              BI dashboards, browser graphics, render-engine performance.
+              product and web trends, market data, data visualization,
+              browser performance, web architecture, SEO.
             </span>
           </li>
           <li>
-            <span className="topic-name">Full-Stack Architecture</span>
+            <span className="topic-name">Tooling</span>
             <span className="topic-gloss">
-              trends, architectures, best practices and patterns across the
-              modern web stack.
+              trending GitHub repos, web development tools.
             </span>
           </li>
           <li>
             <Link className="topic-name" href="/researcher/agent/">
-              AI Agents &amp; Engineering
+              AI Engineering
             </Link>
             <span className="topic-gloss">
-              trends, architectures and patterns for building and running agents
-              in production.
+              agent and automated pipelines, LLM assistants, self-hosted AI
+              platforms, inference optimization.
             </span>
           </li>
         </ul>
