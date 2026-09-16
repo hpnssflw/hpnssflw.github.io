@@ -246,20 +246,33 @@ infrastructure.
   trigger feature). No conflict with this plan's tasks so far; flagging
   so a future session isn't surprised by commits it didn't make.
 
+## Content Direction & Tony Scraponi
+
+**Status: roadmap written, no sub-project started yet.**
+
+- Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
+  initiative alongside the site and the agent: reworking the agent's
+  content themes, adding Telegram delivery, fixing the blog's content
+  direction, and eventually a Tony Scraponi control page. Decomposed
+  into 4 ordered sub-projects; each gets its own brainstorm → spec →
+  plan → implementation cycle.
+- **Active sub-project: none yet — next up is #1, agent themes rework.**
+  Not yet brainstormed.
+
 ### How to resume in a new session
 
-**Research agent v1 (original 6-task plan):**
-
-1. Read `docs/superpowers/plans/2026-08-12-research-agent.md` (the
-   canonical task list — `docs/agent-plan.md` is background/design
-   context, not what to execute against).
-2. Add SMTP credentials to `agent/.env` and run
-   `python -m agent --topic ai-agents` to finish Task 6's deferred live
-   verification (Step 5) — confirm with the user first, since it sends a
-   real email. Once that passes, v1 has shipped and there's no Task 7 in
-   this plan; TASK-007 onward in `docs/agent-plan.md` (Reddit, RSS,
-   releases, web search, attention rescue, scheduling, keyword
-   suggestion) is out of scope here and would need its own plan.
+**Research agent v1 (original 6-task plan): done, with a superseded
+step.** Read `docs/superpowers/plans/2026-08-12-research-agent.md` for
+the original task list if historical context is needed, but its Task 6
+Step 5 (add SMTP credentials, send a live email) is **not** a live next
+step — the user decided on 2026-08-17 to drop email/Telegram-as-only-
+extra push delivery in favor of the on-page dashboard, then on
+2026-09-16 to add a Telegram publisher after all as part of the Content
+Direction & Tony Scraponi initiative (see that section above). Treat
+`agent/deliver.py`/`digest.py` (SMTP) as dead code; don't resurrect them.
+TASK-007 onward in `docs/agent-plan.md` (Reddit, RSS, releases, web
+search, attention rescue, scheduling, keyword suggestion) remains out of
+scope for this plan and would need its own.
 
 **Agent status widget (7-task plan): shipped.** Nothing to resume — see
 this file's section above for what shipped and what's deferred. The SDD
@@ -273,6 +286,11 @@ statically-exported Next.js app, deployed to Pages by
 at the top of this file. Plan:
 `.claude/plans/lucky-rolling-aurora.md`; spec:
 `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`.
+
+**Content Direction & Tony Scraponi: roadmap written, nothing
+implemented yet.** Read `docs/tony-scraponi-roadmap.md`, confirm sub-
+project #1 (agent themes rework) is still the right one to start with,
+then brainstorm it.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages

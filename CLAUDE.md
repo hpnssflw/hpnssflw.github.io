@@ -7,10 +7,17 @@ initiatives — see `PROGRESS.md` for status of each.
 
 ## Session start protocol
 
-1. Read `PROGRESS.md` for current status of both the site and the agent.
+1. Read `PROGRESS.md` for current status of the site, the agent, and the
+   Content Direction & Tony Scraponi initiative.
 2. If the work is on the agent, also read `docs/agent-plan.md`.
-3. State where things stand and confirm the next task with the user before
-   writing any code.
+3. If the work is on the Content Direction & Tony Scraponi initiative,
+   also read `docs/tony-scraponi-roadmap.md` — it lists that
+   initiative's sub-projects in order. Confirm with the user that the
+   sub-project `PROGRESS.md` names as active is still the right one,
+   then run it through brainstorming → writing-plans → implementation
+   (superpowers skills) before writing any of its code.
+4. State where things stand and confirm the next task with the user
+   before writing any code.
 
 ## Conventions actually used in this repo
 
