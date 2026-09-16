@@ -248,7 +248,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: roadmap written, no sub-project started yet.**
+**Status: sub-project #1 (agent themes rework) shipped.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -256,8 +256,69 @@ infrastructure.
   direction, and eventually a Tony Scraponi control page. Decomposed
   into 4 ordered sub-projects; each gets its own brainstorm → spec →
   plan → implementation cycle.
-- **Active sub-project: none yet — next up is #1, agent themes rework.**
-  Not yet brainstormed.
+- **Sub-project #1, agent themes rework: shipped.** Spec:
+  `docs/superpowers/specs/2026-09-16-agent-themes-rework-design.md`.
+  Plan: `docs/superpowers/plans/2026-09-16-agent-themes-rework.md`
+  (executed via subagent-driven-development, 3 tasks + a final
+  whole-plan review with one fix round).
+  - `agent/topics/{web-products,ai-engineering,tooling}.yaml` replace
+    the old `ai-agents`/`data-viz`/`full-stack` topics and drop the
+    dead `reddit`/`rss`/`releases`/`web_search` keys that
+    `agent/main.py`'s `CONNECTORS` dict never wired up — commit
+    `8d8033c`, Task 1. Verified: `agent.config.load_topics` loads all
+    three with the expected slugs/sources, and a full `--dry-run`
+    collects real Hacker News results for all three.
+  - `agent/sources/github_trending.py` (GitHub Search API — recent
+    repos ranked by stars, not `github.com/trending` scraping) shipped
+    and wired into `CONNECTORS`, backing Tooling's second source —
+    commit `8198e73`, Task 2. Verified: a mocked no-network check
+    (field mapping, excerpt truncation, undated-drop path) and a live
+    `--dry-run --topic tooling` run (52 combined HN+GitHub items, no
+    crash). Deliberately does not filter by `topic.keywords` — queries
+    "recently created, highly starred" globally and relies on the
+    downstream DeepSeek ranker (`min_relevance: 6`) to discard
+    off-topic results; the final whole-plan review flagged this as
+    noisier than ideal (live check: ~3 of 12 top results were
+    tooling-relevant) but the user confirmed on 2026-09-16 to keep the
+    design as approved during brainstorming rather than add
+    query-level filtering now.
+  - Site/doc copy synced to the new theme names (RESEARCHER lists on
+    `/` and `/researcher/`, the `/researcher/agent/` narrative,
+    `docs/agent-plan.md`'s Topics section) — commit `12a54a4`, Task 3.
+  - Final whole-plan review (Critical: none; Important: 4, one fix
+    round, commit `8fb7ee9`) confirmed slugs/names agree everywhere
+    (`agent/topics/*.yaml` ↔ `agent/main.py` ↔ all three site pages ↔
+    `docs/agent-plan.md`) and no dead source keys remain. Fixed in the
+    review's one fix round: `docs/agent-plan.md`'s Sources section and
+    `/researcher/agent/`'s "Five kinds of source" list now mention
+    GitHub trending; `agent/main.py`'s connector loop no longer lets
+    one source's exception abort the whole topic (and, with it, that
+    run's email delivery); `.github/workflows/agent-run.yml` now passes
+    `GITHUB_TOKEN` (previously the GitHub connector always ran
+    unauthenticated in CI, at a tighter rate limit); the two
+    RESEARCHER topic lists' ordering was reconciled to match; a stale
+    `--topic ai-agents` reference in `agent/deliver.py`'s docstring was
+    fixed; `.gitignore`'s `__pycache__` entry was generalized to cover
+    `agent/sources/`. Deferred as lower-value (see the SDD ledger,
+    `.superpowers/sdd/2026-09-16-agent-themes-rework/progress.md`, for
+    the full list): description/keyword drift inside the new topic
+    YAMLs (descriptions promise slightly more than the keywords
+    actually search for — matches the plan verbatim), a magic-number
+    nit in `github_trending.py`, and a short-lived widget/copy mismatch
+    expected after the next deploy+push (the live `status.json` on the
+    `agent-data` branch won't show the new topic names until the next
+    scheduled agent run, up to 4h later — self-healing, not a bug).
+  - One cosmetic nit left as-is: commit `8198e73`'s `Co-Authored-By`
+    trailer reads "Claude Haiku 4.5" instead of this repo's standard
+    attribution — git trailer text only, not worth rewriting published
+    history for.
+  - **Not yet pushed to the remote** — this work exists only on the
+    local `main` branch as of this writing; confirm with the user
+    before pushing.
+- **Active sub-project: #2, Telegram delivery, is next per the
+  roadmap's ordering — not yet confirmed with the user or brainstormed.**
+  Per `CLAUDE.md`'s session-start protocol, confirm this is still the
+  right sub-project before brainstorming it.
 
 ### How to resume in a new session
 
@@ -287,10 +348,11 @@ at the top of this file. Plan:
 `.claude/plans/lucky-rolling-aurora.md`; spec:
 `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`.
 
-**Content Direction & Tony Scraponi: roadmap written, nothing
-implemented yet.** Read `docs/tony-scraponi-roadmap.md`, confirm sub-
-project #1 (agent themes rework) is still the right one to start with,
-then brainstorm it.
+**Content Direction & Tony Scraponi: sub-project #1 (agent themes
+rework) shipped, not yet pushed.** See this file's section above for
+what shipped, what was fixed in the final review, and what's deferred.
+Read `docs/tony-scraponi-roadmap.md`, confirm sub-project #2 (Telegram
+delivery) is still the right one to pick up next, then brainstorm it.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
