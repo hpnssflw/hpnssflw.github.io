@@ -52,6 +52,16 @@ initiatives — see `PROGRESS.md` for status of each.
   `"Reconcile status docs with Task N shipping"`. This does not relax the
   rule below it — confirm the *next* task with the user before writing any
   of its code; only the commits for the task just finished are automatic.
+- **Clean context after each micro-task, across all three initiatives**
+  (site, agent, Content Direction & Tony Scraponi) — not just the
+  agent-specific auto-commit rule above. Once a micro-task (a single
+  numbered task from an implementation plan, or an equally small
+  discrete unit of work) is verified and committed, stop and hand off:
+  remind the user to run `/clear`, then give them a short, self-
+  contained prompt for the next task — naming the plan file and task,
+  and any state a fresh session needs to pick up cleanly. That handoff
+  prompt should route the next session back through the session-start
+  protocol and the brainstorm-before-implement rule, not skip them.
 - **Verify site changes** by building and serving the export, plus the
   test suite:
   ```
