@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from agent import config, dedupe, date_guard, deliver, digest, events, pending, status_export, summarize
-from agent.sources import hn
+from agent.sources import github_trending, hn
 from agent.sources.base import Drop
 
 AGENT_DIR = Path(__file__).parent
@@ -22,6 +22,7 @@ STATUS_PATH = AGENT_DIR / "status.json"
 
 CONNECTORS = {
     "hacker_news": hn.collect,
+    "github_trending": github_trending.collect,
 }
 
 

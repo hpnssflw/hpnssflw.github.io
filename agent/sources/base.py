@@ -14,7 +14,7 @@ class Candidate:
 
     url: str
     title: str
-    source: str  # hn | reddit | rss | releases | web
+    source: str  # hn | github | reddit | rss | releases | web
     topic: str  # topic slug
     published_at: datetime  # timezone-aware UTC
     score: int | None  # HN points, Reddit ups; None where the source has no score
