@@ -50,16 +50,16 @@ export default function HomePage() {
               </span>
             </li>
             <li>
+              <span className="topic-name">Tooling</span>
+              <span className="topic-gloss">
+                trending GitHub repos, web development tools.
+              </span>
+            </li>
+            <li>
               <span className="topic-name">AI Engineering</span>
               <span className="topic-gloss">
                 agent and automated pipelines, LLM assistants, self-hosted
                 AI platforms, inference optimization.
-              </span>
-            </li>
-            <li>
-              <span className="topic-name">Tooling</span>
-              <span className="topic-gloss">
-                trending GitHub repos, web development tools.
               </span>
             </li>
           </ul>

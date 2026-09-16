@@ -1,9 +1,9 @@
 """SMTP delivery for the research digest."""
 
 # TODO: not yet verified against a real inbox — SMTP_HOST/PORT/USER/PASSWORD
-# aren't in agent/.env yet. Run `python -m agent --topic ai-agents` (Task 6
-# Step 5 in docs/superpowers/plans/2026-08-12-research-agent.md) once they
-# are, and check hypnosisflow@gmail.com for the digest.
+# aren't in agent/.env yet. Run `python -m agent --topic ai-engineering`
+# (Task 6 Step 5 in docs/superpowers/plans/2026-08-12-research-agent.md)
+# once they are, and check hypnosisflow@gmail.com for the digest.
 
 from __future__ import annotations
 

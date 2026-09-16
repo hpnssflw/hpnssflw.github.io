@@ -46,12 +46,16 @@ export default function ResearchAgentPage() {
             <span className="num">02</span>Sources
           </h2>
           <p>
-            Five kinds of source, each with a different signal-to-noise ratio:
+            Six kinds of source, each with a different signal-to-noise ratio:
           </p>
           <ul>
             <li>
               Hacker News — via the public Algolia search API, filtered to each
               topic&apos;s keywords.
+            </li>
+            <li>
+              GitHub trending — recently created repos ranked by stars, via
+              GitHub&apos;s Search API; backs the Tooling topic specifically.
             </li>
             <li>
               Blog and RSS feeds — a curated list maintained by hand, the

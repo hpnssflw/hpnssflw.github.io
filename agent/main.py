@@ -46,7 +46,12 @@ def run_dry(topic_filter: str | None) -> None:
         for source_name, connector in CONNECTORS.items():
             if source_name not in topic.sources:
                 continue
-            candidates, drops = connector(topic, now)
+            try:
+                candidates, drops = connector(topic, now)
+            except Exception as exc:  # noqa: BLE001 — one source failing must not abort the topic or the run
+                writer.emit("collect", "failed", topic=topic.slug, source=source_name, detail={"error": str(exc)})
+                print(f"{source_name} collection failed for {topic.slug}: {exc}")
+                continue
             counts["collected"] += len(candidates) + len(drops)
             for candidate in candidates:
                 writer.emit_candidate("collect", source_name, topic.slug, candidate)
@@ -94,7 +99,12 @@ def run_real(topic_filter: str | None) -> None:
         for source_name, connector in CONNECTORS.items():
             if source_name not in topic.sources:
                 continue
-            candidates, drops = connector(topic, now)
+            try:
+                candidates, drops = connector(topic, now)
+            except Exception as exc:  # noqa: BLE001 — one source failing must not abort the topic or the run
+                writer.emit("collect", "failed", topic=topic.slug, source=source_name, detail={"error": str(exc)})
+                print(f"{source_name} collection failed for {topic.slug}: {exc}")
+                continue
             for candidate in candidates:
                 writer.emit_candidate("collect", source_name, topic.slug, candidate)
                 dedupe.record_seen(state, candidate, now)

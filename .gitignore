@@ -17,5 +17,5 @@ agent/state.json
 agent/pending.json
 agent/status.json
 agent/runs/
-agent/__pycache__/
+agent/**/__pycache__/
 agent/venv/

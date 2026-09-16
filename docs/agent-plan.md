@@ -30,6 +30,8 @@ for his own LAB writing, not a LAB post itself.
 ## Sources
 
 - Hacker News — public Algolia search API, filtered to each topic's keywords.
+- GitHub trending — GitHub's Search API, recently created repos ranked by
+  stars; backs the Tooling topic specifically, not every topic.
 - Blog and RSS feeds — a curated list maintained by hand, one per topic.
 - Repo release watching — GitHub releases API for a handful of watched repos per topic; a version bump is unambiguous news.
 - A handful of subreddits per topic — chosen once, revisited later if the signal is bad.
