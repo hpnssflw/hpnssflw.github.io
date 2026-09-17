@@ -1,32 +1,37 @@
-"""SMTP delivery for the research digest."""
+"""Telegram Bot API delivery for the research digest.
 
-# TODO: not yet verified against a real inbox — SMTP_HOST/PORT/USER/PASSWORD
-# aren't in agent/.env yet. Run `python -m agent --topic ai-engineering`
-# (Task 6 Step 5 in docs/superpowers/plans/2026-08-12-research-agent.md)
-# once they are, and check hypnosisflow@gmail.com for the digest.
+# TODO: not yet verified against a real channel -- TELEGRAM_BOT_TOKEN isn't
+# in agent/.env yet, and agent/defaults.yaml's delivery.telegram_channel is
+# still the "@REPLACE_ME" placeholder. Once the bot is created (via
+# @BotFather), the channel exists, and the bot is added as a channel admin
+# (see docs/superpowers/specs/2026-09-17-telegram-delivery-design.md §
+# Prerequisite), set both and run `python -m agent --topic <slug>` to send
+# a live digest and confirm it lands in the channel.
+"""
 
 from __future__ import annotations
 
 import os
-import smtplib
-from email.message import EmailMessage
+
+import requests
 
 from agent.config import Settings
 
+SEND_MESSAGE_URL = "https://api.telegram.org/bot{token}/sendMessage"
 
-def send(subject: str, body: str, settings: Settings) -> None:
-    message = EmailMessage()
-    message["Subject"] = subject
-    message["From"] = settings.delivery.from_
-    message["To"] = settings.delivery.to
-    message.set_content(body)
 
-    host = os.environ["SMTP_HOST"]
-    port = int(os.environ.get("SMTP_PORT", "587"))
-    user = os.environ["SMTP_USER"]
-    password = os.environ["SMTP_PASSWORD"]
-
-    with smtplib.SMTP(host, port) as smtp:
-        smtp.starttls()
-        smtp.login(user, password)
-        smtp.send_message(message)
+def send(messages: list[str], settings: Settings) -> None:
+    token = os.environ["TELEGRAM_BOT_TOKEN"]
+    url = SEND_MESSAGE_URL.format(token=token)
+    for message in messages:
+        response = requests.post(
+            url,
+            json={
+                "chat_id": settings.delivery.telegram_channel,
+                "text": message,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": True,
+            },
+            timeout=10,
+        )
+        response.raise_for_status()

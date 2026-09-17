@@ -13,6 +13,5 @@ llm:
   model: deepseek-v4-flash
 
 delivery:
-  to: hypnosisflow@gmail.com
-  from: agent@localhost
-  email_cadence_hours: 24 # digest rollup cadence; collection/ranking run every 4h regardless
+  telegram_channel: "@REPLACE_ME" # the channel's public handle; not a secret. Set once the bot/channel exist (see agent/deliver.py's TODO).
+  delivery_cadence_hours: 24 # digest rollup cadence; collection/ranking run every 4h regardless
