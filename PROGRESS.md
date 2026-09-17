@@ -316,9 +316,8 @@ infrastructure.
     trailer reads "Claude Haiku 4.5" instead of this repo's standard
     attribution — git trailer text only, not worth rewriting published
     history for.
-  - **Not yet pushed to the remote** — this work exists only on the
-    local `main` branch as of this writing; confirm with the user
-    before pushing.
+  - **Pushed to the remote** as part of the combined push with
+    sub-projects #2 and #3 — see below.
 - **Sub-project #2, Telegram delivery: shipped, live send pending.**
   Spec: `docs/superpowers/specs/2026-09-17-telegram-delivery-design.md`.
   Plan: `docs/superpowers/plans/2026-09-17-telegram-delivery.md`
@@ -370,13 +369,10 @@ infrastructure.
     by hand and confirm before calling the deploy done — see below); and
     the footer's placeholder link ships as planned (decided: keep, per
     the plan's literal Global Constraints).
-  - **Not yet pushed to the remote**, same as sub-project #1 above —
-    will go out together. **After pushing, manually trigger the agent
-    workflow** (`gh workflow run agent-run.yml`) and confirm
-    `agent-data`'s `status.json` carries the renamed keys
-    (`last_sent_at`/`delivery_cadence_hours`/`pending_count`) before
-    considering the widget/dashboard healthy again — otherwise they show
-    "unavailable" until the next scheduled run (up to 4h).
+  - **Pushed to the remote and verified.** A `workflow_dispatch` run
+    (2026-09-17T04:34:28Z) confirmed `agent-data`'s `status.json` carries
+    the renamed keys (`last_sent_at`/`delivery_cadence_hours`/
+    `pending_count`); widget/dashboard are healthy again.
 - **Sub-project #3, Blog content & direction: shipped.** Spec:
   `docs/superpowers/specs/2026-09-17-blog-content-direction-design.md`
   (commit `e1d40c6`). Plan:
@@ -412,8 +408,9 @@ infrastructure.
     `lib/topics.ts`'s `Topic` type distinguishing it from
     `agent/topics/*.yaml` and `lib/agent-status.ts`'s unrelated
     `TopicStatus`.
-  - **Not yet pushed to the remote**, same as sub-projects #1 and #2
-    above — will go out together.
+  - **Pushed to the remote** together with sub-projects #1 and #2 (no
+    agent code in this sub-project, so no workflow re-verification
+    needed beyond sub-project #2's).
 
 ### How to resume in a new session
 
@@ -450,11 +447,11 @@ at the top of this file. Plan:
 rework), #2 (Telegram delivery), and #3 (Blog content & direction)
 shipped.** See this file's section above for what shipped in each, what
 the final reviews found and fixed, and what's deferred (notably:
-sub-project #2's bot/channel don't exist yet, and pushing needs a manual
-agent-workflow trigger right after per the note above). Read
-`docs/tony-scraponi-roadmap.md`, confirm sub-project #4 (Tony Scraponi
-MVP — roadmap item 4) is still the right one to pick up next per
-`CLAUDE.md`'s session-start protocol, then brainstorm it.
+sub-project #2's bot/channel don't exist yet). All three sub-projects are
+pushed to the remote, and the manual agent-workflow trigger confirmed the
+renamed `status.json` keys landed on `agent-data` (2026-09-17T04:34:28Z
+run). Confirmed with the user on 2026-09-17 that sub-project #4 (Tony
+Scraponi MVP — roadmap item 4) is next; not yet brainstormed.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
