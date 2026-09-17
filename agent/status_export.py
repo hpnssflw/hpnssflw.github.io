@@ -24,7 +24,7 @@ def build_status(
     run_events: list[dict[str, Any]],
     topic_names: dict[str, str],
     queue: PendingQueue,
-    email_cadence_hours: int,
+    delivery_cadence_hours: int,
     cadence_hours: int,
     previous_status: dict[str, Any] | None,
     now: datetime,
@@ -88,9 +88,9 @@ def build_status(
         "updated_at": now.isoformat(),
         "cadence_hours": cadence_hours,
         "streak": streak,
-        "last_email_at": queue.last_email_at,
-        "email_cadence_hours": email_cadence_hours,
-        "pending_email_count": len(queue.items),
+        "last_sent_at": queue.last_email_at,
+        "delivery_cadence_hours": delivery_cadence_hours,
+        "pending_count": len(queue.items),
         "topics": [
             {"slug": slug, "name": topic_names[slug], "collected": c["collected"], "kept": c["kept"]}
             for slug, c in funnel.items()

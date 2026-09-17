@@ -169,15 +169,15 @@ def run_real(topic_filter: str | None) -> None:
 
         pending.add_kept(queue, topic.name, keep, now)
 
-    emailed = False
-    if pending.is_email_due(queue, now, settings.delivery.email_cadence_hours):
+    delivered = False
+    if pending.is_email_due(queue, now, settings.delivery.delivery_cadence_hours):
         grouped = pending.group_by_topic(queue)
-        subject, body = digest.build(grouped)
+        messages = digest.build(grouped)
         try:
-            deliver.send(subject, body, settings)
+            deliver.send(messages, settings)
         except Exception as exc:  # noqa: BLE001 — delivery must never crash a scheduled run; retried once due again next time
             writer.emit("deliver", "failed", detail={"error": str(exc), "items": len(queue.items)})
-            print(f"Email delivery failed, will retry next run: {exc}")
+            print(f"Telegram delivery failed, will retry next run: {exc}")
         else:
             for item in queue.items:
                 dedupe.mark_sent_url(state, item.url)
@@ -185,14 +185,14 @@ def run_real(topic_filter: str | None) -> None:
             writer.emit("deliver", "sent", detail={"items": total_items, "topics": len(grouped)})
             queue.items = []
             queue.last_email_at = now.isoformat()
-            emailed = True
+            delivered = True
             print(f"Sent {total_items} items across {len(grouped)} topics.")
     else:
-        print(f"Nothing emailed this run. Pending queue: {len(queue.items)} item(s).")
+        print(f"Nothing delivered this run. Pending queue: {len(queue.items)} item(s).")
 
     dedupe.save_state(STATE_PATH, state)
     pending.save_pending(PENDING_PATH, queue)
-    writer.emit("run", "complete", detail={"emailed": emailed, "pending_total": len(queue.items)})
+    writer.emit("run", "complete", detail={"delivered": delivered, "pending_total": len(queue.items)})
     writer.close()
 
     all_topics = config.load_topics(TOPICS_DIR, DEFAULTS_PATH)
@@ -200,7 +200,7 @@ def run_real(topic_filter: str | None) -> None:
     previous_status = json.loads(STATUS_PATH.read_text(encoding="utf-8")) if STATUS_PATH.exists() else None
     run_events = events.read_events(writer.path)
     status = status_export.build_status(
-        run_events, topic_names, queue, settings.delivery.email_cadence_hours, 4, previous_status, now
+        run_events, topic_names, queue, settings.delivery.delivery_cadence_hours, 4, previous_status, now
     )
     STATUS_PATH.write_text(json.dumps(status, indent=2, sort_keys=True), encoding="utf-8")
 
