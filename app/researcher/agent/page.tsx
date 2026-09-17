@@ -35,7 +35,7 @@ export default function ResearchAgentPage() {
             everything myself. It checks every few hours; a curated digest of
             what actually moved in web products, AI engineering, and tooling
             — links and a sentence each — rolls up once a day. Nothing is
-            emailed until it&apos;s ready, but nothing here is private either
+            posted until it&apos;s ready, but nothing here is private either
             — the agent&apos;s full working state (what it found, ranked, and
             is holding for the next digest) is public the moment it&apos;s
             written, not just the summary status the widget above shows. Raw
@@ -111,7 +111,8 @@ export default function ResearchAgentPage() {
               ordered by relevance within each group.
             </li>
             <li>
-              Deliver — the digest goes out by email on a fixed schedule.
+              Deliver — the digest goes out to a public Telegram channel on
+              a fixed schedule.
             </li>
           </ul>
 
@@ -140,9 +141,10 @@ export default function ResearchAgentPage() {
               price.
             </li>
             <li>
-              GitHub Actions on a schedule for the trigger; SMTP for delivery,
-              decoupled onto its own coarser cadence so collection can run more
-              often than the inbox needs to hear from it.
+              GitHub Actions on a schedule for the trigger; the Telegram Bot
+              API for delivery, decoupled onto its own coarser cadence so
+              collection can run more often than the channel needs to hear
+              from it.
             </li>
           </ul>
 
@@ -152,17 +154,17 @@ export default function ResearchAgentPage() {
           <p>
             Collection and ranking run every four hours — frequent enough that
             the live status above reflects what&apos;s actually happening right
-            now. The email digest stays coarser, rolling up everything new once a
-            day, so the inbox doesn&apos;t get six emails for one afternoon&apos;s
-            reading. Each digest groups items under the three topic headers, one
-            line of summary and a link each.
+            now. The Telegram digest stays coarser, rolling up everything new
+            once a day, so the channel doesn&apos;t get six posts for one
+            afternoon&apos;s reading. Each digest groups items under the three
+            topic headers, one line of summary and a link each.
           </p>
 
           <h2 id="open-questions">What&apos;s still open</h2>
           <ul>
             <li>
-              Whether once-a-day is the right email rollup — watch whether the
-              inbox feels stale or noisy and adjust from there.
+              Whether once-a-day is the right Telegram rollup — watch whether
+              the channel feels stale or noisy and adjust from there.
             </li>
             <li>
               Resurfacing — a link dismissed once shouldn&apos;t come back just
@@ -179,9 +181,9 @@ export default function ResearchAgentPage() {
           <p>
             Running — the pipeline runs end to end on Hacker News alone, on a
             schedule: collect, filter for recency, dedupe, rank with DeepSeek,
-            hold in a pending queue, and deliver by email once a day. The live
-            status above reflects the actual current state of that schedule.
-            Reddit, RSS, release watching, and web search are next.
+            hold in a pending queue, and deliver to Telegram once a day. The
+            live status above reflects the actual current state of that
+            schedule. Reddit, RSS, release watching, and web search are next.
           </p>
         </div>
       </div>

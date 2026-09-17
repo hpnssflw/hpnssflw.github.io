@@ -159,7 +159,7 @@ function DashboardBody({ status }: { status: AgentStatus }) {
       </div>
       <div>
         <span className="agent-muted">
-          {status.pending_email_count} queued for next digest
+          {status.pending_count} queued for next digest
         </span>
       </div>
       <p className="agent-tagline">

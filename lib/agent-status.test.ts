@@ -11,11 +11,11 @@ import {
 function makeStatus(overrides: Partial<AgentStatus> = {}): AgentStatus {
   return {
     cadence_hours: 4,
-    email_cadence_hours: 24,
+    delivery_cadence_hours: 24,
     streak: 1,
-    pending_email_count: 0,
+    pending_count: 0,
     updated_at: "2026-09-09T08:00:00+00:00",
-    last_email_at: null,
+    last_sent_at: null,
     topics: [],
     funnel: {},
     recent_events: [],

@@ -31,11 +31,11 @@ export interface RecentEvent {
 
 export interface AgentStatus {
   cadence_hours: number;
-  email_cadence_hours: number;
+  delivery_cadence_hours: number;
   streak: number;
-  pending_email_count: number;
+  pending_count: number;
   updated_at: string;
-  last_email_at: string | null;
+  last_sent_at: string | null;
   topics: TopicStatus[];
   funnel: Record<string, FunnelCounts>;
   recent_events: RecentEvent[];
@@ -57,7 +57,7 @@ export function isAgentStatus(value: unknown): value is AgentStatus {
   return (
     typeof s.cadence_hours === "number" &&
     typeof s.streak === "number" &&
-    typeof s.pending_email_count === "number" &&
+    typeof s.pending_count === "number" &&
     typeof s.updated_at === "string" &&
     Array.isArray(s.topics) &&
     Array.isArray(s.run_history) &&
