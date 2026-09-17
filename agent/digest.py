@@ -1,7 +1,9 @@
 """Assemble the pending queue into Telegram-ready HTML messages
-(parse_mode=HTML). Normally returns a single message for the whole run;
-falls back to one message per topic if the combined message would exceed
-Telegram's per-message character limit."""
+(parse_mode=HTML). Returns one or more messages, each under Telegram's
+4096-character limit: tries to fit everything in one message with a single
+header; if that's too large, splits by topic (one header per message with
+topic's items); if a single topic still exceeds the limit, further splits
+that topic into multiple chunks (one per-topic header repeated as needed)."""
 
 from __future__ import annotations
 
@@ -38,25 +40,30 @@ def build(items_by_topic: dict[str, list[PendingItem]]) -> list[str]:
 
 
 def _split_large_topic(name: str, items: list[PendingItem]) -> list[str]:
-    """Split a large topic into multiple message-sized chunks."""
+    """Split a large topic into multiple message-sized chunks. Each chunk
+    respects the MESSAGE_LIMIT, except for unavoidable cases where a single
+    item's rendered size (with topic header) exceeds the limit — in that case,
+    the oversized item gets its own chunk (best effort)."""
     chunks = []
     current_items = []
     current_size = 0
     topic_header_size = len(f"<b>{escape(name)}</b>\n")
 
     for item in items:
-        # Estimate item size
+        # Estimate item size (recomputed here for sizing; will be re-escaped in _render_topic)
         url = escape(item.url, quote=True)
         title = escape(item.title)
         summary = escape(item.summary)
         item_size = len(f'• <a href="{url}">{title}</a>') + len(summary) + 2  # +2 for newlines
 
-        if current_size + item_size + topic_header_size > MESSAGE_LIMIT and current_items:
-            # Save current chunk
+        # If adding this item would exceed limit AND we already have items, flush current chunk
+        # (This prevents bundling normal items with oversized ones to exceed the limit)
+        if current_items and current_size + item_size + topic_header_size > MESSAGE_LIMIT:
             chunks.append(_render_topic(name, current_items))
             current_items = [item]
             current_size = item_size
         else:
+            # Add item to current chunk (handles both normal and single-oversized-item cases)
             current_items.append(item)
             current_size += item_size
 
