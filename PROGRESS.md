@@ -252,7 +252,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-project #1 (agent themes rework) shipped.**
+**Status: sub-projects #1-#4 shipped.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -411,6 +411,56 @@ infrastructure.
   - **Pushed to the remote** together with sub-projects #1 and #2 (no
     agent code in this sub-project, so no workflow re-verification
     needed beyond sub-project #2's).
+- **Sub-project #4, Tony Scraponi MVP: shipped.** Spec:
+  `docs/superpowers/specs/2026-09-17-tony-scraponi-mvp-design.md`. Plan:
+  `docs/superpowers/plans/2026-09-17-tony-scraponi-mvp.md` (executed via
+  subagent-driven-development, 2 tasks + a final whole-plan review, no
+  fix rounds needed on either task). A single page, `/researcher/queue/`,
+  rendering `agent/pending.json` — the curated delivery queue, already
+  public on `agent-data` but previously unreadable except as raw JSON —
+  grouped by topic. Source/topic visibility only, per the roadmap's MVP
+  scope; no editing/triggering/publishing controls.
+  - `lib/pending-queue.ts` (+ `lib/pending-queue.test.ts`) mirrors
+    `agent/pending.py`'s `PendingItem`/`PendingQueue` dataclasses
+    field-for-field as TypeScript types, with a runtime shape guard
+    (`isPendingQueue`) and a `groupByTopic` transform (topic-keyed,
+    score-descending within each group) — commit `59babf7`, Task 1.
+    Verified: 11 Vitest cases covering the guard's accept/reject paths
+    and the grouping transform, no network.
+  - `components/PendingQueue.tsx` (client-side fetch, same
+    `useEffect`/cancelled-guard/`Unavailable` pattern as
+    `components/AgentWidget.tsx`), the `/researcher/queue/` route
+    (`app/researcher/queue/page.tsx`), and nav links from
+    `/researcher/` and `/researcher/agent/` — commit `6438ec6`, Task 2.
+    Deliberately adds **zero new CSS**: reuses `/lab/`'s existing
+    `.feed`/`.title`/`.excerpt`/`.meta` list pattern and `.section-label`
+    for per-topic headings verbatim. Verified against the live
+    `agent-data` `pending.json` (101 items across 5 topics, confirmed
+    sorted correctly per topic) and against a live 404 (confirmed the
+    "queue unavailable" failure path).
+  - Final whole-plan review (opus): no Critical findings, no code-level
+    Important findings. One Important finding was a data/product call,
+    not a code defect: the live pending queue's oldest, most prominent
+    entries sit under two topic names (`AI Agents & Engineering`,
+    `Data Viz`) that sub-project #1's themes rework retired everywhere
+    else on the site, and because the Telegram bot/channel still don't
+    exist (sub-project #2's deferred item), delivery has never
+    succeeded, so the queue only grows and `last_sent` will always read
+    "never." Confirmed with the user on 2026-09-17: ship as-is, matching
+    the agent's existing full-transparency stance — revisit once
+    Telegram delivery actually lands and the queue starts draining.
+    Redaction/exposure independently re-confirmed clean: every field the
+    new page renders was already public in `pending.json`; nothing from
+    `agent/topics/*.yaml` or `status.json`'s internals is newly exposed.
+    Four Minor findings were all confirmed non-issues rather than
+    deferred (the reused case system's lowercase/uppercase
+    `text-transform` on external titles/sources is a deliberate
+    site-wide design choice, not a bug; no loading skeleton matches
+    `AgentWidget`'s existing behavior; a stricter-than-Python guard on
+    `last_email_at` and an unvalidated `pending_since` date both fail
+    safely and match the producer's actual output, so neither needs a
+    change).
+  - **Pushed to the remote.**
 
 ### How to resume in a new session
 
@@ -443,15 +493,21 @@ at the top of this file. Plan:
 `.claude/plans/lucky-rolling-aurora.md`; spec:
 `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`.
 
-**Content Direction & Tony Scraponi: sub-projects #1 (agent themes
-rework), #2 (Telegram delivery), and #3 (Blog content & direction)
-shipped.** See this file's section above for what shipped in each, what
-the final reviews found and fixed, and what's deferred (notably:
-sub-project #2's bot/channel don't exist yet). All three sub-projects are
-pushed to the remote, and the manual agent-workflow trigger confirmed the
-renamed `status.json` keys landed on `agent-data` (2026-09-17T04:34:28Z
-run). Confirmed with the user on 2026-09-17 that sub-project #4 (Tony
-Scraponi MVP — roadmap item 4) is next; not yet brainstormed.
+**Content Direction & Tony Scraponi: all four sub-projects shipped** —
+#1 (agent themes rework), #2 (Telegram delivery), #3 (Blog content &
+direction), #4 (Tony Scraponi MVP — the `/researcher/queue/` pending-queue
+page). See this file's section above for what shipped in each, what the
+final reviews found and fixed, and what's deferred (notably: sub-project
+#2's Telegram bot/channel still don't exist, so sub-project #4's queue
+page is currently showing a real, ever-growing, never-delivered backlog —
+shipped as-is per the user's 2026-09-17 decision). All four sub-projects
+are pushed to the remote; the manual agent-workflow trigger for #2
+confirmed the renamed `status.json` keys landed on `agent-data`
+(2026-09-17T04:34:28Z run). `docs/tony-scraponi-roadmap.md`'s four ordered
+sub-projects are now all complete — no confirmed next step for this
+initiative; the roadmap's own "Source material" section points at the
+Obsidian-vault product plan for what a Tony Scraponi split beyond this MVP
+would involve, if that's ever picked up.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
