@@ -1,5 +1,5 @@
 """Builds agent/status.json -- the public aggregate the site's widget
-fetches -- from a run's JSONL event log, the pending-email queue, and the
+fetches -- from a run's JSONL event log, the pending delivery queue, and the
 previous status.json's run history.
 
 Deliberately never reads TopicConfig: this module's only entry point

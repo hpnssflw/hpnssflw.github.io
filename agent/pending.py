@@ -1,8 +1,12 @@
-"""Pending-email queue: items ranked above threshold that haven't been
-emailed yet, plus when the last email actually went out. Exists because
-collection/ranking now run every 4 hours but email delivery stays on a
+"""Pending delivery queue: items ranked above threshold that haven't been
+delivered yet, plus when delivery last actually went out. Exists because
+collection/ranking now run every 4 hours but delivery stays on a
 coarser cadence — see docs/superpowers/specs/2026-08-15-agent-status-widget-design.md
-§ Email delivery decoupling."""
+§ Email delivery decoupling.
+
+(Some field/function names below -- e.g. last_email_at, is_email_due --
+keep their "email" spelling on purpose, from before delivery moved to
+Telegram; only the prose here describes delivery neutrally.)"""
 
 from __future__ import annotations
 
@@ -29,7 +33,7 @@ class PendingItem:
 
 @dataclass
 class PendingQueue:
-    last_email_at: str | None  # ISO 8601, None if never emailed
+    last_email_at: str | None  # ISO 8601, None if delivery has never gone out
     items: list[PendingItem]
 
 
@@ -68,11 +72,11 @@ def add_kept(queue: PendingQueue, topic_name: str, ranked: list[RankedItem], now
 
 
 def filter_already_pending(candidates: list[Candidate], queue: PendingQueue) -> tuple[list[Candidate], list[Drop]]:
-    """Drop candidates already sitting in the queue, awaiting the email
+    """Drop candidates already sitting in the queue, awaiting the delivery
     cadence. Without this, an item that survived ranking once but hasn't
-    been emailed yet (times_sent still 0, so dedupe.filter_seen lets it
+    been delivered yet (times_sent still 0, so dedupe.filter_seen lets it
     through) gets re-collected and re-sent to DeepSeek for ranking on
-    every subsequent 4h cycle until the email gate finally fires."""
+    every subsequent 4h cycle until the delivery gate finally fires."""
     pending_since_by_url = {item.url: item.pending_since for item in queue.items}
     kept: list[Candidate] = []
     drops: list[Drop] = []

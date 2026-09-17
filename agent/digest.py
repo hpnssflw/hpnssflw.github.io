@@ -50,11 +50,11 @@ def _split_large_topic(name: str, items: list[PendingItem]) -> list[str]:
     topic_header_size = len(f"<b>{escape(name)}</b>\n")
 
     for item in items:
-        # Estimate item size (recomputed here for sizing; will be re-escaped in _render_topic)
-        url = escape(item.url, quote=True)
-        title = escape(item.title)
-        summary = escape(item.summary)
-        item_size = len(f'• <a href="{url}">{title}</a>') + len(summary) + 2  # +2 for newlines
+        # +1 accounts for the newline joining this item's rendered block to
+        # whatever follows it in the chunk (see _render_topic's "\n".join);
+        # _render_item's own return value already has one internal "\n"
+        # between its bullet and summary lines.
+        item_size = len(_render_item(item)) + 1
 
         # If adding this item would exceed limit AND we already have items, flush current chunk
         # (This prevents bundling normal items with oversized ones to exceed the limit)
@@ -76,8 +76,16 @@ def _split_large_topic(name: str, items: list[PendingItem]) -> list[str]:
 def _render_topic(topic_name: str, items: list[PendingItem]) -> str:
     lines = [f"<b>{escape(topic_name)}</b>"]
     for item in items:
-        url = escape(item.url, quote=True)
-        title = escape(item.title)
-        lines.append(f'• <a href="{url}">{title}</a>')
-        lines.append(escape(item.summary))
+        lines.append(_render_item(item))
     return "\n".join(lines)
+
+
+def _render_item(item: PendingItem) -> str:
+    """Render one item's bullet+summary block (two lines, joined by \\n):
+    the linked title, then the escaped summary. Shared by _render_topic
+    (actual output) and _split_large_topic (size estimate for chunking) so
+    the two can't drift apart."""
+    url = escape(item.url, quote=True)
+    title = escape(item.title)
+    summary = escape(item.summary)
+    return f'• <a href="{url}">{title}</a>\n{summary}'
