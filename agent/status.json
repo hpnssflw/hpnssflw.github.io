@@ -3,138 +3,135 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 37,
-      "in_window": 37,
-      "kept": 0,
-      "new": 23
+      "collected": 28,
+      "in_window": 28,
+      "kept": 2,
+      "new": 19
     },
     "tooling": {
-      "collected": 53,
-      "in_window": 53,
+      "collected": 52,
+      "in_window": 52,
       "kept": 0,
-      "new": 24
+      "new": 25
     },
     "web-products": {
-      "collected": 29,
-      "in_window": 29,
-      "kept": 0,
-      "new": 17
+      "collected": 24,
+      "in_window": 24,
+      "kept": 1,
+      "new": 15
     }
   },
   "last_sent_at": null,
-  "pending_count": 112,
+  "pending_count": 115,
   "recent_events": [
+    {
+      "score": 6,
+      "source": "hn",
+      "title": "Show HN: I made a flight simulator, except you're just a passenger",
+      "topic": "web-products",
+      "ts": "2026-09-17T22:31:27.117949+00:00",
+      "verdict": "kept"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Mexican student creates an acoustic fire extinguisher to put out fire in seconds",
+      "topic": "web-products",
+      "ts": "2026-09-17T22:31:27.117934+00:00",
+      "verdict": "drop"
+    },
     {
       "reason": "below_relevance",
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527350+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Everyone should slow down AI development except for me",
-      "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527338+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I can't stop thinking about Papua New Guinea",
-      "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527326+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-      "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527313+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "On the Navier\u2013Stokes Millennium Prize Problem",
-      "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527300+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Navier-Stokes \u2013 Tristan Buckmaster [pdf]",
-      "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527287+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527261+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I have a theory that software drives people insane",
-      "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527248+00:00",
+      "ts": "2026-09-17T22:31:27.117919+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
       "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527217+00:00",
+      "ts": "2026-09-17T22:31:27.117892+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "title": "Everyone should slow down AI development except for me",
       "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527205+00:00",
+      "ts": "2026-09-17T22:31:27.117877+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I can't stop thinking about Papua New Guinea",
+      "topic": "web-products",
+      "ts": "2026-09-17T22:31:27.117862+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "On the Navier\u2013Stokes Millennium Prize Problem",
+      "topic": "web-products",
+      "ts": "2026-09-17T22:31:27.117847+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Navier-Stokes \u2013 Tristan Buckmaster [pdf]",
+      "topic": "web-products",
+      "ts": "2026-09-17T22:31:27.117832+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-17T22:31:27.117817+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I have a theory that software drives people insane",
+      "topic": "web-products",
+      "ts": "2026-09-17T22:31:27.117802+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Data collected by cars and sold to third parties",
       "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527192+00:00",
+      "ts": "2026-09-17T22:31:27.117787+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
       "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527180+00:00",
+      "ts": "2026-09-17T22:31:27.117771+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
       "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527165+00:00",
+      "ts": "2026-09-17T22:31:27.117753+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: DOOM in the kernel, or fibers in eBPF",
+      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
       "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527152+00:00",
+      "ts": "2026-09-17T22:31:27.117729+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
       "topic": "web-products",
-      "ts": "2026-09-17T19:23:40.527136+00:00",
+      "ts": "2026-09-17T22:31:27.117660+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-13T01:48:33.313189+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-13T08:35:38.702369+00:00"
@@ -226,28 +223,32 @@
     {
       "kept": 0,
       "ts": "2026-09-17T19:22:30.388198+00:00"
+    },
+    {
+      "kept": 3,
+      "ts": "2026-09-17T22:30:45.116044+00:00"
     }
   ],
-  "streak": 170,
+  "streak": 171,
   "topics": [
     {
-      "collected": 37,
-      "kept": 0,
+      "collected": 28,
+      "kept": 2,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 53,
+      "collected": 52,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 29,
-      "kept": 0,
+      "collected": 24,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-17T19:22:30.388198+00:00"
+  "updated_at": "2026-09-17T22:30:45.116044+00:00"
 }
