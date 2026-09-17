@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import AgentWidget from "@/components/AgentWidget";
+import ResearcherTopics from "@/components/ResearcherTopics";
 
 export default function HomePage() {
   const posts = getAllPosts();
@@ -41,28 +42,7 @@ export default function HomePage() {
           <p className="section-label">
             <Link href="/researcher/">Researcher</Link>
           </p>
-          <ul className="topics">
-            <li>
-              <span className="topic-name">Web Products</span>
-              <span className="topic-gloss">
-                product and web trends, market data, data visualization,
-                browser performance, web architecture, SEO.
-              </span>
-            </li>
-            <li>
-              <span className="topic-name">Tooling</span>
-              <span className="topic-gloss">
-                trending GitHub repos, web development tools.
-              </span>
-            </li>
-            <li>
-              <span className="topic-name">AI Engineering</span>
-              <span className="topic-gloss">
-                agent and automated pipelines, LLM assistants, self-hosted
-                AI platforms, inference optimization.
-              </span>
-            </li>
-          </ul>
+          <ResearcherTopics />
           <AgentWidget variant="compact" />
         </div>
       </section>
