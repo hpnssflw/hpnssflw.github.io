@@ -15,7 +15,7 @@ describe("posts index", () => {
     expect(post).toMatchObject({
       slug: "cheap-models-strong-graphs",
       title: "Cheap Models, Strong Graphs",
-      tag: "AI AGENTS",
+      tag: "AGENT ARCHITECTURE",
       date: "2026-08",
       dateLabel: "Aug 2026",
     });

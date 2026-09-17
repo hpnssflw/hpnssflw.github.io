@@ -15,7 +15,9 @@ initiatives — see `PROGRESS.md` for status of each.
    initiative's sub-projects in order. Confirm with the user that the
    sub-project `PROGRESS.md` names as active is still the right one,
    then run it through brainstorming → writing-plans → implementation
-   (superpowers skills) before writing any of its code.
+   (superpowers skills) before writing any of its code. If that
+   sub-project is Blog content & direction, also read
+   `docs/lab-direction.md` before writing or editing any LAB post.
 4. State where things stand and confirm the next task with the user
    before writing any code.
 
