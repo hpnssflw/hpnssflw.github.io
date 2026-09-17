@@ -87,7 +87,11 @@ old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
   aren't in `agent/.env` yet; a TODO in `agent/deliver.py` marks this.
   Once those credentials are added, run that command and check
   `hypnosisflow@gmail.com` — that's the last thing standing between here
-  and "v1 shipped."
+  and "v1 shipped." **Superseded:** `agent/digest.py`/`agent/deliver.py`
+  no longer do SMTP — see the Content Direction & Tony Scraponi section
+  below, sub-project #2, which replaced this with Telegram Bot API
+  delivery. This entry stays as the historical record of what Task 6
+  originally shipped.
 
 ### Agent status widget + public dashboard
 
@@ -315,7 +319,65 @@ infrastructure.
   - **Not yet pushed to the remote** — this work exists only on the
     local `main` branch as of this writing; confirm with the user
     before pushing.
-- **Active sub-project: #2, Telegram delivery, is next per the
+- **Sub-project #2, Telegram delivery: shipped, live send pending.**
+  Spec: `docs/superpowers/specs/2026-09-17-telegram-delivery-design.md`.
+  Plan: `docs/superpowers/plans/2026-09-17-telegram-delivery.md`
+  (executed via subagent-driven-development, 3 tasks + a final
+  whole-plan review with one fix round). Commits `0b7ab1c`..`c1bc7b2`
+  (Task 1 + its fix round, Task 2, Task 3, final-review fix wave) — see
+  `.superpowers/sdd/2026-09-17-telegram-delivery/progress.md` for the
+  full execution ledger.
+  - `agent/digest.py`/`agent/deliver.py` rewritten in place: `digest.build`
+    now returns Telegram-ready HTML messages (escaped, split at Telegram's
+    4096-char limit, including a further intra-topic split for an
+    oversized single topic — a deviation from the plan's literal example
+    code that the human partner confirmed keeping, since the literal code
+    failed the plan's own verification script for that case);
+    `deliver.send` POSTs via `requests` (no new dependency), with
+    inter-message pacing and a 429-retry-once mechanism added in the
+    final review's fix wave, and the bot token scrubbed from any
+    exception message that reaches the run event log. `DeliveryConfig`/
+    `status.json` field names are delivery-neutral now
+    (`telegram_channel`/`delivery_cadence_hours`, `last_sent_at`/
+    `pending_count`) — `agent/pending.py`'s internal `last_email_at`/
+    `is_email_due` names are intentionally unchanged (private, not part
+    of the public contract).
+  - Site synced: `lib/agent-status.ts`/`.test.ts`, `components/
+    AgentWidget.tsx` follow the renamed `status.json` keys;
+    `components/SiteFooter.tsx` gets a site-wide Telegram channel link;
+    `app/researcher/agent/page.tsx` and `docs/agent-plan.md`'s narrative
+    no longer describe email/SMTP delivery.
+  - **The bot/channel don't exist yet** — `agent/defaults.yaml`'s
+    `telegram_channel` and the footer's Telegram `href` both use the
+    literal placeholder `REPLACE_ME` by design (human partner confirmed
+    keeping the plan's literal choice, despite it being a live-looking
+    public link until the channel is created); a TODO in
+    `agent/deliver.py` names the live-verification step. Once
+    `TELEGRAM_BOT_TOKEN` is added as a repo secret and the placeholder
+    handle is swapped for the real one, `python -m agent --topic <slug>`
+    sends a live digest — same deferred shape as the original v1 plan's
+    never-completed SMTP step. The live ~96-item pending backlog on
+    `agent-data` (some items about a month old, built up while delivery
+    was dead) ships as-is on the first live send per the user's
+    decision, not trimmed first.
+  - Final whole-plan review (opus): no Critical findings. Two Important
+    findings needed code fixes and were fixed in the final-review fix
+    wave (token leak into the run log; no pacing/flood-limit handling on
+    multi-message sends). Two more Important findings were the human
+    partner's call, not code gaps: the `status.json` rename is a
+    breaking contract change until the next scheduled agent run picks up
+    the new keys (decided: push, then immediately trigger the workflow
+    by hand and confirm before calling the deploy done — see below); and
+    the footer's placeholder link ships as planned (decided: keep, per
+    the plan's literal Global Constraints).
+  - **Not yet pushed to the remote**, same as sub-project #1 above —
+    will go out together. **After pushing, manually trigger the agent
+    workflow** (`gh workflow run agent-run.yml`) and confirm
+    `agent-data`'s `status.json` carries the renamed keys
+    (`last_sent_at`/`delivery_cadence_hours`/`pending_count`) before
+    considering the widget/dashboard healthy again — otherwise they show
+    "unavailable" until the next scheduled run (up to 4h).
+- **Active sub-project: #3, Blog content & direction, is next per the
   roadmap's ordering — not yet confirmed with the user or brainstormed.**
   Per `CLAUDE.md`'s session-start protocol, confirm this is still the
   right sub-project before brainstorming it.
@@ -329,11 +391,14 @@ Step 5 (add SMTP credentials, send a live email) is **not** a live next
 step — the user decided on 2026-08-17 to drop email/Telegram-as-only-
 extra push delivery in favor of the on-page dashboard, then on
 2026-09-16 to add a Telegram publisher after all as part of the Content
-Direction & Tony Scraponi initiative (see that section above). Treat
-`agent/deliver.py`/`digest.py` (SMTP) as dead code; don't resurrect them.
-TASK-007 onward in `docs/agent-plan.md` (Reddit, RSS, releases, web
-search, attention rescue, scheduling, keyword suggestion) remains out of
-scope for this plan and would need its own.
+Direction & Tony Scraponi initiative (see that section above).
+`agent/deliver.py`/`digest.py` are **not** dead code — sub-project #2
+(Telegram delivery, see the Content Direction & Tony Scraponi section
+above) rewrote them in place; they now do Telegram Bot API delivery, not
+SMTP. TASK-007 onward in `docs/agent-plan.md`
+(Reddit, RSS, releases, web search, attention rescue, scheduling,
+keyword suggestion) remains out of scope for this plan and would need
+its own.
 
 **Agent status widget (7-task plan): shipped.** Nothing to resume — see
 this file's section above for what shipped and what's deferred. The SDD
@@ -348,11 +413,14 @@ at the top of this file. Plan:
 `.claude/plans/lucky-rolling-aurora.md`; spec:
 `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`.
 
-**Content Direction & Tony Scraponi: sub-project #1 (agent themes
-rework) shipped, not yet pushed.** See this file's section above for
-what shipped, what was fixed in the final review, and what's deferred.
-Read `docs/tony-scraponi-roadmap.md`, confirm sub-project #2 (Telegram
-delivery) is still the right one to pick up next, then brainstorm it.
+**Content Direction & Tony Scraponi: sub-projects #1 (agent themes
+rework) and #2 (Telegram delivery) shipped.** See this file's section
+above for what shipped in each, what the final reviews found and fixed,
+and what's deferred (notably: sub-project #2's bot/channel don't exist
+yet, and pushing needs a manual agent-workflow trigger right after per
+the note above). Read `docs/tony-scraponi-roadmap.md`, confirm
+sub-project #3 (Blog content & direction) is still the right one to pick
+up next, then brainstorm it.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
