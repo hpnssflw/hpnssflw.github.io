@@ -6,138 +6,131 @@
       "collected": 35,
       "in_window": 35,
       "kept": 0,
-      "new": 23
+      "new": 24
     },
     "tooling": {
-      "collected": 52,
-      "in_window": 52,
-      "kept": 2,
-      "new": 39
+      "collected": 53,
+      "in_window": 53,
+      "kept": 7,
+      "new": 40
     },
     "web-products": {
       "collected": 27,
       "in_window": 27,
-      "kept": 3,
-      "new": 18
+      "kept": 0,
+      "new": 15
     }
   },
   "last_email_at": null,
-  "pending_email_count": 89,
+  "pending_email_count": 96,
   "recent_events": [
     {
-      "score": 6,
-      "source": "hn",
-      "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
+      "reason": "below_relevance",
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606736+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 6,
-      "source": "hn",
-      "title": "Keep Our Servers Running",
-      "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606724+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 6,
-      "source": "hn",
-      "title": "We got admin access to Baseten's production GitHub",
-      "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606711+00:00",
-      "verdict": "kept"
+      "ts": "2026-09-17T02:10:47.965232+00:00",
+      "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Everyone should slow down AI development except for me",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606696+00:00",
+      "ts": "2026-09-17T02:10:47.965225+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I can't stop thinking about Papua New Guinea",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606683+00:00",
+      "ts": "2026-09-17T02:10:47.965218+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606670+00:00",
+      "ts": "2026-09-17T02:10:47.965210+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "On the Navier\u2013Stokes Millennium Prize Problem",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606657+00:00",
+      "ts": "2026-09-17T02:10:47.965203+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Navier-Stokes \u2013 Tristan Buckmaster [pdf]",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606643+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606628+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-      "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606602+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I have a theory that software drives people insane",
-      "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606587+00:00",
+      "ts": "2026-09-17T02:10:47.965195+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606573+00:00",
+      "ts": "2026-09-17T02:10:47.965188+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-17T02:10:47.965181+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I have a theory that software drives people insane",
+      "topic": "web-products",
+      "ts": "2026-09-17T02:10:47.965173+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+      "topic": "web-products",
+      "ts": "2026-09-17T02:10:47.965165+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Data collected by cars and sold to third parties",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606558+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
-      "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606542+00:00",
+      "ts": "2026-09-17T02:10:47.965156+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: DOOM in the kernel, or fibers in eBPF",
       "topic": "web-products",
-      "ts": "2026-09-16T22:28:19.606526+00:00",
+      "ts": "2026-09-17T02:10:47.965138+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "topic": "web-products",
+      "ts": "2026-09-17T02:10:47.965128+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "topic": "web-products",
+      "ts": "2026-09-17T02:10:47.965116+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Can we please limit the AI news flood?",
+      "topic": "web-products",
+      "ts": "2026-09-17T02:10:47.965045+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-12T01:55:49.280981+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-12T08:11:33.960321+00:00"
@@ -229,9 +222,13 @@
     {
       "kept": 5,
       "ts": "2026-09-16T22:27:22.999977+00:00"
+    },
+    {
+      "kept": 7,
+      "ts": "2026-09-17T02:09:45.875907+00:00"
     }
   ],
-  "streak": 165,
+  "streak": 166,
   "topics": [
     {
       "collected": 35,
@@ -240,17 +237,17 @@
       "slug": "ai-engineering"
     },
     {
-      "collected": 52,
-      "kept": 2,
+      "collected": 53,
+      "kept": 7,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 27,
-      "kept": 3,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-16T22:27:22.999977+00:00"
+  "updated_at": "2026-09-17T02:09:45.875907+00:00"
 }
