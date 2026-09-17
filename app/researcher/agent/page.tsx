@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import AgentWidget from "@/components/AgentWidget";
 
 export const metadata: Metadata = {
@@ -27,6 +28,10 @@ export default function ResearchAgentPage() {
         <AgentWidget variant="dashboard" />
 
         <div className="body">
+          <p>
+            <Link href="/researcher/queue/">See the full pending queue →</Link>
+          </p>
+
           <h2 id="goal">
             <span className="num">01</span>Goal
           </h2>

@@ -23,6 +23,10 @@ export default function ResearcherIndexPage() {
         <Link className="topic-name plan-link" href="/researcher/agent/">
           A Research Agent
         </Link>
+
+        <Link className="topic-name plan-link" href="/researcher/queue/">
+          Research Queue
+        </Link>
       </div>
     </section>
   );
