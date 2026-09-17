@@ -7,11 +7,11 @@ content & direction) and
 ## What LAB is
 
 Personal essays and lessons-learned from building and running things —
-not curated links. RESEARCHER's three themes (Web Products, AI
-Engineering, Tooling — see `app/researcher/page.tsx`) are the research
-agent's curated beat: machine-surfaced links, ranked and delivered
-automatically. LAB is the opposite of that — it's Artem's own writing,
-in his own voice.
+not curated links. RESEARCHER's three themes (Web Products, Tooling, AI
+Engineering — see `lib/topics.ts`, rendered on `app/researcher/page.tsx`)
+are the research agent's curated beat: machine-surfaced links, ranked and
+delivered automatically. LAB is the opposite of that — it's Artem's own
+writing, in his own voice.
 
 LAB's scope is the same general territory as those three themes, as a
 loose center of gravity, not a hard boundary. A post outside them is
@@ -26,16 +26,17 @@ specific to what the post is actually about, not a generic category.
 - Good: `AGENT ARCHITECTURE`, `STATE MANAGEMENT`, `INCIDENT REVIEW`
 - Bad: `AI`, `ENGINEERING`, `MISC`
 
-There's no fixed list enforced anywhere in code — `lib/posts.ts` reads
-whatever string is in a post's `tag:` frontmatter field. This is a
-convention for whoever's picking the tag, not a schema.
+There's no fixed list enforced anywhere in code for LAB tags —
+`lib/posts.ts` reads whatever string is in a post's `tag:` frontmatter
+field. This is a convention for whoever's picking the tag, not a schema.
 
 ## Relationship to RESEARCHER
 
-RESEARCHER (`app/researcher/page.tsx`) and LAB cover similar ground but
-serve different purposes: RESEARCHER is what the agent found; LAB is
-what Artem thought about it. Don't reuse RESEARCHER's three theme names
-as LAB tags — see "Tagging convention" above.
+RESEARCHER (`lib/topics.ts`, rendered on `app/researcher/page.tsx`) and
+LAB cover similar ground but serve different purposes: RESEARCHER is
+what the agent found; LAB is what Artem thought about it. Don't reuse
+RESEARCHER's three theme names as LAB tags — see "Tagging convention"
+above.
 
 ## Backlog — candidate next posts
 

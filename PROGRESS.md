@@ -377,10 +377,43 @@ infrastructure.
     (`last_sent_at`/`delivery_cadence_hours`/`pending_count`) before
     considering the widget/dashboard healthy again — otherwise they show
     "unavailable" until the next scheduled run (up to 4h).
-- **Active sub-project: #3, Blog content & direction, is next per the
-  roadmap's ordering — not yet confirmed with the user or brainstormed.**
-  Per `CLAUDE.md`'s session-start protocol, confirm this is still the
-  right sub-project before brainstorming it.
+- **Sub-project #3, Blog content & direction: shipped.** Spec:
+  `docs/superpowers/specs/2026-09-17-blog-content-direction-design.md`
+  (commit `e1d40c6`). Plan:
+  `docs/superpowers/plans/2026-09-17-blog-content-direction.md` (commit
+  `0266d45`; executed via subagent-driven-development, 2 tasks).
+  - `docs/lab-direction.md` states LAB's scope (personal essays/
+    lessons-learned, the same general territory as RESEARCHER's three
+    themes but not a hard boundary) and its freeform tagging convention,
+    plus a backlog of four candidate next posts. The one existing LAB
+    post (`content/lab/cheap-models-strong-graphs.mdx`) is retagged from
+    the stale `AI AGENTS` to `AGENT ARCHITECTURE`, with
+    `lib/posts.test.ts`'s fixture updated to match, and `CLAUDE.md`'s
+    session-start protocol (step 3) now points to
+    `docs/lab-direction.md` before any LAB post is written or edited —
+    commit `1ea4987`, Task 1.
+  - `lib/topics.ts` (+ `lib/topics.test.ts`) de-duplicates the RESEARCHER
+    topic list (Web Products, Tooling, AI Engineering) that `app/page.tsx`
+    and `app/researcher/page.tsx` had each hand-copied and had already
+    drifted (AI Engineering linked to the agent page on one but not the
+    other); a new shared `components/ResearcherTopics.tsx` renders it on
+    both pages, with AI Engineering now consistently linked on both —
+    commit `af801db`, Task 2.
+  - Final whole-plan review: no Critical findings. Two Important findings
+    were both documentation cross-reference issues (`docs/lab-direction.md`
+    still pointed at `app/researcher/page.tsx` for the theme names and
+    `CLAUDE.md`'s pointer needed the same fix) — fixed in this same
+    reconcile pass, along with Minor doc-clarity notes: the theme order
+    in `docs/lab-direction.md` corrected to match `lib/topics.ts`'s
+    actual order (Web Products, Tooling, AI Engineering, not the
+    roadmap prose's Web Products, AI Engineering, Tooling), the "no
+    fixed list enforced anywhere in code" sentence scoped explicitly to
+    LAB tags, and a one-line disambiguating comment added above
+    `lib/topics.ts`'s `Topic` type distinguishing it from
+    `agent/topics/*.yaml` and `lib/agent-status.ts`'s unrelated
+    `TopicStatus`.
+  - **Not yet pushed to the remote**, same as sub-projects #1 and #2
+    above — will go out together.
 
 ### How to resume in a new session
 
@@ -414,13 +447,14 @@ at the top of this file. Plan:
 `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`.
 
 **Content Direction & Tony Scraponi: sub-projects #1 (agent themes
-rework) and #2 (Telegram delivery) shipped.** See this file's section
-above for what shipped in each, what the final reviews found and fixed,
-and what's deferred (notably: sub-project #2's bot/channel don't exist
-yet, and pushing needs a manual agent-workflow trigger right after per
-the note above). Read `docs/tony-scraponi-roadmap.md`, confirm
-sub-project #3 (Blog content & direction) is still the right one to pick
-up next, then brainstorm it.
+rework), #2 (Telegram delivery), and #3 (Blog content & direction)
+shipped.** See this file's section above for what shipped in each, what
+the final reviews found and fixed, and what's deferred (notably:
+sub-project #2's bot/channel don't exist yet, and pushing needs a manual
+agent-workflow trigger right after per the note above). Read
+`docs/tony-scraponi-roadmap.md`, confirm sub-project #4 (Tony Scraponi
+MVP — roadmap item 4) is still the right one to pick up next per
+`CLAUDE.md`'s session-start protocol, then brainstorm it.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
