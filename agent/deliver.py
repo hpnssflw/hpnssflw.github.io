@@ -1,12 +1,8 @@
 """Telegram Bot API delivery for the research digest.
 
-# TODO: not yet verified against a real channel -- TELEGRAM_BOT_TOKEN isn't
-# in agent/.env yet, and agent/defaults.yaml's delivery.telegram_channel is
-# still the "@REPLACE_ME" placeholder. Once the bot is created (via
-# @BotFather), the channel exists, and the bot is added as a channel admin
-# (see docs/superpowers/specs/2026-09-17-telegram-delivery-design.md §
-# Prerequisite), set both and run `python -m agent --topic <slug>` to send
-# a live digest and confirm it lands in the channel.
+Verified against the real @hypnosisflow channel 2026-09-18: a
+workflow_dispatch run of .github/workflows/agent-run.yml sent 124 items
+across 5 topics with no errors, and the pending queue drained to 0.
 """
 
 from __future__ import annotations

@@ -318,7 +318,7 @@ infrastructure.
     history for.
   - **Pushed to the remote** as part of the combined push with
     sub-projects #2 and #3 — see below.
-- **Sub-project #2, Telegram delivery: shipped, live send pending.**
+- **Sub-project #2, Telegram delivery: shipped, live send verified.**
   Spec: `docs/superpowers/specs/2026-09-17-telegram-delivery-design.md`.
   Plan: `docs/superpowers/plans/2026-09-17-telegram-delivery.md`
   (executed via subagent-driven-development, 3 tasks + a final
@@ -346,19 +346,16 @@ infrastructure.
     `components/SiteFooter.tsx` gets a site-wide Telegram channel link;
     `app/researcher/agent/page.tsx` and `docs/agent-plan.md`'s narrative
     no longer describe email/SMTP delivery.
-  - **The bot/channel don't exist yet** — `agent/defaults.yaml`'s
-    `telegram_channel` and the footer's Telegram `href` both use the
-    literal placeholder `REPLACE_ME` by design (human partner confirmed
-    keeping the plan's literal choice, despite it being a live-looking
-    public link until the channel is created); a TODO in
-    `agent/deliver.py` names the live-verification step. Once
-    `TELEGRAM_BOT_TOKEN` is added as a repo secret and the placeholder
-    handle is swapped for the real one, `python -m agent --topic <slug>`
-    sends a live digest — same deferred shape as the original v1 plan's
-    never-completed SMTP step. The live ~96-item pending backlog on
-    `agent-data` (some items about a month old, built up while delivery
-    was dead) ships as-is on the first live send per the user's
-    decision, not trimmed first.
+  - **Live send verified 2026-09-18.** The @hypnosisflow bot/channel now
+    exist; `TELEGRAM_BOT_TOKEN` is set as a repo secret,
+    `agent/defaults.yaml`'s `telegram_channel` and the footer's Telegram
+    `href` both point at the real handle (commit `f5736ec`), and a manual
+    `workflow_dispatch` run of `.github/workflows/agent-run.yml` sent the
+    full accumulated backlog — 124 items across 5 topics, per the user's
+    earlier decision not to trim it first — with no errors.
+    `agent-data`'s `status.json` confirms `pending_count: 0` and a fresh
+    `last_sent_at`. This was the last deferred step from the original v1
+    plan's never-completed SMTP step.
   - Final whole-plan review (opus): no Critical findings. Two Important
     findings needed code fixes and were fixed in the final-review fix
     wave (token leak into the run log; no pacing/flood-limit handling on
@@ -496,18 +493,20 @@ at the top of this file. Plan:
 **Content Direction & Tony Scraponi: all four sub-projects shipped** —
 #1 (agent themes rework), #2 (Telegram delivery), #3 (Blog content &
 direction), #4 (Tony Scraponi MVP — the `/researcher/queue/` pending-queue
-page). See this file's section above for what shipped in each, what the
-final reviews found and fixed, and what's deferred (notably: sub-project
-#2's Telegram bot/channel still don't exist, so sub-project #4's queue
-page is currently showing a real, ever-growing, never-delivered backlog —
-shipped as-is per the user's 2026-09-17 decision). All four sub-projects
-are pushed to the remote; the manual agent-workflow trigger for #2
-confirmed the renamed `status.json` keys landed on `agent-data`
-(2026-09-17T04:34:28Z run). `docs/tony-scraponi-roadmap.md`'s four ordered
-sub-projects are now all complete — no confirmed next step for this
-initiative; the roadmap's own "Source material" section points at the
-Obsidian-vault product plan for what a Tony Scraponi split beyond this MVP
-would involve, if that's ever picked up.
+page). See this file's section above for what shipped in each and what
+the final reviews found and fixed. Sub-project #2's bot/channel now exist
+(`@hypnosisflow`) and live delivery is verified (2026-09-18: 124-item
+backlog sent, queue drained to 0) — sub-project #4's queue page will now
+show whatever accumulates between 24h delivery cycles rather than an
+ever-growing backlog. All four sub-projects are pushed to the remote; the
+manual agent-workflow trigger for #2 confirmed the renamed `status.json`
+keys landed on `agent-data` (2026-09-17T04:34:28Z run), and a second
+manual trigger the next day confirmed the real Telegram send.
+`docs/tony-scraponi-roadmap.md`'s four ordered sub-projects are now all
+complete — no confirmed next step for this initiative; the roadmap's own
+"Source material" section points at the Obsidian-vault product plan for
+what a Tony Scraponi split beyond this MVP would involve, if that's ever
+picked up.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
