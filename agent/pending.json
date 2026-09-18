@@ -1,4 +1,45 @@
 {
-  "items": [],
+  "items": [
+    {
+      "pending_since": "2026-09-18T15:21:10.307708+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "A proposed AI alignment idea based on specification gaming, relevant to agent behavior and safety in AI systems.",
+      "title": "A Stupid Idea for AI Alignment We Came with by Looking at Specification Gaming",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://slimemoldtimemold.com/2026/08/05/a-stupid-idea-for-ai-alignment-we-came-up-with-by-looking-at-the-list-of-specification-gaming-behaviours/"
+    },
+    {
+      "pending_since": "2026-09-18T15:21:10.307708+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "A headless GitHub tool for editing and exporting native Jianying drafts with an Agent Skill, relevant to automation tooling.",
+      "title": "mcncarl/jianying-headless",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/mcncarl/jianying-headless"
+    },
+    {
+      "pending_since": "2026-09-18T15:21:10.307708+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "A GitHub project for semantic ifs from open models, relevant as a local developer tool.",
+      "title": "TheoLeeCJ/SemIf",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/TheoLeeCJ/SemIf"
+    },
+    {
+      "pending_since": "2026-09-18T15:21:10.307708+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "An open-source text humanizer that bypasses AI detectors, clearly a tooling project.",
+      "title": "korcarc/text-humanizer",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/korcarc/text-humanizer"
+    }
+  ],
   "last_email_at": "2026-09-18T03:43:43.729747+00:00"
 }

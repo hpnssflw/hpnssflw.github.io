@@ -3,16 +3,16 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 35,
-      "in_window": 35,
-      "kept": 0,
-      "new": 22
+      "collected": 33,
+      "in_window": 33,
+      "kept": 1,
+      "new": 19
     },
     "tooling": {
       "collected": 53,
       "in_window": 53,
-      "kept": 0,
-      "new": 23
+      "kept": 3,
+      "new": 26
     },
     "web-products": {
       "collected": 27,
@@ -22,119 +22,115 @@
     }
   },
   "last_sent_at": "2026-09-18T03:43:43.729747+00:00",
-  "pending_count": 0,
+  "pending_count": 4,
   "recent_events": [
     {
       "reason": "below_relevance",
-      "title": "I have a theory that software drives people insane",
+      "title": "Reverse engineering my e-scooter and rewriting the firmware in Rust",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462305+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
-      "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462291+00:00",
+      "ts": "2026-09-18T15:21:50.919821+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462278+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I can't stop thinking about Papua New Guinea",
-      "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462265+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-      "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462251+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "On the Navier\u2013Stokes Millennium Prize Problem",
-      "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462235+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462210+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Data collected by cars and sold to third parties",
-      "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462195+00:00",
+      "ts": "2026-09-18T15:21:50.919804+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Everyone should slow down AI development except for me",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462180+00:00",
+      "ts": "2026-09-18T15:21:50.919796+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "title": "I can't stop thinking about Papua New Guinea",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462164+00:00",
+      "ts": "2026-09-18T15:21:50.919789+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462146+00:00",
+      "ts": "2026-09-18T15:21:50.919781+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "title": "On the Navier\u2013Stokes Millennium Prize Problem",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462128+00:00",
+      "ts": "2026-09-18T15:21:50.919773+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Ask HN: Can we please limit the AI news flood?",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462105+00:00",
+      "ts": "2026-09-18T15:21:50.919765+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I have a theory that software drives people insane",
+      "topic": "web-products",
+      "ts": "2026-09-18T15:21:50.919757+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Data collected by cars and sold to third parties",
+      "topic": "web-products",
+      "ts": "2026-09-18T15:21:50.919749+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:39.462037+00:00",
+      "ts": "2026-09-18T15:21:50.919741+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Can we please limit the AI news flood?",
+      "topic": "web-products",
+      "ts": "2026-09-18T15:21:50.919731+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "topic": "web-products",
+      "ts": "2026-09-18T15:21:50.919719+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+      "topic": "web-products",
+      "ts": "2026-09-18T15:21:50.919681+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "topic": "web-products",
+      "ts": "2026-09-18T15:21:50.919610+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
       "topic": "web-products",
-      "ts": "2026-09-18T08:34:26.082885+00:00",
+      "ts": "2026-09-18T15:21:42.256253+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-13T21:53:17.078470+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-14T02:06:14.594899+00:00"
@@ -226,19 +222,23 @@
     {
       "kept": 0,
       "ts": "2026-09-18T08:33:46.851521+00:00"
+    },
+    {
+      "kept": 4,
+      "ts": "2026-09-18T15:21:10.307708+00:00"
     }
   ],
-  "streak": 174,
+  "streak": 175,
   "topics": [
     {
-      "collected": 35,
-      "kept": 0,
+      "collected": 33,
+      "kept": 1,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 53,
-      "kept": 0,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
@@ -249,5 +249,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-18T08:33:46.851521+00:00"
+  "updated_at": "2026-09-18T15:21:10.307708+00:00"
 }
