@@ -11,131 +11,126 @@
     "tooling": {
       "collected": 53,
       "in_window": 53,
-      "kept": 3,
-      "new": 24
+      "kept": 0,
+      "new": 23
     },
     "web-products": {
       "collected": 27,
       "in_window": 27,
-      "kept": 1,
-      "new": 15
+      "kept": 0,
+      "new": 14
     }
   },
   "last_sent_at": "2026-09-18T03:43:43.729747+00:00",
   "pending_count": 0,
   "recent_events": [
     {
-      "score": 8,
-      "source": "hn",
-      "title": "Show HN: Navier-Stokes Visualized as 1kB i386 demos",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.991073+00:00",
-      "verdict": "kept"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.991055+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Everyone should slow down AI development except for me",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.991039+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I can't stop thinking about Papua New Guinea",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.991023+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.991007+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "On the Navier\u2013Stokes Millennium Prize Problem",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990991+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Navier-Stokes \u2013 Tristan Buckmaster [pdf]",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990974+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990958+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
-      "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990942+00:00",
-      "verdict": "drop"
-    },
-    {
       "reason": "below_relevance",
       "title": "I have a theory that software drives people insane",
       "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990923+00:00",
+      "ts": "2026-09-18T08:34:39.462305+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
       "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990896+00:00",
+      "ts": "2026-09-18T08:34:39.462291+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990878+00:00",
+      "ts": "2026-09-18T08:34:39.462278+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "title": "I can't stop thinking about Papua New Guinea",
       "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990860+00:00",
+      "ts": "2026-09-18T08:34:39.462265+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Ask HN: Can we please limit the AI news flood?",
+      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
       "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990835+00:00",
+      "ts": "2026-09-18T08:34:39.462251+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "On the Navier\u2013Stokes Millennium Prize Problem",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:39.462235+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:39.462210+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Data collected by cars and sold to third parties",
       "topic": "web-products",
-      "ts": "2026-09-18T03:44:42.990767+00:00",
+      "ts": "2026-09-18T08:34:39.462195+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Everyone should slow down AI development except for me",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:39.462180+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:39.462164+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:39.462146+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:39.462128+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Can we please limit the AI news flood?",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:39.462105+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:39.462037+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
+      "topic": "web-products",
+      "ts": "2026-09-18T08:34:26.082885+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-13T18:24:03.258227+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-13T21:53:17.078470+00:00"
@@ -227,9 +222,13 @@
     {
       "kept": 4,
       "ts": "2026-09-18T03:43:43.729747+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-18T08:33:46.851521+00:00"
     }
   ],
-  "streak": 173,
+  "streak": 174,
   "topics": [
     {
       "collected": 35,
@@ -239,16 +238,16 @@
     },
     {
       "collected": 53,
-      "kept": 3,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 27,
-      "kept": 1,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-18T03:43:43.729747+00:00"
+  "updated_at": "2026-09-18T08:33:46.851521+00:00"
 }
