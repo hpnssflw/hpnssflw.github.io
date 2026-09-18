@@ -3,139 +3,136 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 28,
-      "in_window": 28,
-      "kept": 2,
+      "collected": 31,
+      "in_window": 31,
+      "kept": 1,
       "new": 19
     },
     "tooling": {
       "collected": 52,
       "in_window": 52,
-      "kept": 0,
-      "new": 25
+      "kept": 2,
+      "new": 26
     },
     "web-products": {
-      "collected": 24,
-      "in_window": 24,
-      "kept": 1,
-      "new": 15
+      "collected": 25,
+      "in_window": 25,
+      "kept": 2,
+      "new": 16
     }
   },
   "last_sent_at": null,
-  "pending_count": 115,
+  "pending_count": 120,
   "recent_events": [
     {
-      "score": 6,
+      "score": 7,
       "source": "hn",
-      "title": "Show HN: I made a flight simulator, except you're just a passenger",
+      "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117949+00:00",
+      "ts": "2026-09-18T01:57:30.197637+00:00",
       "verdict": "kept"
     },
     {
-      "reason": "below_relevance",
-      "title": "Mexican student creates an acoustic fire extinguisher to put out fire in seconds",
+      "score": 9,
+      "source": "hn",
+      "title": "Hister: A private search engine for the pages you visit and the files you keep",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117934+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-      "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117919+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
-      "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117892+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Everyone should slow down AI development except for me",
-      "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117877+00:00",
-      "verdict": "drop"
+      "ts": "2026-09-18T01:57:30.197624+00:00",
+      "verdict": "kept"
     },
     {
       "reason": "below_relevance",
       "title": "I can't stop thinking about Papua New Guinea",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117862+00:00",
+      "ts": "2026-09-18T01:57:30.197610+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "On the Navier\u2013Stokes Millennium Prize Problem",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117847+00:00",
+      "ts": "2026-09-18T01:57:30.197597+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Navier-Stokes \u2013 Tristan Buckmaster [pdf]",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117832+00:00",
+      "ts": "2026-09-18T01:57:30.197584+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: An inside view of Montana's new biotech law",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117817+00:00",
+      "ts": "2026-09-18T01:57:30.197572+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I have a theory that software drives people insane",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117802+00:00",
+      "ts": "2026-09-18T01:57:30.197559+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Data collected by cars and sold to third parties",
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117787+00:00",
+      "ts": "2026-09-18T01:57:30.197547+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Everyone should slow down AI development except for me",
+      "topic": "web-products",
+      "ts": "2026-09-18T01:57:30.197534+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117771+00:00",
+      "ts": "2026-09-18T01:57:30.197521+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "topic": "web-products",
+      "ts": "2026-09-18T01:57:30.197496+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Data collected by cars and sold to third parties",
+      "topic": "web-products",
+      "ts": "2026-09-18T01:57:30.197483+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+      "topic": "web-products",
+      "ts": "2026-09-18T01:57:30.197470+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117753+00:00",
+      "ts": "2026-09-18T01:57:30.197455+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+      "title": "Ask HN: Can we please limit the AI news flood?",
       "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117729+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
-      "topic": "web-products",
-      "ts": "2026-09-17T22:31:27.117660+00:00",
+      "ts": "2026-09-18T01:57:30.197436+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-13T08:35:38.702369+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-13T15:13:11.174945+00:00"
@@ -227,28 +224,32 @@
     {
       "kept": 3,
       "ts": "2026-09-17T22:30:45.116044+00:00"
+    },
+    {
+      "kept": 5,
+      "ts": "2026-09-18T01:56:40.951217+00:00"
     }
   ],
-  "streak": 171,
+  "streak": 172,
   "topics": [
     {
-      "collected": 28,
-      "kept": 2,
+      "collected": 31,
+      "kept": 1,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 52,
-      "kept": 0,
+      "kept": 2,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 24,
-      "kept": 1,
+      "collected": 25,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-17T22:30:45.116044+00:00"
+  "updated_at": "2026-09-18T01:56:40.951217+00:00"
 }
