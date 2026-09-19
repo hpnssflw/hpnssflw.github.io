@@ -6,135 +6,131 @@
       "collected": 36,
       "in_window": 36,
       "kept": 0,
-      "new": 20
+      "new": 19
     },
     "tooling": {
       "collected": 53,
       "in_window": 53,
       "kept": 2,
-      "new": 23
+      "new": 22
     },
     "web-products": {
-      "collected": 30,
-      "in_window": 30,
+      "collected": 31,
+      "in_window": 31,
       "kept": 0,
-      "new": 14
+      "new": 15
     }
   },
   "last_sent_at": "2026-09-18T03:43:43.729747+00:00",
-  "pending_count": 7,
+  "pending_count": 9,
   "recent_events": [
+    {
+      "reason": "below_relevance",
+      "title": "Reverse engineering my e-scooter and rewriting the firmware in Rust",
+      "topic": "web-products",
+      "ts": "2026-09-19T02:02:02.010719+00:00",
+      "verdict": "drop"
+    },
     {
       "reason": "below_relevance",
       "title": "I have a theory that software drives people insane",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532636+00:00",
+      "ts": "2026-09-19T02:02:02.010707+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532623+00:00",
+      "ts": "2026-09-19T02:02:02.010694+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Everyone should slow down AI development except for me",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532611+00:00",
+      "ts": "2026-09-19T02:02:02.010682+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I can't stop thinking about Papua New Guinea",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532599+00:00",
+      "ts": "2026-09-19T02:02:02.010670+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532586+00:00",
+      "ts": "2026-09-19T02:02:02.010657+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: An inside view of Montana's new biotech law",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532574+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Reverse engineering my e-scooter and rewriting the firmware in Rust",
-      "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532561+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Data collected by cars and sold to third parties",
-      "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532549+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
-      "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532537+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
-      "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532524+00:00",
+      "ts": "2026-09-19T02:02:02.010644+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532495+00:00",
+      "ts": "2026-09-19T02:02:02.010632+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
+      "topic": "web-products",
+      "ts": "2026-09-19T02:02:02.010619+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "topic": "web-products",
+      "ts": "2026-09-19T02:02:02.010607+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ask HN: Can we please limit the AI news flood?",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532479+00:00",
+      "ts": "2026-09-19T02:02:02.010594+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "title": "Data collected by cars and sold to third parties",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532459+00:00",
+      "ts": "2026-09-19T02:02:02.010581+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+      "topic": "web-products",
+      "ts": "2026-09-19T02:02:02.010566+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:55.532388+00:00",
+      "ts": "2026-09-19T02:02:02.010532+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "seen",
-      "title": "Show HN: Scry, programmable internet search w/ congestion pricing",
+      "reason": "below_relevance",
+      "title": "List of references on Sony websites to players \"owning\" their digital games",
       "topic": "web-products",
-      "ts": "2026-09-18T22:00:47.162201+00:00",
+      "ts": "2026-09-19T02:02:02.010457+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 3,
-      "ts": "2026-09-14T17:10:09.041768+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-09-14T22:50:24.495291+00:00"
@@ -226,9 +222,13 @@
     {
       "kept": 2,
       "ts": "2026-09-18T21:59:52.479748+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-09-19T02:01:13.253498+00:00"
     }
   ],
-  "streak": 177,
+  "streak": 178,
   "topics": [
     {
       "collected": 36,
@@ -243,11 +243,11 @@
       "slug": "tooling"
     },
     {
-      "collected": 30,
+      "collected": 31,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-18T21:59:52.479748+00:00"
+  "updated_at": "2026-09-19T02:01:13.253498+00:00"
 }
