@@ -3,138 +3,135 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 34,
-      "in_window": 34,
-      "kept": 0,
-      "new": 18
+      "collected": 21,
+      "in_window": 21,
+      "kept": 1,
+      "new": 10
     },
     "tooling": {
-      "collected": 54,
-      "in_window": 54,
+      "collected": 51,
+      "in_window": 51,
       "kept": 1,
-      "new": 13
+      "new": 11
     },
     "web-products": {
-      "collected": 31,
-      "in_window": 31,
-      "kept": 0,
-      "new": 16
+      "collected": 25,
+      "in_window": 25,
+      "kept": 1,
+      "new": 18
     }
   },
   "last_sent_at": "2026-09-19T08:20:59.907364+00:00",
-  "pending_count": 5,
+  "pending_count": 8,
   "recent_events": [
     {
-      "reason": "below_relevance",
-      "title": "Reverse engineering my e-scooter and rewriting the firmware in Rust",
+      "score": 9,
+      "source": "hn",
+      "title": "Show HN: Capsule \u2013 Single-file web apps that save their data into SQLite",
       "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046181+00:00",
+      "ts": "2026-09-19T21:53:03.991645+00:00",
+      "verdict": "kept"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sex, AI, and the Apocalypse",
+      "topic": "web-products",
+      "ts": "2026-09-19T21:53:03.991632+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "The Secret Life of Circuits",
+      "topic": "web-products",
+      "ts": "2026-09-19T21:53:03.991619+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "The American Religion of Self-Storage Facilities",
+      "topic": "web-products",
+      "ts": "2026-09-19T21:53:03.991607+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OpenAI might have stolen another major proof",
+      "topic": "web-products",
+      "ts": "2026-09-19T21:53:03.991594+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "AI safety is mostly a sex cult",
+      "topic": "web-products",
+      "ts": "2026-09-19T21:53:03.991581+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Navier-Stokes Announcement",
+      "topic": "web-products",
+      "ts": "2026-09-19T21:53:03.991567+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
+      "topic": "web-products",
+      "ts": "2026-09-19T21:53:03.991545+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
       "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046174+00:00",
+      "ts": "2026-09-19T21:53:03.991533+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046167+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
-      "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046160+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Everyone should slow down AI development except for me",
-      "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046153+00:00",
+      "ts": "2026-09-19T21:53:03.991520+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I can't stop thinking about Papua New Guinea",
       "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046146+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-      "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046139+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-      "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046132+00:00",
+      "ts": "2026-09-19T21:53:03.991506+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: An inside view of Montana's new biotech law",
       "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046125+00:00",
+      "ts": "2026-09-19T21:53:03.991494+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
+      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
       "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046118+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I have a theory that software drives people insane",
-      "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046111+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Data collected by cars and sold to third parties",
-      "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046099+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
-      "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046090+00:00",
+      "ts": "2026-09-19T21:53:03.991481+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ask HN: Can we please limit the AI news flood?",
       "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046081+00:00",
+      "ts": "2026-09-19T21:53:03.991467+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "List of references on Sony websites to players \"owning\" their digital games",
+      "title": "The scourge of x86 emulation",
       "topic": "web-products",
-      "ts": "2026-09-19T18:16:48.046066+00:00",
+      "ts": "2026-09-19T21:53:03.991452+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-15T15:50:04.627470+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-15T19:20:28.976799+00:00"
@@ -226,28 +223,32 @@
     {
       "kept": 1,
       "ts": "2026-09-19T18:16:06.053534+00:00"
+    },
+    {
+      "kept": 3,
+      "ts": "2026-09-19T21:52:36.261347+00:00"
     }
   ],
-  "streak": 181,
+  "streak": 182,
   "topics": [
     {
-      "collected": 34,
-      "kept": 0,
+      "collected": 21,
+      "kept": 1,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 54,
+      "collected": 51,
       "kept": 1,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 31,
-      "kept": 0,
+      "collected": 25,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-19T18:16:06.053534+00:00"
+  "updated_at": "2026-09-19T21:52:36.261347+00:00"
 }
