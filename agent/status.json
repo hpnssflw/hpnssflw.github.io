@@ -3,138 +3,134 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 36,
-      "in_window": 36,
-      "kept": 1,
-      "new": 20
+      "collected": 35,
+      "in_window": 35,
+      "kept": 0,
+      "new": 18
     },
     "tooling": {
       "collected": 54,
       "in_window": 54,
-      "kept": 8,
-      "new": 20
+      "kept": 4,
+      "new": 15
     },
     "web-products": {
       "collected": 31,
       "in_window": 31,
       "kept": 0,
-      "new": 15
+      "new": 16
     }
   },
   "last_sent_at": "2026-09-19T08:20:59.907364+00:00",
-  "pending_count": 0,
+  "pending_count": 4,
   "recent_events": [
+    {
+      "reason": "below_relevance",
+      "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
+      "topic": "web-products",
+      "ts": "2026-09-19T14:59:07.181266+00:00",
+      "verdict": "drop"
+    },
     {
       "reason": "below_relevance",
       "title": "Reverse engineering my e-scooter and rewriting the firmware in Rust",
       "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595423+00:00",
+      "ts": "2026-09-19T14:59:07.181253+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I have a theory that software drives people insane",
       "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595407+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I can't stop thinking about Papua New Guinea",
-      "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595392+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-      "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595376+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-      "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595360+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595344+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
-      "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595329+00:00",
+      "ts": "2026-09-19T14:59:07.181240+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595313+00:00",
+      "ts": "2026-09-19T14:59:07.181227+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Everyone should slow down AI development except for me",
       "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595297+00:00",
+      "ts": "2026-09-19T14:59:07.181214+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I can't stop thinking about Papua New Guinea",
+      "topic": "web-products",
+      "ts": "2026-09-19T14:59:07.181201+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+      "topic": "web-products",
+      "ts": "2026-09-19T14:59:07.181187+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-19T14:59:07.181174+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "topic": "web-products",
+      "ts": "2026-09-19T14:59:07.181160+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+      "topic": "web-products",
+      "ts": "2026-09-19T14:59:07.181147+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
       "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595281+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ask HN: Can we please limit the AI news flood?",
-      "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595265+00:00",
+      "ts": "2026-09-19T14:59:07.181134+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Data collected by cars and sold to third parties",
       "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595247+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
-      "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595228+00:00",
+      "ts": "2026-09-19T14:59:07.181119+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
       "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595203+00:00",
+      "ts": "2026-09-19T14:59:07.181103+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Can we please limit the AI news flood?",
+      "topic": "web-products",
+      "ts": "2026-09-19T14:59:07.181075+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "List of references on Sony websites to players \"owning\" their digital games",
       "topic": "web-products",
-      "ts": "2026-09-19T08:21:43.595122+00:00",
+      "ts": "2026-09-19T14:59:07.181052+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-15T02:13:13.154936+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-15T09:02:04.272871+00:00"
@@ -226,19 +222,23 @@
     {
       "kept": 9,
       "ts": "2026-09-19T08:20:59.907364+00:00"
+    },
+    {
+      "kept": 4,
+      "ts": "2026-09-19T14:58:16.912195+00:00"
     }
   ],
-  "streak": 179,
+  "streak": 180,
   "topics": [
     {
-      "collected": 36,
-      "kept": 1,
+      "collected": 35,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 54,
-      "kept": 8,
+      "kept": 4,
       "name": "Tooling",
       "slug": "tooling"
     },
@@ -249,5 +249,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-19T08:20:59.907364+00:00"
+  "updated_at": "2026-09-19T14:58:16.912195+00:00"
 }
