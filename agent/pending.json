@@ -1,4 +1,45 @@
 {
-  "items": [],
+  "items": [
+    {
+      "pending_since": "2026-09-20T18:21:26.211129+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "An article discussing the nature and effectiveness of prompts in AI and LLM interactions.",
+      "title": "Prompts Aren't Real",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://evaluation.club"
+    },
+    {
+      "pending_since": "2026-09-20T18:21:26.211129+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Sigabrt.dev is a self-hosted cronjob monitor with an SSH TUI that alerts you when scripts fail to ping an endpoint, making it highly relevant as a developer tool.",
+      "title": "Show HN: Sigabrt.dev \u2013 cronjob monitor with an SSH TUI",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://sigabrt.dev"
+    },
+    {
+      "pending_since": "2026-09-20T18:21:26.211129+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A community thread where people share current projects, often web products and side projects, making it directly relevant to product and web trends.",
+      "title": "Ask HN: What are you working on? (September 2026)",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://news.ycombinator.com/item?id=49686380"
+    },
+    {
+      "pending_since": "2026-09-20T18:21:26.211129+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "A Show HN hardware product that listens for birds and renders them as 1800s-style illustrations, relevant to product and visualization trends.",
+      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.com/arnegiacomo/fugleramme"
+    }
+  ],
   "last_email_at": "2026-09-20T15:00:58.383335+00:00"
 }
