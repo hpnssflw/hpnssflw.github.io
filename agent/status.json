@@ -6,137 +6,132 @@
       "collected": 37,
       "in_window": 37,
       "kept": 1,
-      "new": 20
+      "new": 18
     },
     "tooling": {
       "collected": 55,
       "in_window": 55,
       "kept": 1,
-      "new": 13
+      "new": 14
     },
     "web-products": {
       "collected": 31,
       "in_window": 31,
-      "kept": 2,
-      "new": 16
+      "kept": 1,
+      "new": 14
     }
   },
   "last_sent_at": "2026-09-20T15:00:58.383335+00:00",
-  "pending_count": 4,
+  "pending_count": 7,
   "recent_events": [
     {
       "score": 6,
       "source": "hn",
-      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+      "title": "How to write an effective software design document",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292814+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 7,
-      "source": "hn",
-      "title": "Ask HN: What are you working on? (September 2026)",
-      "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292800+00:00",
+      "ts": "2026-09-20T22:01:00.336923+00:00",
       "verdict": "kept"
     },
     {
       "reason": "below_relevance",
       "title": "AI safety is mostly a sex cult",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292789+00:00",
+      "ts": "2026-09-20T22:01:00.336898+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I think you should almost never use AI to write",
+      "topic": "web-products",
+      "ts": "2026-09-20T22:01:00.336890+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Navier-Stokes Announcement",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292779+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Bodily Oddities",
-      "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292769+00:00",
+      "ts": "2026-09-20T22:01:00.336883+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292759+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Everyone should slow down AI development except for me",
-      "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292750+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I can't stop thinking about Papua New Guinea",
-      "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292740+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-      "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292730+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292720+00:00",
+      "ts": "2026-09-20T22:01:00.336876+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292710+00:00",
+      "ts": "2026-09-20T22:01:00.336869+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "title": "Everyone should slow down AI development except for me",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292700+00:00",
+      "ts": "2026-09-20T22:01:00.336862+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I can't stop thinking about Papua New Guinea",
+      "topic": "web-products",
+      "ts": "2026-09-20T22:01:00.336855+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+      "topic": "web-products",
+      "ts": "2026-09-20T22:01:00.336848+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-20T22:01:00.336841+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ask HN: Can we please limit the AI news flood?",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292689+00:00",
+      "ts": "2026-09-20T22:01:00.336833+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "topic": "web-products",
+      "ts": "2026-09-20T22:01:00.336825+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Data collected by cars and sold to third parties",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292678+00:00",
+      "ts": "2026-09-20T22:01:00.336812+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
       "topic": "web-products",
-      "ts": "2026-09-20T18:22:00.292662+00:00",
+      "ts": "2026-09-20T22:01:00.336740+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "Ask HN: What are you working on? (September 2026)",
+      "topic": "web-products",
+      "ts": "2026-09-20T22:00:53.127727+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-16T08:54:15.597774+00:00"
-    },
     {
       "kept": 16,
       "ts": "2026-09-16T15:41:52.087909+00:00"
@@ -228,9 +223,13 @@
     {
       "kept": 4,
       "ts": "2026-09-20T18:21:26.211129+00:00"
+    },
+    {
+      "kept": 3,
+      "ts": "2026-09-20T22:00:04.118633+00:00"
     }
   ],
-  "streak": 185,
+  "streak": 186,
   "topics": [
     {
       "collected": 37,
@@ -246,10 +245,10 @@
     },
     {
       "collected": 31,
-      "kept": 2,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-20T18:21:26.211129+00:00"
+  "updated_at": "2026-09-20T22:00:04.118633+00:00"
 }
