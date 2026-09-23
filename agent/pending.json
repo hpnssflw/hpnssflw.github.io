@@ -119,6 +119,36 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://www.coveragecat.com/"
+    },
+    {
+      "pending_since": "2026-09-23T22:31:50.850872+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "An article about tools that help developers navigate complex codebases, potentially relevant to LLM-assisted code understanding and AI engineering.",
+      "title": "When code is a maze, smart developers make maps (2025)",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://medium.com/@simonsmartiom/when-code-is-a-maze-smart-developers-make-maps-fbc452a48c1b"
+    },
+    {
+      "pending_since": "2026-09-23T22:31:50.850872+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A directly relevant article about reworking CI pipelines to keep up with AI coding, fitting developer tooling and workflow optimization.",
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://linear.app/now/ci-bottleneck-reworked"
+    },
+    {
+      "pending_since": "2026-09-23T22:31:50.850872+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Grammarly reportedly sends aggressive messages to users attempting to cancel their subscriptions.",
+      "title": "Grammarly will send unhinged messages to all your users if you try to cancel",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://www.reddit.com/r/sysadmin/comments/1wjdpgx/psa_grammarly_will_send_unhinged_messages_to_all/"
     }
   ],
   "last_email_at": "2026-09-23T08:53:43.403564+00:00"
