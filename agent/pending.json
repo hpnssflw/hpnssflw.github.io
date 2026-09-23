@@ -1,4 +1,65 @@
 {
-  "items": [],
+  "items": [
+    {
+      "pending_since": "2026-09-23T15:42:15.861111+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "Antitrust lawsuit against Anthropic, OpenAI, and others for allegedly slowing AI development, relevant to the AI industry landscape.",
+      "title": "Anthropic, OpenAI et al. face antitrust suit for agreeing to slow AI development",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/anthropic-openai-spacexai-and-google-face-antitrust-lawsuit-for-agreeing-to-slow-ai-development-plaintiffs-say-plan-has-been-in-motion-for-months-before-calls-agreement-self-serving"
+    },
+    {
+      "pending_since": "2026-09-23T15:42:15.861111+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A bug report or discussion about Claude Code's handling of AGENTS.md files, directly relevant to AI-assisted development tooling.",
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/"
+    },
+    {
+      "pending_since": "2026-09-23T15:42:15.861111+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A tip about lesser-known Git ignore files that improve version-control workflows.",
+      "title": "Two Git ignore files nobody told me about",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://mihai.dinculescu.dev/posts/two-git-ignore-files-nobody-told-me-about/"
+    },
+    {
+      "pending_since": "2026-09-23T15:42:15.861111+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "A curated catalog of open-source projects built with Jev, a useful community tooling resource.",
+      "title": "heyjunpenn/awesome-jev",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/heyjunpenn/awesome-jev"
+    },
+    {
+      "pending_since": "2026-09-23T15:42:15.861111+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "A GitHub project implementing semantic ifs with open models, relevant as an experimental AI/developer tool.",
+      "title": "TheoLeeCJ/SemIf-OpenJev",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/TheoLeeCJ/SemIf-OpenJev"
+    },
+    {
+      "pending_since": "2026-09-23T15:42:15.861111+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "ZuckOff is a free app that detects Meta glasses, a product relevant to web/mobile trends and privacy.",
+      "title": "ZuckOff is a free app that sees Meta glasses before they see you",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://www.wired.me/story/meta-smart-glasses-detector-app-zuckoff"
+    }
+  ],
   "last_email_at": "2026-09-23T08:53:43.403564+00:00"
 }
