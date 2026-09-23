@@ -3,139 +3,135 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 38,
-      "in_window": 38,
-      "kept": 1,
-      "new": 18
+      "collected": 37,
+      "in_window": 37,
+      "kept": 2,
+      "new": 17
     },
     "tooling": {
       "collected": 56,
       "in_window": 56,
-      "kept": 4,
-      "new": 17
+      "kept": 3,
+      "new": 13
     },
     "web-products": {
       "collected": 31,
       "in_window": 31,
       "kept": 1,
-      "new": 12
+      "new": 13
     }
   },
   "last_sent_at": "2026-09-23T08:53:43.403564+00:00",
-  "pending_count": 6,
+  "pending_count": 12,
   "recent_events": [
     {
       "score": 6,
       "source": "hn",
-      "title": "ZuckOff is a free app that sees Meta glasses before they see you",
+      "title": "Launch HN: Coverage Cat (YC S22) \u2013 Umbrella insurance via your personal agent",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735951+00:00",
+      "ts": "2026-09-23T19:17:59.597426+00:00",
       "verdict": "kept"
     },
     {
       "reason": "below_relevance",
-      "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
+      "title": "AI safety is mostly a sex cult",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735938+00:00",
+      "ts": "2026-09-23T19:17:59.597408+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "title": "What California is learning from solar panels built over irrigation canals",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735927+00:00",
+      "ts": "2026-09-23T19:17:59.597380+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "What happened to the Snowden archive",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735904+00:00",
+      "ts": "2026-09-23T19:17:59.597365+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I can't stop thinking about Papua New Guinea",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735893+00:00",
+      "ts": "2026-09-23T19:17:59.597350+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735880+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735869+00:00",
+      "ts": "2026-09-23T19:17:59.597335+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: An inside view of Montana's new biotech law",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735858+00:00",
+      "ts": "2026-09-23T19:17:59.597320+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I think you should almost never use AI to write",
+      "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735845+00:00",
+      "ts": "2026-09-23T19:17:59.597305+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735831+00:00",
+      "ts": "2026-09-23T19:17:59.597289+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "topic": "web-products",
+      "ts": "2026-09-23T19:17:59.597271+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I think you should almost never use AI to write",
+      "topic": "web-products",
+      "ts": "2026-09-23T19:17:59.597252+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-23T19:17:59.597230+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735815+00:00",
+      "ts": "2026-09-23T19:17:59.597160+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "Launch HN: Coverage Cat (YC S22) \u2013 Umbrella insurance via your personal agent",
+      "reason": "seen",
+      "title": "ZuckOff is a free app that sees Meta glasses before they see you",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:55.735748+00:00",
+      "ts": "2026-09-23T19:17:45.789513+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "How to write an effective software design document",
       "topic": "web-products",
-      "ts": "2026-09-23T15:42:46.829598+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "One year of sponsored Servo development",
-      "topic": "web-products",
-      "ts": "2026-09-23T15:42:46.829591+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "Show HN: Capsule \u2013 Single-file web apps that save their data into SQLite",
-      "topic": "web-products",
-      "ts": "2026-09-23T15:42:46.829583+00:00",
+      "ts": "2026-09-23T19:17:45.789490+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 7,
-      "ts": "2026-09-17T02:09:45.875907+00:00"
-    },
     {
       "kept": 5,
       "ts": "2026-09-17T04:34:41.084663+00:00"
@@ -227,19 +223,23 @@
     {
       "kept": 6,
       "ts": "2026-09-23T15:42:15.861111+00:00"
+    },
+    {
+      "kept": 6,
+      "ts": "2026-09-23T19:17:21.992271+00:00"
     }
   ],
-  "streak": 189,
+  "streak": 190,
   "topics": [
     {
-      "collected": 38,
-      "kept": 1,
+      "collected": 37,
+      "kept": 2,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 56,
-      "kept": 4,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
@@ -250,5 +250,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-23T15:42:15.861111+00:00"
+  "updated_at": "2026-09-23T19:17:21.992271+00:00"
 }
