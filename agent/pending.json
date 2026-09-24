@@ -1,4 +1,45 @@
 {
-  "items": [],
+  "items": [
+    {
+      "pending_since": "2026-09-24T22:48:04.749226+00:00",
+      "score": 10,
+      "source": "hn",
+      "summary": "A DSL that converts agent behaviors into reusable workflows with tool calls and routing, directly addressing agent automation pipelines and harnesses.",
+      "title": "Show HN: AgentRun: DSL to turn agents into workflows",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/Parcha-ai/agentrun"
+    },
+    {
+      "pending_since": "2026-09-24T22:48:04.749226+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "An open-source IDE where humans and agents collaboratively design software, relevant to agentic development environments but not core AI infrastructure.",
+      "title": "Show HN: Whiteboard (YC W26) \u2013 An open-source IDE for thoughtful software design",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/devdotfast/whiteboard"
+    },
+    {
+      "pending_since": "2026-09-24T22:48:04.749226+00:00",
+      "score": 10,
+      "source": "hn",
+      "summary": "A Show HN tool for creating cursed fonts using OpenType ligatures and client-side Python in WASM, directly relevant to web development tooling.",
+      "title": "Show HN: Make cursed fonts like Times New Bastard",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://bastardica.mitpit.com"
+    },
+    {
+      "pending_since": "2026-09-24T22:48:04.749226+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "A GitHub repository for Contrastive-LM/CLM, relevant as a trending GitHub repo though its exact tooling nature is unclear.",
+      "title": "Contrastive-LM/CLM",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/Contrastive-LM/CLM"
+    }
+  ],
   "last_email_at": "2026-09-24T16:03:10.191448+00:00"
 }
