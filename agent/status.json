@@ -3,139 +3,134 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 31,
-      "in_window": 31,
+      "collected": 35,
+      "in_window": 35,
       "kept": 0,
-      "new": 9
-    },
-    "tooling": {
-      "collected": 53,
-      "in_window": 53,
-      "kept": 2,
       "new": 13
     },
-    "web-products": {
-      "collected": 27,
-      "in_window": 27,
+    "tooling": {
+      "collected": 55,
+      "in_window": 55,
       "kept": 1,
       "new": 14
+    },
+    "web-products": {
+      "collected": 28,
+      "in_window": 28,
+      "kept": 0,
+      "new": 15
     }
   },
   "last_sent_at": "2026-09-23T08:53:43.403564+00:00",
-  "pending_count": 18,
+  "pending_count": 19,
   "recent_events": [
     {
-      "score": 6,
-      "source": "hn",
-      "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
+      "reason": "below_relevance",
+      "title": "America's Driver's License Breach Is a National Security Disaster",
       "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755982+00:00",
-      "verdict": "kept"
+      "ts": "2026-09-24T08:49:43.109889+00:00",
+      "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "AI safety is mostly a sex cult",
       "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755967+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What California is learning from solar panels built over irrigation canals",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755953+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755940+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What happened to the Snowden archive",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755927+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755914+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I can't stop thinking about Papua New Guinea",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755902+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755889+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755875+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I think you should almost never use AI to write",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755848+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755834+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I asked Meta\u2019s Muse for its filesystem and it sent me 6.8GB",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755819+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
-      "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755799+00:00",
+      "ts": "2026-09-24T08:49:43.109875+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
       "topic": "web-products",
-      "ts": "2026-09-24T01:58:57.755728+00:00",
+      "ts": "2026-09-24T08:49:43.109857+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "seen",
-      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "reason": "below_relevance",
+      "title": "What California is learning from solar panels built over irrigation canals",
       "topic": "web-products",
-      "ts": "2026-09-24T01:58:48.335433+00:00",
+      "ts": "2026-09-24T08:49:43.109723+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Linux support is coming to Snapdragon X2 Series",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109710+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109696+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109681+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "What happened to the Snowden archive",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109665+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109636+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I can't stop thinking about Papua New Guinea",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109617+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109545+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109530+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109513+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I asked Meta\u2019s Muse for its filesystem and it sent me 6.8GB",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109491+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I think you should almost never use AI to write",
+      "topic": "web-products",
+      "ts": "2026-09-24T08:49:43.109418+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 6,
-      "ts": "2026-09-17T15:48:05.731542+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-17T19:22:30.388198+00:00"
@@ -227,28 +222,32 @@
     {
       "kept": 3,
       "ts": "2026-09-24T01:58:29.874049+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-09-24T08:49:08.300484+00:00"
     }
   ],
-  "streak": 192,
+  "streak": 193,
   "topics": [
     {
-      "collected": 31,
+      "collected": 35,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 53,
-      "kept": 2,
+      "collected": 55,
+      "kept": 1,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 27,
-      "kept": 1,
+      "collected": 28,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-24T01:58:29.874049+00:00"
+  "updated_at": "2026-09-24T08:49:08.300484+00:00"
 }
