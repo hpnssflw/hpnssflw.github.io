@@ -3,138 +3,134 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 35,
-      "in_window": 35,
+      "collected": 36,
+      "in_window": 36,
       "kept": 0,
-      "new": 13
+      "new": 14
     },
     "tooling": {
       "collected": 55,
       "in_window": 55,
-      "kept": 1,
+      "kept": 2,
       "new": 14
     },
     "web-products": {
-      "collected": 28,
-      "in_window": 28,
+      "collected": 29,
+      "in_window": 29,
       "kept": 0,
-      "new": 15
+      "new": 14
     }
   },
-  "last_sent_at": "2026-09-23T08:53:43.403564+00:00",
-  "pending_count": 19,
+  "last_sent_at": "2026-09-24T16:03:10.191448+00:00",
+  "pending_count": 0,
   "recent_events": [
-    {
-      "reason": "below_relevance",
-      "title": "America's Driver's License Breach Is a National Security Disaster",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109889+00:00",
-      "verdict": "drop"
-    },
     {
       "reason": "below_relevance",
       "title": "AI safety is mostly a sex cult",
       "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109875+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109857+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What California is learning from solar panels built over irrigation canals",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109723+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 Series",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109710+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109696+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109681+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What happened to the Snowden archive",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109665+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109636+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I can't stop thinking about Papua New Guinea",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109617+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109545+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109530+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
-      "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109513+00:00",
+      "ts": "2026-09-24T16:03:48.566059+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I asked Meta\u2019s Muse for its filesystem and it sent me 6.8GB",
       "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109491+00:00",
+      "ts": "2026-09-24T16:03:48.566047+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "What California is learning from solar panels built over irrigation canals",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.566034+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.566020+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.566007+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.565994+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.565981+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I can't stop thinking about Papua New Guinea",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.565967+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.565954+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.565940+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Linux support is coming to Snapdragon X2 Series",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.565927+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "What happened to the Snowden archive",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.565911+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:48.565875+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "I think you should almost never use AI to write",
       "topic": "web-products",
-      "ts": "2026-09-24T08:49:43.109418+00:00",
+      "ts": "2026-09-24T16:03:48.565786+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "Grammarly will send unhinged messages to all your users if you try to cancel",
+      "topic": "web-products",
+      "ts": "2026-09-24T16:03:34.226481+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-17T19:22:30.388198+00:00"
-    },
     {
       "kept": 3,
       "ts": "2026-09-17T22:30:45.116044+00:00"
@@ -226,28 +222,32 @@
     {
       "kept": 1,
       "ts": "2026-09-24T08:49:08.300484+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-09-24T16:03:10.191448+00:00"
     }
   ],
-  "streak": 193,
+  "streak": 194,
   "topics": [
     {
-      "collected": 35,
+      "collected": 36,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 55,
-      "kept": 1,
+      "kept": 2,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 28,
+      "collected": 29,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-24T08:49:08.300484+00:00"
+  "updated_at": "2026-09-24T16:03:10.191448+00:00"
 }
