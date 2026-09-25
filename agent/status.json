@@ -5,8 +5,8 @@
     "ai-engineering": {
       "collected": 38,
       "in_window": 38,
-      "kept": 2,
-      "new": 18
+      "kept": 0,
+      "new": 16
     },
     "tooling": {
       "collected": 55,
@@ -22,119 +22,115 @@
     }
   },
   "last_sent_at": "2026-09-24T16:03:10.191448+00:00",
-  "pending_count": 4,
+  "pending_count": 6,
   "recent_events": [
     {
       "reason": "below_relevance",
       "title": "What California is learning from solar panels built over irrigation canals",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174349+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What happened to the Snowden archive",
-      "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174320+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I can't stop thinking about Papua New Guinea",
-      "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174302+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174285+00:00",
+      "ts": "2026-09-25T02:15:30.878692+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174267+00:00",
+      "ts": "2026-09-25T02:15:30.878665+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why I'm still bearish on LLMs after Navier-Stokes",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174249+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 series",
-      "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174230+00:00",
+      "ts": "2026-09-25T02:15:30.878652+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174212+00:00",
+      "ts": "2026-09-25T02:15:30.878639+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I can't stop thinking about Papua New Guinea",
+      "topic": "web-products",
+      "ts": "2026-09-25T02:15:30.878626+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "GPT-6 Sol and Luna",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174192+00:00",
+      "ts": "2026-09-25T02:15:30.878613+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I think you should almost never use AI to write",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174173+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
-      "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174151+00:00",
+      "ts": "2026-09-25T02:15:30.878600+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174123+00:00",
+      "ts": "2026-09-25T02:15:30.878585+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Linux support is coming to Snapdragon X2 series",
+      "topic": "web-products",
+      "ts": "2026-09-25T02:15:30.878572+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "What happened to the Snowden archive",
+      "topic": "web-products",
+      "ts": "2026-09-25T02:15:30.878558+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:39.174050+00:00",
+      "ts": "2026-09-25T02:15:30.878538+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ideas on modernizing the open-source desktop",
+      "topic": "web-products",
+      "ts": "2026-09-25T02:15:30.878513+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I think you should almost never use AI to write",
+      "topic": "web-products",
+      "ts": "2026-09-25T02:15:30.878446+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Show HN: Make cursed fonts like Times New Bastard",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:29.572423+00:00",
+      "ts": "2026-09-25T02:15:20.274303+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Show HN: Whiteboard (YC W26) \u2013 An open-source IDE for thoughtful software design",
       "topic": "web-products",
-      "ts": "2026-09-24T22:48:29.572407+00:00",
+      "ts": "2026-09-25T02:15:20.274287+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 5,
-      "ts": "2026-09-18T01:56:40.951217+00:00"
-    },
     {
       "kept": 4,
       "ts": "2026-09-18T03:43:43.729747+00:00"
@@ -226,13 +222,17 @@
     {
       "kept": 4,
       "ts": "2026-09-24T22:48:04.749226+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-09-25T02:14:58.818007+00:00"
     }
   ],
-  "streak": 195,
+  "streak": 196,
   "topics": [
     {
       "collected": 38,
-      "kept": 2,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
@@ -249,5 +249,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-24T22:48:04.749226+00:00"
+  "updated_at": "2026-09-25T02:14:58.818007+00:00"
 }
