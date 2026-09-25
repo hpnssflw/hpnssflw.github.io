@@ -1,4 +1,25 @@
 {
-  "items": [],
+  "items": [
+    {
+      "pending_since": "2026-09-25T22:54:50.790277+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "A GitHub repo for a disk usage treemap tool built in Rust and GPUI, directly relevant as a trending developer tool.",
+      "title": "tobi/disktree",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/tobi/disktree"
+    },
+    {
+      "pending_since": "2026-09-25T22:54:50.790277+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A Show HN for Koi.rest, a web app that lets users watch fish to relax and regain balance.",
+      "title": "Show HN: Koi.rest \u2013 watch some fish and regain your balance",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://koi.rest"
+    }
+  ],
   "last_email_at": "2026-09-25T16:03:42.753888+00:00"
 }

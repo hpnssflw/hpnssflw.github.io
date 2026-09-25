@@ -3,138 +3,135 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 40,
-      "in_window": 40,
-      "kept": 1,
-      "new": 18
+      "collected": 37,
+      "in_window": 37,
+      "kept": 0,
+      "new": 15
     },
     "tooling": {
-      "collected": 55,
-      "in_window": 55,
-      "kept": 2,
-      "new": 11
+      "collected": 54,
+      "in_window": 54,
+      "kept": 1,
+      "new": 12
     },
     "web-products": {
-      "collected": 29,
-      "in_window": 29,
-      "kept": 0,
-      "new": 14
+      "collected": 24,
+      "in_window": 24,
+      "kept": 1,
+      "new": 17
     }
   },
   "last_sent_at": "2026-09-25T16:03:42.753888+00:00",
-  "pending_count": 0,
+  "pending_count": 2,
   "recent_events": [
     {
-      "reason": "below_relevance",
-      "title": "I asked Meta\u2019s Muse for its filesystem and it sent me 6.8GB",
+      "score": 8,
+      "source": "hn",
+      "title": "Show HN: Koi.rest \u2013 watch some fish and regain your balance",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049500+00:00",
+      "ts": "2026-09-25T22:55:27.997769+00:00",
+      "verdict": "kept"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Once Claude can measure something, it can make it faster",
+      "topic": "web-products",
+      "ts": "2026-09-25T22:55:27.997751+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I think you should almost never use AI to write",
+      "title": "macOS 27: Workaround to avoid downloading AI models and save storage",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049483+00:00",
+      "ts": "2026-09-25T22:55:27.997734+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "What California is learning from solar panels built over irrigation canals",
+      "title": "Samsung accidentally freezes its smart fridges with a software update",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049465+00:00",
+      "ts": "2026-09-25T22:55:27.997721+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
+      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049447+00:00",
+      "ts": "2026-09-25T22:55:27.997708+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
+      "title": "The American Religion of Self-Storage Facilities",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049429+00:00",
+      "ts": "2026-09-25T22:55:27.997694+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Why is the liver so weirdly regenerative?",
+      "title": "Owners mourn spoiled food after firmware update bricks Samsung smart fridges",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049401+00:00",
+      "ts": "2026-09-25T22:55:27.997680+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+      "title": "AI safety is mostly a sex cult",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049384+00:00",
+      "ts": "2026-09-25T22:55:27.997667+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 series",
+      "title": "DoorDash Spent $1.4M Trying to Stop Mamdani from Becoming Mayor. Now We Know Why",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049367+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
-      "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049349+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049332+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049314+00:00",
+      "ts": "2026-09-25T22:55:27.997654+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ideas on modernizing the open-source desktop",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049295+00:00",
+      "ts": "2026-09-25T22:55:27.997641+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "What happened to the Snowden archive",
+      "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049268+00:00",
+      "ts": "2026-09-25T22:55:27.997628+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
+      "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:24.049156+00:00",
+      "ts": "2026-09-25T22:55:27.997615+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "seen",
-      "title": "Show HN: Make cursed fonts like Times New Bastard",
+      "reason": "below_relevance",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
       "topic": "web-products",
-      "ts": "2026-09-25T16:04:10.133939+00:00",
+      "ts": "2026-09-25T22:55:27.997601+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-25T22:55:27.997587+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-25T22:55:27.997569+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 4,
-      "ts": "2026-09-18T15:21:10.307708+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-09-18T18:43:05.806895+00:00"
@@ -226,28 +223,32 @@
     {
       "kept": 3,
       "ts": "2026-09-25T16:03:42.753888+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-09-25T22:54:50.790277+00:00"
     }
   ],
-  "streak": 198,
+  "streak": 199,
   "topics": [
     {
-      "collected": 40,
-      "kept": 1,
+      "collected": 37,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 55,
-      "kept": 2,
+      "collected": 54,
+      "kept": 1,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 29,
-      "kept": 0,
+      "collected": 24,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-25T16:03:42.753888+00:00"
+  "updated_at": "2026-09-25T22:54:50.790277+00:00"
 }
