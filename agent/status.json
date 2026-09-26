@@ -3,22 +3,22 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 41,
-      "in_window": 41,
+      "collected": 39,
+      "in_window": 39,
       "kept": 0,
       "new": 19
     },
     "tooling": {
-      "collected": 55,
-      "in_window": 55,
+      "collected": 56,
+      "in_window": 56,
       "kept": 0,
       "new": 11
     },
     "web-products": {
-      "collected": 25,
-      "in_window": 25,
+      "collected": 27,
+      "in_window": 27,
       "kept": 0,
-      "new": 16
+      "new": 17
     }
   },
   "last_sent_at": "2026-09-25T16:03:42.753888+00:00",
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "AI safety is mostly a sex cult",
       "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611272+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What California is learning from solar panels built over irrigation canals",
-      "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611258+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Why is the liver so weirdly regenerative?",
-      "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611245+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 series",
-      "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611233+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What happened to the Snowden archive",
-      "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611220+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
-      "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611207+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611194+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Tell HN: An inside view of Montana's new biotech law",
-      "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611181+00:00",
+      "ts": "2026-09-26T15:17:24.512524+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "DoorDash Spent $1.4M Trying to Stop Mamdani from Becoming Mayor. Now We Know Why",
       "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611165+00:00",
+      "ts": "2026-09-26T15:17:24.512517+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I asked Meta\u2019s Muse for its filesystem and it sent me 6.8GB",
+      "title": "What California is learning from solar panels built over irrigation canals",
       "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611122+00:00",
+      "ts": "2026-09-26T15:17:24.512508+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I think you should almost never use AI to write",
+      "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611108+00:00",
+      "ts": "2026-09-26T15:17:24.512500+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
+      "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611093+00:00",
+      "ts": "2026-09-26T15:17:24.512493+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "topic": "web-products",
+      "ts": "2026-09-26T15:17:24.512486+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-26T15:17:24.512478+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "topic": "web-products",
+      "ts": "2026-09-26T15:17:24.512471+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Jev Plays Pok\u00e9mon Red",
       "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611076+00:00",
+      "ts": "2026-09-26T15:17:24.512464+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Owners mourn spoiled food after firmware update bricks Samsung smart fridges",
+      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
       "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611045+00:00",
+      "ts": "2026-09-26T15:17:24.512456+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "There's a high chance of devices being sold with GrapheneOS preinstalled in 2027",
+      "topic": "web-products",
+      "ts": "2026-09-26T15:17:24.512444+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "I asked Meta\u2019s Muse for its filesystem and it sent me 6.8GB",
+      "topic": "web-products",
+      "ts": "2026-09-26T15:17:24.512399+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
+      "topic": "web-products",
+      "ts": "2026-09-26T15:17:24.512392+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-09-26T08:54:21.611021+00:00",
+      "ts": "2026-09-26T15:17:24.512375+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "What happened to the Snowden archive",
+      "topic": "web-products",
+      "ts": "2026-09-26T15:17:24.512365+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-09-19T02:01:13.253498+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-09-19T08:20:59.907364+00:00"
@@ -226,28 +222,32 @@
     {
       "kept": 0,
       "ts": "2026-09-26T08:53:43.336925+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-09-26T15:16:41.108559+00:00"
     }
   ],
-  "streak": 201,
+  "streak": 202,
   "topics": [
     {
-      "collected": 41,
+      "collected": 39,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 55,
+      "collected": 56,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 25,
+      "collected": 27,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-26T08:53:43.336925+00:00"
+  "updated_at": "2026-09-26T15:16:41.108559+00:00"
 }
