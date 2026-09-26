@@ -3,16 +3,16 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 37,
-      "in_window": 37,
+      "collected": 38,
+      "in_window": 38,
       "kept": 0,
-      "new": 15
+      "new": 16
     },
     "tooling": {
       "collected": 54,
       "in_window": 54,
-      "kept": 1,
-      "new": 12
+      "kept": 2,
+      "new": 15
     },
     "web-products": {
       "collected": 24,
@@ -22,120 +22,116 @@
     }
   },
   "last_sent_at": "2026-09-25T16:03:42.753888+00:00",
-  "pending_count": 2,
+  "pending_count": 5,
   "recent_events": [
     {
-      "score": 8,
+      "score": 6,
       "source": "hn",
-      "title": "Show HN: Koi.rest \u2013 watch some fish and regain your balance",
+      "title": "GitHub has not removed malicious imitation software after 3 weeks",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997769+00:00",
+      "ts": "2026-09-26T02:21:19.872292+00:00",
       "verdict": "kept"
     },
     {
       "reason": "below_relevance",
-      "title": "Once Claude can measure something, it can make it faster",
+      "title": "The senior engineer death spiral",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997751+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "macOS 27: Workaround to avoid downloading AI models and save storage",
-      "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997734+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Samsung accidentally freezes its smart fridges with a software update",
-      "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997721+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997708+00:00",
+      "ts": "2026-09-26T02:21:19.872280+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "The American Religion of Self-Storage Facilities",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997694+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Owners mourn spoiled food after firmware update bricks Samsung smart fridges",
-      "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997680+00:00",
+      "ts": "2026-09-26T02:21:19.872270+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "AI safety is mostly a sex cult",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997667+00:00",
+      "ts": "2026-09-26T02:21:19.872260+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "DoorDash Spent $1.4M Trying to Stop Mamdani from Becoming Mayor. Now We Know Why",
+      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997654+00:00",
+      "ts": "2026-09-26T02:21:19.872251+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
+      "title": "What California is learning from solar panels built over irrigation canals",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997641+00:00",
+      "ts": "2026-09-26T02:21:19.872240+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
+      "topic": "web-products",
+      "ts": "2026-09-26T02:21:19.872207+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997628+00:00",
+      "ts": "2026-09-26T02:21:19.872197+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997615+00:00",
+      "ts": "2026-09-26T02:21:19.872186+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "What happened to the Snowden archive",
+      "topic": "web-products",
+      "ts": "2026-09-26T02:21:19.872175+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997601+00:00",
+      "ts": "2026-09-26T02:21:19.872164+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "GPT-6 Sol and Luna",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997587+00:00",
+      "ts": "2026-09-26T02:21:19.872153+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Tell HN: An inside view of Montana's new biotech law",
       "topic": "web-products",
-      "ts": "2026-09-25T22:55:27.997569+00:00",
+      "ts": "2026-09-26T02:21:19.872141+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
+      "topic": "web-products",
+      "ts": "2026-09-26T02:21:19.872129+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Owners mourn spoiled food after firmware update bricks Samsung smart fridges",
+      "topic": "web-products",
+      "ts": "2026-09-26T02:21:19.872115+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-09-18T18:43:05.806895+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-18T21:59:52.479748+00:00"
@@ -227,19 +223,23 @@
     {
       "kept": 2,
       "ts": "2026-09-25T22:54:50.790277+00:00"
+    },
+    {
+      "kept": 3,
+      "ts": "2026-09-26T02:20:44.097646+00:00"
     }
   ],
-  "streak": 199,
+  "streak": 200,
   "topics": [
     {
-      "collected": 37,
+      "collected": 38,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 54,
-      "kept": 1,
+      "kept": 2,
       "name": "Tooling",
       "slug": "tooling"
     },
@@ -250,5 +250,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-25T22:54:50.790277+00:00"
+  "updated_at": "2026-09-26T02:20:44.097646+00:00"
 }
