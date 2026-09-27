@@ -3,139 +3,136 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 39,
-      "in_window": 39,
-      "kept": 0,
-      "new": 19
+      "collected": 37,
+      "in_window": 37,
+      "kept": 2,
+      "new": 16
     },
     "tooling": {
-      "collected": 56,
-      "in_window": 56,
-      "kept": 2,
+      "collected": 52,
+      "in_window": 52,
+      "kept": 1,
       "new": 11
     },
     "web-products": {
-      "collected": 27,
-      "in_window": 27,
-      "kept": 1,
-      "new": 16
+      "collected": 23,
+      "in_window": 23,
+      "kept": 2,
+      "new": 17
     }
   },
   "last_sent_at": "2026-09-27T19:24:46.293417+00:00",
-  "pending_count": 0,
+  "pending_count": 5,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "hn",
+      "title": "Tells of a Slop UI",
+      "topic": "web-products",
+      "ts": "2026-09-27T22:39:23.912189+00:00",
+      "verdict": "kept"
+    },
     {
       "score": 9,
       "source": "hn",
-      "title": "Show HN: Building a Markdown editor for Mac, iOS and web",
+      "title": "When did Google get so weird?",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507292+00:00",
+      "ts": "2026-09-27T22:39:23.912177+00:00",
       "verdict": "kept"
     },
     {
       "reason": "below_relevance",
-      "title": "What California is learning from solar panels built over irrigation canals",
+      "title": "Gravity seems holographic. What does that mean for reality?",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507279+00:00",
+      "ts": "2026-09-27T22:39:23.912163+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "DoorDash Spent $1.4M Trying to Stop Mamdani from Becoming Mayor. Now We Know Why",
+      "topic": "web-products",
+      "ts": "2026-09-27T22:39:23.912151+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507264+00:00",
+      "ts": "2026-09-27T22:39:23.912139+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507254+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What happened to the Snowden archive",
-      "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507244+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
-      "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507234+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I asked Meta\u2019s Muse for its filesystem and it sent me 6.8GB",
-      "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507225+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
-      "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507215+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507206+00:00",
+      "ts": "2026-09-27T22:39:23.912126+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507196+00:00",
+      "ts": "2026-09-27T22:39:23.912114+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "GPT-6 Sol and Luna",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507184+00:00",
+      "ts": "2026-09-27T22:39:23.912101+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
+      "title": "How we learned to stop worrying and love campus surveillance",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507174+00:00",
+      "ts": "2026-09-27T22:39:23.912074+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "I think you should almost never use AI to write",
+      "title": "I asked Meta\u2019s Muse for its filesystem and it sent me 6.8GB",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507163+00:00",
+      "ts": "2026-09-27T22:39:23.912059+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
+      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507137+00:00",
+      "ts": "2026-09-27T22:39:23.912044+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
+      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
       "topic": "web-products",
-      "ts": "2026-09-27T19:25:24.507121+00:00",
+      "ts": "2026-09-27T22:39:23.912028+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Owners mourn spoiled food after firmware update bricks Samsung smart fridges",
+      "topic": "web-products",
+      "ts": "2026-09-27T22:39:23.912014+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "topic": "web-products",
+      "ts": "2026-09-27T22:39:23.911998+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ideas on modernizing the open-source desktop",
+      "topic": "web-products",
+      "ts": "2026-09-27T22:39:23.911982+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 4,
-      "ts": "2026-09-20T18:21:26.211129+00:00"
-    },
     {
       "kept": 3,
       "ts": "2026-09-20T22:00:04.118633+00:00"
@@ -227,28 +224,32 @@
     {
       "kept": 3,
       "ts": "2026-09-27T19:24:46.293417+00:00"
+    },
+    {
+      "kept": 5,
+      "ts": "2026-09-27T22:38:48.330387+00:00"
     }
   ],
-  "streak": 208,
+  "streak": 209,
   "topics": [
     {
-      "collected": 39,
-      "kept": 0,
+      "collected": 37,
+      "kept": 2,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 56,
-      "kept": 2,
+      "collected": 52,
+      "kept": 1,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 27,
-      "kept": 1,
+      "collected": 23,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-27T19:24:46.293417+00:00"
+  "updated_at": "2026-09-27T22:38:48.330387+00:00"
 }

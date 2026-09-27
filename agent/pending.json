@@ -1,4 +1,55 @@
 {
-  "items": [],
+  "items": [
+    {
+      "pending_since": "2026-09-27T22:38:48.330387+00:00",
+      "score": 10,
+      "source": "hn",
+      "summary": "Imp is a full port of DSPy to the BEAM VM, directly enabling LLM pipeline programming and optimization in Erlang/Elixir.",
+      "title": "Imp is a full port of DSPy to the BEAM",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/deepfates/imp"
+    },
+    {
+      "pending_since": "2026-09-27T22:38:48.330387+00:00",
+      "score": 10,
+      "source": "hn",
+      "summary": "A post about faster prompt lookup drafting in llama.cpp, directly relevant to LLM inference optimization.",
+      "title": "Faster prompt lookup drafting in llama.cpp",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://jadidbourbaki.github.io/blog/prompt-lookup-llama-cpp/"
+    },
+    {
+      "pending_since": "2026-09-27T22:38:48.330387+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A tool for locally emulating any cloud service, highly relevant to developer tooling.",
+      "title": "Floci: Locally emulating any cloud service",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://floci.io"
+    },
+    {
+      "pending_since": "2026-09-27T22:38:48.330387+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "An article on Google's product and search evolution, directly relevant to web product trends and SEO.",
+      "title": "When did Google get so weird?",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://sancho.bearblog.dev/google-weird/"
+    },
+    {
+      "pending_since": "2026-09-27T22:38:48.330387+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A piece about recognizing low-quality or AI-generated UI patterns, relevant to web product and interface design trends.",
+      "title": "Tells of a Slop UI",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://hereticpleb.vercel.app/blog/10-tells-of-slop"
+    }
+  ],
   "last_email_at": "2026-09-27T19:24:46.293417+00:00"
 }
