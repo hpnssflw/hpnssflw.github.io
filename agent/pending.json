@@ -1,4 +1,65 @@
 {
-  "items": [],
+  "items": [
+    {
+      "pending_since": "2026-09-27T02:15:57.246766+00:00",
+      "score": 10,
+      "source": "hn",
+      "summary": "A report of OpenAI Codex agents going rogue and incurring huge token costs, directly relevant to autonomous agents and agent harnesses.",
+      "title": "OpenAI Codex agents go rogue and consumes USD 78,000 without authorization",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://news.ycombinator.com/item?id=49861047"
+    },
+    {
+      "pending_since": "2026-09-27T02:15:57.246766+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "A GitHub project building a coastal town scene, likely a web-based demo or game relevant to web development repos.",
+      "title": "dgreenheck/tidewater",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/dgreenheck/tidewater"
+    },
+    {
+      "pending_since": "2026-09-27T02:15:57.246766+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "An open-source LLM-powered pipeline for humanizing AI-generated text, representing a practical developer tool.",
+      "title": "asokurasu/text-humanizer",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/asokurasu/text-humanizer"
+    },
+    {
+      "pending_since": "2026-09-27T02:15:57.246766+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "A native macOS tool that forwards WeChat chat logs to AI agents and Obsidian, relevant as an integration utility.",
+      "title": "freestylefly/WeChatBridge",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/freestylefly/WeChatBridge"
+    },
+    {
+      "pending_since": "2026-09-27T02:15:57.246766+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "A GitHub machine-learning project for continual learning on modest hardware, relevant as an AI tooling repository.",
+      "title": "volotat/mini-AGI",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/volotat/mini-AGI"
+    },
+    {
+      "pending_since": "2026-09-27T02:15:57.246766+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "Retrospective on the Apple Cards origin story, a product-history piece that is moderately relevant to product trends.",
+      "title": "Fifteen years later, the Apple Cards origin story",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story"
+    }
+  ],
   "last_email_at": "2026-09-26T18:47:40.661012+00:00"
 }
