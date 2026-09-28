@@ -23,7 +23,7 @@ export const PRESENCE_URL =
   "https://raw.githubusercontent.com/hpnssflw/hpnssflw.github.io/presence-data/presence.json";
 
 /** Older than this and the widget shows offline, whatever the file says. */
-export const PRESENCE_STALE_MS = 15 * 60_000;
+export const PRESENCE_STALE_MS = 20 * 60_000;
 
 /** raw.githubusercontent caches ~5 min, so polling faster buys nothing. */
 export const PRESENCE_POLL_MS = 5 * 60_000;

@@ -189,7 +189,7 @@ export function normalizePlaylists(json: unknown): Playlist[];
 Yandex Music UI has no public profile page: `/users/<login>`,
 `/users/<login>/playlists` and `/profile/<uid>` all 404 as of
 2026-09-28), `PLAYLISTS_URL`, `PRESENCE_URL`,
-`PRESENCE_STALE_MS = 15 * 60_000`, `PRESENCE_POLL_MS = 5 * 60_000`. The
+`PRESENCE_STALE_MS = 20 * 60_000`, `PRESENCE_POLL_MS = 5 * 60_000`. The
 Yandex login and API URL live in the runner, not the site.
 
 Rendering:
@@ -430,9 +430,9 @@ other time zones aren't misled.
 | `playlists.json` missing / malformed / network error | Music shows `yandex music ↗` |
 | Player can't play for a visitor outside Yandex Music's regions | not detectable from the page; known limitation |
 | `presence.json` missing / malformed / network error | `status unavailable` |
-| Collector hasn't pushed in > 15 min | `offline` regardless of file contents |
+| Collector hasn't pushed in > 20 min | `offline` regardless of file contents |
 | `claude agents` fails locally | transcripts only; never `working` |
-| Push fails | retried once, then logged; the next run publishes again; page goes `offline` after 15 min |
+| Push fails | retried once, then logged; the next run publishes again; page goes `offline` after 20 min |
 
 ## Testing
 

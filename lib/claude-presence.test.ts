@@ -69,8 +69,14 @@ describe("effectiveState", () => {
     expect(effectiveState(makePresence(), NOW)).toBe("working");
   });
 
-  it("goes offline once the file is older than 15 minutes", () => {
-    expect(effectiveState(makePresence(), NOW + 12 * MIN)).toBe("offline");
+  // updatedAt is 4 minutes before NOW.
+  it("stays live up to exactly 20 minutes old", () => {
+    expect(effectiveState(makePresence(), NOW + 16 * MIN)).toBe("working");
+  });
+
+  it("goes offline once the file is older than 20 minutes", () => {
+    expect(effectiveState(makePresence(), NOW + 16 * MIN + 1)).toBe("offline");
+    expect(effectiveState(makePresence(), NOW + 17 * MIN)).toBe("offline");
   });
 });
 
