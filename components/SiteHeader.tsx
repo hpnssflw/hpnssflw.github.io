@@ -19,6 +19,7 @@ export default function SiteHeader() {
   const inLab = pathname === "/lab" || pathname.startsWith("/lab/");
   const inResearcher =
     pathname === "/researcher" || pathname.startsWith("/researcher/");
+  const inNow = pathname === "/now" || pathname.startsWith("/now/");
 
   return (
     <header className="site-header">
@@ -35,6 +36,9 @@ export default function SiteHeader() {
             aria-current={inResearcher ? "page" : undefined}
           >
             Researcher
+          </Link>
+          <Link href="/now/" aria-current={inNow ? "page" : undefined}>
+            Now
           </Link>
         </nav>
       </div>

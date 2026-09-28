@@ -32,6 +32,8 @@ export default function HomePage() {
               <a href="mailto:hypnosisflow@gmail.com">hypnosisflow@gmail.com</a>
               {" · "}
               <a href="https://github.com/hpnssflw">github.com/hpnssflw</a>
+              {" · "}
+              <Link href="/now/">now →</Link>
             </p>
           </div>
         </div>
