@@ -6,7 +6,8 @@
  * puts in %LOCALAPPDATA%\polozov-presence\bin, never from this working
  * tree, so it imports nothing but ./collect.mjs and node builtins. Reads only
  * `timestamp`, `sessionId` and `message.model` from today's
- * ~/.claude/projects transcripts, plus each session's busy/idle status
+ * ~/.claude/projects transcripts (the model from main sessions only, not
+ * `subagents/`), plus each session's busy/idle status
  * from `claude agents --json --all`, and fetches Artem's public Yandex
  * Music playlists (the API refuses browsers and GitHub's runners, so this
  * machine is the only place that can). Force-pushes a ten-key
@@ -36,6 +37,7 @@ import { promisify } from "node:util";
 import {
   assertPublishable,
   buildPresence,
+  isSubagentTranscript,
   localDayInfo,
   shouldPublish,
   trimPlaylists,
@@ -91,12 +93,13 @@ async function getAgents() {
   }
 }
 
+/** Today's transcripts as `{ file, subagent }`, subagent judged on the path below PROJECTS. */
 function todaysTranscripts(dayStartMs) {
   if (!existsSync(PROJECTS)) return [];
   return readdirSync(PROJECTS, { recursive: true })
     .filter((rel) => typeof rel === "string" && rel.endsWith(".jsonl"))
-    .map((rel) => join(PROJECTS, rel))
-    .filter((file) => {
+    .map((rel) => ({ file: join(PROJECTS, rel), subagent: isSubagentTranscript(rel) }))
+    .filter(({ file }) => {
       try {
         return statSync(file).mtimeMs >= dayStartMs;
       } catch {
@@ -105,8 +108,12 @@ function todaysTranscripts(dayStartMs) {
     });
 }
 
-/** Extracts ONLY timestamp, sessionId and message.model from each line. */
-async function readEvents(file, out) {
+/**
+ * Extracts ONLY timestamp, sessionId and message.model from each line.
+ * A subagent's lines keep their timestamp and sessionId (still activity)
+ * but not the model: the widget shows the main session's model.
+ */
+async function readEvents(file, subagent, out) {
   const lines = createInterface({
     input: createReadStream(file, { encoding: "utf8" }),
     crlfDelay: Infinity,
@@ -124,7 +131,7 @@ async function readEvents(file, out) {
     out.push({
       ts,
       sessionId: typeof row.sessionId === "string" ? row.sessionId : null,
-      model: typeof row.message?.model === "string" ? row.message.model : null,
+      model: !subagent && typeof row.message?.model === "string" ? row.message.model : null,
     });
   }
 }
@@ -242,9 +249,9 @@ async function main() {
   const prev = readPrevious();
 
   const events = [];
-  for (const file of todaysTranscripts(dayStartMs)) {
+  for (const { file, subagent } of todaysTranscripts(dayStartMs)) {
     try {
-      await readEvents(file, events);
+      await readEvents(file, subagent, events);
     } catch (err) {
       log(`skipped a transcript: ${err instanceof Error ? err.message : err}`);
     }

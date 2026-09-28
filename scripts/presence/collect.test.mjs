@@ -5,6 +5,7 @@ import {
   assertPublishable,
   buildPresence,
   deriveState,
+  isSubagentTranscript,
   localDayInfo,
   mergeActivity,
   modelFamily,
@@ -97,6 +98,35 @@ describe("modelFamily", () => {
     expect(modelFamily("<synthetic>")).toBeNull();
     expect(modelFamily(undefined)).toBeNull();
     expect(modelFamily(42)).toBeNull();
+  });
+});
+
+describe("isSubagentTranscript", () => {
+  it("matches a transcript under a subagents directory, either separator", () => {
+    const session = "C--A-polozov\\80a18c76-234c-4cbc-ae11-5f73f88a0833";
+    expect(isSubagentTranscript(`${session}\\subagents\\agent-a5082db3cd24d77e7.jsonl`)).toBe(true);
+    expect(
+      isSubagentTranscript("-home-artem-polozov/80a18c76/subagents/agent-a5082db3.jsonl"),
+    ).toBe(true);
+    expect(
+      isSubagentTranscript("C:\\Users\\tigri\\.claude\\projects\\C--A\\s1\\subagents\\a.jsonl"),
+    ).toBe(true);
+  });
+
+  it("does not match a main-session transcript", () => {
+    expect(isSubagentTranscript("C--A-polozov\\80a18c76-234c-4cbc.jsonl")).toBe(false);
+    expect(isSubagentTranscript("-home-artem-polozov/80a18c76.jsonl")).toBe(false);
+  });
+
+  it("does not match a project dir merely named like subagents", () => {
+    expect(isSubagentTranscript("C--A-subagents-foo\\80a18c76.jsonl")).toBe(false);
+    expect(isSubagentTranscript("C--A-my-subagents/80a18c76.jsonl")).toBe(false);
+    expect(isSubagentTranscript("C--A\\s1\\subagents-foo\\a.jsonl")).toBe(false);
+    expect(isSubagentTranscript("C--A/s1/mysubagents/a.jsonl")).toBe(false);
+  });
+
+  it("is false for a non-string", () => {
+    expect(isSubagentTranscript(undefined)).toBe(false);
   });
 });
 

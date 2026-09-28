@@ -262,7 +262,9 @@ read from
 - `todayMinutes`, `sessionsToday`: integers ≥ 0, for the owner's local
   `day`.
 - `model`: `"opus" | "sonnet" | "haiku" | "fable" | null` — family of the
-  most recent assistant message today.
+  most recent assistant message today in a main (non-subagent) session.
+  Subagent transcripts (`<session>/subagents/*.jsonl`) still count as
+  activity and toward sessions, but their model is ignored.
 - `day`: owner's local date `YYYY-MM-DD`; `tz`: IANA zone from
   `Intl.DateTimeFormat().resolvedOptions().timeZone` on the machine.
 - All timestamps floored to the minute.
@@ -338,7 +340,8 @@ No I/O; all inputs passed in, `now` injected.
 2. List `~/.claude/projects/**/*.jsonl` with mtime within the owner's
    current local day; stream each line-by-line, `JSON.parse` each line,
    and extract **only** `timestamp`, `sessionId`, and `message?.model`
-   into a local array. Bad lines are skipped.
+   into a local array (model left `null` for files under a `subagents`
+   directory). Bad lines are skipped.
 3. Compute presence via `collect.mjs`.
 4. Fetch `https://api.music.yandex.net/users/tmkplzv/playlists/list`
    (no token, 10s timeout) and run it through `trimPlaylists`. Any failure

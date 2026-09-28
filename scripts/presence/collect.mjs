@@ -66,6 +66,16 @@ export function totalMinutes(intervals) {
   return Math.floor(ms / 60_000);
 }
 
+/**
+ * True for a subagent transcript (`<session>/subagents/agent-*.jsonl`).
+ * Its events still count as activity, but its model is not the one Artem
+ * is talking to, so run.mjs drops it. Takes either separator; a project
+ * dir merely named like `...subagents-foo` doesn't match.
+ */
+export function isSubagentTranscript(path) {
+  return typeof path === "string" && /(^|[\\/])subagents[\\/]/.test(path);
+}
+
 export function modelFamily(modelId) {
   if (typeof modelId !== "string") return null;
   return FAMILIES.find((family) => modelId.includes(family)) ?? null;
