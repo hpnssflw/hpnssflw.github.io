@@ -14,7 +14,7 @@ database, because a run every four hours is one write, not a workload.
 
 - No concurrency guard: an overlapping run (a manual trigger mid-cron)
   races the scheduled one, its `git push` gets rejected as
-  non-fast-forward, and that run's state is silently lost.
+  non-fast-forward, the run fails, and its state is lost.
 - The repo is public, so the state is too: `agent/pending.json` — full
   curated titles, summaries, scores — is readable by anyone. The site
   copy claimed "nothing public" until a final review corrected it.
@@ -36,4 +36,4 @@ if something changed, push. The result lands at
 [`agent/status.json`](https://github.com/hpnssflw/hpnssflw.github.io/blob/agent-data/agent/status.json)
 on `agent-data`.
 
-{/* sources: hook (one write per 4h run) — .github/workflows/agent-run.yml:5, cron every 4 hours; no concurrency guard / rejected push — .github/workflows/agent-run.yml (no `concurrency:` key, plain `git push` with no pull/rebase first); public repo = public pending.json, corrected site claim — commit 6ad4b2a8940553f768eaf467ca44a6aabf9468c3 ("nothing published, nothing public" → corrected in researcher/agent.html and docs/agent-plan.md), lib/agent-status.ts and lib/pending-queue.ts (client-side fetch, no token, from raw.githubusercontent.com); 5-minute CDN cache — raw.githubusercontent.com/hpnssflw/hpnssflw.github.io/agent-data/agent/status.json response header `Cache-Control: max-age=300`, verified 2026-09-28; commit-only-if-changed / push flow — .github/workflows/agent-run.yml "Commit and push agent-data" step (`git diff --cached --quiet || git commit …` then `git push`) */}
+{/* sources: hook (one write per 4h run) — .github/workflows/agent-run.yml:5, cron every 4 hours; no concurrency guard / rejected push / run fails — .github/workflows/agent-run.yml (no `concurrency:` key, plain `git push` with no `continue-on-error` or `|| true`, no pull/rebase first, so a rejected push exits non-zero and the workflow run fails); public repo = public pending.json, corrected site claim — commit 6ad4b2a8940553f768eaf467ca44a6aabf9468c3 ("nothing published, nothing public" → corrected in researcher/agent.html and docs/agent-plan.md), lib/agent-status.ts and lib/pending-queue.ts (client-side fetch, no token, from raw.githubusercontent.com); 5-minute CDN cache — raw.githubusercontent.com/hpnssflw/hpnssflw.github.io/agent-data/agent/status.json response header `Cache-Control: max-age=300`, verified 2026-09-28; commit-only-if-changed / push flow — .github/workflows/agent-run.yml "Commit and push agent-data" step (`git diff --cached --quiet || git commit …` then `git push`) */}
