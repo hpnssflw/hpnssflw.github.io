@@ -2,16 +2,16 @@
 title: Reviewing Your Own Claims
 date: "2026-09"
 tag: REVIEW PROCESS
-excerpt: Every task passed its own review. The final pass over the whole plan is what caught what crossed task boundaries.
+excerpt: Only the final pass over the whole plan could see what crossed task boundaries.
 subtitle: Why per-task review can't catch what crosses task boundaries — and what a last whole-plan pass found that no task review did.
 description: Why per-task review can't catch what crosses task boundaries — and what a last whole-plan pass found that no task review did.
 ---
 
-I ran five plans this year the same way: an AI subagent implemented each task, a fresh AI reviewer checked it against that task's brief, then one more AI review read the whole diff at once — the only pass that catches boundary-crossing problems.
+I ran five plans this year the same way: an AI subagent implemented each task, a fresh AI reviewer checked it against that task's brief, then one more AI review read the whole diff at once — the only pass that could catch boundary-crossing problems.
 
 ## What to watch for
 
-- A claim contradicted by data another task wrote: the agent's plan page said "nothing published, nothing public" — already false once an earlier task's workflow made the queue public, uncaught by a later narrative edit. My first reword still missed it; a second round said so plainly.
+- A claim contradicted by data another task wrote: the agent's plan page said "nothing published, nothing public" — already false once an earlier task's workflow made `pending.json` public, uncaught by a later narrative edit. My first reword still missed it; a second round said so plainly.
 - A leak split across files: exception text that could embed the bot token fed a log line written a month earlier, before Telegram or any real token existed. Each half looked fine alone.
 - Not everything crosses a boundary: a missing pacing/429 handler lived in one file — a task review could've caught it.
 
