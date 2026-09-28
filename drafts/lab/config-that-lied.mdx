@@ -1,0 +1,26 @@
+---
+title: Config That Lied
+date: "2026-09"
+tag: DEAD CONFIG
+excerpt: For five weeks the agent's config listed four sources nothing ever read.
+subtitle: How config keys with no code behind them survive silently — and the one-line check that would have caught them.
+description: How config keys with no code behind them survive silently — and the one-line check that would have caught them.
+---
+
+For five weeks my research agent's config listed four sources I never read: `reddit`, `rss`, `releases`, `web_search` sat in every topic YAML while the code only knew Hacker News.
+
+## What to watch for
+
+- Lookup ran the wrong direction: the run loop iterates its own `CONNECTORS` dict and skips anything not listed in a topic's `sources` — never the reverse. A key with no connector is invisible, not an error.
+- The loader passed `sources` through as a raw dict — no schema, no "unknown key" check. Whatever I typed there was accepted and quietly ignored.
+- Public copy repeated the config's claims: `/researcher/agent/` still describes "six kinds of source," though only two are wired up.
+
+## Why it's interesting
+
+- The fix is cheap: reject unknown source keys at load time, so a stray key fails loudly instead of doing nothing for weeks. I haven't made that change — that's the direction to look.
+
+## In practice
+
+[`agent/main.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/main.py)'s `CONNECTORS` held only `hacker_news` from the scaffold until commit `8d8033c` dropped the dead keys from the topic YAMLs; [`agent/config.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/config.py) is where the validation belongs. What caught it wasn't a test — it was writing the Content Direction roadmap, which required rereading `CONNECTORS` and surfaced the mismatch.
+
+{/* sources: hook (five weeks, four dead keys) — git show cd77594:agent/topics/ai-agents.yaml (sources: hacker_news, reddit, rss, releases, web_search) unchanged through 8d8033c^; git log --date=short -- agent/topics shows cd77594 (2026-08-12) to 8d8033c (2026-09-16), 35 days = five weeks; lookup direction / invisible config — agent/main.py at 8d8033c^: CONNECTORS = { "hacker_news": hn.collect }, run loop "for source_name, connector in CONNECTORS.items(): if source_name not in topic.sources: continue"; loader accepts any dict, no validation — agent/config.py at 8d8033c^, load_topics passes merged["sources"] straight into TopicConfig.sources with no key check; public copy still overclaims — app/researcher/agent/page.tsx line 54 "Six kinds of source" listing Hacker News, GitHub trending, RSS/blog, repo releases, subreddits, web search, verified 2026-09-28 against agent/main.py's current CONNECTORS (hacker_news, github_trending only); what caught it — commit fdb76dc, docs/tony-scraponi-roadmap.md: "Reconcile config with reality: agent/main.py's CONNECTORS dict only wires up hacker_news today, but the topic YAMLs already reference reddit, rss, releases, and web_search keys that no connector reads — dead config"; fix — commit 8d8033c "Replace agent topics with Web Products / AI Engineering / Tooling" removed the dead reddit/rss/releases/web_search keys from the topic YAMLs */}
