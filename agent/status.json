@@ -3,139 +3,135 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 37,
-      "in_window": 37,
+      "collected": 38,
+      "in_window": 38,
       "kept": 0,
-      "new": 17
+      "new": 20
     },
     "tooling": {
-      "collected": 52,
-      "in_window": 52,
-      "kept": 2,
-      "new": 12
+      "collected": 53,
+      "in_window": 53,
+      "kept": 5,
+      "new": 15
     },
     "web-products": {
-      "collected": 23,
-      "in_window": 23,
+      "collected": 25,
+      "in_window": 25,
       "kept": 1,
       "new": 13
     }
   },
   "last_sent_at": "2026-09-27T19:24:46.293417+00:00",
-  "pending_count": 12,
+  "pending_count": 18,
   "recent_events": [
     {
-      "score": 6,
+      "score": 7,
       "source": "hn",
-      "title": "Owed a billion dollars in Nvidia stock",
+      "title": "Show HN: PaperMono, e-ink fridge magnet shopping list with mobile web page",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578254+00:00",
+      "ts": "2026-09-28T18:53:36.706685+00:00",
       "verdict": "kept"
     },
     {
       "reason": "below_relevance",
       "title": "What California is learning from solar panels built over irrigation canals",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578237+00:00",
+      "ts": "2026-09-28T18:53:36.706660+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578224+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What happened to the Snowden archive",
-      "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578210+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
-      "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578196+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578182+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "I think you should almost never use AI to write",
-      "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578168+00:00",
+      "ts": "2026-09-28T18:53:36.706650+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578153+00:00",
+      "ts": "2026-09-28T18:53:36.706640+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578137+00:00",
+      "ts": "2026-09-28T18:53:36.706630+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
+      "title": "What happened to the Snowden archive",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578113+00:00",
+      "ts": "2026-09-28T18:53:36.706620+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "topic": "web-products",
+      "ts": "2026-09-28T18:53:36.706610+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-28T18:53:36.706599+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Jev Plays Pok\u00e9mon Red",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578095+00:00",
+      "ts": "2026-09-28T18:53:36.706586+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ideas on modernizing the open-source desktop",
+      "topic": "web-products",
+      "ts": "2026-09-28T18:53:36.706553+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578073+00:00",
+      "ts": "2026-09-28T18:53:36.706541+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Seattle City Council votes to ban surveillance pricing in sale of groceries",
+      "topic": "web-products",
+      "ts": "2026-09-28T18:53:36.706525+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
       "topic": "web-products",
-      "ts": "2026-09-28T10:16:05.578012+00:00",
+      "ts": "2026-09-28T18:53:36.706457+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Tells of a Slop UI",
       "topic": "web-products",
-      "ts": "2026-09-28T10:15:50.063015+00:00",
+      "ts": "2026-09-28T18:53:23.251671+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
-      "title": "When did Google get so weird?",
+      "title": "Owed a billion dollars in Nvidia stock",
       "topic": "web-products",
-      "ts": "2026-09-28T10:15:50.063002+00:00",
+      "ts": "2026-09-28T18:53:23.251662+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 13,
-      "ts": "2026-09-23T08:53:43.403564+00:00"
-    },
     {
       "kept": 6,
       "ts": "2026-09-23T15:42:15.861111+00:00"
@@ -227,28 +223,32 @@
     {
       "kept": 3,
       "ts": "2026-09-28T10:15:29.675980+00:00"
+    },
+    {
+      "kept": 6,
+      "ts": "2026-09-28T18:52:41.090824+00:00"
     }
   ],
-  "streak": 211,
+  "streak": 212,
   "topics": [
     {
-      "collected": 37,
+      "collected": 38,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 52,
-      "kept": 2,
+      "collected": 53,
+      "kept": 5,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 23,
+      "collected": 25,
       "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-28T10:15:29.675980+00:00"
+  "updated_at": "2026-09-28T18:52:41.090824+00:00"
 }
