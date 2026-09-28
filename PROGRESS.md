@@ -33,11 +33,9 @@ old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
 
 ## Now page (`/now/`)
 
-**Status: in progress — Task 1 of 7 done (runner probe: Yandex answered
-`status=451` on 2026-09-28 → spec's Plan B adopted: the local presence
-runner publishes `playlists.json` to `presence-data`, the page reads it
-client-side; no build-time fetch, no daily rebuild). Spec revised and
-plan rewritten for Plan B. Next: Task 2 (pure libs).**
+**Status: in progress — Tasks 1–2 of 7 done (runner probe 451 → Plan B;
+pure libs `lib/now-config.ts`, `lib/now-format.ts`, `lib/yandex-music.ts`).
+Next: Task 3 (pure presence collector + playlist trimmer).**
 
 - Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
 - Plan: `docs/superpowers/plans/2026-09-28-now-page.md`
