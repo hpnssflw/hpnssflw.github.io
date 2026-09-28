@@ -33,9 +33,10 @@ old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
 
 ## Now page (`/now/`)
 
-**Status: in progress — Tasks 1–2 of 7 done (runner probe 451 → Plan B;
-pure libs `lib/now-config.ts`, `lib/now-format.ts`, `lib/yandex-music.ts`).
-Next: Task 3 (pure presence collector + playlist trimmer).**
+**Status: in progress — Tasks 1–3 of 7 done (runner probe 451 → Plan B;
+pure libs; pure collector `scripts/presence/collect.mjs` — presence and the
+playlist trimmer, both with allowlist leak tests). Next: Task 4 (the
+runner that publishes both files to `presence-data`).**
 
 - Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
 - Plan: `docs/superpowers/plans/2026-09-28-now-page.md`

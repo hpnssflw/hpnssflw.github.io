@@ -1,0 +1,325 @@
+import { describe, expect, it } from "vitest";
+import {
+  PLAYLIST_KEYS,
+  PRESENCE_KEYS,
+  buildPresence,
+  deriveState,
+  localDayInfo,
+  mergeActivity,
+  modelFamily,
+  shouldPublish,
+  totalMinutes,
+  trimPlaylists,
+} from "./collect.mjs";
+
+const MIN = 60_000;
+// Stand-in for a local midnight; every function takes it as an input.
+const DAY_START = Date.UTC(2026, 8, 28, 0, 0);
+const at = (h, m) => DAY_START + (h * 60 + m) * MIN;
+const iso = (ms) => new Date(ms).toISOString();
+
+describe("deriveState", () => {
+  it("is working when any session is busy", () => {
+    const agents = [{ status: "idle" }, { status: "busy" }];
+    expect(deriveState({ agents, lastActiveMs: null, nowMs: at(10, 0) })).toBe("working");
+  });
+
+  it("is waiting when idle but active within 15 minutes", () => {
+    const agents = [{ status: "idle" }];
+    expect(deriveState({ agents, lastActiveMs: at(9, 45), nowMs: at(10, 0) })).toBe("waiting");
+  });
+
+  it("is offline when idle and the last activity is older", () => {
+    const agents = [{ status: "idle" }];
+    expect(deriveState({ agents, lastActiveMs: at(9, 44), nowMs: at(10, 0) })).toBe("offline");
+  });
+
+  it("treats a days-old idle session as offline", () => {
+    const agents = [{ status: "idle" }];
+    const threeDaysAgo = at(9, 0) - 3 * 24 * 60 * MIN;
+    expect(deriveState({ agents, lastActiveMs: threeDaysAgo, nowMs: at(10, 0) })).toBe("offline");
+  });
+
+  it("is offline with no sessions and no activity", () => {
+    expect(deriveState({ agents: [], lastActiveMs: null, nowMs: at(10, 0) })).toBe("offline");
+  });
+});
+
+describe("mergeActivity / totalMinutes", () => {
+  const opts = { dayStartMs: DAY_START };
+
+  it("merges events closer than the gap", () => {
+    const intervals = mergeActivity([at(9, 0), at(9, 10), at(9, 20)], opts);
+    expect(intervals).toEqual([{ start: at(9, 0), end: at(9, 20) }]);
+    expect(totalMinutes(intervals)).toBe(20);
+  });
+
+  it("splits on a gap longer than 15 minutes", () => {
+    const intervals = mergeActivity([at(9, 0), at(9, 10), at(9, 40), at(9, 50)], opts);
+    expect(intervals).toEqual([
+      { start: at(9, 0), end: at(9, 10) },
+      { start: at(9, 40), end: at(9, 50) },
+    ]);
+    expect(totalMinutes(intervals)).toBe(20);
+  });
+
+  it("treats exactly 15 minutes as the same stretch", () => {
+    expect(mergeActivity([at(9, 0), at(9, 15)], opts)).toHaveLength(1);
+  });
+
+  it("clips events before the day start", () => {
+    expect(mergeActivity([DAY_START - 5 * MIN, at(0, 5)], opts)).toEqual([
+      { start: at(0, 5), end: at(0, 5) },
+    ]);
+  });
+
+  it("counts a lone event as zero minutes", () => {
+    expect(totalMinutes(mergeActivity([at(9, 0)], opts))).toBe(0);
+  });
+
+  it("sorts unsorted input", () => {
+    expect(mergeActivity([at(9, 10), at(9, 0)], opts)).toEqual([
+      { start: at(9, 0), end: at(9, 10) },
+    ]);
+  });
+});
+
+describe("modelFamily", () => {
+  it("maps model ids to families", () => {
+    expect(modelFamily("claude-opus-5-5")).toBe("opus");
+    expect(modelFamily("claude-sonnet-5")).toBe("sonnet");
+    expect(modelFamily("claude-haiku-4-5-20251001")).toBe("haiku");
+    expect(modelFamily("claude-fable-5-1")).toBe("fable");
+  });
+
+  it("returns null for anything else", () => {
+    expect(modelFamily("<synthetic>")).toBeNull();
+    expect(modelFamily(undefined)).toBeNull();
+    expect(modelFamily(42)).toBeNull();
+  });
+});
+
+describe("shouldPublish", () => {
+  const same = { playlistsChanged: false };
+
+  it("skips only offline → offline when the playlists are unchanged", () => {
+    expect(shouldPublish({ prevState: "offline", nextState: "offline", ...same })).toBe(false);
+    expect(shouldPublish({ prevState: "working", nextState: "offline", ...same })).toBe(true);
+    expect(shouldPublish({ prevState: null, nextState: "offline", ...same })).toBe(true);
+    expect(shouldPublish({ prevState: "offline", nextState: "working", ...same })).toBe(true);
+  });
+
+  it("publishes offline → offline when the playlists changed", () => {
+    expect(
+      shouldPublish({ prevState: "offline", nextState: "offline", playlistsChanged: true }),
+    ).toBe(true);
+  });
+});
+
+describe("localDayInfo", () => {
+  it("returns the machine-local date and midnight", () => {
+    const now = new Date(2026, 8, 28, 10, 30).getTime();
+    expect(localDayInfo(now)).toEqual({
+      day: "2026-09-28",
+      dayStartMs: new Date(2026, 8, 28).getTime(),
+    });
+  });
+});
+
+describe("buildPresence", () => {
+  const base = {
+    agents: [{ status: "busy" }],
+    events: [
+      { ts: at(9, 0), sessionId: "s1", model: "claude-sonnet-5" },
+      { ts: at(9, 10), sessionId: "s1", model: "claude-opus-5-5" },
+      { ts: at(10, 0), sessionId: "s2", model: "<synthetic>" },
+      { ts: at(10, 5), sessionId: "s2", model: null },
+    ],
+    nowMs: at(10, 7) + 30_000,
+    dayStartMs: DAY_START,
+    day: "2026-09-28",
+    tz: "Europe/Moscow",
+    prevLastActive: null,
+  };
+
+  it("builds the v1 object", () => {
+    expect(buildPresence(base)).toEqual({
+      v: 1,
+      state: "working",
+      since: iso(at(10, 0)),
+      lastActive: iso(at(10, 5)),
+      todayMinutes: 15, // 9:00–9:10 plus 10:00–10:05
+      sessionsToday: 2,
+      model: "opus", // latest recognised model; <synthetic> is skipped
+      day: "2026-09-28",
+      tz: "Europe/Moscow",
+      updatedAt: iso(at(10, 7)), // floored to the minute
+    });
+  });
+
+  it("has no since when offline", () => {
+    const out = buildPresence({ ...base, agents: [{ status: "idle" }], nowMs: at(12, 0) });
+    expect(out.state).toBe("offline");
+    expect(out.since).toBeNull();
+    expect(out.lastActive).toBe(iso(at(10, 5)));
+  });
+
+  it("falls back to the previous lastActive when nothing happened today", () => {
+    const out = buildPresence({
+      ...base,
+      agents: [],
+      events: [],
+      prevLastActive: "2026-09-27T21:40:00.000Z",
+    });
+    expect(out).toMatchObject({
+      state: "offline",
+      lastActive: "2026-09-27T21:40:00.000Z",
+      todayMinutes: 0,
+      sessionsToday: 0,
+      model: null,
+    });
+  });
+
+  it("never leaks anything outside the allowlist", () => {
+    const secrets = [
+      "C:\\A\\secret-client-repo",
+      "c--CODE-secret-client-frontend",
+      "feature/secret-branch",
+      "fix the auth bug in payments",
+      "bdc066e9-59e9-43df-8b22-9969ae67e644",
+      "secret-session-name",
+    ];
+    const [cwd, projectDir, branch, promptText, sessionId, name] = secrets;
+    const poisoned = {
+      ...base,
+      agents: [{ status: "busy", cwd, name, sessionId, pid: 21372 }],
+      events: base.events.map((e) => ({
+        ...e,
+        sessionId,
+        cwd,
+        project: projectDir,
+        gitBranch: branch,
+        text: promptText,
+      })),
+    };
+    const out = buildPresence(poisoned);
+    expect(Object.keys(out).sort()).toEqual([...PRESENCE_KEYS].sort());
+    const json = JSON.stringify(out);
+    for (const secret of secrets) expect(json).not.toContain(secret);
+    expect(json).not.toContain("21372");
+  });
+});
+
+describe("trimPlaylists", () => {
+  // Shape of the real GET /users/tmkplzv/playlists/list response (2026-09-28),
+  // extra keys abbreviated; the second playlist is a made-up private one.
+  const RAW = {
+    invocationInfo: { "req-id": "1790576806261179", hostname: "music-web-default" },
+    result: [
+      {
+        owner: {
+          uid: 1659591274,
+          login: "tmkplzv",
+          name: "Artem Polozov",
+          sex: "unknown",
+          verified: false,
+        },
+        uid: 1659591274,
+        kind: 1001,
+        revision: 812,
+        title: "siick vibin on a daily basis",
+        playlistUuid: "f5db5527-5d0e-50fa-9f52-ee32cf758900",
+        visibility: "public",
+        trackCount: 265,
+        durationMs: 48357650,
+        modified: "2026-09-28T05:06:23+00:00",
+        likesCount: 3,
+        tags: [],
+        derivedColors: { average: "#6b5a4e" },
+        cover: {
+          type: "mosaic",
+          itemsUri: [
+            "avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/%%",
+            "avatars.yandex.net/get-music-content/20622967/0b58311f.a.43768630-1/%%",
+          ],
+          custom: false,
+          version: "1590764633470",
+        },
+      },
+      {
+        owner: { uid: 1659591274, login: "tmkplzv", name: "Artem Polozov" },
+        kind: 1003,
+        title: "secret mix",
+        playlistUuid: "0a1b2c3d-0000-4000-8000-000000000000",
+        visibility: "private",
+        trackCount: 5,
+        durationMs: 1000000,
+        modified: "2026-09-27T10:00:00+00:00",
+      },
+    ],
+  };
+
+  it("keeps public playlists and only the allowlisted keys", () => {
+    expect(trimPlaylists(RAW)).toEqual({
+      result: [
+        {
+          playlistUuid: "f5db5527-5d0e-50fa-9f52-ee32cf758900",
+          title: "siick vibin on a daily basis",
+          visibility: "public",
+          trackCount: 265,
+          durationMs: 48357650,
+          modified: "2026-09-28T05:06:23+00:00",
+          cover: {
+            type: "mosaic",
+            itemsUri: [
+              "avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/%%",
+              "avatars.yandex.net/get-music-content/20622967/0b58311f.a.43768630-1/%%",
+            ],
+          },
+        },
+      ],
+    });
+  });
+
+  it("never leaks anything outside the allowlist", () => {
+    const out = trimPlaylists(RAW);
+    expect(Object.keys(out)).toEqual(["result"]);
+    for (const item of out.result) {
+      expect(Object.keys(item).sort()).toEqual([...PLAYLIST_KEYS].sort());
+      expect(Object.keys(item.cover).sort()).toEqual(["itemsUri", "type"]);
+    }
+    const json = JSON.stringify(out);
+    for (const secret of ["1659591274", "tmkplzv", "Artem Polozov", "secret mix", "owner"]) {
+      expect(json).not.toContain(secret);
+    }
+  });
+
+  it("drops wrongly typed fields instead of copying them", () => {
+    const [item] = RAW.result;
+    const out = trimPlaylists({
+      result: [
+        {
+          ...item,
+          title: { evil: "object" },
+          trackCount: "265",
+          cover: { type: "mosaic", itemsUri: ["a/%%", 42, "b/%%", "c/%%", "d/%%", "e/%%"] },
+        },
+      ],
+    });
+    expect(out.result[0]).not.toHaveProperty("title");
+    expect(out.result[0]).not.toHaveProperty("trackCount");
+    expect(out.result[0].cover.itemsUri).toEqual(["a/%%", "b/%%", "c/%%", "d/%%"]);
+  });
+
+  it("keeps an empty list distinct from garbage", () => {
+    expect(trimPlaylists({ result: [] })).toEqual({ result: [] });
+    expect(trimPlaylists({ result: ["not an object", null] })).toEqual({ result: [] });
+  });
+
+  it("returns null for garbage", () => {
+    expect(trimPlaylists(null)).toBeNull();
+    expect(trimPlaylists("x")).toBeNull();
+    expect(trimPlaylists({})).toBeNull();
+    expect(trimPlaylists({ result: "nope" })).toBeNull();
+  });
+});
