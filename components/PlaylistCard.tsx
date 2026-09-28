@@ -22,9 +22,10 @@ export default function PlaylistCard({ playlist, open, onToggle }: Props) {
           data-count={playlist.coverTiles.length}
           aria-hidden="true"
         >
-          {playlist.coverTiles.map((src) => (
+          {playlist.coverTiles.map((src, i) => (
+            // Keyed by position: a mosaic can repeat a cover. The list is static.
             // eslint-disable-next-line @next/next/no-img-element
-            <img key={src} src={src} alt="" width={32} height={32} loading="lazy" />
+            <img key={i} src={src} alt="" width={32} height={32} loading="lazy" />
           ))}
         </div>
         <div className="now-playlist-body">
@@ -44,6 +45,7 @@ export default function PlaylistCard({ playlist, open, onToggle }: Props) {
             className="now-play"
             aria-expanded={open}
             aria-controls={panelId}
+            aria-label={`${open ? "Close" : "Play"} ${playlist.title}`}
             onClick={onToggle}
           >
             {open ? "▾ close" : "▸ play"}

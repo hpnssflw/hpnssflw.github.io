@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
+import { MODELS, parsePresence } from "../../lib/claude-presence.ts";
 import {
+  MODEL_FAMILIES,
   PLAYLIST_KEYS,
   PRESENCE_KEYS,
   assertPublishable,
@@ -244,6 +246,34 @@ describe("buildPresence", () => {
     const json = JSON.stringify(out);
     for (const secret of secrets) expect(json).not.toContain(secret);
     expect(json).not.toContain("21372");
+  });
+});
+
+describe("presence.json contract: collect.mjs vs lib/claude-presence.ts", () => {
+  const inputs = {
+    agents: [{ status: "busy" }],
+    events: [{ ts: at(9, 0), sessionId: "s1", model: "claude-opus-5-5" }],
+    nowMs: at(9, 5),
+    dayStartMs: DAY_START,
+    day: "2026-09-28",
+    tz: "Europe/Moscow",
+    prevLastActive: null,
+  };
+
+  it("parsePresence accepts buildPresence output and keeps exactly PRESENCE_KEYS", () => {
+    const parsed = parsePresence(JSON.parse(JSON.stringify(buildPresence(inputs))));
+    expect(parsed).not.toBeNull();
+    expect(Object.keys(parsed).sort()).toEqual([...PRESENCE_KEYS].sort());
+  });
+
+  it("both sides know the same model families", () => {
+    expect([...MODELS].sort()).toEqual([...MODEL_FAMILIES].sort());
+    for (const family of MODEL_FAMILIES) {
+      const events = [{ ts: at(9, 0), sessionId: "s1", model: `claude-${family}-9` }];
+      const built = buildPresence({ ...inputs, events });
+      expect(built.model).toBe(family);
+      expect(parsePresence(built)?.model).toBe(family);
+    }
   });
 });
 

@@ -19,7 +19,8 @@ export interface Presence {
 }
 
 const STATES: readonly string[] = ["working", "waiting", "offline"];
-const MODELS: readonly string[] = ["opus", "sonnet", "haiku", "fable"];
+/** Must match MODEL_FAMILIES in scripts/presence/collect.mjs (cross-checked in its tests). */
+export const MODELS: readonly string[] = ["opus", "sonnet", "haiku", "fable"];
 
 function isIso(value: unknown): boolean {
   return typeof value === "string" && !Number.isNaN(Date.parse(value));

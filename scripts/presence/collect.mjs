@@ -34,7 +34,8 @@ export const PLAYLIST_KEYS = Object.freeze([
   "cover",
 ]);
 
-const FAMILIES = ["opus", "sonnet", "haiku", "fable"];
+/** Model families presence.json may name; lib/claude-presence.ts MODELS must match (tested). */
+export const MODEL_FAMILIES = Object.freeze(["opus", "sonnet", "haiku", "fable"]);
 
 /**
  * working: a session is busy. waiting: none busy, but activity within the
@@ -78,7 +79,7 @@ export function isSubagentTranscript(path) {
 
 export function modelFamily(modelId) {
   if (typeof modelId !== "string") return null;
-  return FAMILIES.find((family) => modelId.includes(family)) ?? null;
+  return MODEL_FAMILIES.find((family) => modelId.includes(family)) ?? null;
 }
 
 /**
