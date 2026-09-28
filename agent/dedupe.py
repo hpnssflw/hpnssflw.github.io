@@ -1,7 +1,9 @@
-"""Persistent seen-URL state: hashes, first-seen dates, score history, and
-send counts. filter_seen only drops items that were actually delivered
-before — a candidate that was collected and dropped in a past run is not
-a duplicate, and stays eligible."""
+"""Persistent seen-URL state: hashes, first-seen dates, score history,
+send counts, and inbox dismissals. filter_seen drops items that were
+actually delivered before, or that the inbox dismissed (rejected by
+Artem, or expired undecided) — a candidate that was collected and
+dropped in a past run for any other reason is not a duplicate, and stays
+eligible."""
 
 from __future__ import annotations
 
@@ -19,6 +21,7 @@ class StateEntry:
     first_seen: str  # ISO 8601
     last_score: int | None
     times_sent: int
+    dismissed: str | None = None  # "rejected" | "expired" -- set by the inbox, never cleared
 
 
 def url_hash(url: str) -> str:
@@ -61,6 +64,15 @@ def mark_sent_url(state: dict[str, StateEntry], url: str) -> None:
     state[url_hash(url)].times_sent += 1
 
 
+def dismiss_url(state: dict[str, StateEntry], url: str, reason: str) -> None:
+    """Called when the inbox drops a queued item for good -- rejected by
+    Artem, or expired undecided. Like mark_sent_url, a KeyError means the
+    queue held something record_seen never saw, which is a bug worth
+    surfacing loudly. filter_seen reads this so a dismissed item still
+    inside the recency window isn't re-collected, re-ranked and re-queued."""
+    state[url_hash(url)].dismissed = reason
+
+
 def filter_seen(
     candidates: list[Candidate],
     state: dict[str, StateEntry],
@@ -76,6 +88,15 @@ def filter_seen(
                     title=candidate.title,
                     reason="seen",
                     detail={"times_sent": entry.times_sent},
+                )
+            )
+        elif entry is not None and entry.dismissed is not None:
+            drops.append(
+                Drop(
+                    url=candidate.url,
+                    title=candidate.title,
+                    reason="dismissed",
+                    detail={"dismissed": entry.dismissed},
                 )
             )
         else:

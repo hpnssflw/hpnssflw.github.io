@@ -59,6 +59,11 @@ the next one starts.
    on this MVP (or an MVP+) proving out before Tony Scraponi is split
    into its own project — see the Obsidian plan's "Phase 2/3" for what
    that split eventually includes.
+5. **Inbox (moderated delivery).** Approve/reject each queued item on
+   `/researcher/queue/`; only approved items go to Telegram. Decisions
+   live in a separate public repo, `hpnssflw/tony-inbox`, so the
+   browser-held token can't write to this one. Spec:
+   `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
 
 `agent/panel.py` + `agent/panel_page.html` (a local-only, `127.0.0.1`
 monitoring panel built by a separate concurrent session — see

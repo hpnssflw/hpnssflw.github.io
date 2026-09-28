@@ -283,7 +283,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#4 shipped.**
+**Status: sub-projects #1-#4 shipped; #5 (Inbox) in progress.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -512,6 +512,15 @@ infrastructure.
     plus seven Minor fixed in one fix wave, commit `2327a5e`. The one
     residual (post #1's sources comment misdating `64a745d`) went away
     when Publishing Step 3 deleted that comment.
+- **Sub-project #5, Inbox (moderated delivery): in progress.**
+  Task 1 of 5 done.
+  Spec: `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
+  Plan: `docs/superpowers/plans/2026-09-28-tony-scraponi-inbox.md`.
+  Work happens in the git worktree `.claude/worktrees/tony-scraponi` on
+  branch `worktree-tony-scraponi`, not on `main`, until the plan's Task 5
+  merges it.
+  Latest: Task 1 added `agent/inbox.py` (load/validate/apply decisions), `dismissed` in the dedupe state, and the `inbox:` config block — not yet wired into `run_real`.
+  Next: Task 2 (moderated delivery in `run_real`).
 
 ### How to resume in a new session
 
@@ -552,23 +561,22 @@ playlists update only while Artem's machine is on
 log. Next phase (backend: friends, Yandex ID login, pager) needs its own
 brainstorm, starting from the research report's decision points.
 
-**Content Direction & Tony Scraponi: all four sub-projects shipped** —
-#1 (agent themes rework), #2 (Telegram delivery), #3 (Blog content &
-direction), #4 (Tony Scraponi MVP — the `/researcher/queue/` pending-queue
-page). See this file's section above for what shipped in each and what
-the final reviews found and fixed. Sub-project #2's bot/channel now exist
-(`@hypnosisflow`) and live delivery is verified (2026-09-18: 124-item
-backlog sent, queue drained to 0) — sub-project #4's queue page will now
-show whatever accumulates between 24h delivery cycles rather than an
-ever-growing backlog. All four sub-projects are pushed to the remote; the
-manual agent-workflow trigger for #2 confirmed the renamed `status.json`
-keys landed on `agent-data` (2026-09-17T04:34:28Z run), and a second
-manual trigger the next day confirmed the real Telegram send.
-`docs/tony-scraponi-roadmap.md`'s four ordered sub-projects are now all
-complete. The LAB backlog posts follow-up
-(`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is done too:
-all four posts are published. There's no confirmed next step for this
-initiative.
+**Content Direction & Tony Scraponi: sub-projects #1-#4 shipped; #5
+(Inbox) in progress.** See this file's section above for what shipped in
+each and what the final reviews found and fixed. Sub-project #2's bot/
+channel now exist (`@hypnosisflow`) and live delivery is verified
+(2026-09-18: 124-item backlog sent, queue drained to 0) — sub-project
+#4's queue page will now show whatever accumulates between 24h delivery
+cycles rather than an ever-growing backlog. All four sub-projects #1-#4
+are pushed to the remote; the manual agent-workflow trigger for #2
+confirmed the renamed `status.json` keys landed on `agent-data`
+(2026-09-17T04:34:28Z run), and a second manual trigger the next day
+confirmed the real Telegram send. `docs/tony-scraponi-roadmap.md`'s four
+ordered sub-projects #1-#4 are now complete. The LAB backlog posts
+follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
+done too: all four posts are published. Sub-project #5 (Inbox) is in
+progress — see its entry above for the next task; resume it from the
+worktree, not from main.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
