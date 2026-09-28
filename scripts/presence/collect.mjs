@@ -152,12 +152,17 @@ export function buildPresence({ agents, events, nowMs, dayStartMs, day, tz, prev
   };
 }
 
+/** Cover URIs are host-relative (`avatars.yandex.net/...%%`); the page prefixes `https://`. */
+const COVER_URI_PREFIX = "avatars.yandex.net/";
+
 function trimCover(cover) {
   if (typeof cover !== "object" || cover === null) return null;
   const out = {};
   if (typeof cover.type === "string") out.type = cover.type;
   if (Array.isArray(cover.itemsUri)) {
-    out.itemsUri = cover.itemsUri.filter((uri) => typeof uri === "string").slice(0, 4);
+    out.itemsUri = cover.itemsUri
+      .filter((uri) => typeof uri === "string" && uri.startsWith(COVER_URI_PREFIX))
+      .slice(0, 4);
   }
   return out;
 }
@@ -165,10 +170,11 @@ function trimCover(cover) {
 /**
  * The playlists.json privacy boundary. Keeps the API's `{ result: [...] }`
  * shape so lib/yandex-music.ts normalizes it unchanged, but only public
- * playlists and only PLAYLIST_KEYS (cover: `type`, `itemsUri`), each copied
- * only when it has the expected type. Drops the `owner` block and every
- * other key. `null` = not a playlist response at all (the runner then
- * keeps the last published file); `{ result: [] }` = no public playlists.
+ * playlists and only PLAYLIST_KEYS (cover: `type`, and `itemsUri` limited
+ * to avatars.yandex.net), each copied only when it has the expected type.
+ * Drops the `owner` block and every other key. `null` = not a playlist
+ * response at all (the runner then keeps the last published file);
+ * `{ result: [] }` = no public playlists.
  */
 export function trimPlaylists(json) {
   if (typeof json !== "object" || json === null || !Array.isArray(json.result)) return null;

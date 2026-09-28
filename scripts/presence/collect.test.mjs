@@ -333,19 +333,35 @@ describe("trimPlaylists", () => {
 
   it("drops wrongly typed fields instead of copying them", () => {
     const [item] = RAW.result;
+    const uri = (n) => `avatars.yandex.net/get-music-content/${n}/a/%%`;
     const out = trimPlaylists({
       result: [
         {
           ...item,
           title: { evil: "object" },
           trackCount: "265",
-          cover: { type: "mosaic", itemsUri: ["a/%%", 42, "b/%%", "c/%%", "d/%%", "e/%%"] },
+          cover: { type: "mosaic", itemsUri: [uri(1), 42, uri(2), uri(3), uri(4), uri(5)] },
         },
       ],
     });
     expect(out.result[0]).not.toHaveProperty("title");
     expect(out.result[0]).not.toHaveProperty("trackCount");
-    expect(out.result[0].cover.itemsUri).toEqual(["a/%%", "b/%%", "c/%%", "d/%%"]);
+    expect(out.result[0].cover.itemsUri).toEqual([uri(1), uri(2), uri(3), uri(4)]);
+  });
+
+  it("keeps only avatars.yandex.net cover URIs", () => {
+    const [item] = RAW.result;
+    const kept = "avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/%%";
+    const itemsUri = [
+      "evil.example/get-music-content/1/%%",
+      "avatars.yandex.net.evil.example/x/%%",
+      "https://avatars.yandex.net/x/%%",
+      "//evil.example/avatars.yandex.net/%%",
+      "",
+      kept,
+    ];
+    const out = trimPlaylists({ result: [{ ...item, cover: { type: "mosaic", itemsUri } }] });
+    expect(out.result[0].cover.itemsUri).toEqual([kept]);
   });
 
   it("keeps an empty list distinct from garbage", () => {

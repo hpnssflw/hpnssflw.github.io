@@ -178,8 +178,9 @@ export function normalizePlaylists(json: unknown): Playlist[];
   — the runner's trimmed file keeps that shape, so the normalizer doesn't
   care which of the two it gets. It keeps only `visibility === "public"`,
   sorts by `modified` descending, builds cover URLs as `https://` +
-  `itemsUri[i]` with `%%` → `200x200` (first 4 only; missing/non-mosaic
-  cover → `[]`), and skips any item missing `playlistUuid` or `title`, or
+  `itemsUri[i]` with every `%%` → `200x200` (only URIs starting
+  `avatars.yandex.net/`, first 4 only; missing/non-mosaic cover → `[]`),
+  and skips any item missing `playlistUuid` or `title`, or
   whose `playlistUuid` isn't UUID-shaped (it's interpolated into an iframe
   `src`). The file comes from a public branch, so the client still treats
   it as untrusted input.
@@ -299,7 +300,8 @@ unchanged:
 ```
 
 - **Allowlist:** top level `result` only; per item only the seven keys
-  above; `cover` only `type` and `itemsUri`. Everything else in the real
+  above; `cover` only `type` and `itemsUri` (only URIs starting
+  `avatars.yandex.net/`). Everything else in the real
   response — the `owner` block (uid, login, display name, `sex`), `kind`,
   `revision`, colors, tags, likes — is dropped. Only public playlists are
   kept.
@@ -441,7 +443,8 @@ Vitest; `vitest.config.mjs` `include` extends to
 
 - `lib/yandex-music.test.ts` — against a trimmed fixture from the real
   2026-09-28 response: public filter, `modified` sort, cover URL build
-  (`%%` → `200x200`, `https://` prefix, max 4), missing cover → `[]`,
+  (every `%%` → `200x200`, `https://` prefix, max 4, non-`avatars.yandex.net/`
+  URIs skipped), missing cover → `[]`,
   items without a UUID-shaped `playlistUuid` or a title skipped, garbage
   input → `[]`. (No fetch tests — the site no longer fetches Yandex.)
 - `lib/claude-presence.test.ts` — `parsePresence` accepts v1 / rejects
