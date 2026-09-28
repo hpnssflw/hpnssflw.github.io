@@ -30,6 +30,27 @@ There's no fixed list enforced anywhere in code for LAB tags —
 `lib/posts.ts` reads whatever string is in a post's `tag:` frontmatter
 field. This is a convention for whoever's picking the tag, not a schema.
 
+## Format
+
+New posts are short notes, not essays: English, body ≤ 200 words, in
+this order —
+
+1. A one-line hook: the technique or problem.
+2. `## What to watch for` — 2–3 bullets: the non-obvious parts, where it
+   goes wrong.
+3. `## Why it's interesting` — 1–2 bullets: when it pays off.
+4. `## In practice` — the real example in this repo, linked to the file
+   on GitHub; or, with no example, which direction to look to apply it.
+
+Every concrete claim traces to the repo (commit, diff, spec, plan). The
+existing essay post (`cheap-models-strong-graphs.mdx`) predates this
+format and stays as-is.
+
+Drafts live in `drafts/lab/<slug>.mdx` — nothing reads that folder, so a
+committed draft never reaches the site. Publishing = moving the file into
+`content/lab/` (see `docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`,
+"Publishing procedure").
+
 ## Relationship to RESEARCHER
 
 RESEARCHER (`lib/topics.ts`, rendered on `app/researcher/page.tsx`) and
@@ -43,7 +64,7 @@ above.
 1. **State without a database** — using a git branch (`agent-data`) +
    JSON files as the entire backend for the status widget, instead of
    standing up a database for what's fundamentally a single write per
-   run.
+   run. — drafted: `drafts/lab/state-without-a-database.mdx`
 2. **The email that never got sent** — why SMTP delivery got planned,
    built, then dropped twice (once for the on-page dashboard, once for
    Telegram) before anything ever shipped, and what that says about

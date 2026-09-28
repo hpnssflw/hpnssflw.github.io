@@ -1,0 +1,39 @@
+---
+title: State Without a Database
+date: "2026-09"
+tag: STATE MANAGEMENT
+excerpt: A git branch and three JSON files are the research agent's entire backend.
+subtitle: One write every four hours doesn't need a database — a git branch does the job, with a few sharp edges.
+description: One write every four hours doesn't need a database — a git branch does the job, with a few sharp edges.
+---
+
+The research agent's backend is a git branch and three JSON files — no
+database, because a run every four hours is one write, not a workload.
+
+## What to watch for
+
+- No concurrency guard: an overlapping run (a manual trigger mid-cron)
+  races the scheduled one, its `git push` gets rejected as
+  non-fast-forward, and that run's state is silently lost.
+- The repo is public, so the state is too: `agent/pending.json` — full
+  curated titles, summaries, scores — is readable by anyone. The site
+  copy claimed "nothing public" until a final review corrected it.
+- The raw file is CDN-cached for 5 minutes, so the on-page widget can
+  lag a push by that long.
+
+## Why it's interesting
+
+- Zero infrastructure: nothing to provision, back up, or migrate.
+- Every state change is a commit — free history, free diffs, free
+  rollback if a run writes something wrong.
+
+## In practice
+
+The write path is
+[`agent-run.yml`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/.github/workflows/agent-run.yml):
+checkout `main` read-only and `agent-data` for state, run, commit only
+if something changed, push. The result lands at
+[`agent/status.json`](https://github.com/hpnssflw/hpnssflw.github.io/blob/agent-data/agent/status.json)
+on `agent-data`.
+
+{/* sources: hook (one write per 4h run) — .github/workflows/agent-run.yml cron `0 */4 * * *`; no concurrency guard / rejected push — .github/workflows/agent-run.yml (no `concurrency:` key, plain `git push` with no pull/rebase first); public repo = public pending.json, corrected site claim — commit 6ad4b2a8940553f768eaf467ca44a6aabf9468c3 ("nothing published, nothing public" → corrected in researcher/agent.html and docs/agent-plan.md), lib/agent-status.ts and lib/pending-queue.ts (client-side fetch, no token, from raw.githubusercontent.com); 5-minute CDN cache — raw.githubusercontent.com/hpnssflw/hpnssflw.github.io/agent-data/agent/status.json response header `Cache-Control: max-age=300`, verified 2026-09-28; commit-only-if-changed / push flow — .github/workflows/agent-run.yml "Commit and push agent-data" step (`git diff --cached --quiet || git commit …` then `git push`) */}
