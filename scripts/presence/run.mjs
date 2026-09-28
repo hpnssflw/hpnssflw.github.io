@@ -2,7 +2,9 @@
  * Local collector for /now/ — see
  * docs/superpowers/specs/2026-09-28-now-page-design.md.
  *
- * Run every 5 minutes by Task Scheduler (install.ps1). Reads only
+ * Run every 5 minutes by Task Scheduler — as the pinned copy install.ps1
+ * puts in %LOCALAPPDATA%\polozov-presence\bin, never from this working
+ * tree, so it imports nothing but ./collect.mjs and node builtins. Reads only
  * `timestamp`, `sessionId` and `message.model` from today's
  * ~/.claude/projects transcripts, plus each session's busy/idle status
  * from `claude agents --json --all`, and fetches Artem's public Yandex
@@ -31,7 +33,13 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 import { createInterface } from "node:readline";
 import { promisify } from "node:util";
-import { buildPresence, localDayInfo, shouldPublish, trimPlaylists } from "./collect.mjs";
+import {
+  assertPublishable,
+  buildPresence,
+  localDayInfo,
+  shouldPublish,
+  trimPlaylists,
+} from "./collect.mjs";
 
 const execAsync = promisify(exec);
 const execFileAsync = promisify(execFile);
@@ -205,19 +213,19 @@ async function hasCommit() {
  * Keeps presence-data at exactly one commit: amend + force-push. A null
  * playlistsText leaves the previously committed playlists.json as it is.
  */
-async function publish(presence, playlistsText) {
+async function publish(presenceText, playlistsText, updatedAt) {
   if (!existsSync(join(REPO, ".git"))) {
     mkdirSync(REPO, { recursive: true });
     await git(["init", "-q", "-b", BRANCH]);
     await git(["remote", "add", "origin", REMOTE]);
   }
-  writeFileSync(join(REPO, "presence.json"), `${JSON.stringify(presence, null, 2)}\n`);
+  writeFileSync(join(REPO, "presence.json"), presenceText);
   await git(["add", "presence.json"]);
   if (playlistsText !== null) {
     writeFileSync(join(REPO, "playlists.json"), playlistsText);
     await git(["add", "playlists.json"]);
   }
-  const message = `presence ${presence.updatedAt}`;
+  const message = `presence ${updatedAt}`;
   await git(
     (await hasCommit())
       ? ["commit", "-q", "--amend", "-m", message]
@@ -252,13 +260,26 @@ async function main() {
     prevLastActive: typeof prev?.lastActive === "string" ? prev.lastActive : null,
   });
 
+  const presenceText = `${JSON.stringify(presence, null, 2)}\n`;
   const playlistsText = await fetchPlaylistsText();
   const playlistsChanged =
     playlistsText !== null && playlistsText !== readPreviousPlaylistsText();
 
+  // Checked on exactly the text that would be written, in both paths.
+  const outgoing = {
+    presence: JSON.parse(presenceText),
+    playlists: playlistsText === null ? null : JSON.parse(playlistsText),
+  };
+  try {
+    assertPublishable(outgoing);
+  } catch (err) {
+    log(`${err instanceof Error ? err.message : "not publishable"}; nothing published`);
+    process.exitCode = 1;
+    return;
+  }
+
   if (DRY_RUN) {
-    const playlists = playlistsText === null ? null : JSON.parse(playlistsText);
-    const both = { "presence.json": presence, "playlists.json": playlists };
+    const both = { "presence.json": outgoing.presence, "playlists.json": outgoing.playlists };
     process.stdout.write(`${JSON.stringify(both, null, 2)}\n`);
     return;
   }
@@ -267,7 +288,7 @@ async function main() {
     log("skip: offline, already published as offline; playlists unchanged");
     return;
   }
-  await publish(presence, playlistsText);
+  await publish(presenceText, playlistsText, presence.updatedAt);
   const playlistsNote = playlistsText === null ? "kept" : playlistsChanged ? "updated" : "same";
   log(
     `published ${presence.state} today=${presence.todayMinutes}m ` +

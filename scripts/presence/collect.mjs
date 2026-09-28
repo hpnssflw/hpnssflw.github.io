@@ -176,3 +176,101 @@ export function trimPlaylists(json) {
   }
   return { result };
 }
+
+// assertPublishable's own lists, deliberately not PRESENCE_KEYS / PLAYLIST_KEYS:
+// widening an allowlist constant must not silently pass this check too.
+const PUBLISHABLE_PRESENCE_KEYS = [
+  "v",
+  "state",
+  "since",
+  "lastActive",
+  "todayMinutes",
+  "sessionsToday",
+  "model",
+  "day",
+  "tz",
+  "updatedAt",
+];
+const PUBLISHABLE_PLAYLIST_KEYS = [
+  "playlistUuid",
+  "title",
+  "visibility",
+  "trackCount",
+  "durationMs",
+  "modified",
+  "cover",
+];
+const PUBLISHABLE_COVER_KEYS = ["type", "itemsUri"];
+
+function isPlainObject(value) {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isLeaf(value) {
+  return value === null || typeof value === "string" || typeof value === "number";
+}
+
+function hasOnlyKeys(obj, allowed) {
+  return Object.keys(obj).every((key) => allowed.includes(key));
+}
+
+function notPublishable(check) {
+  // Names the failed check only — never a key or a value: this goes to run.log.
+  return new Error(`not publishable: ${check}`);
+}
+
+/**
+ * The last gate before anything leaves the machine: run.mjs calls it on
+ * exactly what it is about to write (parsed back from the text), in both
+ * the publish and --dry-run paths. `playlists` is null when this run
+ * publishes no new playlists.json. Throws on the first failed check.
+ */
+export function assertPublishable({ presence, playlists }) {
+  if (!isPlainObject(presence)) throw notPublishable("presence.json is not an object");
+  if (
+    Object.keys(presence).length !== PUBLISHABLE_PRESENCE_KEYS.length ||
+    !hasOnlyKeys(presence, PUBLISHABLE_PRESENCE_KEYS)
+  ) {
+    throw notPublishable("presence.json keys are not exactly the ten allowed");
+  }
+  if (!Object.values(presence).every(isLeaf)) {
+    throw notPublishable("presence.json has a value that is not a string, number or null");
+  }
+
+  if (playlists === null || playlists === undefined) return;
+  if (
+    !isPlainObject(playlists) ||
+    Object.keys(playlists).length !== 1 ||
+    !Array.isArray(playlists.result)
+  ) {
+    throw notPublishable("playlists.json is not exactly { result: [...] }");
+  }
+  for (const item of playlists.result) {
+    if (!isPlainObject(item)) throw notPublishable("playlists.json has an item that is not an object");
+    if (!hasOnlyKeys(item, PUBLISHABLE_PLAYLIST_KEYS)) {
+      throw notPublishable("playlists.json has an item key outside the allowlist");
+    }
+    for (const [key, value] of Object.entries(item)) {
+      if (key !== "cover" && !isLeaf(value)) {
+        throw notPublishable(
+          "playlists.json has an item value that is not a string, number or null",
+        );
+      }
+    }
+    const { cover } = item;
+    if (cover === undefined || cover === null) continue;
+    if (!isPlainObject(cover)) throw notPublishable("playlists.json has a cover that is not an object");
+    if (!hasOnlyKeys(cover, PUBLISHABLE_COVER_KEYS)) {
+      throw notPublishable("playlists.json has a cover key outside the allowlist");
+    }
+    if (!isLeaf(cover.type ?? null)) {
+      throw notPublishable("playlists.json has a cover type that is not a string, number or null");
+    }
+    if (
+      cover.itemsUri !== undefined &&
+      !(Array.isArray(cover.itemsUri) && cover.itemsUri.every(isLeaf))
+    ) {
+      throw notPublishable("playlists.json has a cover itemsUri that is not a flat list");
+    }
+  }
+}

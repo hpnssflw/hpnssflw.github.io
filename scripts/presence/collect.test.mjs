@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   PLAYLIST_KEYS,
   PRESENCE_KEYS,
+  assertPublishable,
   buildPresence,
   deriveState,
   localDayInfo,
@@ -321,5 +322,94 @@ describe("trimPlaylists", () => {
     expect(trimPlaylists("x")).toBeNull();
     expect(trimPlaylists({})).toBeNull();
     expect(trimPlaylists({ result: "nope" })).toBeNull();
+  });
+});
+
+describe("assertPublishable", () => {
+  // What run.mjs checks: the published text, parsed back.
+  const roundTrip = (value) => JSON.parse(JSON.stringify(value));
+  const presence = roundTrip(
+    buildPresence({
+      agents: [{ status: "busy" }],
+      events: [
+        { ts: at(9, 0), sessionId: "s1", model: "claude-opus-5-5" },
+        { ts: at(9, 20), sessionId: "s1", model: null },
+      ],
+      nowMs: at(9, 21),
+      dayStartMs: DAY_START,
+      day: "2026-09-28",
+      tz: "Europe/Moscow",
+      prevLastActive: null,
+    }),
+  );
+  const playlists = roundTrip(
+    trimPlaylists({
+      result: [
+        {
+          owner: { uid: 1659591274, login: "tmkplzv" },
+          title: "siick vibin on a daily basis",
+          playlistUuid: "f5db5527-5d0e-50fa-9f52-ee32cf758900",
+          visibility: "public",
+          trackCount: 265,
+          durationMs: 48357650,
+          modified: "2026-09-28T05:06:23+00:00",
+          cover: {
+            type: "mosaic",
+            itemsUri: ["avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/%%"],
+            custom: false,
+          },
+        },
+      ],
+    }),
+  );
+  const [item] = playlists.result;
+  const check = (overrides) => () => assertPublishable({ presence, playlists, ...overrides });
+
+  it("passes the real buildPresence and trimPlaylists output", () => {
+    expect(check({})).not.toThrow();
+    expect(check({ playlists: null })).not.toThrow();
+    expect(check({ playlists: { result: [] } })).not.toThrow();
+  });
+
+  it("fails on an extra or a missing presence key", () => {
+    expect(check({ presence: { ...presence, cwd: "C:\\A\\secret" } })).toThrow(/presence\.json keys/);
+    const { tz: _tz, ...missing } = presence;
+    expect(check({ presence: missing })).toThrow(/presence\.json keys/);
+  });
+
+  it("fails on a nested object where a presence scalar belongs", () => {
+    expect(check({ presence: { ...presence, model: { id: "x" } } })).toThrow(/presence\.json/);
+    expect(check({ presence: { ...presence, day: ["2026-09-28"] } })).toThrow(/presence\.json/);
+  });
+
+  it("fails on an extra top-level playlists key", () => {
+    expect(check({ playlists: { ...playlists, invocationInfo: { hostname: "x" } } })).toThrow(
+      /playlists\.json is not exactly/,
+    );
+    expect(check({ playlists: [item] })).toThrow(/playlists\.json is not exactly/);
+  });
+
+  it("fails on an extra item key or a nested object where a scalar belongs", () => {
+    const withOwner = { ...item, owner: { login: "tmkplzv" } };
+    expect(check({ playlists: { result: [withOwner] } })).toThrow(/item key outside/);
+    const nested = { ...item, title: { text: "x" } };
+    expect(check({ playlists: { result: [nested] } })).toThrow(/item value/);
+  });
+
+  it("fails on an extra cover key or a nested cover value", () => {
+    const extraCover = { ...item, cover: { ...item.cover, custom: false } };
+    expect(check({ playlists: { result: [extraCover] } })).toThrow(/cover key outside/);
+    const nestedUri = { ...item, cover: { ...item.cover, itemsUri: [{ uri: "x" }] } };
+    expect(check({ playlists: { result: [nestedUri] } })).toThrow(/itemsUri/);
+  });
+
+  it("never puts a key or value into its message", () => {
+    const secret = "C:\\A\\secret-client-repo";
+    try {
+      assertPublishable({ presence: { ...presence, [secret]: secret }, playlists: null });
+      expect.unreachable();
+    } catch (err) {
+      expect(err.message).not.toContain("secret");
+    }
   });
 });
