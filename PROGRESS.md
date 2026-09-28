@@ -513,14 +513,16 @@ infrastructure.
     residual (post #1's sources comment misdating `64a745d`) went away
     when Publishing Step 3 deleted that comment.
 - **Sub-project #5, Inbox (moderated delivery): in progress.**
-  Task 3 of 5 done.
+  Task 4 of 5 done.
   Spec: `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
   Plan: `docs/superpowers/plans/2026-09-28-tony-scraponi-inbox.md`.
   Work happens in the git worktree `.claude/worktrees/tony-scraponi` on
   branch `worktree-tony-scraponi`, not on `main`, until the plan's Task 5
   merges it.
-  Latest: Task 3 added lib/github-contents.ts and lib/inbox.ts (Vitest-covered).
-  Next: Task 4 (statuses and owner mode on /researcher/queue/).
+  Latest: Task 4 added statuses and owner mode (approve/reject/undo) to
+  /researcher/queue/ — checked headlessly against the static export,
+  before tony-inbox exists.
+  Next: Task 5 (create tony-inbox, PAT, merge, push, live check).
 
 ### How to resume in a new session
 
