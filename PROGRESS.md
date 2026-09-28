@@ -458,6 +458,12 @@ infrastructure.
     safely and match the producer's actual output, so neither needs a
     change).
   - **Pushed to the remote.**
+- **LAB backlog posts: in progress (1 of 4 drafted).** Spec:
+  `docs/superpowers/specs/2026-09-28-lab-backlog-posts-design.md`. Plan:
+  `docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`. Short-note
+  format (≤ 200 words) now in `docs/lab-direction.md`. Drafts live in
+  `drafts/lab/` until Artem edits and publishes them.
+  - Drafted: `state-without-a-database` (Task 1).
 
 ### How to resume in a new session
 
@@ -503,10 +509,9 @@ manual agent-workflow trigger for #2 confirmed the renamed `status.json`
 keys landed on `agent-data` (2026-09-17T04:34:28Z run), and a second
 manual trigger the next day confirmed the real Telegram send.
 `docs/tony-scraponi-roadmap.md`'s four ordered sub-projects are now all
-complete — no confirmed next step for this initiative; the roadmap's own
-"Source material" section points at the Obsidian-vault product plan for
-what a Tony Scraponi split beyond this MVP would involve, if that's ever
-picked up.
+complete. Active follow-up: the LAB backlog posts plan
+(`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) — next is Task
+2; drafts awaiting Artem's edit are listed in the section above.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
