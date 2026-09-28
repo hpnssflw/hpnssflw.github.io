@@ -458,12 +458,13 @@ infrastructure.
     safely and match the producer's actual output, so neither needs a
     change).
   - **Pushed to the remote.**
-- **LAB backlog posts: in progress (1 of 4 drafted).** Spec:
+- **LAB backlog posts: in progress (2 of 4 drafted).** Spec:
   `docs/superpowers/specs/2026-09-28-lab-backlog-posts-design.md`. Plan:
   `docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`. Short-note
   format (≤ 200 words) now in `docs/lab-direction.md`. Drafts live in
   `drafts/lab/` until Artem edits and publishes them.
-  - Drafted: `state-without-a-database` (Task 1).
+  - Drafted: `state-without-a-database` (Task 1),
+    `the-email-that-never-got-sent` (Task 2).
 
 ### How to resume in a new session
 
@@ -511,7 +512,7 @@ manual trigger the next day confirmed the real Telegram send.
 `docs/tony-scraponi-roadmap.md`'s four ordered sub-projects are now all
 complete. Active follow-up: the LAB backlog posts plan
 (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) — next is Task
-2; drafts awaiting Artem's edit are listed in the section above.
+3; drafts awaiting Artem's edit are listed in the section above.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
