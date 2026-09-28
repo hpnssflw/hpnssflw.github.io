@@ -112,7 +112,6 @@ MUSIC
              ▸ play            ← tap mounts the Yandex iframe below
 [2×2 mosaic] technical 🔻 · 93 tracks · 9h 38m
 [2×2 mosaic] love · 84 tracks · 5h 57m
-open profile ↗
 
 GAMES
 upcoming — yandex games, once there's something worth showing
@@ -164,7 +163,10 @@ export async function fetchPlaylists(login: string): Promise<Playlist[] | null>;
   build time and be baked into the HTML, not deferred to the client.
 
 `lib/now-config.ts` holds the page's constants in one place:
-`YANDEX_MUSIC_LOGIN = "tmkplzv"`, `YANDEX_MUSIC_PROFILE_URL`,
+`YANDEX_MUSIC_LOGIN = "tmkplzv"`, `YANDEX_MUSIC_FALLBACK_URL` (the
+"siick vibin" playlist page — the new Yandex Music UI has no public
+profile page: `/users/<login>`, `/users/<login>/playlists` and
+`/profile/<uid>` all 404 as of 2026-09-28),
 `PRESENCE_URL`, `PRESENCE_STALE_MS = 15 * 60_000`,
 `PRESENCE_POLL_MS = 5 * 60_000`.
 
@@ -181,7 +183,9 @@ Rendering:
   mounted until tapped — no white blocks on first paint, no three iframes
   on mobile.
 - If `fetchPlaylists` returned `null` (or `[]`), the Music block renders
-  just `open profile ↗` linking to the profile.
+  just `yandex music ↗` linking to `YANDEX_MUSIC_FALLBACK_URL`. With
+  playlists present there's no extra link — each card title links to its
+  own playlist page.
 
 Freshness: `deploy.yml` gains `schedule: - cron: "0 3 * * *"` (06:00 MSK
 daily) alongside its existing `push`/`workflow_dispatch` triggers.
@@ -260,7 +264,9 @@ No I/O; all inputs passed in, `now` injected.
 
 ### Runner — `scripts/presence/run.mjs` (I/O shell)
 
-1. Run `claude agents --json --all` (`execFile`, 20s timeout). On failure,
+1. Run `claude agents --json --all` through a shell (`exec`, 20s timeout
+   — on this machine `claude` is an npm `claude.cmd` shim, which Node
+   refuses to spawn without a shell). On failure,
    continue with `agents = []` (state can then be at most `waiting`).
 2. List `~/.claude/projects/**/*.jsonl` with mtime within the owner's
    current local day; stream each line-by-line, `JSON.parse` each line,
@@ -332,7 +338,7 @@ other time zones aren't misled.
 
 | Failure | Result |
 |---|---|
-| Yandex API down / blocked at build | Music shows `open profile ↗`; build succeeds; warning in log |
+| Yandex API down / blocked at build | Music shows `yandex music ↗`; build succeeds; warning in log |
 | `presence.json` missing / malformed / network error | `status unavailable` |
 | Collector hasn't pushed in > 15 min | `offline` regardless of file contents |
 | `claude agents` fails locally | transcripts only; never `working` |
