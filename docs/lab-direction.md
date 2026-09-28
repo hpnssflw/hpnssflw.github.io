@@ -64,7 +64,7 @@ above.
 1. **State without a database** — using a git branch (`agent-data`) +
    JSON files as the entire backend for the status widget, instead of
    standing up a database for what's fundamentally a single write per
-   run. — drafted: `drafts/lab/state-without-a-database.mdx`
+   run. — published: `/lab/state-without-a-database/`
 2. **The email that never got sent** — why SMTP delivery got planned,
    built, then dropped twice (once for the on-page dashboard, once for
    Telegram) before anything ever shipped, and what that says about

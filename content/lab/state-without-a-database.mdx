@@ -1,0 +1,38 @@
+---
+title: State Without a Database
+date: "2026-09"
+tag: STATE MANAGEMENT
+excerpt: A git branch and three JSON files are the research agent's entire backend.
+subtitle: One write every four hours doesn't need a database — a git branch does the job, with a few sharp edges.
+description: One write every four hours doesn't need a database — a git branch does the job, with a few sharp edges.
+---
+
+My research agent's backend is a git branch and three JSON files — I
+skipped the database because a run every four hours is one write, not a
+workload.
+
+## What to watch for
+
+- No concurrency guard: an overlapping run (a manual trigger mid-cron)
+  races the scheduled one, the later `git push` gets rejected as
+  non-fast-forward, that run fails, and its state is lost.
+- The repo is public, so the state is too: `agent/pending.json` — full
+  curated titles, summaries, scores — is readable by anyone. My site
+  copy claimed "nothing public" until a final review corrected it.
+- The raw file is CDN-cached for 5 minutes, so the on-page widget can
+  lag a push by that long.
+
+## Why it's interesting
+
+- Zero infrastructure: nothing to provision, back up, or migrate.
+- Every state change is a commit — free history, free diffs, free
+  rollback if a run writes something wrong.
+
+## In practice
+
+The write path is
+[`agent-run.yml`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/.github/workflows/agent-run.yml):
+it checks out `main` for code and `agent-data` for state, runs, commits
+only if something changed, and pushes. The result lands at
+[`agent/status.json`](https://github.com/hpnssflw/hpnssflw.github.io/blob/agent-data/agent/status.json)
+on `agent-data`.

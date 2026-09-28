@@ -8,8 +8,9 @@
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
 - Routes: `/` (hero, RESEARCHER preview, LAB feed, agent widget),
-  `/lab/` + `/lab/[slug]/` (MDX posts from `content/lab/`, one so far —
-  "Cheap Models, Strong Graphs"), `/researcher/`, `/researcher/agent/`
+  `/lab/` + `/lab/[slug]/` (MDX posts from `content/lab/`, two so far —
+  "Cheap Models, Strong Graphs", "State Without a Database"),
+  `/researcher/`, `/researcher/agent/`
   (the agent plan page + live dashboard).
 - One persistent header (`components/SiteHeader.tsx`) and footer, rendered
   by the root layout — this replaced the old ad-hoc per-page back links.
@@ -475,21 +476,21 @@ infrastructure.
     safely and match the producer's actual output, so neither needs a
     change).
   - **Pushed to the remote.**
-- **LAB backlog posts: all 4 drafted.** Spec:
+- **LAB backlog posts: all 4 drafted, 1 published.** Spec:
   `docs/superpowers/specs/2026-09-28-lab-backlog-posts-design.md`. Plan:
   `docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`. Short-note
   format (≤ 200 words) now in `docs/lab-direction.md`. Drafts live in
   `drafts/lab/` until Artem edits and publishes them.
-  - Drafted: `state-without-a-database` (Task 1),
-    `the-email-that-never-got-sent` (Task 2), `config-that-lied`
-    (Task 3), `reviewing-your-own-claims` (Task 4).
+  - Published: `state-without-a-database` (Task 1) —
+    `/lab/state-without-a-database/`, 2026-09-28.
+  - Drafted: `the-email-that-never-got-sent` (Task 2),
+    `config-that-lied` (Task 3), `reviewing-your-own-claims` (Task 4).
   - Final whole-branch review (opus): no Critical findings; four
     Important (no first person in post #1; three claims stronger than
     their sources — two of them from the plan's own fact list/angle)
-    plus seven Minor fixed in one fix wave, commit `2327a5e`. One
-    residual left for Artem's edit pass: post #1's sources comment says
-    `64a745d` landed "two days into the same review pass" — it was nine
-    minutes after `6ad4b2a` (comment only; Publishing Step 3 deletes it).
+    plus seven Minor fixed in one fix wave, commit `2327a5e`. The one
+    residual (post #1's sources comment misdating `64a745d`) went away
+    when Publishing Step 3 deleted that comment.
 
 ### How to resume in a new session
 
@@ -537,8 +538,9 @@ manual trigger the next day confirmed the real Telegram send.
 `docs/tony-scraponi-roadmap.md`'s four ordered sub-projects are now all
 complete. Active follow-up: the LAB backlog posts plan
 (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) — all four
-drafted; remaining work is Artem's edits and the plan's Publishing
-procedure, one post at a time.
+drafted, `state-without-a-database` published; remaining work is
+Artem's edits to the other three and the plan's Publishing procedure,
+one post at a time.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
