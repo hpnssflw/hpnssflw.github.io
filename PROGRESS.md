@@ -482,6 +482,13 @@ infrastructure.
   - Drafted: `state-without-a-database` (Task 1),
     `the-email-that-never-got-sent` (Task 2), `config-that-lied`
     (Task 3), `reviewing-your-own-claims` (Task 4).
+  - Final whole-branch review (opus): no Critical findings; four
+    Important (no first person in post #1; three claims stronger than
+    their sources — two of them from the plan's own fact list/angle)
+    plus seven Minor fixed in one fix wave, commit `2327a5e`. One
+    residual left for Artem's edit pass: post #1's sources comment says
+    `64a745d` landed "two days into the same review pass" — it was nine
+    minutes after `6ad4b2a` (comment only; Publishing Step 3 deletes it).
 
 ### How to resume in a new session
 
