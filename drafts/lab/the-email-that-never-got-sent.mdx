@@ -12,31 +12,31 @@ SMTP delivery for the research agent was fully built — and never sent a single
 ## What to watch for
 
 - "Built" isn't "working": subject/body assembly and the send call
-  shipped, but `SMTP_HOST`/`SMTP_USER`/`SMTP_PASSWORD` were never added
-  to `agent/.env`, so every run hit a graceful no-op instead of an inbox.
+  shipped, but SMTP credentials were never configured — not in
+  `agent/.env`, not as repo secrets — so every attempt failed, caught
+  and logged, not delivered.
 - Stale docs keep dead decisions alive: "add SMTP credentials, send a
-  live email" stayed written down as the next step long after the
-  decision to drop it, so it kept resurfacing as if it were still live
-  (author's notes).
+  live email" stayed written down as the next step long after it was
+  dropped, so it kept resurfacing as if still live (author's notes).
 - A visible counter isn't action: the dashboard showed the pending
-  count from early on, but it still climbed past a hundred over a
-  month — only a new channel cleared it, not the visibility.
+  count early on, but it still climbed past a hundred over a month —
+  only a new channel cleared it, not the visibility.
 
 ## Why it's interesting
 
-- The channel got picked before there was a reader to deliver to —
-  twice: once abandoned for an on-page dashboard, once for Telegram —
-  and neither pivot touched the queue underneath.
+- I picked the channel before there was a reader to deliver to —
+  twice: once for an on-page dashboard, once for Telegram — and
+  neither pivot touched the queue's own logic.
 - Decoupling collection/ranking from delivery made the channel
-  swappable: replacing SMTP with Telegram meant rewriting two files in
-  place, not restructuring the pipeline.
+  swappable: SMTP became Telegram by rewriting two files in place, not
+  restructuring the pipeline.
 
 ## In practice
 
 [`agent/pending.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/pending.py)
-is the part that survived both pivots unchanged. Delivery itself moved
-from SMTP to Telegram in
+survived both pivots with its logic untouched — the Telegram rewrite
+only reworded its docstrings. Delivery moved from SMTP to Telegram in
 [`agent/deliver.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/deliver.py) —
 same queue, different channel.
 
-{/* sources: hook (SMTP built, never sent) — commit c65c8cb "Wire ranking, digest assembly, and SMTP delivery" (2026-08-15) built agent/digest.py + agent/deliver.py; PROGRESS.md: "SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASSWORD aren't in agent/.env yet" and a live run hitting the "SMTP-not-configured graceful-failure path (caught, logged, no traceback)"; commit c0a6dc1 "Rewrite digest/deliver for Telegram, replacing dead SMTP path" (2026-09-17) replaced it before any SMTP send ever happened; stale docs kept the SMTP step alive — Artem's project-memory note (2026-09-16, "author's notes"): as of 2026-08-17 the drop wasn't reflected anywhere, so "add SMTP credentials, send a live email" kept resurfacing despite the user saying email was dropped "many times"; counter visible but queue kept growing — PROGRESS.md: "pending_email_count was written to status.json but never displayed (silent queue growth with SMTP still unconfigured) — now shown on the dashboard," fixed in commit 6ad4b2a (2026-08-16, one day after the queue's creation in ec64725), while the first live send clearing it didn't happen until commit 886f97c (2026-09-18) — over a month later; two pivots — first e2f8dfa "Spec: report storage + dashboard, replacing email delivery for now" (2026-08-15) and the 2026-08-17 decision (author's notes) to drop push delivery for the on-page dashboard only; second, 2026-09-16 Telegram added as sub-project #2, landing in c0a6dc1 (2026-09-17); pending.py unchanged across both — git log --date=short -- agent/deliver.py agent/digest.py agent/pending.py shows agent/pending.py touched only at ec64725 (2026-08-15, its creation), not in c0a6dc1's Telegram rewrite; over a hundred unsent items — PROGRESS.md commit 886f97c (2026-09-18): first live send delivered 124 items across 5 topics, queue drained to 0, confirmed in agent/deliver.py's module docstring */}
+{/* sources: hook (SMTP built, never sent) — commit c65c8cb "Wire ranking, digest assembly, and SMTP delivery" (2026-08-15) built agent/digest.py + agent/deliver.py; SMTP credentials never configured, every attempt caught and logged — agent/deliver.py at ec64725 reads SMTP_HOST/SMTP_USER/SMTP_PASSWORD from os.environ (raises if absent), agent/main.py's run_real wraps deliver.send in try/except Exception, on failure emits a "deliver"/"failed" event and prints "Email delivery failed, will retry next run" (no crash, no traceback) — matches PROGRESS.md's "SMTP-not-configured graceful-failure path (caught, logged, no traceback)"; not in agent/.env — PROGRESS.md: "SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASSWORD aren't in agent/.env yet"; not as repo secrets — PROGRESS.md: only DEEPSEEK_API_KEY set as a repo secret (Task 1), and commit 5875449 "the GitHub Actions workflow drops the four unused SMTP_* secrets" when Telegram replaced SMTP, confirming they were never populated; commit c0a6dc1 "Rewrite digest/deliver for Telegram, replacing dead SMTP path" (2026-09-17) replaced it before any SMTP send ever happened; stale docs kept the SMTP step alive — Artem's project-memory note (2026-09-16, "author's notes"): as of 2026-08-17 the drop wasn't reflected anywhere, so "add SMTP credentials, send a live email" kept resurfacing despite the user saying email was dropped "many times"; counter visible but queue kept growing — PROGRESS.md: "pending_email_count was written to status.json but never displayed (silent queue growth with SMTP still unconfigured) — now shown on the dashboard," fixed in commit 6ad4b2a (2026-08-16, one day after the queue's creation in ec64725), while the first live send clearing it didn't happen until commit 886f97c (2026-09-18) — over a month later; two pivots — first e2f8dfa "Spec: report storage + dashboard, replacing email delivery for now" (2026-08-15) and the 2026-08-17 decision (author's notes) to drop push delivery for the on-page dashboard only; second, 2026-09-16 Telegram added as sub-project #2, landing in c0a6dc1 (2026-09-17); pending.py's queue logic untouched across both, docstrings reworded once — git log --date=short -- agent/deliver.py agent/digest.py agent/pending.py shows agent/pending.py touched at ec64725 (2026-08-15, its creation) and c1bc7b2 (2026-09-17, "Fix wave from final review"), whose diff to pending.py is comment/docstring-only ("pending-email queue" to "pending delivery queue", "emailed" to "delivered" in prose), no logic lines changed; over a hundred unsent items — PROGRESS.md commit 886f97c (2026-09-18): first live send delivered 124 items across 5 topics, queue drained to 0, confirmed in agent/deliver.py's module docstring */}
