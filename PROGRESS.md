@@ -36,12 +36,11 @@ old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
 **Status: in progress — Task 1 of 7 done (runner probe: Yandex answered
 `status=451` on 2026-09-28 → spec's Plan B adopted: the local presence
 runner publishes `playlists.json` to `presence-data`, the page reads it
-client-side; no build-time fetch, no daily rebuild). Spec revised; next:
-rewrite the plan for Plan B (writing-plans), then Task 2 (pure libs).**
+client-side; no build-time fetch, no daily rebuild). Spec revised and
+plan rewritten for Plan B. Next: Task 2 (pure libs).**
 
 - Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
-- Plan: `docs/superpowers/plans/2026-09-28-now-page.md` (still the
-  pre-probe version until rewritten — don't execute Tasks 2+ from it)
+- Plan: `docs/superpowers/plans/2026-09-28-now-page.md`
 - Research behind it (local, uncommitted): `reports/Интеграции Яндекс и Claude Code.md`
 - Phase 1 of a larger presence/pager idea; later phases need a backend
   and have open legal/reachability decisions (see the spec intro).
