@@ -66,8 +66,23 @@ need a backend — see the spec intro and the research report).
   main sessions only (not subagents), a failed push is retried once and
   forces the next publish, a fresh clone keeps the published
   `playlists.json`, killed-run git states heal, presence goes stale after
-  20 min, and cover URIs are limited to `avatars.yandex.net`. The pinned
-  copy takes effect on the machine only once `install.ps1` is re-run.
+  20 min, and cover URIs are limited to `avatars.yandex.net`. `install.ps1`
+  was re-run the same day: the task now runs the pinned copy, and its
+  first run published `model: "opus"` with `playlists=kept` (Yandex timed
+  out).
+- Final whole-plan review (opus): 0 Critical; 2 Important + 10 Minor
+  fixed in one wave (`525e887..e76c57a`); scoped re-review clean. Parked
+  Minor follow-ups: `ensureRemote` runs `git remote set-url` on every
+  publish, so a leftover `.git/config.lock` would fail every later run
+  (compare `get-url` first); one `assertPublishable` test in
+  `collect.test.mjs` can't fail (`expect.unreachable` inside the `try`);
+  `readPrevious*` read the clone's working tree, so a run that fails
+  between write and commit can make the next offline run skip. Yandex
+  timeouts and `getaddrinfo() thread failed to start` push failures show
+  up in `run.log` a few times a day; both self-heal on the next run.
+- SDD ledger (git-ignored, full task history + the headless-Chrome check
+  scripts `now-check.mjs` / `presence-check.mjs`):
+  `.superpowers/sdd/2026-09-28-now-page/`.
 
 ## Research Agent
 
