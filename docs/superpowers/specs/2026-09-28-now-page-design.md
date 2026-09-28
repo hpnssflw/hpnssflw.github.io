@@ -353,19 +353,29 @@ No I/O; all inputs passed in, `now` injected.
    clone's `presence.json`) is also `offline` — one "offline" push, then
    silence; the page's staleness check covers the rest — **and** the new
    `playlists.json` text is byte-identical to the clone's current file
-   (or step 4 failed).
+   (or step 4 failed) — **and** the clone holds no unpushed commit (its
+   `HEAD` equals `refs/remotes/origin/presence-data`, which a successful
+   push moves), since both comparisons read that clone.
 6. Log one line per run to `%LOCALAPPDATA%\polozov-presence\run.log`,
    truncated to the last 500 lines. Any unexpected error: log it, publish
    nothing, exit non-zero.
 
 Publishing uses a dedicated local clone at
 `%LOCALAPPDATA%\polozov-presence\repo` — **never the working tree at
-`C:\A\polozov`**. First run: `git init`, add `origin`
-(`https://github.com/hpnssflw/hpnssflw.github.io.git`), orphan commit.
-Every published run: write `presence.json` (and `playlists.json` when
+`C:\A\polozov`**. First run: `git init`, orphan commit. A fresh clone
+first seeds `playlists.json` from the published branch (`git fetch
+--depth=1 origin presence-data`; a missing branch is fine), so a run
+whose Yandex fetch failed never publishes a branch that drops it.
+Every published run: remove a `.git/index.lock` older than 10 minutes
+(left by a killed run), add `origin`
+(`https://github.com/hpnssflw/hpnssflw.github.io.git`) if missing or
+`set-url` it, write `presence.json` (and `playlists.json` when
 step 4 succeeded), `git add`, `git commit --amend` (first run: plain
-commit), `git push --force origin HEAD:refs/heads/presence-data`. The
-branch is always one commit. Auth is
+commit), `git push --force origin HEAD:refs/heads/presence-data`
+(retried once). The branch is always one commit. Right before writing
+(and before printing in `--dry-run`), `assertPublishable` re-checks the
+outgoing text against its own literal copy of both allowlists; on
+failure it logs which check failed and publishes nothing. Auth is
 the machine's existing Git Credential Manager. Pushing this branch
 triggers neither `deploy.yml` (main only) nor `agent-run.yml`
 (cron/dispatch only).
@@ -422,7 +432,7 @@ other time zones aren't misled.
 | `presence.json` missing / malformed / network error | `status unavailable` |
 | Collector hasn't pushed in > 15 min | `offline` regardless of file contents |
 | `claude agents` fails locally | transcripts only; never `working` |
-| Push fails | logged locally; page goes `offline` after 15 min |
+| Push fails | retried once, then logged; the next run publishes again; page goes `offline` after 15 min |
 
 ## Testing
 

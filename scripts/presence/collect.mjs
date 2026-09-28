@@ -83,10 +83,12 @@ export function modelFamily(modelId) {
 
 /**
  * One "offline" push, then silence — the page's staleness check covers the
- * rest — unless the playlists changed, which is worth a push on its own.
+ * rest — unless the playlists changed, which is worth a push on its own, or
+ * the clone holds a commit whose push failed (`unpushed`): prevState and
+ * the playlists comparison were read from that unpushed commit.
  */
-export function shouldPublish({ prevState, nextState, playlistsChanged }) {
-  return playlistsChanged || !(prevState === "offline" && nextState === "offline");
+export function shouldPublish({ prevState, nextState, playlistsChanged, unpushed = false }) {
+  return unpushed || playlistsChanged || !(prevState === "offline" && nextState === "offline");
 }
 
 function pad(n) {

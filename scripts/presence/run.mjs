@@ -27,6 +27,7 @@ import {
   readFileSync,
   readdirSync,
   statSync,
+  unlinkSync,
   writeFileSync,
 } from "node:fs";
 import { get } from "node:https";
@@ -57,6 +58,8 @@ const REPO = join(BASE, "repo");
 const LOG = join(BASE, "run.log");
 const PROJECTS = join(homedir(), ".claude", "projects");
 const DRY_RUN = process.argv.includes("--dry-run");
+const INDEX_LOCK_STALE_MS = 10 * 60_000;
+const PUSH_RETRY_DELAY_MS = 5_000;
 
 // Fail fast instead of hanging on a credential prompt nobody can see.
 const GIT_ENV = { ...process.env, GIT_TERMINAL_PROMPT: "0", GCM_INTERACTIVE: "never" };
@@ -207,12 +210,90 @@ function git(args) {
   });
 }
 
-async function hasCommit() {
+/** The useful part of a failed git call: its first fatal/error line. */
+function gitError(err) {
+  const lines = typeof err?.stderr === "string" ? err.stderr.split(/\r?\n/).filter(Boolean) : [];
+  const line = lines.find((l) => /^(fatal|error):/.test(l)) ?? lines.at(-1);
+  return line ?? (err instanceof Error ? err.message.split("\n")[0] : String(err));
+}
+
+/** The commit `ref` points at, or null when it doesn't resolve. */
+async function revParse(ref) {
   try {
-    await git(["rev-parse", "--verify", "-q", "HEAD"]);
-    return true;
+    const { stdout } = await git(["rev-parse", "-q", "--verify", `${ref}^{commit}`]);
+    return stdout.trim();
   } catch {
-    return false;
+    return null;
+  }
+}
+
+/**
+ * True when the clone holds a commit the remote never got — a failed push.
+ * A successful push moves refs/remotes/origin/presence-data to HEAD
+ * (origin has the default fetch refspec), so any difference means the
+ * next run must publish even when nothing else changed.
+ */
+async function hasUnpushedCommit() {
+  if (!existsSync(join(REPO, ".git"))) return false;
+  const head = await revParse("HEAD");
+  return head !== null && head !== (await revParse(`refs/remotes/origin/${BRANCH}`));
+}
+
+/**
+ * A run killed mid-git (the task's 2-minute limit, git's 60 s timeout) can
+ * leave .git/index.lock behind and fail every later run. No live run holds
+ * it anywhere near this long, so an older one is removed.
+ */
+function clearStaleIndexLock() {
+  const lock = join(REPO, ".git", "index.lock");
+  let ageMs;
+  try {
+    ageMs = Date.now() - statSync(lock).mtimeMs;
+  } catch {
+    return;
+  }
+  if (ageMs <= INDEX_LOCK_STALE_MS) return;
+  unlinkSync(lock);
+  log(`removed a stale .git/index.lock (${Math.round(ageMs / 60_000)} min old)`);
+}
+
+/** Every run, so one killed between `git init` and `remote add` heals itself. */
+async function ensureRemote() {
+  const { stdout } = await git(["remote"]);
+  const hasOrigin = stdout.split(/\r?\n/).includes("origin");
+  await git(
+    hasOrigin ? ["remote", "set-url", "origin", REMOTE] : ["remote", "add", "origin", REMOTE],
+  );
+}
+
+/**
+ * A fresh clone (no commit yet) starts from the published playlists.json,
+ * so a run whose Yandex fetch failed can't force-push a branch without it.
+ * A missing branch is fine (first publish ever); any other failure throws.
+ */
+async function seedPlaylists() {
+  try {
+    await git(["ls-remote", "--exit-code", "--heads", "origin", BRANCH]);
+  } catch (err) {
+    if (err?.code === 2) return; // --exit-code: no such branch on the remote
+    throw err;
+  }
+  await git(["fetch", "-q", "--depth=1", "origin", BRANCH]);
+  const { stdout: listed } = await git(["ls-tree", "--name-only", "FETCH_HEAD", "playlists.json"]);
+  if (listed.trim() === "") return; // the branch has no playlists.json to keep
+  const { stdout } = await git(["show", "FETCH_HEAD:playlists.json"]);
+  writeFileSync(join(REPO, "playlists.json"), stdout);
+}
+
+/** One retry: a transient network error has already failed a push once. */
+async function push() {
+  const args = ["push", "-q", "--force", "origin", `HEAD:refs/heads/${BRANCH}`];
+  try {
+    await git(args);
+  } catch (err) {
+    log(`push failed, retrying once: ${gitError(err)}`);
+    await new Promise((resolve) => setTimeout(resolve, PUSH_RETRY_DELAY_MS));
+    await git(args);
   }
 }
 
@@ -224,21 +305,32 @@ async function publish(presenceText, playlistsText, updatedAt) {
   if (!existsSync(join(REPO, ".git"))) {
     mkdirSync(REPO, { recursive: true });
     await git(["init", "-q", "-b", BRANCH]);
-    await git(["remote", "add", "origin", REMOTE]);
+  }
+  clearStaleIndexLock();
+  await ensureRemote();
+  const fresh = (await revParse("HEAD")) === null;
+  if (fresh) {
+    try {
+      await seedPlaylists();
+    } catch (err) {
+      if (playlistsText === null) {
+        throw new Error(
+          `fresh clone, no playlists this run and the published playlists.json ` +
+            `could not be read (${gitError(err)}); nothing published`,
+        );
+      }
+      log(`fresh clone: could not seed playlists.json, using this run's: ${gitError(err)}`);
+    }
   }
   writeFileSync(join(REPO, "presence.json"), presenceText);
+  if (playlistsText !== null) writeFileSync(join(REPO, "playlists.json"), playlistsText);
   await git(["add", "presence.json"]);
-  if (playlistsText !== null) {
-    writeFileSync(join(REPO, "playlists.json"), playlistsText);
-    await git(["add", "playlists.json"]);
-  }
+  if (existsSync(join(REPO, "playlists.json"))) await git(["add", "playlists.json"]);
   const message = `presence ${updatedAt}`;
   await git(
-    (await hasCommit())
-      ? ["commit", "-q", "--amend", "-m", message]
-      : ["commit", "-q", "-m", message],
+    fresh ? ["commit", "-q", "-m", message] : ["commit", "-q", "--amend", "-m", message],
   );
-  await git(["push", "-q", "--force", "origin", `HEAD:refs/heads/${BRANCH}`]);
+  await push();
 }
 
 async function main() {
@@ -290,7 +382,15 @@ async function main() {
     process.stdout.write(`${JSON.stringify(both, null, 2)}\n`);
     return;
   }
-  const decision = { prevState: prev?.state ?? null, nextState: presence.state, playlistsChanged };
+  // prev and the playlists comparison come from the clone, which may hold
+  // a commit whose push failed — that alone forces a publish.
+  const unpushed = await hasUnpushedCommit();
+  const decision = {
+    prevState: prev?.state ?? null,
+    nextState: presence.state,
+    playlistsChanged,
+    unpushed,
+  };
   if (!shouldPublish(decision)) {
     log("skip: offline, already published as offline; playlists unchanged");
     return;
@@ -299,7 +399,8 @@ async function main() {
   const playlistsNote = playlistsText === null ? "kept" : playlistsChanged ? "updated" : "same";
   log(
     `published ${presence.state} today=${presence.todayMinutes}m ` +
-      `sessions=${presence.sessionsToday} playlists=${playlistsNote}`,
+      `sessions=${presence.sessionsToday} playlists=${playlistsNote}` +
+      (unpushed ? " (the previous push had not landed)" : ""),
   );
 }
 

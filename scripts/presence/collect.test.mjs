@@ -145,6 +145,12 @@ describe("shouldPublish", () => {
       shouldPublish({ prevState: "offline", nextState: "offline", playlistsChanged: true }),
     ).toBe(true);
   });
+
+  it("publishes offline → offline when the last push never landed", () => {
+    const offline = { prevState: "offline", nextState: "offline", ...same };
+    expect(shouldPublish({ ...offline, unpushed: true })).toBe(true);
+    expect(shouldPublish({ ...offline, unpushed: false })).toBe(false);
+  });
 });
 
 describe("localDayInfo", () => {
