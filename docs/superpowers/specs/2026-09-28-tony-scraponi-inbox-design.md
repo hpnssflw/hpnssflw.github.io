@@ -84,14 +84,15 @@ site's writes to `tony-inbox` can't race. `agent-run.yml` is unchanged.
 
 ### New: `agent/inbox.py`
 
-- `load_decisions(url, token) -> dict[str, str] | None` — `GET` the
+- `load_decisions(url, token) -> dict[str, str]` — `GET` the
   GitHub Contents API URL with `Accept: application/vnd.github.raw+json`
   and, when `token` is set, `Authorization: Bearer <token>` (the
   workflow already exports `GITHUB_TOKEN`; authenticated reads avoid the
   60/h anonymous limit shared across Actions runner IPs). Uses
-  `requests`, timeout 15s. Returns `{url: "approve" | "reject"}`, or
-  `None` on any network error, non-200 status, JSON error, or failed
-  validation.
+  `requests`, timeout 15s. Returns `{url: "approve" | "reject"}`; raises
+  `DecisionsUnavailable` (message = the reason) on any network error,
+  non-200 status, JSON error, or failed validation, so the run log can
+  say why.
 - `apply_decisions(queue, decisions, state, now, expire_days) ->
   (approved: list[PendingItem], drops: list[tuple[str, Drop]])` — pure,
   mutates `queue` and `state` in place, returns drops paired with their
@@ -140,7 +141,7 @@ Loaded into a new `InboxConfig` on the settings object.
 ### `agent/main.py` — `run_real`
 
 1. After loading the queue: `decisions = inbox.load_decisions(...)`.
-   - `None` → emit `("inbox", "failed")` with the error detail, set
+   - `DecisionsUnavailable` → emit `("inbox", "failed")` with the error detail, set
      `approved = []`, and skip `apply_decisions` entirely: nothing is
      rejected, expired or delivered this run.
    - Otherwise `apply_decisions`, emitting each drop with
@@ -196,10 +197,14 @@ statuses. Raw's ~5 min cache is acceptable for public viewing.
 
 ### Units
 
-- `lib/inbox.ts` — pure: `Decisions` types, `isDecisions` guard,
-  `setDecision(decisions, url, decision | null, now)` (returns a new
-  object; `null` = undo), `pruneDecisions(decisions, liveUrls)`,
-  `itemStatus(decisions, url)`, repo/path/raw-URL constants.
+- `lib/inbox.ts` — pure helpers: `Decisions` types, `isDecisions`
+  guard, `setDecision(decisions, url, decision | null, now)` (returns a
+  new object; `null` = undo), `pruneDecisions(decisions, liveUrls)`,
+  `itemStatus(decisions, url)`, `serializeDecisions`, `commitMessage`,
+  repo/path/raw-URL constants; plus two thin fetchers —
+  `fetchPublicDecisions()` (raw URL, `null` on any failure) and
+  `fetchOwnerDecisions(token)` (Contents API, returns decisions + `sha`,
+  throws on failure or a malformed file).
 - `lib/github-contents.ts` — thin `fetch` wrapper: `getFile(repo, path,
   token) -> { text, sha }` and `putFile(repo, path, text, sha, message,
   token) -> { sha }`, UTF-8-safe base64 (titles carry non-ASCII),
@@ -234,8 +239,8 @@ statuses. Raw's ~5 min cache is acceptable for public viewing.
 - **Agent** — no pytest in `agent/` and no new dependency. Synthetic
   no-network checks in the plan's verification steps, as in earlier
   agent plans: approve, reject, undo (entry absent), expiry, approved
-  items not expiring, `load_decisions` returning `None` for a bad
-  payload and the run then delivering and dropping nothing, an old
+  items not expiring, `load_decisions` raising `DecisionsUnavailable`
+  for a bad payload and the run then delivering and dropping nothing, an old
   `state.json` without `dismissed` loading, a rejected URL re-collected
   and dropped by `filter_seen` as `dismissed`, the delivery gate with 0
   approved items.
