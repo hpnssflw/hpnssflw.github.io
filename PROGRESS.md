@@ -34,10 +34,10 @@ old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
 
 ## Now page (`/now/`)
 
-**Status: in progress — Tasks 1–3 of 7 done (runner probe 451 → Plan B;
-pure libs; pure collector `scripts/presence/collect.mjs` — presence and the
-playlist trimmer, both with allowlist leak tests). Next: Task 4 (the
-runner that publishes both files to `presence-data`).**
+**Status: in progress — Tasks 1–4 of 7 done (pure libs; collector +
+runner; `presence-data` branch live — one commit, `presence.json` with
+ten keys and a trimmed `playlists.json` — published by hand so far).
+Next: Task 5 (the `/now/` page: Music + Games + nav).**
 
 - Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
 - Plan: `docs/superpowers/plans/2026-09-28-now-page.md`
@@ -48,6 +48,11 @@ runner that publishes both files to `presence-data`).**
   Unavailable For Legal Reasons` from a US runner; run 36387764861 —
   iframe page, playlist page and `avatars.yandex.net` cover all 200 from
   a US runner (whether the player actually plays abroad is unknown).
+- The runner fetches Yandex over `node:https`, not `fetch()`: Yandex's
+  anti-robot layer answers `403` (`x-yandex-captcha: 403`) to Node TLS
+  handshakes that advertise ALPN, which undici's `fetch` always does;
+  `node:https` and curl get `200` from this machine. If playlists go
+  stale, check `run.log` for `yandex music failed` first.
 
 ## Research Agent
 
