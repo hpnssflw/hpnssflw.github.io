@@ -78,5 +78,5 @@ above.
    kept finding that per-task review missed (the `pending.json`
    exposure, the redaction rationale half-defeated by public topic
    config) — the case for a last cross-cutting pass even when every
-   task passed individually. — drafted:
-   `drafts/lab/reviewing-your-own-claims.mdx`
+   task passed individually. — published:
+   `/lab/reviewing-your-own-claims/`

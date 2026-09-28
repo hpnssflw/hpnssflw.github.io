@@ -8,10 +8,10 @@
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
 - Routes: `/` (hero, RESEARCHER preview, LAB feed, agent widget),
-  `/lab/` + `/lab/[slug]/` (MDX posts from `content/lab/`, four so far —
+  `/lab/` + `/lab/[slug]/` (MDX posts from `content/lab/`, five so far —
   "Cheap Models, Strong Graphs", "State Without a Database", "The Email
-  That Never Got Sent", "Config That Lied"), `/researcher/`,
-  `/researcher/agent/`
+  That Never Got Sent", "Config That Lied", "Reviewing Your Own
+  Claims"), `/researcher/`, `/researcher/agent/`
   (the agent plan page + live dashboard).
 - One persistent header (`components/SiteHeader.tsx`) and footer, rendered
   by the root layout — this replaced the old ad-hoc per-page back links.
@@ -482,19 +482,23 @@ infrastructure.
     safely and match the producer's actual output, so neither needs a
     change).
   - **Pushed to the remote.**
-- **LAB backlog posts: all 4 drafted, 3 published.** Spec:
+- **LAB backlog posts: done — all 4 published.** Spec:
   `docs/superpowers/specs/2026-09-28-lab-backlog-posts-design.md`. Plan:
   `docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`. Short-note
-  format (≤ 200 words) now in `docs/lab-direction.md`. Drafts live in
-  `drafts/lab/` until Artem edits and publishes them.
+  format (≤ 200 words) now in `docs/lab-direction.md`. Future drafts go
+  in `drafts/lab/` until Artem edits and publishes them.
   - Published: `state-without-a-database` (Task 1) —
     `/lab/state-without-a-database/`, 2026-09-28;
     `the-email-that-never-got-sent` (Task 2) —
     `/lab/the-email-that-never-got-sent/`, 2026-09-28 (published as the
     post-review draft text; Artem chose to skip his own edit pass);
     `config-that-lied` (Task 3) — `/lab/config-that-lied/`, 2026-09-28
-    (likewise published as the post-review draft text, no edit pass).
-  - Drafted: `reviewing-your-own-claims` (Task 4).
+    (likewise published as the post-review draft text, no edit pass);
+    `reviewing-your-own-claims` (Task 4) —
+    `/lab/reviewing-your-own-claims/`, 2026-09-28 (no edit pass; one
+    publish-time fact refresh, approved by Artem: "five plans" → "six",
+    since this plan's own final review was the sixth — it caught three
+    claims stronger than their sources, one in this post's hook).
   - Final whole-branch review (opus): no Critical findings; four
     Important (no first person in post #1; three claims stronger than
     their sources — two of them from the plan's own fact list/angle)
@@ -546,12 +550,10 @@ manual agent-workflow trigger for #2 confirmed the renamed `status.json`
 keys landed on `agent-data` (2026-09-17T04:34:28Z run), and a second
 manual trigger the next day confirmed the real Telegram send.
 `docs/tony-scraponi-roadmap.md`'s four ordered sub-projects are now all
-complete. Active follow-up: the LAB backlog posts plan
-(`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) — all four
-drafted, `state-without-a-database`, `the-email-that-never-got-sent`
-and `config-that-lied` published; remaining work is Artem's edit to the
-last one (`reviewing-your-own-claims`) and the plan's Publishing
-procedure for it.
+complete. The LAB backlog posts follow-up
+(`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is done too:
+all four posts are published. There's no confirmed next step for this
+initiative.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages

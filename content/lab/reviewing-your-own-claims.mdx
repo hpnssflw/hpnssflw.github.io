@@ -1,0 +1,25 @@
+---
+title: Reviewing Your Own Claims
+date: "2026-09"
+tag: REVIEW PROCESS
+excerpt: Only the final pass over the whole plan could see what crossed task boundaries.
+subtitle: Why per-task review can't catch what crosses task boundaries — and what a last whole-plan pass found that no task review did.
+description: Why per-task review can't catch what crosses task boundaries — and what a last whole-plan pass found that no task review did.
+---
+
+I ran six plans this year the same way: an AI subagent implemented each task, a fresh AI reviewer checked it against that task's brief, then one more AI review read the whole diff at once — the only pass that could catch boundary-crossing problems.
+
+## What to watch for
+
+- A claim contradicted by data another task wrote: the agent's plan page said "nothing published, nothing public" — already false once an earlier task's workflow made `pending.json` public, uncaught by a later narrative edit. My first reword still missed it; a second round said so plainly.
+- A leak split across files: exception text that could embed the bot token fed a log line written a month earlier, before Telegram or any real token existed. Each half looked fine alone.
+- Not everything crosses a boundary: a missing pacing/429 handler lived in one file — a task review could've caught it.
+
+## Why it's interesting
+
+- The final pass forced code fixes in three of six plans. In the sixth, which drafted this post, it caught three overclaims — one here.
+- It's cheap — one extra review, though one plan needed two rounds.
+
+## In practice
+
+The Telegram fix — token scrub, message pacing — lives in [`agent/deliver.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/deliver.py), commit [`c1bc7b2`](https://github.com/hpnssflw/hpnssflw.github.io/commit/c1bc7b276d81813eee3ec5362e774a262c6cbd6e).
