@@ -16,6 +16,15 @@ decisions — see the report's "Фазы 2–4" section. **None of that is in
 scope here.** Phase 1 is deliberately backend-free and runs on the static
 export exactly as the site does today.
 
+> **Revision (2026-09-28, same day): Plan B adopted.** The GitHub Actions
+> probe got `451 Unavailable For Legal Reasons` from
+> `api.music.yandex.net` (run 36386492821), so playlists can't be fetched
+> at build time. The local presence runner now also fetches them from
+> Artem's machine and publishes a trimmed `playlists.json` next to
+> `presence.json` on `presence-data`; the page reads it client-side. The
+> build-time fetch and the daily scheduled rebuild are dropped. This
+> document describes the revised design throughout.
+
 ## Goal
 
 A public page that is honest about what it shows and never leaks private
@@ -32,12 +41,12 @@ data:
 In scope:
 
 - `app/now/page.tsx` route, header nav item, homepage link.
-- Build-time Yandex Music fetch (`lib/yandex-music.ts`) + a daily scheduled
-  rebuild in `.github/workflows/deploy.yml`.
 - A local Node presence collector (`scripts/presence/`) run by Windows Task
-  Scheduler, publishing `presence.json` to a new orphan branch
-  `presence-data`.
-- A client widget reading that file (`lib/claude-presence.ts`,
+  Scheduler, publishing `presence.json` and a trimmed Yandex Music
+  `playlists.json` to a new orphan branch `presence-data`.
+- A client Music block reading `playlists.json` (`components/NowMusic.tsx`,
+  normalized by `lib/yandex-music.ts`).
+- A client widget reading `presence.json` (`lib/claude-presence.ts`,
   `components/ClaudePresence.tsx`), plus shared formatters
   (`lib/now-format.ts`).
 - Styles in `app/globals.css`, tests in Vitest.
@@ -70,13 +79,23 @@ Out of scope (later phases, each its own spec):
   `cover: { type: "mosaic", itemsUri: [...] }` where each URI is
   `avatars.yandex.net/...%%` (`%%` = size placeholder, e.g. `200x200`).
 - The same request with `Origin: https://hpnssflw.github.io` returns
-  **403** — the browser cannot call this API, so it must run at build time.
+  **403** — the browser cannot call this API.
+- From a GitHub Actions runner (US IP) the same request returns **451
+  Unavailable For Legal Reasons** (run 36386492821, host
+  `music-web-default-production-music-98.vla.yp-c.yandex.net`) — the build
+  cannot call it either. Only Artem's machine can, which is why the
+  presence runner fetches playlists.
 - `https://music.yandex.ru/iframe/playlists/<uuid>` returns 200 with no
   `X-Frame-Options` — frameable from the site. It has no dark theme; full
   tracks play only for visitors logged into Yandex with Plus (previews
   otherwise). Autoplay without a gesture is blocked by browsers anyway.
-- **Not yet verified:** whether Yandex answers GitHub Actions runner IPs
-  with 200. First implementation step is a probe (see Verification).
+- From a runner (US IP) the iframe page, the playlist page and a
+  `avatars.yandex.net` cover all return **200** (run 36387764861): covers
+  and the player shell load abroad. Whether the player then actually plays
+  for a visitor outside Yandex Music's regions is unknown — it loads track
+  data from the visitor's browser, from backends that answered the runner
+  451. **Known limitation, not handled:** a cross-origin iframe's failure
+  can't be detected from the page.
 - `claude agents --json --all` (Claude Code ≥ 2.1.169) returns an array of
   `{ pid, cwd, kind, startedAt, sessionId, name, status }` with
   `status: "idle" | "busy"`. Sessions left open for days report `idle` —
@@ -129,9 +148,16 @@ the agent widget's palette tokens — `--agent-lime` for `working` (●) and
 `waiting` (◐, same hue, different glyph), `--muted` for `offline` (○). No
 new colors: offline is a normal state, not an error, so it is never red.
 
-## Music (build time)
+## Music (client-side, from `presence-data`)
 
-`lib/yandex-music.ts`:
+Neither the browser (403) nor the Actions build (451) can call the Yandex
+API, so the presence runner fetches playlists from Artem's machine and
+publishes a trimmed `playlists.json` to `presence-data` (see "Runner"
+below). The page reads it client-side from
+`https://raw.githubusercontent.com/hpnssflw/hpnssflw.github.io/presence-data/playlists.json`.
+The site never calls Yandex's API itself, at build time or in the browser.
+
+`lib/yandex-music.ts` (pure, tested):
 
 ```ts
 export interface Playlist {
@@ -145,32 +171,38 @@ export interface Playlist {
   embedUrl: string;      // https://music.yandex.ru/iframe/playlists/<uuid>
 }
 
-export function normalizePlaylists(json: unknown): Playlist[];      // pure
-export async function fetchPlaylists(login: string): Promise<Playlist[] | null>;
+export function normalizePlaylists(json: unknown): Playlist[];
 ```
 
-- `normalizePlaylists` keeps only `visibility === "public"`, sorts by
-  `modified` descending, builds cover URLs as `https://` + `itemsUri[i]`
-  with `%%` → `200x200` (first 4 only; missing/non-mosaic cover → `[]`),
-  and skips any item missing `playlistUuid` or `title`.
-- `fetchPlaylists` does one `fetch` with a 10s timeout
-  (`AbortSignal.timeout`). Any failure — network, non-200, bad JSON,
-  normalizer throws — returns `null` and `console.warn`s a single line
-  into the build log. **The build must never fail because of Yandex**;
-  otherwise Yandex being down would block LAB deploys.
-- Before writing this, read the static-export/data-fetching guide in
-  `node_modules/next/dist/docs/` (per `CLAUDE.md`): the fetch must run at
-  build time and be baked into the HTML, not deferred to the client.
+- `normalizePlaylists` accepts the Yandex response shape `{ result: [...] }`
+  — the runner's trimmed file keeps that shape, so the normalizer doesn't
+  care which of the two it gets. It keeps only `visibility === "public"`,
+  sorts by `modified` descending, builds cover URLs as `https://` +
+  `itemsUri[i]` with `%%` → `200x200` (first 4 only; missing/non-mosaic
+  cover → `[]`), and skips any item missing `playlistUuid` or `title`, or
+  whose `playlistUuid` isn't UUID-shaped (it's interpolated into an iframe
+  `src`). The file comes from a public branch, so the client still treats
+  it as untrusted input.
 
 `lib/now-config.ts` holds the page's constants in one place:
-`YANDEX_MUSIC_LOGIN = "tmkplzv"`, `YANDEX_MUSIC_FALLBACK_URL` (the
-"siick vibin" playlist page — the new Yandex Music UI has no public
-profile page: `/users/<login>`, `/users/<login>/playlists` and
-`/profile/<uid>` all 404 as of 2026-09-28),
-`PRESENCE_URL`, `PRESENCE_STALE_MS = 15 * 60_000`,
-`PRESENCE_POLL_MS = 5 * 60_000`.
+`YANDEX_MUSIC_FALLBACK_URL` (the "siick vibin" playlist page — the new
+Yandex Music UI has no public profile page: `/users/<login>`,
+`/users/<login>/playlists` and `/profile/<uid>` all 404 as of
+2026-09-28), `PLAYLISTS_URL`, `PRESENCE_URL`,
+`PRESENCE_STALE_MS = 15 * 60_000`, `PRESENCE_POLL_MS = 5 * 60_000`. The
+Yandex login and API URL live in the runner, not the site.
 
 Rendering:
+
+- `components/NowMusic.tsx` (client) fetches `PLAYLISTS_URL` once on
+  mount — no polling; playlists change every few days — and runs it
+  through `normalizePlaylists`:
+
+  | Condition | Shows |
+  |---|---|
+  | loading | `…` |
+  | fetch/parse failed, or 0 playlists | `yandex music ↗` → `YANDEX_MUSIC_FALLBACK_URL` |
+  | playlists | `<PlaylistList>` |
 
 - `components/PlaylistList.tsx` (client) owns `openUuid: string | null` —
   at most one player open at a time; opening another closes the first.
@@ -182,20 +214,18 @@ Rendering:
   allow="autoplay; encrypted-media" width="100%">`. The iframe is never
   mounted until tapped — no white blocks on first paint, no three iframes
   on mobile.
-- If `fetchPlaylists` returned `null` (or `[]`), the Music block renders
-  just `yandex music ↗` linking to `YANDEX_MUSIC_FALLBACK_URL`. With
-  playlists present there's no extra link — each card title links to its
-  own playlist page.
+- With playlists present there's no extra link — each card title links to
+  its own playlist page.
 
-Freshness: `deploy.yml` gains `schedule: - cron: "0 3 * * *"` (06:00 MSK
-daily) alongside its existing `push`/`workflow_dispatch` triggers.
-Playlists change every few days; daily is enough.
+Freshness: as fresh as the runner's last push (it pushes whenever the
+trimmed list changes) plus raw.githubusercontent's ~5-minute cache. The
+file persists on `presence-data` while the machine is off, so the block
+keeps showing the last known playlists. `deploy.yml` is not changed —
+nothing is baked in at build time.
 
-**Plan B (documented, not built):** if the Actions probe shows Yandex
-blocks runner IPs, replace the build-time fetch with a committed snapshot
-`content/now/playlists.json`, refreshed from Artem's machine (by hand, or
-by extending the presence collector) and read at build time through the
-same `normalizePlaylists`.
+**Superseded:** the original design fetched playlists during `next build`
+and added a daily scheduled rebuild. The runner probe (451) ruled that
+out; see the revision note at the top.
 
 ## Games
 
@@ -240,6 +270,38 @@ read from
   project dir, `name`, `sessionId`, `gitBranch`, prompt/response text,
   AI title, pid, OS username — may ever appear.
 
+### Data contract — `playlists.json`
+
+Same branch, file `playlists.json` at the root. A trimmed copy of
+`GET https://api.music.yandex.net/users/tmkplzv/playlists/list`, keeping
+the response's `{ result: [...] }` shape so `normalizePlaylists` reads it
+unchanged:
+
+```json
+{
+  "result": [
+    {
+      "playlistUuid": "f5db5527-5d0e-50fa-9f52-ee32cf758900",
+      "title": "siick vibin on a daily basis",
+      "visibility": "public",
+      "trackCount": 265,
+      "durationMs": 48357650,
+      "modified": "2026-09-28T05:06:23+00:00",
+      "cover": {
+        "type": "mosaic",
+        "itemsUri": ["avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/%%"]
+      }
+    }
+  ]
+}
+```
+
+- **Allowlist:** top level `result` only; per item only the seven keys
+  above; `cover` only `type` and `itemsUri`. Everything else in the real
+  response — the `owner` block (uid, login, display name, `sex`), `kind`,
+  `revision`, colors, tags, likes — is dropped. Only public playlists are
+  kept.
+
 ### Collector — `scripts/presence/collect.mjs` (pure, tested)
 
 No I/O; all inputs passed in, `now` injected.
@@ -261,6 +323,11 @@ No I/O; all inputs passed in, `now` injected.
 - `buildPresence({...})` assembles the object from explicit fields only
   (never by spreading an input), floors timestamps to the minute, and
   returns exactly the ten allowlisted keys.
+- `trimPlaylists(json)`: the `playlists.json` privacy boundary. Returns
+  `{ result: [...] }` built key by key (never by spreading an input) from
+  public items only, with exactly the allowlisted keys; returns `null` for
+  anything without a `result` array, so the runner can tell "Yandex sent
+  garbage" from "Artem has no public playlists" (`{ result: [] }`).
 
 ### Runner — `scripts/presence/run.mjs` (I/O shell)
 
@@ -273,11 +340,18 @@ No I/O; all inputs passed in, `now` injected.
    and extract **only** `timestamp`, `sessionId`, and `message?.model`
    into a local array. Bad lines are skipped.
 3. Compute presence via `collect.mjs`.
-4. Publish (below). **Skip the push** if the new `state` is `offline` and
-   the last published `state` (read from the local clone's
-   `presence.json`) is also `offline` — one "offline" push, then silence;
-   the page's staleness check covers the rest.
-5. Log one line per run to `%LOCALAPPDATA%\polozov-presence\run.log`,
+4. Fetch `https://api.music.yandex.net/users/tmkplzv/playlists/list`
+   (no token, 10s timeout) and run it through `trimPlaylists`. Any failure
+   — network, non-200, bad JSON, `null` from `trimPlaylists` — is an
+   expected error: log it and leave the clone's existing `playlists.json`
+   untouched. A Yandex hiccup never publishes an empty list.
+5. Publish (below). **Skip the push** only if both hold: the new `state`
+   is `offline` and the last published `state` (read from the local
+   clone's `presence.json`) is also `offline` — one "offline" push, then
+   silence; the page's staleness check covers the rest — **and** the new
+   `playlists.json` text is byte-identical to the clone's current file
+   (or step 4 failed).
+6. Log one line per run to `%LOCALAPPDATA%\polozov-presence\run.log`,
    truncated to the last 500 lines. Any unexpected error: log it, publish
    nothing, exit non-zero.
 
@@ -285,9 +359,10 @@ Publishing uses a dedicated local clone at
 `%LOCALAPPDATA%\polozov-presence\repo` — **never the working tree at
 `C:\A\polozov`**. First run: `git init`, add `origin`
 (`https://github.com/hpnssflw/hpnssflw.github.io.git`), orphan commit.
-Every run: write `presence.json`, `git add`, `git commit --amend`
-(first run: plain commit), `git push --force origin
-HEAD:refs/heads/presence-data`. The branch is always one commit. Auth is
+Every published run: write `presence.json` (and `playlists.json` when
+step 4 succeeded), `git add`, `git commit --amend` (first run: plain
+commit), `git push --force origin HEAD:refs/heads/presence-data`. The
+branch is always one commit. Auth is
 the machine's existing Git Credential Manager. Pushing this branch
 triggers neither `deploy.yml` (main only) nor `agent-run.yml`
 (cron/dispatch only).
@@ -338,7 +413,9 @@ other time zones aren't misled.
 
 | Failure | Result |
 |---|---|
-| Yandex API down / blocked at build | Music shows `yandex music ↗`; build succeeds; warning in log |
+| Yandex API down / garbage, seen by the runner | logged locally; last published `playlists.json` stays; page unaffected |
+| `playlists.json` missing / malformed / network error | Music shows `yandex music ↗` |
+| Player can't play for a visitor outside Yandex Music's regions | not detectable from the page; known limitation |
 | `presence.json` missing / malformed / network error | `status unavailable` |
 | Collector hasn't pushed in > 15 min | `offline` regardless of file contents |
 | `claude agents` fails locally | transcripts only; never `working` |
@@ -352,7 +429,8 @@ Vitest; `vitest.config.mjs` `include` extends to
 - `lib/yandex-music.test.ts` — against a trimmed fixture from the real
   2026-09-28 response: public filter, `modified` sort, cover URL build
   (`%%` → `200x200`, `https://` prefix, max 4), missing cover → `[]`,
-  items without `playlistUuid` skipped, garbage input → `[]`.
+  items without a UUID-shaped `playlistUuid` or a title skipped, garbage
+  input → `[]`. (No fetch tests — the site no longer fetches Yandex.)
 - `lib/claude-presence.test.ts` — `parsePresence` accepts v1 / rejects
   wrong types and versions; `effectiveState` flips to `offline` past the
   threshold; `isOwnerToday` across a midnight boundary in two zones.
@@ -365,28 +443,33 @@ Vitest; `vitest.config.mjs` `include` extends to
   project-dir names, `name`, prompt text, `gitBranch`, `sessionId`; assert
   none of those strings appear anywhere in `JSON.stringify(buildPresence(...))`
   and that its key set equals the ten-key allowlist exactly.
+  **`trimPlaylists` leak test:** feed the real response shape, including
+  its `owner` block and extra keys, plus a private playlist; assert the
+  output's key sets are exactly the allowlist at every level, the owner's
+  uid/name and the private playlist's title appear nowhere in its JSON,
+  and garbage input → `null` while `{ result: [] }` → `{ result: [] }`.
 
 ## Verification (before calling it done)
 
-1. **Actions probe** — a one-off `workflow_dispatch` run (or a step in a
-   throwaway branch workflow) that `curl`s the playlists endpoint from a
-   runner and prints the status code. 200 → build-time fetch; otherwise
-   switch to Plan B before building the Music block.
-2. `npm test` green; `npm run build` + `npm run serve`; `/now/` checked
-   at 375px and desktop width; one player opens at a time; header and
-   homepage links work.
-3. One manual `node scripts/presence/run.mjs`; inspect `presence-data`
-   on GitHub by eye — exactly the ten keys, nothing else; the widget shows
-   the real state.
+1. **Actions probe — done 2026-09-28: 451**, so Plan B (this design).
+   A second probe confirmed covers and the player shell load from a US IP.
+2. One manual `node scripts/presence/run.mjs`; inspect `presence-data`
+   on GitHub by eye — `presence.json` has exactly the ten keys;
+   `playlists.json` has only the allowlisted keys, no `owner` block, and
+   Artem's three public playlists.
+3. `npm test` green; `npm run build` + `npm run serve`; `/now/` checked
+   at 375px and desktop width — Music loads the real playlists from
+   `presence-data`, one player opens at a time; header and homepage links
+   work; the widget shows the real state.
 4. `install.ps1`; after ~10 minutes `updatedAt` has advanced; no console
    window flashed.
-5. After deploy, the scheduled daily rebuild appears in the Actions list.
 
 ## Docs to update when shipping
 
 - `PROGRESS.md` — new "Now page" section (status, what shipped, the
-  presence-data branch, Plan B status) and its "How to resume" entry.
+  presence-data branch and its two files) and its "How to resume" entry.
 - `CLAUDE.md` — the `npm test` line lists `lib/yandex-music`,
   `lib/claude-presence`, `lib/now-format`, `scripts/presence`; mention that
-  `presence-data` is written from Artem's machine, not by Actions.
+  `presence-data` (presence and playlists) is written from Artem's
+  machine, not by Actions.
 - Nothing in `agent/`, `agent-run.yml`, or `agent-data` changes.

@@ -31,6 +31,25 @@ brief this all started from — see the note at its top for what's since
 changed. The specs written before the Next.js move describe pages by their
 old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
 
+## Now page (`/now/`)
+
+**Status: in progress — Task 1 of 7 done (runner probe: Yandex answered
+`status=451` on 2026-09-28 → spec's Plan B adopted: the local presence
+runner publishes `playlists.json` to `presence-data`, the page reads it
+client-side; no build-time fetch, no daily rebuild). Spec revised; next:
+rewrite the plan for Plan B (writing-plans), then Task 2 (pure libs).**
+
+- Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
+- Plan: `docs/superpowers/plans/2026-09-28-now-page.md` (still the
+  pre-probe version until rewritten — don't execute Tasks 2+ from it)
+- Research behind it (local, uncommitted): `reports/Интеграции Яндекс и Claude Code.md`
+- Phase 1 of a larger presence/pager idea; later phases need a backend
+  and have open legal/reachability decisions (see the spec intro).
+- Probes (throwaway branches, deleted): run 36386492821 — API `451
+  Unavailable For Legal Reasons` from a US runner; run 36387764861 —
+  iframe page, playlist page and `avatars.yandex.net` cover all 200 from
+  a US runner (whether the player actually plays abroad is unknown).
+
 ## Research Agent
 
 **Status: Task 6 of 6 code-complete — one verification step deferred.**
