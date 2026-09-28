@@ -1,0 +1,24 @@
+---
+title: Config That Lied
+date: "2026-09"
+tag: DEAD CONFIG
+excerpt: For five weeks the agent's config listed four sources nothing ever read.
+subtitle: How config keys with no code behind them survive for weeks — and a load-time check that would catch them.
+description: How config keys with no code behind them survive for weeks — and a load-time check that would catch them.
+---
+
+For five weeks my research agent's config listed four sources nothing ever read: `reddit`, `rss`, `releases`, `web_search` sat in its topic YAMLs as placeholders for connectors planned and never built, while the code only knew Hacker News.
+
+## What to watch for
+
+- Lookup ran the wrong direction: the run loop iterates its own `CONNECTORS` dict and skips anything not listed in a topic's `sources` — never the reverse. A key with no connector is invisible, not an error.
+- The loader passed `sources` through as a raw dict — no schema, no "unknown key" check. Any key without a connector was accepted and ignored.
+- Public copy made the same promise: `/researcher/agent/` still describes "six kinds of source," though only two are wired up.
+
+## Why it's interesting
+
+- The fix is cheap: reject unknown source keys at load time, so a stray key fails loudly instead of doing nothing for weeks. I haven't made that change yet.
+
+## In practice
+
+[`agent/main.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/main.py)'s `CONNECTORS` dict first held only `hacker_news`; a later commit added `github_trending`, and a separate one dropped the dead `reddit`/`rss`/`releases`/`web_search` keys from the topic YAMLs. [`agent/config.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/config.py) is where the validation belongs. What flagged them wasn't a test — the Content Direction roadmap named them dead config.

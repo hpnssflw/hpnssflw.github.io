@@ -73,7 +73,7 @@ above.
 3. **Config that lied** — the themes rework's discovery that topic
    YAMLs referenced `reddit`/`rss`/`releases`/`web_search` keys no
    connector ever read; how dead config accumulates silently and what
-   actually caught it. — drafted: `drafts/lab/config-that-lied.mdx`
+   actually caught it. — published: `/lab/config-that-lied/`
 4. **Reviewing your own claims** — what the final whole-plan reviews
    kept finding that per-task review missed (the `pending.json`
    exposure, the redaction rationale half-defeated by public topic
