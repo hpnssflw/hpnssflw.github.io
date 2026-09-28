@@ -35,11 +35,10 @@ old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
 
 ## Now page (`/now/`)
 
-**Status: in progress — Tasks 1–5 of 7 done (presence collector + runner
-publishing `presence.json` and `playlists.json` to `presence-data`, run
-by hand so far; `/now/` page with Music read client-side from
-`presence-data`, Games placeholder, nav links — not pushed yet). Next:
-Task 6 (the Claude Code presence widget).**
+**Status: in progress — Tasks 1–6 of 7 done (`/now/` with Music and the
+live Claude Code widget, both reading `presence-data`; Games placeholder;
+runner still run by hand). Next: Task 7 (scheduled task, docs, push,
+live check).**
 
 - Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
 - Plan: `docs/superpowers/plans/2026-09-28-now-page.md`

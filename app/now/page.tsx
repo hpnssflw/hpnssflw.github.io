@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ClaudePresence from "@/components/ClaudePresence";
 import NowMusic from "@/components/NowMusic";
 
 const description =
@@ -17,6 +18,13 @@ export default function NowPage() {
     <section id="now">
       <div className="wrap">
         <h1 className="section-label">Now</h1>
+
+        <section className="now-block" aria-labelledby="now-claude">
+          <h2 className="now-label" id="now-claude">
+            Claude Code
+          </h2>
+          <ClaudePresence />
+        </section>
 
         <section className="now-block" aria-labelledby="now-music">
           <h2 className="now-label" id="now-music">

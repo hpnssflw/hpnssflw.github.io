@@ -987,6 +987,34 @@ footer a {
   background: #fff;
 }
 
+.now-presence {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.now-presence p {
+  margin: 0;
+}
+
+.now-presence-sub {
+  font-size: var(--fs-2xs);
+  color: var(--muted);
+}
+
+.now-dot-working,
+.now-dot-waiting {
+  color: var(--agent-lime);
+}
+
+.now-dot-offline,
+.now-muted {
+  color: var(--muted);
+}
+
 @media (max-width: 640px) {
   #now {
     padding-top: 48px;
