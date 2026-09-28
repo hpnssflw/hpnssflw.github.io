@@ -385,11 +385,16 @@ triggers neither `deploy.yml` (main only) nor `agent-run.yml`
 ### Scheduling — `scripts/presence/install.ps1` / `uninstall.ps1`
 
 `install.ps1` registers a Task Scheduler task `polozov-presence` running
-`run.mjs` every 5 minutes for the current user, **without flashing a
-console window** (the exact launcher — e.g. `conhost --headless` or a
-tiny `.vbs` shim — is a plan-level choice). `uninstall.ps1` removes it.
-Presence only exists while the machine is on and awake; that is correct
-behavior, not a bug.
+`run.mjs` every 5 minutes for the current user while logged on, **without
+flashing a console window** (the exact launcher — e.g. `conhost
+--headless` or a tiny `.vbs` shim — is a plan-level choice). The task
+runs a **pinned copy**: `install.ps1` copies `run.mjs` + `collect.mjs` to
+`%LOCALAPPDATA%\polozov-presence\bin` and fixes node's path, so edits in
+the working tree (which parallel sessions touch) reach the public branch
+only when `install.ps1` is deliberately re-run. `uninstall.ps1` removes
+the task only; the clone, log and pinned copy stay.
+Presence only exists while Artem is logged on and the machine is awake;
+that is correct behavior, not a bug.
 
 ### Widget — `lib/claude-presence.ts` + `components/ClaudePresence.tsx`
 

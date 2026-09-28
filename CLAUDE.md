@@ -44,9 +44,15 @@ initiatives — see `PROGRESS.md` for status of each.
   `playlists.json` (Yandex Music playlists — the API answers GitHub's
   runners 451 and browsers 403, so only his machine can fetch them).
   Both have fixed allowlists in `scripts/presence/collect.mjs`
-  (`buildPresence`, `trimPlaylists`, leak-tested) — never add a key that
+  (`buildPresence`, `trimPlaylists`, leak-tested, re-checked by
+  `assertPublishable` before every publish) — never add a key that
   could carry a path, project name, branch, prompt text, or Yandex account
-  details. Nothing on `/now/` is fetched at build time.
+  details. Nothing on `/now/` is fetched at build time. The task runs only
+  while Artem is logged on (LogonType Interactive), from a pinned copy in
+  `%LOCALAPPDATA%\polozov-presence\bin\` with node's path fixed at install:
+  re-run `install.ps1` after changing `scripts/presence/*.mjs` or after a
+  Node upgrade/move. In `run.log`, `claude agents failed` explains a widget
+  that never shows `working`; `yandex music failed`, stale playlists.
 - **The GitHub remote is `hpnssflw/hpnssflw.github.io`** (a user site —
   served at the domain root, so no `basePath`). Work happens directly on
   `main` — no feature branches, no PRs — unless the user explicitly asks
