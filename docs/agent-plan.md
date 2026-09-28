@@ -12,7 +12,8 @@ word-for-word.
 A background agent that reads so Artem doesn't have to read everything
 himself. It checks every 4 hours; a short, curated list of what actually
 moved in three topics rolls up into a Telegram post once a day — links and
-a one-line summary each. Nothing is posted until it's ready, but nothing
+a one-line summary each, and only the items he's approved on
+`/researcher/queue/`. Nothing is posted until it's ready, but nothing
 here is private either — the agent's full working state (what it found,
 ranked, and is holding for the next digest) is public the moment it's
 written, not just the summary status the widget shows. Raw material
@@ -45,10 +46,10 @@ are dropped rather than passed through. Full detail:
 
 1. **Collect** — each source connector runs independently, returns candidate links with a mandatory publish date.
 2. **Recency window** — candidates published outside the topic's `max_age_days` are dropped; an item whose score has since jumped can re-enter (the attention window).
-3. **Dedupe** — every link's URL gets hashed against a store of what's already been sent; only new links continue.
+3. **Dedupe** — every link's URL gets hashed against a store of what's already been sent or dismissed from the inbox; only new links continue.
 4. **Rank** — one batched LLM call per topic ranks all of that topic's surviving candidates against each other and against the topic description, returning a one-line summary and a relevance score per item; anything below the threshold, or beyond the per-topic item cap, gets dropped.
 5. **Assemble** — surviving items get grouped by topic into a digest, ordered by relevance within each group.
-6. **Deliver** — the digest goes out to a public Telegram channel on a fixed schedule.
+6. **Deliver** — the items Artem approved on `/researcher/queue/` go out to a public Telegram channel on a fixed schedule. Rejected items are dismissed for good; undecided ones expire after `inbox.expire_days` — see `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
 
 Every stage emits a structured event to a per-run log, so a run is
 inspectable after the fact — see the run panel plan,
@@ -65,7 +66,7 @@ inspectable after the fact — see the run panel plan,
 ## Cadence & format
 
 Collection and ranking run every 4 hours; Telegram delivery rolls up
-everything new once a day (`delivery_cadence_hours` in `defaults.yaml`).
+everything approved once a day (`delivery_cadence_hours` in `defaults.yaml`).
 Each digest groups items under the three topic headers, one line of
 summary and a link each.
 

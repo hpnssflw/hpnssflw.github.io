@@ -39,7 +39,8 @@ export default function ResearchAgentPage() {
             The agent&apos;s only job is to read so I don&apos;t have to read
             everything myself. It checks every few hours; a curated digest of
             what actually moved in web products, AI engineering, and tooling
-            — links and a sentence each — rolls up once a day. Nothing is
+            — links and a sentence each — rolls up once a day, and only what
+            I&apos;ve approved on the queue page goes out. Nothing is
             posted until it&apos;s ready, but nothing here is private either
             — the agent&apos;s full working state (what it found, ranked, and
             is holding for the next digest) is public the moment it&apos;s
@@ -116,8 +117,10 @@ export default function ResearchAgentPage() {
               ordered by relevance within each group.
             </li>
             <li>
-              Deliver — the digest goes out to a public Telegram channel on
-              a fixed schedule.
+              Deliver — once a day, the items I&apos;ve approved on the queue
+              page go out to a public Telegram channel. Anything I reject
+              never comes back; anything I leave undecided for a week drops
+              off.
             </li>
           </ul>
 
@@ -186,7 +189,8 @@ export default function ResearchAgentPage() {
           <p>
             Running — the pipeline runs end to end on Hacker News alone, on a
             schedule: collect, filter for recency, dedupe, rank with DeepSeek,
-            hold in a pending queue, and deliver to Telegram once a day. The
+            hold in a pending queue for my approval, and deliver what I
+            approve to Telegram once a day. The
             live status above reflects the actual current state of that
             schedule. Reddit, RSS, release watching, and web search are next.
           </p>
