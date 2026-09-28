@@ -68,8 +68,8 @@ above.
 2. **The email that never got sent** — why SMTP delivery got planned,
    built, then dropped twice (once for the on-page dashboard, once for
    Telegram) before anything ever shipped, and what that says about
-   picking a delivery mechanism before you have users. — drafted:
-   `drafts/lab/the-email-that-never-got-sent.mdx`
+   picking a delivery mechanism before you have users. — published:
+   `/lab/the-email-that-never-got-sent/`
 3. **Config that lied** — the themes rework's discovery that topic
    YAMLs referenced `reddit`/`rss`/`releases`/`web_search` keys no
    connector ever read; how dead config accumulates silently and what

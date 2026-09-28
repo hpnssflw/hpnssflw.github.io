@@ -1,0 +1,41 @@
+---
+title: The Email That Never Got Sent
+date: "2026-09"
+tag: DELIVERY
+excerpt: SMTP delivery was built, pivoted away from twice, and never sent a single message.
+subtitle: Picking a delivery channel before anyone reads the output — and why the queue behind it was the part that mattered.
+description: Picking a delivery channel before anyone reads the output — and why the queue behind it was the part that mattered.
+---
+
+SMTP delivery for the research agent was fully built — and never sent a single message.
+
+## What to watch for
+
+- "Built" isn't "working": subject/body assembly and the send call
+  shipped, but SMTP credentials were never configured — not in
+  `agent/.env`, not as repo secrets — so every attempt failed, caught
+  and logged, not delivered.
+- Stale docs keep dead decisions alive: "add SMTP credentials, send a
+  live email" stayed written down as the next step long after it was
+  dropped, so it kept resurfacing as if still live.
+- A queue with no working channel only grows: the dashboard showed the
+  pending count early on, and it climbed past a hundred over a month —
+  until Telegram drained it.
+
+## Why it's interesting
+
+- I picked SMTP before anyone had read a single digest, then switched
+  twice — to an on-page dashboard, then Telegram — and neither switch
+  touched the queue's own logic.
+- Decoupling collection/ranking from delivery made the channel
+  swappable: SMTP became Telegram by rewriting two files in place, not
+  restructuring the pipeline.
+
+## In practice
+
+[`agent/pending.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/pending.py) —
+ranked items held until a send succeeds — survived both pivots with its
+logic untouched; the Telegram work only reworded its comments. Delivery
+moved from SMTP to Telegram in
+[`agent/deliver.py`](https://github.com/hpnssflw/hpnssflw.github.io/blob/main/agent/deliver.py) —
+same queue, different channel.
