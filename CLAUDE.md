@@ -35,6 +35,18 @@ initiatives — see `PROGRESS.md` for status of each.
   `dynamicParams = false`, no Route Handlers that read `Request`, no
   `redirects`/`rewrites`/`headers` in config, no Server Actions. Client
   data fetching (the agent widget) is fine.
+- **`/now/`'s data is written from Artem's machine, not by Actions.**
+  `scripts/presence/run.mjs` (Task Scheduler task `polozov-presence`,
+  every 5 min, installed by `scripts/presence/install.ps1`) force-pushes
+  a one-commit orphan branch `presence-data` from its own clone under
+  `%LOCALAPPDATA%\polozov-presence\`, with two files the page reads
+  client-side: `presence.json` (Claude Code presence) and
+  `playlists.json` (Yandex Music playlists — the API answers GitHub's
+  runners 451 and browsers 403, so only his machine can fetch them).
+  Both have fixed allowlists in `scripts/presence/collect.mjs`
+  (`buildPresence`, `trimPlaylists`, leak-tested) — never add a key that
+  could carry a path, project name, branch, prompt text, or Yandex account
+  details. Nothing on `/now/` is fetched at build time.
 - **The GitHub remote is `hpnssflw/hpnssflw.github.io`** (a user site —
   served at the domain root, so no `basePath`). Work happens directly on
   `main` — no feature branches, no PRs — unless the user explicitly asks
@@ -70,7 +82,9 @@ initiatives — see `PROGRESS.md` for status of each.
   npm run dev             # iterate locally (http://localhost:3000)
   npm run build           # static export into out/
   npm run serve           # serve out/ exactly as Pages will
-  npm test                # Vitest — lib/posts, lib/agent-status
+  npm test                # Vitest — lib/posts, lib/agent-status, lib/pending-queue,
+                          # lib/topics, lib/yandex-music, lib/claude-presence,
+                          # lib/now-format, scripts/presence
   ```
   (`next dev` occasionally hangs the TCP handshake in this environment;
   if a port won't come up, kill node and retry, or verify against

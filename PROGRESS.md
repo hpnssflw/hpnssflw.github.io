@@ -35,10 +35,17 @@ old `.html` paths (`researcher/agent.html` → `/researcher/agent/`, etc.).
 
 ## Now page (`/now/`)
 
-**Status: in progress — Tasks 1–6 of 7 done (`/now/` with Music and the
-live Claude Code widget, both reading `presence-data`; Games placeholder;
-runner still run by hand). Next: Task 7 (scheduled task, docs, push,
-live check).**
+**Status: shipped.** `/now/` is live: Yandex Music playlists (inline
+player on tap), a Games "upcoming" placeholder, and a live Claude Code
+widget (working / waiting / offline, today's active time, sessions, model
+family). Both live blocks read the `presence-data` branch (`playlists.json`,
+`presence.json`), which the `polozov-presence` scheduled task on Artem's
+machine updates every 5 minutes — Yandex answers GitHub's runners 451, so
+nothing is fetched at build time (spec's Plan B, adopted after the Task 1
+probe). Known limitation: the Yandex player may not play for visitors
+outside Yandex Music's regions. Out of scope for this phase: last-played
+track, cloud claude.ai/code sessions, friends/login/pager/extension (all
+need a backend — see the spec intro and the research report).
 
 - Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
 - Plan: `docs/superpowers/plans/2026-09-28-now-page.md`
@@ -536,6 +543,14 @@ statically-exported Next.js app, deployed to Pages by
 at the top of this file. Plan:
 `.claude/plans/lucky-rolling-aurora.md`; spec:
 `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`.
+
+**Now page (`/now/`): shipped.** Nothing to resume. Presence and
+playlists update only while Artem's machine is on
+(`scripts/presence/install.ps1` / `uninstall.ps1`; log at
+`%LOCALAPPDATA%\polozov-presence\run.log`). If Music shows the
+`yandex music ↗` fallback, look for `yandex music failed` lines in that
+log. Next phase (backend: friends, Yandex ID login, pager) needs its own
+brainstorm, starting from the research report's decision points.
 
 **Content Direction & Tony Scraponi: all four sub-projects shipped** —
 #1 (agent themes rework), #2 (Telegram delivery), #3 (Blog content &
