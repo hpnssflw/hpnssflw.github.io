@@ -58,7 +58,7 @@ const REPO = join(BASE, "repo");
 const LOG = join(BASE, "run.log");
 const PROJECTS = join(homedir(), ".claude", "projects");
 const DRY_RUN = process.argv.includes("--dry-run");
-const INDEX_LOCK_STALE_MS = 10 * 60_000;
+const LOCK_STALE_MS = 10 * 60_000;
 const PUSH_RETRY_DELAY_MS = 5_000;
 
 // Fail fast instead of hanging on a credential prompt nobody can see.
@@ -241,28 +241,42 @@ async function hasUnpushedCommit() {
 
 /**
  * A run killed mid-git (the task's 2-minute limit, git's 60 s timeout) can
- * leave .git/index.lock behind and fail every later run. No live run holds
- * it anywhere near this long, so an older one is removed.
+ * leave .git/index.lock or .git/config.lock behind and fail every later
+ * run. No live run holds either anywhere near this long, so an older one is
+ * removed.
  */
-function clearStaleIndexLock() {
-  const lock = join(REPO, ".git", "index.lock");
-  let ageMs;
-  try {
-    ageMs = Date.now() - statSync(lock).mtimeMs;
-  } catch {
-    return;
+function clearStaleLocks() {
+  for (const name of ["index.lock", "config.lock"]) {
+    const lock = join(REPO, ".git", name);
+    let ageMs;
+    try {
+      ageMs = Date.now() - statSync(lock).mtimeMs;
+    } catch {
+      continue;
+    }
+    if (ageMs <= LOCK_STALE_MS) continue;
+    unlinkSync(lock);
+    log(`removed a stale .git/${name} (${Math.round(ageMs / 60_000)} min old)`);
   }
-  if (ageMs <= INDEX_LOCK_STALE_MS) return;
-  unlinkSync(lock);
-  log(`removed a stale .git/index.lock (${Math.round(ageMs / 60_000)} min old)`);
 }
 
-/** Every run, so one killed between `git init` and `remote add` heals itself. */
+/**
+ * Every run, so one killed between `git init` and `remote add` heals itself,
+ * but .git/config is written only when origin is missing or wrong. The URL
+ * is read raw: `git remote get-url` expands a global `insteadOf` and would
+ * never match.
+ */
 async function ensureRemote() {
-  const { stdout } = await git(["remote"]);
-  const hasOrigin = stdout.split(/\r?\n/).includes("origin");
+  let url = null;
+  try {
+    const { stdout } = await git(["config", "--get", "remote.origin.url"]);
+    url = stdout.trim();
+  } catch (err) {
+    if (err?.code !== 1) throw err; // 1: no such key, so no origin yet
+  }
+  if (url === REMOTE) return;
   await git(
-    hasOrigin ? ["remote", "set-url", "origin", REMOTE] : ["remote", "add", "origin", REMOTE],
+    url === null ? ["remote", "add", "origin", REMOTE] : ["remote", "set-url", "origin", REMOTE],
   );
 }
 
@@ -306,7 +320,7 @@ async function publish(presenceText, playlistsText, updatedAt) {
     mkdirSync(REPO, { recursive: true });
     await git(["init", "-q", "-b", BRANCH]);
   }
-  clearStaleIndexLock();
+  clearStaleLocks();
   await ensureRemote();
   const fresh = (await revParse("HEAD")) === null;
   if (fresh) {

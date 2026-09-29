@@ -368,10 +368,12 @@ Publishing uses a dedicated local clone at
 first seeds `playlists.json` from the published branch (`git fetch
 --depth=1 origin presence-data`; a missing branch is fine), so a run
 whose Yandex fetch failed never publishes a branch that drops it.
-Every published run: remove a `.git/index.lock` older than 10 minutes
-(left by a killed run), add `origin`
+Every published run: remove a `.git/index.lock` or `.git/config.lock`
+older than 10 minutes (left by a killed run), add `origin`
 (`https://github.com/hpnssflw/hpnssflw.github.io.git`) if missing or
-`set-url` it, write `presence.json` (and `playlists.json` when
+`set-url` it if its raw URL (`git config --get remote.origin.url`)
+differs — a normal run doesn't write `.git/config` — write
+`presence.json` (and `playlists.json` when
 step 4 succeeded), `git add`, `git commit --amend` (first run: plain
 commit), `git push --force origin HEAD:refs/heads/presence-data`
 (retried once). The branch is always one commit. Right before writing
