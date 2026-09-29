@@ -185,17 +185,28 @@ async function fetchPlaylistsText() {
   }
 }
 
-function readPrevious() {
+/**
+ * `file` as committed at the clone's HEAD (what was published, or a commit
+ * whose push failed, which hasUnpushedCommit forces out), or null when
+ * there's no clone, no commit or no such file. Never the working tree: a
+ * run that failed between writing and committing leaves it ahead of
+ * anything published.
+ */
+async function readCommitted(file) {
+  if (!existsSync(join(REPO, ".git"))) return null; // don't let git search parent dirs
   try {
-    return JSON.parse(readFileSync(join(REPO, "presence.json"), "utf8"));
+    const { stdout } = await git(["show", `HEAD:${file}`]);
+    return stdout;
   } catch {
     return null;
   }
 }
 
-function readPreviousPlaylistsText() {
+async function readPrevious() {
+  const text = await readCommitted("presence.json");
+  if (text === null) return null;
   try {
-    return readFileSync(join(REPO, "playlists.json"), "utf8");
+    return JSON.parse(text);
   } catch {
     return null;
   }
@@ -352,7 +363,7 @@ async function main() {
   const nowMs = Date.now();
   const { day, dayStartMs } = localDayInfo(nowMs);
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const prev = readPrevious();
+  const prev = await readPrevious();
 
   const events = [];
   for (const { file, subagent } of todaysTranscripts(dayStartMs)) {
@@ -376,7 +387,7 @@ async function main() {
   const presenceText = `${JSON.stringify(presence, null, 2)}\n`;
   const playlistsText = await fetchPlaylistsText();
   const playlistsChanged =
-    playlistsText !== null && playlistsText !== readPreviousPlaylistsText();
+    playlistsText !== null && playlistsText !== (await readCommitted("playlists.json"));
 
   // Checked on exactly the text that would be written, in both paths.
   const outgoing = {
@@ -396,8 +407,8 @@ async function main() {
     process.stdout.write(`${JSON.stringify(both, null, 2)}\n`);
     return;
   }
-  // prev and the playlists comparison come from the clone, which may hold
-  // a commit whose push failed — that alone forces a publish.
+  // prev and the playlists comparison come from the clone's HEAD, which may
+  // be a commit whose push failed — that alone forces a publish.
   const unpushed = await hasUnpushedCommit();
   const decision = {
     prevState: prev?.state ?? null,

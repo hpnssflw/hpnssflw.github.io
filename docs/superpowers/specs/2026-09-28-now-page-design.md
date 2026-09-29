@@ -352,12 +352,13 @@ No I/O; all inputs passed in, `now` injected.
    untouched. A Yandex hiccup never publishes an empty list.
 5. Publish (below). **Skip the push** only if both hold: the new `state`
    is `offline` and the last published `state` (read from the local
-   clone's `presence.json`) is also `offline` — one "offline" push, then
+   clone's `HEAD` commit, never its working tree, which a failed run can
+   leave ahead of it) is also `offline` — one "offline" push, then
    silence; the page's staleness check covers the rest — **and** the new
-   `playlists.json` text is byte-identical to the clone's current file
+   `playlists.json` text is byte-identical to the one in that commit
    (or step 4 failed) — **and** the clone holds no unpushed commit (its
    `HEAD` equals `refs/remotes/origin/presence-data`, which a successful
-   push moves), since both comparisons read that clone.
+   push moves), since both comparisons read that commit.
 6. Log one line per run to `%LOCALAPPDATA%\polozov-presence\run.log`,
    truncated to the last 500 lines. Any unexpected error: log it, publish
    nothing, exit non-zero.
