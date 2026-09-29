@@ -487,11 +487,14 @@ describe("assertPublishable", () => {
 
   it("never puts a key or value into its message", () => {
     const secret = "C:\\A\\secret-client-repo";
+    let caught;
     try {
       assertPublishable({ presence: { ...presence, [secret]: secret }, playlists: null });
-      expect.unreachable();
     } catch (err) {
-      expect(err.message).not.toContain("secret");
+      caught = err;
     }
+    expect(caught).toBeInstanceOf(Error);
+    expect(caught.message).toMatch(/presence\.json keys/);
+    expect(caught.message).not.toContain("secret");
   });
 });
