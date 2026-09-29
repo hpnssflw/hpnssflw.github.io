@@ -6,6 +6,7 @@ docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md."""
 
 from __future__ import annotations
 
+import urllib.parse
 from datetime import datetime
 
 import requests
@@ -26,7 +27,11 @@ class DecisionsUnavailable(Exception):
 def parse_decisions(raw: object) -> dict[str, str]:
     """Validate a decoded decisions.json payload and return {url: decision}.
     Any shape problem fails the whole file -- no partial application."""
-    if not isinstance(raw, dict) or raw.get("version") != 1:
+    if (
+        not isinstance(raw, dict)
+        or type(raw.get("version")) is not int
+        or raw.get("version") != 1
+    ):
         raise DecisionsUnavailable("decisions.json: missing or unsupported version")
     entries = raw.get("decisions")
     if not isinstance(entries, dict):
@@ -51,7 +56,7 @@ def load_decisions(url: str, token: str | None) -> dict[str, str]:
         "Accept": "application/vnd.github.raw+json",
         "X-GitHub-Api-Version": "2022-11-28",
     }
-    if token:
+    if token and urllib.parse.urlparse(url).hostname == "api.github.com":
         headers["Authorization"] = f"Bearer {token}"
     try:
         response = requests.get(url, headers=headers, timeout=TIMEOUT_SECONDS)
