@@ -93,14 +93,53 @@ describe("setDecision", () => {
 });
 
 describe("pruneDecisions", () => {
-  it("keeps only URLs still in the queue", () => {
+  const cutoff = new Date("2026-09-28T12:00:00.000Z");
+
+  it("prunes a non-live entry older than the cutoff", () => {
     const before = makeDecisions({
       "https://live": { decision: "approve", at: "x" },
-      "https://gone": { decision: "reject", at: "y" },
+      "https://gone": { decision: "reject", at: "2026-09-28T11:00:00.000Z" },
     });
-    expect(pruneDecisions(before, ["https://live", "https://other"])).toEqual(
+    expect(pruneDecisions(before, ["https://live", "https://other"], cutoff)).toEqual(
       makeDecisions({ "https://live": { decision: "approve", at: "x" } }),
     );
+  });
+
+  it("keeps a non-live entry newer than the cutoff", () => {
+    const before = makeDecisions({
+      "https://gone": { decision: "approve", at: "2026-09-28T12:30:00.000Z" },
+    });
+    expect(pruneDecisions(before, [], cutoff)).toEqual(before);
+  });
+
+  it("keeps a live entry even if older than the cutoff", () => {
+    const before = makeDecisions({
+      "https://live": { decision: "reject", at: "2000-01-01T00:00:00.000Z" },
+    });
+    expect(pruneDecisions(before, ["https://live"], cutoff)).toEqual(before);
+  });
+
+  it("prunes down to empty when nothing is live or new enough", () => {
+    const before = makeDecisions({
+      "https://a": { decision: "approve", at: "2000-01-01T00:00:00.000Z" },
+      "https://b": { decision: "reject", at: "2000-01-01T00:00:00.000Z" },
+    });
+    expect(pruneDecisions(before, [], cutoff)).toEqual(EMPTY_DECISIONS);
+  });
+
+  it("removes nothing when every entry is live or newer than the cutoff", () => {
+    const before = makeDecisions({
+      "https://live": { decision: "approve", at: "2000-01-01T00:00:00.000Z" },
+      "https://fresh": { decision: "reject", at: "2026-09-28T12:30:00.000Z" },
+    });
+    expect(pruneDecisions(before, ["https://live"], cutoff)).toEqual(before);
+  });
+
+  it("prunes a non-live entry with an unparseable at", () => {
+    const before = makeDecisions({
+      "https://gone": { decision: "approve", at: "not-a-date" },
+    });
+    expect(pruneDecisions(before, [], cutoff)).toEqual(EMPTY_DECISIONS);
   });
 });
 
@@ -140,6 +179,19 @@ describe("commitMessage", () => {
     const msg = commitMessage("reject", "x".repeat(200));
     expect(msg).toHaveLength(72);
     expect(msg.startsWith("reject: xxx")).toBe(true);
+    expect(msg.endsWith("…")).toBe(true);
+  });
+
+  it("truncates by code points so an astral character straddling the cut isn't split", () => {
+    // "reject: " (8) + "x" * 62 (indices 8..69) + an emoji at index 70 (the
+    // last kept code point) + filler. A UTF-16-unit slice(0, 71) would take
+    // only the emoji's high surrogate, leaving it lone in the output.
+    const title = `${"x".repeat(62)}\u{1F600}${"y".repeat(10)}`;
+    const msg = commitMessage("reject", title);
+    const loneSurrogate =
+      /[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/;
+    expect(loneSurrogate.test(msg)).toBe(false);
+    expect(Array.from(msg)).toHaveLength(72);
     expect(msg.endsWith("…")).toBe(true);
   });
 });

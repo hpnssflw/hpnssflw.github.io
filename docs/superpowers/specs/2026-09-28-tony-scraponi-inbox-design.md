@@ -76,8 +76,14 @@ site's writes to `tony-inbox` can't race. `agent-run.yml` is unchanged.
   `decisions`, any entry whose `decision` isn't one of the two values or
   whose `at` isn't a string) is treated as unreadable as a whole — no
   partial application.
-- The site prunes, on every write, entries whose URL is not in the
-  `pending.json` it has loaded, so the file stays bounded by the queue.
+- On every write, the site prunes an entry only if its URL is not in the
+  `pending.json` the tab has loaded AND its `at` is older than the tab's
+  queue-load time minus a 10-minute grace period (covers
+  raw.githubusercontent's ~5-min cache and clock skew between devices).
+  A stale tab must not delete a decision it can't vouch for — made on
+  another tab or device for an item queued after this tab loaded — so
+  the file stays bounded by the queue without erasing input it hasn't
+  seen.
 - Initial content when the repo is created: `{"version": 1, "decisions": {}}`.
 
 ## Agent changes (Python)

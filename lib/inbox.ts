@@ -32,6 +32,10 @@ export const EMPTY_DECISIONS: Decisions = { version: 1, decisions: {} };
 
 const COMMIT_MESSAGE_MAX = 72;
 
+/** Grace period for pruneDecisions' keepNewerThan cutoff: covers
+ * raw.githubusercontent's ~5-min cache plus clock skew between devices. */
+export const PRUNE_GRACE_MS = 10 * 60 * 1000;
+
 function isDecisionEntry(value: unknown): value is DecisionEntry {
   if (typeof value !== "object" || value === null) return false;
   const e = value as Record<string, unknown>;
@@ -62,12 +66,23 @@ export function setDecision(
   return { version: 1, decisions: next };
 }
 
-/** Drops entries for URLs no longer queued, so the file stays bounded by the queue. */
-export function pruneDecisions(decisions: Decisions, liveUrls: Iterable<string>): Decisions {
+/**
+ * Drops entries this tab can't vouch for. An entry is removed only if its
+ * URL isn't in the tab's loaded queue (`liveUrls`) AND its `at` is older
+ * than `keepNewerThan` (the tab's queue-load time minus PRUNE_GRACE_MS): a
+ * stale tab must not delete a decision made elsewhere for an item it
+ * hasn't seen yet. An unparseable `at` counts as old (pruned if not live).
+ */
+export function pruneDecisions(
+  decisions: Decisions,
+  liveUrls: Iterable<string>,
+  keepNewerThan: Date,
+): Decisions {
   const live = new Set(liveUrls);
+  const cutoff = keepNewerThan.getTime();
   const next: Record<string, DecisionEntry> = {};
   for (const [url, entry] of Object.entries(decisions.decisions)) {
-    if (live.has(url)) next[url] = entry;
+    if (live.has(url) || Date.parse(entry.at) >= cutoff) next[url] = entry;
   }
   return { version: 1, decisions: next };
 }
@@ -85,9 +100,10 @@ export function serializeDecisions(decisions: Decisions): string {
 
 export function commitMessage(action: Decision | "undo", title: string): string {
   const message = `${action}: ${title}`;
-  return message.length <= COMMIT_MESSAGE_MAX
+  const codePoints = Array.from(message);
+  return codePoints.length <= COMMIT_MESSAGE_MAX
     ? message
-    : `${message.slice(0, COMMIT_MESSAGE_MAX - 1)}…`;
+    : `${codePoints.slice(0, COMMIT_MESSAGE_MAX - 1).join("")}…`;
 }
 
 /** Public read through raw.githubusercontent (≈5 min cache). Any failure → null. */

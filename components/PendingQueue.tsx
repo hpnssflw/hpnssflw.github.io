@@ -14,6 +14,7 @@ import {
   type OwnerSnapshot,
   DECISIONS_PATH,
   DECISIONS_REPO,
+  PRUNE_GRACE_MS,
   commitMessage,
   fetchOwnerDecisions,
   fetchPublicDecisions,
@@ -41,6 +42,7 @@ function errorMessage(err: unknown): string {
 
 export default function PendingQueue() {
   const [queue, setQueue] = useState<PendingQueueData | null>(null);
+  const [queueLoadedAt, setQueueLoadedAt] = useState<Date | null>(null);
   const [failed, setFailed] = useState(false);
   const [publicDecisions, setPublicDecisions] = useState<Decisions | null>(null);
   const [token, setToken] = useState<string | null>(null);
@@ -57,8 +59,10 @@ export default function PendingQueue() {
       })
       .then((data: unknown) => {
         if (cancelled) return;
-        if (isPendingQueue(data)) setQueue(data);
-        else setFailed(true);
+        if (isPendingQueue(data)) {
+          setQueue(data);
+          setQueueLoadedAt(new Date());
+        } else setFailed(true);
       })
       .catch(() => {
         if (!cancelled) setFailed(true);
@@ -113,10 +117,11 @@ export default function PendingQueue() {
   }
 
   async function decide(item: PendingItem, decision: Decision | null) {
-    if (!token || !owner || !queue) return;
+    if (!token || !owner || !queue || !queueLoadedAt) return;
     const liveUrls = queue.items.map((i) => i.url);
+    const keepNewerThan = new Date(queueLoadedAt.getTime() - PRUNE_GRACE_MS);
     const apply = (base: Decisions) =>
-      pruneDecisions(setDecision(base, item.url, decision, new Date()), liveUrls);
+      pruneDecisions(setDecision(base, item.url, decision, new Date()), liveUrls, keepNewerThan);
     const message = commitMessage(decision ?? "undo", item.title);
     const previous = owner;
     const optimistic = apply(previous.decisions);
