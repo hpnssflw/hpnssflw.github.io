@@ -513,16 +513,20 @@ infrastructure.
     residual (post #1's sources comment misdating `64a745d`) went away
     when Publishing Step 3 deleted that comment.
 - **Sub-project #5, Inbox (moderated delivery): in progress.**
-  Task 4 of 5 done.
+  Task 5 in progress.
   Spec: `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
   Plan: `docs/superpowers/plans/2026-09-28-tony-scraponi-inbox.md`.
   Work happens in the git worktree `.claude/worktrees/tony-scraponi` on
   branch `worktree-tony-scraponi`, not on `main`, until the plan's Task 5
   merges it.
-  Latest: Task 4 added statuses and owner mode (approve/reject/undo) to
-  /researcher/queue/ — checked headlessly against the static export,
-  before tony-inbox exists.
-  Next: Task 5 (create tony-inbox, PAT, merge, push, live check).
+  Latest: hpnssflw/tony-inbox created; owner mode verified locally
+  against it (approve/reject/undo, conflict retry) — headlessly with
+  the gh CLI token, since Artem hasn't created the owner-mode PAT yet
+  (Task 5 Step 2).
+  Next: Task 5 Steps 5–8 (merge main, push, live check). Until Artem
+  creates the PAT, nobody can moderate on the live site: the agent
+  delivers only already-approved items and the rest expire after 7
+  days.
 
 ### How to resume in a new session
 
