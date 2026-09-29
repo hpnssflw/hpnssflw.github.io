@@ -61,6 +61,28 @@ need a backend — see the spec intro and the research report).
   handshakes that advertise ALPN, which undici's `fetch` always does;
   `node:https` and curl get `200` from this machine. If playlists go
   stale, check `run.log` for `yandex music failed` first.
+- Final-review fix wave (2026-09-28): the task runs a pinned copy of the
+  runner, every publish passes `assertPublishable`, `model` comes from
+  main sessions only (not subagents), a failed push is retried once and
+  forces the next publish, a fresh clone keeps the published
+  `playlists.json`, killed-run git states heal, presence goes stale after
+  20 min, and cover URIs are limited to `avatars.yandex.net`. `install.ps1`
+  was re-run the same day: the task now runs the pinned copy, and its
+  first run published `model: "opus"` with `playlists=kept` (Yandex timed
+  out).
+- Final whole-plan review (opus): 0 Critical; 2 Important + 10 Minor
+  fixed in one wave (`525e887..e76c57a`); scoped re-review clean. Parked
+  Minor follow-ups: `ensureRemote` runs `git remote set-url` on every
+  publish, so a leftover `.git/config.lock` would fail every later run
+  (compare `get-url` first); one `assertPublishable` test in
+  `collect.test.mjs` can't fail (`expect.unreachable` inside the `try`);
+  `readPrevious*` read the clone's working tree, so a run that fails
+  between write and commit can make the next offline run skip. Yandex
+  timeouts and `getaddrinfo() thread failed to start` push failures show
+  up in `run.log` a few times a day; both self-heal on the next run.
+- SDD ledger (git-ignored, full task history + the headless-Chrome check
+  scripts `now-check.mjs` / `presence-check.mjs`):
+  `.superpowers/sdd/2026-09-28-now-page/`.
 
 ## Research Agent
 
@@ -560,11 +582,15 @@ at the top of this file. Plan:
 `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`.
 
 **Now page (`/now/`): shipped.** Nothing to resume. Presence and
-playlists update only while Artem's machine is on
-(`scripts/presence/install.ps1` / `uninstall.ps1`; log at
-`%LOCALAPPDATA%\polozov-presence\run.log`). If Music shows the
+playlists update only while Artem is logged on (the task's LogonType is
+Interactive; `scripts/presence/install.ps1` / `uninstall.ps1`; log at
+`%LOCALAPPDATA%\polozov-presence\run.log`). The task runs a pinned copy
+of `run.mjs` + `collect.mjs` in `%LOCALAPPDATA%\polozov-presence\bin\`
+with node's path fixed at install — re-run `install.ps1` after changing
+`scripts/presence/*.mjs` or after a Node upgrade/move. If Music shows the
 `yandex music ↗` fallback, look for `yandex music failed` lines in that
-log. Next phase (backend: friends, Yandex ID login, pager) needs its own
+log; if the widget never shows `working`, look for `claude agents failed`.
+Next phase (backend: friends, Yandex ID login, pager) needs its own
 brainstorm, starting from the research report's decision points.
 
 **Content Direction & Tony Scraponi: sub-projects #1-#4 shipped; #5

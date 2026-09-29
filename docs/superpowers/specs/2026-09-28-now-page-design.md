@@ -178,8 +178,9 @@ export function normalizePlaylists(json: unknown): Playlist[];
   — the runner's trimmed file keeps that shape, so the normalizer doesn't
   care which of the two it gets. It keeps only `visibility === "public"`,
   sorts by `modified` descending, builds cover URLs as `https://` +
-  `itemsUri[i]` with `%%` → `200x200` (first 4 only; missing/non-mosaic
-  cover → `[]`), and skips any item missing `playlistUuid` or `title`, or
+  `itemsUri[i]` with every `%%` → `200x200` (only URIs starting
+  `avatars.yandex.net/`, first 4 only; missing/non-mosaic cover → `[]`),
+  and skips any item missing `playlistUuid` or `title`, or
   whose `playlistUuid` isn't UUID-shaped (it's interpolated into an iframe
   `src`). The file comes from a public branch, so the client still treats
   it as untrusted input.
@@ -189,7 +190,7 @@ export function normalizePlaylists(json: unknown): Playlist[];
 Yandex Music UI has no public profile page: `/users/<login>`,
 `/users/<login>/playlists` and `/profile/<uid>` all 404 as of
 2026-09-28), `PLAYLISTS_URL`, `PRESENCE_URL`,
-`PRESENCE_STALE_MS = 15 * 60_000`, `PRESENCE_POLL_MS = 5 * 60_000`. The
+`PRESENCE_STALE_MS = 20 * 60_000`, `PRESENCE_POLL_MS = 5 * 60_000`. The
 Yandex login and API URL live in the runner, not the site.
 
 Rendering:
@@ -262,7 +263,9 @@ read from
 - `todayMinutes`, `sessionsToday`: integers ≥ 0, for the owner's local
   `day`.
 - `model`: `"opus" | "sonnet" | "haiku" | "fable" | null` — family of the
-  most recent assistant message today.
+  most recent assistant message today in a main (non-subagent) session.
+  Subagent transcripts (`<session>/subagents/*.jsonl`) still count as
+  activity and toward sessions, but their model is ignored.
 - `day`: owner's local date `YYYY-MM-DD`; `tz`: IANA zone from
   `Intl.DateTimeFormat().resolvedOptions().timeZone` on the machine.
 - All timestamps floored to the minute.
@@ -297,7 +300,8 @@ unchanged:
 ```
 
 - **Allowlist:** top level `result` only; per item only the seven keys
-  above; `cover` only `type` and `itemsUri`. Everything else in the real
+  above; `cover` only `type` and `itemsUri` (only URIs starting
+  `avatars.yandex.net/`). Everything else in the real
   response — the `owner` block (uid, login, display name, `sex`), `kind`,
   `revision`, colors, tags, likes — is dropped. Only public playlists are
   kept.
@@ -338,7 +342,8 @@ No I/O; all inputs passed in, `now` injected.
 2. List `~/.claude/projects/**/*.jsonl` with mtime within the owner's
    current local day; stream each line-by-line, `JSON.parse` each line,
    and extract **only** `timestamp`, `sessionId`, and `message?.model`
-   into a local array. Bad lines are skipped.
+   into a local array (model left `null` for files under a `subagents`
+   directory). Bad lines are skipped.
 3. Compute presence via `collect.mjs`.
 4. Fetch `https://api.music.yandex.net/users/tmkplzv/playlists/list`
    (no token, 10s timeout) and run it through `trimPlaylists`. Any failure
@@ -350,19 +355,29 @@ No I/O; all inputs passed in, `now` injected.
    clone's `presence.json`) is also `offline` — one "offline" push, then
    silence; the page's staleness check covers the rest — **and** the new
    `playlists.json` text is byte-identical to the clone's current file
-   (or step 4 failed).
+   (or step 4 failed) — **and** the clone holds no unpushed commit (its
+   `HEAD` equals `refs/remotes/origin/presence-data`, which a successful
+   push moves), since both comparisons read that clone.
 6. Log one line per run to `%LOCALAPPDATA%\polozov-presence\run.log`,
    truncated to the last 500 lines. Any unexpected error: log it, publish
    nothing, exit non-zero.
 
 Publishing uses a dedicated local clone at
 `%LOCALAPPDATA%\polozov-presence\repo` — **never the working tree at
-`C:\A\polozov`**. First run: `git init`, add `origin`
-(`https://github.com/hpnssflw/hpnssflw.github.io.git`), orphan commit.
-Every published run: write `presence.json` (and `playlists.json` when
+`C:\A\polozov`**. First run: `git init`, orphan commit. A fresh clone
+first seeds `playlists.json` from the published branch (`git fetch
+--depth=1 origin presence-data`; a missing branch is fine), so a run
+whose Yandex fetch failed never publishes a branch that drops it.
+Every published run: remove a `.git/index.lock` older than 10 minutes
+(left by a killed run), add `origin`
+(`https://github.com/hpnssflw/hpnssflw.github.io.git`) if missing or
+`set-url` it, write `presence.json` (and `playlists.json` when
 step 4 succeeded), `git add`, `git commit --amend` (first run: plain
-commit), `git push --force origin HEAD:refs/heads/presence-data`. The
-branch is always one commit. Auth is
+commit), `git push --force origin HEAD:refs/heads/presence-data`
+(retried once). The branch is always one commit. Right before writing
+(and before printing in `--dry-run`), `assertPublishable` re-checks the
+outgoing text against its own literal copy of both allowlists; on
+failure it logs which check failed and publishes nothing. Auth is
 the machine's existing Git Credential Manager. Pushing this branch
 triggers neither `deploy.yml` (main only) nor `agent-run.yml`
 (cron/dispatch only).
@@ -370,11 +385,16 @@ triggers neither `deploy.yml` (main only) nor `agent-run.yml`
 ### Scheduling — `scripts/presence/install.ps1` / `uninstall.ps1`
 
 `install.ps1` registers a Task Scheduler task `polozov-presence` running
-`run.mjs` every 5 minutes for the current user, **without flashing a
-console window** (the exact launcher — e.g. `conhost --headless` or a
-tiny `.vbs` shim — is a plan-level choice). `uninstall.ps1` removes it.
-Presence only exists while the machine is on and awake; that is correct
-behavior, not a bug.
+`run.mjs` every 5 minutes for the current user while logged on, **without
+flashing a console window** (the exact launcher — e.g. `conhost
+--headless` or a tiny `.vbs` shim — is a plan-level choice). The task
+runs a **pinned copy**: `install.ps1` copies `run.mjs` + `collect.mjs` to
+`%LOCALAPPDATA%\polozov-presence\bin` and fixes node's path, so edits in
+the working tree (which parallel sessions touch) reach the public branch
+only when `install.ps1` is deliberately re-run. `uninstall.ps1` removes
+the task only; the clone, log and pinned copy stay.
+Presence only exists while Artem is logged on and the machine is awake;
+that is correct behavior, not a bug.
 
 ### Widget — `lib/claude-presence.ts` + `components/ClaudePresence.tsx`
 
@@ -417,9 +437,9 @@ other time zones aren't misled.
 | `playlists.json` missing / malformed / network error | Music shows `yandex music ↗` |
 | Player can't play for a visitor outside Yandex Music's regions | not detectable from the page; known limitation |
 | `presence.json` missing / malformed / network error | `status unavailable` |
-| Collector hasn't pushed in > 15 min | `offline` regardless of file contents |
+| Collector hasn't pushed in > 20 min | `offline` regardless of file contents |
 | `claude agents` fails locally | transcripts only; never `working` |
-| Push fails | logged locally; page goes `offline` after 15 min |
+| Push fails | retried once, then logged; the next run publishes again; page goes `offline` after 20 min |
 
 ## Testing
 
@@ -428,7 +448,8 @@ Vitest; `vitest.config.mjs` `include` extends to
 
 - `lib/yandex-music.test.ts` — against a trimmed fixture from the real
   2026-09-28 response: public filter, `modified` sort, cover URL build
-  (`%%` → `200x200`, `https://` prefix, max 4), missing cover → `[]`,
+  (every `%%` → `200x200`, `https://` prefix, max 4, non-`avatars.yandex.net/`
+  URIs skipped), missing cover → `[]`,
   items without a UUID-shaped `playlistUuid` or a title skipped, garbage
   input → `[]`. (No fetch tests — the site no longer fetches Yandex.)
 - `lib/claude-presence.test.ts` — `parsePresence` accepts v1 / rejects

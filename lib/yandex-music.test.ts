@@ -109,14 +109,36 @@ describe("normalizePlaylists", () => {
   });
 
   it("caps the mosaic at four tiles", () => {
-    const cover = { type: "mosaic", itemsUri: ["a/%%", "b/%%", "c/%%", "d/%%", "e/%%", "f/%%"] };
-    const [p] = normalizePlaylists({ result: [{ ...ONE, cover }] });
+    const itemsUri = ["a", "b", "c", "d", "e", "f"].map((x) => `avatars.yandex.net/${x}/%%`);
+    const [p] = normalizePlaylists({ result: [{ ...ONE, cover: { type: "mosaic", itemsUri } }] });
     expect(p.coverTiles).toEqual([
-      "https://a/200x200",
-      "https://b/200x200",
-      "https://c/200x200",
-      "https://d/200x200",
+      "https://avatars.yandex.net/a/200x200",
+      "https://avatars.yandex.net/b/200x200",
+      "https://avatars.yandex.net/c/200x200",
+      "https://avatars.yandex.net/d/200x200",
     ]);
+  });
+
+  it("skips cover URIs that aren't on avatars.yandex.net", () => {
+    const itemsUri = [
+      "evil.example/x/%%",
+      "avatars.yandex.net.evil.example/x/%%",
+      "https://avatars.yandex.net/x/%%",
+      "//evil.example/%%",
+      "",
+      42,
+      "avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/%%",
+    ];
+    const [p] = normalizePlaylists({ result: [{ ...ONE, cover: { type: "mosaic", itemsUri } }] });
+    expect(p.coverTiles).toEqual([
+      "https://avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/200x200",
+    ]);
+  });
+
+  it("replaces every %% in a cover URI", () => {
+    const itemsUri = ["avatars.yandex.net/get/%%/crop/%%"];
+    const [p] = normalizePlaylists({ result: [{ ...ONE, cover: { type: "mosaic", itemsUri } }] });
+    expect(p.coverTiles).toEqual(["https://avatars.yandex.net/get/200x200/crop/200x200"]);
   });
 
   it("returns no tiles for a missing or non-mosaic cover", () => {

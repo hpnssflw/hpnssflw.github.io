@@ -13,6 +13,8 @@ export interface Playlist {
 }
 
 const COVER_SIZE = "200x200";
+/** Cover URIs are host-relative; only Yandex's image host becomes an <img src>. */
+const COVER_URI_PREFIX = "avatars.yandex.net/";
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 function coverTiles(cover: unknown): string[] {
@@ -20,9 +22,9 @@ function coverTiles(cover: unknown): string[] {
   const c = cover as Record<string, unknown>;
   if (c.type !== "mosaic" || !Array.isArray(c.itemsUri)) return [];
   return c.itemsUri
-    .filter((uri): uri is string => typeof uri === "string" && uri.length > 0)
+    .filter((uri): uri is string => typeof uri === "string" && uri.startsWith(COVER_URI_PREFIX))
     .slice(0, 4)
-    .map((uri) => `https://${uri.replace("%%", COVER_SIZE)}`);
+    .map((uri) => `https://${uri.replaceAll("%%", COVER_SIZE)}`);
 }
 
 function time(iso: string): number {

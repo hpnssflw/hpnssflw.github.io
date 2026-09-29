@@ -1,9 +1,13 @@
 import { describe, expect, it } from "vitest";
+import { MODELS, parsePresence } from "../../lib/claude-presence.ts";
 import {
+  MODEL_FAMILIES,
   PLAYLIST_KEYS,
   PRESENCE_KEYS,
+  assertPublishable,
   buildPresence,
   deriveState,
+  isSubagentTranscript,
   localDayInfo,
   mergeActivity,
   modelFamily,
@@ -99,6 +103,35 @@ describe("modelFamily", () => {
   });
 });
 
+describe("isSubagentTranscript", () => {
+  it("matches a transcript under a subagents directory, either separator", () => {
+    const session = "C--A-polozov\\80a18c76-234c-4cbc-ae11-5f73f88a0833";
+    expect(isSubagentTranscript(`${session}\\subagents\\agent-a5082db3cd24d77e7.jsonl`)).toBe(true);
+    expect(
+      isSubagentTranscript("-home-artem-polozov/80a18c76/subagents/agent-a5082db3.jsonl"),
+    ).toBe(true);
+    expect(
+      isSubagentTranscript("C:\\Users\\tigri\\.claude\\projects\\C--A\\s1\\subagents\\a.jsonl"),
+    ).toBe(true);
+  });
+
+  it("does not match a main-session transcript", () => {
+    expect(isSubagentTranscript("C--A-polozov\\80a18c76-234c-4cbc.jsonl")).toBe(false);
+    expect(isSubagentTranscript("-home-artem-polozov/80a18c76.jsonl")).toBe(false);
+  });
+
+  it("does not match a project dir merely named like subagents", () => {
+    expect(isSubagentTranscript("C--A-subagents-foo\\80a18c76.jsonl")).toBe(false);
+    expect(isSubagentTranscript("C--A-my-subagents/80a18c76.jsonl")).toBe(false);
+    expect(isSubagentTranscript("C--A\\s1\\subagents-foo\\a.jsonl")).toBe(false);
+    expect(isSubagentTranscript("C--A/s1/mysubagents/a.jsonl")).toBe(false);
+  });
+
+  it("is false for a non-string", () => {
+    expect(isSubagentTranscript(undefined)).toBe(false);
+  });
+});
+
 describe("shouldPublish", () => {
   const same = { playlistsChanged: false };
 
@@ -113,6 +146,12 @@ describe("shouldPublish", () => {
     expect(
       shouldPublish({ prevState: "offline", nextState: "offline", playlistsChanged: true }),
     ).toBe(true);
+  });
+
+  it("publishes offline → offline when the last push never landed", () => {
+    const offline = { prevState: "offline", nextState: "offline", ...same };
+    expect(shouldPublish({ ...offline, unpushed: true })).toBe(true);
+    expect(shouldPublish({ ...offline, unpushed: false })).toBe(false);
   });
 });
 
@@ -210,6 +249,34 @@ describe("buildPresence", () => {
   });
 });
 
+describe("presence.json contract: collect.mjs vs lib/claude-presence.ts", () => {
+  const inputs = {
+    agents: [{ status: "busy" }],
+    events: [{ ts: at(9, 0), sessionId: "s1", model: "claude-opus-5-5" }],
+    nowMs: at(9, 5),
+    dayStartMs: DAY_START,
+    day: "2026-09-28",
+    tz: "Europe/Moscow",
+    prevLastActive: null,
+  };
+
+  it("parsePresence accepts buildPresence output and keeps exactly PRESENCE_KEYS", () => {
+    const parsed = parsePresence(JSON.parse(JSON.stringify(buildPresence(inputs))));
+    expect(parsed).not.toBeNull();
+    expect(Object.keys(parsed).sort()).toEqual([...PRESENCE_KEYS].sort());
+  });
+
+  it("both sides know the same model families", () => {
+    expect([...MODELS].sort()).toEqual([...MODEL_FAMILIES].sort());
+    for (const family of MODEL_FAMILIES) {
+      const events = [{ ts: at(9, 0), sessionId: "s1", model: `claude-${family}-9` }];
+      const built = buildPresence({ ...inputs, events });
+      expect(built.model).toBe(family);
+      expect(parsePresence(built)?.model).toBe(family);
+    }
+  });
+});
+
 describe("trimPlaylists", () => {
   // Shape of the real GET /users/tmkplzv/playlists/list response (2026-09-28),
   // extra keys abbreviated; the second playlist is a made-up private one.
@@ -296,19 +363,35 @@ describe("trimPlaylists", () => {
 
   it("drops wrongly typed fields instead of copying them", () => {
     const [item] = RAW.result;
+    const uri = (n) => `avatars.yandex.net/get-music-content/${n}/a/%%`;
     const out = trimPlaylists({
       result: [
         {
           ...item,
           title: { evil: "object" },
           trackCount: "265",
-          cover: { type: "mosaic", itemsUri: ["a/%%", 42, "b/%%", "c/%%", "d/%%", "e/%%"] },
+          cover: { type: "mosaic", itemsUri: [uri(1), 42, uri(2), uri(3), uri(4), uri(5)] },
         },
       ],
     });
     expect(out.result[0]).not.toHaveProperty("title");
     expect(out.result[0]).not.toHaveProperty("trackCount");
-    expect(out.result[0].cover.itemsUri).toEqual(["a/%%", "b/%%", "c/%%", "d/%%"]);
+    expect(out.result[0].cover.itemsUri).toEqual([uri(1), uri(2), uri(3), uri(4)]);
+  });
+
+  it("keeps only avatars.yandex.net cover URIs", () => {
+    const [item] = RAW.result;
+    const kept = "avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/%%";
+    const itemsUri = [
+      "evil.example/get-music-content/1/%%",
+      "avatars.yandex.net.evil.example/x/%%",
+      "https://avatars.yandex.net/x/%%",
+      "//evil.example/avatars.yandex.net/%%",
+      "",
+      kept,
+    ];
+    const out = trimPlaylists({ result: [{ ...item, cover: { type: "mosaic", itemsUri } }] });
+    expect(out.result[0].cover.itemsUri).toEqual([kept]);
   });
 
   it("keeps an empty list distinct from garbage", () => {
@@ -321,5 +404,94 @@ describe("trimPlaylists", () => {
     expect(trimPlaylists("x")).toBeNull();
     expect(trimPlaylists({})).toBeNull();
     expect(trimPlaylists({ result: "nope" })).toBeNull();
+  });
+});
+
+describe("assertPublishable", () => {
+  // What run.mjs checks: the published text, parsed back.
+  const roundTrip = (value) => JSON.parse(JSON.stringify(value));
+  const presence = roundTrip(
+    buildPresence({
+      agents: [{ status: "busy" }],
+      events: [
+        { ts: at(9, 0), sessionId: "s1", model: "claude-opus-5-5" },
+        { ts: at(9, 20), sessionId: "s1", model: null },
+      ],
+      nowMs: at(9, 21),
+      dayStartMs: DAY_START,
+      day: "2026-09-28",
+      tz: "Europe/Moscow",
+      prevLastActive: null,
+    }),
+  );
+  const playlists = roundTrip(
+    trimPlaylists({
+      result: [
+        {
+          owner: { uid: 1659591274, login: "tmkplzv" },
+          title: "siick vibin on a daily basis",
+          playlistUuid: "f5db5527-5d0e-50fa-9f52-ee32cf758900",
+          visibility: "public",
+          trackCount: 265,
+          durationMs: 48357650,
+          modified: "2026-09-28T05:06:23+00:00",
+          cover: {
+            type: "mosaic",
+            itemsUri: ["avatars.yandex.net/get-music-content/97284/666ef04f.a.5907678-1/%%"],
+            custom: false,
+          },
+        },
+      ],
+    }),
+  );
+  const [item] = playlists.result;
+  const check = (overrides) => () => assertPublishable({ presence, playlists, ...overrides });
+
+  it("passes the real buildPresence and trimPlaylists output", () => {
+    expect(check({})).not.toThrow();
+    expect(check({ playlists: null })).not.toThrow();
+    expect(check({ playlists: { result: [] } })).not.toThrow();
+  });
+
+  it("fails on an extra or a missing presence key", () => {
+    expect(check({ presence: { ...presence, cwd: "C:\\A\\secret" } })).toThrow(/presence\.json keys/);
+    const { tz: _tz, ...missing } = presence;
+    expect(check({ presence: missing })).toThrow(/presence\.json keys/);
+  });
+
+  it("fails on a nested object where a presence scalar belongs", () => {
+    expect(check({ presence: { ...presence, model: { id: "x" } } })).toThrow(/presence\.json/);
+    expect(check({ presence: { ...presence, day: ["2026-09-28"] } })).toThrow(/presence\.json/);
+  });
+
+  it("fails on an extra top-level playlists key", () => {
+    expect(check({ playlists: { ...playlists, invocationInfo: { hostname: "x" } } })).toThrow(
+      /playlists\.json is not exactly/,
+    );
+    expect(check({ playlists: [item] })).toThrow(/playlists\.json is not exactly/);
+  });
+
+  it("fails on an extra item key or a nested object where a scalar belongs", () => {
+    const withOwner = { ...item, owner: { login: "tmkplzv" } };
+    expect(check({ playlists: { result: [withOwner] } })).toThrow(/item key outside/);
+    const nested = { ...item, title: { text: "x" } };
+    expect(check({ playlists: { result: [nested] } })).toThrow(/item value/);
+  });
+
+  it("fails on an extra cover key or a nested cover value", () => {
+    const extraCover = { ...item, cover: { ...item.cover, custom: false } };
+    expect(check({ playlists: { result: [extraCover] } })).toThrow(/cover key outside/);
+    const nestedUri = { ...item, cover: { ...item.cover, itemsUri: [{ uri: "x" }] } };
+    expect(check({ playlists: { result: [nestedUri] } })).toThrow(/itemsUri/);
+  });
+
+  it("never puts a key or value into its message", () => {
+    const secret = "C:\\A\\secret-client-repo";
+    try {
+      assertPublishable({ presence: { ...presence, [secret]: secret }, playlists: null });
+      expect.unreachable();
+    } catch (err) {
+      expect(err.message).not.toContain("secret");
+    }
   });
 });
