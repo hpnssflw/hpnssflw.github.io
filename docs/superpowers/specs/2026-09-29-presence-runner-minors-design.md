@@ -53,7 +53,7 @@ contain `secret`. A test-only change; `collect.mjs` is untouched.
 
 ## 3. Previous state from `HEAD`, not the working tree
 
-`readPrevious()` and `readPreviousPlaylistsText()` read `presence.json` /
+`readPrevious()` and `readPreviousPlaylistsText()` read `presence.json` and
 `playlists.json` from the clone's working tree. A run that fails between
 `writeFileSync` and `git commit` leaves the tree ahead of `HEAD`; the next
 run then compares against content that was never published — an
@@ -65,10 +65,10 @@ playlists change can be treated as already published.
   `REPO/.git` doesn't exist (so git never walks up to a parent
   repository), and on any git failure (no `HEAD` yet, file absent from the
   commit).
-- `readPrevious` parses `readCommitted("presence.json")`;
-  `readPreviousPlaylistsText` returns `readCommitted("playlists.json")`.
-  Both become async; `main` awaits them. `--dry-run` reads the same way
-  (read-only).
+- `readPrevious` becomes async and parses `readCommitted("presence.json")`;
+  `readPreviousPlaylistsText` is removed and `main` compares against
+  `await readCommitted("playlists.json")` directly. `--dry-run` reads the
+  same way (read-only).
 - `git show` prints the blob as stored (no eol filters), and the blob is
   the `\n`-terminated text the runner wrote, so the byte comparison with
   `playlistsText` stays exact.
