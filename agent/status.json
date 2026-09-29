@@ -3,138 +3,134 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 40,
-      "in_window": 40,
+      "collected": 39,
+      "in_window": 39,
       "kept": 0,
       "new": 19
     },
     "tooling": {
-      "collected": 54,
-      "in_window": 54,
+      "collected": 53,
+      "in_window": 53,
       "kept": 2,
-      "new": 14
+      "new": 13
     },
     "web-products": {
       "collected": 27,
       "in_window": 27,
       "kept": 0,
-      "new": 13
+      "new": 14
     }
   },
   "last_sent_at": "2026-09-29T00:01:33.933243+00:00",
-  "pending_count": 5,
+  "pending_count": 7,
   "recent_events": [
     {
       "reason": "below_relevance",
       "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321376+00:00",
+      "ts": "2026-09-29T20:28:34.935463+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "topic": "web-products",
+      "ts": "2026-09-29T20:28:34.935457+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321363+00:00",
+      "ts": "2026-09-29T20:28:34.935450+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321350+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
-      "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321336+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Sonnet 5.5",
-      "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321323+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321309+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
-      "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321295+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
-      "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321279+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
-      "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321260+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
-      "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321221+00:00",
+      "ts": "2026-09-29T20:28:34.935443+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "What happened to the Snowden archive",
       "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321154+00:00",
+      "ts": "2026-09-29T20:28:34.935436+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "topic": "web-products",
+      "ts": "2026-09-29T20:28:34.935428+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sonnet 5.5",
+      "topic": "web-products",
+      "ts": "2026-09-29T20:28:34.935421+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-29T20:28:34.935401+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
+      "topic": "web-products",
+      "ts": "2026-09-29T20:28:34.935394+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Jev Plays Pok\u00e9mon Red",
       "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321112+00:00",
+      "ts": "2026-09-29T20:28:34.935386+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ideas on modernizing the open-source desktop",
+      "topic": "web-products",
+      "ts": "2026-09-29T20:28:34.935379+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "topic": "web-products",
+      "ts": "2026-09-29T20:28:34.935370+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Coding is not solved",
       "topic": "web-products",
-      "ts": "2026-09-29T14:39:05.321030+00:00",
+      "ts": "2026-09-29T20:28:34.935358+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
+      "topic": "web-products",
+      "ts": "2026-09-29T20:28:34.935299+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Launch HN: Vespper (YC F24) \u2013 SOTA Docx MCP",
       "topic": "web-products",
-      "ts": "2026-09-29T14:38:53.552791+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "ZuckOff is a free app that sees Meta glasses before they see you",
-      "topic": "web-products",
-      "ts": "2026-09-29T14:38:53.552772+00:00",
+      "ts": "2026-09-29T20:28:27.352861+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-09-24T08:49:08.300484+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-24T16:03:10.191448+00:00"
@@ -226,18 +222,22 @@
     {
       "kept": 2,
       "ts": "2026-09-29T14:38:27.657579+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-09-29T20:27:49.882165+00:00"
     }
   ],
-  "streak": 216,
+  "streak": 217,
   "topics": [
     {
-      "collected": 40,
+      "collected": 39,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 54,
+      "collected": 53,
       "kept": 2,
       "name": "Tooling",
       "slug": "tooling"
@@ -249,5 +249,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-29T14:38:27.657579+00:00"
+  "updated_at": "2026-09-29T20:27:49.882165+00:00"
 }
