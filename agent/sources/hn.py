@@ -1,4 +1,5 @@
-"""Hacker News connector — queries Algolia search per topic keyword."""
+"""Hacker News connector — queries Algolia search per topic keyword,
+matching story titles only (whole words, no typo tolerance)."""
 
 from __future__ import annotations
 
@@ -10,6 +11,7 @@ from agent.sources.base import Candidate, Drop, TopicConfig
 
 ALGOLIA_SEARCH_URL = "https://hn.algolia.com/api/v1/search"
 EXCERPT_MAX_CHARS = 280
+HITS_PER_PAGE = 50
 
 
 def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Drop]]:
@@ -25,6 +27,14 @@ def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Dr
             "query": keyword,
             "tags": "story",
             "numericFilters": f"created_at_i>{cutoff_epoch},points>={min_points}",
+            # By default Algolia also matches URL, story text and author,
+            # with typo tolerance and prefix matching: "MCP" found Google
+            # Maps stories and "SEO" found "so"/"Sol". Titles only, whole
+            # words, no typos.
+            "restrictSearchableAttributes": "title",
+            "typoTolerance": "false",
+            "queryType": "prefixNone",
+            "hitsPerPage": HITS_PER_PAGE,
         }
         response = requests.get(ALGOLIA_SEARCH_URL, params=params, timeout=10)
         response.raise_for_status()

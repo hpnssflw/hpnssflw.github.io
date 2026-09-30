@@ -64,6 +64,17 @@ the next one starts.
    live in a separate public repo, `hpnssflw/tony-inbox`, so the
    browser-held token can't write to this one. Spec:
    `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
+6. **Topic & source quality.** Strict title-only HN search, GitHub
+   topic queries for every topic, per-topic include/exclude criteria
+   for the ranker, a verdict cache so an item is scored once, and a
+   daily cap per topic. Spec:
+   `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
+7. **A Web Products source.** Hacker News barely covers market data,
+   dataviz and SEO, so Web Products needs a source of its own (RSS or
+   otherwise) — designed once #6's numbers are in.
+
+Later candidate: give the ranker Artem's recent inbox decisions as
+few-shot examples, once there are 30–50 of them.
 
 `agent/panel.py` + `agent/panel_page.html` (a local-only, `127.0.0.1`
 monitoring panel built by a separate concurrent session — see

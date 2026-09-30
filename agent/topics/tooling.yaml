@@ -1,8 +1,13 @@
 name: Tooling
 description: >
   Trending GitHub repos and web development tools.
-keywords: [dev tool, CLI, open source library, developer tooling]
+# Matched against HN story titles only -- whole words, no typos -- so keep
+# them short: a multi-word keyword needs every word in the title.
+keywords:
+  [CLI, terminal, editor, IDE, compiler, debugger, Git, GitHub, Rust, TypeScript, Python,
+   Postgres, SQLite, database, Show HN, open source, library, framework, Neovim, VS Code]
 
 sources:
   hacker_news: { min_points: 30 }
-  github_trending: { min_stars: 200 }
+  github_trending:
+    { min_stars: 50, topics: [developer-tools, cli, devtools, terminal, vscode-extension, neovim] }

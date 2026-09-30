@@ -3,7 +3,13 @@ description: >
   Agent and automated pipelines and harnesses, LLM assistants,
   self-hosted/private AI platform development, and LLM/inference
   optimization.
-keywords: [agent framework, tool use, evals, MCP, LLM inference, self-hosted AI]
+# Matched against HN story titles only -- whole words, no typos -- so keep
+# them short: a multi-word keyword needs every word in the title.
+keywords:
+  [LLM, agent, agentic, MCP, RAG, inference, eval, benchmark, Claude, GPT, Gemini,
+   DeepSeek, Qwen, Llama, llama.cpp, vLLM, Ollama, open-weight, fine-tuning, prompt,
+   embeddings]
 
 sources:
   hacker_news: { min_points: 30 }
+  github_trending: { min_stars: 100, topics: [llm, mcp, ai-agents, rag, llm-inference] }

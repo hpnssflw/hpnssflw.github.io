@@ -305,7 +305,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#5 shipped.**
+**Status: sub-projects #1-#5 shipped; #6 (topic & source quality) in progress.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -559,6 +559,12 @@ infrastructure.
   could deliver items rejected during rollout) handled by the cron
   pause above; M6 (rollback needs `StateEntry.dismissed`) documented in
   `CLAUDE.md`; M1, M4, M7-M10 deferred.
+- **Sub-project #6, Topic & source quality: in progress.**
+  Spec: `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
+  Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
+  Task 1 of 5 done.
+  Latest: strict title-only HN search; GitHub topic queries for all three topics.
+  Next: Task 2 (ranking criteria).
 
 ### How to resume in a new session
 
@@ -603,7 +609,7 @@ log; if the widget never shows `working`, look for `claude agents failed`.
 Next phase (backend: friends, Yandex ID login, pager) needs its own
 brainstorm, starting from the research report's decision points.
 
-**Content Direction & Tony Scraponi: sub-projects #1-#5 shipped.** See
+**Content Direction & Tony Scraponi: sub-projects #1-#5 shipped; #6 in progress.** See
 this file's section above for what shipped in
 each and what the final reviews found and fixed. Sub-project #2's bot/
 channel now exist (`@hypnosisflow`) and live delivery is verified
@@ -617,11 +623,11 @@ confirmed the real Telegram send. `docs/tony-scraponi-roadmap.md`'s four
 ordered sub-projects #1-#4 are now complete. The LAB backlog posts
 follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
-shipped; there's no confirmed next step for this initiative —
-candidates: a Telegram DM when items await review, summary editing,
-topic/source management. The owner-mode PAT exists and moderated
-delivery is verified live (2026-09-30), so the inbox has no open manual
-steps.
+shipped. Sub-project #6 (topic & source quality) is in progress: follow
+`docs/superpowers/plans/2026-09-30-topic-source-quality.md` from the
+task its status bullet above names as next. Later candidates: a Web
+Products source (#7), a Telegram DM when items await review, summary
+editing.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages

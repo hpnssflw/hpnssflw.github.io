@@ -2,7 +2,12 @@ name: Web Products
 description: >
   Product and web trends, securities & market data, data visualization,
   browser performance, web architecture, and SEO.
-keywords: [web product, market data, data visualization, browser performance, SEO]
+# Matched against HN story titles only -- whole words, no typos -- so keep
+# them short: a multi-word keyword needs every word in the title.
+keywords:
+  [browser, Chrome, Firefox, Safari, WebKit, WebAssembly, JavaScript, CSS, HTML, React,
+   frontend, SEO, visualization, chart, dashboard, D3, stock, trading, fintech, Stripe, SaaS]
 
 sources:
   hacker_news: { min_points: 30 }
+  github_trending: { min_stars: 50, topics: [data-visualization, web-performance, frontend, seo] }
