@@ -540,17 +540,19 @@ infrastructure.
   Merged to `main` and pushed 2026-09-29 (`57fa600`). Decisions live in
   `hpnssflw/tony-inbox`; owner mode was verified locally against it
   (approve/reject/undo, conflict retry) headlessly with the gh CLI
-  token, since Artem hasn't created the owner-mode PAT yet (the plan's
-  Task 5 Step 2 has its exact settings). Live check (agent run
-  2026-09-29T07:31Z): the rejected item (Rafah / Google Maps) left the
-  queue as `dismissed: rejected`; the two approved items (Vespper Docx
-  MCP, KKKKhazix/AIHOT) are held in the queue with `times_sent 0`
-  because the 24h cadence wasn't due, so they go out with the first
-  run after 2026-09-30T00:01Z; the undecided one (jev-chat-windows)
-  waits. Until the PAT exists nobody can moderate on the live site:
-  the agent delivers only already-approved items and the rest expire
-  after 7 days. The agent-run cron was paused during the rollout so
-  the old code couldn't deliver unmoderated, and is active again.
+  token. Artem created the owner-mode PAT (the plan's Task 5 Step 2
+  settings) and signed in on the live `/researcher/queue/` on
+  2026-09-30. Live check (agent run 2026-09-29T07:31Z): the rejected
+  item (Rafah / Google Maps) left the queue as `dismissed: rejected`;
+  the two approved items (Vespper Docx MCP, KKKKhazix/AIHOT) were held
+  until the 24h cadence came due. **Moderated delivery verified live
+  2026-09-30:** the scheduled run at 04:08Z (GitHub skipped the 00:00Z
+  cron slot) logged "Sent 2 approved items across 2 topics."; on
+  `agent-data` exactly those two went `times_sent 0 → 1`, nothing else
+  was sent, and the undecided jev-chat-windows is still pending.
+  Undecided items expire after 7 days. The agent-run cron was paused
+  during the rollout so the old code couldn't deliver unmoderated, and
+  is active again.
   Final whole-branch review (opus): no Critical. I1 (a stale tab's
   prune could delete another device's decisions) and minors M2, M3, M5
   fixed in one fix wave (`aa73dac`, `a2bf96e`); I2 (the old agent
@@ -617,9 +619,9 @@ follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped; there's no confirmed next step for this initiative —
 candidates: a Telegram DM when items await review, summary editing,
-topic/source management. One open manual step: Artem creates the
-owner-mode PAT (settings in the inbox plan's Task 5 Step 2) and signs
-in on the live `/researcher/queue/`.
+topic/source management. The owner-mode PAT exists and moderated
+delivery is verified live (2026-09-30), so the inbox has no open manual
+steps.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
