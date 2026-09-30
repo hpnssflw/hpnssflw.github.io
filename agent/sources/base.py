@@ -41,6 +41,8 @@ class TopicConfig:
     name: str
     description: str
     keywords: list[str]
+    include: list[str]  # ranker criteria: what fits this topic
+    exclude: list[str]  # ranker criteria: what doesn't, even if the keywords match
     sources: dict
     max_age_days: int
     min_relevance: int

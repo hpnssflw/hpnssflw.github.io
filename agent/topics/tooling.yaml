@@ -1,6 +1,15 @@
 name: Tooling
 description: >
-  Trending GitHub repos and web development tools.
+  Tools developers use to build software: editors, CLIs, libraries,
+  and AI coding tools.
+include:
+  - "tools used while building software: editors and IDEs, CLIs, terminals, debuggers, build tools, package managers, version control, databases"
+  - "AI tools used while writing code: coding agents, editor plugins, Claude Code skills and hooks"
+  - new or notably improved open-source libraries and frameworks for building software
+exclude:
+  - "components for building LLM systems: agent frameworks, inference servers, evals (they belong to AI Engineering)"
+  - games, consumer apps, and utilities with no role in software development
+  - nostalgia or legacy-systems threads, career and workplace discussion
 # Matched against HN story titles only -- whole words, no typos -- so keep
 # them short: a multi-word keyword needs every word in the title.
 keywords:

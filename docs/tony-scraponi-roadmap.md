@@ -30,7 +30,10 @@ inside this repo, is a much smaller first cut — see item 4 below.
 2. **AI Engineering** — agent/automated pipelines and harnesses, LLM
    assistants, self-hosted/private AI platform development, LLM/inference
    optimization.
-3. **Tooling** — trending GitHub repos, web development tools.
+3. **Tooling** — tools developers use to build software: editors, CLIs,
+   libraries, and AI coding tools. (Until sub-project #6 this read
+   "trending GitHub repos, web development tools"; a trending repo that
+   isn't a developer tool no longer qualifies.)
 
 ## Sub-projects, in order
 

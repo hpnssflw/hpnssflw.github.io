@@ -12,6 +12,14 @@ llm:
   # replacement (the non-thinking mode deepseek-chat used to point to).
   model: deepseek-v4-flash
 
+ranking:
+  # Who the digest is for. Part of every ranking prompt and of each
+  # topic's rubric hash, so editing it re-scores cached verdicts.
+  reader: >
+    Artem, a full-stack engineer who builds web products and LLM agents
+    and writes about both. He wants items he can learn from or act on
+    as a builder, not general tech news.
+
 delivery:
   telegram_channel: "@hypnosisflow" # the channel's public handle; not a secret.
   delivery_cadence_hours: 24 # digest rollup cadence; collection/ranking run every 4h regardless

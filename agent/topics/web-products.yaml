@@ -2,6 +2,15 @@ name: Web Products
 description: >
   Product and web trends, securities & market data, data visualization,
   browser performance, web architecture, and SEO.
+include:
+  - "the web platform and browsers: new APIs, standards, rendering and browser performance"
+  - "frontend engineering and web architecture: frameworks, CSS, performance, SEO"
+  - data visualization, and products built on market or financial data
+  - "product and web trends: notable launches and how web products make money"
+exclude:
+  - general tech-company news, earnings and stock moves with no product angle
+  - AI model releases (AI Engineering) and developer tools (Tooling)
+  - games and demos that merely run in a browser
 # Matched against HN story titles only -- whole words, no typos -- so keep
 # them short: a multi-word keyword needs every word in the title.
 keywords:

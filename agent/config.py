@@ -30,10 +30,16 @@ class InboxConfig:
 
 
 @dataclass(frozen=True)
+class RankingConfig:
+    reader: str
+
+
+@dataclass(frozen=True)
 class Settings:
     llm: LLMConfig
     delivery: DeliveryConfig
     inbox: InboxConfig
+    ranking: RankingConfig
 
 
 def _load_yaml(path: Path) -> dict:
@@ -57,6 +63,7 @@ def load_settings(defaults_path: Path) -> Settings:
     llm_raw = raw["llm"]
     delivery_raw = raw["delivery"]
     inbox_raw = raw["inbox"]
+    ranking_raw = raw["ranking"]
     return Settings(
         llm=LLMConfig(base_url=llm_raw["base_url"], model=llm_raw["model"]),
         delivery=DeliveryConfig(
@@ -67,6 +74,7 @@ def load_settings(defaults_path: Path) -> Settings:
             decisions_url=inbox_raw["decisions_url"],
             expire_days=inbox_raw["expire_days"],
         ),
+        ranking=RankingConfig(reader=ranking_raw["reader"].strip()),
     )
 
 
@@ -83,6 +91,8 @@ def load_topics(topics_dir: Path, defaults_path: Path) -> list[TopicConfig]:
                 name=merged["name"],
                 description=merged["description"].strip(),
                 keywords=merged["keywords"],
+                include=merged.get("include", []),
+                exclude=merged.get("exclude", []),
                 sources=merged["sources"],
                 max_age_days=merged["max_age_days"],
                 min_relevance=merged["min_relevance"],
