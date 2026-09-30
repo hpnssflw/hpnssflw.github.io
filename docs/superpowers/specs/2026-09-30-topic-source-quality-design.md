@@ -288,19 +288,23 @@ Pure functions, no I/O:
   → `Drop(reason="already_ranked", detail={"relevance": …})`; valid and
   at or above threshold (it lost to the cap earlier) → `cached`, reused
   as-is.
-- `record(state, ranked_items, topic, rubric, now)` — writes or
+- `record(state, ranked_items, slug, rubric, now)` — writes or
   overwrites `ranks[slug]` for freshly scored items.
+- `mark_queued(state, items, slug, now)` — sets `queued_at`.
 - `queued_in_last_24h(state, slug, now) -> int` — counts records for
   that topic with `queued_at` in the last 24 hours.
 - `select(eligible, remaining) -> (keep, over_cap)` — sorts by
   relevance, then source score, both descending, and splits at
   `remaining`.
 
-### Per-topic flow — `agent/main.py`
+### Per-topic flow — new `agent/pipeline.py`
 
-The body of `run_real`'s topic loop moves into
-`process_topic(topic, state, queue, settings, now, writer) -> list[RankedItem]`,
-shared by the real run and preview:
+The body of `run_real`'s topic loop (and `CONNECTORS`) moves out of
+`agent/main.py` into
+`pipeline.process_topic(topic, state, queue, settings, now, writer) -> TopicResult`,
+shared by the real run and preview. `TopicResult` holds the kept,
+over-cap and below-threshold items, the `already_ranked` drops, and the
+24h queued count, which is what the preview prints:
 
 1. collect → `date_guard` → `dedupe.filter_seen` →
    `pending.filter_already_pending` (unchanged)
@@ -437,6 +441,8 @@ Then one live `--preview` with the real key against state copied from
 - `docs/tony-scraponi-roadmap.md` — add #6 (this) and #7 (a Web Products
   source); update Tooling's theme wording; note inbox-decision few-shot
   as a later candidate.
+- `lib/topics.ts` — Tooling's RESEARCHER gloss drops "trending GitHub
+  repos" to match the new theme wording.
 - `PROGRESS.md` — status and "How to resume".
 - `CLAUDE.md` — the `ranks` rollback caveat alongside `dismissed`.
 
@@ -445,5 +451,6 @@ Then one live `--preview` with the real key against state copied from
 - New sources (RSS, Lobsters, Reddit): sub-project #7.
 - Few-shot examples from inbox decisions in the prompt.
 - Persisting run JSONL or score histograms in CI or `status.json`.
-- Site changes beyond the narrative copy on `/researcher/agent/`.
+- Site changes beyond copy: the `/researcher/agent/` narrative and
+  Tooling's gloss in `lib/topics.ts`.
 - Pruning `state.json`.
