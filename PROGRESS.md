@@ -47,6 +47,9 @@ outside Yandex Music's regions. Out of scope for this phase: last-played
 track, cloud claude.ai/code sessions, friends/login/pager/extension (all
 need a backend — see the spec intro and the research report).
 
+- How it works now (architecture, data, privacy, operations,
+  troubleshooting; in Russian): `docs/now-page.md` — keep it current
+  when `/now/` or `scripts/presence/` changes.
 - Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
 - Plan: `docs/superpowers/plans/2026-09-28-now-page.md`
 - Research behind it (local, uncommitted): `reports/Интеграции Яндекс и Claude Code.md`
