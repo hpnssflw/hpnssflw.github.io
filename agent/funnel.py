@@ -44,7 +44,12 @@ def compute_funnel(events: list[dict]) -> dict:
     for entry in topics.values():
         drops = entry["drops"]
         entry["in_window"] = entry["dated"] - drops.get("outside_window", 0)
-        entry["new"] = entry["in_window"] - drops.get("seen", 0)
+        entry["new"] = (
+            entry["in_window"]
+            - drops.get("seen", 0)
+            - drops.get("dismissed", 0)
+            - drops.get("already_ranked", 0)
+        )
         entry["scored"] = entry["new"] - drops.get("below_relevance", 0)
         entry["kept"] = entry["scored"] - drops.get("over_max_items", 0)
 

@@ -3,6 +3,7 @@ description: >
   Agent and automated pipelines and harnesses, LLM assistants,
   self-hosted/private AI platform development, and LLM/inference
   optimization.
+max_items_per_day: 4
 include:
   - "building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals"
   - "inference and serving: self-hosted/local models, quantization, speed and cost"

@@ -10,9 +10,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from agent import config, dedupe, date_guard, deliver, digest, events, inbox, pending, status_export, summarize
-from agent.sources import github_trending, hn
-from agent.sources.base import Drop
+from agent import config, dedupe, date_guard, deliver, digest, events, inbox, pending, pipeline, status_export
 
 AGENT_DIR = Path(__file__).parent
 DEFAULTS_PATH = AGENT_DIR / "defaults.yaml"
@@ -20,11 +18,6 @@ TOPICS_DIR = AGENT_DIR / "topics"
 STATE_PATH = AGENT_DIR / "state.json"
 PENDING_PATH = AGENT_DIR / "pending.json"
 STATUS_PATH = AGENT_DIR / "status.json"
-
-CONNECTORS = {
-    "hacker_news": hn.collect,
-    "github_trending": github_trending.collect,
-}
 
 
 def run_dry(topic_filter: str | None) -> None:
@@ -44,7 +37,7 @@ def run_dry(topic_filter: str | None) -> None:
     for topic in topics:
         counts: Counter[str] = Counter()
         all_candidates = []
-        for source_name, connector in CONNECTORS.items():
+        for source_name, connector in pipeline.CONNECTORS.items():
             if source_name not in topic.sources:
                 continue
             try:
@@ -109,79 +102,7 @@ def run_real(topic_filter: str | None) -> None:
             writer.emit_drop("inbox", topic_slug, drop)
 
     for topic in topics:
-        all_candidates = []
-        for source_name, connector in CONNECTORS.items():
-            if source_name not in topic.sources:
-                continue
-            try:
-                candidates, drops = connector(topic, now)
-            except Exception as exc:  # noqa: BLE001 — one source failing must not abort the topic or the run
-                writer.emit("collect", "failed", topic=topic.slug, source=source_name, detail={"error": str(exc)})
-                print(f"{source_name} collection failed for {topic.slug}: {exc}")
-                continue
-            for candidate in candidates:
-                writer.emit_candidate("collect", source_name, topic.slug, candidate)
-                dedupe.record_seen(state, candidate, now)
-            for drop in drops:
-                writer.emit_drop("collect", topic.slug, drop)
-            all_candidates.extend(candidates)
-
-        kept, drops = date_guard.apply_recency_window(all_candidates, topic.max_age_days, now)
-        for drop in drops:
-            writer.emit_drop("date_guard", topic.slug, drop)
-
-        kept, drops = dedupe.filter_seen(kept, state)
-        for drop in drops:
-            writer.emit_drop("dedupe", topic.slug, drop)
-
-        kept, drops = pending.filter_already_pending(kept, queue)
-        for drop in drops:
-            writer.emit_drop("dedupe", topic.slug, drop)
-
-        ranked = summarize.rank_topic(topic, kept, settings)
-        ranked.sort(key=lambda item: item.score, reverse=True)
-
-        above_threshold, below_threshold = [], []
-        for item in ranked:
-            (above_threshold if item.score >= topic.min_relevance else below_threshold).append(item)
-        for item in below_threshold:
-            writer.emit_drop(
-                "rank",
-                topic.slug,
-                Drop(
-                    url=item.candidate.url,
-                    title=item.candidate.title,
-                    reason="below_relevance",
-                    detail={"score": item.score, "min_relevance": topic.min_relevance},
-                ),
-            )
-
-        keep = above_threshold[: topic.max_items]
-        over_limit = above_threshold[topic.max_items :]
-        for item in over_limit:
-            writer.emit_drop(
-                "rank",
-                topic.slug,
-                Drop(
-                    url=item.candidate.url,
-                    title=item.candidate.title,
-                    reason="over_max_items",
-                    detail={"max_items": topic.max_items},
-                ),
-            )
-
-        for item in keep:
-            writer.emit(
-                "rank",
-                "kept",
-                topic=topic.slug,
-                source=item.candidate.source,
-                url=item.candidate.url,
-                title=item.candidate.title,
-                score=item.score,
-            )
-
-        pending.add_kept(queue, topic.name, keep, now)
+        pipeline.process_topic(topic, state, queue, settings, now, writer)
 
     delivered = False
     if pending.is_email_due(approved, queue.last_email_at, now, settings.delivery.delivery_cadence_hours):

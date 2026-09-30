@@ -78,7 +78,7 @@
     }
     for (const t of Object.values(topics)) {
       t.in_window = t.dated - (t.drops.outside_window || 0);
-      t.new = t.in_window - (t.drops.seen || 0);
+      t.new = t.in_window - (t.drops.seen || 0) - (t.drops.dismissed || 0) - (t.drops.already_ranked || 0);
       t.scored = t.new - (t.drops.below_relevance || 0);
       t.kept = t.scored - (t.drops.over_max_items || 0);
     }

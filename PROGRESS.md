@@ -562,9 +562,9 @@ infrastructure.
 - **Sub-project #6, Topic & source quality: in progress.**
   Spec: `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
   Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
-  Task 2 of 5 done.
-  Latest: per-topic include/exclude criteria, reader profile, rubric hash, batches of 40.
-  Next: Task 3 (verdict cache and daily cap).
+  Task 3 of 5 done.
+  Latest: verdict cache per (URL, topic) in state.json, re-scored on growth or rubric change; rolling 24h cap per topic (3; AI Engineering 4); per-topic pass moved to agent/pipeline.py.
+  Next: Task 4 (--preview and report).
 
 ### How to resume in a new session
 

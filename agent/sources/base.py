@@ -28,7 +28,7 @@ class Drop:
 
     url: str
     title: str
-    reason: str  # undated | outside_window | below_min_points | seen | dismissed | below_relevance | over_max_items | rejected | expired
+    reason: str  # undated | outside_window | below_min_points | seen | dismissed | already_ranked | below_relevance | over_max_items | rejected | expired
     detail: dict
 
 
@@ -46,6 +46,6 @@ class TopicConfig:
     sources: dict
     max_age_days: int
     min_relevance: int
-    max_items: int
+    max_items_per_day: int  # rolling 24h cap on items this topic adds to the queue
     attention_enabled: bool
     attention_min_score_gain: int

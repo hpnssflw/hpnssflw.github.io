@@ -96,7 +96,7 @@ def load_topics(topics_dir: Path, defaults_path: Path) -> list[TopicConfig]:
                 sources=merged["sources"],
                 max_age_days=merged["max_age_days"],
                 min_relevance=merged["min_relevance"],
-                max_items=merged["max_items"],
+                max_items_per_day=merged["max_items_per_day"],
                 attention_enabled=attention.get("enabled", False),
                 attention_min_score_gain=attention.get("min_score_gain", 0),
             )

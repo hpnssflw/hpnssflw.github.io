@@ -1,5 +1,6 @@
 """Persistent seen-URL state: hashes, first-seen dates, score history,
-send counts, and inbox dismissals. filter_seen drops items that were
+send counts, inbox dismissals, and per-topic ranking verdicts (`ranks`,
+read and written by agent/rank_cache.py). filter_seen drops items that were
 actually delivered before, or that the inbox dismissed (rejected by
 Artem, or expired undecided) — a candidate that was collected and
 dropped in a past run for any other reason is not a duplicate, and stays
@@ -9,11 +10,23 @@ from __future__ import annotations
 
 import hashlib
 import json
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 
 from agent.sources.base import Candidate, Drop
+
+
+@dataclass
+class RankRecord:
+    """One topic's cached verdict on one URL — see agent/rank_cache.py."""
+
+    relevance: int  # 1-10
+    summary: str
+    rubric: str  # summarize.rubric_hash at scoring time
+    source_score: int | None  # HN points / GitHub stars at scoring time
+    ranked_at: str  # ISO 8601
+    queued_at: str | None = None  # set when this topic put the item in the pending queue
 
 
 @dataclass
@@ -22,17 +35,23 @@ class StateEntry:
     last_score: int | None
     times_sent: int
     dismissed: str | None = None  # "rejected" | "expired" -- set by the inbox, never cleared
+    ranks: dict[str, RankRecord] = field(default_factory=dict)  # topic slug -> verdict
 
 
 def url_hash(url: str) -> str:
     return hashlib.sha256(url.encode("utf-8")).hexdigest()[:16]
 
 
+def _entry_from_raw(value: dict) -> StateEntry:
+    ranks = {slug: RankRecord(**record) for slug, record in value.get("ranks", {}).items()}
+    return StateEntry(**{**value, "ranks": ranks})
+
+
 def load_state(path: Path) -> dict[str, StateEntry]:
     if not path.exists():
         return {}
     raw = json.loads(path.read_text(encoding="utf-8"))
-    return {key: StateEntry(**value) for key, value in raw.items()}
+    return {key: _entry_from_raw(value) for key, value in raw.items()}
 
 
 def save_state(path: Path, state: dict[str, StateEntry]) -> None:
