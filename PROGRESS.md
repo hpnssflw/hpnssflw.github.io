@@ -71,15 +71,22 @@ need a backend — see the spec intro and the research report).
   first run published `model: "opus"` with `playlists=kept` (Yandex timed
   out).
 - Final whole-plan review (opus): 0 Critical; 2 Important + 10 Minor
-  fixed in one wave (`525e887..e76c57a`); scoped re-review clean. Parked
-  Minor follow-ups: `ensureRemote` runs `git remote set-url` on every
-  publish, so a leftover `.git/config.lock` would fail every later run
-  (compare `get-url` first); one `assertPublishable` test in
-  `collect.test.mjs` can't fail (`expect.unreachable` inside the `try`);
-  `readPrevious*` read the clone's working tree, so a run that fails
-  between write and commit can make the next offline run skip. Yandex
-  timeouts and `getaddrinfo() thread failed to start` push failures show
-  up in `run.log` a few times a day; both self-heal on the next run.
+  fixed in one wave (`525e887..e76c57a`); scoped re-review clean. Its
+  three parked Minor follow-ups were fixed on 2026-09-29 (`953e5c0..e0591f9`;
+  spec `docs/superpowers/specs/2026-09-29-presence-runner-minors-design.md`,
+  plan `docs/superpowers/plans/2026-09-29-presence-runner-minors.md`):
+  `ensureRemote` writes `.git/config` only when `origin` is missing or
+  wrong, and a stale `config.lock` is swept like `index.lock`; the
+  `assertPublishable` message test can fail now; the previous state is
+  read from the clone's `HEAD`, not its working tree. `install.ps1` was
+  re-run on 2026-09-30; its first run published with `playlists=same` and
+  left `.git/config` untouched.
+- Known self-healing noise in `run.log`: Yandex timeouts and
+  `getaddrinfo() thread failed to start` push failures, a few times a
+  day. Seen once (2026-09-28 16:03, right after the machine woke): a run
+  started before sleep collided with a fresh one (`index.lock` exists,
+  `cannot lock ref 'HEAD'`). Git refused safely and the next run
+  published 20 s later. No run-level lock was added.
 - SDD ledger (git-ignored, full task history + the headless-Chrome check
   scripts `now-check.mjs` / `presence-check.mjs`):
   `.superpowers/sdd/2026-09-28-now-page/`.
