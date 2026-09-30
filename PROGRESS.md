@@ -81,6 +81,15 @@ need a backend — see the spec intro and the research report).
   read from the clone's `HEAD`, not its working tree. `install.ps1` was
   re-run on 2026-09-30; its first run published with `playlists=same` and
   left `.git/config` untouched.
+- Parked by that fix's final review (all Minor, none a regression):
+  `ensureRemote` doesn't restore a missing `remote.origin.fetch`, so a
+  run killed inside the first `remote add` would leave a URL-only origin
+  and publish every 5 minutes forever (fix: also check
+  `git config --get-all remote.origin.fetch`); the `REPO/.git` guard
+  doesn't stop git walking up from a half-initialized `.git` (no parent
+  repo above `%LOCALAPPDATA%` today; fix: `GIT_CEILING_DIRECTORIES` in
+  `GIT_ENV`); the /now/ spec's runner step 5 says "only if both hold"
+  but lists three conditions.
 - Known self-healing noise in `run.log`: Yandex timeouts and
   `getaddrinfo() thread failed to start` push failures, a few times a
   day. Seen once (2026-09-28 16:03, right after the machine woke): a run
