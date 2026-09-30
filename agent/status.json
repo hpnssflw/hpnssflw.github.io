@@ -3,138 +3,134 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 39,
-      "in_window": 39,
+      "collected": 36,
+      "in_window": 36,
       "kept": 0,
-      "new": 19
+      "new": 17
     },
     "tooling": {
-      "collected": 53,
-      "in_window": 53,
+      "collected": 51,
+      "in_window": 51,
       "kept": 2,
-      "new": 13
+      "new": 12
     },
     "web-products": {
-      "collected": 27,
-      "in_window": 27,
+      "collected": 25,
+      "in_window": 25,
       "kept": 0,
-      "new": 14
+      "new": 12
     }
   },
-  "last_sent_at": "2026-09-29T00:01:33.933243+00:00",
+  "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
   "pending_count": 7,
   "recent_events": [
     {
       "reason": "below_relevance",
       "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935463+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935457+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935450+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 series",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935443+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "What happened to the Snowden archive",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935436+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935428+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Sonnet 5.5",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935421+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935401+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935394+00:00",
+      "ts": "2026-09-30T04:09:27.680891+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Jev Plays Pok\u00e9mon Red",
       "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935386+00:00",
+      "ts": "2026-09-30T04:09:27.680877+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:27.680863+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:27.680849+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "California farmers are struggling to sell grapes as demand for wine drops",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:27.680835+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:27.680821+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sonnet 5.5",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:27.680807+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:27.680791+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ideas on modernizing the open-source desktop",
       "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935379+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
-      "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935370+00:00",
+      "ts": "2026-09-30T04:09:27.680760+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Coding is not solved",
       "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935358+00:00",
+      "ts": "2026-09-30T04:09:27.680740+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:27.680716+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
       "topic": "web-products",
-      "ts": "2026-09-29T20:28:34.935299+00:00",
+      "ts": "2026-09-30T04:09:27.680645+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Launch HN: Vespper (YC F24) \u2013 SOTA Docx MCP",
       "topic": "web-products",
-      "ts": "2026-09-29T20:28:27.352861+00:00",
+      "ts": "2026-09-30T04:09:14.287326+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "Tells of a Slop UI",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:14.287305+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "Grammarly will send unhinged messages to all your users if you try to cancel",
+      "topic": "web-products",
+      "ts": "2026-09-30T04:09:14.287294+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-09-24T16:03:10.191448+00:00"
-    },
     {
       "kept": 4,
       "ts": "2026-09-24T22:48:04.749226+00:00"
@@ -226,28 +222,32 @@
     {
       "kept": 2,
       "ts": "2026-09-29T20:27:49.882165+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-09-30T04:08:45.319706+00:00"
     }
   ],
-  "streak": 217,
+  "streak": 218,
   "topics": [
     {
-      "collected": 39,
+      "collected": 36,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 53,
+      "collected": 51,
       "kept": 2,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 27,
+      "collected": 25,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-29T20:27:49.882165+00:00"
+  "updated_at": "2026-09-30T04:08:45.319706+00:00"
 }

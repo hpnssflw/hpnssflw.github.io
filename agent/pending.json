@@ -2,26 +2,6 @@
   "items": [
     {
       "pending_since": "2026-09-29T06:46:24.490792+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "An MCP that enables AI agents to edit Word documents using a fine-tuned model, directly relevant to agent pipelines and LLM optimization.",
-      "title": "Launch HN: Vespper (YC F24) \u2013 SOTA Docx MCP",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://www.vespper.com/blog/launching-vespper-docx-mcp"
-    },
-    {
-      "pending_since": "2026-09-29T06:46:24.490792+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "A GitHub framework for automatically finding trending topics and generating daily reports, customizable for any industry.",
-      "title": "KKKKhazix/AIHOT",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/KKKKhazix/AIHOT"
-    },
-    {
-      "pending_since": "2026-09-29T06:46:24.490792+00:00",
       "score": 8,
       "source": "github",
       "summary": "A Windows tool that assists with chat replies by using OCR to read messages and suggesting responses.",
@@ -69,7 +49,27 @@
       "topic": "tooling",
       "topic_name": "Tooling",
       "url": "https://news.ycombinator.com/item?id=49848955"
+    },
+    {
+      "pending_since": "2026-09-30T04:08:45.319706+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "A GitHub repo offering fine-tunes of Qwen3.5 and Gemma 4 for zero-shot classification, relevant as an AI tooling resource.",
+      "title": "firelex/jeff",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/firelex/jeff"
+    },
+    {
+      "pending_since": "2026-09-30T04:08:45.319706+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "A GitHub repo for an independent CarPlay receiver for Android head units, a software tool but not web development focused.",
+      "title": "shihabal3amri/DiPlay",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/shihabal3amri/DiPlay"
     }
   ],
-  "last_email_at": "2026-09-29T00:01:33.933243+00:00"
+  "last_email_at": "2026-09-30T04:08:45.319706+00:00"
 }
