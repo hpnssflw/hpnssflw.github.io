@@ -6,136 +6,132 @@
       "collected": 38,
       "in_window": 38,
       "kept": 1,
-      "new": 18
+      "new": 19
     },
     "tooling": {
-      "collected": 51,
-      "in_window": 51,
+      "collected": 52,
+      "in_window": 52,
       "kept": 2,
-      "new": 13
+      "new": 12
     },
     "web-products": {
-      "collected": 28,
-      "in_window": 28,
+      "collected": 29,
+      "in_window": 29,
       "kept": 1,
-      "new": 15
+      "new": 14
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 11,
+  "pending_count": 15,
   "recent_events": [
     {
-      "score": 7,
+      "score": 6,
       "source": "hn",
-      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
       "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276533+00:00",
+      "ts": "2026-09-30T20:34:12.066600+00:00",
       "verdict": "kept"
     },
     {
       "reason": "below_relevance",
       "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276519+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276503+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
-      "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276482+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Sonnet 5.5",
-      "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276467+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276452+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276438+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
-      "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276422+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
-      "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276406+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
-      "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276391+00:00",
+      "ts": "2026-09-30T20:34:12.066591+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276375+00:00",
+      "ts": "2026-09-30T20:34:12.066584+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "September 2026: The world today, as seen by one Polish guy",
+      "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
       "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276358+00:00",
+      "ts": "2026-09-30T20:34:12.066576+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sonnet 5.5",
+      "topic": "web-products",
+      "ts": "2026-09-30T20:34:12.066569+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "topic": "web-products",
+      "ts": "2026-09-30T20:34:12.066562+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-09-30T20:34:12.066555+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
+      "topic": "web-products",
+      "ts": "2026-09-30T20:34:12.066533+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
+      "topic": "web-products",
+      "ts": "2026-09-30T20:34:12.066525+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
+      "topic": "web-products",
+      "ts": "2026-09-30T20:34:12.066518+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
+      "topic": "web-products",
+      "ts": "2026-09-30T20:34:12.066510+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ideas on modernizing the open-source desktop",
       "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276339+00:00",
+      "ts": "2026-09-30T20:34:12.066501+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Coding is not solved",
       "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276315+00:00",
+      "ts": "2026-09-30T20:34:12.066490+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
+      "title": "September 2026: The world today, as seen by one Polish guy",
       "topic": "web-products",
-      "ts": "2026-09-30T14:39:00.276260+00:00",
+      "ts": "2026-09-30T20:34:12.066420+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "topic": "web-products",
+      "ts": "2026-09-30T20:33:55.497595+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-09-25T02:14:58.818007+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-09-25T09:09:50.571142+00:00"
@@ -227,9 +223,13 @@
     {
       "kept": 4,
       "ts": "2026-09-30T14:38:26.953769+00:00"
+    },
+    {
+      "kept": 4,
+      "ts": "2026-09-30T20:33:36.487127+00:00"
     }
   ],
-  "streak": 219,
+  "streak": 220,
   "topics": [
     {
       "collected": 38,
@@ -238,17 +238,17 @@
       "slug": "ai-engineering"
     },
     {
-      "collected": 51,
+      "collected": 52,
       "kept": 2,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 28,
+      "collected": 29,
       "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-09-30T14:38:26.953769+00:00"
+  "updated_at": "2026-09-30T20:33:36.487127+00:00"
 }
