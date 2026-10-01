@@ -5,136 +5,132 @@
     "ai-engineering": {
       "collected": 39,
       "in_window": 39,
-      "kept": 1,
-      "new": 19
+      "kept": 0,
+      "new": 18
     },
     "tooling": {
-      "collected": 52,
-      "in_window": 52,
-      "kept": 5,
-      "new": 15
+      "collected": 53,
+      "in_window": 53,
+      "kept": 2,
+      "new": 12
     },
     "web-products": {
-      "collected": 29,
-      "in_window": 29,
+      "collected": 28,
+      "in_window": 28,
       "kept": 0,
-      "new": 13
+      "new": 12
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 21,
+  "pending_count": 23,
   "recent_events": [
     {
       "reason": "below_relevance",
       "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.897004+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
-      "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896995+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "September 2026: The world today, as seen by one Polish guy",
-      "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896987+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 series",
-      "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896977+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Mini-AGI \u2013 Dynamic continual learning model trained on 8GB VRAM",
-      "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896968+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
-      "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896959+00:00",
+      "ts": "2026-10-01T15:08:00.284298+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896950+00:00",
+      "ts": "2026-10-01T15:08:00.284289+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Linux support is coming to Snapdragon X2 series",
+      "topic": "web-products",
+      "ts": "2026-10-01T15:08:00.284281+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "OpenAI GPT\u20136 Astra breaks Enigma message that has resisted solution since 2005",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896940+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
-      "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896930+00:00",
+      "ts": "2026-10-01T15:08:00.284272+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Sonnet 5.5",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896919+00:00",
+      "ts": "2026-10-01T15:08:00.284263+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896893+00:00",
+      "ts": "2026-10-01T15:08:00.284254+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "GPT-6 Sol and Luna",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896878+00:00",
+      "ts": "2026-10-01T15:08:00.284246+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
+      "topic": "web-products",
+      "ts": "2026-10-01T15:08:00.284236+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
+      "topic": "web-products",
+      "ts": "2026-10-01T15:08:00.284226+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ideas on modernizing the open-source desktop",
+      "topic": "web-products",
+      "ts": "2026-10-01T15:08:00.284215+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Coding is not solved",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:36.896808+00:00",
+      "ts": "2026-10-01T15:08:00.284199+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "September 2026: The world today, as seen by one Polish guy",
+      "topic": "web-products",
+      "ts": "2026-10-01T15:08:00.284120+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:21.410868+00:00",
+      "ts": "2026-10-01T15:07:49.055155+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
       "topic": "web-products",
-      "ts": "2026-10-01T04:21:21.410860+00:00",
+      "ts": "2026-10-01T15:07:49.055147+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "Launch HN: Magnitude (YC S25) \u2013 Self-optimizing inference engine for agents",
+      "topic": "web-products",
+      "ts": "2026-10-01T15:07:49.055139+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 3,
-      "ts": "2026-09-25T16:03:42.753888+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-25T22:54:50.790277+00:00"
@@ -226,28 +222,32 @@
     {
       "kept": 6,
       "ts": "2026-10-01T04:20:51.005866+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-10-01T15:07:18.725260+00:00"
     }
   ],
-  "streak": 221,
+  "streak": 222,
   "topics": [
     {
       "collected": 39,
-      "kept": 1,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 52,
-      "kept": 5,
+      "collected": 53,
+      "kept": 2,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 29,
+      "collected": 28,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-01T04:20:51.005866+00:00"
+  "updated_at": "2026-10-01T15:07:18.725260+00:00"
 }
