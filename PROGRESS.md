@@ -15,8 +15,9 @@
   15s comet timer that pauses on hover. Both cards share one frosted
   surface (`--card-bg`, "Home cards" in `app/globals.css`).
   `lib/topics.ts` now stores `subtopics[]`; `gloss()` builds
-  `/researcher/`'s descriptions. Header nav on inner routes is still
-  right-aligned — Artem hasn't decided whether to move it left.
+  `/researcher/`'s descriptions. Header on inner routes moved left the
+  same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
+  dim slash (`.site-header-sep`), wraps below ~320px.
 - Next.js App Router + TypeScript, statically exported (`output: 'export'`,
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
