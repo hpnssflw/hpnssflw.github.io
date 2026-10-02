@@ -18,6 +18,19 @@
   `/researcher/`'s descriptions. Header on inner routes moved left the
   same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
   dim slash (`.site-header-sep`), wraps below ~320px.
+- Hero rebuilt as a card the same day (`a76c02a`, picked from six rendered
+  variants): borderless `--card-bg` surface faded out at both sides, 48px
+  square avatar (`public/avatar.jpg`, a 5 KB crop — `photo.jpg` is now
+  unused but kept), name + roles, `email ↗ github ↗ now →` top right,
+  the thesis, and a one-line Claude Code presence row
+  (`ClaudePresence variant="inline"`). Then a mini GitHub contribution
+  grid in the card's right column (`868b73e`): last 26 weeks, violet with
+  an iridescent sheen, fetched at build time (`lib/github-calendar.ts`,
+  `components/GitHubGrid.tsx`); `deploy.yml` passes `GITHUB_TOKEN` and
+  rebuilds every 6 h. **Unverified until the first Actions build:** that
+  Actions' `GITHUB_TOKEN` may query `contributionsCollection` — if not,
+  the build log shows `[github-calendar] … skipping the grid` and the
+  grid is simply absent (fix: a read-only PAT secret).
 - Next.js App Router + TypeScript, statically exported (`output: 'export'`,
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
@@ -35,7 +48,7 @@
   client-fetches the same `status.json` from the `agent-data` branch.
 - Design system: `app/globals.css`, ported ~verbatim from the original
   `styles.css` (token scale + "case" system unchanged).
-- Tests: `npm test` (Vitest) covers `lib/posts` and `lib/agent-status`.
+- Tests: `npm test` (Vitest) — see CLAUDE.md for the module list.
 - Old `.html` URLs are kept alive by redirect stubs in `public/`.
 - Migration spec+plan: `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`
   and `.claude/plans/lucky-rolling-aurora.md`.
