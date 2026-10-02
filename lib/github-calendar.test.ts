@@ -5,6 +5,7 @@ import {
   levelsOf,
   parseCalendar,
   placeCells,
+  twinkle,
 } from "./github-calendar";
 
 function response(weeks: { date: string; contributionCount: number }[][], total = 7) {
@@ -109,6 +110,33 @@ describe("placeCells", () => {
       { col: 0, row: 6, date: "2026-09-26", count: 1, level: 1 },
       { col: 1, row: 0, date: "2026-09-27", count: 2, level: 4 },
     ]);
+  });
+});
+
+describe("twinkle", () => {
+  const year = Array.from({ length: 365 }, (_, i) =>
+    new Date(Date.UTC(2025, 9, 1) + i * 86_400_000).toISOString().slice(0, 10),
+  );
+
+  it("is the same for the same day", () => {
+    expect(twinkle("2026-09-30")).toEqual(twinkle("2026-09-30"));
+  });
+
+  it("stays in range, rounded to 0.1 s", () => {
+    for (const date of year) {
+      const t = twinkle(date);
+      expect(t.duration).toBeGreaterThanOrEqual(6);
+      expect(t.duration).toBeLessThanOrEqual(15);
+      expect(t.delay).toBeGreaterThanOrEqual(0);
+      expect(t.delay).toBeLessThanOrEqual(t.duration);
+      expect(Math.round(t.duration * 10)).toBeCloseTo(t.duration * 10, 9);
+    }
+  });
+
+  it("spreads across days: all tones, many rhythms", () => {
+    const all = year.map(twinkle);
+    expect(new Set(all.map((t) => t.tone))).toEqual(new Set([0, 1, 2]));
+    expect(new Set(all.map((t) => t.duration)).size).toBeGreaterThan(40);
   });
 });
 

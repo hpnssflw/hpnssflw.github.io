@@ -1,4 +1,5 @@
-import { fetchCalendar, GITHUB_LOGIN, placeCells } from "@/lib/github-calendar";
+import type { CSSProperties } from "react";
+import { fetchCalendar, GITHUB_LOGIN, placeCells, twinkle } from "@/lib/github-calendar";
 
 const WEEKS = 26;
 const CELL = 6;
@@ -10,9 +11,9 @@ const STEP = 8; // cell + 2px gap
  * calendar can't be fetched.
  *
  * Two layers of the same squares: every day in its level's violet, then
- * the active days again, filled with one sheen gradient that slides
- * across the whole grid (SMIL, every 8s) — a single moving highlight
- * rather than per-cell animations. The sheen layer is hidden under
+ * a glow layer over the active days — each square fades up in pink, white
+ * or cyan and back, on its own seeded rhythm (twinkle()), forever, through
+ * a soft bloom filter. The glow layer is hidden under
  * prefers-reduced-motion (globals.css).
  */
 export default async function GitHubGrid() {
@@ -38,33 +39,18 @@ export default async function GitHubGrid() {
         viewBox={`0 0 ${width} ${height}`}
         width={width}
         height={height}
+        overflow="visible"
         role="img"
         aria-label={`GitHub contributions over the last ${WEEKS} weeks`}
       >
         <defs>
-          <linearGradient
-            id="gh-sheen"
-            gradientUnits="userSpaceOnUse"
-            x1={0}
-            y1={0}
-            x2={width}
-            y2={height * 2}
-          >
-            {/* Colors come from globals.css (.gh-stop-*): attributes can't read CSS variables. */}
-            <stop offset="0.38" className="gh-stop-white" stopOpacity={0} />
-            <stop offset="0.45" className="gh-stop-pink" stopOpacity={0.55} />
-            <stop offset="0.5" className="gh-stop-white" stopOpacity={0.75} />
-            <stop offset="0.55" className="gh-stop-cyan" stopOpacity={0.5} />
-            <stop offset="0.62" className="gh-stop-white" stopOpacity={0} />
-            <animateTransform
-              attributeName="gradientTransform"
-              type="translate"
-              values={`${-width} 0; ${width} 0; ${width} 0`}
-              keyTimes="0; 0.45; 1"
-              dur="8s"
-              repeatCount="indefinite"
-            />
-          </linearGradient>
+          <filter id="gh-bloom" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
         </defs>
         <g className="gh-cells">
           {cells.map((c) => (
@@ -73,12 +59,24 @@ export default async function GitHubGrid() {
             </rect>
           ))}
         </g>
-        <g className="gh-sheen" fill="url(#gh-sheen)" aria-hidden="true">
+        <g className="gh-glow" filter="url(#gh-bloom)" aria-hidden="true">
           {cells
             .filter((c) => c.level > 0)
-            .map((c) => (
-              <rect key={c.date} {...square(c)} />
-            ))}
+            .map((c) => {
+              const t = twinkle(c.date);
+              const style: CSSProperties = {
+                animationDuration: `${t.duration}s`,
+                animationDelay: `-${t.delay}s`,
+              };
+              return (
+                <rect
+                  key={c.date}
+                  className={`l${c.level} t${t.tone}`}
+                  style={style}
+                  {...square(c)}
+                />
+              );
+            })}
         </g>
       </svg>
       <p className="gh-caption">

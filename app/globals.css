@@ -37,8 +37,8 @@
      headline. */
   --fs-2xs: 0.625rem; /* 10 — mono meta: labels, dates, back links */
   --fs-xs: 0.75rem;   /* 12 — role, contact, feed title/excerpt, body copy */
-  --fs-md: 1.25rem;   /* 20 — post subtitle, hero name */
-  --fs-lg: 1.5rem;    /* 24 — post h1 */
+  --fs-md: 1.25rem;   /* 20 — post subtitle */
+  --fs-lg: 1.5rem;    /* 24 — post h1, hero name */
 
   /* One container width for every route — header, content and footer
      share a left edge, and everything sits flush left inside it. Long
@@ -243,7 +243,8 @@ a:focus-visible {
              2 thesis (columns 1–2)          │ GitHub grid, column 3,
              3 live line — Claude Code now   │ rows 1–3, bottom-aligned
    Placement is explicit: the grid claims column 3 under the actions, so
-   the card is no taller with it than without it.
+   the card is no taller with it than without it. Its surface is shared
+   with the other cards (Home cards, below).
 
    One-shot entrance on load; `both` holds the 0%/100% state outside the
    animation's active range so nothing flashes unstyled. */
@@ -263,35 +264,15 @@ a:focus-visible {
   animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* The home cards' surface (--card-bg + blur) with no border, faded out at
-   both sides. It lives on a pseudo-element so the mask fades the tint and
-   the blur, never the content. */
-.hero-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: var(--card-bg);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 15%,
-    #000 85%,
-    transparent
-  );
-  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
-}
-
-/* public/avatar.jpg is a 192px square crop of the portrait (shown at 48,
-   so 4x). grayscale() keeps the page monochrome. */
+/* public/avatar.jpg is a 352px square crop of the portrait — the face and
+   the dark around it (shown at 64, so 5.5x). grayscale() keeps the page
+   monochrome. */
 .hero-card .avatar {
   grid-column: 1;
   grid-row: 1;
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   filter: grayscale(1) contrast(1.05);
 }
 
@@ -301,9 +282,9 @@ a:focus-visible {
 }
 
 #hero h1 {
-  margin: 2px 0 6px;
+  margin: 4px 0 8px;
   font-family: var(--font-sans);
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
   line-height: 1.15;
   font-weight: var(--w-thin);
   letter-spacing: 0.05em;
@@ -373,8 +354,9 @@ a:focus-visible {
    components/GitHubGrid.tsx: the last 26 weeks of contributions, baked
    in at build time (lib/github-calendar.ts), in the hero's column 3.
    A third deliberate palette break, after .accent and the agent's
-   lime/red: violet levels, with an iridescent sheen (pink → white →
-   cyan) sliding across the active days every 8s. */
+   lime/red: violet levels, and every active day glowing up in pink,
+   white or cyan on its own seeded rhythm (6–15 s), constantly — a few
+   squares lit at any moment, brighter on busier days. */
 
 :root {
   --gh-violet: #a970ff;
@@ -417,16 +399,50 @@ a:focus-visible {
   fill: var(--gh-violet);
 }
 
-.gh-stop-white {
-  stop-color: #fff;
+/* Dark for most of the cycle, a short swell around 80%: with every square
+   on its own duration and phase, the lit ones never line up. */
+@keyframes gh-glow {
+  0%,
+  60%,
+  100% {
+    opacity: 0;
+  }
+  80% {
+    opacity: var(--glow-peak);
+  }
 }
 
-.gh-stop-pink {
-  stop-color: var(--gh-pink);
+.gh-glow rect {
+  opacity: 0;
+  animation: gh-glow 6s ease-in-out infinite; /* duration and delay per square, inline */
 }
 
-.gh-stop-cyan {
-  stop-color: var(--gh-cyan);
+.gh-glow .l1 {
+  --glow-peak: 0.45;
+}
+
+.gh-glow .l2 {
+  --glow-peak: 0.6;
+}
+
+.gh-glow .l3 {
+  --glow-peak: 0.75;
+}
+
+.gh-glow .l4 {
+  --glow-peak: 0.9;
+}
+
+.gh-glow .t0 {
+  fill: var(--gh-pink);
+}
+
+.gh-glow .t1 {
+  fill: #fff;
+}
+
+.gh-glow .t2 {
+  fill: var(--gh-cyan);
 }
 
 .gh-caption {
@@ -439,7 +455,7 @@ a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .gh-sheen {
+  .gh-glow {
     display: none;
   }
 }
@@ -467,29 +483,51 @@ a:focus-visible {
 
 /* --- Home cards ------------------------------------------------- */
 
-/* One surface for everything in the home columns — the agent widget, the
-   LAB card and the subtopic tags: mono 10px on a see-through background
-   that blurs the grid texture behind it. */
+/* One surface for every card on "/" — the hero, the agent widget and the
+   LAB card: mono 10px on a see-through background that blurs the grid
+   texture behind it, no border. Only the hero's fades out at both sides. */
 :root {
   --card-bg: color-mix(in srgb, var(--agent-bg) 55%, transparent);
 }
 
 /* No overflow: hidden here — as a grid item it would drop the card's
    content-based minimum height and collapse it to its padding. The comet
-   track clips itself and fades out before the rounded corners. */
+   track clips itself and fades out at both ends, like the surface. */
 .agent-widget-card,
 .lab-card {
   position: relative;
+  isolation: isolate;
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
   line-height: 1.7;
   color: var(--text);
+  padding: 14px 16px;
+}
+
+/* The surface lives on a pseudo-element behind the content (isolation on
+   the card keeps z-index: -1 inside it), so the hero's mask fades the
+   tint and the blur, never the text. */
+.hero-card::before,
+.agent-widget-card::before,
+.lab-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: var(--card-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--agent-border);
-  border-radius: 4px;
-  padding: 14px 16px;
+}
+
+.hero-card::before {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
+  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
 }
 
 /* The card's one link, top right: watch ↗ on the agent widget, read ↗ on

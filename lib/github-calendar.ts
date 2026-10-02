@@ -97,6 +97,48 @@ export function placeCells(weeks: Day[][]): Cell[] {
   );
 }
 
+/** FNV-1a: a stable 32-bit seed from a string. */
+function hash(text: string): number {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < text.length; i++) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
+/** mulberry32: a tiny seeded PRNG, uniform in [0, 1). */
+function seeded(seed: number): () => number {
+  return () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+export interface Twinkle {
+  duration: number; // seconds per glow cycle, 6–15
+  delay: number; // seconds into the cycle at page load, 0–duration
+  tone: 0 | 1 | 2; // pink, white, cyan
+}
+
+/**
+ * One active day's glow: random-looking but seeded by its date, so a
+ * build is reproducible and the same day keeps its rhythm across builds.
+ * Rounded to 0.1 s to keep the markup short.
+ */
+export function twinkle(date: string): Twinkle {
+  const next = seeded(hash(date));
+  const duration = 6 + next() * 9;
+  const delay = next() * duration;
+  return {
+    duration: Math.round(duration * 10) / 10,
+    delay: Math.round(delay * 10) / 10,
+    tone: Math.floor(next() * 3) as Twinkle["tone"],
+  };
+}
+
 /**
  * Build-time only. Null — and the grid simply isn't rendered — without a
  * token, on a non-200, or after a second network failure; a GitHub hiccup

@@ -19,8 +19,8 @@ export default function HomePage() {
             <img
               className="avatar"
               src="/avatar.jpg"
-              width={192}
-              height={192}
+              width={352}
+              height={352}
               alt="Artem Polozov"
             />
             <div className="hero-id">
