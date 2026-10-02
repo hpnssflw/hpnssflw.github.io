@@ -19,13 +19,16 @@
   same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
   dim slash (`.site-header-sep`), wraps below ~320px.
 - Hero rebuilt as a card the same day (`a76c02a`, picked from six rendered
-  variants): borderless `--card-bg` surface faded out at both sides, 48px
-  square avatar (`public/avatar.jpg`, a 5 KB crop — `photo.jpg` is now
-  unused but kept), name + roles, `email ↗ github ↗ now →` top right,
+  variants): borderless `--card-bg` surface faded out at both sides, 64px
+  square avatar (`public/avatar.jpg`, a 352px crop of the face — `photo.jpg`
+  is now unused but kept), 24px name + roles, `email ↗ github ↗ now →`
+  top right,
   the thesis, and a one-line Claude Code presence row
   (`ClaudePresence variant="inline"`). Then a mini GitHub contribution
-  grid in the card's right column (`868b73e`): last 26 weeks, violet with
-  an iridescent sheen, fetched at build time (`lib/github-calendar.ts`,
+  grid in the card's right column (`868b73e`): last 26 weeks, violet, every
+  active day twinkling pink/white/cyan on its own seeded 6–15 s rhythm
+  (`01730d0`, which also made the agent and LAB cards borderless on the
+  same surface, without the hero's side fade), fetched at build time (`lib/github-calendar.ts`,
   `components/GitHubGrid.tsx`); `deploy.yml` passes `GITHUB_TOKEN` and
   rebuilds every 6 h. **Unverified until the first Actions build:** that
   Actions' `GITHUB_TOKEN` may query `contributionsCollection` — if not,
