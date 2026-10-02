@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { topics } from "@/lib/topics";
+import { gloss, topics } from "@/lib/topics";
 
 export default function ResearcherTopics() {
   return (
@@ -13,7 +13,7 @@ export default function ResearcherTopics() {
           ) : (
             <span className="topic-name">{topic.name}</span>
           )}
-          <span className="topic-gloss">{topic.gloss}</span>
+          <span className="topic-gloss">{gloss(topic)}</span>
         </li>
       ))}
     </ul>

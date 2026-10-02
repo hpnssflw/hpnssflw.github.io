@@ -1,7 +1,9 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
+import { subtopics, topics } from "@/lib/topics";
 import AgentWidget from "@/components/AgentWidget";
-import ResearcherTopics from "@/components/ResearcherTopics";
+import LabCarousel from "@/components/LabCarousel";
 
 export default function HomePage() {
   const posts = getAllPosts();
@@ -19,7 +21,6 @@ export default function HomePage() {
             alt="Artem Polozov"
           />
           <div className="hero-body">
-            <p className="role">Digital Craftsman</p>
             <h1>Artem Polozov</h1>
             <p className="hero-text">
               Web products, data visualization, systems integration, AI agent
@@ -39,41 +40,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="researcher">
-        <div className="wrap">
+      <div className="wrap home-columns">
+        <section id="researcher">
           <p className="section-label">
-            <Link href="/researcher/">Researcher</Link>
+            <Link href="/researcher/">Researcher</Link>:{" "}
+            <span className="section-topics">
+              {topics.map((topic, i) => (
+                <Fragment key={topic.name}>
+                  {i > 0 && ", "}
+                  {topic.href ? (
+                    <Link href={topic.href}>{topic.name}</Link>
+                  ) : (
+                    topic.name
+                  )}
+                </Fragment>
+              ))}
+              .
+            </span>
           </p>
-          <ResearcherTopics />
           <AgentWidget variant="compact" />
-        </div>
-      </section>
+          <p className="subtopic-tags">{subtopics.join(", ")}.</p>
+        </section>
 
-      <section id="lab">
-        <div className="wrap">
+        <section id="lab">
           <p className="section-label">
-            <Link href="/lab/">Lab</Link>
+            <Link href="/lab/">
+              Lab:{" "}
+              <span className="section-topics">takes on experience.</span>
+            </Link>
           </p>
-          <ul className="feed">
-            {posts.map((post) => (
-              <li key={post.slug}>
-                <Link href={`/lab/${post.slug}/`}>
-                  <span className="meta">
-                    <span className="mono date">{post.dateLabel}</span>
-                    <span className="mono sep">·</span>
-                    <span className="mono tag">{post.tag}</span>
-                  </span>
-                  <span className="title">{post.title}</span>
-                  <span className="excerpt">{post.excerpt}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <Link href="/lab/" className="all-posts">
-            All posts →
-          </Link>
-        </div>
-      </section>
+          <LabCarousel posts={posts} />
+        </section>
+      </div>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { topics } from "./topics";
+import { gloss, subtopics, topics } from "./topics";
 
 describe("topics", () => {
   it("has exactly the three RESEARCHER themes, in order", () => {
@@ -19,9 +19,21 @@ describe("topics", () => {
     });
   });
 
-  it("every topic has a non-empty gloss", () => {
+  it("every topic has at least one non-empty subtopic", () => {
     for (const t of topics) {
-      expect(t.gloss.length).toBeGreaterThan(0);
+      expect(t.subtopics.length).toBeGreaterThan(0);
+      for (const s of t.subtopics) expect(s.trim()).not.toBe("");
     }
+  });
+
+  it("gloss reads a topic's subtopics as one sentence", () => {
+    expect(gloss({ name: "X", subtopics: ["a", "b c", "D"] })).toBe(
+      "a, b c, D.",
+    );
+  });
+
+  it("subtopics lists every topic's subtopics, in topic order, no repeats", () => {
+    expect(subtopics).toEqual(topics.flatMap((t) => t.subtopics));
+    expect(new Set(subtopics).size).toBe(subtopics.length);
   });
 });
