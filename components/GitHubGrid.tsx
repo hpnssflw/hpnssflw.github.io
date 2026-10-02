@@ -2,8 +2,8 @@ import type { CSSProperties } from "react";
 import { fetchCalendar, GITHUB_LOGIN, placeCells, twinkle } from "@/lib/github-calendar";
 
 const WEEKS = 26;
-const CELL = 6;
-const STEP = 8; // cell + 2px gap
+const CELL = 8;
+const STEP = 10; // cell + 2px gap
 
 /**
  * Server component: runs at build time (see lib/github-calendar.ts) and
@@ -45,7 +45,7 @@ export default async function GitHubGrid() {
       >
         <defs>
           <filter id="gh-bloom" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="1.5" result="blur" />
+            <feGaussianBlur stdDeviation="2" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />

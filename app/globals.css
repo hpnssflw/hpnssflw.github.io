@@ -109,7 +109,6 @@ a:focus-visible {
 /* UPPERCASE — meta: labels, dates, navigation */
 
 .section-label,
-#hero h1,
 .feed .date,
 .post .date,
 .post .back,
@@ -239,18 +238,16 @@ a:focus-visible {
 /* The hero is a card in the home cards' language (mono 10px, actions top
    right) on one grid:
 
-   Row map:  1 avatar · name + roles · actions
-             2 thesis (columns 1–2)          │ GitHub grid, column 3,
-             3 live line — Claude Code now   │ rows 1–3, bottom-aligned
-   Placement is explicit: the grid claims column 3 under the actions, so
-   the card is no taller with it than without it. Its surface is shared
-   with the other cards (Home cards, below).
+   Row map:  1 avatar · name, roles, thesis │ actions, then the GitHub
+             2 live line — Claude Code now   │ grid (column 3, rows 1–2,
+                                             │ bottom-aligned)
+   Placement is explicit: the grid claims column 3 under the actions.
+   Its surface is shared with the other cards (Home cards, below).
 
    One-shot entrance on load; `both` holds the 0%/100% state outside the
    animation's active range so nothing flashes unstyled. */
 .hero-card {
   position: relative;
-  isolation: isolate;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   column-gap: 16px;
@@ -281,13 +278,15 @@ a:focus-visible {
   grid-row: 1;
 }
 
+/* Normal case — the one heading on the site that isn't in the case
+   system's uppercase meta or lowercase content: it's a name. */
 #hero h1 {
-  margin: 4px 0 8px;
+  margin: 2px 0 6px;
   font-family: var(--font-sans);
   font-size: var(--fs-lg);
   line-height: 1.15;
   font-weight: var(--w-thin);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   color: var(--text-strong);
 }
 
@@ -325,9 +324,10 @@ a:focus-visible {
   font-style: italic;
 }
 
+/* Under the roles, inside .hero-id — aligned with the name, not the
+   avatar. */
 .hero-thesis {
-  grid-column: 1 / 3;
-  margin: 0;
+  margin: 8px 0 0;
   font-family: var(--font-sans);
   font-size: var(--fs-xs);
 }
@@ -366,7 +366,7 @@ a:focus-visible {
 
 .gh {
   grid-column: 3;
-  grid-row: 1 / 4;
+  grid-row: 1 / 3;
   align-self: end;
   justify-self: end;
   display: flex;
@@ -375,8 +375,11 @@ a:focus-visible {
   gap: 6px;
 }
 
+/* Scales down (viewBox) when a phone is narrower than the grid. */
 .gh-grid {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .gh-cells .l0 {
@@ -485,49 +488,30 @@ a:focus-visible {
 
 /* One surface for every card on "/" — the hero, the agent widget and the
    LAB card: mono 10px on a see-through background that blurs the grid
-   texture behind it, no border. Only the hero's fades out at both sides. */
+   texture behind it, no border. */
 :root {
   --card-bg: color-mix(in srgb, var(--agent-bg) 55%, transparent);
 }
 
-/* No overflow: hidden here — as a grid item it would drop the card's
-   content-based minimum height and collapse it to its padding. The comet
-   track clips itself and fades out at both ends, like the surface. */
+.hero-card,
 .agent-widget-card,
 .lab-card {
-  position: relative;
-  isolation: isolate;
-  font-family: var(--font-mono);
-  font-size: var(--fs-2xs);
-  line-height: 1.7;
-  color: var(--text);
-  padding: 14px 16px;
-}
-
-/* The surface lives on a pseudo-element behind the content (isolation on
-   the card keeps z-index: -1 inside it), so the hero's mask fades the
-   tint and the blur, never the text. */
-.hero-card::before,
-.agent-widget-card::before,
-.lab-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
   background: var(--card-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
-.hero-card::before {
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 15%,
-    #000 85%,
-    transparent
-  );
-  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+/* No overflow: hidden here — as a grid item it would drop the card's
+   content-based minimum height and collapse it to its padding. The comet
+   track clips itself and fades out at both ends. */
+.agent-widget-card,
+.lab-card {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  color: var(--text);
+  padding: 14px 16px;
 }
 
 /* The card's one link, top right: watch ↗ on the agent widget, read ↗ on
@@ -915,6 +899,35 @@ footer a {
   color: var(--text);
 }
 
+/* --- "/" on one screen ------------------------------------------
+   At desktop widths the home page fits the window. Its three gaps —
+   under the hero, under the columns, under the footer line — keep their
+   full 72 / 100 / 96px while the window is tall enough (~720px), and
+   below that shrink together, in proportion, into what's left after the
+   fixed content: the hero card, labels + cards + subtopics and the footer
+   line, ~440px — --home-fixed adds 20px to spare. Under ~520px they
+   bottom out at 24px and the page scrolls rather than cut anything off.
+   If the home content grows taller, raise --home-fixed with it. */
+@media (min-width: 641px) {
+  :root {
+    --home-fixed: 460px;
+    --home-free: calc(100svh - var(--home-fixed));
+  }
+
+  #hero {
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.27), 72px);
+  }
+
+  .home-columns > #researcher,
+  .home-columns > #lab {
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.38), 100px);
+  }
+
+  #hero ~ footer {
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.35), 96px);
+  }
+}
+
 /* --- Mobile ---------------------------------------------------- */
 
 @media (max-width: 640px) {
@@ -953,7 +966,6 @@ footer a {
 
   /* Everything below the name runs full width; the GitHub grid becomes
      the last row, left-aligned. */
-  .hero-thesis,
   .hero-now,
   .gh {
     grid-column: 1 / -1;

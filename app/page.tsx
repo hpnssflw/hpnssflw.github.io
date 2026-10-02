@@ -26,8 +26,10 @@ export default function HomePage() {
             <div className="hero-id">
               <h1>Artem Polozov</h1>
               <p className="hero-roles">
-                Web products · data visualization · systems integration · AI
-                agent orchestration
+                Web products · data visualization · AI engineering
+              </p>
+              <p className="hero-thesis accent">
+                Understand how it fails, then build so it doesn&apos;t.
               </p>
             </div>
             <nav className="hero-actions" aria-label="Contact">
@@ -41,9 +43,6 @@ export default function HomePage() {
                 Now <span aria-hidden="true">→</span>
               </Link>
             </nav>
-            <p className="hero-thesis accent">
-              Understand how it fails, then build so it doesn&apos;t.
-            </p>
             <div className="hero-now">
               <span className="hero-now-label">Claude Code</span>
               <ClaudePresence variant="inline" />
