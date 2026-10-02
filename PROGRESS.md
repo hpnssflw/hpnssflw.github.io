@@ -1,13 +1,26 @@
 # Project Progress
 
-## Site — Digital Craftsman + LAB + RESEARCHER
+## Site — LAB + RESEARCHER
 
-**Status: migrated to Next.js.**
+**Status: migrated to Next.js; home page redesigned 2026-10-02.**
 
+- Home redesign (2026-10-02, commit `bb39ce0`, iterated live with Artem —
+  no spec/plan): one 1040px container on every route, content flush left,
+  long prose on a 592px column (`--measure` / `--measure-text`); hero
+  without "Digital Craftsman", pinned to the top; RESEARCHER and LAB side
+  by side on a subgrid (`.home-columns`) so labels and cards share rows.
+  RESEARCHER: label lists the topics, agent widget card (`watch ↗`,
+  slow lime comet), subtopics as text below. LAB: "takes on
+  experience.", one post at a time (`components/LabCarousel.tsx`) on a
+  15s comet timer that pauses on hover. Both cards share one frosted
+  surface (`--card-bg`, "Home cards" in `app/globals.css`).
+  `lib/topics.ts` now stores `subtopics[]`; `gloss()` builds
+  `/researcher/`'s descriptions. Header nav on inner routes is still
+  right-aligned — Artem hasn't decided whether to move it left.
 - Next.js App Router + TypeScript, statically exported (`output: 'export'`,
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
-- Routes: `/` (hero, RESEARCHER preview, LAB feed, agent widget),
+- Routes: `/` (hero, RESEARCHER + LAB cards — see the redesign above),
   `/lab/` + `/lab/[slug]/` (MDX posts from `content/lab/`, five so far —
   "Cheap Models, Strong Graphs", "State Without a Database", "The Email
   That Never Got Sent", "Config That Lied", "Reviewing Your Own
