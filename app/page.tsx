@@ -4,6 +4,7 @@ import { getAllPosts } from "@/lib/posts";
 import { subtopics, topics } from "@/lib/topics";
 import AgentWidget from "@/components/AgentWidget";
 import ClaudePresence from "@/components/ClaudePresence";
+import GitHubGrid from "@/components/GitHubGrid";
 import LabCarousel from "@/components/LabCarousel";
 
 export default function HomePage() {
@@ -47,6 +48,7 @@ export default function HomePage() {
               <span className="hero-now-label">Claude Code</span>
               <ClaudePresence variant="inline" />
             </div>
+            <GitHubGrid />
           </div>
         </div>
       </section>
