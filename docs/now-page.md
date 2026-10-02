@@ -47,8 +47,9 @@ flowchart LR
 | Файл | Роль |
 |---|---|
 | `app/now/page.tsx` | Статическая оболочка страницы с тремя блоками |
-| `components/ClaudePresence.tsx` | Виджет Claude Code. Читает `presence.json` при открытии, потом раз в 5 минут, пока вкладка видна. Если обновление не удалось, показывает последние удачные данные |
-| `lib/claude-presence.ts` | `parsePresence`: строгая проверка файла, собирает объект только из известных ключей. `effectiveState`: данные старше 20 минут показываются как `offline`. `presenceView`: три строки виджета |
+| `components/ClaudePresence.tsx` | Виджет Claude Code на `/now/` (три строки) |
+| `components/usePresence.ts` | Хук загрузки: читает `presence.json` при открытии, потом раз в 5 минут, пока вкладка видна. Если обновление не удалось, показывает последние удачные данные. Общий для `/now/` и виджета на главной (`components/ClaudeWidget.tsx`, метр часов за сегодня) |
+| `lib/claude-presence.ts` | `parsePresence`: строгая проверка файла, собирает объект только из известных ключей. `effectiveState`: данные старше 20 минут показываются как `offline`. `presenceView`: три строки виджета. `meterCells`: 24 клетки метра на главной — счёт часов за сегодня, не время суток |
 | `components/NowMusic.tsx` → `PlaylistList.tsx` → `PlaylistCard.tsx` | Блок музыки. `playlists.json` читается один раз. Плеер (iframe Яндекса) создаётся только при открытии, и открыт всегда только один |
 | `lib/yandex-music.ts` | `normalizePlaylists`: только публичные плейлисты, проверка UUID (он попадает в адрес iframe), обложки только с `avatars.yandex.net`, сначала новые |
 | `lib/now-config.ts` | Адреса файлов, запасная ссылка на Яндекс Музыку, пороги: устаревание 20 минут, опрос 5 минут |

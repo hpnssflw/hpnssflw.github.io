@@ -18,20 +18,25 @@
   `/researcher/`'s descriptions. Header on inner routes moved left the
   same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
   dim slash (`.site-header-sep`), wraps below ~320px.
-- Hero rebuilt as a card the same day (`a76c02a`..`7977250`, iterated
+- Hero rebuilt as a card the same day (`a76c02a`..`034316b`, iterated
   live from rendered variants): the home cards' borderless `--card-bg`
   surface (now shared by the hero, agent widget and LAB card), 64px
   square avatar (`public/avatar.jpg`, a 352px crop of the face —
   `photo.jpg` is unused but kept), name in normal case at 24px, roles
   "web products · data visualization · AI engineering" with the thesis
-  under them, `email ↗ github ↗ now →` top right, and a one-line Claude
-  Code presence row (`ClaudePresence variant="inline"`). In the right
-  column, a mini GitHub contribution grid (`868b73e`): last 26 weeks,
-  8px violet cells, every active day twinkling pink/white/cyan on its own
-  seeded 6–15 s rhythm, fetched at build time (`lib/github-calendar.ts`,
-  `components/GitHubGrid.tsx`); `deploy.yml` passes `GITHUB_TOKEN` and
-  rebuilds every 6 h. At desktop widths "/" fits one screen: its three
-  vertical gaps shrink with the window height (`--home-fixed` in
+  under them, `email ↗ github ↗ now →` top right. Under the actions, two
+  widgets side by side: Claude Code (`components/ClaudeWidget.tsx`,
+  `034316b`) — status line, a 24-cell meter of today's active hours
+  (`meterCells`: a count, not a clock), lime, live cell breathing — and
+  a mini GitHub contribution grid (`868b73e`): last 26 weeks, 8px violet
+  cells, every active day twinkling pink/white/cyan on its own seeded
+  6–15 s rhythm, fetched at build time (`lib/github-calendar.ts`,
+  `components/GitHubGrid.tsx`). Under the columns, a flat TELEGRAM strip
+  (`e1bf110`): the agent channel's latest post, read at build time from
+  `t.me/s/hypnosisflow` (`lib/telegram-post.ts`,
+  `components/TelegramLatest.tsx`). `deploy.yml` passes `GITHUB_TOKEN` and
+  rebuilds every 6 h for both. At desktop widths "/" fits one screen: its
+  four vertical gaps shrink with the window height (`--home-fixed` in
   globals.css — raise it if the home content grows). **Unverified until
   the first Actions build:** that Actions' `GITHUB_TOKEN` may query
   `contributionsCollection` — if not, the build log shows
