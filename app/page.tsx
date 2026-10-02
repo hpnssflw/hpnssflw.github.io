@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import { subtopics, topics } from "@/lib/topics";
 import AgentWidget from "@/components/AgentWidget";
-import ClaudePresence from "@/components/ClaudePresence";
+import ClaudeWidget from "@/components/ClaudeWidget";
 import GitHubGrid from "@/components/GitHubGrid";
 import LabCarousel from "@/components/LabCarousel";
 import TelegramLatest from "@/components/TelegramLatest";
@@ -44,11 +44,10 @@ export default function HomePage() {
                 Now <span aria-hidden="true">→</span>
               </Link>
             </nav>
-            <div className="hero-now">
-              <span className="hero-now-label">Claude Code</span>
-              <ClaudePresence variant="inline" />
+            <div className="hero-widgets">
+              <ClaudeWidget />
+              <GitHubGrid />
             </div>
-            <GitHubGrid />
           </div>
         </div>
       </section>

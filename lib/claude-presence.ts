@@ -115,3 +115,26 @@ export function presenceView(p: Presence, nowMs: number): PresenceView {
   const updated = `updated ${formatAgo(nowMs - Date.parse(p.updatedAt))}`;
   return { state, headline, today, footer: p.model ? `${p.model} · ${updated}` : updated };
 }
+
+export interface MeterCell {
+  fill: "on" | "part" | "off";
+  live: boolean;
+}
+
+/**
+ * The home widget's meter: 24 cells, one per hour of today's active time
+ * — a count, not a clock (presence.json has no per-hour data). Full hours
+ * are "on", the started hour "part". While a session runs (working or
+ * waiting) the last lit cell is live; a session that started under a
+ * minute ago shows as one live partial cell.
+ */
+export function meterCells(todayMinutes: number, state: PresenceState): MeterCell[] {
+  const running = state !== "offline";
+  const minutes = Math.min(Math.max(todayMinutes, 0), 24 * 60);
+  const full = Math.floor(minutes / 60);
+  const lit = full + (minutes % 60 > 0 || (running && minutes === 0) ? 1 : 0);
+  return Array.from({ length: 24 }, (_, i) => ({
+    fill: i < full ? "on" : i < lit ? "part" : "off",
+    live: running && i === lit - 1,
+  }));
+}

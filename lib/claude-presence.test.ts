@@ -3,6 +3,7 @@ import {
   type Presence,
   effectiveState,
   isOwnerToday,
+  meterCells,
   parsePresence,
   presenceView,
 } from "./claude-presence";
@@ -138,5 +139,39 @@ describe("presenceView", () => {
 
   it("omits a null model from the footer", () => {
     expect(presenceView(makePresence({ model: null }), NOW).footer).toBe("updated 4 min ago");
+  });
+});
+
+describe("meterCells", () => {
+  const CODE = { on: "o", part: "p", off: "-" } as const;
+  const fills = (cells: ReturnType<typeof meterCells>) => cells.map((c) => CODE[c.fill]).join("");
+  const live = (cells: ReturnType<typeof meterCells>) => cells.findIndex((c) => c.live);
+
+  it("is 24 cells, one per hour of today's active time", () => {
+    const cells = meterCells(15 * 60 + 8, "offline");
+    expect(cells).toHaveLength(24);
+    // 15 full hours, a partial 16th, the rest off.
+    expect(fills(cells)).toBe("o".repeat(15) + "p" + "-".repeat(8));
+    expect(live(cells)).toBe(-1);
+  });
+
+  it("marks the last lit cell live while a session is on", () => {
+    expect(live(meterCells(15 * 60 + 8, "working"))).toBe(15);
+    expect(live(meterCells(3 * 60, "waiting"))).toBe(2);
+  });
+
+  it("shows a just-started session as one live partial cell", () => {
+    const cells = meterCells(0, "working");
+    expect(fills(cells)).toBe("p" + "-".repeat(23));
+    expect(live(cells)).toBe(0);
+  });
+
+  it("is all off with no time today and nothing running", () => {
+    expect(fills(meterCells(0, "offline"))).toBe("-".repeat(24));
+  });
+
+  it("never overflows the day", () => {
+    expect(fills(meterCells(30 * 60, "working"))).toBe("o".repeat(24));
+    expect(live(meterCells(30 * 60, "working"))).toBe(23);
   });
 });
