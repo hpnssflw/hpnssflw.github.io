@@ -6,6 +6,7 @@ import AgentWidget from "@/components/AgentWidget";
 import ClaudePresence from "@/components/ClaudePresence";
 import GitHubGrid from "@/components/GitHubGrid";
 import LabCarousel from "@/components/LabCarousel";
+import TelegramLatest from "@/components/TelegramLatest";
 
 export default function HomePage() {
   const posts = getAllPosts();
@@ -84,6 +85,8 @@ export default function HomePage() {
           <LabCarousel posts={posts} />
         </section>
       </div>
+
+      <TelegramLatest />
     </>
   );
 }

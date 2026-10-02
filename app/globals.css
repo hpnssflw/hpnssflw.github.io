@@ -884,6 +884,60 @@ a:focus-visible {
   color: var(--muted);
 }
 
+/* --- Telegram strip ----------------------------------------------
+   components/TelegramLatest.tsx: the agent channel's latest post, under
+   the home columns. Flat on purpose — no card surface: the section
+   label's row (date and open ↗ pushed right), then the post's links on
+   one line, cut with an ellipsis (wrapping on phones). */
+
+#telegram {
+  padding-bottom: 80px;
+}
+
+.tg-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+#telegram .section-label {
+  min-width: 0;
+  margin: 0;
+}
+
+.tg-meta {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.tg-links {
+  margin: 10px 0 0;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  color: var(--muted);
+  text-transform: lowercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tg-links a {
+  color: var(--text);
+}
+
+.tg-links a:hover,
+.tg-links a:focus-visible {
+  color: var(--text-strong);
+}
+
 /* --- Footer ---------------------------------------------------- */
 
 footer {
@@ -900,27 +954,32 @@ footer a {
 }
 
 /* --- "/" on one screen ------------------------------------------
-   At desktop widths the home page fits the window. Its three gaps —
-   under the hero, under the columns, under the footer line — keep their
-   full 72 / 100 / 96px while the window is tall enough (~720px), and
-   below that shrink together, in proportion, into what's left after the
-   fixed content: the hero card, labels + cards + subtopics and the footer
-   line, ~440px — --home-fixed adds 20px to spare. Under ~520px they
-   bottom out at 24px and the page scrolls rather than cut anything off.
-   If the home content grows taller, raise --home-fixed with it. */
+   At desktop widths the home page fits the window. Its four gaps —
+   under the hero, under the columns, under the Telegram strip, under the
+   footer line — keep their full 72 / 56 / 80 / 96px while the window is
+   tall enough (~840px), and below that shrink together, in proportion,
+   into what's left after the fixed content: the hero card, labels + cards
+   + subtopics, the Telegram strip and the footer line, ~490px —
+   --home-fixed adds 20px to spare. Under ~590px they bottom out at 24px
+   and the page scrolls rather than cut anything off. If the home content
+   grows taller, raise --home-fixed with it. */
 @media (min-width: 641px) {
   :root {
-    --home-fixed: 460px;
+    --home-fixed: 510px;
     --home-free: calc(100svh - var(--home-fixed));
   }
 
   #hero {
-    padding-bottom: clamp(24px, calc(var(--home-free) * 0.27), 72px);
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.22), 72px);
   }
 
   .home-columns > #researcher,
   .home-columns > #lab {
-    padding-bottom: clamp(24px, calc(var(--home-free) * 0.38), 100px);
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.18), 56px);
+  }
+
+  #telegram {
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.25), 80px);
   }
 
   #hero ~ footer {
@@ -999,6 +1058,23 @@ footer a {
 
   #lab.standalone {
     padding-top: 56px;
+  }
+
+  #telegram {
+    padding-bottom: 64px;
+  }
+
+  .tg-head {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .tg-meta {
+    margin-left: 0;
+  }
+
+  .tg-links {
+    white-space: normal;
   }
 
   .feed li + li {

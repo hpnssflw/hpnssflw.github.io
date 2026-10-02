@@ -53,14 +53,17 @@ initiatives — see `PROGRESS.md` for status of each.
   re-run `install.ps1` after changing `scripts/presence/*.mjs` or after a
   Node upgrade/move. In `run.log`, `claude agents failed` explains a widget
   that never shows `working`; `yandex music failed`, stale playlists.
-- **The home hero's GitHub contribution grid is the one build-time
-  fetch.** `components/GitHubGrid.tsx` (server component) asks GitHub's
-  GraphQL API for the public calendar during `next build`
-  (`lib/github-calendar.ts`); `deploy.yml` passes Actions' `GITHUB_TOKEN`
-  and rebuilds every 6 hours so the baked-in grid stays recent. Without a
-  token the grid is skipped and the build still succeeds — so locally,
-  start `npm run dev` / `npm run build` with `GITHUB_TOKEN` set (e.g. from
-  `gh auth token`) to see it.
+- **Two home blocks are fetched at build time**, and `deploy.yml`
+  rebuilds every 6 hours to keep them recent; either one failing is
+  skipped and the build still succeeds. `components/GitHubGrid.tsx` asks
+  GitHub's GraphQL API for the public contribution calendar
+  (`lib/github-calendar.ts`) — it needs a token: `deploy.yml` passes
+  Actions' `GITHUB_TOKEN`, and locally start `npm run dev` /
+  `npm run build` with `GITHUB_TOKEN` set (e.g. from `gh auth token`) to
+  see it. `components/TelegramLatest.tsx` reads the agent channel's
+  latest post from its public preview page, `t.me/s/hypnosisflow`
+  (`lib/telegram-post.ts`) — no token, but t.me may be unreachable from a
+  dev machine without a VPN.
 - **The GitHub remote is `hpnssflw/hpnssflw.github.io`** (a user site —
   served at the domain root, so no `basePath`). Work happens directly on
   `main` — no feature branches, no PRs — unless the user explicitly asks
@@ -98,7 +101,8 @@ initiatives — see `PROGRESS.md` for status of each.
   npm run serve           # serve out/ exactly as Pages will
   npm test                # Vitest — lib/posts, lib/agent-status, lib/pending-queue,
                           # lib/topics, lib/yandex-music, lib/claude-presence,
-                          # lib/now-format, lib/github-calendar, scripts/presence
+                          # lib/now-format, lib/github-calendar, lib/telegram-post,
+                          # scripts/presence
   ```
   (`next dev` occasionally hangs the TCP handshake in this environment;
   if a port won't come up, kill node and retry, or verify against
