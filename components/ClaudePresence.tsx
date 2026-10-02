@@ -16,8 +16,15 @@ type Load =
  * PRESENCE_POLL_MS while the tab is visible. A failed refresh after a
  * good one keeps the last good payload — presenceView() still flips it
  * to offline once it goes stale.
+ *
+ * `block` is /now/'s three-line widget; `inline` is the home hero's one
+ * line (status, then today's stats muted, no "updated" footer).
  */
-export default function ClaudePresence() {
+export default function ClaudePresence({
+  variant = "block",
+}: {
+  variant?: "block" | "inline";
+}) {
   const [load, setLoad] = useState<Load>({ kind: "loading" });
   const [now, setNow] = useState(0);
 
@@ -64,19 +71,33 @@ export default function ClaudePresence() {
     };
   }, []);
 
-  if (load.kind === "loading") return <p className="now-presence">…</p>;
+  const root = variant === "inline" ? "presence-inline" : "now-presence";
+  if (load.kind === "loading") return <p className={root}>…</p>;
   if (load.kind === "failed") {
-    return <p className="now-presence now-muted">status unavailable</p>;
+    return <p className={`${root} now-muted`}>status unavailable</p>;
   }
 
   const view = presenceView(load.presence, now);
+  const dot = (
+    <span className={`now-dot now-dot-${view.state}`} aria-hidden="true">
+      {GLYPH[view.state]}
+    </span>
+  );
+
+  if (variant === "inline") {
+    const rest = [view.today, load.presence.model].filter(Boolean).join(" · ");
+    return (
+      <p className={root}>
+        {dot} {view.headline}
+        {rest && <span className="now-muted"> · {rest}</span>}
+      </p>
+    );
+  }
+
   return (
     <div className="now-presence">
       <p>
-        <span className={`now-dot now-dot-${view.state}`} aria-hidden="true">
-          {GLYPH[view.state]}
-        </span>{" "}
-        {view.headline}
+        {dot} {view.headline}
       </p>
       {view.today && <p className="now-presence-sub">{view.today}</p>}
       <p className="now-presence-sub">{view.footer}</p>

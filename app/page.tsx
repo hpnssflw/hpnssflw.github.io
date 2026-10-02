@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import { subtopics, topics } from "@/lib/topics";
 import AgentWidget from "@/components/AgentWidget";
+import ClaudePresence from "@/components/ClaudePresence";
 import LabCarousel from "@/components/LabCarousel";
 
 export default function HomePage() {
@@ -11,31 +12,41 @@ export default function HomePage() {
   return (
     <>
       <section id="hero">
-        <div className="wrap hero-layout">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="portrait"
-            src="/photo.jpg"
-            width={1242}
-            height={1876}
-            alt="Artem Polozov"
-          />
-          <div className="hero-body">
-            <h1>Artem Polozov</h1>
-            <p className="hero-text">
-              Web products, data visualization, systems integration, AI agent
-              orchestration — same instinct applied to different systems:{" "}
-              <span className="accent">
-                understand how it fails, then build so it doesn&apos;t.
-              </span>
+        <div className="wrap">
+          <div className="hero-card">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="avatar"
+              src="/avatar.jpg"
+              width={192}
+              height={192}
+              alt="Artem Polozov"
+            />
+            <div className="hero-id">
+              <h1>Artem Polozov</h1>
+              <p className="hero-roles">
+                Web products · data visualization · systems integration · AI
+                agent orchestration
+              </p>
+            </div>
+            <nav className="hero-actions" aria-label="Contact">
+              <a href="mailto:hypnosisflow@gmail.com">
+                Email <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/hpnssflw">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+              <Link href="/now/">
+                Now <span aria-hidden="true">→</span>
+              </Link>
+            </nav>
+            <p className="hero-thesis accent">
+              Understand how it fails, then build so it doesn&apos;t.
             </p>
-            <p className="contact mono">
-              <a href="mailto:hypnosisflow@gmail.com">hypnosisflow@gmail.com</a>
-              {" · "}
-              <a href="https://github.com/hpnssflw">github.com/hpnssflw</a>
-              {" · "}
-              <Link href="/now/">now →</Link>
-            </p>
+            <div className="hero-now">
+              <span className="hero-now-label">Claude Code</span>
+              <ClaudePresence variant="inline" />
+            </div>
           </div>
         </div>
       </section>

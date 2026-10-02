@@ -34,17 +34,11 @@
   /* One scale, used everywhere below instead of ad hoc rem/px values.
      Content text sits under 13px throughout (10 · 12); display type —
      the post headline — keeps the larger steps so it still reads as a
-     headline. The hero has its own smaller pair below: it sits above
-     the fold on every page, so it doesn't need post-headline size to
-     carry weight. */
+     headline. */
   --fs-2xs: 0.625rem; /* 10 — mono meta: labels, dates, back links */
   --fs-xs: 0.75rem;   /* 12 — role, contact, feed title/excerpt, body copy */
-  --fs-md: 1.25rem;   /* 20 — post subtitle */
+  --fs-md: 1.25rem;   /* 20 — post subtitle, hero name */
   --fs-lg: 1.5rem;    /* 24 — post h1 */
-
-  --fs-hero-lead: 0.875rem; /* 14 — hero lead paragraph */
-  --fs-hero-name: 2.5rem;   /* 40 — hero h1 on desktop */
-  --fs-hero-name-sm: 1.75rem; /* 28 — hero h1 on mobile */
 
   /* One container width for every route — header, content and footer
      share a left edge, and everything sits flush left inside it. Long
@@ -145,7 +139,10 @@ a:focus-visible {
    lowercase throughout, meta included, like the agent widget beside it
    (.lab-card .tag outranks the uppercase .tag above). */
 
-#hero .hero-text,
+.hero-roles,
+.hero-actions,
+.hero-thesis,
+.hero-now,
 .section-topics,
 .feed .title,
 .feed .excerpt,
@@ -222,10 +219,10 @@ a:focus-visible {
 
 /* The home page renders no site header (SiteHeader returns null on "/"),
    so the hero takes the header's place: its top padding matches
-   .site-header-inner's, putting the name where the header sits on every
+   .site-header-inner's, putting the card where the header sits on every
    other route. */
 #hero {
-  padding: 22px 0 100px;
+  padding: 22px 0 72px;
 }
 
 @keyframes fade-in-up {
@@ -239,123 +236,131 @@ a:focus-visible {
   }
 }
 
-/* One-shot entrance on load, staggered top to bottom. `both` holds the
-   0%/100% state outside the animation's active range so nothing flashes
-   unstyled before it starts or snaps back after it ends. */
-#hero h1,
-#hero .hero-text,
-#hero .contact,
-#hero .portrait {
+/* The hero is a card in the home cards' language (mono 10px, actions top
+   right) on one grid:
+
+   Row map:  1 avatar · name + roles · actions
+             2 thesis (full width)
+             3 live line — Claude Code now (full width)
+
+   One-shot entrance on load; `both` holds the 0%/100% state outside the
+   animation's active range so nothing flashes unstyled. */
+.hero-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  column-gap: 16px;
+  row-gap: 14px;
+  align-items: start;
+  padding: 14px 16px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  color: var(--text);
   animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-#hero .portrait {
-  animation-delay: 0.05s;
+/* The home cards' surface (--card-bg + blur) with no border, faded out at
+   both sides. It lives on a pseudo-element so the mask fades the tint and
+   the blur, never the content. */
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
+  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+}
+
+/* public/avatar.jpg is a 192px square crop of the portrait (shown at 48,
+   so 4x). grayscale() keeps the page monochrome. */
+.hero-card .avatar {
+  display: block;
+  width: 48px;
+  height: 48px;
+  filter: grayscale(1) contrast(1.05);
 }
 
 #hero h1 {
-  animation-delay: 0.1s;
-}
-
-#hero .hero-text {
-  animation-delay: 0.2s;
-}
-
-#hero .contact {
-  animation-delay: 0.3s;
-}
-
-/* Portrait left, text right, on one grid so the image can span exactly
-   from the name to the contacts. `display: contents` on .hero-body lets
-   its children become grid items without changing the markup.
-
-   Row map:  1 name · 2 description · 3 contacts
-   The portrait occupies column 1, rows 1–3 — flush with the name at top,
-   flush with the contact line at bottom. */
-.hero-layout {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 48px;
-}
-
-.hero-body {
-  display: contents;
-}
-
-/* Vertical rhythm moves onto the rows the portrait spans, so the image
-   ends level with the text instead of hanging below a trailing margin. */
-#hero h1 {
-  grid-column: 2;
-  grid-row: 1;
-  font-size: var(--fs-hero-name);
+  margin: 2px 0 6px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
   line-height: 1.15;
   font-weight: var(--w-thin);
   letter-spacing: 0.05em;
   color: var(--text-strong);
-  margin: 0 0 26px;
 }
 
-#hero .hero-text {
-  grid-column: 2;
-  grid-row: 2;
+.hero-roles {
   margin: 0;
-  font-size: var(--fs-hero-lead);
-  line-height: 1.6;
-  max-width: 26em;
   color: var(--muted);
 }
 
+/* Same treatment as a card's action link (.card-action), three of them. */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-actions a {
+  color: var(--text);
+  transition: none;
+}
+
+.hero-actions a:hover,
+.hero-actions a:focus-visible {
+  color: var(--text-strong);
+}
+
 /* One of two deliberate breaks from the otherwise monochrome palette: the
-   lead-in drops to muted, the thesis stays at full strength and turns
-   italic. Contrast of value and slope, not of hue. Weight stays light —
-   italic already carries the emphasis, and bolding it as well would fight
-   the thin setting. The other break is the agent status widget's
-   lime/red accents, further down this file. */
+   thesis stays at full strength and turns italic — contrast of value and
+   slope, not of hue. Weight stays light; italic already carries the
+   emphasis. The other break is the agent status widget's lime/red
+   accents, further down this file. */
 .accent {
   color: var(--text-strong);
   font-style: italic;
 }
 
-#hero .contact {
-  grid-column: 2;
-  grid-row: 3;
-  margin: 40px 0 0;
+.hero-thesis {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: var(--font-sans);
   font-size: var(--fs-xs);
-  letter-spacing: 0.03em;
 }
 
-/* Height comes from the rows it spans, so it always matches the text block.
-   grayscale() keeps the page monochrome. */
-#hero .portrait {
-  grid-column: 1;
-  grid-row: 1 / 4;
-  align-self: stretch;
-  display: block;
-  width: 160px;
-  height: 100%;
-  object-fit: cover;
-  object-position: 68% 40%;
-  filter: grayscale(1) contrast(1.05);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+/* Live line: a muted label, then a one-line widget
+   (ClaudePresence variant="inline", styled with /now/'s dot classes). */
+.hero-now {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
 }
 
-#hero .portrait:hover {
-  transform: scale(1.015);
-  filter: grayscale(1) contrast(1.1);
-}
-
-#hero .contact {
+.hero-now-label {
+  flex: none;
   color: var(--muted);
 }
 
-#hero .contact a {
-  color: var(--text);
+.presence-inline {
+  margin: 0;
 }
 
 /* --- Home columns ---------------------------------------------- */
 
-/* On "/" RESEARCHER and LAB sit side by side in one .wrap — same gap as
-   the hero's portrait/text columns. Each section spans all three rows
+/* On "/" RESEARCHER and LAB sit side by side in one .wrap, 48px apart.
+   Each section spans all three rows
    and adopts them (subgrid), so the two labels share row 1 and the two
    cards share row 2: the agent widget and the LAB card stretch to one
    height. Row 3 holds RESEARCHER's subtopic tags (LAB has nothing there).
@@ -802,32 +807,19 @@ footer a {
   }
 
   #hero {
-    padding: 16px 0 64px;
+    padding: 16px 0 56px;
   }
 
-  /* Not enough width for two columns — the grid collapses back to normal
-     flow and the portrait returns to a fixed crop above the text. */
-  .hero-layout {
-    display: block;
+  /* Too narrow for actions beside the name: they take their own row on
+     top, right-aligned, like a card action. */
+  .hero-card {
+    grid-template-columns: auto minmax(0, 1fr);
   }
 
-  .hero-body {
-    display: block;
-  }
-
-  #hero .portrait {
-    width: 68px;
-    height: 88px;
-    margin: 0 0 30px;
-  }
-
-  #hero h1 {
-    font-size: var(--fs-hero-name-sm);
-    margin-bottom: 18px;
-  }
-
-  #hero .contact {
-    margin-top: 34px;
+  .hero-actions {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-content: flex-end;
   }
 
   .home-columns {
