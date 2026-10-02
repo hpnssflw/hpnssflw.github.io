@@ -27,6 +27,9 @@ export default function SiteHeader() {
         <Link className="brand" href="/">
           Artem Polozov
         </Link>
+        <span className="site-header-sep" aria-hidden="true">
+          /
+        </span>
         <nav>
           <Link href="/lab/" aria-current={inLab ? "page" : undefined}>
             Lab

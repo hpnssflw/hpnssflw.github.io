@@ -166,7 +166,9 @@ a:focus-visible {
    layout on every route except "/" (the home hero already carries the
    name — SiteHeader returns null there). Replaces the old ad-hoc
    per-page back links. Static (not sticky); mono/uppercase to match the
-   rest of the chrome. */
+   rest of the chrome. One left group, "name / nav", on the content's
+   left edge — content is flush left, so a right-aligned nav floated over
+   empty space. Wraps rather than overflowing below ~320px. */
 
 .site-header {
   border-bottom: 1px solid #2a2a2a;
@@ -177,9 +179,9 @@ a:focus-visible {
   margin: 0 auto;
   padding: 22px var(--gutter);
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 18px;
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
   letter-spacing: 0.2em;
@@ -210,6 +212,10 @@ a:focus-visible {
 
 .site-header .brand {
   letter-spacing: 0.16em;
+}
+
+.site-header-sep {
+  color: color-mix(in srgb, var(--muted) 50%, transparent);
 }
 
 /* --- Hero ------------------------------------------------------ */
@@ -788,7 +794,7 @@ footer a {
 
   .site-header-inner {
     padding: 16px var(--gutter);
-    gap: 14px;
+    gap: 12px;
   }
 
   .site-header nav {
