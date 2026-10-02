@@ -299,6 +299,26 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://space.bl2.net/"
+    },
+    {
+      "pending_since": "2026-10-02T14:28:33.609973+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "A GitHub repo for an AI coworker tool that integrates with text, calls, and Slack, relevant to tooling and web development.",
+      "title": "CopilotKit/OpenDots",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/CopilotKit/OpenDots"
+    },
+    {
+      "pending_since": "2026-10-02T14:28:33.609973+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "A technical article about distributing OS images with Quarry, which is tangentially related to software tooling.",
+      "title": "Dumb servers, smart clients: Distributing OS images with Quarry",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://amutable.com/blog/distributing-images-quarry"
     }
   ],
   "last_email_at": "2026-09-30T04:08:45.319706+00:00"

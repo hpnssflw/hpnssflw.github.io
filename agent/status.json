@@ -5,137 +5,132 @@
     "ai-engineering": {
       "collected": 36,
       "in_window": 36,
-      "kept": 2,
-      "new": 18
+      "kept": 0,
+      "new": 17
     },
     "tooling": {
-      "collected": 52,
-      "in_window": 52,
-      "kept": 4,
-      "new": 14
+      "collected": 53,
+      "in_window": 53,
+      "kept": 2,
+      "new": 12
     },
     "web-products": {
-      "collected": 24,
-      "in_window": 24,
-      "kept": 1,
+      "collected": 25,
+      "in_window": 25,
+      "kept": 0,
       "new": 11
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 30,
+  "pending_count": 32,
   "recent_events": [
     {
-      "score": 9,
-      "source": "hn",
-      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
-      "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438732+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "below_relevance",
-      "title": "California farmers are struggling to sell grapes as demand for wine drops",
+      "title": "Several vulnerabilities have been discovered in the Linux kernel",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438716+00:00",
+      "ts": "2026-10-02T14:29:14.272113+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438702+00:00",
+      "ts": "2026-10-02T14:29:14.272098+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ideas on modernizing the open-source desktop",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438690+00:00",
+      "ts": "2026-10-02T14:29:14.272082+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "September 2026: The world today, as seen by one Polish guy",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438676+00:00",
+      "ts": "2026-10-02T14:29:14.272067+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Sonnet 5.5",
+      "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438663+00:00",
+      "ts": "2026-10-02T14:29:14.272051+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: Jev Plays Pok\u00e9mon Red",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438649+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438634+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT-6 Sol and Luna",
-      "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438611+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438571+00:00",
+      "ts": "2026-10-02T14:29:14.272035+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Coding is not solved",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:40.438496+00:00",
+      "ts": "2026-10-02T14:29:14.272019+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
+      "topic": "web-products",
+      "ts": "2026-10-02T14:29:14.272002+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sonnet 5.5",
+      "topic": "web-products",
+      "ts": "2026-10-02T14:29:14.271984+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "topic": "web-products",
+      "ts": "2026-10-02T14:29:14.271961+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT-6 Sol and Luna",
+      "topic": "web-products",
+      "ts": "2026-10-02T14:29:14.271895+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
+      "topic": "web-products",
+      "ts": "2026-10-02T14:29:00.607807+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:29.253466+00:00",
+      "ts": "2026-10-02T14:29:00.607796+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:29.253455+00:00",
+      "ts": "2026-10-02T14:29:00.607784+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Launch HN: Magnitude (YC S25) \u2013 Self-optimizing inference engine for agents",
       "topic": "web-products",
-      "ts": "2026-10-02T04:14:29.253442+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "Grammarly will send unhinged messages to all your users if you try to cancel",
-      "topic": "web-products",
-      "ts": "2026-10-02T04:14:29.253413+00:00",
+      "ts": "2026-10-02T14:29:00.607767+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 3,
-      "ts": "2026-09-26T02:20:44.097646+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-26T08:53:43.336925+00:00"
@@ -227,28 +222,32 @@
     {
       "kept": 7,
       "ts": "2026-10-02T04:14:08.473534+00:00"
+    },
+    {
+      "kept": 2,
+      "ts": "2026-10-02T14:28:33.609973+00:00"
     }
   ],
-  "streak": 223,
+  "streak": 224,
   "topics": [
     {
       "collected": 36,
-      "kept": 2,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 52,
-      "kept": 4,
+      "collected": 53,
+      "kept": 2,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 24,
-      "kept": 1,
+      "collected": 25,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-02T04:14:08.473534+00:00"
+  "updated_at": "2026-10-02T14:28:33.609973+00:00"
 }
