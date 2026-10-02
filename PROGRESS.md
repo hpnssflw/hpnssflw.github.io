@@ -18,22 +18,25 @@
   `/researcher/`'s descriptions. Header on inner routes moved left the
   same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
   dim slash (`.site-header-sep`), wraps below ~320px.
-- Hero rebuilt as a card the same day (`a76c02a`, picked from six rendered
-  variants): borderless `--card-bg` surface faded out at both sides, 64px
-  square avatar (`public/avatar.jpg`, a 352px crop of the face — `photo.jpg`
-  is now unused but kept), 24px name + roles, `email ↗ github ↗ now →`
-  top right,
-  the thesis, and a one-line Claude Code presence row
-  (`ClaudePresence variant="inline"`). Then a mini GitHub contribution
-  grid in the card's right column (`868b73e`): last 26 weeks, violet, every
-  active day twinkling pink/white/cyan on its own seeded 6–15 s rhythm
-  (`01730d0`, which also made the agent and LAB cards borderless on the
-  same surface, without the hero's side fade), fetched at build time (`lib/github-calendar.ts`,
+- Hero rebuilt as a card the same day (`a76c02a`..`7977250`, iterated
+  live from rendered variants): the home cards' borderless `--card-bg`
+  surface (now shared by the hero, agent widget and LAB card), 64px
+  square avatar (`public/avatar.jpg`, a 352px crop of the face —
+  `photo.jpg` is unused but kept), name in normal case at 24px, roles
+  "web products · data visualization · AI engineering" with the thesis
+  under them, `email ↗ github ↗ now →` top right, and a one-line Claude
+  Code presence row (`ClaudePresence variant="inline"`). In the right
+  column, a mini GitHub contribution grid (`868b73e`): last 26 weeks,
+  8px violet cells, every active day twinkling pink/white/cyan on its own
+  seeded 6–15 s rhythm, fetched at build time (`lib/github-calendar.ts`,
   `components/GitHubGrid.tsx`); `deploy.yml` passes `GITHUB_TOKEN` and
-  rebuilds every 6 h. **Unverified until the first Actions build:** that
-  Actions' `GITHUB_TOKEN` may query `contributionsCollection` — if not,
-  the build log shows `[github-calendar] … skipping the grid` and the
-  grid is simply absent (fix: a read-only PAT secret).
+  rebuilds every 6 h. At desktop widths "/" fits one screen: its three
+  vertical gaps shrink with the window height (`--home-fixed` in
+  globals.css — raise it if the home content grows). **Unverified until
+  the first Actions build:** that Actions' `GITHUB_TOKEN` may query
+  `contributionsCollection` — if not, the build log shows
+  `[github-calendar] … skipping the grid` and the grid is simply absent
+  (fix: a read-only PAT secret).
 - Next.js App Router + TypeScript, statically exported (`output: 'export'`,
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
