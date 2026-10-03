@@ -18,14 +18,14 @@
   `/researcher/`'s descriptions. Header on inner routes moved left the
   same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
   dim slash (`.site-header-sep`), wraps below ~320px.
-- Hero rebuilt as a card the same day and the next (`a76c02a`..`82882dc`,
+- Hero rebuilt as a card the same day and the next (`a76c02a`..`fdf9f2e`,
   iterated live from rendered variants): the home cards' borderless
   `--card-bg` surface (shared by the hero, agent widget and LAB card), a
   120px avatar inside the card's padding (`public/avatar.jpg`, a 352px
   crop of the face — `photo.jpg` is unused but kept), name in normal case
   at 24px, roles "web products · data visualization · AI engineering",
-  `email ↗ github ↗ telegram ↗` top right, the thesis as the card's last
-  row, centred. At the
+  `email ↗ github ↗ telegram ↗` top right. The thesis moved to the
+  site-wide footer, centred above the signature (`bfc52e8`). At the
   card's foot, two widgets share a caption baseline: Claude Code
   (`components/ClaudeActivity.tsx`) — status line, a strip of the last
   28 days' active minutes (lime, today glowing while a session runs) —
@@ -40,18 +40,22 @@
   the agent's Telegram channel, shuffled per page load, with a violet
   source badge (`82882dc`; `lib/home-feed.ts`; Telegram read at build
   time from `t.me/s/hypnosisflow`, `lib/telegram-post.ts`). Under the
-  columns, an unlabelled tile for Tony Scraponi opens a "coming soon"
-  dialog (`components/AppsStrip.tsx`). `deploy.yml` passes `GITHUB_TOKEN`
+  columns, a compact promo card for Tony Scraponi in the site's own
+  language (`fdf9f2e`, `components/AppsStrip.tsx`): a spy mark, pitch,
+  features, a proof line from the agent's live status.json, "follow the
+  build ↗" (Telegram) and a "what's inside" dialog. (Tony's own design
+  direction, in the Obsidian vault, was tried and rejected for the site.) `deploy.yml` passes `GITHUB_TOKEN`
   and rebuilds every 6 h for both build-time sources. At desktop widths "/" fits one screen: its four
   vertical gaps shrink with the window height (`--home-fixed` in
-  globals.css — raise it if the home content grows). **Unverified until
-  the first Actions build:** that Actions' `GITHUB_TOKEN` may query
-  `contributionsCollection` — if not, the build log shows
-  `[github-calendar] … skipping the grid` and the grid is simply absent
-  (fix: a read-only PAT secret). **Not pushed:** local `main` has
-  diverged from `origin/main` (the Tony Scraponi inbox, 11 commits from
-  2026-09-28/29, pushed from a worktree); a trial merge conflicts only in
-  CLAUDE.md (keep both new bullets).
+  globals.css — raise it if the home content grows; windows under ~700px
+  tall scroll). **Live since 2026-10-03:** merged with `origin/main` (the
+  Tony Scraponi inbox, `bc18878`; CLAUDE.md kept both new bullets) and
+  pushed; deploy run 37099706848 succeeded, and the live page shows the
+  GitHub grid (Actions' `GITHUB_TOKEN` can read the calendar) and five
+  Telegram slides (t.me is reachable from the runners). One local commit
+  in that range, `c79bf1c`, doesn't build on its own — it deletes
+  `ClaudeWidget.tsx` while `app/page.tsx` still imports it; `45f2274`
+  fixes it.
 - Next.js App Router + TypeScript, statically exported (`output: 'export'`,
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
