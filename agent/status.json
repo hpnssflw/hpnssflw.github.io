@@ -11,14 +11,14 @@
     "tooling": {
       "collected": 52,
       "in_window": 52,
-      "kept": 2,
-      "new": 14
+      "kept": 0,
+      "new": 12
     },
     "web-products": {
       "collected": 26,
       "in_window": 26,
       "kept": 0,
-      "new": 12
+      "new": 13
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
@@ -28,113 +28,109 @@
       "reason": "below_relevance",
       "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644212+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 series",
-      "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644196+00:00",
+      "ts": "2026-10-03T19:01:36.561927+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
       "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644170+00:00",
+      "ts": "2026-10-03T19:01:36.561910+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Aleph Alpha Kolibri: How the sovereign German LLM works",
+      "topic": "web-products",
+      "ts": "2026-10-03T19:01:36.561882+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Returning from vacation? The government can search your phone without a warrant",
       "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644153+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644136+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Sonnet 5.5",
-      "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644121+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644104+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
-      "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644088+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
-      "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644071+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Several vulnerabilities have been discovered in the Linux kernel",
-      "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644052+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Coding is not solved",
-      "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.644029+00:00",
+      "ts": "2026-10-03T19:01:36.561864+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "September 2026: The world today, as seen by one Polish guy",
       "topic": "web-products",
-      "ts": "2026-10-03T15:48:10.643963+00:00",
+      "ts": "2026-10-03T19:01:36.561847+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "seen",
-      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
+      "reason": "below_relevance",
+      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-10-03T15:48:02.166476+00:00",
+      "ts": "2026-10-03T19:01:36.561830+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Linux support is coming to Snapdragon X2 series",
+      "topic": "web-products",
+      "ts": "2026-10-03T19:01:36.561812+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sonnet 5.5",
+      "topic": "web-products",
+      "ts": "2026-10-03T19:01:36.561795+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "topic": "web-products",
+      "ts": "2026-10-03T19:01:36.561776+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
+      "topic": "web-products",
+      "ts": "2026-10-03T19:01:36.561758+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ideas on modernizing the open-source desktop",
+      "topic": "web-products",
+      "ts": "2026-10-03T19:01:36.561738+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Several vulnerabilities have been discovered in the Linux kernel",
+      "topic": "web-products",
+      "ts": "2026-10-03T19:01:36.561714+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Coding is not solved",
+      "topic": "web-products",
+      "ts": "2026-10-03T19:01:36.561632+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
       "topic": "web-products",
-      "ts": "2026-10-03T15:48:02.166465+00:00",
+      "ts": "2026-10-03T19:01:24.360183+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Launch HN: Magnitude (YC S25) \u2013 Self-optimizing inference engine for agents",
       "topic": "web-products",
-      "ts": "2026-10-03T15:48:02.166451+00:00",
+      "ts": "2026-10-03T19:01:24.360170+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 6,
-      "ts": "2026-09-27T02:15:57.246766+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-27T09:37:18.729679+00:00"
@@ -226,9 +222,13 @@
     {
       "kept": 2,
       "ts": "2026-10-03T15:47:33.701565+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-03T19:00:43.940612+00:00"
     }
   ],
-  "streak": 228,
+  "streak": 229,
   "topics": [
     {
       "collected": 36,
@@ -238,7 +238,7 @@
     },
     {
       "collected": 52,
-      "kept": 2,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
@@ -249,5 +249,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-03T15:47:33.701565+00:00"
+  "updated_at": "2026-10-03T19:00:43.940612+00:00"
 }
