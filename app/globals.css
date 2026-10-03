@@ -961,67 +961,144 @@ a:focus-visible {
   color: var(--muted);
 }
 
-/* --- Apps ----------------------------------------------------------
-   components/AppsStrip.tsx, under the home columns: no label, one tile
-   per app on the home cards' surface (icon, name, a line of what it is).
-   Apps that aren't out open a "coming soon" dialog. */
+/* --- Tony Scraponi promo ------------------------------------------
+   components/AppsStrip.tsx, under the home columns: a marketing card for
+   the agent's coming control room, in the site's own language — the home
+   cards' surface, mono meta, a thin sans headline like the hero's name,
+   lime for anything agent. Icon | pitch | proof + calls to action; a slow
+   lime comet along the bottom says "in the works". */
 
 #apps {
   padding-bottom: 80px;
 }
 
-.apps-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* A low full-width strip on the home cards' surface: icon, name and
-   what it is on the left, "coming soon →" on the right. */
-.app-tile {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-  margin: 0;
-  padding: 12px 16px;
-  border: 0;
+.tony-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  column-gap: 16px;
+  align-items: start;
+  padding: 14px 16px 16px;
   background: var(--card-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  font: inherit;
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
+  line-height: 1.7;
+  color: var(--text);
+  --comet-duration: 60s;
+  --comet-color: var(--agent-lime);
+}
+
+.tony-card .card-comet-run {
+  animation-iteration-count: infinite;
+}
+
+.tony-copy p,
+.tony-side p {
+  margin: 0;
+}
+
+/* Inline after the name, on its baseline. */
+.tony-eyebrow {
+  margin-left: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  font-weight: var(--w-normal);
+  letter-spacing: 0;
+  color: var(--agent-lime);
+  text-transform: lowercase;
+}
+
+.tony-name {
+  margin: 0 0 4px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  font-weight: var(--w-thin);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--text-strong);
+}
+
+.tony-pitch {
+  max-width: 44em;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
   line-height: 1.6;
   color: var(--text);
-  text-align: left;
+}
+
+.tony-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  margin: 6px 0 0;
+  padding: 0;
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.tony-features li::before {
+  content: "+ ";
+  color: var(--agent-lime);
+}
+
+/* Right column: the live proof on top, the calls to action at the foot. */
+.tony-side {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: right;
+}
+
+.tony-proof {
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.tony-proof b {
+  font-weight: inherit;
+  color: var(--text);
+}
+
+.tony-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: lowercase;
+}
+
+/* The one button-like element on the page: a lime outline, no fill. */
+.tony-btn {
+  padding: 3px 10px;
+  border: 1px solid color-mix(in srgb, var(--agent-lime) 45%, transparent);
+  border-radius: 4px;
+  color: var(--agent-lime);
+  transition: none;
+}
+
+.tony-btn:hover,
+.tony-btn:focus-visible {
+  border-color: var(--agent-lime);
+  color: var(--agent-lime);
+}
+
+.tony-more {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--text);
   text-transform: lowercase;
   cursor: pointer;
 }
 
-.app-text {
-  min-width: 0;
-}
-
-.app-name {
-  color: var(--text-strong);
-}
-
-.app-desc,
-.app-soon {
-  color: var(--muted);
-}
-
-.app-soon {
-  flex: none;
-  margin-left: auto;
-}
-
-.app-tile:hover .app-name,
-.app-tile:focus-visible .app-name {
+.tony-more:hover,
+.tony-more:focus-visible {
   color: var(--text-strong);
 }
 
@@ -1035,15 +1112,16 @@ a:focus-visible {
   stroke: var(--agent-border);
 }
 
-.app-icon-ring,
-.app-icon-sweep {
+/* The spy: a lime-outlined fedora, solid dark-lime glasses. */
+.app-icon-line {
   fill: none;
-  stroke: color-mix(in srgb, var(--agent-lime) 55%, transparent);
-  stroke-width: 1;
+  stroke: color-mix(in srgb, var(--agent-lime) 70%, transparent);
+  stroke-width: 1.1;
+  stroke-linecap: round;
 }
 
-.app-icon-blip {
-  fill: var(--agent-lime);
+.app-icon-lens {
+  fill: color-mix(in srgb, var(--agent-lime) 85%, transparent);
 }
 
 .app-dialog {
@@ -1136,17 +1214,17 @@ footer a {
 
 /* --- "/" on one screen ------------------------------------------
    At desktop widths the home page fits the window. Its four gaps —
-   under the hero, under the columns, under the apps tile, under the
+   under the hero, under the columns, under the Tony promo, under the
    footer line — keep their full 72 / 56 / 80 / 96px while the window is
-   tall enough (~880px), and below that shrink together, in proportion,
+   tall enough (~950px), and below that shrink together, in proportion,
    into what's left after the fixed content: the hero card, labels + cards
-   + subtopics, the apps tile and the footer line, ~530px —
-   --home-fixed adds ~30px to spare. Under ~640px they bottom out at 24px
+   + subtopics, the Tony promo and the footer, ~600px —
+   --home-fixed adds ~30px to spare. Under ~710px they bottom out at 24px
    and the page scrolls rather than cut anything off. If the home content
    grows taller, raise --home-fixed with it. */
 @media (min-width: 641px) {
   :root {
-    --home-fixed: 560px;
+    --home-fixed: 630px;
     --home-free: calc(100svh - var(--home-fixed));
   }
 
@@ -1250,6 +1328,22 @@ footer a {
 
   #apps {
     padding-bottom: 64px;
+  }
+
+  .tony-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    row-gap: 12px;
+  }
+
+  .tony-eyebrow {
+    display: block;
+    margin: 4px 0 0;
+  }
+
+  .tony-side {
+    grid-column: 1 / -1;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .feed li + li {
