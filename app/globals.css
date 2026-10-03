@@ -238,11 +238,12 @@ a:focus-visible {
 /* The hero is a card in the home cards' language (mono 10px, actions top
    right) on one grid:
 
-   Row map:  avatar │ name, roles,        │ 1 actions
-             (rows 1–2)  Claude Code strip;  │ 2 GitHub grid, bottom-aligned
-                         thesis at the foot  │
+   Row map:  avatar │ name, roles, thesis; │ 1 actions
+             (rows 1–2)  Claude Code strip   │ 2 GitHub grid, bottom-aligned
+                         at the foot         │
    Two lines run across the card: the name with the actions on top, the
-   thesis with the GitHub caption at the foot. Placement is explicit. Its
+   Claude Code block with the GitHub grid at the foot — their captions
+   share a baseline. Placement is explicit. Its
    surface is shared with the other cards (Home cards, below).
 
    One-shot entrance on load; `both` holds the 0%/100% state outside the
@@ -279,8 +280,8 @@ a:focus-visible {
   filter: grayscale(1) contrast(1.05);
 }
 
-/* A column the full height of the card, so the thesis can sit at its
-   foot (margin-top: auto), level with the GitHub caption. */
+/* A column the full height of the card, so the Claude Code block can
+   sit at its foot (margin-top: auto), level with the GitHub grid. */
 .hero-id {
   grid-column: 2;
   grid-row: 1 / 3;
@@ -335,10 +336,10 @@ a:focus-visible {
   font-style: italic;
 }
 
-/* At the foot of .hero-id — aligned with the name, not the avatar. */
+/* Under the roles, inside .hero-id — aligned with the name, not the
+   avatar. */
 .hero-thesis {
-  margin: auto 0 0;
-  padding-top: 12px;
+  margin: 8px 0 0;
   font-family: var(--font-sans);
   font-size: var(--fs-xs);
 }
@@ -356,14 +357,15 @@ a:focus-visible {
 }
 
 /* --- Claude Code strip -------------------------------------------
-   components/ClaudeActivity.tsx, under the roles: the status line, the
+   components/ClaudeActivity.tsx, at the foot of .hero-id: the status line, the
    last 28 days' active minutes as a strip of the GitHub grid's 8px
    squares in the agent's lime (levels: quartiles of the active days),
    and a caption. Today is the right-hand square; it glows, and breathes,
    while a session runs. */
 
 .hero-claude {
-  margin-top: 14px;
+  margin-top: auto;
+  padding-top: 14px;
   display: flex;
   flex-direction: column;
   gap: 6px;
