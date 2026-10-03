@@ -141,7 +141,7 @@ a:focus-visible {
 .hero-roles,
 .hero-actions,
 .hero-thesis,
-.cc,
+.hero-claude,
 .section-topics,
 .feed .title,
 .feed .excerpt,
@@ -238,11 +238,12 @@ a:focus-visible {
 /* The hero is a card in the home cards' language (mono 10px, actions top
    right) on one grid:
 
-   Row map:  avatar │ name, roles, thesis │ 1 actions
-             (rows 1–2)  (rows 1–2)          │ 2 widgets: Claude Code meter
-                                             │   + GitHub grid, bottom-aligned
-   Placement is explicit. Its surface is shared with the other cards
-   (Home cards, below).
+   Row map:  avatar │ name, roles,        │ 1 actions
+             (rows 1–2)  Claude Code strip;  │ 2 GitHub grid, bottom-aligned
+                         thesis at the foot  │
+   Two lines run across the card: the name with the actions on top, the
+   thesis with the GitHub caption at the foot. Placement is explicit. Its
+   surface is shared with the other cards (Home cards, below).
 
    One-shot entrance on load; `both` holds the 0%/100% state outside the
    animation's active range so nothing flashes unstyled. */
@@ -262,26 +263,36 @@ a:focus-visible {
 }
 
 /* public/avatar.jpg is a 352px square crop of the portrait — the face and
-   the dark around it (shown at 64, so 5.5x). grayscale() keeps the page
+   the dark around it. It fills the card's content height, inside its
+   padding: stretched over both rows; object-fit keeps it uncropped-looking
+   if the rows end up a little off square. grayscale() keeps the page
    monochrome. */
 .hero-card .avatar {
   grid-column: 1;
   grid-row: 1 / 3;
+  align-self: stretch;
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 120px;
+  height: auto;
+  margin-right: 8px;
+  object-fit: cover;
   filter: grayscale(1) contrast(1.05);
 }
 
+/* A column the full height of the card, so the thesis can sit at its
+   foot (margin-top: auto), level with the GitHub caption. */
 .hero-id {
   grid-column: 2;
   grid-row: 1 / 3;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Normal case — the one heading on the site that isn't in the case
    system's uppercase meta or lowercase content: it's a name. */
 #hero h1 {
-  margin: 2px 0 6px;
+  margin: 0 0 6px;
   font-family: var(--font-sans);
   font-size: var(--fs-lg);
   line-height: 1.15;
@@ -324,16 +335,16 @@ a:focus-visible {
   font-style: italic;
 }
 
-/* Under the roles, inside .hero-id — aligned with the name, not the
-   avatar. */
+/* At the foot of .hero-id — aligned with the name, not the avatar. */
 .hero-thesis {
-  margin: 8px 0 0;
+  margin: auto 0 0;
+  padding-top: 12px;
   font-family: var(--font-sans);
   font-size: var(--fs-xs);
 }
 
-/* Column 3 under the actions: the Claude Code widget and the GitHub grid
-   side by side, bottoms (and so captions) level. */
+/* Column 3 under the actions: the GitHub grid, its caption on the
+   card's foot line. */
 .hero-widgets {
   grid-column: 3;
   grid-row: 2;
@@ -344,68 +355,74 @@ a:focus-visible {
   gap: 28px;
 }
 
-/* --- Claude Code widget ------------------------------------------
-   components/ClaudeWidget.tsx: status line, a meter of today's active
-   hours — 24 cells, the GitHub grid's 8px squares, in the agent's lime —
-   and a caption. The live cell glows, and breathes while working. */
+/* --- Claude Code strip -------------------------------------------
+   components/ClaudeActivity.tsx, under the roles: the status line, the
+   last 28 days' active minutes as a strip of the GitHub grid's 8px
+   squares in the agent's lime (levels: quartiles of the active days),
+   and a caption. Today is the right-hand square; it glows, and breathes,
+   while a session runs. */
 
-.cc {
+.hero-claude {
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.cc-status,
-.cc-caption {
+.hc-status,
+.hc-caption {
   margin: 0;
 }
 
-.cc-caption {
+.hc-caption {
   color: var(--muted);
 }
 
-.cc-total {
+.hc-total {
   color: var(--text);
 }
 
-.cc-meter {
-  display: grid;
-  grid-template-columns: repeat(8, 8px);
-  grid-auto-rows: 8px;
-  gap: 2px;
-}
-
-.cc-meter i {
+.hc-strip {
   display: block;
-  border-radius: 1px;
-  background: color-mix(in srgb, var(--text) 7%, transparent);
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
 }
 
-.cc-meter .on {
-  background: color-mix(in srgb, var(--agent-lime) 70%, transparent);
+.hc-strip .l0 {
+  fill: color-mix(in srgb, var(--text) 7%, transparent);
 }
 
-.cc-meter .part {
-  background: color-mix(in srgb, var(--agent-lime) 30%, transparent);
+.hc-strip .l1 {
+  fill: color-mix(in srgb, var(--agent-lime) 28%, transparent);
 }
 
-.cc-meter .live {
-  background: var(--agent-lime);
-  box-shadow: 0 0 6px var(--agent-lime);
+.hc-strip .l2 {
+  fill: color-mix(in srgb, var(--agent-lime) 50%, transparent);
 }
 
-@keyframes cc-breathe {
+.hc-strip .l3 {
+  fill: color-mix(in srgb, var(--agent-lime) 75%, transparent);
+}
+
+.hc-strip .l4 {
+  fill: var(--agent-lime);
+}
+
+.hc-strip .live {
+  fill: var(--agent-lime);
+  filter: drop-shadow(0 0 3px var(--agent-lime));
+  animation: hc-breathe 2.4s ease-in-out infinite;
+}
+
+@keyframes hc-breathe {
   50% {
     opacity: 0.55;
   }
 }
 
-.cc-working .cc-meter .live {
-  animation: cc-breathe 2.4s ease-in-out infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .cc-working .cc-meter .live {
+  .hc-strip .live {
     animation: none;
   }
 }
@@ -1013,15 +1030,15 @@ footer a {
    At desktop widths the home page fits the window. Its four gaps —
    under the hero, under the columns, under the Telegram strip, under the
    footer line — keep their full 72 / 56 / 80 / 96px while the window is
-   tall enough (~850px), and below that shrink together, in proportion,
+   tall enough (~880px), and below that shrink together, in proportion,
    into what's left after the fixed content: the hero card, labels + cards
-   + subtopics, the Telegram strip and the footer line, ~500px —
-   --home-fixed adds 20px to spare. Under ~600px they bottom out at 24px
+   + subtopics, the Telegram strip and the footer line, ~530px —
+   --home-fixed adds 20px to spare. Under ~630px they bottom out at 24px
    and the page scrolls rather than cut anything off. If the home content
    grows taller, raise --home-fixed with it. */
 @media (min-width: 641px) {
   :root {
-    --home-fixed: 520px;
+    --home-fixed: 550px;
     --home-free: calc(100svh - var(--home-fixed));
   }
 
@@ -1079,15 +1096,20 @@ footer a {
     grid-row: 2;
   }
 
-  /* The widgets take the last row, full width and left-aligned; the
-     grid drops under the Claude Code widget when they don't fit side by
-     side. */
+  /* The card stacks here, so a full-height photo would be enormous: it
+     goes back to a 64px square beside the name. */
+  .hero-card .avatar {
+    align-self: start;
+    width: 64px;
+    height: 64px;
+    margin: 0;
+  }
+
+  /* The GitHub grid takes the last row, full width and left-aligned. */
   .hero-widgets {
     grid-column: 1 / -1;
     grid-row: 3;
     justify-self: start;
-    flex-wrap: wrap;
-    gap: 20px 28px;
   }
 
   .gh {

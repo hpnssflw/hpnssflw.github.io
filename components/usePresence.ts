@@ -16,7 +16,7 @@ export type PresenceLoad =
  * to offline once it goes stale. `now` ticks every minute so relative
  * times ("4 min ago") keep moving between polls.
  *
- * Shared by /now/'s ClaudePresence and the home hero's ClaudeWidget.
+ * Used by ClaudePresence (on /now/ and in the home hero).
  */
 export function usePresence(): { load: PresenceLoad; now: number } {
   const [load, setLoad] = useState<PresenceLoad>({ kind: "loading" });

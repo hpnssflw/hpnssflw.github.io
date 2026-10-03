@@ -3,9 +3,9 @@
 import { presenceView } from "@/lib/claude-presence";
 import { usePresence } from "./usePresence";
 
-export const GLYPH = { working: "●", waiting: "◐", offline: "○" } as const;
+const GLYPH = { working: "●", waiting: "◐", offline: "○" } as const;
 
-/** /now/'s three-line Claude Code widget (data: usePresence). */
+/** The three-line Claude Code widget — on /now/ and in the home hero (data: usePresence). */
 export default function ClaudePresence() {
   const { load, now } = usePresence();
 

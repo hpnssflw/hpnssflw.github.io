@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import { subtopics, topics } from "@/lib/topics";
 import AgentWidget from "@/components/AgentWidget";
-import ClaudeWidget from "@/components/ClaudeWidget";
+import ClaudeActivity from "@/components/ClaudeActivity";
 import GitHubGrid from "@/components/GitHubGrid";
 import LabCarousel from "@/components/LabCarousel";
 import TelegramLatest from "@/components/TelegramLatest";
@@ -29,6 +29,7 @@ export default function HomePage() {
               <p className="hero-roles">
                 Web products · data visualization · AI engineering
               </p>
+              <ClaudeActivity />
               <p className="hero-thesis accent">
                 Understand how it fails, then build so it doesn&apos;t.
               </p>
@@ -45,7 +46,6 @@ export default function HomePage() {
               </Link>
             </nav>
             <div className="hero-widgets">
-              <ClaudeWidget />
               <GitHubGrid />
             </div>
           </div>
