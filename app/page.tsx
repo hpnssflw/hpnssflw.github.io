@@ -37,9 +37,6 @@ export default async function HomePage() {
               <p className="hero-roles">
                 Web products · data visualization · AI engineering
               </p>
-              <p className="hero-thesis accent">
-                Understand how it fails, then build so it doesn&apos;t.
-              </p>
               <ClaudeActivity />
             </div>
             <nav className="hero-actions" aria-label="Contact">

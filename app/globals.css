@@ -140,8 +140,9 @@ a:focus-visible {
 
 .hero-roles,
 .hero-actions,
-.hero-thesis,
 .hero-claude,
+.footer-thesis,
+.footer-sign,
 .section-topics,
 .feed .title,
 .feed .excerpt,
@@ -238,7 +239,7 @@ a:focus-visible {
 /* The hero is a card in the home cards' language (mono 10px, actions top
    right) on one grid:
 
-   Row map:  avatar │ name, roles, thesis; │ 1 actions
+   Row map:  avatar │ name, roles;         │ 1 actions
              (rows 1–2)  Claude Code strip   │ 2 GitHub grid, bottom-aligned
                          at the foot         │
    Two lines run across the card: the name with the actions on top, the
@@ -332,14 +333,6 @@ a:focus-visible {
 .accent {
   color: var(--text-strong);
   font-style: italic;
-}
-
-/* Under the roles, inside .hero-id — aligned with the name, not the
-   avatar. */
-.hero-thesis {
-  margin: 8px 0 0;
-  font-family: var(--font-sans);
-  font-size: var(--fs-xs);
 }
 
 /* Column 3 under the actions: the GitHub grid, its caption on the
@@ -982,15 +975,17 @@ a:focus-visible {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px 32px;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* A button on the home cards' surface. */
+/* A low full-width strip on the home cards' surface: icon, name and
+   what it is on the left, "coming soon →" on the right. */
 .app-tile {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  width: 100%;
   margin: 0;
   padding: 12px 16px;
   border: 0;
@@ -1008,8 +1003,11 @@ a:focus-visible {
 }
 
 .app-text {
-  display: flex;
-  flex-direction: column;
+  min-width: 0;
+}
+
+.app-name {
+  color: var(--text-strong);
 }
 
 .app-desc,
@@ -1018,11 +1016,8 @@ a:focus-visible {
 }
 
 .app-soon {
-  align-self: flex-start;
-  margin-left: 4px;
-  padding: 0 5px;
-  border: 1px solid var(--agent-border);
-  border-radius: 3px;
+  flex: none;
+  margin-left: auto;
 }
 
 .app-tile:hover .app-name,
@@ -1126,6 +1121,17 @@ footer p {
 
 footer a {
   color: var(--text);
+}
+
+/* Centred on every route: the thesis, then the signature line. */
+.footer-inner {
+  text-align: center;
+}
+
+.footer-thesis {
+  margin-bottom: 10px !important;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
 }
 
 /* --- "/" on one screen ------------------------------------------

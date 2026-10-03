@@ -16,10 +16,10 @@ function TonyIcon({ size = 28 }: { size?: number }) {
 }
 
 /**
- * The home page's apps, under the columns: one tile per app on the home
- * cards' surface, no section label. Apps that aren't out yet open a
- * "coming soon" dialog (native <dialog>:
- * focus is trapped, Esc closes it; a click on the backdrop does too).
+ * The home page's apps, under the columns: one low full-width strip per
+ * app on the home cards' surface, no section label. Apps that aren't out
+ * yet open a "coming soon" dialog (native <dialog>: focus is trapped, Esc
+ * closes it; a click on the backdrop does too).
  */
 export default function AppsStrip() {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -33,9 +33,11 @@ export default function AppsStrip() {
               <TonyIcon />
               <span className="app-text">
                 <span className="app-name">Tony Scraponi</span>
-                <span className="app-desc">a control room for the research agent</span>
+                <span className="app-desc"> — a control room for the research agent</span>
               </span>
-              <span className="app-soon">soon</span>
+              <span className="app-soon">
+                Coming soon <span aria-hidden="true">→</span>
+              </span>
             </button>
           </li>
         </ul>
