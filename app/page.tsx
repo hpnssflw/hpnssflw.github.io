@@ -1,15 +1,22 @@
 import { Fragment } from "react";
 import Link from "next/link";
+import { labSlides, telegramSlides, FEED_PER_SOURCE } from "@/lib/home-feed";
 import { getAllPosts } from "@/lib/posts";
+import { fetchRecentPosts, TELEGRAM_CHANNEL } from "@/lib/telegram-post";
 import { subtopics, topics } from "@/lib/topics";
 import AgentWidget from "@/components/AgentWidget";
+import AppsStrip from "@/components/AppsStrip";
 import ClaudeActivity from "@/components/ClaudeActivity";
 import GitHubGrid from "@/components/GitHubGrid";
 import LabCarousel from "@/components/LabCarousel";
-import TelegramLatest from "@/components/TelegramLatest";
 
-export default function HomePage() {
-  const posts = getAllPosts();
+export default async function HomePage() {
+  // The LAB card mixes LAB posts with the agent channel's latest Telegram
+  // posts, read at build time (no slides from Telegram if t.me is down).
+  const slides = [
+    ...labSlides(getAllPosts()),
+    ...telegramSlides(await fetchRecentPosts(TELEGRAM_CHANNEL, FEED_PER_SOURCE)),
+  ];
 
   return (
     <>
@@ -29,9 +36,6 @@ export default function HomePage() {
               <p className="hero-roles">
                 Web products · data visualization · AI engineering
               </p>
-              <p className="hero-thesis accent">
-                Understand how it fails, then build so it doesn&apos;t.
-              </p>
               <ClaudeActivity />
             </div>
             <nav className="hero-actions" aria-label="Contact">
@@ -41,13 +45,16 @@ export default function HomePage() {
               <a href="https://github.com/hpnssflw">
                 GitHub <span aria-hidden="true">↗</span>
               </a>
-              <Link href="/now/">
-                Now <span aria-hidden="true">→</span>
-              </Link>
+              <a href={`https://t.me/${TELEGRAM_CHANNEL}`}>
+                Telegram <span aria-hidden="true">↗</span>
+              </a>
             </nav>
             <div className="hero-widgets">
               <GitHubGrid />
             </div>
+            <p className="hero-thesis accent">
+              Understand how it fails, then build so it doesn&apos;t.
+            </p>
           </div>
         </div>
       </section>
@@ -81,11 +88,11 @@ export default function HomePage() {
               <span className="section-topics">takes on experience.</span>
             </Link>
           </p>
-          <LabCarousel posts={posts} />
+          <LabCarousel slides={slides} />
         </section>
       </div>
 
-      <TelegramLatest />
+      <AppsStrip />
     </>
   );
 }

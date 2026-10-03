@@ -1,5 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
-import { decodeEntities, fetchLatestPost, parseLatestPost } from "./telegram-post";
+import { decodeEntities, fetchRecentPosts, parseRecentPosts } from "./telegram-post";
+
+const latest = (html: string, channel = "hypnosisflow") => parseRecentPosts(html, channel, 1)[0] ?? null;
 
 // Trimmed from t.me/s/hypnosisflow: two posts, then a service message
 // ("pinned …"), which is the last element on the page.
@@ -40,9 +42,9 @@ describe("decodeEntities", () => {
   });
 });
 
-describe("parseLatestPost", () => {
+describe("parseRecentPosts", () => {
   it("takes the last real post, skipping service messages", () => {
-    expect(parseLatestPost(PAGE, "hypnosisflow")).toEqual({
+    expect(latest(PAGE)).toEqual({
       id: 94,
       url: "https://t.me/hypnosisflow/94",
       date: "2026-09-30T04:09:28+00:00",
@@ -59,7 +61,7 @@ describe("parseLatestPost", () => {
 
   it("uses the first non-empty line as the title, tags stripped", () => {
     const page = message("7", "<br/><i>Hello</i> <b>world</b> &amp; more<br/>second line");
-    expect(parseLatestPost(page, "hypnosisflow")?.title).toBe("Hello world & more");
+    expect(latest(page)?.title).toBe("Hello world & more");
   });
 
   it("keeps only http(s) links", () => {
@@ -67,42 +69,47 @@ describe("parseLatestPost", () => {
       "8",
       'Title<br/><a href="javascript:alert(1)">bad</a> <a href="tg://resolve?domain=x">app</a> <a href="https://ok.example/">ok</a>',
     );
-    expect(parseLatestPost(page, "hypnosisflow")?.links).toEqual([
+    expect(latest(page)?.links).toEqual([
       { text: "ok", href: "https://ok.example/" },
     ]);
   });
 
-  it("is null for a page with no usable post", () => {
-    expect(parseLatestPost("<html>nothing here</html>", "hypnosisflow")).toBeNull();
+  it("is empty for a page with no usable post", () => {
+    expect(parseRecentPosts("<html>nothing here</html>", "hypnosisflow", 5)).toEqual([]);
     const onlyService = message("9", "x pinned «y»", { service: true });
-    expect(parseLatestPost(onlyService, "hypnosisflow")).toBeNull();
+    expect(parseRecentPosts(onlyService, "hypnosisflow", 5)).toEqual([]);
   });
 
   it("ignores posts from another channel", () => {
-    expect(parseLatestPost(PAGE, "someoneelse")).toBeNull();
+    expect(parseRecentPosts(PAGE, "someoneelse", 5)).toEqual([]);
+  });
+
+  it("returns up to limit posts, newest first", () => {
+    expect(parseRecentPosts(PAGE, "hypnosisflow", 5).map((p) => p.id)).toEqual([94, 93]);
+    expect(parseRecentPosts(PAGE, "hypnosisflow", 1).map((p) => p.id)).toEqual([94]);
   });
 });
 
-describe("fetchLatestPost", () => {
+describe("fetchRecentPosts", () => {
   it("reads the channel's public preview page", async () => {
     const fetchImpl = vi.fn(() => Promise.resolve(new Response(PAGE, { status: 200 })));
-    const post = await fetchLatestPost("hypnosisflow", fetchImpl);
-    expect(post?.id).toBe(94);
+    const posts = await fetchRecentPosts("hypnosisflow", 5, fetchImpl);
+    expect(posts.map((p) => p.id)).toEqual([94, 93]);
     expect((fetchImpl.mock.calls[0] as unknown as [string])[0]).toBe("https://t.me/s/hypnosisflow");
   });
 
-  it("retries once, then gives up with null", async () => {
+  it("retries once, then gives up with no posts", async () => {
     const flaky = vi
       .fn()
       .mockRejectedValueOnce(new Error("ETIMEDOUT"))
       .mockImplementationOnce(() => Promise.resolve(new Response(PAGE, { status: 200 })));
-    expect((await fetchLatestPost("hypnosisflow", flaky))?.id).toBe(94);
+    expect((await fetchRecentPosts("hypnosisflow", 5, flaky))[0]?.id).toBe(94);
 
     const down = vi.fn().mockRejectedValue(new Error("ETIMEDOUT"));
-    expect(await fetchLatestPost("hypnosisflow", down)).toBeNull();
+    expect(await fetchRecentPosts("hypnosisflow", 5, down)).toEqual([]);
     expect(down).toHaveBeenCalledTimes(2);
 
     const missing = vi.fn(() => Promise.resolve(new Response("", { status: 404 })));
-    expect(await fetchLatestPost("hypnosisflow", missing)).toBeNull();
+    expect(await fetchRecentPosts("hypnosisflow", 5, missing)).toEqual([]);
   });
 });

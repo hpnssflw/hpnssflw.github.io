@@ -60,9 +60,10 @@ initiatives — see `PROGRESS.md` for status of each.
   (`lib/github-calendar.ts`) — it needs a token: `deploy.yml` passes
   Actions' `GITHUB_TOKEN`, and locally start `npm run dev` /
   `npm run build` with `GITHUB_TOKEN` set (e.g. from `gh auth token`) to
-  see it. `components/TelegramLatest.tsx` reads the agent channel's
-  latest post from its public preview page, `t.me/s/hypnosisflow`
-  (`lib/telegram-post.ts`) — no token, but t.me may be unreachable from a
+  see it. The home LAB card mixes in the agent channel's five latest
+  Telegram posts (`app/page.tsx` → `lib/telegram-post.ts`,
+  `lib/home-feed.ts`), read from its public preview page,
+  `t.me/s/hypnosisflow` — no token, but t.me may be unreachable from a
   dev machine without a VPN.
 - **The GitHub remote is `hpnssflw/hpnssflw.github.io`** (a user site —
   served at the domain root, so no `basePath`). Work happens directly on
@@ -101,7 +102,7 @@ initiatives — see `PROGRESS.md` for status of each.
   npm run serve           # serve out/ exactly as Pages will
   npm test                # Vitest — lib/posts, lib/agent-status, lib/pending-queue,
                           # lib/topics, lib/yandex-music, lib/claude-presence,
-                          # lib/now-format, lib/github-calendar, lib/telegram-post,
+                          # lib/now-format, lib/github-calendar, lib/telegram-post, lib/home-feed,
                           # scripts/presence
   ```
   (`next dev` occasionally hangs the TCP handshake in this environment;

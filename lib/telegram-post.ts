@@ -1,13 +1,13 @@
 /**
- * The home page's TELEGRAM strip: the latest post in the public channel
- * the research agent publishes to. Read once per `next build` from the
- * channel's public preview (t.me/s/<channel> — plain HTML, no token; the
- * browser can't fetch it cross-origin), so it's as fresh as the last
- * deploy, which deploy.yml repeats every 6 hours.
+ * Recent posts from the public channel the research agent publishes to,
+ * shown in the home LAB card next to LAB posts. Read once per `next build`
+ * from the channel's public preview (t.me/s/<channel> — plain HTML, no
+ * token; the browser can't fetch it cross-origin), so they're as fresh as
+ * the last deploy, which deploy.yml repeats every 6 hours.
  *
- * Telegram's markup isn't an API: anything unexpected parses to null and
- * the strip just isn't rendered. Post text is reduced to plain strings
- * and http(s) links — never injected as HTML.
+ * Telegram's markup isn't an API: anything unexpected is skipped, and a
+ * page that yields nothing just means no Telegram slides. Post text is
+ * reduced to plain strings and http(s) links — never injected as HTML.
  */
 
 export const TELEGRAM_CHANNEL = "hypnosisflow";
@@ -48,10 +48,12 @@ function plain(html: string): string {
   return decodeEntities(html.replace(/<[^>]*>/g, "")).replace(/\s+/g, " ").trim();
 }
 
-/** The last non-service post of `channel` on its t.me/s page, or null. */
-export function parseLatestPost(html: string, channel: string): TelegramPost | null {
+/** Up to `limit` non-service posts of `channel` on its t.me/s page, newest first. */
+export function parseRecentPosts(html: string, channel: string, limit: number): TelegramPost[] {
+  const posts: TelegramPost[] = [];
   const chunks = html.split('class="tgme_widget_message_wrap').slice(1);
   for (const chunk of chunks.reverse()) {
+    if (posts.length >= limit) break;
     if (/class="tgme_widget_message[^"]*\bservice_message\b/.test(chunk)) continue;
 
     const post = chunk.match(/data-post="([^"/]+)\/(\d+)"/);
@@ -70,35 +72,36 @@ export function parseLatestPost(html: string, channel: string): TelegramPost | n
     if (!title && links.length === 0) continue;
 
     const id = Number(post[2]);
-    return { id, url: `https://t.me/${channel}/${id}`, date: time[1], title, links };
+    posts.push({ id, url: `https://t.me/${channel}/${id}`, date: time[1], title, links });
   }
-  return null;
+  return posts;
 }
 
 /**
- * Build-time only. Null — and the strip simply isn't rendered — on a
- * non-200 or after a second network failure (t.me may be unreachable from
- * a dev machine); it must never fail the deploy.
+ * Build-time only. Empty — no Telegram slides — on a non-200 or after a
+ * second network failure (t.me may be unreachable from a dev machine); it
+ * must never fail the deploy.
  */
-export async function fetchLatestPost(
+export async function fetchRecentPosts(
   channel: string,
+  limit: number,
   fetchImpl: typeof fetch = fetch,
-): Promise<TelegramPost | null> {
+): Promise<TelegramPost[]> {
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
       const res = await fetchImpl(`https://t.me/s/${channel}`, {
         headers: { "User-Agent": "Mozilla/5.0 (hpnssflw.github.io build)" },
       });
       if (!res.ok) {
-        console.warn(`[telegram-post] t.me answered ${res.status}; skipping the strip`);
-        return null;
+        console.warn(`[telegram-post] t.me answered ${res.status}; no Telegram posts`);
+        return [];
       }
-      const post = parseLatestPost(await res.text(), channel);
-      if (!post) console.warn("[telegram-post] no post found on the page; skipping the strip");
-      return post;
+      const posts = parseRecentPosts(await res.text(), channel, limit);
+      if (posts.length === 0) console.warn("[telegram-post] no posts found on the page");
+      return posts;
     } catch (err) {
-      if (attempt === 2) console.warn(`[telegram-post] ${String(err)}; skipping the strip`);
+      if (attempt === 2) console.warn(`[telegram-post] ${String(err)}; no Telegram posts`);
     }
   }
-  return null;
+  return [];
 }
