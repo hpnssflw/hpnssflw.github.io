@@ -6,135 +6,131 @@
       "collected": 36,
       "in_window": 36,
       "kept": 1,
-      "new": 18
+      "new": 17
     },
     "tooling": {
       "collected": 53,
       "in_window": 53,
-      "kept": 1,
-      "new": 11
+      "kept": 3,
+      "new": 17
     },
     "web-products": {
       "collected": 26,
       "in_window": 26,
       "kept": 0,
-      "new": 11
+      "new": 12
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 34,
+  "pending_count": 38,
   "recent_events": [
     {
       "reason": "below_relevance",
-      "title": "Why is the liver so weirdly regenerative?",
+      "title": "Returning from vacation? The government can search your phone without a warrant",
       "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049388+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 series",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049375+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049359+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049332+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Several vulnerabilities have been discovered in the Linux kernel",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049319+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049305+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Sonnet 5.5",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049291+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049277+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049261+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Coding is not solved",
-      "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049239+00:00",
+      "ts": "2026-10-03T03:56:45.215378+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "September 2026: The world today, as seen by one Polish guy",
       "topic": "web-products",
-      "ts": "2026-10-02T20:22:49.049173+00:00",
+      "ts": "2026-10-03T03:56:45.215349+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "seen",
-      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
+      "reason": "below_relevance",
+      "title": "Several vulnerabilities have been discovered in the Linux kernel",
       "topic": "web-products",
-      "ts": "2026-10-02T20:22:40.561125+00:00",
+      "ts": "2026-10-03T03:56:45.215298+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Why is the liver so weirdly regenerative?",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215284+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215251+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Linux support is coming to Snapdragon X2 series",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215237+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sonnet 5.5",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215223+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215209+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215193+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215177+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ideas on modernizing the open-source desktop",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215155+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Coding is not solved",
+      "topic": "web-products",
+      "ts": "2026-10-03T03:56:45.215091+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
       "topic": "web-products",
-      "ts": "2026-10-02T20:22:40.561114+00:00",
+      "ts": "2026-10-03T03:56:38.021267+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
       "topic": "web-products",
-      "ts": "2026-10-02T20:22:40.561103+00:00",
+      "ts": "2026-10-03T03:56:38.021254+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Launch HN: Magnitude (YC S25) \u2013 Self-optimizing inference engine for agents",
       "topic": "web-products",
-      "ts": "2026-10-02T20:22:40.561090+00:00",
+      "ts": "2026-10-03T03:56:38.021238+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-09-26T15:16:41.108559+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-26T18:47:40.661012+00:00"
@@ -226,9 +222,13 @@
     {
       "kept": 2,
       "ts": "2026-10-02T20:22:17.411105+00:00"
+    },
+    {
+      "kept": 4,
+      "ts": "2026-10-03T03:56:08.946753+00:00"
     }
   ],
-  "streak": 225,
+  "streak": 226,
   "topics": [
     {
       "collected": 36,
@@ -238,7 +238,7 @@
     },
     {
       "collected": 53,
-      "kept": 1,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
@@ -249,5 +249,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-02T20:22:17.411105+00:00"
+  "updated_at": "2026-10-03T03:56:08.946753+00:00"
 }
