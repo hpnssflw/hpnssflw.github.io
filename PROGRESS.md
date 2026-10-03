@@ -18,13 +18,14 @@
   `/researcher/`'s descriptions. Header on inner routes moved left the
   same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
   dim slash (`.site-header-sep`), wraps below ~320px.
-- Hero rebuilt as a card the same day and the next (`a76c02a`..`7b63647`,
+- Hero rebuilt as a card the same day and the next (`a76c02a`..`82882dc`,
   iterated live from rendered variants): the home cards' borderless
   `--card-bg` surface (shared by the hero, agent widget and LAB card), a
   120px avatar inside the card's padding (`public/avatar.jpg`, a 352px
   crop of the face — `photo.jpg` is unused but kept), name in normal case
   at 24px, roles "web products · data visualization · AI engineering",
-  the thesis under them, `email ↗ github ↗ now →` top right. At the
+  `email ↗ github ↗ telegram ↗` top right, the thesis as the card's last
+  row, centred. At the
   card's foot, two widgets share a caption baseline: Claude Code
   (`components/ClaudeActivity.tsx`) — status line, a strip of the last
   28 days' active minutes (lime, today glowing while a session runs) —
@@ -34,12 +35,14 @@
   `components/GitHubGrid.tsx`). The strip reads presence.json's new
   `dailyMinutes` (`c79bf1c`: 28 numbers; run.mjs recomputes the 27 past
   days once a day into a local `daily-cache.json`; `install.ps1` was
-  re-run on 2026-10-03 and the task published the 11-key file). Under
-  the columns, a flat TELEGRAM strip (`e1bf110`): the agent channel's
-  latest post, read at build time from `t.me/s/hypnosisflow`
-  (`lib/telegram-post.ts`, `components/TelegramLatest.tsx`).
-  `deploy.yml` passes `GITHUB_TOKEN` and rebuilds every 6 h for both
-  build-time blocks. At desktop widths "/" fits one screen: its four
+  re-run on 2026-10-03 and the task published the 11-key file). The LAB
+  card rotates the five newest LAB posts and the five newest posts from
+  the agent's Telegram channel, shuffled per page load, with a violet
+  source badge (`82882dc`; `lib/home-feed.ts`; Telegram read at build
+  time from `t.me/s/hypnosisflow`, `lib/telegram-post.ts`). Under the
+  columns, an unlabelled tile for Tony Scraponi opens a "coming soon"
+  dialog (`components/AppsStrip.tsx`). `deploy.yml` passes `GITHUB_TOKEN`
+  and rebuilds every 6 h for both build-time sources. At desktop widths "/" fits one screen: its four
   vertical gaps shrink with the window height (`--home-fixed` in
   globals.css — raise it if the home content grows). **Unverified until
   the first Actions build:** that Actions' `GITHUB_TOKEN` may query
