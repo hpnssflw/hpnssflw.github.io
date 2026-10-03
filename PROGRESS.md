@@ -372,7 +372,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#4 shipped.**
+**Status: sub-projects #1-#5 shipped.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -601,6 +601,29 @@ infrastructure.
     plus seven Minor fixed in one fix wave, commit `2327a5e`. The one
     residual (post #1's sources comment misdating `64a745d`) went away
     when Publishing Step 3 deleted that comment.
+- **Sub-project #5, Inbox (moderated delivery): shipped.**
+  Spec: `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
+  Plan: `docs/superpowers/plans/2026-09-28-tony-scraponi-inbox.md`.
+  Merged to `main` and pushed 2026-09-29 (`57fa600`). Decisions live in
+  `hpnssflw/tony-inbox`; owner mode was verified locally against it
+  (approve/reject/undo, conflict retry) headlessly with the gh CLI
+  token, since Artem hasn't created the owner-mode PAT yet (the plan's
+  Task 5 Step 2 has its exact settings). Live check (agent run
+  2026-09-29T07:31Z): the rejected item (Rafah / Google Maps) left the
+  queue as `dismissed: rejected`; the two approved items (Vespper Docx
+  MCP, KKKKhazix/AIHOT) are held in the queue with `times_sent 0`
+  because the 24h cadence wasn't due, so they go out with the first
+  run after 2026-09-30T00:01Z; the undecided one (jev-chat-windows)
+  waits. Until the PAT exists nobody can moderate on the live site:
+  the agent delivers only already-approved items and the rest expire
+  after 7 days. The agent-run cron was paused during the rollout so
+  the old code couldn't deliver unmoderated, and is active again.
+  Final whole-branch review (opus): no Critical. I1 (a stale tab's
+  prune could delete another device's decisions) and minors M2, M3, M5
+  fixed in one fix wave (`aa73dac`, `a2bf96e`); I2 (the old agent
+  could deliver items rejected during rollout) handled by the cron
+  pause above; M6 (rollback needs `StateEntry.dismissed`) documented in
+  `CLAUDE.md`; M1, M4, M7-M10 deferred.
 
 ### How to resume in a new session
 
@@ -645,23 +668,25 @@ log; if the widget never shows `working`, look for `claude agents failed`.
 Next phase (backend: friends, Yandex ID login, pager) needs its own
 brainstorm, starting from the research report's decision points.
 
-**Content Direction & Tony Scraponi: all four sub-projects shipped** —
-#1 (agent themes rework), #2 (Telegram delivery), #3 (Blog content &
-direction), #4 (Tony Scraponi MVP — the `/researcher/queue/` pending-queue
-page). See this file's section above for what shipped in each and what
-the final reviews found and fixed. Sub-project #2's bot/channel now exist
-(`@hypnosisflow`) and live delivery is verified (2026-09-18: 124-item
-backlog sent, queue drained to 0) — sub-project #4's queue page will now
-show whatever accumulates between 24h delivery cycles rather than an
-ever-growing backlog. All four sub-projects are pushed to the remote; the
-manual agent-workflow trigger for #2 confirmed the renamed `status.json`
-keys landed on `agent-data` (2026-09-17T04:34:28Z run), and a second
-manual trigger the next day confirmed the real Telegram send.
-`docs/tony-scraponi-roadmap.md`'s four ordered sub-projects are now all
-complete. The LAB backlog posts follow-up
-(`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is done too:
-all four posts are published. There's no confirmed next step for this
-initiative.
+**Content Direction & Tony Scraponi: sub-projects #1-#5 shipped.** See
+this file's section above for what shipped in
+each and what the final reviews found and fixed. Sub-project #2's bot/
+channel now exist (`@hypnosisflow`) and live delivery is verified
+(2026-09-18: 124-item backlog sent, queue drained to 0) — sub-project
+#4's queue page will now show whatever accumulates between 24h delivery
+cycles rather than an ever-growing backlog. All four sub-projects #1-#4
+are pushed to the remote; the manual agent-workflow trigger for #2
+confirmed the renamed `status.json` keys landed on `agent-data`
+(2026-09-17T04:34:28Z run), and a second manual trigger the next day
+confirmed the real Telegram send. `docs/tony-scraponi-roadmap.md`'s four
+ordered sub-projects #1-#4 are now complete. The LAB backlog posts
+follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
+done too: all four posts are published. Sub-project #5 (Inbox) is
+shipped; there's no confirmed next step for this initiative —
+candidates: a Telegram DM when items await review, summary editing,
+topic/source management. One open manual step: Artem creates the
+owner-mode PAT (settings in the inbox plan's Task 5 Step 2) and signs
+in on the live `/researcher/queue/`.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages

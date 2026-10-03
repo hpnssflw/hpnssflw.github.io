@@ -15,3 +15,9 @@ llm:
 delivery:
   telegram_channel: "@hypnosisflow" # the channel's public handle; not a secret.
   delivery_cadence_hours: 24 # digest rollup cadence; collection/ranking run every 4h regardless
+
+inbox:
+  # Artem's approve/reject decisions (docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md).
+  # Written only by the site's /researcher/queue/ owner mode; the agent only reads it.
+  decisions_url: https://api.github.com/repos/hpnssflw/tony-inbox/contents/decisions.json
+  expire_days: 7 # undecided items older than this leave the queue for good

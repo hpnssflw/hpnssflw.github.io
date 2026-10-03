@@ -28,7 +28,7 @@ class Drop:
 
     url: str
     title: str
-    reason: str  # undated | outside_window | below_min_points | seen | below_relevance | over_max_items
+    reason: str  # undated | outside_window | below_min_points | seen | dismissed | below_relevance | over_max_items | rejected | expired
     detail: dict
 
 

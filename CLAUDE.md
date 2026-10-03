@@ -65,6 +65,20 @@ initiatives — see `PROGRESS.md` for status of each.
   `lib/home-feed.ts`), read from its public preview page,
   `t.me/s/hypnosisflow` — no token, but t.me may be unreachable from a
   dev machine without a VPN.
+- **The Tony Scraponi inbox's decisions live in a separate public repo,
+  `hpnssflw/tony-inbox`** (`decisions.json` on its `main`). The site's
+  `/researcher/queue/` owner mode is its only writer, with a
+  fine-grained PAT scoped to that repo alone and kept in the owner's
+  `localStorage`; the agent only reads it at the start of each run and
+  delivers approved items only (rejected/expired → `dismissed` in
+  `state.json`). Never make the agent write `decisions.json`, and never
+  give the site a token for this repo (`hpnssflw.github.io`): one that
+  can push here can change agent code that runs with the Telegram and
+  DeepSeek secrets. If the agent side is ever reverted, keep
+  `StateEntry.dismissed` (or strip the `dismissed` key from `state.json`
+  on `agent-data` first): after the first run of the inbox code every
+  entry carries that key, and the older `StateEntry(**value)` raises
+  `TypeError` on it.
 - **The GitHub remote is `hpnssflw/hpnssflw.github.io`** (a user site —
   served at the domain root, so no `basePath`). Work happens directly on
   `main` — no feature branches, no PRs — unless the user explicitly asks

@@ -24,9 +24,16 @@ class DeliveryConfig:
 
 
 @dataclass(frozen=True)
+class InboxConfig:
+    decisions_url: str
+    expire_days: int
+
+
+@dataclass(frozen=True)
 class Settings:
     llm: LLMConfig
     delivery: DeliveryConfig
+    inbox: InboxConfig
 
 
 def _load_yaml(path: Path) -> dict:
@@ -49,11 +56,16 @@ def load_settings(defaults_path: Path) -> Settings:
     raw = _load_yaml(defaults_path)
     llm_raw = raw["llm"]
     delivery_raw = raw["delivery"]
+    inbox_raw = raw["inbox"]
     return Settings(
         llm=LLMConfig(base_url=llm_raw["base_url"], model=llm_raw["model"]),
         delivery=DeliveryConfig(
             telegram_channel=delivery_raw["telegram_channel"],
             delivery_cadence_hours=delivery_raw["delivery_cadence_hours"],
+        ),
+        inbox=InboxConfig(
+            decisions_url=inbox_raw["decisions_url"],
+            expire_days=inbox_raw["expire_days"],
         ),
     )
 

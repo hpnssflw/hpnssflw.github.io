@@ -91,19 +91,24 @@ def filter_already_pending(candidates: list[Candidate], queue: PendingQueue) -> 
     return kept, drops
 
 
-def is_email_due(queue: PendingQueue, now: datetime, cadence_hours: int) -> bool:
-    if not queue.items:
+def is_email_due(
+    approved: list[PendingItem], last_email_at: str | None, now: datetime, cadence_hours: int
+) -> bool:
+    """Delivery is due when at least one item is approved and the cadence
+    has elapsed (or delivery has never happened). Undecided items never
+    make delivery due -- only Artem's approvals do."""
+    if not approved:
         return False
-    if queue.last_email_at is None:
+    if last_email_at is None:
         return True
-    last = datetime.fromisoformat(queue.last_email_at)
+    last = datetime.fromisoformat(last_email_at)
     return (now - last).total_seconds() >= cadence_hours * 3600
 
 
-def group_by_topic(queue: PendingQueue) -> dict[str, list[PendingItem]]:
+def group_by_topic(items: list[PendingItem]) -> dict[str, list[PendingItem]]:
     grouped: dict[str, list[PendingItem]] = {}
-    for item in queue.items:
+    for item in items:
         grouped.setdefault(item.topic_name, []).append(item)
-    for items in grouped.values():
-        items.sort(key=lambda i: i.score, reverse=True)
+    for group in grouped.values():
+        group.sort(key=lambda i: i.score, reverse=True)
     return grouped

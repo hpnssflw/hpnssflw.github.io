@@ -4,12 +4,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from agent import config, dedupe, date_guard, deliver, digest, events, pending, status_export, summarize
+from agent import config, dedupe, date_guard, deliver, digest, events, inbox, pending, status_export, summarize
 from agent.sources import github_trending, hn
 from agent.sources.base import Drop
 
@@ -94,6 +95,19 @@ def run_real(topic_filter: str | None) -> None:
     state = dedupe.load_state(STATE_PATH)
     queue = pending.load_pending(PENDING_PATH)
 
+    try:
+        decisions = inbox.load_decisions(settings.inbox.decisions_url, os.environ.get("GITHUB_TOKEN"))
+    except inbox.DecisionsUnavailable as exc:
+        writer.emit("inbox", "failed", detail={"error": str(exc)})
+        print(f"Inbox decisions unavailable; nothing is dropped or delivered this run: {exc}")
+        approved: list[pending.PendingItem] = []
+    else:
+        approved, inbox_drops = inbox.apply_decisions(
+            queue, decisions, state, now, settings.inbox.expire_days
+        )
+        for topic_slug, drop in inbox_drops:
+            writer.emit_drop("inbox", topic_slug, drop)
+
     for topic in topics:
         all_candidates = []
         for source_name, connector in CONNECTORS.items():
@@ -170,25 +184,28 @@ def run_real(topic_filter: str | None) -> None:
         pending.add_kept(queue, topic.name, keep, now)
 
     delivered = False
-    if pending.is_email_due(queue, now, settings.delivery.delivery_cadence_hours):
-        grouped = pending.group_by_topic(queue)
+    if pending.is_email_due(approved, queue.last_email_at, now, settings.delivery.delivery_cadence_hours):
+        grouped = pending.group_by_topic(approved)
         messages = digest.build(grouped)
         try:
             deliver.send(messages, settings)
         except Exception as exc:  # noqa: BLE001 — delivery must never crash a scheduled run; retried once due again next time
-            writer.emit("deliver", "failed", detail={"error": str(exc), "items": len(queue.items)})
+            writer.emit("deliver", "failed", detail={"error": str(exc), "items": len(approved)})
             print(f"Telegram delivery failed, will retry next run: {exc}")
         else:
-            for item in queue.items:
+            for item in approved:
                 dedupe.mark_sent_url(state, item.url)
-            total_items = len(queue.items)
-            writer.emit("deliver", "sent", detail={"items": total_items, "topics": len(grouped)})
-            queue.items = []
+            sent_urls = {item.url for item in approved}
+            queue.items = [item for item in queue.items if item.url not in sent_urls]
             queue.last_email_at = now.isoformat()
+            writer.emit("deliver", "sent", detail={"items": len(approved), "topics": len(grouped)})
             delivered = True
-            print(f"Sent {total_items} items across {len(grouped)} topics.")
+            print(f"Sent {len(approved)} approved items across {len(grouped)} topics.")
     else:
-        print(f"Nothing delivered this run. Pending queue: {len(queue.items)} item(s).")
+        print(
+            f"Nothing delivered this run. Pending queue: {len(queue.items)} item(s), "
+            f"{len(approved)} approved."
+        )
 
     dedupe.save_state(STATE_PATH, state)
     pending.save_pending(PENDING_PATH, queue)
