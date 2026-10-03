@@ -1,25 +1,36 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { type AgentStatus, isAgentStatus, isStale, STATUS_URL } from "@/lib/agent-status";
 import { TELEGRAM_CHANNEL } from "@/lib/telegram-post";
 
 /**
- * Tony Scraponi's mark: a spy — fedora and dark glasses, for a scraper
- * with a mobster's name.
+ * Tony Scraponi's mark: a spy — a lime fedora with a band, dark glasses —
+ * for a scraper with a mobster's name. Now and then the hat tips and a
+ * glint crosses the lenses (CSS, off under reduced motion).
  */
 function TonyIcon({ size = 28 }: { size?: number }) {
   return (
     <svg className="app-icon" width={size} height={size} viewBox="0 0 28 28" aria-hidden="true">
+      <defs>
+        <clipPath id="tony-lenses">
+          <circle cx="10.9" cy="19" r="2.6" />
+          <circle cx="17.1" cy="19" r="2.6" />
+        </clipPath>
+      </defs>
       <rect x="0.5" y="0.5" width="27" height="27" rx="6" className="app-icon-tile" />
-      {/* fedora: crown with a pinched top, then a curved brim */}
-      <path d="M8.5 13.2 C8.5 9.6 10.4 7.6 14 7.6 C17.6 7.6 19.5 9.6 19.5 13.2" className="app-icon-line" />
-      <path d="M11 9.6 Q14 11.2 17 9.6" className="app-icon-line" />
-      <path d="M4.8 13.6 Q14 17.2 23.2 13.6" className="app-icon-line" />
-      {/* dark glasses */}
-      <circle cx="10.9" cy="19" r="2.5" className="app-icon-lens" />
-      <circle cx="17.1" cy="19" r="2.5" className="app-icon-lens" />
-      <path d="M13.4 18.6 Q14 18.1 14.6 18.6" className="app-icon-line" />
+      <g className="tony-hat">
+        <path d="M8.5 13.2 C8.5 9.6 10.4 7.6 14 7.6 C17.6 7.6 19.5 9.6 19.5 13.2 Z" className="tony-hat-crown" />
+        <path d="M11 9.6 Q14 11.2 17 9.6" className="tony-hat-dent" />
+        <path d="M8.7 11.9 L19.3 11.9" className="tony-hat-band" />
+        <path d="M4.6 13.5 Q14 17.4 23.4 13.5 Q14 15.4 4.6 13.5 Z" className="tony-hat-brim" />
+      </g>
+      <circle cx="10.9" cy="19" r="2.6" className="tony-lens" />
+      <circle cx="17.1" cy="19" r="2.6" className="tony-lens" />
+      <path d="M13.5 18.6 Q14 18.1 14.5 18.6" className="tony-bridge" />
+      <g clipPath="url(#tony-lenses)">
+        <rect x="6" y="14" width="2.2" height="10" className="tony-glint" />
+      </g>
     </svg>
   );
 }
@@ -27,15 +38,13 @@ function TonyIcon({ size = 28 }: { size?: number }) {
 const FEATURES = ["themes", "inbox", "publishing", "live runs"];
 
 /**
- * The home page's promo for Tony Scraponi, the agent's coming control
- * room, under the columns — in the site's own language (the home cards'
- * surface, mono meta, lime for the agent). The proof line reads the same
- * status.json as the agent widget; it stays hidden until that loads.
- * "What's inside" opens a native <dialog> (focus trapped, Esc or a
- * backdrop click closes it).
+ * The home page's teaser for Tony Scraponi, the agent's coming control
+ * room, under the columns: two dense lines on the home cards' surface.
+ * Left: the name, "coming soon" and what it is, then the features. Right:
+ * a proof line from the agent's live status.json (hidden until it loads)
+ * and "follow the build ↗" to the Telegram channel.
  */
 export default function AppsStrip() {
-  const dialog = useRef<HTMLDialogElement>(null);
   const [status, setStatus] = useState<AgentStatus | null>(null);
 
   useEffect(() => {
@@ -59,14 +68,12 @@ export default function AppsStrip() {
     <section id="apps">
       <div className="wrap">
         <article className="tony-card">
-          <TonyIcon size={44} />
+          <TonyIcon size={36} />
           <div className="tony-copy">
-            <h2 className="tony-name">
-              Tony Scraponi <span className="tony-eyebrow">app · coming soon</span>
-            </h2>
-            <p className="tony-pitch">
-              A control room for the research agent: watch what it reads, approve what&apos;s worth
-              keeping, and let it publish.
+            <p className="tony-head">
+              <span className="tony-name">Tony Scraponi</span>
+              <span className="tony-eyebrow">coming soon</span>
+              <span className="tony-pitch">a control room for the research agent</span>
             </p>
             <ul className="tony-features">
               {FEATURES.map((f) => (
@@ -75,53 +82,25 @@ export default function AppsStrip() {
             </ul>
           </div>
           <div className="tony-side">
-            {status && (
-              <p className="tony-proof">
-                <span className={live ? "agent-dot-online" : "agent-muted"} aria-hidden="true">
-                  ●
-                </span>{" "}
-                agent {live ? "live" : "paused"} · last run <b>{found}</b> found · <b>{kept}</b>{" "}
-                kept · <b>{status.pending_count}</b> in queue
-              </p>
-            )}
-            <div className="tony-cta">
-              <a className="tony-btn" href={`https://t.me/${TELEGRAM_CHANNEL}`}>
-                Follow the build <span aria-hidden="true">↗</span>
-              </a>
-              <button type="button" className="tony-more" onClick={() => dialog.current?.showModal()}>
-                What&apos;s inside <span aria-hidden="true">→</span>
-              </button>
-            </div>
+            <p className="tony-proof">
+              {status && (
+                <>
+                  <span className={live ? "agent-dot-online" : "agent-muted"} aria-hidden="true">
+                    ●
+                  </span>{" "}
+                  agent {live ? "live" : "paused"} · <b>{found}</b> found · <b>{kept}</b> kept ·{" "}
+                  <b>{status.pending_count}</b> queued
+                </>
+              )}
+            </p>
+            <a className="card-action tony-follow" href={`https://t.me/${TELEGRAM_CHANNEL}`}>
+              Follow the build <span aria-hidden="true">↗</span>
+            </a>
           </div>
           <div className="card-comet" aria-hidden="true">
             <span className="card-comet-run" />
           </div>
         </article>
-        <dialog
-          ref={dialog}
-          className="app-dialog"
-          aria-labelledby="app-dialog-title"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) e.currentTarget.close();
-          }}
-        >
-          <div className="app-dialog-body">
-            <TonyIcon size={40} />
-            <p className="app-dialog-title" id="app-dialog-title">
-              Tony Scraponi
-            </p>
-            <p className="app-dialog-soon">Coming soon…</p>
-            <p className="app-dialog-text">
-              A control room for the research agent: its themes, the queue of what it found, and
-              what got published.
-            </p>
-            <form method="dialog">
-              <button type="submit" className="card-action app-dialog-close">
-                Close
-              </button>
-            </form>
-          </div>
-        </dialog>
       </div>
     </section>
   );
