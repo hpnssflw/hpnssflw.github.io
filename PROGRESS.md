@@ -18,7 +18,7 @@
   `/researcher/`'s descriptions. Header on inner routes moved left the
   same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
   dim slash (`.site-header-sep`), wraps below ~320px.
-- Hero rebuilt as a card the same day and the next (`a76c02a`..`fdf9f2e`,
+- Hero rebuilt as a card the same day and the next (`a76c02a`..`8a77c64`,
   iterated live from rendered variants): the home cards' borderless
   `--card-bg` surface (shared by the hero, agent widget and LAB card), a
   120px avatar inside the card's padding (`public/avatar.jpg`, a 352px
@@ -40,14 +40,16 @@
   the agent's Telegram channel, shuffled per page load, with a violet
   source badge (`82882dc`; `lib/home-feed.ts`; Telegram read at build
   time from `t.me/s/hypnosisflow`, `lib/telegram-post.ts`). Under the
-  columns, a compact promo card for Tony Scraponi in the site's own
-  language (`fdf9f2e`, `components/AppsStrip.tsx`): a spy mark, pitch,
-  features, a proof line from the agent's live status.json, "follow the
-  build ↗" (Telegram) and a "what's inside" dialog. (Tony's own design
-  direction, in the Obsidian vault, was tried and rejected for the site.) `deploy.yml` passes `GITHUB_TOKEN`
+  columns, a two-line teaser for Tony Scraponi in the site's own
+  language (`8a77c64`, `components/AppsStrip.tsx`): an animated spy mark
+  (the fedora tips, a glint crosses the glasses), name, "coming soon",
+  pitch and features on the left; the agent's live numbers from
+  status.json and "follow the build ↗" (Telegram) on the right. (Tony's
+  own design direction, in the Obsidian vault, was tried and rejected
+  for the site.) `deploy.yml` passes `GITHUB_TOKEN`
   and rebuilds every 6 h for both build-time sources. At desktop widths "/" fits one screen: its four
   vertical gaps shrink with the window height (`--home-fixed` in
-  globals.css — raise it if the home content grows; windows under ~700px
+  globals.css — raise it if the home content grows; windows under ~640px
   tall scroll). **Live since 2026-10-03:** merged with `origin/main` (the
   Tony Scraponi inbox, `bc18878`; CLAUDE.md kept both new bullets) and
   pushed; deploy run 37099706848 succeeded, and the live page shows the
