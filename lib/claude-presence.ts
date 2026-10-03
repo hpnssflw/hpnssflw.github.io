@@ -1,3 +1,4 @@
+import { levelsOf } from "./github-calendar";
 import { PRESENCE_STALE_MS } from "./now-config";
 import { formatAgo, formatDuration } from "./now-format";
 
@@ -16,7 +17,12 @@ export interface Presence {
   day: string;
   tz: string;
   updatedAt: string;
+  /** Active minutes per owner-local day, the last 28 days, `day` last; null from an older runner. */
+  dailyMinutes: number[] | null;
 }
+
+/** How many days dailyMinutes covers (DAILY_DAYS in scripts/presence/collect.mjs). */
+export const DAILY_DAYS = 28;
 
 const STATES: readonly string[] = ["working", "waiting", "offline"];
 /** Must match MODEL_FAMILIES in scripts/presence/collect.mjs (cross-checked in its tests). */
@@ -28,6 +34,14 @@ function isIso(value: unknown): boolean {
 
 function isCount(value: unknown): boolean {
   return Number.isInteger(value) && (value as number) >= 0;
+}
+
+function isDaily(value: unknown): value is number[] {
+  return (
+    Array.isArray(value) &&
+    value.length === DAILY_DAYS &&
+    value.every((n) => isCount(n) && n <= 24 * 60)
+  );
 }
 
 /**
@@ -48,6 +62,8 @@ export function parsePresence(json: unknown): Presence | null {
   if (typeof p.day !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(p.day)) return null;
   if (typeof p.tz !== "string" || p.tz === "") return null;
   if (!isIso(p.updatedAt)) return null;
+  // Missing is fine (a runner from before the key existed); malformed is not.
+  if (p.dailyMinutes !== undefined && !isDaily(p.dailyMinutes)) return null;
   return {
     v: 1,
     state: p.state as PresenceState,
@@ -59,6 +75,7 @@ export function parsePresence(json: unknown): Presence | null {
     day: p.day,
     tz: p.tz,
     updatedAt: p.updatedAt as string,
+    dailyMinutes: isDaily(p.dailyMinutes) ? [...p.dailyMinutes] : null,
   };
 }
 
@@ -67,8 +84,8 @@ export function effectiveState(p: Presence, nowMs: number): PresenceState {
   return nowMs - Date.parse(p.updatedAt) > PRESENCE_STALE_MS ? "offline" : p.state;
 }
 
-/** True iff it is still `day` for the owner, in the owner's time zone. */
-export function isOwnerToday(day: string, tz: string, nowMs: number): boolean {
+/** The owner's calendar day (YYYY-MM-DD) at nowMs, in their time zone; null for a bad tz. */
+export function ownerDay(tz: string, nowMs: number): string | null {
   try {
     const parts = new Intl.DateTimeFormat("en-US", {
       timeZone: tz,
@@ -77,10 +94,15 @@ export function isOwnerToday(day: string, tz: string, nowMs: number): boolean {
       day: "2-digit",
     }).formatToParts(nowMs);
     const part = (type: string) => parts.find((x) => x.type === type)?.value;
-    return `${part("year")}-${part("month")}-${part("day")}` === day;
+    return `${part("year")}-${part("month")}-${part("day")}`;
   } catch {
-    return false;
+    return null;
   }
+}
+
+/** True iff it is still `day` for the owner, in the owner's time zone. */
+export function isOwnerToday(day: string, tz: string, nowMs: number): boolean {
+  return ownerDay(tz, nowMs) === day;
 }
 
 export interface PresenceView {
@@ -116,25 +138,35 @@ export function presenceView(p: Presence, nowMs: number): PresenceView {
   return { state, headline, today, footer: p.model ? `${p.model} · ${updated}` : updated };
 }
 
-export interface MeterCell {
-  fill: "on" | "part" | "off";
-  live: boolean;
+const DAY_MS = 86_400_000;
+const dayNumber = (day: string) => Math.round(Date.parse(`${day}T00:00:00Z`) / DAY_MS);
+
+export interface RecentDay {
+  date: string; // YYYY-MM-DD, owner-local
+  minutes: number;
+  level: 0 | 1 | 2 | 3 | 4; // quartiles of the active days, as on the GitHub grid
+  today: boolean;
 }
 
 /**
- * The home widget's meter: 24 cells, one per hour of today's active time
- * — a count, not a clock (presence.json has no per-hour data). Full hours
- * are "on", the started hour "part". While a session runs (working or
- * waiting) the last lit cell is live; a session that started under a
- * minute ago shows as one live partial cell.
+ * The home hero's 28-day strip, ending on the owner's today. A file from
+ * an earlier day is shifted along (the days since it was written are
+ * empty); without history, only today's minutes are known.
  */
-export function meterCells(todayMinutes: number, state: PresenceState): MeterCell[] {
-  const running = state !== "offline";
-  const minutes = Math.min(Math.max(todayMinutes, 0), 24 * 60);
-  const full = Math.floor(minutes / 60);
-  const lit = full + (minutes % 60 > 0 || (running && minutes === 0) ? 1 : 0);
-  return Array.from({ length: 24 }, (_, i) => ({
-    fill: i < full ? "on" : i < lit ? "part" : "off",
-    live: running && i === lit - 1,
+export function recentDays(p: Presence, nowMs: number): RecentDay[] {
+  const today = ownerDay(p.tz, nowMs) ?? p.day;
+  const base = p.dailyMinutes ?? [...Array(DAILY_DAYS - 1).fill(0), p.todayMinutes];
+  const elapsed = Math.max(0, dayNumber(today) - dayNumber(p.day));
+  const minutes =
+    elapsed >= DAILY_DAYS
+      ? Array<number>(DAILY_DAYS).fill(0)
+      : [...base.slice(elapsed), ...Array<number>(elapsed).fill(0)];
+  const levels = levelsOf(minutes);
+  const last = dayNumber(today);
+  return minutes.map((m, i) => ({
+    date: new Date((last - (DAILY_DAYS - 1 - i)) * DAY_MS).toISOString().slice(0, 10),
+    minutes: m,
+    level: levels[i],
+    today: i === DAILY_DAYS - 1,
   }));
 }

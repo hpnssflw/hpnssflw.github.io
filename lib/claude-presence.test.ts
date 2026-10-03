@@ -3,9 +3,9 @@ import {
   type Presence,
   effectiveState,
   isOwnerToday,
-  meterCells,
   parsePresence,
   presenceView,
+  recentDays,
 } from "./claude-presence";
 
 const MIN = 60_000;
@@ -24,6 +24,7 @@ function makePresence(overrides: Partial<Presence> = {}): Presence {
     day: "2026-09-28",
     tz: "Europe/Moscow",
     updatedAt: "2026-09-28T07:30:00.000Z",
+    dailyMinutes: [...Array(27).fill(0), 220],
     ...overrides,
   };
 }
@@ -58,6 +59,23 @@ describe("parsePresence", () => {
     expect(parsePresence([])).toBeNull();
     const noSince = { ...makePresence(), since: undefined };
     expect(parsePresence(noSince)).toBeNull();
+  });
+
+  it("reads a file without dailyMinutes (an older runner) as no history", () => {
+    const { dailyMinutes: _d, ...old } = makePresence();
+    expect(parsePresence(old)?.dailyMinutes).toBeNull();
+  });
+
+  it.each([
+    ["27 days", Array(27).fill(1)],
+    ["29 days", Array(29).fill(1)],
+    ["a fractional day", [...Array(27).fill(0), 1.5]],
+    ["a negative day", [...Array(27).fill(0), -1]],
+    ["more than a day of minutes", [...Array(27).fill(0), 1441]],
+    ["a string", "1,2,3"],
+    ["a nested array", [...Array(27).fill(0), [1]]],
+  ])("rejects dailyMinutes with %s", (_label, dailyMinutes) => {
+    expect(parsePresence({ ...makePresence(), dailyMinutes })).toBeNull();
   });
 
   it("drops unknown extra keys", () => {
@@ -142,36 +160,32 @@ describe("presenceView", () => {
   });
 });
 
-describe("meterCells", () => {
-  const CODE = { on: "o", part: "p", off: "-" } as const;
-  const fills = (cells: ReturnType<typeof meterCells>) => cells.map((c) => CODE[c.fill]).join("");
-  const live = (cells: ReturnType<typeof meterCells>) => cells.findIndex((c) => c.live);
+describe("recentDays", () => {
+  const minutes = Array.from({ length: 28 }, (_, i) => i * 10); // 0, 10, …, 270
 
-  it("is 24 cells, one per hour of today's active time", () => {
-    const cells = meterCells(15 * 60 + 8, "offline");
-    expect(cells).toHaveLength(24);
-    // 15 full hours, a partial 16th, the rest off.
-    expect(fills(cells)).toBe("o".repeat(15) + "p" + "-".repeat(8));
-    expect(live(cells)).toBe(-1);
+  it("lays the 28 days out oldest first, the owner's today last", () => {
+    const days = recentDays(makePresence({ dailyMinutes: minutes }), NOW);
+    expect(days).toHaveLength(28);
+    expect(days.map((d) => d.minutes)).toEqual(minutes);
+    expect(days[27]).toMatchObject({ date: "2026-09-28", today: true });
+    expect(days[0]).toMatchObject({ date: "2026-09-01", today: false });
+    expect(days[0].level).toBe(0); // 0 minutes
+    expect(days[27].level).toBe(4); // the busiest day
   });
 
-  it("marks the last lit cell live while a session is on", () => {
-    expect(live(meterCells(15 * 60 + 8, "working"))).toBe(15);
-    expect(live(meterCells(3 * 60, "waiting"))).toBe(2);
+  it("shifts a file from yesterday by a day, with nothing for today yet", () => {
+    const days = recentDays(makePresence({ dailyMinutes: minutes }), AFTER_MOSCOW_MIDNIGHT);
+    expect(days.map((d) => d.minutes)).toEqual([...minutes.slice(1), 0]);
+    expect(days[27]).toMatchObject({ date: "2026-09-29", today: true, minutes: 0 });
   });
 
-  it("shows a just-started session as one live partial cell", () => {
-    const cells = meterCells(0, "working");
-    expect(fills(cells)).toBe("p" + "-".repeat(23));
-    expect(live(cells)).toBe(0);
+  it("is all empty for a file four weeks old or more", () => {
+    const later = NOW + 30 * 24 * 60 * MIN;
+    expect(recentDays(makePresence({ dailyMinutes: minutes }), later).every((d) => d.minutes === 0)).toBe(true);
   });
 
-  it("is all off with no time today and nothing running", () => {
-    expect(fills(meterCells(0, "offline"))).toBe("-".repeat(24));
-  });
-
-  it("never overflows the day", () => {
-    expect(fills(meterCells(30 * 60, "working"))).toBe("o".repeat(24));
-    expect(live(meterCells(30 * 60, "working"))).toBe(23);
+  it("falls back to today's minutes alone without history", () => {
+    const days = recentDays(makePresence({ dailyMinutes: null }), NOW);
+    expect(days.map((d) => d.minutes)).toEqual([...Array(27).fill(0), 220]);
   });
 });
