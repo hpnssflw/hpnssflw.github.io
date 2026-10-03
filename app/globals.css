@@ -238,10 +238,9 @@ a:focus-visible {
 /* The hero is a card in the home cards' language (mono 10px, actions top
    right) on one grid:
 
-   Row map:  avatar │ name, roles;         │ 1 actions
+   Row map:  avatar │ name, roles, thesis; │ 1 actions
              (rows 1–2)  Claude Code strip   │ 2 GitHub grid, bottom-aligned
                          at the foot         │
-             3 thesis, centred across the card
    Two lines run across the card: the name with the actions on top, the
    Claude Code block with the GitHub grid at the foot — their captions
    share a baseline. Placement is explicit. Its
@@ -335,13 +334,10 @@ a:focus-visible {
   font-style: italic;
 }
 
-/* The card's last row, centred under everything. */
+/* Under the roles, inside .hero-id — aligned with the name, not the
+   avatar. */
 .hero-thesis {
-  grid-column: 1 / -1;
-  grid-row: 3;
-  justify-self: center;
-  margin: 0;
-  text-align: center;
+  margin: 8px 0 0;
   font-family: var(--font-sans);
   font-size: var(--fs-xs);
 }
@@ -769,32 +765,24 @@ a:focus-visible {
   display: grid;
 }
 
-/* Slides only fade — no movement. Leaving fades out at once; visibility
-   flips after the fade, which also takes the hidden slide's link out of
-   the tab order. Arriving starts once the leaving one is mostly gone, so
-   the two texts barely overlap. Long ease-in-out on both keeps it soft. */
+/* Slides only fade — no movement — and both ways on transitions alone
+   (an animation on the arriving slide used to vanish the moment its class
+   left, so the leaving text cut out). Leaving: a 1s fade, then visibility
+   flips, which also takes its link out of the tab order. Arriving: waits
+   0.6s, then the same 1s fade, so the two texts barely overlap. */
 .lab-slide {
   grid-area: 1 / 1;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s cubic-bezier(0.45, 0, 0.55, 1),
-    visibility 0s linear 0.8s;
+  transition: opacity 1s cubic-bezier(0.45, 0, 0.55, 1),
+    visibility 0s linear 1s;
 }
 
 .lab-slide.is-active {
   opacity: 1;
   visibility: visible;
-  transition: visibility 0s;
-  animation: lab-fade-in 1.1s cubic-bezier(0.45, 0, 0.55, 1) 0.5s both;
-}
-
-@keyframes lab-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  transition: opacity 1s cubic-bezier(0.45, 0, 0.55, 1) 0.6s,
+    visibility 0s linear 0s;
 }
 
 /* Top line: date · tag on the left, read ↗ / open ↗ pushed to the right. */
@@ -824,15 +812,14 @@ a:focus-visible {
 }
 
 /* Where a slide comes from ("lab" / "telegram"), centred at the card's
-   foot in the GitHub grid's violet. Positioned against .lab-card, so it
-   fades with its slide; the card's bottom padding keeps it clear of the
-   text. */
+   foot, muted. Positioned against .lab-card, so it fades with its slide;
+   the card's bottom padding keeps it clear of the text. */
 .src-badge {
   position: absolute;
   left: 50%;
   bottom: 10px;
   transform: translateX(-50%);
-  color: var(--gh-violet);
+  color: var(--muted);
 }
 
 /* --- RESEARCHER -------------------------------------------------- */
@@ -1220,16 +1207,11 @@ footer a {
     margin: 0;
   }
 
-  /* The GitHub grid takes the next row, full width and left-aligned;
-     the thesis stays last. */
+  /* The GitHub grid takes the last row, full width and left-aligned. */
   .hero-widgets {
     grid-column: 1 / -1;
     grid-row: 3;
     justify-self: start;
-  }
-
-  .hero-thesis {
-    grid-row: 4;
   }
 
   .gh {

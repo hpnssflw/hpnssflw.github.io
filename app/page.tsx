@@ -13,9 +13,10 @@ import LabCarousel from "@/components/LabCarousel";
 export default async function HomePage() {
   // The LAB card mixes LAB posts with the agent channel's latest Telegram
   // posts, read at build time (no slides from Telegram if t.me is down).
+  // Twice as many posts as slides: header-only messages get skipped.
   const slides = [
     ...labSlides(getAllPosts()),
-    ...telegramSlides(await fetchRecentPosts(TELEGRAM_CHANNEL, FEED_PER_SOURCE)),
+    ...telegramSlides(await fetchRecentPosts(TELEGRAM_CHANNEL, FEED_PER_SOURCE * 2)),
   ];
 
   return (
@@ -36,6 +37,9 @@ export default async function HomePage() {
               <p className="hero-roles">
                 Web products · data visualization · AI engineering
               </p>
+              <p className="hero-thesis accent">
+                Understand how it fails, then build so it doesn&apos;t.
+              </p>
               <ClaudeActivity />
             </div>
             <nav className="hero-actions" aria-label="Contact">
@@ -52,9 +56,6 @@ export default async function HomePage() {
             <div className="hero-widgets">
               <GitHubGrid />
             </div>
-            <p className="hero-thesis accent">
-              Understand how it fails, then build so it doesn&apos;t.
-            </p>
           </div>
         </div>
       </section>

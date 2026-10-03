@@ -20,6 +20,12 @@ const tg = (id: number, links = 2): TelegramPost => ({
   date: "2026-09-30T04:09:28+00:00",
   title: "Research digest — 2 items",
   links: Array.from({ length: links }, (_, i) => ({ text: `link ${i}`, href: `https://x.test/${i}` })),
+  items: Array.from({ length: links }, (_, i) => ({
+    title: `Item ${i}`,
+    href: `https://x.test/${i}`,
+    section: "AI Engineering",
+    summary: `What item ${i} is.`,
+  })),
 });
 
 describe("labSlides", () => {
@@ -40,18 +46,32 @@ describe("labSlides", () => {
 });
 
 describe("telegramSlides", () => {
-  it("turns a post into a slide: its first line, up to three link titles, the day", () => {
+  it("shapes a digest post like a LAB post: its first item, the item's section as the tag", () => {
     const [slide] = telegramSlides([tg(94, 5)]);
     expect(slide).toEqual({
       key: "tg:94",
       source: "telegram",
       href: "https://t.me/hypnosisflow/94",
       external: true,
-      dateLabel: "Sep 30",
+      dateLabel: "Sep 2026",
+      tag: "AI Engineering",
+      title: "Item 0",
+      excerpt: "What item 0 is.",
+    });
+  });
+
+  it("falls back to the post's first line and link titles without items", () => {
+    const [slide] = telegramSlides([{ ...tg(95, 2), items: [] }]);
+    expect(slide).toMatchObject({
       tag: null,
       title: "Research digest — 2 items",
-      excerpt: "link 0 · link 1 · link 2",
+      excerpt: "link 0 · link 1",
     });
+  });
+
+  it("skips a header-only post (a long digest's first message)", () => {
+    const header = { ...tg(90, 0), title: "Research digest — 22 items" };
+    expect(telegramSlides([header, tg(91)]).map((s) => s.key)).toEqual(["tg:91"]);
   });
 
   it("takes at most five posts", () => {

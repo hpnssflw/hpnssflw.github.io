@@ -17,12 +17,21 @@ export interface PostLink {
   href: string;
 }
 
+/** One "• link / summary" entry of an agent digest, under its bold section heading. */
+export interface PostItem {
+  title: string;
+  href: string;
+  section: string | null;
+  summary: string;
+}
+
 export interface TelegramPost {
   id: number;
   url: string;
   date: string; // ISO 8601, from the post's <time datetime>
   title: string; // first non-empty line
   links: PostLink[];
+  items: PostItem[];
 }
 
 const NAMED: Record<string, string> = {
@@ -46,6 +55,37 @@ export function decodeEntities(text: string): string {
 
 function plain(html: string): string {
   return decodeEntities(html.replace(/<[^>]*>/g, "")).replace(/\s+/g, " ").trim();
+}
+
+const LINK = /<a\s[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/i;
+
+/**
+ * The agent's digest layout, line by line: a bold line is a section
+ * heading (the first line is also the post's title), a line with a link
+ * starts an item, and the next plain line is that item's summary.
+ */
+function parseItems(lines: string[]): PostItem[] {
+  const items: PostItem[] = [];
+  let section: string | null = null;
+  let pending: PostItem | null = null;
+  for (const line of lines) {
+    const text = plain(line);
+    if (!text) continue;
+    if (/^\s*<b>[\s\S]*<\/b>\s*$/i.test(line)) {
+      section = text;
+      pending = null;
+      continue;
+    }
+    const link = line.match(LINK);
+    const href = link ? decodeEntities(link[1]) : "";
+    if (link && /^https?:\/\//i.test(href) && plain(link[2])) {
+      pending = { title: plain(link[2]), href, section, summary: "" };
+      items.push(pending);
+    } else if (pending && !pending.summary) {
+      pending.summary = text;
+    }
+  }
+  return items;
 }
 
 /** Up to `limit` non-service posts of `channel` on its t.me/s page, newest first. */
@@ -72,7 +112,8 @@ export function parseRecentPosts(html: string, channel: string, limit: number): 
     if (!title && links.length === 0) continue;
 
     const id = Number(post[2]);
-    posts.push({ id, url: `https://t.me/${channel}/${id}`, date: time[1], title, links });
+    const items = parseItems(body[1].split(/<br\s*\/?>/i));
+    posts.push({ id, url: `https://t.me/${channel}/${id}`, date: time[1], title, links, items });
   }
   return posts;
 }

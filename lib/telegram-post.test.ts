@@ -56,7 +56,36 @@ describe("parseRecentPosts", () => {
         },
         { text: "KKKKhazix/AIHOT", href: "https://github.com/KKKKhazix/AIHOT?a=1&b=2" },
       ],
+      items: [
+        {
+          title: "Launch HN: Vespper (YC F24) – SOTA Docx MCP",
+          href: "https://www.vespper.com/blog/launching-vespper-docx-mcp",
+          section: "AI Engineering",
+          summary: "An MCP that edits Word documents.",
+        },
+        {
+          title: "KKKKhazix/AIHOT",
+          href: "https://github.com/KKKKhazix/AIHOT?a=1&b=2",
+          section: "Tooling",
+          summary: "Finds trending topics & writes daily reports.",
+        },
+      ],
     });
+  });
+
+  it("reads a one-topic post's heading as both title and section", () => {
+    const page = message(
+      "92",
+      '<b>Tooling</b><br/>• <a href="https://github.com/dzhng/jevgrep">dzhng/jevgrep</a><br/>A CLI tool for coding agents.',
+    );
+    expect(latest(page)?.items).toEqual([
+      {
+        title: "dzhng/jevgrep",
+        href: "https://github.com/dzhng/jevgrep",
+        section: "Tooling",
+        summary: "A CLI tool for coding agents.",
+      },
+    ]);
   });
 
   it("uses the first non-empty line as the title, tags stripped", () => {

@@ -20,9 +20,10 @@ const noSubscribe = () => () => {};
 /**
  * Home page LAB card: one post at a time — LAB posts and Telegram posts
  * mixed (lib/home-feed.ts), each with a badge naming its source. The
- * static HTML and hydration use the given order; the browser then swaps
- * in one shuffled order per page load (a client-only snapshot, so no
- * hydration mismatch). The comet's CSS animation along the
+ * static HTML and hydration use the given order with no slide showing;
+ * the browser then swaps in one shuffled order per page load (a
+ * client-only snapshot, so no hydration mismatch) and fades the first
+ * slide in. Slides cross-fade both ways. The comet's CSS animation along the
  * bottom edge is the timer — the card advances when it ends
  * (`--comet-duration` on `.lab-card` in globals.css), so pausing the
  * animation on hover/focus pauses the rotation too. Every slide stays in
@@ -37,6 +38,9 @@ export default function LabCarousel({ slides }: { slides: Slide[] }) {
     () => null,
   );
   const order = permutation ? permutation.map((i) => slides[i]) : slides;
+  // Nothing is shown until the shuffled order exists, so the first slide
+  // fades in once instead of being swapped right after load.
+  const active = permutation ? index : -1;
   if (order.length === 0) return null;
 
   return (
@@ -45,7 +49,7 @@ export default function LabCarousel({ slides }: { slides: Slide[] }) {
         {order.map((slide, i) => (
           <article
             key={slide.key}
-            className={i === index ? "lab-slide is-active" : "lab-slide"}
+            className={i === active ? "lab-slide is-active" : "lab-slide"}
           >
             <div className="lab-card-meta">
               <span className="date">{slide.dateLabel}</span>
@@ -71,7 +75,7 @@ export default function LabCarousel({ slides }: { slides: Slide[] }) {
           </article>
         ))}
       </div>
-      {order.length > 1 && (
+      {permutation && order.length > 1 && (
         <div className="card-comet" aria-hidden="true">
           {/* Keyed by index so each slide remounts the comet and restarts it. */}
           <span
