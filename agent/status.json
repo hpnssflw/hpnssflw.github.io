@@ -5,14 +5,14 @@
     "ai-engineering": {
       "collected": 36,
       "in_window": 36,
-      "kept": 1,
-      "new": 17
+      "kept": 0,
+      "new": 16
     },
     "tooling": {
-      "collected": 53,
-      "in_window": 53,
-      "kept": 3,
-      "new": 17
+      "collected": 52,
+      "in_window": 52,
+      "kept": 1,
+      "new": 14
     },
     "web-products": {
       "collected": 26,
@@ -22,119 +22,115 @@
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 38,
+  "pending_count": 39,
   "recent_events": [
     {
       "reason": "below_relevance",
-      "title": "Returning from vacation? The government can search your phone without a warrant",
+      "title": "Why is the liver so weirdly regenerative?",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215378+00:00",
+      "ts": "2026-10-03T09:43:50.328212+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "September 2026: The world today, as seen by one Polish guy",
+      "title": "Returning from vacation? The government can search your phone without a warrant",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215349+00:00",
+      "ts": "2026-10-03T09:43:50.328196+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Several vulnerabilities have been discovered in the Linux kernel",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215298+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Why is the liver so weirdly regenerative?",
-      "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215284+00:00",
+      "ts": "2026-10-03T09:43:50.328169+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215251+00:00",
+      "ts": "2026-10-03T09:43:50.328155+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Linux support is coming to Snapdragon X2 series",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215237+00:00",
+      "ts": "2026-10-03T09:43:50.328141+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Sonnet 5.5",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215223+00:00",
+      "ts": "2026-10-03T09:43:50.328123+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215209+00:00",
+      "ts": "2026-10-03T09:43:50.328081+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215193+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
-      "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215177+00:00",
+      "ts": "2026-10-03T09:43:50.328066+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Ideas on modernizing the open-source desktop",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215155+00:00",
+      "ts": "2026-10-03T09:43:50.328051+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "September 2026: The world today, as seen by one Polish guy",
+      "topic": "web-products",
+      "ts": "2026-10-03T09:43:50.328033+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
+      "topic": "web-products",
+      "ts": "2026-10-03T09:43:50.328011+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Coding is not solved",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:45.215091+00:00",
+      "ts": "2026-10-03T09:43:50.327947+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
-      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
+      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:38.021267+00:00",
+      "ts": "2026-10-03T09:43:40.874931+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:38.021254+00:00",
+      "ts": "2026-10-03T09:43:40.874920+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Launch HN: Magnitude (YC S25) \u2013 Self-optimizing inference engine for agents",
       "topic": "web-products",
-      "ts": "2026-10-03T03:56:38.021238+00:00",
+      "ts": "2026-10-03T09:43:40.874907+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-09-26T18:47:40.661012+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-09-26T22:14:28.960901+00:00"
@@ -226,19 +222,23 @@
     {
       "kept": 4,
       "ts": "2026-10-03T03:56:08.946753+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-03T09:43:15.596705+00:00"
     }
   ],
-  "streak": 226,
+  "streak": 227,
   "topics": [
     {
       "collected": 36,
-      "kept": 1,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 53,
-      "kept": 3,
+      "collected": 52,
+      "kept": 1,
       "name": "Tooling",
       "slug": "tooling"
     },
@@ -249,5 +249,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-03T03:56:08.946753+00:00"
+  "updated_at": "2026-10-03T09:43:15.596705+00:00"
 }
