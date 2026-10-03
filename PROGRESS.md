@@ -18,30 +18,37 @@
   `/researcher/`'s descriptions. Header on inner routes moved left the
   same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
   dim slash (`.site-header-sep`), wraps below ~320px.
-- Hero rebuilt as a card the same day (`a76c02a`..`034316b`, iterated
-  live from rendered variants): the home cards' borderless `--card-bg`
-  surface (now shared by the hero, agent widget and LAB card), 64px
-  square avatar (`public/avatar.jpg`, a 352px crop of the face —
-  `photo.jpg` is unused but kept), name in normal case at 24px, roles
-  "web products · data visualization · AI engineering" with the thesis
-  under them, `email ↗ github ↗ now →` top right. Under the actions, two
-  widgets side by side: Claude Code (`components/ClaudeWidget.tsx`,
-  `034316b`) — status line, a 24-cell meter of today's active hours
-  (`meterCells`: a count, not a clock), lime, live cell breathing — and
-  a mini GitHub contribution grid (`868b73e`): last 26 weeks, 8px violet
-  cells, every active day twinkling pink/white/cyan on its own seeded
-  6–15 s rhythm, fetched at build time (`lib/github-calendar.ts`,
-  `components/GitHubGrid.tsx`). Under the columns, a flat TELEGRAM strip
-  (`e1bf110`): the agent channel's latest post, read at build time from
-  `t.me/s/hypnosisflow` (`lib/telegram-post.ts`,
-  `components/TelegramLatest.tsx`). `deploy.yml` passes `GITHUB_TOKEN` and
-  rebuilds every 6 h for both. At desktop widths "/" fits one screen: its
-  four vertical gaps shrink with the window height (`--home-fixed` in
+- Hero rebuilt as a card the same day and the next (`a76c02a`..`7b63647`,
+  iterated live from rendered variants): the home cards' borderless
+  `--card-bg` surface (shared by the hero, agent widget and LAB card), a
+  120px avatar inside the card's padding (`public/avatar.jpg`, a 352px
+  crop of the face — `photo.jpg` is unused but kept), name in normal case
+  at 24px, roles "web products · data visualization · AI engineering",
+  the thesis under them, `email ↗ github ↗ now →` top right. At the
+  card's foot, two widgets share a caption baseline: Claude Code
+  (`components/ClaudeActivity.tsx`) — status line, a strip of the last
+  28 days' active minutes (lime, today glowing while a session runs) —
+  and a mini GitHub contribution grid (`868b73e`): last 26 weeks, 8px
+  violet cells, every active day twinkling on its own seeded rhythm,
+  fetched at build time (`lib/github-calendar.ts`,
+  `components/GitHubGrid.tsx`). The strip reads presence.json's new
+  `dailyMinutes` (`c79bf1c`: 28 numbers; run.mjs recomputes the 27 past
+  days once a day into a local `daily-cache.json`; `install.ps1` was
+  re-run on 2026-10-03 and the task published the 11-key file). Under
+  the columns, a flat TELEGRAM strip (`e1bf110`): the agent channel's
+  latest post, read at build time from `t.me/s/hypnosisflow`
+  (`lib/telegram-post.ts`, `components/TelegramLatest.tsx`).
+  `deploy.yml` passes `GITHUB_TOKEN` and rebuilds every 6 h for both
+  build-time blocks. At desktop widths "/" fits one screen: its four
+  vertical gaps shrink with the window height (`--home-fixed` in
   globals.css — raise it if the home content grows). **Unverified until
   the first Actions build:** that Actions' `GITHUB_TOKEN` may query
   `contributionsCollection` — if not, the build log shows
   `[github-calendar] … skipping the grid` and the grid is simply absent
-  (fix: a read-only PAT secret).
+  (fix: a read-only PAT secret). **Not pushed:** local `main` has
+  diverged from `origin/main` (the Tony Scraponi inbox, 11 commits from
+  2026-09-28/29, pushed from a worktree); a trial merge conflicts only in
+  CLAUDE.md (keep both new bullets).
 - Next.js App Router + TypeScript, statically exported (`output: 'export'`,
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
