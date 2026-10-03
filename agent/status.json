@@ -3,138 +3,136 @@
   "delivery_cadence_hours": 24,
   "funnel": {
     "ai-engineering": {
-      "collected": 36,
-      "in_window": 36,
+      "collected": 30,
+      "in_window": 30,
       "kept": 0,
-      "new": 17
+      "new": 14
     },
     "tooling": {
       "collected": 52,
       "in_window": 52,
-      "kept": 0,
-      "new": 12
+      "kept": 1,
+      "new": 13
     },
     "web-products": {
-      "collected": 26,
-      "in_window": 26,
-      "kept": 0,
-      "new": 13
+      "collected": 21,
+      "in_window": 21,
+      "kept": 2,
+      "new": 15
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 41,
+  "pending_count": 44,
   "recent_events": [
     {
-      "reason": "below_relevance",
-      "title": "Why is the liver so weirdly regenerative?",
+      "score": 7,
+      "source": "hn",
+      "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
       "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561927+00:00",
+      "ts": "2026-10-03T22:42:43.724340+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 7,
+      "source": "hn",
+      "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
+      "topic": "web-products",
+      "ts": "2026-10-03T22:42:43.724330+00:00",
+      "verdict": "kept"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "If we do not stop to help each other, what do we become?",
+      "topic": "web-products",
+      "ts": "2026-10-03T22:42:43.724319+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
+      "title": "On social reality in China",
       "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561910+00:00",
+      "ts": "2026-10-03T22:42:43.724309+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Aleph Alpha Kolibri: How the sovereign German LLM works",
+      "title": "How we learned to stop worrying and love campus surveillance",
       "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561882+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Returning from vacation? The government can search your phone without a warrant",
-      "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561864+00:00",
+      "ts": "2026-10-03T22:42:43.724300+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "September 2026: The world today, as seen by one Polish guy",
       "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561847+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561830+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Linux support is coming to Snapdragon X2 series",
-      "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561812+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Sonnet 5.5",
-      "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561795+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561776+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
-      "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561758+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ideas on modernizing the open-source desktop",
-      "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561738+00:00",
+      "ts": "2026-10-03T22:42:43.724291+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Several vulnerabilities have been discovered in the Linux kernel",
       "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561714+00:00",
+      "ts": "2026-10-03T22:42:43.724281+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Coding is not solved",
+      "title": "Greg Kroah-Hartman \u2013 Security in the LLM Age [video]",
       "topic": "web-products",
-      "ts": "2026-10-03T19:01:36.561632+00:00",
+      "ts": "2026-10-03T22:42:43.724271+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "seen",
-      "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
+      "reason": "below_relevance",
+      "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
       "topic": "web-products",
-      "ts": "2026-10-03T19:01:24.360183+00:00",
+      "ts": "2026-10-03T22:42:43.724262+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "seen",
-      "title": "Launch HN: Magnitude (YC S25) \u2013 Self-optimizing inference engine for agents",
+      "reason": "below_relevance",
+      "title": "Ideas on modernizing the open-source desktop",
       "topic": "web-products",
-      "ts": "2026-10-03T19:01:24.360170+00:00",
+      "ts": "2026-10-03T22:42:43.724252+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Aleph Alpha Kolibri: How the sovereign German LLM works",
+      "topic": "web-products",
+      "ts": "2026-10-03T22:42:43.724229+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "topic": "web-products",
+      "ts": "2026-10-03T22:42:43.724217+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Burning Man death rates \u2013 A short lesson in statistics",
+      "topic": "web-products",
+      "ts": "2026-10-03T22:42:43.724205+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "How Singapore's government-run dating service works",
+      "topic": "web-products",
+      "ts": "2026-10-03T22:42:43.724189+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sonnet 5.5",
+      "topic": "web-products",
+      "ts": "2026-10-03T22:42:43.724128+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-09-27T09:37:18.729679+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-27T15:56:03.892075+00:00"
@@ -226,28 +224,32 @@
     {
       "kept": 0,
       "ts": "2026-10-03T19:00:43.940612+00:00"
+    },
+    {
+      "kept": 3,
+      "ts": "2026-10-03T22:41:56.516034+00:00"
     }
   ],
-  "streak": 229,
+  "streak": 230,
   "topics": [
     {
-      "collected": 36,
+      "collected": 30,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 52,
-      "kept": 0,
+      "kept": 1,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 26,
-      "kept": 0,
+      "collected": 21,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-03T19:00:43.940612+00:00"
+  "updated_at": "2026-10-03T22:41:56.516034+00:00"
 }
