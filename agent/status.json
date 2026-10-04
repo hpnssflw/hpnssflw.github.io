@@ -11,12 +11,12 @@
     "tooling": {
       "collected": 52,
       "in_window": 52,
-      "kept": 3,
-      "new": 15
+      "kept": 0,
+      "new": 13
     },
     "web-products": {
-      "collected": 25,
-      "in_window": 25,
+      "collected": 26,
+      "in_window": 26,
       "kept": 0,
       "new": 12
     }
@@ -26,115 +26,111 @@
   "recent_events": [
     {
       "reason": "below_relevance",
-      "title": "Returning from vacation? The government can search your phone without a warrant",
-      "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015115+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
       "title": "So you think you could be an electrician?",
       "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015104+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Several vulnerabilities have been discovered in the Linux kernel",
-      "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015094+00:00",
+      "ts": "2026-10-04T22:47:24.837445+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Show HN: JBR-001 \u2013 An open-source 3D printable desktop robot",
       "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015083+00:00",
+      "ts": "2026-10-04T22:47:24.837420+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Aleph Alpha Kolibri: How the sovereign German LLM works",
+      "title": "Returning from vacation? The government can search your phone without a warrant",
       "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015072+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
-      "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015061+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Kolibri: A Sovereign Open-Weight Model",
-      "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015049+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Sonnet 5.5",
-      "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015038+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015026+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
-      "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.015013+00:00",
+      "ts": "2026-10-04T22:47:24.837403+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
       "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.014997+00:00",
+      "ts": "2026-10-04T22:47:24.837384+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Aleph Alpha Kolibri: How the sovereign German LLM works",
+      "topic": "web-products",
+      "ts": "2026-10-04T22:47:24.837336+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
+      "topic": "web-products",
+      "ts": "2026-10-04T22:47:24.837321+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "topic": "web-products",
+      "ts": "2026-10-04T22:47:24.837307+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Several vulnerabilities have been discovered in the Linux kernel",
+      "topic": "web-products",
+      "ts": "2026-10-04T22:47:24.837292+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Sonnet 5.5",
+      "topic": "web-products",
+      "ts": "2026-10-04T22:47:24.837276+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "topic": "web-products",
+      "ts": "2026-10-04T22:47:24.837259+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "Coding is not solved",
       "topic": "web-products",
-      "ts": "2026-10-04T19:13:22.014933+00:00",
+      "ts": "2026-10-04T22:47:24.837237+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Jev Plays Pok\u00e9mon Red",
+      "topic": "web-products",
+      "ts": "2026-10-04T22:47:24.837175+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
       "topic": "web-products",
-      "ts": "2026-10-04T19:13:11.783507+00:00",
+      "ts": "2026-10-04T22:47:07.206853+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
       "topic": "web-products",
-      "ts": "2026-10-04T19:13:11.783499+00:00",
+      "ts": "2026-10-04T22:47:07.206841+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
       "topic": "web-products",
-      "ts": "2026-10-04T19:13:11.783491+00:00",
+      "ts": "2026-10-04T22:47:07.206827+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 4,
-      "ts": "2026-09-28T02:20:05.627542+00:00"
-    },
     {
       "kept": 3,
       "ts": "2026-09-28T10:15:29.675980+00:00"
@@ -226,9 +222,13 @@
     {
       "kept": 3,
       "ts": "2026-10-04T19:12:38.830179+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-04T22:46:38.798671+00:00"
     }
   ],
-  "streak": 233,
+  "streak": 234,
   "topics": [
     {
       "collected": 34,
@@ -238,16 +238,16 @@
     },
     {
       "collected": 52,
-      "kept": 3,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 25,
+      "collected": 26,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-04T19:12:38.830179+00:00"
+  "updated_at": "2026-10-04T22:46:38.798671+00:00"
 }
