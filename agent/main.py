@@ -102,7 +102,11 @@ def run_real(topic_filter: str | None) -> None:
             writer.emit_drop("inbox", topic_slug, drop)
 
     for topic in topics:
-        pipeline.process_topic(topic, state, queue, settings, now, writer)
+        try:
+            pipeline.process_topic(topic, state, queue, settings, now, writer)
+        except Exception as exc:  # noqa: BLE001 — one topic failing (e.g. DeepSeek) must not skip delivery of approved items
+            writer.emit("rank", "failed", topic=topic.slug, detail={"error": str(exc)})
+            print(f"Topic {topic.slug} failed: {exc}")
 
     delivered = False
     if pending.is_email_due(approved, queue.last_email_at, now, settings.delivery.delivery_cadence_hours):
@@ -158,7 +162,11 @@ def run_preview(topic_filter: str | None) -> None:
     queue = pending.load_pending(PENDING_PATH)
     writer = events.MemoryWriter()
     for topic in topics:
-        result = pipeline.process_topic(topic, state, queue, settings, now, writer)
+        try:
+            result = pipeline.process_topic(topic, state, queue, settings, now, writer)
+        except Exception as exc:  # noqa: BLE001 — a preview of the other topics should still print
+            print(f"\n== {topic.name} ({topic.slug}) -- failed: {exc}")
+            continue
         print(pipeline.format_preview(topic, result))
     print("\nPreview only: nothing was written.")
 

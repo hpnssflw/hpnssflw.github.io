@@ -22,6 +22,7 @@ def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Dr
     cutoff_epoch = int((now - timedelta(days=topic.max_age_days)).timestamp())
 
     hits_by_id: dict[str, dict] = {}
+    failures: list[Exception] = []
     for keyword in topic.keywords:
         params = {
             "query": keyword,
@@ -36,10 +37,19 @@ def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Dr
             "queryType": "prefixNone",
             "hitsPerPage": HITS_PER_PAGE,
         }
-        response = requests.get(ALGOLIA_SEARCH_URL, params=params, timeout=10)
-        response.raise_for_status()
-        for hit in response.json()["hits"]:
+        try:
+            response = requests.get(ALGOLIA_SEARCH_URL, params=params, timeout=10)
+            response.raise_for_status()
+            hits = response.json()["hits"]
+        except (requests.RequestException, ValueError, KeyError) as exc:
+            # One failed keyword must not cost the topic its whole HN source.
+            print(f"hn keyword '{keyword}' failed for {topic.slug}: {exc}")
+            failures.append(exc)
+            continue
+        for hit in hits:
             hits_by_id[hit["objectID"]] = hit
+    if topic.keywords and len(failures) == len(topic.keywords):
+        raise failures[-1]  # every keyword failed: let the pipeline log "collect failed"
 
     candidates: list[Candidate] = []
     drops: list[Drop] = []
