@@ -13,7 +13,7 @@ export const topics: Topic[] = [
   },
   {
     name: "Tooling",
-    gloss: "trending GitHub repos, web development tools.",
+    gloss: "developer tools: editors, CLIs, libraries, AI coding tools.",
   },
   {
     name: "AI Engineering",

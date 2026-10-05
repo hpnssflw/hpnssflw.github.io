@@ -67,6 +67,9 @@ initiatives — see `PROGRESS.md` for status of each.
   on `agent-data` first): after the first run of the inbox code every
   entry carries that key, and the older `StateEntry(**value)` raises
   `TypeError` on it.
+  The same goes for `StateEntry.ranks` (sub-project #6): once the
+  topic-quality code has run, every entry carries `ranks`, so code from
+  before #6 can't load `state.json` until that key is stripped.
 - **The GitHub remote is `hpnssflw/hpnssflw.github.io`** (a user site —
   served at the domain root, so no `basePath`). Work happens directly on
   `main` — no feature branches, no PRs — unless the user explicitly asks

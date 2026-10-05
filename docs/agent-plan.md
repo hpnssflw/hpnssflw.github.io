@@ -26,13 +26,20 @@ for his own LAB writing, not a LAB post itself.
 - **AI Engineering** — agent and automated pipelines and harnesses, LLM
   assistants, self-hosted/private AI platform development, and
   LLM/inference optimization.
-- **Tooling** — trending GitHub repos and web development tools.
+- **Tooling** — tools developers use to build software: editors, CLIs,
+  libraries, and AI coding tools.
+
+Each topic's YAML also carries `include`/`exclude` criteria, which the
+ranker scores against (see Pipeline).
 
 ## Sources
 
-- Hacker News — public Algolia search API, filtered to each topic's keywords.
-- GitHub trending — GitHub's Search API, recently created repos ranked by
-  stars; backs the Tooling topic specifically, not every topic.
+- Hacker News — public Algolia search API, matching each topic's keywords
+  against story titles only (whole words, no typo tolerance, no prefix
+  matching).
+- GitHub — GitHub's Search API: recently created repos tagged with one of
+  each topic's GitHub topics (`topic:cli`, `topic:llm`, …), ranked by
+  stars; every topic uses it.
 - Blog and RSS feeds — a curated list maintained by hand, one per topic.
 - Repo release watching — GitHub releases API for a handful of watched repos per topic; a version bump is unambiguous news.
 - A handful of subreddits per topic — chosen once, revisited later if the signal is bad.
@@ -46,8 +53,8 @@ are dropped rather than passed through. Full detail:
 
 1. **Collect** — each source connector runs independently, returns candidate links with a mandatory publish date.
 2. **Recency window** — candidates published outside the topic's `max_age_days` are dropped; an item whose score has since jumped can re-enter (the attention window).
-3. **Dedupe** — every link's URL gets hashed against a store of what's already been sent or dismissed from the inbox; only new links continue.
-4. **Rank** — one batched LLM call per topic ranks all of that topic's surviving candidates against each other and against the topic description, returning a one-line summary and a relevance score per item; anything below the threshold, or beyond the per-topic item cap, gets dropped.
+3. **Dedupe** — every link's URL gets hashed against a store of what's already been sent or dismissed from the inbox, and against the topic's verdict cache: an item this topic already scored below the threshold isn't sent to the LLM again unless its points/stars at least doubled and grew by `attention.min_score_gain`, or the topic's criteria changed (`rank_cache.py`). Only new links continue.
+4. **Rank** — batched LLM calls per topic (at most 40 candidates each) score every uncached candidate 1–10 against the topic's `include`/`exclude` criteria and a short reader profile, returning a one-line summary per item; anything below the threshold is dropped, and at most `max_items_per_day` items per topic enter the queue in any rolling 24 hours — the rest stay eligible for later runs.
 5. **Assemble** — surviving items get grouped by topic into a digest, ordered by relevance within each group.
 6. **Deliver** — the items Artem approved on `/researcher/queue/` go out to a public Telegram channel on a fixed schedule. Rejected items are dismissed for good; undecided ones expire after `inbox.expire_days` — see `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
 

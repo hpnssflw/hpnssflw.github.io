@@ -562,9 +562,9 @@ infrastructure.
 - **Sub-project #6, Topic & source quality: in progress.**
   Spec: `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
   Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
-  Task 4 of 5 done.
-  Latest: python -m agent --preview (collect + rank, writes nothing) and python -m agent report (queue outcomes, score histogram).
-  Next: Task 5 (live preview and criteria tuning with Artem, docs, merge, push, live check). Needs DEEPSEEK_API_KEY in the worktree's agent/.env.
+  Task 5 in progress.
+  Latest: criteria tuned against a live preview (Tooling picks up Claude Code / Codex / Cursor / Copilot / coding-agent titles; AI Engineering excludes coding agents and their add-ons); docs synced.
+  Next: Task 5 Steps 7–9 (final review, merge main, push, live check).
 
 ### How to resume in a new session
 

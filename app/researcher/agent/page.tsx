@@ -56,12 +56,12 @@ export default function ResearchAgentPage() {
           </p>
           <ul>
             <li>
-              Hacker News — via the public Algolia search API, filtered to each
-              topic&apos;s keywords.
+              Hacker News — via the public Algolia search API, matching each
+              topic&apos;s keywords against story titles only.
             </li>
             <li>
-              GitHub trending — recently created repos ranked by stars, via
-              GitHub&apos;s Search API; backs the Tooling topic specifically.
+              GitHub — recently created repos tagged with each topic&apos;s
+              GitHub topics, ranked by stars, via GitHub&apos;s Search API.
             </li>
             <li>
               Blog and RSS feeds — a curated list maintained by hand, the
@@ -102,15 +102,17 @@ export default function ResearchAgentPage() {
             </li>
             <li>
               Dedupe — every link&apos;s URL gets hashed against a store of
-              what&apos;s already been sent; only new links continue.
+              what&apos;s already been sent, and against what&apos;s already
+              been scored for that topic, so the same item isn&apos;t judged
+              again every few hours unless it&apos;s taking off; only new links
+              continue.
             </li>
             <li>
-              Rank — one call per topic reads that topic&apos;s whole surviving
-              batch at once and ranks it, rather than scoring each item in
-              isolation, so &quot;relevant this week&quot; means the same thing
-              every week; a one-line summary and score come back per item, and
-              anything below the threshold or past the per-topic cap gets
-              dropped.
+              Rank — each topic&apos;s new links are scored in batches against
+              written include/exclude criteria rather than a one-line
+              description; a one-line summary and score come back per item,
+              anything below the threshold gets dropped, and only a few items
+              per topic a day go into the queue — the rest wait their turn.
             </li>
             <li>
               Assemble — surviving items get grouped by topic into a digest,
@@ -187,7 +189,7 @@ export default function ResearchAgentPage() {
 
           <h2 id="status">Status</h2>
           <p>
-            Running — the pipeline runs end to end on Hacker News alone, on a
+            Running — the pipeline runs end to end on Hacker News and GitHub, on a
             schedule: collect, filter for recency, dedupe, rank with DeepSeek,
             hold in a pending queue for my approval, and deliver what I
             approve to Telegram once a day. The
