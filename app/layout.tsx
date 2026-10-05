@@ -2,18 +2,17 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import PageFrame from "@/components/PageFrame";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hpnssflw.github.io"),
   title: {
-    default: "Artem Polozov — Digital Craftsman",
+    default: "Artem Polozov",
     template: "%s — Artem Polozov",
   },
   description:
     "Web products, data visualization, systems integration, AI agent orchestration.",
   openGraph: {
-    title: "Artem Polozov — Digital Craftsman",
+    title: "Artem Polozov",
     description:
       "Web products, data visualization, systems integration, AI agent orchestration.",
     type: "website",
@@ -34,10 +33,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <SiteHeader />
-        <PageFrame>
-          {children}
-          <SiteFooter />
-        </PageFrame>
+        {children}
+        <SiteFooter />
       </body>
     </html>
   );

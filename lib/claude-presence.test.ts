@@ -5,6 +5,7 @@ import {
   isOwnerToday,
   parsePresence,
   presenceView,
+  recentDays,
 } from "./claude-presence";
 
 const MIN = 60_000;
@@ -23,6 +24,7 @@ function makePresence(overrides: Partial<Presence> = {}): Presence {
     day: "2026-09-28",
     tz: "Europe/Moscow",
     updatedAt: "2026-09-28T07:30:00.000Z",
+    dailyMinutes: [...Array(27).fill(0), 220],
     ...overrides,
   };
 }
@@ -57,6 +59,23 @@ describe("parsePresence", () => {
     expect(parsePresence([])).toBeNull();
     const noSince = { ...makePresence(), since: undefined };
     expect(parsePresence(noSince)).toBeNull();
+  });
+
+  it("reads a file without dailyMinutes (an older runner) as no history", () => {
+    const { dailyMinutes: _d, ...old } = makePresence();
+    expect(parsePresence(old)?.dailyMinutes).toBeNull();
+  });
+
+  it.each([
+    ["27 days", Array(27).fill(1)],
+    ["29 days", Array(29).fill(1)],
+    ["a fractional day", [...Array(27).fill(0), 1.5]],
+    ["a negative day", [...Array(27).fill(0), -1]],
+    ["more than a day of minutes", [...Array(27).fill(0), 1441]],
+    ["a string", "1,2,3"],
+    ["a nested array", [...Array(27).fill(0), [1]]],
+  ])("rejects dailyMinutes with %s", (_label, dailyMinutes) => {
+    expect(parsePresence({ ...makePresence(), dailyMinutes })).toBeNull();
   });
 
   it("drops unknown extra keys", () => {
@@ -138,5 +157,35 @@ describe("presenceView", () => {
 
   it("omits a null model from the footer", () => {
     expect(presenceView(makePresence({ model: null }), NOW).footer).toBe("updated 4 min ago");
+  });
+});
+
+describe("recentDays", () => {
+  const minutes = Array.from({ length: 28 }, (_, i) => i * 10); // 0, 10, …, 270
+
+  it("lays the 28 days out oldest first, the owner's today last", () => {
+    const days = recentDays(makePresence({ dailyMinutes: minutes }), NOW);
+    expect(days).toHaveLength(28);
+    expect(days.map((d) => d.minutes)).toEqual(minutes);
+    expect(days[27]).toMatchObject({ date: "2026-09-28", today: true });
+    expect(days[0]).toMatchObject({ date: "2026-09-01", today: false });
+    expect(days[0].level).toBe(0); // 0 minutes
+    expect(days[27].level).toBe(4); // the busiest day
+  });
+
+  it("shifts a file from yesterday by a day, with nothing for today yet", () => {
+    const days = recentDays(makePresence({ dailyMinutes: minutes }), AFTER_MOSCOW_MIDNIGHT);
+    expect(days.map((d) => d.minutes)).toEqual([...minutes.slice(1), 0]);
+    expect(days[27]).toMatchObject({ date: "2026-09-29", today: true, minutes: 0 });
+  });
+
+  it("is all empty for a file four weeks old or more", () => {
+    const later = NOW + 30 * 24 * 60 * MIN;
+    expect(recentDays(makePresence({ dailyMinutes: minutes }), later).every((d) => d.minutes === 0)).toBe(true);
+  });
+
+  it("falls back to today's minutes alone without history", () => {
+    const days = recentDays(makePresence({ dailyMinutes: null }), NOW);
+    expect(days.map((d) => d.minutes)).toEqual([...Array(27).fill(0), 220]);
   });
 });

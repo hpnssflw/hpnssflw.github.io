@@ -106,13 +106,19 @@ function CompactBody({
   const cells = sparklineCells(status.run_history);
 
   return (
-    <Link className="agent-widget-link" href="/researcher/agent/">
-      <span className={dotClass}>●</span> agent {label}
-      <span className="agent-muted">
-        {" "}
-        · runs every {status.cadence_hours}h · streak {status.streak}
-      </span>
-      <br />
+    <div className="agent-widget-card">
+      <div className="agent-card-top">
+        <span>
+          <span className={dotClass}>●</span> agent {label}
+          <span className="agent-muted">
+            {" "}
+            · runs every {status.cadence_hours}h · streak {status.streak}
+          </span>
+        </span>
+        <Link className="card-action" href="/researcher/agent/">
+          Watch <span aria-hidden="true">↗</span>
+        </Link>
+      </div>
       <span className="agent-tagline">
         schema-validated LLM ranking · full audit trail
       </span>
@@ -136,9 +142,11 @@ function CompactBody({
         ))}
       </span>
       <br />
-      <span className="agent-muted">{countdown}</span>{" "}
-      <span className="agent-arrow">view dashboard →</span>
-    </Link>
+      <span className="agent-muted">{countdown}</span>
+      <div className="card-comet" aria-hidden="true">
+        <span className="card-comet-run" />
+      </div>
+    </div>
   );
 }
 

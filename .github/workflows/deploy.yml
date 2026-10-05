@@ -3,6 +3,10 @@ name: Deploy site
 on:
   push:
     branches: [main]
+  # The home hero's GitHub contribution grid is baked in at build time
+  # (lib/github-calendar.ts) — rebuild every 6 hours to keep it recent.
+  schedule:
+    - cron: "17 */6 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -30,6 +34,10 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          # Only for the GitHub grid's GraphQL query (the public calendar).
+          # Without it the grid is skipped and the build still succeeds.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/configure-pages@v5
 

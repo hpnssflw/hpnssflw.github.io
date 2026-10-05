@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------
-   Digital Craftsman — Artem Polozov
+   Artem Polozov
    Design tokens + layout. Ported from the original hand-written
    styles.css when the site moved to Next.js — the token scale and the
    case system below are unchanged.
@@ -34,20 +34,17 @@
   /* One scale, used everywhere below instead of ad hoc rem/px values.
      Content text sits under 13px throughout (10 · 12); display type —
      the post headline — keeps the larger steps so it still reads as a
-     headline. The hero has its own smaller pair below: it sits above
-     the fold on every page, so it doesn't need post-headline size to
-     carry weight. */
+     headline. */
   --fs-2xs: 0.625rem; /* 10 — mono meta: labels, dates, back links */
   --fs-xs: 0.75rem;   /* 12 — role, contact, feed title/excerpt, body copy */
   --fs-md: 1.25rem;   /* 20 — post subtitle */
-  --fs-lg: 1.5rem;    /* 24 — post h1 */
+  --fs-lg: 1.5rem;    /* 24 — post h1, hero name */
 
-  --fs-hero-lead: 0.875rem; /* 14 — hero lead paragraph */
-  --fs-hero-name: 2.5rem;   /* 40 — hero h1 on desktop */
-  --fs-hero-name-sm: 1.75rem; /* 28 — hero h1 on mobile */
-
-  --measure: 640px;       /* reading column: lab index, post pages */
-  --measure-wide: 1040px; /* home page: the 2x hero needs the room */
+  /* One container width for every route — header, content and footer
+     share a left edge, and everything sits flush left inside it. Long
+     prose doesn't follow the container: it stays on --measure-text. */
+  --measure: 1040px;
+  --measure-text: 37rem; /* 592 — reading column: post body, players */
   --gutter: 24px;
 }
 
@@ -84,14 +81,6 @@ body {
   padding: 0 var(--gutter);
 }
 
-/* The home page widens every section together — hero, feed and footer — so
-   they keep a common left edge. Inner blocks stay constrained by their own
-   max-width, so line length never follows the container. The `.home` class
-   is set by components/PageFrame.tsx on the "/" route only. */
-.home .wrap {
-  max-width: var(--measure-wide);
-}
-
 .mono {
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
@@ -120,11 +109,8 @@ a:focus-visible {
 /* UPPERCASE — meta: labels, dates, navigation */
 
 .section-label,
-#hero .role,
-#hero h1,
 .feed .date,
 .post .date,
-.all-posts,
 .post .back,
 .tag {
   text-transform: uppercase;
@@ -139,11 +125,31 @@ a:focus-visible {
   margin: 0 0 36px;
 }
 
-/* lowercase — content: prose, titles, excerpts */
+/* Content riding inside a label — home's "RESEARCHER: web products, …".
+   The label prefix stays mono meta; the topic names are content, so they
+   drop to the sans face at normal tracking. */
+.section-topics {
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+  color: var(--text);
+}
 
-#hero .hero-text,
+/* lowercase — content: prose, titles, excerpts. The home LAB card is
+   lowercase throughout, meta included, like the agent widget beside it
+   (.lab-card .tag outranks the uppercase .tag above). */
+
+.hero-roles,
+.hero-actions,
+.hero-claude,
+.footer-thesis,
+.footer-sign,
+.section-topics,
 .feed .title,
 .feed .excerpt,
+.lab-card,
+.lab-card .tag,
+.card-action,
+.subtopic-tags,
 .post h1,
 .post .subtitle,
 .post .body,
@@ -157,7 +163,9 @@ a:focus-visible {
    layout on every route except "/" (the home hero already carries the
    name — SiteHeader returns null there). Replaces the old ad-hoc
    per-page back links. Static (not sticky); mono/uppercase to match the
-   rest of the chrome. */
+   rest of the chrome. One left group, "name / nav", on the content's
+   left edge — content is flush left, so a right-aligned nav floated over
+   empty space. Wraps rather than overflowing below ~320px. */
 
 .site-header {
   border-bottom: 1px solid #2a2a2a;
@@ -168,9 +176,9 @@ a:focus-visible {
   margin: 0 auto;
   padding: 22px var(--gutter);
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 18px;
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
   letter-spacing: 0.2em;
@@ -203,12 +211,18 @@ a:focus-visible {
   letter-spacing: 0.16em;
 }
 
+.site-header-sep {
+  color: color-mix(in srgb, var(--muted) 50%, transparent);
+}
+
 /* --- Hero ------------------------------------------------------ */
 
 /* The home page renders no site header (SiteHeader returns null on "/"),
-   so the hero keeps the original full top padding. */
+   so the hero takes the header's place: its top padding matches
+   .site-header-inner's, putting the card where the header sits on every
+   other route. */
 #hero {
-  padding: 200px 0 100px;
+  padding: 22px 0 72px;
 }
 
 @keyframes fade-in-up {
@@ -222,133 +236,417 @@ a:focus-visible {
   }
 }
 
-/* One-shot entrance on load, staggered top to bottom. `both` holds the
-   0%/100% state outside the animation's active range so nothing flashes
-   unstyled before it starts or snaps back after it ends. */
-#hero .role,
-#hero h1,
-#hero .hero-text,
-#hero .contact,
-#hero .portrait {
+/* The hero is a card in the home cards' language (mono 10px, actions top
+   right) on one grid:
+
+   Row map:  avatar │ name, roles;         │ 1 actions
+             (rows 1–2)  Claude Code strip   │ 2 GitHub grid, bottom-aligned
+                         at the foot         │
+   Two lines run across the card: the name with the actions on top, the
+   Claude Code block with the GitHub grid at the foot — their captions
+   share a baseline. Placement is explicit. Its
+   surface is shared with the other cards (Home cards, below).
+
+   One-shot entrance on load; `both` holds the 0%/100% state outside the
+   animation's active range so nothing flashes unstyled. */
+.hero-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  column-gap: 16px;
+  row-gap: 14px;
+  align-items: start;
+  padding: 14px 16px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  color: var(--text);
   animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-#hero .role {
-  animation-delay: 0s;
+/* public/avatar.jpg is a 352px square crop of the portrait — the face and
+   the dark around it — shown whole as a 120px square inside the card's
+   padding, top-aligned with the name. grayscale() keeps the page
+   monochrome. */
+.hero-card .avatar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  align-self: start;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-right: 8px;
+  filter: grayscale(1) contrast(1.05);
 }
 
-#hero .portrait {
-  animation-delay: 0.05s;
-}
-
-#hero h1 {
-  animation-delay: 0.1s;
-}
-
-#hero .hero-text {
-  animation-delay: 0.2s;
-}
-
-#hero .contact {
-  animation-delay: 0.3s;
-}
-
-/* Portrait left, text right, on one grid so the image can span exactly
-   from the name to the contacts. `display: contents` on .hero-body lets
-   its children become grid items without changing the markup.
-
-   Row map:  1 role · 2 name · 3 description · 4 contacts
-   The portrait occupies column 1, rows 2–4 — flush with the name at top,
-   flush with the contact line at bottom. */
-.hero-layout {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 48px;
-}
-
-.hero-body {
-  display: contents;
-}
-
-/* Vertical rhythm moves onto the rows the portrait spans, so the image
-   ends level with the text instead of hanging below a trailing margin. */
-#hero .role {
+/* A column the full height of the card, so the Claude Code block can
+   sit at its foot (margin-top: auto), level with the GitHub grid. */
+.hero-id {
   grid-column: 2;
-  grid-row: 1;
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  font-weight: var(--w-normal);
-  letter-spacing: 0.2em;
-  color: var(--muted);
-  margin: 0 0 28px;
+  grid-row: 1 / 3;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Normal case — the one heading on the site that isn't in the case
+   system's uppercase meta or lowercase content: it's a name. */
 #hero h1 {
-  grid-column: 2;
-  grid-row: 2;
-  font-size: var(--fs-hero-name);
+  margin: 0 0 6px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-lg);
   line-height: 1.15;
   font-weight: var(--w-thin);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   color: var(--text-strong);
-  margin: 0 0 26px;
 }
 
-#hero .hero-text {
-  grid-column: 2;
-  grid-row: 3;
+.hero-roles {
   margin: 0;
-  font-size: var(--fs-hero-lead);
-  line-height: 1.6;
-  max-width: 26em;
   color: var(--muted);
+}
+
+/* Same treatment as a card's action link (.card-action), three of them. */
+.hero-actions {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.hero-actions a {
+  color: var(--text);
+  transition: none;
+}
+
+.hero-actions a:hover,
+.hero-actions a:focus-visible {
+  color: var(--text-strong);
 }
 
 /* One of two deliberate breaks from the otherwise monochrome palette: the
-   lead-in drops to muted, the thesis stays at full strength and turns
-   italic. Contrast of value and slope, not of hue. Weight stays light —
-   italic already carries the emphasis, and bolding it as well would fight
-   the thin setting. The other break is the agent status widget's
-   lime/red accents, further down this file. */
+   thesis stays at full strength and turns italic — contrast of value and
+   slope, not of hue. Weight stays light; italic already carries the
+   emphasis. The other break is the agent status widget's lime/red
+   accents, further down this file. */
 .accent {
   color: var(--text-strong);
   font-style: italic;
 }
 
-#hero .contact {
-  grid-column: 2;
-  grid-row: 4;
-  margin: 40px 0 0;
-  font-size: var(--fs-xs);
-  letter-spacing: 0.03em;
+/* Column 3 under the actions: the GitHub grid, its caption on the
+   card's foot line. */
+.hero-widgets {
+  grid-column: 3;
+  grid-row: 2;
+  align-self: end;
+  justify-self: end;
+  display: flex;
+  align-items: flex-end;
+  gap: 28px;
 }
 
-/* Height comes from the rows it spans, so it always matches the text block.
-   grayscale() keeps the page monochrome. */
-#hero .portrait {
-  grid-column: 1;
-  grid-row: 2 / 5;
-  align-self: stretch;
-  display: block;
-  width: 160px;
-  height: 100%;
-  object-fit: cover;
-  object-position: 68% 40%;
-  filter: grayscale(1) contrast(1.05);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+/* --- Claude Code strip -------------------------------------------
+   components/ClaudeActivity.tsx, at the foot of .hero-id: the status line, the
+   last 28 days' active minutes as a strip of the GitHub grid's 8px
+   squares in the agent's lime (levels: quartiles of the active days),
+   and a caption. Today is the right-hand square; it glows, and breathes,
+   while a session runs. */
+
+.hero-claude {
+  margin-top: auto;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-#hero .portrait:hover {
-  transform: scale(1.015);
-  filter: grayscale(1) contrast(1.1);
+.hc-status,
+.hc-caption {
+  margin: 0;
 }
 
-#hero .contact {
+.hc-caption {
   color: var(--muted);
 }
 
-#hero .contact a {
+.hc-total {
   color: var(--text);
+}
+
+.hc-strip {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.hc-strip .l0 {
+  fill: color-mix(in srgb, var(--text) 7%, transparent);
+}
+
+.hc-strip .l1 {
+  fill: color-mix(in srgb, var(--agent-lime) 28%, transparent);
+}
+
+.hc-strip .l2 {
+  fill: color-mix(in srgb, var(--agent-lime) 50%, transparent);
+}
+
+.hc-strip .l3 {
+  fill: color-mix(in srgb, var(--agent-lime) 75%, transparent);
+}
+
+.hc-strip .l4 {
+  fill: var(--agent-lime);
+}
+
+.hc-strip .live {
+  fill: var(--agent-lime);
+  filter: drop-shadow(0 0 3px var(--agent-lime));
+  animation: hc-breathe 2.4s ease-in-out infinite;
+}
+
+@keyframes hc-breathe {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hc-strip .live {
+    animation: none;
+  }
+}
+
+/* --- GitHub grid -------------------------------------------------
+   components/GitHubGrid.tsx: the last 26 weeks of contributions, baked
+   in at build time (lib/github-calendar.ts), in the hero's column 3.
+   A third deliberate palette break, after .accent and the agent's
+   lime/red: violet levels, and every active day glowing up in pink,
+   white or cyan on its own seeded rhythm (6–15 s), constantly — a few
+   squares lit at any moment, brighter on busier days. */
+
+:root {
+  --gh-violet: #a970ff;
+  --gh-pink: #ff7ad9;
+  --gh-cyan: #7dd3fc;
+}
+
+.gh {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+/* Scales down (viewBox) when a phone is narrower than the grid. */
+.gh-grid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.gh-cells .l0 {
+  fill: color-mix(in srgb, var(--text) 7%, transparent);
+}
+
+.gh-cells .l1 {
+  fill: color-mix(in srgb, var(--gh-violet) 30%, transparent);
+}
+
+.gh-cells .l2 {
+  fill: color-mix(in srgb, var(--gh-violet) 52%, transparent);
+}
+
+.gh-cells .l3 {
+  fill: color-mix(in srgb, var(--gh-violet) 76%, transparent);
+}
+
+.gh-cells .l4 {
+  fill: var(--gh-violet);
+}
+
+/* Dark for most of the cycle, a short swell around 80%: with every square
+   on its own duration and phase, the lit ones never line up. */
+@keyframes gh-glow {
+  0%,
+  60%,
+  100% {
+    opacity: 0;
+  }
+  80% {
+    opacity: var(--glow-peak);
+  }
+}
+
+.gh-glow rect {
+  opacity: 0;
+  animation: gh-glow 6s ease-in-out infinite; /* duration and delay per square, inline */
+}
+
+.gh-glow .l1 {
+  --glow-peak: 0.45;
+}
+
+.gh-glow .l2 {
+  --glow-peak: 0.6;
+}
+
+.gh-glow .l3 {
+  --glow-peak: 0.75;
+}
+
+.gh-glow .l4 {
+  --glow-peak: 0.9;
+}
+
+.gh-glow .t0 {
+  fill: var(--gh-pink);
+}
+
+.gh-glow .t1 {
+  fill: #fff;
+}
+
+.gh-glow .t2 {
+  fill: var(--gh-cyan);
+}
+
+.gh-caption {
+  margin: 0;
+  color: var(--muted);
+}
+
+.gh-total {
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gh-glow {
+    display: none;
+  }
+}
+
+/* --- Home columns ---------------------------------------------- */
+
+/* On "/" RESEARCHER and LAB sit side by side in one .wrap, 48px apart.
+   Each section spans all three rows
+   and adopts them (subgrid), so the two labels share row 1 and the two
+   cards share row 2: the agent widget and the LAB card stretch to one
+   height. Row 3 holds RESEARCHER's subtopic tags (LAB has nothing there).
+   They stack again on mobile. */
+.home-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto auto;
+  column-gap: 48px;
+}
+
+.home-columns > section {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+
+/* --- Home cards ------------------------------------------------- */
+
+/* One surface for every card on "/" — the hero, the agent widget and the
+   LAB card: mono 10px on a see-through background that blurs the grid
+   texture behind it, no border. */
+:root {
+  --card-bg: color-mix(in srgb, var(--agent-bg) 55%, transparent);
+}
+
+.hero-card,
+.agent-widget-card,
+.lab-card {
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* No overflow: hidden here — as a grid item it would drop the card's
+   content-based minimum height and collapse it to its padding. The comet
+   track clips itself and fades out at both ends. */
+.agent-widget-card,
+.lab-card {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  color: var(--text);
+  padding: 14px 16px;
+}
+
+/* The card's one link, top right: watch ↗ on the agent widget, read ↗ on
+   the LAB card. No motion of any kind — not even the global color fade. */
+.card-action {
+  flex: none;
+  margin-left: auto;
+  color: var(--text);
+  transition: none;
+}
+
+.card-action:hover,
+.card-action:focus-visible {
+  color: var(--text-strong);
+}
+
+/* A 1px comet running along a card's bottom edge, crossing it once per
+   --comet-duration in --comet-color. The run element is as wide as the
+   card, with the comet painted on its right third (tail fades left, head
+   is the bright end); moving it from -100% to 35% carries the comet from
+   just off the left edge to just past the right one. The track's mask
+   fades both ends, so the comet appears out of nothing and dissolves.
+   On the LAB card it runs once per post and is the rotation timer; on
+   the agent widget it loops slowly in lime, a sign the agent is live. */
+.card-comet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 20%,
+    #000 80%,
+    transparent
+  );
+  mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
+}
+
+.card-comet-run {
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 65%,
+    var(--comet-color, var(--text-strong)) 97%,
+    transparent
+  );
+  animation: card-comet var(--comet-duration) linear both;
+}
+
+@keyframes card-comet {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(35%);
+  }
+}
+
+/* Under the agent widget: every RESEARCHER subtopic, as plain text. */
+.subtopic-tags {
+  margin: 16px 0 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  color: var(--muted);
 }
 
 /* --- LAB feed -------------------------------------------------- */
@@ -438,11 +736,82 @@ a:focus-visible {
   max-width: 34em;
 }
 
-.all-posts {
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  font-weight: var(--w-normal);
-  letter-spacing: 0.2em;
+/* --- LAB card (home) --------------------------------------------
+   components/LabCarousel.tsx: one post at a time instead of the feed, on
+   the shared card surface (Home cards, above). Its height matches the
+   agent widget via .home-columns' subgrid. The card's comet (Home cards)
+   is the rotation timer — the component advances on its animationend —
+   so pausing it on hover/focus pauses the rotation. */
+.lab-card {
+  --comet-duration: 15s; /* how long each post stays up */
+  padding-bottom: 32px; /* room for the source badge */
+}
+
+.lab-card:hover .card-comet-run,
+.lab-card:focus-within .card-comet-run {
+  animation-play-state: paused;
+}
+
+/* Every slide sits in the same grid cell, so the card is at least as
+   tall as its longest post and never jumps between slides. */
+.lab-slides {
+  display: grid;
+}
+
+/* Slides only fade — no movement — and both ways on transitions alone
+   (an animation on the arriving slide used to vanish the moment its class
+   left, so the leaving text cut out). Leaving: a 1s fade, then visibility
+   flips, which also takes its link out of the tab order. Arriving: waits
+   0.6s, then the same 1s fade, so the two texts barely overlap. */
+.lab-slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s cubic-bezier(0.45, 0, 0.55, 1),
+    visibility 0s linear 1s;
+}
+
+.lab-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s cubic-bezier(0.45, 0, 0.55, 1) 0.6s,
+    visibility 0s linear 0s;
+}
+
+/* Top line: date · tag on the left, read ↗ / open ↗ pushed to the right. */
+.lab-card-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.lab-card-title {
+  color: var(--text-strong);
+  margin: 0;
+}
+
+/* Two lines at most: Telegram digests list several links, and the card is
+   as tall as its longest slide. */
+.lab-card-excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Where a slide comes from ("lab" / "telegram"), centred at the card's
+   foot, muted. Positioned against .lab-card, so it fades with its slide;
+   the card's bottom padding keeps it clear of the text. */
+.src-badge {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
   color: var(--muted);
 }
 
@@ -532,6 +901,11 @@ a:focus-visible {
   max-width: 34em;
 }
 
+.post h1,
+.post .body {
+  max-width: var(--measure-text);
+}
+
 .post .body h2 {
   font-size: var(--fs-xs);
   font-weight: var(--w-normal);
@@ -587,6 +961,193 @@ a:focus-visible {
   color: var(--muted);
 }
 
+/* --- Tony Scraponi teaser -----------------------------------------
+   components/AppsStrip.tsx, under the home columns: two dense lines on
+   the home cards' surface. Left: the name, "coming soon" and what it is,
+   then the features. Right: the agent's live numbers, then "follow the
+   build ↗". A slow lime comet along the bottom says "in the works". */
+
+#apps {
+  padding-bottom: 80px;
+}
+
+.tony-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 14px;
+  padding: 12px 16px;
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  color: var(--text);
+  --comet-duration: 60s;
+  --comet-color: var(--agent-lime);
+}
+
+.tony-card .card-comet-run {
+  animation-iteration-count: infinite;
+}
+
+.tony-copy,
+.tony-side {
+  min-width: 0;
+}
+
+.tony-head,
+.tony-proof {
+  margin: 0;
+}
+
+.tony-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 10px;
+}
+
+.tony-name {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  color: var(--text-strong);
+}
+
+.tony-eyebrow {
+  color: var(--agent-lime);
+}
+
+.tony-pitch,
+.tony-features {
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.tony-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.tony-features li::before {
+  content: "+ ";
+  color: var(--agent-lime);
+}
+
+/* Right column: numbers on top, the link under them. */
+.tony-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.tony-proof {
+  min-height: 1.7em; /* holds the line while status.json loads */
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.tony-proof b {
+  font-weight: inherit;
+  color: var(--text);
+}
+
+.tony-follow {
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.app-icon {
+  display: block;
+  flex: none;
+  overflow: visible;
+}
+
+.app-icon-tile {
+  fill: var(--agent-bg);
+  stroke: var(--agent-border);
+}
+
+/* The spy. A lime-filled fedora with a solid band, dark lenses with a
+   lime rim; every 7s the hat tips, every 5s a glint crosses the glasses. */
+.tony-hat-crown,
+.tony-hat-brim {
+  fill: color-mix(in srgb, var(--agent-lime) 30%, transparent);
+  stroke: var(--agent-lime);
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+.tony-hat-dent,
+.tony-bridge {
+  fill: none;
+  stroke: var(--agent-lime);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.tony-hat-band {
+  stroke: var(--agent-lime);
+  stroke-width: 1.6;
+}
+
+.tony-lens {
+  fill: #0b0b0b;
+  stroke: var(--agent-lime);
+  stroke-width: 1;
+}
+
+.tony-glint {
+  fill: rgb(255 255 255 / 0.85);
+  transform-box: view-box;
+  animation: tony-glint 5s ease-in-out infinite;
+}
+
+.tony-hat {
+  transform-box: view-box;
+  transform-origin: 14px 13.5px;
+  animation: tony-tip 7s ease-in-out infinite;
+}
+
+@keyframes tony-glint {
+  0%,
+  70% {
+    transform: translateX(0) skewX(-20deg);
+  }
+  90%,
+  100% {
+    transform: translateX(16px) skewX(-20deg);
+  }
+}
+
+@keyframes tony-tip {
+  0%,
+  78%,
+  100% {
+    transform: rotate(0) translateY(0);
+  }
+  86% {
+    transform: rotate(-12deg) translateY(-1.5px);
+  }
+  92% {
+    transform: rotate(-12deg) translateY(-1.5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tony-glint,
+  .tony-hat {
+    animation: none;
+  }
+}
+
 /* --- Footer ---------------------------------------------------- */
 
 footer {
@@ -602,6 +1163,51 @@ footer a {
   color: var(--text);
 }
 
+/* Centred on every route: the thesis, then the signature line. */
+.footer-inner {
+  text-align: center;
+}
+
+.footer-thesis {
+  margin-bottom: 10px !important;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+}
+
+/* --- "/" on one screen ------------------------------------------
+   At desktop widths the home page fits the window. Its four gaps —
+   under the hero, under the columns, under the Tony teaser, under the
+   footer line — keep their full 72 / 56 / 80 / 96px while the window is
+   tall enough (~900px), and below that shrink together, in proportion,
+   into what's left after the fixed content: the hero card, labels + cards
+   + subtopics, the Tony teaser and the footer, ~540px —
+   --home-fixed adds ~30px to spare. Under ~640px they bottom out at 24px
+   and the page scrolls rather than cut anything off. If the home content
+   grows taller, raise --home-fixed with it. */
+@media (min-width: 641px) {
+  :root {
+    --home-fixed: 570px;
+    --home-free: calc(100svh - var(--home-fixed));
+  }
+
+  #hero {
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.22), 72px);
+  }
+
+  .home-columns > #researcher,
+  .home-columns > #lab {
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.18), 56px);
+  }
+
+  #apps {
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.25), 80px);
+  }
+
+  #hero ~ footer {
+    padding-bottom: clamp(24px, calc(var(--home-free) * 0.35), 96px);
+  }
+}
+
 /* --- Mobile ---------------------------------------------------- */
 
 @media (max-width: 640px) {
@@ -611,7 +1217,7 @@ footer a {
 
   .site-header-inner {
     padding: 16px var(--gutter);
-    gap: 14px;
+    gap: 12px;
   }
 
   .site-header nav {
@@ -619,37 +1225,47 @@ footer a {
   }
 
   #hero {
-    padding: 112px 0 64px;
+    padding: 16px 0 56px;
   }
 
-  /* Not enough width for two columns — the grid collapses back to normal
-     flow and the portrait returns to a fixed crop above the text. */
-  .hero-layout {
+  /* Too narrow for actions beside the name: they take their own row on
+     top, right-aligned, like a card action. */
+  .hero-card {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .hero-actions {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .hero-card .avatar,
+  .hero-id {
+    grid-row: 2;
+  }
+
+  /* The card stacks here, so a full-height photo would be enormous: it
+     goes back to a 64px square beside the name. */
+  .hero-card .avatar {
+    align-self: start;
+    width: 64px;
+    height: 64px;
+    margin: 0;
+  }
+
+  /* The GitHub grid takes the last row, full width and left-aligned. */
+  .hero-widgets {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-self: start;
+  }
+
+  .gh {
+    align-items: flex-start;
+  }
+
+  .home-columns {
     display: block;
-  }
-
-  .hero-body {
-    display: block;
-  }
-
-  #hero .portrait {
-    width: 68px;
-    height: 88px;
-    margin: 0 0 30px;
-  }
-
-  #hero .role {
-    letter-spacing: 0.18em;
-    margin-bottom: 18px;
-  }
-
-  #hero h1 {
-    font-size: var(--fs-hero-name-sm);
-    margin-bottom: 18px;
-  }
-
-  #hero .contact {
-    margin-top: 34px;
   }
 
   #researcher {
@@ -670,6 +1286,22 @@ footer a {
 
   #lab.standalone {
     padding-top: 56px;
+  }
+
+  #apps {
+    padding-bottom: 64px;
+  }
+
+  /* The numbers and the link drop under the text. */
+  .tony-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    row-gap: 6px;
+  }
+
+  .tony-side {
+    grid-column: 2;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .feed li + li {
@@ -701,14 +1333,28 @@ footer a {
     animation-delay: 0s !important;
     transition-duration: 0.01ms !important;
   }
+
+  /* The LAB card's comet is its rotation timer, not decoration: at 0.01ms
+     it would end every frame and spin through the posts. It keeps its
+     real duration; the slide change itself still becomes instant. */
+  .lab-card .card-comet-run {
+    animation-duration: var(--comet-duration) !important;
+  }
+
+  /* The agent widget's comet is pure decoration, and an infinite loop at
+     0.01ms would flicker — drop it. */
+  .agent-widget-card .card-comet {
+    display: none;
+  }
 }
 
 /* --- Agent status widget ----------------------------------------
    Terminal aesthetic layered on top of the site's monochrome system —
    the second deliberate palette break, see the .accent comment above.
-   Lime = online/kept, red = stale/dropped. .agent-widget-link is the
-   homepage-sized preview; #agent-dashboard (researcher/agent) is the
-   full view. Both are populated by components/AgentWidget.tsx. */
+   Lime = online/kept, red = stale/dropped. .agent-widget-card is the
+   homepage-sized preview (its surface lives under Home cards, above);
+   #agent-dashboard (researcher/agent) is the full view. Both are
+   populated by components/AgentWidget.tsx. */
 
 :root {
   --agent-bg: #141414;
@@ -717,29 +1363,29 @@ footer a {
   --agent-red: #ff4d4d;
 }
 
+/* Sits right under the home RESEARCHER label (the label's margin is the
+   gap). display: grid lets the card inside fill the row height that
+   .home-columns' subgrid gives it, matching the LAB card beside it. */
 #agent-widget {
-  margin-top: 28px;
+  display: grid;
 }
 
-.agent-widget-link {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: var(--fs-2xs);
-  line-height: 1.7;
-  color: var(--text);
-  text-decoration: none;
-  background: var(--agent-bg);
-  border: 1px solid var(--agent-border);
-  border-radius: 4px;
-  padding: 14px 16px;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+/* A slow lime comet along the bottom, looping for as long as the page
+   is open — decoration, not a timer (see .card-comet). */
+.agent-widget-card {
+  --comet-duration: 60s;
+  --comet-color: var(--agent-lime);
 }
 
-.agent-widget-link:hover,
-.agent-widget-link:focus-visible {
-  text-decoration: none;
-  border-color: #4d4d4d;
-  transform: translateX(2px);
+.agent-widget-card .card-comet-run {
+  animation-iteration-count: infinite;
+}
+
+/* Top line: status on the left, watch ↗ pushed to the right. */
+.agent-card-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
 }
 
 .agent-dot-online {
@@ -751,10 +1397,6 @@ footer a {
 }
 
 .agent-muted {
-  color: var(--muted);
-}
-
-.agent-arrow {
   color: var(--muted);
 }
 
@@ -976,6 +1618,7 @@ footer a {
 
 .now-player:not([hidden]) {
   margin-top: 12px;
+  max-width: var(--measure-text);
 }
 
 .now-player iframe {

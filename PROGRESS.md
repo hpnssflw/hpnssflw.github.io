@@ -1,13 +1,67 @@
 # Project Progress
 
-## Site — Digital Craftsman + LAB + RESEARCHER
+## Site — LAB + RESEARCHER
 
-**Status: migrated to Next.js.**
+**Status: migrated to Next.js; home page redesigned 2026-10-02.**
 
+- Home redesign (2026-10-02, commit `bb39ce0`, iterated live with Artem —
+  no spec/plan): one 1040px container on every route, content flush left,
+  long prose on a 592px column (`--measure` / `--measure-text`); hero
+  without "Digital Craftsman", pinned to the top; RESEARCHER and LAB side
+  by side on a subgrid (`.home-columns`) so labels and cards share rows.
+  RESEARCHER: label lists the topics, agent widget card (`watch ↗`,
+  slow lime comet), subtopics as text below. LAB: "takes on
+  experience.", one post at a time (`components/LabCarousel.tsx`) on a
+  15s comet timer that pauses on hover. Both cards share one frosted
+  surface (`--card-bg`, "Home cards" in `app/globals.css`).
+  `lib/topics.ts` now stores `subtopics[]`; `gloss()` builds
+  `/researcher/`'s descriptions. Header on inner routes moved left the
+  same day (`6f2f1f2`): one group, `ARTEM POLOZOV / LAB RESEARCHER NOW`,
+  dim slash (`.site-header-sep`), wraps below ~320px.
+- Hero rebuilt as a card the same day and the next (`a76c02a`..`8a77c64`,
+  iterated live from rendered variants): the home cards' borderless
+  `--card-bg` surface (shared by the hero, agent widget and LAB card), a
+  120px avatar inside the card's padding (`public/avatar.jpg`, a 352px
+  crop of the face — `photo.jpg` is unused but kept), name in normal case
+  at 24px, roles "web products · data visualization · AI engineering",
+  `email ↗ github ↗ telegram ↗` top right. The thesis moved to the
+  site-wide footer, centred above the signature (`bfc52e8`). At the
+  card's foot, two widgets share a caption baseline: Claude Code
+  (`components/ClaudeActivity.tsx`) — status line, a strip of the last
+  28 days' active minutes (lime, today glowing while a session runs) —
+  and a mini GitHub contribution grid (`868b73e`): last 26 weeks, 8px
+  violet cells, every active day twinkling on its own seeded rhythm,
+  fetched at build time (`lib/github-calendar.ts`,
+  `components/GitHubGrid.tsx`). The strip reads presence.json's new
+  `dailyMinutes` (`c79bf1c`: 28 numbers; run.mjs recomputes the 27 past
+  days once a day into a local `daily-cache.json`; `install.ps1` was
+  re-run on 2026-10-03 and the task published the 11-key file). The LAB
+  card rotates the five newest LAB posts and the five newest posts from
+  the agent's Telegram channel, shuffled per page load, with a violet
+  source badge (`82882dc`; `lib/home-feed.ts`; Telegram read at build
+  time from `t.me/s/hypnosisflow`, `lib/telegram-post.ts`). Under the
+  columns, a two-line teaser for Tony Scraponi in the site's own
+  language (`8a77c64`, `components/AppsStrip.tsx`): an animated spy mark
+  (the fedora tips, a glint crosses the glasses), name, "coming soon",
+  pitch and features on the left; the agent's live numbers from
+  status.json and "follow the build ↗" (Telegram) on the right. (Tony's
+  own design direction, in the Obsidian vault, was tried and rejected
+  for the site.) `deploy.yml` passes `GITHUB_TOKEN`
+  and rebuilds every 6 h for both build-time sources. At desktop widths "/" fits one screen: its four
+  vertical gaps shrink with the window height (`--home-fixed` in
+  globals.css — raise it if the home content grows; windows under ~640px
+  tall scroll). **Live since 2026-10-03:** merged with `origin/main` (the
+  Tony Scraponi inbox, `bc18878`; CLAUDE.md kept both new bullets) and
+  pushed; deploy run 37099706848 succeeded, and the live page shows the
+  GitHub grid (Actions' `GITHUB_TOKEN` can read the calendar) and five
+  Telegram slides (t.me is reachable from the runners). One local commit
+  in that range, `c79bf1c`, doesn't build on its own — it deletes
+  `ClaudeWidget.tsx` while `app/page.tsx` still imports it; `45f2274`
+  fixes it.
 - Next.js App Router + TypeScript, statically exported (`output: 'export'`,
   `trailingSlash: true`), deployed to GitHub Pages by
   `.github/workflows/deploy.yml` on every push to `main`.
-- Routes: `/` (hero, RESEARCHER preview, LAB feed, agent widget),
+- Routes: `/` (hero, RESEARCHER + LAB cards — see the redesign above),
   `/lab/` + `/lab/[slug]/` (MDX posts from `content/lab/`, five so far —
   "Cheap Models, Strong Graphs", "State Without a Database", "The Email
   That Never Got Sent", "Config That Lied", "Reviewing Your Own
@@ -21,7 +75,7 @@
   client-fetches the same `status.json` from the `agent-data` branch.
 - Design system: `app/globals.css`, ported ~verbatim from the original
   `styles.css` (token scale + "case" system unchanged).
-- Tests: `npm test` (Vitest) covers `lib/posts` and `lib/agent-status`.
+- Tests: `npm test` (Vitest) — see CLAUDE.md for the module list.
 - Old `.html` URLs are kept alive by redirect stubs in `public/`.
 - Migration spec+plan: `docs/superpowers/specs/2026-09-09-nextjs-migration-design.md`
   and `.claude/plans/lucky-rolling-aurora.md`.
@@ -47,6 +101,9 @@ outside Yandex Music's regions. Out of scope for this phase: last-played
 track, cloud claude.ai/code sessions, friends/login/pager/extension (all
 need a backend — see the spec intro and the research report).
 
+- How it works now (architecture, data, privacy, operations,
+  troubleshooting; in Russian): `docs/now-page.md` — keep it current
+  when `/now/` or `scripts/presence/` changes.
 - Spec: `docs/superpowers/specs/2026-09-28-now-page-design.md`
 - Plan: `docs/superpowers/plans/2026-09-28-now-page.md`
 - Research behind it (local, uncommitted): `reports/Интеграции Яндекс и Claude Code.md`
@@ -71,15 +128,31 @@ need a backend — see the spec intro and the research report).
   first run published `model: "opus"` with `playlists=kept` (Yandex timed
   out).
 - Final whole-plan review (opus): 0 Critical; 2 Important + 10 Minor
-  fixed in one wave (`525e887..e76c57a`); scoped re-review clean. Parked
-  Minor follow-ups: `ensureRemote` runs `git remote set-url` on every
-  publish, so a leftover `.git/config.lock` would fail every later run
-  (compare `get-url` first); one `assertPublishable` test in
-  `collect.test.mjs` can't fail (`expect.unreachable` inside the `try`);
-  `readPrevious*` read the clone's working tree, so a run that fails
-  between write and commit can make the next offline run skip. Yandex
-  timeouts and `getaddrinfo() thread failed to start` push failures show
-  up in `run.log` a few times a day; both self-heal on the next run.
+  fixed in one wave (`525e887..e76c57a`); scoped re-review clean. Its
+  three parked Minor follow-ups were fixed on 2026-09-29 (`953e5c0..e0591f9`;
+  spec `docs/superpowers/specs/2026-09-29-presence-runner-minors-design.md`,
+  plan `docs/superpowers/plans/2026-09-29-presence-runner-minors.md`):
+  `ensureRemote` writes `.git/config` only when `origin` is missing or
+  wrong, and a stale `config.lock` is swept like `index.lock`; the
+  `assertPublishable` message test can fail now; the previous state is
+  read from the clone's `HEAD`, not its working tree. `install.ps1` was
+  re-run on 2026-09-30; its first run published with `playlists=same` and
+  left `.git/config` untouched.
+- Parked by that fix's final review (all Minor, none a regression):
+  `ensureRemote` doesn't restore a missing `remote.origin.fetch`, so a
+  run killed inside the first `remote add` would leave a URL-only origin
+  and publish every 5 minutes forever (fix: also check
+  `git config --get-all remote.origin.fetch`); the `REPO/.git` guard
+  doesn't stop git walking up from a half-initialized `.git` (no parent
+  repo above `%LOCALAPPDATA%` today; fix: `GIT_CEILING_DIRECTORIES` in
+  `GIT_ENV`); the /now/ spec's runner step 5 says "only if both hold"
+  but lists three conditions.
+- Known self-healing noise in `run.log`: Yandex timeouts and
+  `getaddrinfo() thread failed to start` push failures, a few times a
+  day. Seen once (2026-09-28 16:03, right after the machine woke): a run
+  started before sleep collided with a fresh one (`index.lock` exists,
+  `cannot lock ref 'HEAD'`). Git refused safely and the next run
+  published 20 s later. No run-level lock was added.
 - SDD ledger (git-ignored, full task history + the headless-Chrome check
   scripts `now-check.mjs` / `presence-check.mjs`):
   `.superpowers/sdd/2026-09-28-now-page/`.

@@ -7,10 +7,12 @@
  * tree, so it imports nothing but ./collect.mjs and node builtins. Reads only
  * `timestamp`, `sessionId` and `message.model` from today's
  * ~/.claude/projects transcripts (the model from main sessions only, not
- * `subagents/`), plus each session's busy/idle status
+ * `subagents/`) — and once a day the same fields from the last 28 days'
+ * transcripts, for per-day minutes (cached in daily-cache.json next to the
+ * clone, never published) — plus each session's busy/idle status
  * from `claude agents --json --all`, and fetches Artem's public Yandex
  * Music playlists (the API refuses browsers and GitHub's runners, so this
- * machine is the only place that can). Force-pushes a ten-key
+ * machine is the only place that can). Force-pushes an eleven-key
  * presence.json and a trimmed playlists.json to the orphan
  * `presence-data` branch from a dedicated clone under %LOCALAPPDATA% —
  * never from the working tree.
@@ -36,10 +38,13 @@ import { join } from "node:path";
 import { createInterface } from "node:readline";
 import { promisify } from "node:util";
 import {
+  DAILY_DAYS,
   assertPublishable,
   buildPresence,
+  dailyMinutes,
   isSubagentTranscript,
   localDayInfo,
+  pastDayStarts,
   shouldPublish,
   trimPlaylists,
 } from "./collect.mjs";
@@ -56,9 +61,10 @@ const BASE = join(
 );
 const REPO = join(BASE, "repo");
 const LOG = join(BASE, "run.log");
+const DAILY_CACHE = join(BASE, "daily-cache.json");
 const PROJECTS = join(homedir(), ".claude", "projects");
 const DRY_RUN = process.argv.includes("--dry-run");
-const INDEX_LOCK_STALE_MS = 10 * 60_000;
+const LOCK_STALE_MS = 10 * 60_000;
 const PUSH_RETRY_DELAY_MS = 5_000;
 
 // Fail fast instead of hanging on a credential prompt nobody can see.
@@ -96,15 +102,15 @@ async function getAgents() {
   }
 }
 
-/** Today's transcripts as `{ file, subagent }`, subagent judged on the path below PROJECTS. */
-function todaysTranscripts(dayStartMs) {
+/** Transcripts touched since sinceMs as `{ file, subagent }`, subagent judged on the path below PROJECTS. */
+function transcriptsSince(sinceMs) {
   if (!existsSync(PROJECTS)) return [];
   return readdirSync(PROJECTS, { recursive: true })
     .filter((rel) => typeof rel === "string" && rel.endsWith(".jsonl"))
     .map((rel) => ({ file: join(PROJECTS, rel), subagent: isSubagentTranscript(rel) }))
     .filter(({ file }) => {
       try {
-        return statSync(file).mtimeMs >= dayStartMs;
+        return statSync(file).mtimeMs >= sinceMs;
       } catch {
         return false;
       }
@@ -137,6 +143,44 @@ async function readEvents(file, subagent, out) {
       model: !subagent && typeof row.message?.model === "string" ? row.message.model : null,
     });
   }
+}
+
+/**
+ * The DAILY_DAYS - 1 days before today, oldest first. Past days don't
+ * change, so they are recomputed only when the cache is from another day
+ * (or unreadable): from every transcript touched since the first of them,
+ * timestamps only. The cache holds nothing but the day and the counts, and
+ * stays on this machine.
+ */
+async function pastMinutes(dayStartMs, day) {
+  try {
+    const cached = JSON.parse(readFileSync(DAILY_CACHE, "utf8"));
+    if (cached?.day === day && Array.isArray(cached.past) && cached.past.length === DAILY_DAYS - 1) {
+      return cached.past;
+    }
+  } catch {
+    // No cache yet, or a broken one: recompute below.
+  }
+  const bounds = pastDayStarts(dayStartMs, DAILY_DAYS - 1);
+  const events = [];
+  for (const { file, subagent } of transcriptsSince(bounds[0])) {
+    try {
+      await readEvents(file, subagent, events);
+    } catch (err) {
+      log(`skipped a transcript: ${err instanceof Error ? err.message : err}`);
+    }
+  }
+  const past = dailyMinutes(
+    events.map((e) => e.ts),
+    bounds,
+  );
+  try {
+    writeFileSync(DAILY_CACHE, JSON.stringify({ day, past }));
+  } catch (err) {
+    log(`daily cache not written: ${err instanceof Error ? err.message : err}`);
+  }
+  log(`computed ${past.length} past days of minutes`);
+  return past;
 }
 
 /**
@@ -185,17 +229,28 @@ async function fetchPlaylistsText() {
   }
 }
 
-function readPrevious() {
+/**
+ * `file` as committed at the clone's HEAD (what was published, or a commit
+ * whose push failed, which hasUnpushedCommit forces out), or null when
+ * there's no clone, no commit or no such file. Never the working tree: a
+ * run that failed between writing and committing leaves it ahead of
+ * anything published.
+ */
+async function readCommitted(file) {
+  if (!existsSync(join(REPO, ".git"))) return null; // don't let git search parent dirs
   try {
-    return JSON.parse(readFileSync(join(REPO, "presence.json"), "utf8"));
+    const { stdout } = await git(["show", `HEAD:${file}`]);
+    return stdout;
   } catch {
     return null;
   }
 }
 
-function readPreviousPlaylistsText() {
+async function readPrevious() {
+  const text = await readCommitted("presence.json");
+  if (text === null) return null;
   try {
-    return readFileSync(join(REPO, "playlists.json"), "utf8");
+    return JSON.parse(text);
   } catch {
     return null;
   }
@@ -241,28 +296,42 @@ async function hasUnpushedCommit() {
 
 /**
  * A run killed mid-git (the task's 2-minute limit, git's 60 s timeout) can
- * leave .git/index.lock behind and fail every later run. No live run holds
- * it anywhere near this long, so an older one is removed.
+ * leave .git/index.lock or .git/config.lock behind and fail every later
+ * run. No live run holds either anywhere near this long, so an older one is
+ * removed.
  */
-function clearStaleIndexLock() {
-  const lock = join(REPO, ".git", "index.lock");
-  let ageMs;
-  try {
-    ageMs = Date.now() - statSync(lock).mtimeMs;
-  } catch {
-    return;
+function clearStaleLocks() {
+  for (const name of ["index.lock", "config.lock"]) {
+    const lock = join(REPO, ".git", name);
+    let ageMs;
+    try {
+      ageMs = Date.now() - statSync(lock).mtimeMs;
+    } catch {
+      continue;
+    }
+    if (ageMs <= LOCK_STALE_MS) continue;
+    unlinkSync(lock);
+    log(`removed a stale .git/${name} (${Math.round(ageMs / 60_000)} min old)`);
   }
-  if (ageMs <= INDEX_LOCK_STALE_MS) return;
-  unlinkSync(lock);
-  log(`removed a stale .git/index.lock (${Math.round(ageMs / 60_000)} min old)`);
 }
 
-/** Every run, so one killed between `git init` and `remote add` heals itself. */
+/**
+ * Every run, so one killed between `git init` and `remote add` heals itself,
+ * but .git/config is written only when origin is missing or wrong. The URL
+ * is read raw: `git remote get-url` expands a global `insteadOf` and would
+ * never match.
+ */
 async function ensureRemote() {
-  const { stdout } = await git(["remote"]);
-  const hasOrigin = stdout.split(/\r?\n/).includes("origin");
+  let url = null;
+  try {
+    const { stdout } = await git(["config", "--get", "remote.origin.url"]);
+    url = stdout.trim();
+  } catch (err) {
+    if (err?.code !== 1) throw err; // 1: no such key, so no origin yet
+  }
+  if (url === REMOTE) return;
   await git(
-    hasOrigin ? ["remote", "set-url", "origin", REMOTE] : ["remote", "add", "origin", REMOTE],
+    url === null ? ["remote", "add", "origin", REMOTE] : ["remote", "set-url", "origin", REMOTE],
   );
 }
 
@@ -306,7 +375,7 @@ async function publish(presenceText, playlistsText, updatedAt) {
     mkdirSync(REPO, { recursive: true });
     await git(["init", "-q", "-b", BRANCH]);
   }
-  clearStaleIndexLock();
+  clearStaleLocks();
   await ensureRemote();
   const fresh = (await revParse("HEAD")) === null;
   if (fresh) {
@@ -338,10 +407,10 @@ async function main() {
   const nowMs = Date.now();
   const { day, dayStartMs } = localDayInfo(nowMs);
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const prev = readPrevious();
+  const prev = await readPrevious();
 
   const events = [];
-  for (const { file, subagent } of todaysTranscripts(dayStartMs)) {
+  for (const { file, subagent } of transcriptsSince(dayStartMs)) {
     try {
       await readEvents(file, subagent, events);
     } catch (err) {
@@ -357,12 +426,13 @@ async function main() {
     day,
     tz,
     prevLastActive: typeof prev?.lastActive === "string" ? prev.lastActive : null,
+    pastMinutes: await pastMinutes(dayStartMs, day),
   });
 
   const presenceText = `${JSON.stringify(presence, null, 2)}\n`;
   const playlistsText = await fetchPlaylistsText();
   const playlistsChanged =
-    playlistsText !== null && playlistsText !== readPreviousPlaylistsText();
+    playlistsText !== null && playlistsText !== (await readCommitted("playlists.json"));
 
   // Checked on exactly the text that would be written, in both paths.
   const outgoing = {
@@ -382,8 +452,8 @@ async function main() {
     process.stdout.write(`${JSON.stringify(both, null, 2)}\n`);
     return;
   }
-  // prev and the playlists comparison come from the clone, which may hold
-  // a commit whose push failed — that alone forces a publish.
+  // prev and the playlists comparison come from the clone's HEAD, which may
+  // be a commit whose push failed — that alone forces a publish.
   const unpushed = await hasUnpushedCommit();
   const decision = {
     prevState: prev?.state ?? null,

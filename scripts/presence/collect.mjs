@@ -21,7 +21,14 @@ export const PRESENCE_KEYS = Object.freeze([
   "day",
   "tz",
   "updatedAt",
+  "dailyMinutes",
 ]);
+
+/**
+ * dailyMinutes covers this many local days, today last. Claude Code keeps
+ * transcripts for 30 days, so all of them can always be recomputed.
+ */
+export const DAILY_DAYS = 28;
 
 /** The complete per-playlist allowlist for playlists.json. */
 export const PLAYLIST_KEYS = Object.freeze([
@@ -105,6 +112,38 @@ export function localDayInfo(nowMs) {
   };
 }
 
+/**
+ * Local midnights of the n days before today, oldest first, then today's
+ * own midnight as the closing boundary: n + 1 values for dailyMinutes().
+ */
+export function pastDayStarts(dayStartMs, n) {
+  const d = new Date(dayStartMs);
+  const starts = [];
+  for (let i = n; i >= 0; i--) {
+    starts.push(new Date(d.getFullYear(), d.getMonth(), d.getDate() - i).getTime());
+  }
+  return starts;
+}
+
+/**
+ * Active minutes per day between consecutive boundaries, each day merged
+ * on its own (a stretch across midnight counts in both days, split at it).
+ * Timestamps outside [first, last) are ignored.
+ */
+export function dailyMinutes(timestampsMs, boundaries) {
+  const out = [];
+  for (let i = 0; i + 1 < boundaries.length; i++) {
+    const [start, end] = [boundaries[i], boundaries[i + 1]];
+    const day = timestampsMs.filter((t) => Number.isFinite(t) && t >= start && t < end);
+    out.push(totalMinutes(mergeActivity(day, { dayStartMs: start })));
+  }
+  return out;
+}
+
+function isDayCount(value) {
+  return Number.isInteger(value) && value >= 0 && value <= 24 * 60;
+}
+
 function isoMinute(ms) {
   return ms === null ? null : new Date(Math.floor(ms / 60_000) * 60_000).toISOString();
 }
@@ -115,7 +154,20 @@ function maxOrNull(values) {
   return max;
 }
 
-export function buildPresence({ agents, events, nowMs, dayStartMs, day, tz, prevLastActive }) {
+/**
+ * pastMinutes: the DAILY_DAYS - 1 days before today, oldest first (run.mjs
+ * computes them once a day); anything else counts as no history.
+ */
+export function buildPresence({
+  agents,
+  events,
+  nowMs,
+  dayStartMs,
+  day,
+  tz,
+  prevLastActive,
+  pastMinutes = null,
+}) {
   const prevMs = typeof prevLastActive === "string" ? Date.parse(prevLastActive) : NaN;
   const lastActiveMs = maxOrNull([...events.map((e) => e.ts), prevMs]);
   const today = events.filter((e) => Number.isFinite(e.ts) && e.ts >= dayStartMs);
@@ -139,17 +191,26 @@ export function buildPresence({ agents, events, nowMs, dayStartMs, day, tz, prev
   const sessions = new Set();
   for (const e of today) if (typeof e.sessionId === "string") sessions.add(e.sessionId);
 
+  const todayMinutes = totalMinutes(intervals);
+  const past =
+    Array.isArray(pastMinutes) &&
+    pastMinutes.length === DAILY_DAYS - 1 &&
+    pastMinutes.every(isDayCount)
+      ? [...pastMinutes]
+      : Array(DAILY_DAYS - 1).fill(0);
+
   return {
     v: 1,
     state,
     since: state !== "offline" && lastInterval ? isoMinute(lastInterval.start) : null,
     lastActive: isoMinute(lastActiveMs),
-    todayMinutes: totalMinutes(intervals),
+    todayMinutes,
     sessionsToday: sessions.size,
     model,
     day,
     tz,
     updatedAt: isoMinute(nowMs),
+    dailyMinutes: [...past, todayMinutes],
   };
 }
 
@@ -209,6 +270,7 @@ const PUBLISHABLE_PRESENCE_KEYS = [
   "day",
   "tz",
   "updatedAt",
+  "dailyMinutes",
 ];
 const PUBLISHABLE_PLAYLIST_KEYS = [
   "playlistUuid",
@@ -250,10 +312,16 @@ export function assertPublishable({ presence, playlists }) {
     Object.keys(presence).length !== PUBLISHABLE_PRESENCE_KEYS.length ||
     !hasOnlyKeys(presence, PUBLISHABLE_PRESENCE_KEYS)
   ) {
-    throw notPublishable("presence.json keys are not exactly the ten allowed");
+    throw notPublishable("presence.json keys are not exactly the eleven allowed");
   }
-  if (!Object.values(presence).every(isLeaf)) {
+  const { dailyMinutes: daily, ...scalars } = presence;
+  if (!Object.values(scalars).every(isLeaf)) {
     throw notPublishable("presence.json has a value that is not a string, number or null");
+  }
+  // A literal 28, like the key lists above: not DAILY_DAYS, so changing the
+  // constant can't silently widen this check too.
+  if (!Array.isArray(daily) || daily.length !== 28 || !daily.every(isDayCount)) {
+    throw notPublishable("presence.json dailyMinutes is not 28 whole minute counts");
   }
 
   if (playlists === null || playlists === undefined) return;

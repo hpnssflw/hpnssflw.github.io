@@ -1,16 +1,19 @@
 import { describe, expect, it } from "vitest";
-import { MODELS, parsePresence } from "../../lib/claude-presence.ts";
+import { DAILY_DAYS as SITE_DAILY_DAYS, MODELS, parsePresence } from "../../lib/claude-presence.ts";
 import {
   MODEL_FAMILIES,
   PLAYLIST_KEYS,
   PRESENCE_KEYS,
   assertPublishable,
+  DAILY_DAYS,
   buildPresence,
+  dailyMinutes,
   deriveState,
   isSubagentTranscript,
   localDayInfo,
   mergeActivity,
   modelFamily,
+  pastDayStarts,
   shouldPublish,
   totalMinutes,
   trimPlaylists,
@@ -165,6 +168,37 @@ describe("localDayInfo", () => {
   });
 });
 
+describe("pastDayStarts", () => {
+  it("gives the local midnights of the n days before today, then today's", () => {
+    const today = new Date(2026, 8, 28).getTime();
+    const starts = pastDayStarts(today, 27);
+    expect(starts).toHaveLength(28);
+    expect(starts[0]).toBe(new Date(2026, 8, 1).getTime());
+    expect(starts[26]).toBe(new Date(2026, 8, 27).getTime());
+    expect(starts[27]).toBe(today);
+  });
+});
+
+describe("dailyMinutes", () => {
+  it("sums each day's merged activity separately", () => {
+    const d0 = DAY_START - 2 * 24 * 60 * MIN;
+    const d1 = DAY_START - 24 * 60 * MIN;
+    const day = (start, h, m) => start + (h * 60 + m) * MIN;
+    const ts = [
+      day(d0, 9, 0), day(d0, 9, 10), day(d0, 9, 20), day(d0, 9, 30), // 30 min, gaps under 15
+      day(d1, 23, 50), day(d1, 23, 59), // 9 min — the day boundary splits it
+      DAY_START + 5 * MIN, // today: outside the range, ignored
+      d0 - MIN, // before the range, ignored
+    ];
+    expect(dailyMinutes(ts, [d0, d1, DAY_START])).toEqual([30, 9]);
+  });
+
+  it("is zero for days without activity", () => {
+    const d1 = DAY_START - 24 * 60 * MIN;
+    expect(dailyMinutes([], [d1, DAY_START])).toEqual([0]);
+  });
+});
+
 describe("buildPresence", () => {
   const base = {
     agents: [{ status: "busy" }],
@@ -193,7 +227,24 @@ describe("buildPresence", () => {
       day: "2026-09-28",
       tz: "Europe/Moscow",
       updatedAt: iso(at(10, 7)), // floored to the minute
+      dailyMinutes: [...Array(27).fill(0), 15], // no past days given; today last
     });
+  });
+
+  it("ends dailyMinutes with today, after the 27 past days it was given", () => {
+    const past = Array.from({ length: 27 }, (_, i) => i * 10);
+    const out = buildPresence({ ...base, pastMinutes: past });
+    expect(out.dailyMinutes).toEqual([...past, 15]);
+    expect(out.dailyMinutes).toHaveLength(DAILY_DAYS);
+  });
+
+  it("ignores past days that aren't 27 non-negative integers", () => {
+    for (const bad of [[1, 2, 3], Array(27).fill(-1), Array(27).fill(1.5), "nope", null]) {
+      expect(buildPresence({ ...base, pastMinutes: bad }).dailyMinutes).toEqual([
+        ...Array(27).fill(0),
+        15,
+      ]);
+    }
   });
 
   it("has no since when offline", () => {
@@ -264,6 +315,11 @@ describe("presence.json contract: collect.mjs vs lib/claude-presence.ts", () => 
     const parsed = parsePresence(JSON.parse(JSON.stringify(buildPresence(inputs))));
     expect(parsed).not.toBeNull();
     expect(Object.keys(parsed).sort()).toEqual([...PRESENCE_KEYS].sort());
+  });
+
+  it("both sides count the same number of days", () => {
+    expect(SITE_DAILY_DAYS).toBe(DAILY_DAYS);
+    expect(parsePresence(buildPresence(inputs))?.dailyMinutes).toHaveLength(DAILY_DAYS);
   });
 
   it("both sides know the same model families", () => {
@@ -464,6 +520,22 @@ describe("assertPublishable", () => {
     expect(check({ presence: { ...presence, day: ["2026-09-28"] } })).toThrow(/presence\.json/);
   });
 
+  it("fails on a dailyMinutes that isn't exactly 28 non-negative integers", () => {
+    const bad = [
+      presence.dailyMinutes.slice(1),
+      [...presence.dailyMinutes, 0],
+      presence.dailyMinutes.map((n, i) => (i === 3 ? 1.5 : n)),
+      presence.dailyMinutes.map((n, i) => (i === 3 ? -1 : n)),
+      presence.dailyMinutes.map((n, i) => (i === 3 ? "C:\\A\\secret" : n)),
+      presence.dailyMinutes.map((n, i) => (i === 3 ? [n] : n)),
+      "30,40",
+      null,
+    ];
+    for (const dailyMinutes of bad) {
+      expect(check({ presence: { ...presence, dailyMinutes } })).toThrow(/dailyMinutes/);
+    }
+  });
+
   it("fails on an extra top-level playlists key", () => {
     expect(check({ playlists: { ...playlists, invocationInfo: { hostname: "x" } } })).toThrow(
       /playlists\.json is not exactly/,
@@ -487,11 +559,14 @@ describe("assertPublishable", () => {
 
   it("never puts a key or value into its message", () => {
     const secret = "C:\\A\\secret-client-repo";
+    let caught;
     try {
       assertPublishable({ presence: { ...presence, [secret]: secret }, playlists: null });
-      expect.unreachable();
     } catch (err) {
-      expect(err.message).not.toContain("secret");
+      caught = err;
     }
+    expect(caught).toBeInstanceOf(Error);
+    expect(caught.message).toMatch(/presence\.json keys/);
+    expect(caught.message).not.toContain("secret");
   });
 });
