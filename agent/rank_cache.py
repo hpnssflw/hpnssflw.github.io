@@ -12,7 +12,9 @@ from agent.dedupe import RankRecord, StateEntry, url_hash
 from agent.sources.base import Candidate, Drop, TopicConfig
 from agent.summarize import RankedItem
 
-QUEUE_WINDOW = timedelta(hours=24)
+# Scheduled Actions start minutes late by varying amounts, so a 24h window frees a
+# slot one 4-hour run later; 23h still allows one batch per day at a 4h cadence.
+QUEUE_WINDOW = timedelta(hours=23)
 
 
 def is_valid(record: RankRecord, candidate: Candidate, rubric: str, topic: TopicConfig) -> bool:
@@ -79,6 +81,8 @@ def record(
 
 
 def queued_in_last_24h(state: dict[str, StateEntry], slug: str, now: datetime) -> int:
+    """Items queued for this topic inside the cap window (QUEUE_WINDOW, 23h --
+    the name predates the window change)."""
     count = 0
     for entry in state.values():
         verdict = entry.ranks.get(slug)

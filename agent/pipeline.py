@@ -28,7 +28,7 @@ class TopicResult:
     over_cap: list[RankedItem]  # at or above threshold, over the daily cap; eligible again next run
     below: list[RankedItem]  # freshly scored below min_relevance
     cached_below: list[Drop]  # already_ranked: a cached verdict below min_relevance
-    queued_before: int  # this topic's items queued in the 24h before this pass
+    queued_before: int  # this topic's items queued in the cap window (23h) before this pass
 
 
 def process_topic(
@@ -67,6 +67,20 @@ def process_topic(
     kept, drops = pending.filter_already_pending(kept, queue)
     for drop in drops:
         writer.emit_drop("dedupe", topic.slug, drop)
+
+    # The same URL can come from two sources or two keywords: keep the first.
+    unique, seen_urls = [], set()
+    for candidate in kept:
+        if candidate.url in seen_urls:
+            writer.emit_drop(
+                "dedupe",
+                topic.slug,
+                Drop(url=candidate.url, title=candidate.title, reason="seen", detail={"duplicate_in_run": True}),
+            )
+        else:
+            seen_urls.add(candidate.url)
+            unique.append(candidate)
+    kept = unique
 
     rubric = summarize.rubric_hash(topic, settings)
     to_rank, cached, cached_below = rank_cache.partition(kept, state, topic, rubric)
@@ -132,7 +146,7 @@ def format_preview(topic: TopicConfig, result: TopicResult) -> str:
     real run would queue, and why the rest wouldn't be."""
     lines = [
         f"\n== {topic.name} ({topic.slug}) -- cap {topic.max_items_per_day}/day, "
-        f"{result.queued_before} queued in the last 24h"
+        f"{result.queued_before} queued in the last 23h"
     ]
     rows = (
         [("queue", item) for item in result.kept]

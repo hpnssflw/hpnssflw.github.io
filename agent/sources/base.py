@@ -46,6 +46,6 @@ class TopicConfig:
     sources: dict
     max_age_days: int
     min_relevance: int
-    max_items_per_day: int  # rolling 24h cap on items this topic adds to the queue
+    max_items_per_day: int  # rolling 23h cap on items this topic adds to the queue
     attention_enabled: bool
     attention_min_score_gain: int

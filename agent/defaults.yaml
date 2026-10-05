@@ -1,7 +1,7 @@
 # Applies to every topic unless overridden in that topic's own file.
 max_age_days: 10
 min_relevance: 6 # 1-10 scale
-max_items_per_day: 3 # per topic, rolling 24h; items over the cap stay eligible for later runs
+max_items_per_day: 3 # per topic, rolling 23h window (see rank_cache.QUEUE_WINDOW); items over the cap stay eligible for later runs
 attention:
   enabled: true
   min_score_gain: 50
