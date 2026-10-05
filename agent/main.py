@@ -1,4 +1,4 @@
-"""Entry point: python -m agent --dry-run [--topic SLUG]"""
+"""Entry point: python -m agent [--dry-run | --preview] [--topic SLUG] | panel | report [--days N]"""
 
 from __future__ import annotations
 
@@ -20,17 +20,22 @@ PENDING_PATH = AGENT_DIR / "pending.json"
 STATUS_PATH = AGENT_DIR / "status.json"
 
 
-def run_dry(topic_filter: str | None) -> None:
-    now = datetime.now(timezone.utc)
-    run_id = events.new_run_id(now)
-    writer = events.EventWriter(run_id)
-
+def _load_topics(topic_filter: str | None) -> list:
     topics = config.load_topics(TOPICS_DIR, DEFAULTS_PATH)
     if topic_filter:
         topics = [t for t in topics if t.slug == topic_filter]
         if not topics:
             print(f"No topic named {topic_filter!r}", file=sys.stderr)
             sys.exit(1)
+    return topics
+
+
+def run_dry(topic_filter: str | None) -> None:
+    now = datetime.now(timezone.utc)
+    run_id = events.new_run_id(now)
+    writer = events.EventWriter(run_id)
+
+    topics = _load_topics(topic_filter)
 
     state = dedupe.load_state(STATE_PATH)
 
@@ -78,12 +83,7 @@ def run_real(topic_filter: str | None) -> None:
     writer = events.EventWriter(run_id)
 
     settings = config.load_settings(DEFAULTS_PATH)
-    topics = config.load_topics(TOPICS_DIR, DEFAULTS_PATH)
-    if topic_filter:
-        topics = [t for t in topics if t.slug == topic_filter]
-        if not topics:
-            print(f"No topic named {topic_filter!r}", file=sys.stderr)
-            sys.exit(1)
+    topics = _load_topics(topic_filter)
 
     state = dedupe.load_state(STATE_PATH)
     queue = pending.load_pending(PENDING_PATH)
@@ -146,6 +146,23 @@ def run_real(topic_filter: str | None) -> None:
     print(f"Status written: {STATUS_PATH}")
 
 
+def run_preview(topic_filter: str | None) -> None:
+    """Collect and rank exactly like a real run, against in-memory copies
+    of state.json and pending.json, and print what would be queued.
+    Writes nothing, reads no inbox, delivers nothing. Copy state.json and
+    pending.json from the agent-data branch first for a realistic run."""
+    now = datetime.now(timezone.utc)
+    settings = config.load_settings(DEFAULTS_PATH)
+    topics = _load_topics(topic_filter)
+    state = dedupe.load_state(STATE_PATH)
+    queue = pending.load_pending(PENDING_PATH)
+    writer = events.MemoryWriter()
+    for topic in topics:
+        result = pipeline.process_topic(topic, state, queue, settings, now, writer)
+        print(pipeline.format_preview(topic, result))
+    print("\nPreview only: nothing was written.")
+
+
 def _print_funnel(topic_name: str, counts: Counter[str]) -> None:
     print(f"\n{topic_name}")
     print(
@@ -160,9 +177,16 @@ def main() -> None:
 
         run_panel()
         return
+    if len(sys.argv) > 1 and sys.argv[1] == "report":
+        from agent.report import run_report
+
+        run_report(sys.argv[2:])
+        return
 
     parser = argparse.ArgumentParser(prog="python -m agent")
-    parser.add_argument("--dry-run", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--dry-run", action="store_true")
+    mode.add_argument("--preview", action="store_true")
     parser.add_argument("--topic", default=None)
     args = parser.parse_args()
 
@@ -170,6 +194,8 @@ def main() -> None:
 
     if args.dry_run:
         run_dry(args.topic)
+    elif args.preview:
+        run_preview(args.topic)
     else:
         run_real(args.topic)
 

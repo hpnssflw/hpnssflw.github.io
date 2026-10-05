@@ -562,9 +562,9 @@ infrastructure.
 - **Sub-project #6, Topic & source quality: in progress.**
   Spec: `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
   Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
-  Task 3 of 5 done.
-  Latest: verdict cache per (URL, topic) in state.json, re-scored on growth or rubric change; rolling 24h cap per topic (3; AI Engineering 4); per-topic pass moved to agent/pipeline.py.
-  Next: Task 4 (--preview and report).
+  Task 4 of 5 done.
+  Latest: python -m agent --preview (collect + rank, writes nothing) and python -m agent report (queue outcomes, score histogram).
+  Next: Task 5 (live preview and criteria tuning with Artem, docs, merge, push, live check). Needs DEEPSEEK_API_KEY in the worktree's agent/.env.
 
 ### How to resume in a new session
 

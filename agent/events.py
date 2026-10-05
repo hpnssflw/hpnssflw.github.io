@@ -62,3 +62,20 @@ class EventWriter:
 
 def read_events(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
+
+
+class MemoryWriter(EventWriter):
+    """Same interface as EventWriter, but keeps events in memory and never
+    touches disk -- for --preview, which must write nothing."""
+
+    def __init__(self) -> None:  # deliberately skips EventWriter.__init__: no file
+        self.path = None
+        self.events: list[dict] = []
+
+    def emit(self, stage: str, event: str, **fields: Any) -> None:
+        self.events.append(
+            {"ts": datetime.now(timezone.utc).isoformat(), "stage": stage, "event": event, **fields}
+        )
+
+    def close(self) -> None:
+        pass

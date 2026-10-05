@@ -122,3 +122,31 @@ def process_topic(
     return TopicResult(
         kept=keep, over_cap=over_cap, below=below, cached_below=cached_below, queued_before=queued_before
     )
+
+
+PREVIEW_TITLE_CHARS = 90
+
+
+def format_preview(topic: TopicConfig, result: TopicResult) -> str:
+    """One row per item and verdict, summaries indented below -- what a
+    real run would queue, and why the rest wouldn't be."""
+    lines = [
+        f"\n== {topic.name} ({topic.slug}) -- cap {topic.max_items_per_day}/day, "
+        f"{result.queued_before} queued in the last 24h"
+    ]
+    rows = (
+        [("queue", item) for item in result.kept]
+        + [("over cap", item) for item in result.over_cap]
+        + [("below", item) for item in sorted(result.below, key=lambda i: i.score, reverse=True)]
+    )
+    for verdict, item in rows:
+        lines.append(
+            f"  {verdict:<12} {item.score:>2}  {item.candidate.source:<6}  "
+            f"{item.candidate.title[:PREVIEW_TITLE_CHARS]}"
+        )
+        lines.append(f"  {'':<12}     {item.summary}")
+    for drop in result.cached_below:
+        lines.append(f"  {'cached-below':<12} {drop.detail['relevance']:>2}  {'':<6}  {drop.title[:PREVIEW_TITLE_CHARS]}")
+    if len(lines) == 1:
+        lines.append("  (nothing to score)")
+    return "\n".join(lines)
