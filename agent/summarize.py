@@ -17,7 +17,8 @@ from agent.config import Settings
 from agent.sources.base import Candidate, TopicConfig
 
 # Bump whenever RANK_SYSTEM_PROMPT or _build_batch_prompt's wording
-# changes: it's part of rubric_hash, so a bump re-scores cached verdicts.
+# changes, OR when llm.model changes (the model is not in rubric_hash):
+# it's part of rubric_hash, so a bump re-scores cached verdicts.
 RANK_PROMPT_VERSION = 2
 # The first run after a rubric change re-scores a whole topic's window
 # (100+ items); one oversized batch failing validation twice would fall

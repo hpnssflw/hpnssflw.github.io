@@ -52,9 +52,9 @@ are dropped rather than passed through. Full detail:
 ## Pipeline
 
 1. **Collect** — each source connector runs independently, returns candidate links with a mandatory publish date.
-2. **Recency window** — candidates published outside the topic's `max_age_days` are dropped; an item whose score has since jumped can re-enter (the attention window).
-3. **Dedupe** — every link's URL gets hashed against a store of what's already been sent or dismissed from the inbox, and against the topic's verdict cache: an item this topic already scored below the threshold isn't sent to the LLM again unless its points/stars at least doubled and grew by `attention.min_score_gain`, or the topic's criteria changed (`rank_cache.py`). Only new links continue.
-4. **Rank** — batched LLM calls per topic (at most 40 candidates each) score every uncached candidate 1–10 against the topic's `include`/`exclude` criteria and a short reader profile, returning a one-line summary per item; anything below the threshold is dropped, and at most `max_items_per_day` items per topic enter the queue in any rolling 24 hours — the rest stay eligible for later runs.
+2. **Recency window** — candidates published outside the topic's `max_age_days` are dropped; inside the window, an item already scored below the threshold is re-scored if its points/stars took off (the attention window).
+3. **Dedupe** — every link's URL gets hashed against a store of what's already been sent or dismissed from the inbox, and against the topic's verdict cache: an item this topic already scored below the threshold isn't sent to the LLM again unless its points/stars at least doubled and grew by `attention.min_score_gain`, or the topic's criteria changed (`rank_cache.py`). Above-threshold verdicts that lost to the daily cap are reused as-is on later runs, without another LLM call. Only new or re-scorable links continue.
+4. **Rank** — batched LLM calls per topic (at most 40 candidates each) score every uncached candidate 1–10 against the topic's `include`/`exclude` criteria and a short reader profile, returning a one-line summary per item; anything below the threshold is dropped, and at most `max_items_per_day` items per topic enter the queue in any rolling 23 hours (scheduled runs start minutes late, so a full 24h would free the slot one run later) — the rest stay eligible for later runs.
 5. **Assemble** — surviving items get grouped by topic into a digest, ordered by relevance within each group.
 6. **Deliver** — the items Artem approved on `/researcher/queue/` go out to a public Telegram channel on a fixed schedule. Rejected items are dismissed for good; undecided ones expire after `inbox.expire_days` — see `docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md`.
 
@@ -87,7 +87,9 @@ contracts — this section is superseded there.
 
 - `DEEPSEEK_API_KEY` — DeepSeek, for summarization/ranking.
 - `BRAVE_API_KEY` — the web search connector.
-- `GITHUB_TOKEN` — optional; raises the GitHub-trending connector's rate
+- `GITHUB_TOKEN` — effectively required for local runs: a run makes 15
+  search requests against GitHub's 10/min unauthenticated search limit
+  (CI passes it); it raises the GitHub-trending connector's rate
   limit (and, later, the release-watching connector's).
 - `TELEGRAM_BOT_TOKEN` — Telegram Bot API, for delivery.
 
@@ -98,7 +100,7 @@ contracts — this section is superseded there.
 Superseded by the build order in
 `docs/superpowers/specs/2026-08-12-research-agent-design.md`. As of this
 writing, TASK-001 through TASK-006 are complete — the agent runs
-end-to-end on Hacker News only, ranked by DeepSeek and delivered by Telegram.
+end-to-end on Hacker News and GitHub, ranked by DeepSeek and delivered by Telegram.
 Reddit, RSS, release watching, web search, the attention window,
 scheduling, and self-refreshing keywords remain.
 
@@ -111,7 +113,7 @@ scheduling, and self-refreshing keywords remain.
 
 ## Status
 
-v1 code-complete: collect (Hacker News) → recency window → dedupe → rank
+v1 code-complete: collect (Hacker News, GitHub) → recency window → dedupe → rank
 (DeepSeek) → assemble → deliver (Telegram), running by hand. The Telegram
 send path is implemented but not yet exercised against a real channel —
 the bot/channel don't exist yet (see the TODO in `agent/deliver.py`).

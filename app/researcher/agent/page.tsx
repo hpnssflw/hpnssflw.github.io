@@ -97,8 +97,9 @@ export default function ResearchAgentPage() {
             </li>
             <li>
               Recency window — anything published outside the topic&apos;s
-              freshness window gets dropped, unless it&apos;s since gained enough
-              traction to earn a second look.
+              freshness window gets dropped. Inside the window, an item already
+              judged not good enough gets a second look if it&apos;s since
+              taken off.
             </li>
             <li>
               Dedupe — every link&apos;s URL gets hashed against a store of

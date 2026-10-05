@@ -36,7 +36,7 @@ def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Dr
     github_config = topic.sources.get("github_trending")
     if github_config is None:
         return [], []
-    github_topics = github_config["topics"]  # required: a KeyError is logged by main as "collect failed"
+    github_topics = github_config["topics"]  # required: a KeyError is logged by pipeline.process_topic as "collect failed"
     min_stars = github_config.get("min_stars", 0)
     cutoff = (now - timedelta(days=topic.max_age_days)).date().isoformat()
 
