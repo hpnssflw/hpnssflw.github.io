@@ -2042,6 +2042,7 @@ Expected: the push fast-forwards `origin/main` (if rejected as non-fast-forward:
 ```bash
 gh api "repos/hpnssflw/hpnssflw.github.io/contents/agent/state.json?ref=agent-data" -H "Accept: application/vnd.github.raw" > agent/state.json
 gh api "repos/hpnssflw/hpnssflw.github.io/contents/agent/status.json?ref=agent-data" -H "Accept: application/vnd.github.raw" > .superpowers/sdd/2026-09-30-topic-source-quality/live-status.json
+gh api "repos/hpnssflw/hpnssflw.github.io/contents/agent/pending.json?ref=agent-data" -H "Accept: application/vnd.github.raw" > agent/pending.json
 py -3 - <<'PY'
 import json
 from datetime import datetime, timezone
@@ -2052,6 +2053,8 @@ state = dedupe.load_state(Path("agent/state.json"))
 status = json.loads(Path(".superpowers/sdd/2026-09-30-topic-source-quality/live-status.json").read_text(encoding="utf-8"))
 now = datetime.now(timezone.utc)
 print("entries with ranks:", sum(1 for e in state.values() if e.ranks))
+items = json.loads(Path("agent/pending.json").read_text(encoding="utf-8"))["items"]
+assert len({i["url"] for i in items}) == len(items), "duplicate URLs in pending.json"
 for slug, cap in [("ai-engineering", 4), ("tooling", 3), ("web-products", 3)]:
     queued = rank_cache.queued_in_last_24h(state, slug, now)
     print(slug, "queued in last 24h:", queued, "cap:", cap, "funnel:", status["funnel"][slug])
@@ -2068,7 +2071,7 @@ Expected: `entries with ranks` in the hundreds; each topic's queued count ≤ it
 
 `PROGRESS.md`:
 - Content Direction status line → `**Status: sub-projects #1-#6 shipped.**`
-- Sub-project #6 bullet: `in progress` → `shipped`; replace the `Task 5 in progress.` / `Latest:` / `Next:` lines with `Pushed <date> (<merge sha>); first live run <run timestamp>: <N> verdicts cached, queued per topic <ai-engineering>/<tooling>/<web-products>. Watch for 3 days (spec's success criteria 2–3): new should drop to single digits per run, at most 10 queued a day; then run python -m agent report against agent-data's state.json and decide on #7 (Web Products source).` — filled in with the real values from Steps 8–9.
+- Sub-project #6 bullet: `in progress` → `shipped`; replace the `Task 5 in progress.` / `Latest:` / `Next:` lines with `Pushed <date> (<merge sha>); first live run <run timestamp>: <N> verdicts cached, queued per topic <ai-engineering>/<tooling>/<web-products>. Watch for 3 days (spec's success criteria 2–3): items sent to DeepSeek (the scored-per-day line of `python -m agent report`) should drop to single digits per run after the first day, at most 10 queued a day; then run python -m agent report against agent-data's state.json and decide on #7 (Web Products source).` — filled in with the real values from Steps 8–9.
 - "How to resume": replace the sentence starting `Sub-project #6 (topic & source quality) is in progress` with `Sub-project #6 (topic & source quality) is shipped; its 3-day watch and the #7 decision are next (see its bullet above).`
 
 `docs/tony-scraponi-roadmap.md` needs no change (it doesn't track status).

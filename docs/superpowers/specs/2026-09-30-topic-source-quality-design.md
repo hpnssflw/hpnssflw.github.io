@@ -328,13 +328,18 @@ over-cap and below-threshold items, the `already_ranked` drops, and the
 `defaults.yaml` (3) and `TopicConfig`; `ai-engineering.yaml` overrides
 it to 4, for a total of at most 10 a day. The 7 tooling items already
 queued have no `queued_at`, so they don't count against the cap; Artem
-moderates them or they expire after 7 days.
+moderates them or they expire after 7 days. The cap window is 23 hours,
+not 24: scheduled Actions start minutes late by varying amounts, so a 24h
+window would free a slot one 4-hour run later, while 23h still allows one
+batch a day at a 4h cadence.
 
 ### Funnel
 
 `status_export` already subtracts every `dedupe`-stage drop from `new`,
-so the dashboard's `new` becomes honest: only items that actually need
-scoring, instead of the same ~17 every run. `agent/funnel.py` and
+so the dashboard's `new` stops repeating the same ~17 items every run.
+`new` still includes above-threshold cached verdicts that lost to the cap
+(they aren't drops); `python -m agent report`'s scored-per-day line is the
+measure of actual LLM work (items sent to DeepSeek). `agent/funnel.py` and
 `agent/panel_page.html` (the local panel) subtract only `seen` today;
 both change to subtract `seen + dismissed + already_ranked`, which also
 fixes the missing `dismissed`. The site renders drop reasons as raw
@@ -418,13 +423,16 @@ Then one live `--preview` with the real key against state copied from
 2. Push to `main`, trigger `agent-run.yml` by `workflow_dispatch`.
 3. On `agent-data`, check that `state.json` entries carry `ranks`, that
    pending additions respect the caps, and that on the next run each
-   topic's `new` is in single digits.
+   topic sends only single digits of items to DeepSeek (report's
+   scored-per-day line).
 
 ## Success criteria
 
 1. Before push: in the live preview, most `queue` rows are on-topic by
    Artem's judgement.
-2. After rollout: `new` no longer sits flat at 15–20 per run.
+2. After rollout: items sent to DeepSeek (`python -m agent report`'s
+   scored-per-day line) drop to single digits per run after the first
+   day, with at most 10 queued a day.
 3. Over the first 3 days: at most 10 queued a day. AI Engineering
    contributes on most days, and Tooling contributes only developer
    tools. Web Products may contribute nothing — that's the known

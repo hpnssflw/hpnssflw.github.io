@@ -24,12 +24,16 @@ def build_report(state: dict[str, StateEntry], topic_names: dict[str, str], now:
     for slug, name in topic_names.items():
         outcomes: Counter[str] = Counter()
         histogram: Counter[int] = Counter()
+        scored_per_day: Counter[str] = Counter()
         for entry in state.values():
             verdict = entry.ranks.get(slug)
             if verdict is None:
                 continue
-            if datetime.fromisoformat(verdict.ranked_at) >= since:
+            ranked_at = datetime.fromisoformat(verdict.ranked_at)
+            if ranked_at >= since:
                 histogram[verdict.relevance] += 1
+                # ranked_at is set only when DeepSeek actually scores an item
+                scored_per_day[ranked_at.astimezone(timezone.utc).date().isoformat()] += 1
             if verdict.queued_at is not None and datetime.fromisoformat(verdict.queued_at) >= since:
                 outcomes["queued"] += 1
                 if entry.times_sent > 0:
@@ -45,6 +49,8 @@ def build_report(state: dict[str, StateEntry], topic_names: dict[str, str], now:
             f"expired {outcomes['expired']}, pending {outcomes['pending']}"
         )
         lines.append("  relevance " + " ".join(f"{score}:{histogram[score]}" for score in range(1, 11)))
+        per_day = " ".join(f"{day}:{scored_per_day[day]}" for day in sorted(scored_per_day))
+        lines.append(f"  scored per day (sent to DeepSeek) {per_day or '-'}")
     return "\n".join(lines)
 
 
