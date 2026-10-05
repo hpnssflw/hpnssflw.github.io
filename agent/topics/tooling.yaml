@@ -14,7 +14,8 @@ exclude:
 # them short: a multi-word keyword needs every word in the title.
 keywords:
   [CLI, terminal, editor, IDE, compiler, debugger, Git, GitHub, Rust, TypeScript, Python,
-   Postgres, SQLite, database, Show HN, open source, library, framework, Neovim, VS Code]
+   Postgres, SQLite, database, Show HN, open source, library, framework, Neovim, VS Code,
+   Claude Code, Codex, Cursor, Copilot, coding agent]
 
 sources:
   hacker_news: { min_points: 30 }

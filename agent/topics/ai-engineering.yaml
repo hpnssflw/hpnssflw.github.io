@@ -10,7 +10,7 @@ include:
   - major model, API or dev-platform releases that change what or how you build
 exclude:
   - AI policy, lawsuits, regulation, company drama, funding and business news
-  - AI tools used while writing code (they belong to Tooling)
+  - "coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)"
   - consumer AI apps with no engineering substance
 # Matched against HN story titles only -- whole words, no typos -- so keep
 # them short: a multi-word keyword needs every word in the title.
