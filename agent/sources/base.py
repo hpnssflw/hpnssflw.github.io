@@ -13,7 +13,7 @@ class Drop:
 
     url: str
     title: str
-    reason: str  # undated | outside_window | below_min_points | seen | dismissed | already_ranked | below_relevance | over_max_items | rejected | expired
+    reason: str  # undated | no_link | outside_window | below_min_points | seen | dismissed | already_ranked | below_relevance | off_topic | over_max_items | rejected | expired
     detail: dict
 
 
