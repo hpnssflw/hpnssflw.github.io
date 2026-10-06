@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "decisions": {
+    "https://example-exchange.ru/q/21": {"decision": "approve", "at": "2026-10-05T04:00:00.000Z"},
+    "https://example-mcx.ru/press/11": {"decision": "approve", "at": "2026-10-05T04:01:00.000Z"},
+    "https://example-agro-media.ru/a/3": {"decision": "approve", "at": "2026-10-05T04:02:00.000Z"},
+    "https://example-agro-media.ru/a/2": {"decision": "reject", "at": "2026-10-05T04:03:00.000Z"}
+  }
+}

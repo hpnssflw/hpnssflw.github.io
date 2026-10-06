@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>Биржевые котировки (пример)</title>
+<link>https://example-exchange.ru/</link>
+<description>Вымышленная лента для тестов.</description>
+<item>
+  <title>Котировки: пшеница 4 класса, 15 400 ₽/т</title>
+  <link>https://example-exchange.ru/q/21</link>
+  <pubDate>Sat, 04 Oct 2026 15:00:00 +0000</pubDate>
+  <description>Неделя к неделе: +450 ₽/т.</description>
+</item>
+<item>
+  <title>Котировки: подсолнечник, 38 200 ₽/т</title>
+  <link>https://example-exchange.ru/q/22</link>
+  <pubDate>Sat, 04 Oct 2026 15:05:00 +0000</pubDate>
+  <description>Неделя к неделе: −300 ₽/т.</description>
+</item>
+<item>
+  <title>Котировки: карбамид, 31 000 ₽/т</title>
+  <link>https://example-exchange.ru/q/23</link>
+  <pubDate>Sat, 27 Sep 2026 15:00:00 +0000</pubDate>
+  <description>Без изменений.</description>
+</item>
+</channel>
+</rss>

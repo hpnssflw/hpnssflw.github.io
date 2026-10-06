@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>Городской портал (пример)</title>
+<link>https://example-city.ru/</link>
+<description>Вымышленная лента для тестов.</description>
+<item>
+  <title>Ремонт моста через Волжанку продлится до декабря</title>
+  <link>https://example-city.ru/n/301</link>
+  <pubDate>Sun, 05 Oct 2026 13:00:00 +0000</pubDate>
+  <description>Подрядчик сорвал сроки.</description>
+</item>
+<item>
+  <title>Без воды остались три квартала</title>
+  <link>https://example-agency.ru/news/101</link>
+  <pubDate>Mon, 06 Oct 2026 03:30:00 +0000</pubDate>
+  <description>Перепост новости информагентства.</description>
+</item>
+<item>
+  <title>Ярмарка выходного дня на площади Мира</title>
+  <link>https://example-city.ru/n/303</link>
+  <pubDate>Sun, 05 Oct 2026 07:00:00 +0000</pubDate>
+  <description>Мёд, овощи и выпечка.</description>
+</item>
+<item>
+  <title>Объявление: плановые работы</title>
+  <link>https://example-city.ru/n/304</link>
+  <description>Дата в ленте не указана.</description>
+</item>
+<item>
+  <title>Фотоотчёт с городского субботника</title>
+  <link>https://example-city.ru/n/305</link>
+  <description>Без даты.</description>
+</item>
+<item>
+  <title>Отключение света в Заречном районе 7 октября</title>
+  <link>https://example-city.ru/n/306</link>
+  <pubDate>Sun, 05 Oct 2026 18:00:00 +0000</pubDate>
+  <description>С 9 до 17 часов, адреса на сайте сетевой компании.</description>
+</item>
+<item>
+  <title>Новый маршрут автобуса № 12</title>
+  <link>https://example-city.ru/n/307</link>
+  <pubDate>Sun, 05 Oct 2026 06:00:00 +0000</pubDate>
+  <description>Маршрут продлят до микрорайона Северный.</description>
+</item>
+</channel>
+</rss>

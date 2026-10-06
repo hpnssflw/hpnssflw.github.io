@@ -1,0 +1,58 @@
+# Newsroom demo: a regional editor's morning digest. Fictional sources
+# (example-* domains), synthetic feeds; runs offline only:
+#   python -m agent --preset agent/tests/fixtures/newsroom-demo/preset.yaml --data-dir <dir> --offline
+# The first run fills the queue; the second applies decisions.json and delivers.
+preset:
+  slug: newsroom-demo
+  name: "Редакция (демо)"
+  language: ru
+
+defaults:
+  max_age_days: 2
+  min_relevance: 6
+  max_items_per_day: 3
+
+sources:
+  rss:
+    - { id: agency, name: "Информагентство (пример)", url: "https://example-agency.ru/rss", full_text: true }
+    - { id: ministry, name: "Правительство области (пример)", url: "https://example-region-gov.ru/news.atom" }
+    - { id: city, name: "Городской портал (пример)", url: "https://example-city.ru/rss" }
+  telegram_public:
+    enabled: false
+    channels:
+      - { handle: example_agency, name: "Информагентство (пример)" }
+      - { handle: example_region_gov, name: "Правительство области (пример)" }
+      - { handle: example_city_chat, name: "Городской канал (пример)" }
+
+topics:
+  - slug: incidents
+    name: Происшествия
+    description: ЧП, ДТП, пожары и аварии в регионе.
+    include: ["ЧП, ДТП, пожары, аварии на коммунальных сетях в регионе"]
+    exclude: ["происшествия за пределами региона без местных пострадавших"]
+  - slug: power
+    name: Власть и решения
+    description: Решения и назначения региональной и городской власти.
+    include: ["решения и назначения региональной и городской власти", "бюджет, тарифы, транспорт"]
+    exclude: ["протокольные поздравления и визиты без решений"]
+  - slug: economy
+    name: Экономика региона
+    description: Предприятия и деньги региона.
+    include: ["предприятия региона: запуск, закрытие, сокращения, инвестиции", "бюджет и программы развития"]
+    exclude: ["федеральные макроновости без региональной привязки"]
+    max_items_per_day: 2
+
+ranking:
+  reader: >
+    Выпускающий редактор регионального издания. Ищет то, что стоит взять
+    в работу сегодня, а не общий новостной фон.
+
+llm: { base_url: "https://api.deepseek.com", model: deepseek-v4-flash, api_key_env: DEEPSEEK_API_KEY }
+
+approval: { type: file, path: decisions.json, expire_days: 3 }
+delivery: { type: file, title: "Сводка редакции", cadence_hours: 4 }
+
+offline:
+  now: "2026-10-06T06:00:00+00:00"
+  http: http.yaml
+  llm: verdicts.json

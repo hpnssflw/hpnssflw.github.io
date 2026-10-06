@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Правительство области (пример)</title>
+<id>urn:example-region-gov</id>
+<updated>2026-10-05T16:00:00Z</updated>
+<entry>
+  <title>Приказ о повышении тарифов ЖКХ с 1 ноября</title>
+  <link href="https://example-region-gov.ru/docs/201"/>
+  <id>urn:example-region-gov:201</id>
+  <updated>2026-10-05T14:00:00Z</updated>
+  <summary type="html">&lt;p&gt;Рост составит 9,8%.&lt;/p&gt;</summary>
+</entry>
+<entry>
+  <title>Назначен новый министр транспорта области</title>
+  <link href="https://example-region-gov.ru/docs/202"/>
+  <id>urn:example-region-gov:202</id>
+  <updated>2026-10-05T11:00:00Z</updated>
+  <summary>Указ подписан губернатором.</summary>
+</entry>
+<entry>
+  <title>Утверждена программа ремонта сетей на 2027 год</title>
+  <link href="https://example-region-gov.ru/docs/203"/>
+  <id>urn:example-region-gov:203</id>
+  <updated>2026-10-04T09:00:00Z</updated>
+  <summary>На ремонт выделят 1,2 млрд рублей.</summary>
+</entry>
+<entry>
+  <title>Бюджет области на 2027 год внесён в думу</title>
+  <link href="https://example-region-gov.ru/docs/204"/>
+  <id>urn:example-region-gov:204</id>
+  <updated>2026-10-05T16:00:00Z</updated>
+  <summary>Дефицит заложен на уровне 3%.</summary>
+</entry>
+<entry>
+  <title>Совещание по подготовке к зиме</title>
+  <link href="https://example-region-gov.ru/docs/205"/>
+  <id>urn:example-region-gov:205</id>
+  <updated>2026-10-05T08:00:00Z</updated>
+  <summary>Обсудили готовность котельных.</summary>
+</entry>
+<entry>
+  <title>Отчёт о работе правительства за сентябрь</title>
+  <link href="https://example-region-gov.ru/docs/206"/>
+  <id>urn:example-region-gov:206</id>
+  <updated>2026-10-03T10:00:00Z</updated>
+  <summary>Итоги месяца.</summary>
+</entry>
+</feed>

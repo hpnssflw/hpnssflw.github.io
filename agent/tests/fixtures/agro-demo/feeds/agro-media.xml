@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>Отраслевое СМИ (пример)</title>
+<link>https://example-agro-media.ru/</link>
+<description>Вымышленная лента для тестов.</description>
+<item>
+  <title>Цены на пшеницу 4 класса выросли на 3% за неделю</title>
+  <link>https://example-agro-media.ru/a/1</link>
+  <pubDate>Fri, 03 Oct 2026 08:00:00 +0000</pubDate>
+  <description>Рост связан с задержкой отгрузок в портах.</description>
+</item>
+<item>
+  <title>Компания «АгроХим-Юг» открыла склад СЗР в Ростове</title>
+  <link>https://example-agro-media.ru/a/2</link>
+  <pubDate>Thu, 02 Oct 2026 10:00:00 +0000</pubDate>
+  <description>Склад рассчитан на 4 тысячи тонн.</description>
+</item>
+<item>
+  <title>Заморозки повредили посевы озимых в двух районах</title>
+  <link>https://example-agro-media.ru/a/3</link>
+  <pubDate>Sat, 04 Oct 2026 06:00:00 +0000</pubDate>
+  <description>Пересев может потребоваться на 12 тысячах гектаров.</description>
+</item>
+<item>
+  <title>Рецепт осеннего салата от шеф-повара</title>
+  <link>https://example-agro-media.ru/a/4</link>
+  <pubDate>Sat, 04 Oct 2026 12:00:00 +0000</pubDate>
+  <description>Тыква, руккола и семечки.</description>
+</item>
+<item>
+  <title>Розничные цены на хлеб в магазинах</title>
+  <link>https://example-agro-media.ru/a/5</link>
+  <pubDate>Wed, 01 Oct 2026 09:00:00 +0000</pubDate>
+  <description>Батон подорожал на 2 рубля.</description>
+</item>
+<item>
+  <title>Конференция агрономов пройдёт в ноябре</title>
+  <link>https://example-agro-media.ru/a/6</link>
+  <pubDate>Sat, 20 Sep 2026 09:00:00 +0000</pubDate>
+  <description>Регистрация открыта.</description>
+</item>
+</channel>
+</rss>
