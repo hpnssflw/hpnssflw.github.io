@@ -55,7 +55,7 @@
   "019b8d88a570a342": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 158,
+    "last_score": 160,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -64,6 +64,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 149,
         "summary": "A Red Hat developer article arguing decision models like Jev don't beat LLM-as-a-judge or traditional classifiers."
+      }
+    },
+    "times_sent": 0
+  },
+  "01f60ae7b332f1de": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 54,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 54,
+        "summary": "A security engineer's Show HN post about MailAccess, an email OSINT framework that gathers emails for a domain."
       }
     },
     "times_sent": 0
@@ -122,7 +138,7 @@
   "0397e222b2cf1c4f": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 101,
+    "last_score": 103,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -166,7 +182,7 @@
   "0571f3810bb4bef0": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 182,
+    "last_score": 184,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -234,7 +250,7 @@
   "07e3fd6f0b87696a": {
     "dismissed": null,
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
-    "last_score": 815,
+    "last_score": 821,
     "ranks": {},
     "times_sent": 0
   },
@@ -306,7 +322,7 @@
   "0bf65300a2ecec70": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 283,
+    "last_score": 298,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -411,7 +427,7 @@
     "last_score": 111,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -545,7 +561,7 @@
   "13d13608380ca28e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 119,
+    "last_score": 120,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -639,7 +655,7 @@
   "16212e61438fe737": {
     "dismissed": null,
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
-    "last_score": 165,
+    "last_score": 166,
     "ranks": {},
     "times_sent": 0
   },
@@ -653,7 +669,7 @@
   "16387ddd1c37344c": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 142,
+    "last_score": 147,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -662,6 +678,22 @@
         "rubric": "02189e2467e9",
         "source_score": 132,
         "summary": "A world clock for the terminal with a day and night map and a 24-hour timeline for cross-time-zone scheduling."
+      }
+    },
+    "times_sent": 0
+  },
+  "16806dc14c8271a8": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 39,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 39,
+        "summary": "A report that two ARM64-specific compiler optimization bugs in GCC 15/16 and Rust affect curl."
       }
     },
     "times_sent": 0
@@ -831,7 +863,7 @@
   "1d9e0fedc80d5604": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 167,
+    "last_score": 173,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -861,7 +893,7 @@
   "1e543f09854abc69": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 52,
+    "last_score": 53,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -877,7 +909,7 @@
   "1ef1b38c39d01608": {
     "dismissed": null,
     "first_seen": "2026-10-03T19:00:43.940612+00:00",
-    "last_score": 420,
+    "last_score": 422,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -935,7 +967,7 @@
   "230850d05f205b60": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 345,
+    "last_score": 349,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-05T18:22:24.720121+00:00",
@@ -1009,7 +1041,7 @@
   "28e8a5a06ef91d24": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 112,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1066,10 +1098,26 @@
     },
     "times_sent": 0
   },
+  "2b5450c77abf0beb": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 45,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 45,
+        "summary": "Show HN for Parseable, described as an open observability datalake that handles 100M time-series per minute."
+      }
+    },
+    "times_sent": 0
+  },
   "2bb517d901795da9": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 242,
+    "last_score": 244,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1143,7 +1191,7 @@
   "2d97bcc9c8a69e13": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 134,
+    "last_score": 135,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1173,7 +1221,7 @@
   "2e872540e50a8ee3": {
     "dismissed": null,
     "first_seen": "2026-09-27T02:15:57.246766+00:00",
-    "last_score": 83,
+    "last_score": 84,
     "ranks": {},
     "times_sent": 1
   },
@@ -1226,7 +1274,7 @@
   "3072b733ed2724e1": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 58,
+    "last_score": 59,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1353,7 +1401,7 @@
   "337e3f19ed608da6": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 241,
+    "last_score": 242,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1470,7 +1518,7 @@
   "37a106d7f924ad98": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 225,
+    "last_score": 226,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1547,7 +1595,7 @@
     "last_score": 769,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -1560,15 +1608,15 @@
   "3a0f9678829920c2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 227,
+    "last_score": 291,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-05T18:22:24.720121+00:00",
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
-        "source_score": 127,
-        "summary": "Agent Smith offers adaptive model routing, a Codex usage monitor and reproducible benchmarks aimed at token cost optimization."
+        "source_score": 291,
+        "summary": "agent-smith is a project offering adaptive model routing, a Codex usage monitor, and reproducible benchmarks, tagged ai-agents, benchmark, codex, cost-optimization, llm-routing and local-first."
       }
     },
     "times_sent": 0
@@ -1740,6 +1788,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "3f4c009060e23462": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 74,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 74,
+        "summary": "A matklad blog post titled 'Benchmark in Milliseconds' about benchmarking; the title and excerpt give no indication that it covers LLM systems, inference, or evals."
+      }
+    },
+    "times_sent": 0
+  },
   "3f4d4cc953d1e0c7": {
     "dismissed": null,
     "first_seen": "2026-08-15T16:10:52.886374+00:00",
@@ -1785,7 +1849,7 @@
   "41c36bbb5ca93793": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 75,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1843,7 +1907,7 @@
   "45ae20b677e1b28f": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 117,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1932,7 +1996,7 @@
   "4716a7c80e086644": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 139,
+    "last_score": 152,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2117,7 +2181,7 @@
   "4dc509e3ddbf0058": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 39,
+    "last_score": 41,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -2358,7 +2422,7 @@
   "562b714120290bd9": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 72,
+    "last_score": 97,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2412,6 +2476,22 @@
     "last_score": 37,
     "ranks": {},
     "times_sent": 1
+  },
+  "576ded508c0bb401": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 105,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 105,
+        "summary": "A GitHub-linked item titled 'AI is now capable of developing its own inference hardware'; the title alone gives no details on what the project actually is or how it works."
+      }
+    },
+    "times_sent": 0
   },
   "57b9a9818428775f": {
     "dismissed": null,
@@ -2507,7 +2587,7 @@
   "5e0d593e160323d9": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 79,
+    "last_score": 84,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2655,7 +2735,7 @@
   "6381db252deeabb6": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 1700,
+    "last_score": 1701,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-05T18:22:24.720121+00:00",
@@ -2681,7 +2761,7 @@
     "last_score": 41,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
@@ -2715,7 +2795,7 @@
     "times_sent": 0
   },
   "644978a1273ab2c3": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-25T22:54:50.790277+00:00",
     "last_score": 30,
     "ranks": {},
@@ -2765,7 +2845,7 @@
         "summary": "GitHub's new dashboard experience is now the default."
       },
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -2829,7 +2909,7 @@
   "6923b5b640af2dc7": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 373,
+    "last_score": 376,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2862,7 +2942,7 @@
     "last_score": 33,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 9,
         "rubric": "02189e2467e9",
@@ -2931,7 +3011,7 @@
   "6c7c8b05d261e4c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 32,
+    "last_score": 33,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -2954,7 +3034,7 @@
   "6cbb376bdb40e04b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 407,
+    "last_score": 410,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3010,10 +3090,26 @@
     "ranks": {},
     "times_sent": 0
   },
+  "6ea58ec9d1cabcdf": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 36,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 36,
+        "summary": "A Show HN titled 'Entombed in a Raycaster'."
+      }
+    },
+    "times_sent": 0
+  },
   "6ea5c750c570a40c": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 93,
+    "last_score": 94,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3110,7 +3206,7 @@
   "70e581165c8b345e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 484,
+    "last_score": 487,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3179,7 +3275,7 @@
   "72abe30b2005201c": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 152,
+    "last_score": 155,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3211,7 +3307,7 @@
   "73fddb6774391e5a": {
     "dismissed": null,
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
-    "last_score": 684,
+    "last_score": 686,
     "ranks": {},
     "times_sent": 0
   },
@@ -3246,7 +3342,7 @@
   "749983b595aaf313": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 144,
+    "last_score": 192,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3308,7 +3404,7 @@
   "762ec36cca677e1a": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 108,
+    "last_score": 116,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3352,7 +3448,7 @@
   "780f6b820b886ddd": {
     "dismissed": null,
     "first_seen": "2026-10-04T04:28:57.570485+00:00",
-    "last_score": 95,
+    "last_score": 96,
     "ranks": {},
     "times_sent": 0
   },
@@ -3464,14 +3560,14 @@
   "7cd1fb3eb9d9482c": {
     "dismissed": null,
     "first_seen": "2026-09-29T06:46:24.490792+00:00",
-    "last_score": 6110,
+    "last_score": 6167,
     "ranks": {},
     "times_sent": 1
   },
   "7cd8f4c772468a6d": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 35,
+    "last_score": 37,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3586,7 +3682,7 @@
   "8058eac658274967": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 56,
+    "last_score": 60,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3624,10 +3720,10 @@
   "836a79b0f997f6d8": {
     "dismissed": null,
     "first_seen": "2026-10-05T16:49:37.554117+00:00",
-    "last_score": 705,
+    "last_score": 744,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -3703,7 +3799,7 @@
   "89be4e220d9f6acb": {
     "dismissed": null,
     "first_seen": "2026-09-28T18:52:41.090824+00:00",
-    "last_score": 917,
+    "last_score": 921,
     "ranks": {},
     "times_sent": 1
   },
@@ -3772,7 +3868,7 @@
         "summary": "A Show HN for Offrun, which manages coding agents like Claude Code, Codex, AGY, and Grok Build from one workspace."
       },
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 9,
         "rubric": "02189e2467e9",
@@ -3887,7 +3983,7 @@
   "917ba46d3f15f0c5": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 468,
+    "last_score": 515,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4102,7 +4198,7 @@
   "9a40ae4fa49afac0": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 163,
+    "last_score": 164,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4419,7 +4515,7 @@
     "times_sent": 0
   },
   "a70a60d47808f7f0": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-29T14:38:27.657579+00:00",
     "last_score": 889,
     "ranks": {},
@@ -4602,7 +4698,7 @@
   "ad90f0c89b677504": {
     "dismissed": null,
     "first_seen": "2026-10-05T16:49:37.554117+00:00",
-    "last_score": 46,
+    "last_score": 47,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4618,7 +4714,7 @@
   "ae501e2203fc2e43": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 47,
+    "last_score": 49,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4701,7 +4797,7 @@
   "b0ff7ff167326d54": {
     "dismissed": null,
     "first_seen": "2026-10-05T04:14:19.891077+00:00",
-    "last_score": 2570,
+    "last_score": 2917,
     "ranks": {},
     "times_sent": 0
   },
@@ -4973,7 +5069,7 @@
   "b8d29561f841d671": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 151,
+    "last_score": 152,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5017,7 +5113,7 @@
   "ba7d73ca40f2b4c2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 575,
+    "last_score": 576,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5216,10 +5312,10 @@
   "c192475c2a029669": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 141,
+    "last_score": 170,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-06T09:35:27.068303+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
@@ -5269,7 +5365,7 @@
   "c2e634ab6cdfaf4b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 55,
+    "last_score": 56,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5350,7 +5446,7 @@
   "c52677dc02f6a886": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 98,
+    "last_score": 99,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5461,7 +5557,7 @@
   "c8c85d1cadaf33e0": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 235,
+    "last_score": 254,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5528,7 +5624,7 @@
   "cc0ef86accf8db5b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 139,
+    "last_score": 150,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5667,7 +5763,7 @@
   "d0bacd5807e55bc8": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 338,
+    "last_score": 340,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5683,14 +5779,14 @@
   "d0c5804a83126e99": {
     "dismissed": null,
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
-    "last_score": 2627,
+    "last_score": 2630,
     "ranks": {},
     "times_sent": 0
   },
   "d0da800340042252": {
     "dismissed": null,
     "first_seen": "2026-10-04T13:42:30.838785+00:00",
-    "last_score": 1595,
+    "last_score": 1737,
     "ranks": {},
     "times_sent": 0
   },
@@ -5733,6 +5829,22 @@
     },
     "times_sent": 0
   },
+  "d1edfb1393e6c151": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 54,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 54,
+        "summary": "A GitHub project that composes a full-stack TypeScript stack into a verified project made for AI coding agents, with type safety, lint and tests built in."
+      }
+    },
+    "times_sent": 0
+  },
   "d1f19ea1f2b780a2": {
     "dismissed": "expired",
     "first_seen": "2026-09-29T00:01:33.933243+00:00",
@@ -5757,7 +5869,7 @@
   "d39c5e2e4a5f7ccc": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 46,
+    "last_score": 47,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5824,7 +5936,7 @@
   "d76ab843cb062985": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 240,
+    "last_score": 242,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5858,13 +5970,37 @@
     "ranks": {},
     "times_sent": 0
   },
+  "d88bfef8fb860939": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 703,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 703,
+        "summary": "A shader-effects-inc/shaders library of WebGPU components for React, Vue, Svelte, Solid, JS and Framer, tagged cli, javascript, mcp, react, shaders and solid."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 703,
+        "summary": "A GitHub project providing WebGPU shader-effect components for React, Vue, Svelte, Solid, JS and Framer."
+      }
+    },
+    "times_sent": 0
+  },
   "d911ff91163f6c4c": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 63,
+    "last_score": 64,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-06T17:58:27.899830+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 9,
         "rubric": "02189e2467e9",
@@ -5877,7 +6013,7 @@
   "d9838d6f1098949b": {
     "dismissed": null,
     "first_seen": "2026-10-01T15:07:18.725260+00:00",
-    "last_score": 1568,
+    "last_score": 1587,
     "ranks": {},
     "times_sent": 0
   },
@@ -5912,7 +6048,7 @@
   "dab27c54d8c92fb4": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 696,
+    "last_score": 699,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5949,15 +6085,15 @@
   "dbf6a51fde3f190f": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 366,
+    "last_score": 447,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-06T01:07:53.906880+00:00",
-        "relevance": 4,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 3,
         "rubric": "3472af8a46e1",
-        "source_score": 195,
-        "summary": "Describes Opus 5.5 agents that discovered two room-temperature magnetic semiconductor candidates, an AI-for-science result rather than guidance on building or evaluating LLM systems."
+        "source_score": 447,
+        "summary": "A Hacker News item reporting that Opus 5.5 agents discovered two room-temperature magnetic semiconductor candidates, i.e., an AI-driven materials-science discovery result."
       }
     },
     "times_sent": 0
@@ -6000,7 +6136,7 @@
   "dd19469c076fee7d": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 87,
+    "last_score": 98,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6210,7 +6346,7 @@
   "e2711c9ce5a221c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 106,
+    "last_score": 107,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6242,7 +6378,7 @@
   "e345e1e0e83d199b": {
     "dismissed": null,
     "first_seen": "2026-09-30T20:33:36.487127+00:00",
-    "last_score": 3754,
+    "last_score": 3809,
     "ranks": {},
     "times_sent": 0
   },
@@ -6435,7 +6571,7 @@
   "ed68526f7a15f49a": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 399,
+    "last_score": 401,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6695,6 +6831,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "f72bb50387111952": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T17:58:27.899830+00:00",
+    "last_score": 89,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T17:58:27.899830+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 89,
+        "summary": "A Rust/Python library called Tapo that now supports TP-Link's TPAP protocol for talking to Tapo devices."
+      }
+    },
+    "times_sent": 0
+  },
   "f74cafbb38d402aa": {
     "dismissed": null,
     "first_seen": "2026-08-30T02:07:59.736472+00:00",
@@ -6705,7 +6857,7 @@
   "f7794ae26edb3a7c": {
     "dismissed": null,
     "first_seen": "2026-10-01T04:20:51.005866+00:00",
-    "last_score": 4152,
+    "last_score": 4424,
     "ranks": {},
     "times_sent": 0
   },
@@ -6747,7 +6899,7 @@
   "f9c4bac94922d6e0": {
     "dismissed": null,
     "first_seen": "2026-10-02T04:14:08.473534+00:00",
-    "last_score": 1440,
+    "last_score": 1492,
     "ranks": {},
     "times_sent": 0
   },

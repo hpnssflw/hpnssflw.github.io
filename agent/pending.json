@@ -1,26 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-09-29T14:38:27.657579+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "A Cloudflare GitHub repository likely offers web development or infrastructure tooling, making it highly relevant to the topic.",
-      "title": "cloudflare/forge",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/cloudflare/forge"
-    },
-    {
-      "pending_since": "2026-09-29T14:38:27.657579+00:00",
-      "score": 6,
-      "source": "hn",
-      "summary": "An Ask HN discussion about an AI-obsessed client and vibe coding touches on modern web development workflows and AI tools, making it moderately relevant.",
-      "title": "Ask HN: I just talked to an AI-obsessed client, and I need a shower afterwards",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://news.ycombinator.com/item?id=49826029"
-    },
-    {
       "pending_since": "2026-09-29T20:27:49.882165+00:00",
       "score": 8,
       "source": "github",
@@ -639,6 +619,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://tangled.org/burrito.space/bez"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "A GitHub directory curates 280+ official MCP servers from the companies behind the products, with no unofficial forks or abandoned projects.",
+      "title": "VoltAgent/official-mcp-servers",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/VoltAgent/official-mcp-servers"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A JetBrains blog post on building a RAG pipeline for semantic code search.",
+      "title": "Building a RAG pipeline for semantic code search",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes/"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "An OpenAI page titled 'Dots: Always-on agents'.",
+      "title": "Dots: Always-on agents",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://openai.com/index/introducing-dots/"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "Backburner lets an iPhone help a Mac run a 27B model with faster prompt reading and more context over a USB-C cable, a local inference setup.",
+      "title": "StayLameBro/backburner",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/StayLameBro/backburner"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A workspace to run Claude Code, Codex, AGY, and Grok Build side by side and see their status and remaining account limits.",
+      "title": "Show HN: Offrun \u2013 manage every coding agent from one workspace",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://offrun.dev/"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Rhun is a small open-source code editor for Linux, Windows, and Apple silicon Macs with Vim mode, a terminal, Git diffs, and a panel for Claude Code or Codex sessions.",
+      "title": "Show HN: Rhun, an open-source code editor written in assembly",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://rhun.app/"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A C++ parser generator that generates lexer, parser, and AST walker from one tool, building the AST first and then walking it.",
+      "title": "Show HN: Yantra \u2013 an LALR(1) parser generator for C++",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/TantrixAuto/yantra"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "Mozilla announces a new design for Firefox.",
+      "title": "The new Firefox design is here",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://blog.mozilla.org/en/firefox/new-firefox-design-is-here/"
+    },
+    {
+      "pending_since": "2026-10-06T17:58:27.899830+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "GitHub's new dashboard experience is now the default.",
+      "title": "GitHub's new dashboard experience now the default",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.blog/changelog/2026-10-01-new-dashboard-experience-now-the-default/"
     }
   ],
   "last_email_at": "2026-09-30T04:08:45.319706+00:00"
