@@ -18,6 +18,8 @@ ADDRESSES = {
 @pytest.fixture(autouse=True)
 def fake_dns(monkeypatch):
     def getaddrinfo(host, port, type=0, **kwargs):
+        if any(not label or len(label) > 63 for label in host.split(".")):
+            raise UnicodeError("label empty or too long")  # as the real resolver's IDNA step does
         if host not in ADDRESSES:
             raise socket.gaierror("unknown host")
         return [(socket.AF_INET, socket.SOCK_STREAM, 6, "", (ADDRESSES[host], port))]
@@ -70,6 +72,8 @@ class FakeSession:
         ("http://loop.example/", "non-public address: 127.0.0.1"),
         ("http://[::1]/", "non-public address: ::1"),
         ("http://nowhere.example/", "Could not resolve"),
+        ("http://a..example/", "Could not resolve"),
+        ("http://" + "x" * 64 + ".example/", "Could not resolve"),
     ],
 )
 def test_unsafe_urls_are_rejected(url, message):

@@ -12,7 +12,6 @@ from __future__ import annotations
 
 from dataclasses import replace
 
-from agent.fetch import FetchError
 from agent.item import Item
 from agent.sources.rss import TEXT_MAX_CHARS
 
@@ -25,7 +24,7 @@ def fetch_text(url: str, fetcher) -> str | None:
         return None
     try:
         fetched = fetcher.get(url)
-    except FetchError:
+    except Exception:  # noqa: BLE001 — FetchError or anything else: the item keeps its feed text
         return None
     try:
         text = trafilatura.extract(fetched.content)

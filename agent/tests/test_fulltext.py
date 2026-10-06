@@ -34,6 +34,14 @@ def test_fetch_text_returns_none_when_the_page_fails_or_has_no_article():
     assert fulltext.fetch_text(URL, FakeFetcher({URL: b"<html><body></body></html>"})) is None
 
 
+def test_fetch_text_keeps_the_feed_text_whatever_the_fetcher_raises():
+    class Exploding:
+        def get(self, url):
+            raise UnicodeError("label empty or too long")
+
+    assert fulltext.fetch_text(URL, Exploding()) is None
+
+
 def test_enrich_touches_only_full_text_feeds_and_counts():
     with_text = replace(make_item(url=URL, kind="rss", topic=None, score=None, text="feed text"), source_id="agency")
     broken = replace(with_text, url="https://example-agency.ru/news/404")

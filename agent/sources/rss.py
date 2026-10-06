@@ -2,8 +2,8 @@
 # at commit 74a70a2. MIT License, Copyright (c) 2026 Thysrael -- see
 # agent/THIRD_PARTY_NOTICES.md. Changes: synchronous, through the engine's
 # fetcher; an entry without a date is dropped as `undated` and one without
-# a link as `no_link` (Horizon skips the first and invents a URL for the
-# second); text prefers the full `content` over the summary and is
+# an http(s) link as `no_link` (Horizon skips the first and invents a URL
+# for the second); text prefers the full `content` over the summary and is
 # stripped of HTML; a feed that can't be fetched or parsed raises instead
 # of being logged and skipped; no ${ENV} URL substitution, tags or author.
 """RSS/Atom connector: one feed from a preset -> Items. Feeds under the
@@ -16,6 +16,7 @@ import calendar
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
+from urllib.parse import urlsplit
 
 import feedparser
 
@@ -49,7 +50,7 @@ def collect_feed(feed: FeedConfig, topic: str | None, fetcher) -> tuple[list[Ite
         title = clean_html(entry.get("title", "")) or "(untitled)"
         url = entry.get("link")
         detail = {"source": "rss", "feed": feed.id}
-        if not url:
+        if not _is_http(url):
             drops.append(Drop(url="", title=title, reason="no_link", detail=detail))
             continue
         published_at = _published_at(entry)
@@ -70,6 +71,18 @@ def collect_feed(feed: FeedConfig, topic: str | None, fetcher) -> tuple[list[Ite
             )
         )
     return items, drops
+
+
+def _is_http(url: str | None) -> bool:
+    """Only http(s) links become items: feed content is third-party, and a
+    javascript: or file: link would reach the outbox and run-result.json
+    as a live link."""
+    if not url:
+        return False
+    try:
+        return urlsplit(url).scheme.lower() in ("http", "https")
+    except ValueError:
+        return False
 
 
 def _published_at(entry) -> datetime | None:

@@ -7,7 +7,7 @@ from agent.pending import PendingItem, PendingQueue
 from agent.preset import load_preset
 from agent.run_result import FEED_SCOPE, STAGES, Tally, build_run_result, preset_config, write_run_result
 from agent.sources.base import Drop
-from agent.tests.conftest import FROZEN_NOW
+from agent.tests.conftest import FROZEN_NOW, TONY
 from agent.tests.test_preset import VALID, write_preset
 from agent.tests.test_summarize import PINNED_RUBRICS
 
@@ -116,3 +116,20 @@ def test_build_and_write_are_deterministic(tmp_path):
     write_run_result(second, build_run_result(**kwargs))
     assert first.read_bytes() == second.read_bytes()
     assert first.read_text(encoding="utf-8").endswith("}\n")
+
+
+def test_a_failed_run_result_write_does_not_fail_tonys_run(tony, capsys, monkeypatch):
+    """The run-result write comes after delivery: if it raised, CI would
+    skip pushing state and deliver the same items again next run."""
+    from agent import engine
+
+    def fail(path, result):
+        raise OSError("disk full")
+
+    monkeypatch.setattr(engine, "write_run_result", fail)
+    tony.run_real()
+    assert "Run result not written: disk full" in capsys.readouterr().out
+    golden = TONY / "golden" / "real"
+    for name in ("state.json", "pending.json", "status.json"):
+        assert tony.read(name) == (golden / name).read_text(encoding="utf-8"), name
+    assert not (tony.data / "run-result.json").exists()

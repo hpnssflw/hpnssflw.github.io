@@ -100,6 +100,19 @@ def test_long_text_is_cut():
     assert len(items[1].text) == rss.TEXT_MAX_CHARS
 
 
+def test_links_that_are_not_http_are_dropped_as_no_link():
+    xml = (
+        '<?xml version="1.0"?><rss version="2.0"><channel><title>x</title>'
+        "<item><title>Скрипт</title><link>javascript:alert(1)</link><pubDate>Mon, 06 Oct 2026 07:00:00 GMT</pubDate></item>"
+        "<item><title>Файл</title><link>file:///etc/passwd</link><pubDate>Mon, 06 Oct 2026 07:00:00 GMT</pubDate></item>"
+        "<item><title>Новость</title><link>https://example-agency.ru/news/9</link><pubDate>Mon, 06 Oct 2026 07:00:00 GMT</pubDate></item>"
+        "</channel></rss>"
+    )
+    items, drops = rss.collect_feed(FEED, None, FakeFetcher({FEED.url: xml.encode("utf-8")}))
+    assert [i.url for i in items] == ["https://example-agency.ru/news/9"]
+    assert [(d.url, d.title, d.reason) for d in drops] == [("", "Скрипт", "no_link"), ("", "Файл", "no_link")]
+
+
 def test_a_page_that_is_not_a_feed_raises():
     with pytest.raises(rss.FeedError, match="agency: not a readable feed"):
         rss.collect_feed(FEED, None, FakeFetcher({FEED.url: b"<html><body>404</body></html>"}))

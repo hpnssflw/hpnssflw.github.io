@@ -147,26 +147,29 @@ def run_real(
     writer.emit("run", "complete", detail={"delivered": delivered, "pending_total": len(queue.items)})
     writer.close()
 
-    write_run_result(
-        paths.result,
-        build_run_result(
-            preset=preset,
-            mode="real",
-            offline=adapters.offline,
-            run_id=run_id,
-            now=now,
-            tally=tally,
-            queue=queue,
-            decisions=decisions,
-            delivery={
-                "target": preset.delivery.type,
-                "due": due,
-                "sent_items": len(approved) if delivered else 0,
-                "messages": len(messages),
-                "last_sent_at": queue.last_email_at,
-            },
-        ),
-    )
+    try:
+        write_run_result(
+            paths.result,
+            build_run_result(
+                preset=preset,
+                mode="real",
+                offline=adapters.offline,
+                run_id=run_id,
+                now=now,
+                tally=tally,
+                queue=queue,
+                decisions=decisions,
+                delivery={
+                    "target": preset.delivery.type,
+                    "due": due,
+                    "sent_items": len(approved) if delivered else 0,
+                    "messages": len(messages),
+                    "last_sent_at": queue.last_email_at,
+                },
+            ),
+        )
+    except Exception as exc:  # noqa: BLE001 — items may be sent already: a failed run record must not fail the run (CI would skip pushing state and deliver them again)
+        print(f"Run result not written: {exc}")
     if preset.legacy:
         _write_status(preset, paths, writer, queue, now)
     print(f"Run recorded: {writer.path}")

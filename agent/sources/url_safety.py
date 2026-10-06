@@ -1,7 +1,8 @@
 # Adapted from Horizon (https://github.com/Thysrael/Horizon), src/url_security.py
 # at commit 74a70a2. MIT License, Copyright (c) 2026 Thysrael -- see
 # agent/THIRD_PARTY_NOTICES.md. Changes: synchronous (requests instead of
-# httpx), GET only, responses streamed so the caller can cap their size.
+# httpx), GET only, responses streamed so the caller can cap their size; a
+# hostname IDNA can't encode is refused like one that doesn't resolve.
 """SSRF guard for URLs that come from feed content: http(s) only, no
 credentials, no localhost, and every address the host resolves to must be
 globally routable -- checked again on every redirect hop. The address is
@@ -53,7 +54,7 @@ def _resolve_hostname(hostname: str, port: int) -> set[str]:
     except ValueError:
         try:
             results = socket.getaddrinfo(hostname, port, type=socket.SOCK_STREAM)
-        except socket.gaierror as exc:
+        except (socket.gaierror, UnicodeError) as exc:  # UnicodeError: a label IDNA can't encode (empty, over 63 chars)
             raise UnsafeURLError(f"Could not resolve hostname: {hostname}") from exc
         return {str(result[4][0]) for result in results}
     return {str(literal)}
