@@ -9,7 +9,7 @@ import { TELEGRAM_CHANNEL } from "@/lib/telegram-post";
 const FEATURES = ["themes", "inbox", "publishing", "live runs"];
 
 /**
- * The home page's teaser for Tony Scraponi, the agent's coming control
+ * The home page's teaser for Tony Scraponi, the agent's control
  * room, under the columns: two dense lines on the home cards' surface.
  * Left: the name and what it is, then the features. Right:
  * a proof line from the agent's live status.json (hidden until it loads)

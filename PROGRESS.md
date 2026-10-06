@@ -651,6 +651,18 @@ infrastructure.
   `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-tony-control-room.md`.
   Branch `worktree-admin-panel` (worktree `.claude/worktrees/admin-panel`).
+  The `status.json` `drops`/`failures` assertions (including that
+  failures never carry error text) currently live only in the git-ignored
+  `.superpowers/sdd/2026-10-06-control-room/task6-check.py`; port them to
+  `agent/tests/test_status_export.py` when the content engine (A) merges
+  and brings `agent/tests` + pytest.
+  Final whole-branch review (opus): 0 Critical; 1 Important (I1,
+  reduced-motion comets) and minors M3, M5, M6 fixed in one fix wave.
+  Deferred: M1 (`isAgentStatus` doesn't validate dates — a malformed date
+  would crash the route), M2 (`isAgentStatus` is shared, so a bad
+  `drops`/`failures` would blank the home teaser and agent widget too —
+  consider a softer guard before sub-project D), M4 (the queue could
+  refuse non-http(s) item URLs), plus the remaining task-review minors.
   Later: editing config from the page (a repo the agent only reads, like
   the inbox); `/researcher/agent/`'s countdown still uses
   `updated_at + cadence` — switch it to `lib/cron.ts`'s `nextRun`.
@@ -713,7 +725,10 @@ ordered sub-projects #1-#4 are now complete. The LAB backlog posts
 follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped. Sub-project #6 (topic & source quality) is shipped; its 3-day watch
-and the #7 decision are next (see its bullet above). Sub-project #8 (control room) is built on branch worktree-admin-panel and waits for Artem's go to merge and push; after the push, trigger agent-run.yml once so status.json carries drops and failures. Later candidates: a Web
+and the #7 decision are next (see its bullet above). Sub-project #8 (control
+room) is built on branch worktree-admin-panel and waits for Artem's go to
+merge and push; after the push, trigger agent-run.yml once so status.json
+carries drops and failures. Later candidates: a Web
 Products source (#7), a Telegram DM when items await review, summary
 editing.
 
