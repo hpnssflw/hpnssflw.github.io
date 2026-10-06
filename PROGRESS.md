@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6 and #8 (control room) shipped.**
+**Status: sub-projects #1-#6, #8 (control room) and content engine A shipped.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -675,14 +675,25 @@ infrastructure.
   Later: editing config from the page (a repo the agent only reads, like
   the inbox); `/researcher/agent/`'s countdown still uses
   `updated_at + cadence` — switch it to `lib/cron.ts`'s `nextRun`.
-- **Content engine, sub-project A (engine core + presets): code complete, live-checked against ec82c98 — waiting for Artem's go-ahead to merge.**
+- **Content engine, sub-project A (engine core + presets): shipped.**
   Spec: `docs/superpowers/specs/2026-10-06-content-engine-core-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-content-engine-core.md`.
-  Worktree `.claude/worktrees/engine`, branch `worktree-engine`; merged
-  into `main` only after the plan's Task 13 live check and Artem's
-  go-ahead (every push to `main` changes the code the next scheduled
-  agent run executes). Tests: `agent/venv/Scripts/python -m pytest agent/tests -q`;
-  Tony's goldens in `agent/tests/fixtures/tony/golden/` were recorded on `ec82c98`.
+  **Live since 2026-10-06:** built in worktree `.claude/worktrees/engine`
+  (branch `worktree-engine`); `origin/main` had moved to the control room
+  (#8), so it was merged in (`bed2bb7`, `PROGRESS.md` the only conflict)
+  and pushed as a fast-forward (`b8f6b08..bed2bb7`). The merge re-recorded
+  `golden/real/status.json` once for #8's `drops`/`failures` keys —
+  nothing else in it changed. A manual `agent-run.yml` dispatch
+  (37447998002, 10:10Z) succeeded: `status.json` fresh, streak 240,
+  `failures: []`, `drops` for all three topics; `state.json` changed only
+  `last_score` on 26 entries; `python -m agent report` showed the same
+  scored-per-day counts before and after the run — 0 items re-sent to
+  DeepSeek, the rubric hashes held. `run-result.json` stays in the runner
+  (`agent-run.yml` publishes only state/pending/status) — D decides
+  whether `agent-data` carries it.
+  Tests: `agent/venv/Scripts/python -m pytest agent/tests -q`;
+  Tony's goldens in `agent/tests/fixtures/tony/golden/` were recorded on
+  `ec82c98` (`real/status.json` re-recorded at the merge).
   What changed: presets (`agent/presets/tony.yaml` is Tony's, still
   reading `defaults.yaml`/`topics/`), `agent/engine.py` with approval
   (`inbox`/`file`) and delivery (`telegram`/`file`) adapters, two source
@@ -704,7 +715,9 @@ infrastructure.
   Next: B (stories), C (Telegram approval buttons, several delivery
   targets), D (preset switcher in the control room); #7 (Web Products RSS)
   becomes a topic `rss` entry, after D (Tony's topics load through
-  `config.py`, which doesn't read `rss` yet).
+  `config.py`, which doesn't read `rss` yet). Now that `agent/tests`
+  is on `main`: port #8's `status.json` `drops`/`failures` checks into
+  `agent/tests/test_status_export.py` (see #8's bullet).
 
 ### How to resume in a new session
 
@@ -768,7 +781,10 @@ and the #7 decision are next (see its bullet above). Sub-project #8 (control
 room) is shipped and live (2026-10-06); its deferred review items (M1, M2,
 M4) and "Later" list are in its bullet above. Later candidates: a Web
 Products source (#7), a Telegram DM when items await review, summary
-editing. Content engine sub-project A: see its bullet above — after the merge, run python -m agent report against agent-data's state.json to confirm no mass re-scoring.
+editing. Content engine sub-project A is shipped and live (2026-10-06,
+`bed2bb7`); next in that line are B, C, D — each needs its own
+brainstorm → spec → plan (see its bullet above and
+`docs/tony-scraponi-roadmap.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
