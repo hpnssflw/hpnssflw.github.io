@@ -7,6 +7,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import socket
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
@@ -282,3 +283,16 @@ class TonyHarness:
 @pytest.fixture
 def tony(tmp_path, monkeypatch) -> TonyHarness:
     return TonyHarness(tmp_path / "data", monkeypatch)
+
+
+@pytest.fixture
+def no_network(monkeypatch):
+    """Any HTTP request or DNS lookup fails the test."""
+
+    def refuse(*args, **kwargs):
+        raise AssertionError("network access in an offline run")
+
+    monkeypatch.setattr(requests, "get", refuse)
+    monkeypatch.setattr(requests, "post", refuse)
+    monkeypatch.setattr(requests.Session, "get", refuse)
+    monkeypatch.setattr(socket, "getaddrinfo", refuse)

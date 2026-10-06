@@ -14,9 +14,10 @@ from agent import dedupe, date_guard, digest, events, inbox, pending, pipeline, 
 from agent.approval import approval_for
 from agent.context import Adapters, RunContext
 from agent.deliver import delivery_for
+from agent.fetch import LiveFetcher, OfflineFetcher
 from agent.paths import DataPaths
 from agent.preset import Preset
-from agent.ranker import LiveRanker
+from agent.ranker import FixtureRanker, LiveRanker
 from agent.run_result import FEED_SCOPE, Tally, build_run_result, write_run_result
 from agent.sources.base import TopicConfig
 
@@ -30,6 +31,19 @@ def live_adapters(preset: Preset, paths: DataPaths) -> Adapters:
         ranker=LiveRanker(preset.llm, preset.reader, preset.language),
         approval=approval_for(preset),
         delivery=delivery_for(preset, paths),
+        fetcher=LiveFetcher(),
+    )
+
+
+def offline_adapters(preset: Preset, paths: DataPaths) -> Adapters:
+    """Fixtures instead of the network (preset.require_offline has
+    checked that approval and delivery are files)."""
+    return Adapters(
+        ranker=FixtureRanker(preset.offline.llm),
+        approval=approval_for(preset),
+        delivery=delivery_for(preset, paths),
+        fetcher=OfflineFetcher(preset.offline.http),
+        offline=True,
     )
 
 
@@ -87,6 +101,13 @@ def run_real(
             writer.emit("rank", "failed", topic=topic.slug, detail={"error": str(exc)})
             tally.fail("rank", topic.slug, None, exc)
             print(f"Topic {topic.slug} failed: {exc}")
+    if preset.feeds and topic_filter is None:
+        try:
+            pipeline.process_feeds(ctx)
+        except Exception as exc:  # noqa: BLE001 — failing feeds must not skip delivery either
+            writer.emit("rank", "failed", topic=None, detail={"error": str(exc)})
+            tally.fail("rank", FEED_SCOPE, None, exc)
+            print(f"Preset feeds failed: {exc}")
 
     delivered = False
     due = pending.is_email_due(approved, queue.last_email_at, now, preset.delivery.cadence_hours)
@@ -151,6 +172,8 @@ def run_real(
     print(f"Run recorded: {writer.path}")
     if preset.legacy:
         print(f"Status written: {paths.status}")
+    else:
+        print(f"Run result: {paths.result}")
 
 
 def _tally_review(tally: Tally, before: Counter, queue: pending.PendingQueue, inbox_drops: list, approved: list) -> None:
@@ -197,6 +220,11 @@ def run_preview(
             print(f"\n== {topic.name} ({topic.slug}) -- failed: {exc}")
             continue
         print(pipeline.format_preview(topic, result))
+    if preset.feeds and topic_filter is None:
+        try:
+            print(pipeline.format_feed_preview(list(preset.topics), pipeline.process_feeds(ctx)))
+        except Exception as exc:  # noqa: BLE001 — the topics' preview above still stands
+            print(f"\n== preset feeds -- failed: {exc}")
     print("\nPreview only: nothing was written.")
 
 
@@ -209,45 +237,14 @@ def run_dry(
     writer = events.EventWriter(run_id, paths.runs)
     topics = select_topics(preset, topic_filter)
     ctx = _context(preset, paths, now, adapters, writer)
-    state, tally = ctx.state, ctx.tally
+    state = ctx.state
 
     for topic in topics:
-        counts: Counter[str] = Counter()
-        all_candidates = []
-        for source_name, connector in pipeline.CONNECTORS.items():
-            if source_name not in topic.sources:
-                continue
-            try:
-                candidates, drops = connector(topic, now)
-            except Exception as exc:  # noqa: BLE001 — one source failing must not abort the topic or the run
-                writer.emit("collect", "failed", topic=topic.slug, source=source_name, detail={"error": str(exc)})
-                tally.fail("collect", topic.slug, source_name, exc)
-                print(f"{source_name} collection failed for {topic.slug}: {exc}")
-                continue
-            counts["collected"] += len(candidates) + len(drops)
-            tally.count("collect", topic.slug, len(candidates) + len(drops), len(candidates), drops)
-            for candidate in candidates:
-                writer.emit_candidate("collect", source_name, topic.slug, candidate)
-                dedupe.record_seen(state, candidate, now)
-            for drop in drops:
-                writer.emit_drop("collect", topic.slug, drop)
-            all_candidates.extend(candidates)
-        counts["dated"] = len(all_candidates)
-
-        kept, drops = date_guard.apply_recency_window(all_candidates, topic.max_age_days, now)
-        for drop in drops:
-            writer.emit_drop("date_guard", topic.slug, drop)
-        tally.count("window", topic.slug, len(all_candidates), len(kept), drops)
-        counts["in_window"] = len(kept)
-
-        in_window = len(kept)
-        kept, drops = dedupe.filter_seen(kept, state)
-        for drop in drops:
-            writer.emit_drop("dedupe", topic.slug, drop)
-        tally.count("dedupe", topic.slug, in_window, len(kept), drops)
-        counts["new"] = len(kept)
-
-        _print_funnel(topic.name, counts)
+        collected, found = pipeline.collect_topic(topic, ctx)
+        _dry_funnel(ctx, topic.name, topic.slug, topic.slug, collected, found, topic.max_age_days)
+    if preset.feeds and topic_filter is None:
+        collected, found = pipeline.collect_feeds(ctx)
+        _dry_funnel(ctx, "Preset feeds", FEED_SCOPE, None, collected, found, preset.max_age_days)
 
     dedupe.save_state(paths.state, state)
     writer.close()
@@ -259,7 +256,7 @@ def run_dry(
             offline=adapters.offline,
             run_id=run_id,
             now=now,
-            tally=tally,
+            tally=ctx.tally,
             queue=ctx.queue,
             decisions=None,
             delivery={
@@ -272,11 +269,23 @@ def run_dry(
         ),
     )
     print(f"\nRun recorded: {writer.path}")
+    if not preset.legacy:
+        print(f"Run result: {paths.result}")
 
 
-def _print_funnel(name: str, counts: Counter[str]) -> None:
+def _dry_funnel(
+    ctx: RunContext, name: str, scope: str, event_topic: str | None, collected: list, found: int, max_age_days: int
+) -> None:
+    """--dry-run's window and seen/dismissed filter for one scope, and its
+    printed funnel line."""
+    kept, drops = date_guard.apply_recency_window(collected, max_age_days, ctx.now)
+    for drop in drops:
+        ctx.writer.emit_drop("date_guard", event_topic, drop)
+    ctx.tally.count("window", scope, len(collected), len(kept), drops)
+    in_window = len(kept)
+    kept, drops = dedupe.filter_seen(kept, ctx.state)
+    for drop in drops:
+        ctx.writer.emit_drop("dedupe", event_topic, drop)
+    ctx.tally.count("dedupe", scope, in_window, len(kept), drops)
     print(f"\n{name}")
-    print(
-        f"  collected {counts['collected']} -> dated {counts['dated']} "
-        f"-> in-window {counts['in_window']} -> new {counts['new']}"
-    )
+    print(f"  collected {found} -> dated {len(collected)} -> in-window {in_window} -> new {len(kept)}")

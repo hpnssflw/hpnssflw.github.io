@@ -1,5 +1,5 @@
 """Entry point:
-python -m agent [--preset PATH] [--data-dir DIR] [--dry-run | --preview] [--topic SLUG]
+python -m agent [--preset PATH] [--data-dir DIR] [--offline] [--dry-run | --preview] [--topic SLUG]
 python -m agent report [--preset PATH] [--data-dir DIR] [--days N]
 python -m agent panel [--data-dir DIR]"""
 
@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from agent import config, engine, paths
-from agent.preset import PresetError, load_preset
+from agent.preset import PresetError, load_preset, require_offline
 
 AGENT_DIR = Path(__file__).parent
 DEFAULT_PRESET = AGENT_DIR / "presets" / "tony.yaml"
@@ -37,18 +37,25 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--topic", default=None)
     parser.add_argument("--preset", type=Path, default=DEFAULT_PRESET)
     parser.add_argument("--data-dir", type=Path, default=None)
+    parser.add_argument("--offline", action="store_true", help="fixtures instead of the network (the preset's `offline`)")
     args = parser.parse_args(argv)
 
     config.load_env(AGENT_DIR / ".env")
     try:
         preset = load_preset(args.preset)
+        if args.offline:
+            require_offline(preset)
         data = paths.for_preset(preset, args.data_dir)
     except PresetError as exc:
         print(f"Preset error: {exc}", file=sys.stderr)
         sys.exit(2)
 
-    now = datetime.now(timezone.utc)
-    adapters = engine.live_adapters(preset, data)
+    if args.offline:
+        now = preset.offline.now
+        adapters = engine.offline_adapters(preset, data)
+    else:
+        now = datetime.now(timezone.utc)
+        adapters = engine.live_adapters(preset, data)
     if args.dry_run:
         engine.run_dry(preset, data, now, adapters, args.topic)
     elif args.preview:

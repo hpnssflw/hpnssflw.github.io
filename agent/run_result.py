@@ -62,10 +62,10 @@ class Tally:
         notes = self._entry(stage, scope).setdefault("notes", {})
         notes[key] = notes.get(key, 0) + n
 
-    def assign(self, topic: str) -> None:
-        """A preset-feed item classified into `topic` and above its threshold."""
+    def assign(self, topic: str, n: int = 1) -> None:
+        """Preset-feed items classified into `topic`, at or above its threshold."""
         assigned = self._entry("rank", FEED_SCOPE).setdefault("assigned", {})
-        assigned[topic] = assigned.get(topic, 0) + 1
+        assigned[topic] = assigned.get(topic, 0) + n
 
     def fail(self, stage: str, scope: str, source: str | None, exc: BaseException) -> None:
         self.failures.append({"stage": stage, "scope": scope, "source": source, "error_type": type(exc).__name__})
