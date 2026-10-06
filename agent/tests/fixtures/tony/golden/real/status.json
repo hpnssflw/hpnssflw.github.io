@@ -1,0 +1,214 @@
+{
+  "cadence_hours": 4,
+  "delivery_cadence_hours": 24,
+  "drops": {
+    "ai-engineering": {
+      "dedupe": {
+        "already_ranked": 1,
+        "seen": 1
+      },
+      "rank": {
+        "below_relevance": 2,
+        "over_max_items": 3
+      }
+    },
+    "tooling": {
+      "collect": {
+        "undated": 1
+      },
+      "date_guard": {
+        "outside_window": 1
+      },
+      "dedupe": {
+        "seen": 2
+      },
+      "inbox": {
+        "expired": 1,
+        "rejected": 1
+      },
+      "rank": {
+        "below_relevance": 1,
+        "over_max_items": 2
+      }
+    },
+    "web-products": {
+      "dedupe": {
+        "dismissed": 2
+      },
+      "rank": {
+        "below_relevance": 1
+      }
+    }
+  },
+  "failures": [],
+  "funnel": {
+    "ai-engineering": {
+      "collected": 11,
+      "in_window": 11,
+      "kept": 4,
+      "new": 9
+    },
+    "tooling": {
+      "collected": 7,
+      "in_window": 6,
+      "kept": 1,
+      "new": 4
+    },
+    "web-products": {
+      "collected": 6,
+      "in_window": 6,
+      "kept": 3,
+      "new": 4
+    }
+  },
+  "last_sent_at": "2026-10-06T12:00:00+00:00",
+  "pending_count": 9,
+  "recent_events": [
+    {
+      "score": 6,
+      "source": "github",
+      "title": "acme/chartkit",
+      "topic": "web-products",
+      "ts": "2026-10-06T12:00:00.000051+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 7,
+      "source": "hn",
+      "title": "Building a stock dashboard with D3",
+      "topic": "web-products",
+      "ts": "2026-10-06T12:00:00.000050+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 8,
+      "source": "hn",
+      "title": "Firefox ships a new CSS layout engine",
+      "topic": "web-products",
+      "ts": "2026-10-06T12:00:00.000049+00:00",
+      "verdict": "kept"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "How we priced our SaaS",
+      "topic": "web-products",
+      "ts": "2026-10-06T12:00:00.000048+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "dismissed",
+      "title": "React compiler 2.0",
+      "topic": "web-products",
+      "ts": "2026-10-06T12:00:00.000047+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "dismissed",
+      "title": "Chrome removes third-party cookies for good",
+      "topic": "web-products",
+      "ts": "2026-10-06T12:00:00.000046+00:00",
+      "verdict": "drop"
+    },
+    {
+      "score": 9,
+      "source": "hn",
+      "title": "Show HN: A terminal file manager in Rust",
+      "topic": "tooling",
+      "ts": "2026-10-06T12:00:00.000039+00:00",
+      "verdict": "kept"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "acme/fastgrep",
+      "topic": "tooling",
+      "ts": "2026-10-06T12:00:00.000038+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Neovim 0.12 released",
+      "topic": "tooling",
+      "ts": "2026-10-06T12:00:00.000037+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Ask HN: Best TypeScript ORM in 2026?",
+      "topic": "tooling",
+      "ts": "2026-10-06T12:00:00.000036+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "MCP server for Postgres",
+      "topic": "tooling",
+      "ts": "2026-10-06T12:00:00.000035+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "SQLite as an application file format, revisited",
+      "topic": "tooling",
+      "ts": "2026-10-06T12:00:00.000034+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "outside_window",
+      "title": "Git 2.0 released",
+      "topic": "tooling",
+      "ts": "2026-10-06T12:00:00.000033+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "undated",
+      "title": "acme/undated-tool",
+      "topic": "tooling",
+      "ts": "2026-10-06T12:00:00.000032+00:00",
+      "verdict": "drop"
+    },
+    {
+      "score": 7,
+      "source": "hn",
+      "title": "MCP server for Postgres",
+      "topic": "ai-engineering",
+      "ts": "2026-10-06T12:00:00.000024+00:00",
+      "verdict": "kept"
+    }
+  ],
+  "run_history": [
+    {
+      "kept": 2,
+      "ts": "2026-10-06T04:00:00+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-06T08:00:00+00:00"
+    },
+    {
+      "kept": 8,
+      "ts": "2026-10-06T12:00:00+00:00"
+    }
+  ],
+  "streak": 6,
+  "topics": [
+    {
+      "collected": 11,
+      "kept": 4,
+      "name": "AI Engineering",
+      "slug": "ai-engineering"
+    },
+    {
+      "collected": 7,
+      "kept": 1,
+      "name": "Tooling",
+      "slug": "tooling"
+    },
+    {
+      "collected": 6,
+      "kept": 3,
+      "name": "Web Products",
+      "slug": "web-products"
+    }
+  ],
+  "updated_at": "2026-10-06T12:00:00+00:00"
+}

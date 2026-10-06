@@ -15,7 +15,8 @@ from dataclasses import asdict, dataclass
 from datetime import datetime
 from pathlib import Path
 
-from agent.sources.base import Candidate, Drop
+from agent.item import Item
+from agent.sources.base import Drop
 from agent.summarize import RankedItem
 
 
@@ -56,29 +57,29 @@ def save_pending(path: Path, queue: PendingQueue) -> None:
 
 
 def add_kept(queue: PendingQueue, topic_name: str, ranked: list[RankedItem], now: datetime) -> None:
-    for item in ranked:
+    for entry in ranked:
         queue.items.append(
             PendingItem(
-                url=item.candidate.url,
-                title=item.candidate.title,
-                source=item.candidate.source,
-                topic=item.candidate.topic,
+                url=entry.item.url,
+                title=entry.item.title,
+                source=entry.item.kind,
+                topic=entry.item.topic,
                 topic_name=topic_name,
-                summary=item.summary,
-                score=item.score,
+                summary=entry.summary,
+                score=entry.score,
                 pending_since=now.isoformat(),
             )
         )
 
 
-def filter_already_pending(candidates: list[Candidate], queue: PendingQueue) -> tuple[list[Candidate], list[Drop]]:
+def filter_already_pending(candidates: list[Item], queue: PendingQueue) -> tuple[list[Item], list[Drop]]:
     """Drop candidates already sitting in the queue, awaiting the delivery
     cadence. Without this, an item that survived ranking once but hasn't
     been delivered yet (times_sent still 0, so dedupe.filter_seen lets it
     through) gets re-collected and re-sent to DeepSeek for ranking on
     every subsequent 4h cycle until the delivery gate finally fires."""
     pending_since_by_url = {item.url: item.pending_since for item in queue.items}
-    kept: list[Candidate] = []
+    kept: list[Item] = []
     drops: list[Drop] = []
     for candidate in candidates:
         since = pending_since_by_url.get(candidate.url)

@@ -1,0 +1,373 @@
+{
+  "131b92c7e3761b52": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 70,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-10-06T12:00:00+00:00",
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 70,
+        "summary": "About: MCP server for Postgres."
+      }
+    },
+    "times_sent": 0
+  },
+  "1336c80f126ce243": {
+    "dismissed": null,
+    "first_seen": "2026-10-04T16:00:00+00:00",
+    "last_score": 95,
+    "ranks": {},
+    "times_sent": 1
+  },
+  "192a59b681eaa973": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 80,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-06T12:00:00+00:00",
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 80,
+        "summary": "About: Show HN: A terminal file manager in Rust."
+      }
+    },
+    "times_sent": 0
+  },
+  "1b81b07ece4825df": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 150,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-06T12:00:00+00:00",
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": 150,
+        "summary": "About: acme/chartkit."
+      }
+    },
+    "times_sent": 0
+  },
+  "3113794661d787d2": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 200,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-06T12:00:00+00:00",
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": 200,
+        "summary": "About: Firefox ships a new CSS layout engine."
+      }
+    },
+    "times_sent": 0
+  },
+  "4b4e1a19ab0210fa": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 500,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "55d61990c7e0687e": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 120,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-10-06T12:00:00+00:00",
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 120,
+        "summary": "About: Ollama adds speculative decoding."
+      }
+    },
+    "times_sent": 0
+  },
+  "66829a19867995c4": {
+    "dismissed": null,
+    "first_seen": "2026-10-03T08:00:00+00:00",
+    "last_score": 200,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-10-03T08:00:00+00:00",
+        "ranked_at": "2026-10-03T08:00:00+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 180,
+        "summary": "DeepSeek describes V4."
+      }
+    },
+    "times_sent": 1
+  },
+  "6e4e54740f784340": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 500,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 500,
+        "summary": "About: acme/tiny-llm."
+      }
+    },
+    "times_sent": 0
+  },
+  "80d1459fbb327dba": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 140,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 140,
+        "summary": "About: Neovim 0.12 released."
+      }
+    },
+    "times_sent": 0
+  },
+  "abee777e5b22e00c": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 40,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 40,
+        "summary": "About: Ask HN: How do you test agent tool calls?."
+      }
+    },
+    "times_sent": 0
+  },
+  "ac8a993d8a3a34b5": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 300,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 300,
+        "summary": "About: LLM pricing drama at a big lab."
+      }
+    },
+    "times_sent": 0
+  },
+  "af87d98aba41bd5c": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 60,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 60,
+        "summary": "About: Ask HN: Best TypeScript ORM in 2026?."
+      }
+    },
+    "times_sent": 0
+  },
+  "c2c16faa08d8f424": {
+    "dismissed": "expired",
+    "first_seen": "2026-09-28T08:00:00+00:00",
+    "last_score": 250,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "c312e537a874f3c6": {
+    "dismissed": null,
+    "first_seen": "2026-10-04T10:00:00+00:00",
+    "last_score": 60,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-04T10:00:00+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 55,
+        "summary": "A poem generator."
+      }
+    },
+    "times_sent": 0
+  },
+  "c32711f5a76be6d2": {
+    "dismissed": "rejected",
+    "first_seen": "2026-10-05T08:00:00+00:00",
+    "last_score": 180,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "c6060846b76c894b": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 35,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "c6b6369be7e6de4b": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 45,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 45,
+        "summary": "About: A tiny RAG eval harness."
+      }
+    },
+    "times_sent": 0
+  },
+  "c8f1edc1ce1fcb4f": {
+    "dismissed": null,
+    "first_seen": "2026-10-05T00:00:00+00:00",
+    "last_score": 150,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-10-06T12:00:00+00:00",
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 150,
+        "summary": "About: Qwen 4 open weights."
+      }
+    },
+    "times_sent": 0
+  },
+  "d576ffbe96baf475": {
+    "dismissed": "rejected",
+    "first_seen": "2026-10-06T07:00:00+00:00",
+    "last_score": 50,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-06T07:00:00+00:00",
+        "ranked_at": "2026-10-06T07:00:00+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 50,
+        "summary": "Tool A."
+      }
+    },
+    "times_sent": 0
+  },
+  "d8c058eb5bf998db": {
+    "dismissed": "expired",
+    "first_seen": "2026-09-27T20:00:00+00:00",
+    "last_score": 70,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-05T06:00:00+00:00",
+        "ranked_at": "2026-09-27T20:00:00+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 70,
+        "summary": "Tool C."
+      }
+    },
+    "times_sent": 0
+  },
+  "e08e7ff548152eb4": {
+    "dismissed": null,
+    "first_seen": "2026-10-05T16:00:00+00:00",
+    "last_score": 60,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-05T16:00:00+00:00",
+        "ranked_at": "2026-10-05T16:00:00+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 60,
+        "summary": "Tool B."
+      }
+    },
+    "times_sent": 0
+  },
+  "ed9e132ac87306d2": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 900,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 900,
+        "summary": "About: acme/fastgrep."
+      }
+    },
+    "times_sent": 0
+  },
+  "ede850743c54f181": {
+    "dismissed": null,
+    "first_seen": "2026-10-04T08:00:00+00:00",
+    "last_score": 90,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-10-06T12:00:00+00:00",
+        "ranked_at": "2026-10-04T08:00:00+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 80,
+        "summary": "vLLM reaches 1.0."
+      }
+    },
+    "times_sent": 0
+  },
+  "f2f8be98af563bc1": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 75,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-06T12:00:00+00:00",
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": 75,
+        "summary": "About: Building a stock dashboard with D3."
+      }
+    },
+    "times_sent": 0
+  },
+  "fffe67f34cc0fb20": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T12:00:00+00:00",
+    "last_score": 33,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T12:00:00+00:00",
+        "relevance": 5,
+        "rubric": "080b24af813c",
+        "source_score": 33,
+        "summary": "About: How we priced our SaaS."
+      }
+    },
+    "times_sent": 0
+  }
+}

@@ -8,9 +8,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from agent.sources.base import Candidate, Drop
-
-RUNS_DIR = Path(__file__).parent / "runs"
+from agent.item import Item
+from agent.sources.base import Drop
 
 
 def new_run_id(now: datetime) -> str:
@@ -18,9 +17,9 @@ def new_run_id(now: datetime) -> str:
 
 
 class EventWriter:
-    """Appends one JSON object per line to agent/runs/<run_id>.jsonl."""
+    """Appends one JSON object per line to <data-dir>/runs/<run_id>.jsonl."""
 
-    def __init__(self, run_id: str, runs_dir: Path = RUNS_DIR) -> None:
+    def __init__(self, run_id: str, runs_dir: Path) -> None:
         runs_dir.mkdir(parents=True, exist_ok=True)
         self.path = runs_dir / f"{run_id}.jsonl"
         self._file = self.path.open("a", encoding="utf-8")
@@ -35,7 +34,7 @@ class EventWriter:
         self._file.write(json.dumps(record, sort_keys=True) + "\n")
         self._file.flush()
 
-    def emit_candidate(self, stage: str, source: str, topic: str, candidate: Candidate) -> None:
+    def emit_candidate(self, stage: str, source: str, topic: str | None, candidate: Item) -> None:
         self.emit(
             stage,
             "candidate",
@@ -45,7 +44,7 @@ class EventWriter:
             title=candidate.title,
         )
 
-    def emit_drop(self, stage: str, topic: str, drop: Drop) -> None:
+    def emit_drop(self, stage: str, topic: str | None, drop: Drop) -> None:
         self.emit(
             stage,
             "drop",

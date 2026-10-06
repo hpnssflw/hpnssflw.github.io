@@ -1,0 +1,284 @@
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 300 points · news.example] LLM pricing drama at a big lab
+2. [hn · 40 points · news.ycombinator.com] Ask HN: How do you test agent tool calls? — We run <b>agents</b> against mocked tools &amp; record every call.
+3. [hn · 70 points · mcp.example] MCP server for Postgres
+4. [hn · 45 points · rag.example] A tiny RAG eval harness
+5. [hn · 35 points · bad.example] Gemini [[bad]] wrapper
+6. [hn · 150 points · qwen.example] Qwen 4 open weights
+7. [hn · 120 points · ollama.example] Ollama adds speculative decoding
+8. [github · 500 stars] acme/tiny-llm — A tiny LLM runtime for edge devices · topics: llm, inference, edge
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 300 points · news.example] LLM pricing drama at a big lab
+2. [hn · 40 points · news.ycombinator.com] Ask HN: How do you test agent tool calls? — We run <b>agents</b> against mocked tools &amp; record every call.
+3. [hn · 70 points · mcp.example] MCP server for Postgres
+4. [hn · 45 points · rag.example] A tiny RAG eval harness
+5. [hn · 35 points · bad.example] Gemini [[bad]] wrapper
+6. [hn · 150 points · qwen.example] Qwen 4 open weights
+7. [hn · 120 points · ollama.example] Ollama adds speculative decoding
+8. [github · 500 stars] acme/tiny-llm — A tiny LLM runtime for edge devices · topics: llm, inference, edge
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 300 points · news.example] LLM pricing drama at a big lab
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 40 points · news.ycombinator.com] Ask HN: How do you test agent tool calls? — We run <b>agents</b> against mocked tools &amp; record every call.
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 70 points · mcp.example] MCP server for Postgres
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 45 points · rag.example] A tiny RAG eval harness
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 35 points · bad.example] Gemini [[bad]] wrapper
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 150 points · qwen.example] Qwen 4 open weights
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [hn · 120 points · ollama.example] Ollama adds speculative decoding
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: AI Engineering
+Description: Agent and automated pipelines and harnesses, LLM assistants, self-hosted/private AI platform development, and LLM/inference optimization.
+Include:
+- building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals
+- inference and serving: self-hosted/local models, quantization, speed and cost
+- major model, API or dev-platform releases that change what or how you build
+Exclude:
+- AI policy, lawsuits, regulation, company drama, funding and business news
+- coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)
+- consumer AI apps with no engineering substance
+
+Candidates:
+1. [github · 500 stars] acme/tiny-llm — A tiny LLM runtime for edge devices · topics: llm, inference, edge
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: Tooling
+Description: Tools developers use to build software: editors, CLIs, libraries, and AI coding tools.
+Include:
+- tools used while building software: editors and IDEs, CLIs, terminals, debuggers, build tools, package managers, version control, databases
+- AI tools used while writing code: coding agents, editor plugins, Claude Code skills and hooks
+- new or notably improved open-source libraries and frameworks for building software
+Exclude:
+- components for building LLM systems: agent frameworks, inference servers, evals (they belong to AI Engineering)
+- games, consumer apps, and utilities with no role in software development
+- nostalgia or legacy-systems threads, career and workplace discussion
+
+Candidates:
+1. [hn · 80 points · github.example] Show HN: A terminal file manager in Rust
+2. [hn · 60 points · news.ycombinator.com] Ask HN: Best TypeScript ORM in 2026? — Comparing Drizzle, Prisma and Kysely for a new project.
+3. [hn · 140 points · neovim.example] Neovim 0.12 released
+4. [github · 900 stars] acme/fastgrep — topics: cli, rust, search
+=====
+model=deepseek-v4-flash temperature=0 response_format={"type": "json_object"}
+--- system
+You rank candidate links for one reader's research digest against one topic. For each candidate, judge how well it fits the topic's include and exclude criteria on a 1-10 scale, and write a one-sentence summary.
+Scale: 9-10 = squarely inside include, and substantial; 6-8 = inside include; 3-5 = tangential, or the given text doesn't make clear what it is; 1-2 = matches exclude, or off-topic.
+The summary states only what the title and excerpt say. Never guess what something likely does or offers.
+Respond with JSON only: an object of the shape {"rankings": [{"id": 1, "summary": "...", "score": 7}, ...]}, one entry per candidate, in the order given, ids starting at 1.
+--- user
+Reader: Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.
+Topic: Web Products
+Description: Product and web trends, securities & market data, data visualization, browser performance, web architecture, and SEO.
+Include:
+- the web platform and browsers: new APIs, standards, rendering and browser performance
+- frontend engineering and web architecture: frameworks, CSS, performance, SEO
+- data visualization, and products built on market or financial data
+- product and web trends: notable launches and how web products make money
+Exclude:
+- general tech-company news, earnings and stock moves with no product angle
+- AI model releases (AI Engineering) and developer tools (Tooling)
+- games and demos that merely run in a browser
+
+Candidates:
+1. [hn · 200 points · firefox.example] Firefox ships a new CSS layout engine
+2. [hn · 75 points · d3.example] Building a stock dashboard with D3
+3. [hn · 33 points · saas.example] How we priced our SaaS
+4. [github · 150 stars] acme/chartkit — Declarative charts for the web · topics: data-visualization, svg

@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6 and #8 (control room) shipped.**
+**Status: sub-projects #1-#6, #8 (control room) and content engine A shipped.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -636,7 +636,7 @@ infrastructure.
   Spec: `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
   Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
   Pushed 2026-10-05 (24882c2); first live run 2026-10-05T18:22Z (workflow_dispatch 37355404165): 159 verdicts cached, queued per topic 4/3/3 (ai-engineering/tooling/web-products), no duplicate URLs in pending.json. Watch for 3 days (spec's success criteria 2–3): items sent to DeepSeek (the scored-per-day line of `python -m agent report`) should drop to single digits per run after the first day, at most 10 queued a day; then run python -m agent report against agent-data's state.json and decide on #7 (Web Products source).
-  Tuned with Artem against two live previews: Tooling's keywords gained Claude Code / Codex / Cursor / Copilot / coding agent, and AI Engineering's exclude names coding agents and their add-ons. Final review (opus): 0 Critical, 3 Important — the same URL could be queued twice in one run (fixed: one copy per URL), `new` keeps counting cached over-cap items (watch criterion restated around `report`'s scored-per-day line), and the `lib/topics.ts` merge with main's `subtopics[]` (resolved) — plus a fix wave for a 23h cap window (cron jitter), per-keyword HN and per-topic ranking failure isolation, and doc drift. Parked: failed rankings pass the threshold as score 1 (latent, only if `min_relevance` 1); the local panel's `new` drill-down lists only `seen` drops; `state.json` grows with a `RankRecord` per topic (prune later); same story from several sources still takes several cap slots (story clustering); equal-score ties mix HN points and GitHub stars (break by recency instead). The main checkout's `agent/.env` has no `DEEPSEEK_API_KEY` line (lost around 2026-09-18); local previews read the worktree's `agent/.env`.
+  Tuned with Artem against two live previews: Tooling's keywords gained Claude Code / Codex / Cursor / Copilot / coding agent, and AI Engineering's exclude names coding agents and their add-ons. Final review (opus): 0 Critical, 3 Important — the same URL could be queued twice in one run (fixed: one copy per URL), `new` keeps counting cached over-cap items (watch criterion restated around `report`'s scored-per-day line), and the `lib/topics.ts` merge with main's `subtopics[]` (resolved) — plus a fix wave for a 23h cap window (cron jitter), per-keyword HN and per-topic ranking failure isolation, and doc drift. Parked: failed rankings pass the threshold as score 1 (latent, only if `min_relevance` 1); the local panel's `new` drill-down lists only `seen` drops; `state.json` grows with a `RankRecord` per topic (prune later); same story from several sources still takes several cap slots (story clustering); equal-score ties mix HN points and GitHub stars (break by recency instead). The main checkout's `agent/.env` has the `DEEPSEEK_API_KEY` line again (lost around 2026-09-18, re-added 2026-10-05); local previews read the worktree's `agent/.env`, which starts empty — copy that one line into it.
 - **Sub-project #8, Tony Scraponi control room: shipped.**
   `/researcher/queue/` is now a one-screen control room: pulse (live,
   last/next run from the workflow cron, streak, digest, owner sign-in),
@@ -679,6 +679,49 @@ infrastructure.
   Later: editing config from the page (a repo the agent only reads, like
   the inbox); `/researcher/agent/`'s countdown still uses
   `updated_at + cadence` — switch it to `lib/cron.ts`'s `nextRun`.
+- **Content engine, sub-project A (engine core + presets): shipped.**
+  Spec: `docs/superpowers/specs/2026-10-06-content-engine-core-design.md`.
+  Plan: `docs/superpowers/plans/2026-10-06-content-engine-core.md`.
+  **Live since 2026-10-06:** built in worktree `.claude/worktrees/engine`
+  (branch `worktree-engine`); `origin/main` had moved to the control room
+  (#8), so it was merged in (`bed2bb7`, `PROGRESS.md` the only conflict)
+  and pushed as a fast-forward (`b8f6b08..bed2bb7`). The merge re-recorded
+  `golden/real/status.json` once for #8's `drops`/`failures` keys —
+  nothing else in it changed. A manual `agent-run.yml` dispatch
+  (37447998002, 10:10Z) succeeded: `status.json` fresh, streak 240,
+  `failures: []`, `drops` for all three topics; `state.json` changed only
+  `last_score` on 26 entries; `python -m agent report` showed the same
+  scored-per-day counts before and after the run — 0 items re-sent to
+  DeepSeek, the rubric hashes held. `run-result.json` stays in the runner
+  (`agent-run.yml` publishes only state/pending/status) — D decides
+  whether `agent-data` carries it.
+  Tests: `agent/venv/Scripts/python -m pytest agent/tests -q`;
+  Tony's goldens in `agent/tests/fixtures/tony/golden/` were recorded on
+  `ec82c98` (`real/status.json` re-recorded at the merge).
+  What changed: presets (`agent/presets/tony.yaml` is Tony's, still
+  reading `defaults.yaml`/`topics/`), `agent/engine.py` with approval
+  (`inbox`/`file`) and delivery (`telegram`/`file`) adapters, two source
+  scopes (topic feeds ranked per topic; preset feeds classified across
+  topics), RSS + full text ported from Horizon (MIT, `agent/THIRD_PARTY_NOTICES.md`),
+  `--data-dir`, `--offline`, `run-result.json` per run, 128 pytest
+  tests. Demo presets: `agent/tests/fixtures/{newsroom,agro}-demo/`.
+  Live check 2026-10-06 (`ec82c98` vs this branch, both on copies of
+  `agent-data`'s state/pending): preview identical except rows DeepSeek
+  scored fresh in both runs; dry run identical (stdout, events, state
+  bar live HN points/stars). Final review (opus): 0 Critical, 1
+  Important — a feed link whose hostname IDNA can't encode aborted the
+  preset-feed scope every run — fixed with two minors (feed links must
+  be http(s); a failed `run-result.json` write no longer fails a run
+  after delivery). Deferred: a URL seen by both a topic feed and a
+  preset feed overwrites the other scope's verdict (`ranks[slug]`;
+  re-scoring cost only, Tony has no feeds); demo reruns with a fixed
+  `offline.now` share one run id.
+  Next: B (stories), C (Telegram approval buttons, several delivery
+  targets), D (preset switcher in the control room); #7 (Web Products RSS)
+  becomes a topic `rss` entry, after D (Tony's topics load through
+  `config.py`, which doesn't read `rss` yet). Now that `agent/tests`
+  is on `main`: port #8's `status.json` `drops`/`failures` checks into
+  `agent/tests/test_status_export.py` (see #8's bullet).
 
 ### How to resume in a new session
 
@@ -742,7 +785,10 @@ and the #7 decision are next (see its bullet above). Sub-project #8 (control
 room) is shipped and live (2026-10-06); its deferred review items (M1, M2,
 M4) and "Later" list are in its bullet above. Later candidates: a Web
 Products source (#7), a Telegram DM when items await review, summary
-editing.
+editing. Content engine sub-project A is shipped and live (2026-10-06,
+`bed2bb7`); next in that line are B, C, D — each needs its own
+brainstorm → spec → plan (see its bullet above and
+`docs/tony-scraponi-roadmap.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages

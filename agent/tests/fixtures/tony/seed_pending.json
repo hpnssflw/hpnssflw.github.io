@@ -1,0 +1,9 @@
+{
+  "last_email_at": "2026-10-05T06:00:00+00:00",
+  "items": [
+    {"url": "https://deepseek.example/v4-paper", "title": "DeepSeek V4 paper", "source": "hn", "topic": "ai-engineering", "topic_name": "AI Engineering", "summary": "DeepSeek describes V4.", "score": 8, "pending_since": "2026-10-03T08:00:00+00:00"},
+    {"url": "https://tool.example/a", "title": "Tool A", "source": "github", "topic": "tooling", "topic_name": "Tooling", "summary": "Tool A.", "score": 7, "pending_since": "2026-10-06T07:00:00+00:00"},
+    {"url": "https://tool.example/c", "title": "Tool C", "source": "hn", "topic": "tooling", "topic_name": "Tooling", "summary": "Tool C.", "score": 6, "pending_since": "2026-09-27T20:00:00+00:00"},
+    {"url": "https://tool.example/b", "title": "Tool B", "source": "hn", "topic": "tooling", "topic_name": "Tooling", "summary": "Tool B.", "score": 6, "pending_since": "2026-10-05T16:00:00+00:00"}
+  ]
+}

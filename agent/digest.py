@@ -13,12 +13,20 @@ from agent.pending import PendingItem
 
 MESSAGE_LIMIT = 4096
 
+# "<title> — <count>" in the preset's language.
+COUNT_PHRASES = {
+    "en": lambda total: f"{total} item{'' if total == 1 else 's'}",
+    "ru": lambda total: f"материалов: {total}",
+}
 
-def build(items_by_topic: dict[str, list[PendingItem]]) -> list[str]:
+
+def build(
+    items_by_topic: dict[str, list[PendingItem]], title: str = "Research digest", language: str = "en"
+) -> list[str]:
     """Return one or more parse_mode=HTML message bodies, each under
     Telegram's per-message character limit."""
     total = sum(len(items) for items in items_by_topic.values())
-    header = f"<b>Research digest — {total} item{'' if total == 1 else 's'}</b>"
+    header = f"<b>{escape(title)} — {COUNT_PHRASES[language](total)}</b>"
 
     # Render all topics, splitting large topics if needed
     topic_blocks = []

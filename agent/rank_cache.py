@@ -6,10 +6,12 @@ state -- no I/O."""
 
 from __future__ import annotations
 
+from dataclasses import replace
 from datetime import datetime, timedelta
 
 from agent.dedupe import RankRecord, StateEntry, url_hash
-from agent.sources.base import Candidate, Drop, TopicConfig
+from agent.item import Item
+from agent.sources.base import Drop, TopicConfig
 from agent.summarize import RankedItem
 
 # Scheduled Actions start minutes late by varying amounts, so a 24h window frees a
@@ -17,7 +19,7 @@ from agent.summarize import RankedItem
 QUEUE_WINDOW = timedelta(hours=23)
 
 
-def is_valid(record: RankRecord, candidate: Candidate, rubric: str, topic: TopicConfig) -> bool:
+def is_valid(record: RankRecord, candidate: Item, rubric: str, topic: TopicConfig) -> bool:
     """A verdict holds unless the rubric changed or the item grew: its
     score at least doubled and rose by attention_min_score_gain. Both
     conditions, so 35 -> 85 HN points counts and 300 -> 350 stars doesn't."""
@@ -33,14 +35,14 @@ def is_valid(record: RankRecord, candidate: Candidate, rubric: str, topic: Topic
 
 
 def partition(
-    candidates: list[Candidate], state: dict[str, StateEntry], topic: TopicConfig, rubric: str
-) -> tuple[list[Candidate], list[RankedItem], list[Drop]]:
+    candidates: list[Item], state: dict[str, StateEntry], topic: TopicConfig, rubric: str
+) -> tuple[list[Item], list[RankedItem], list[Drop]]:
     """Split candidates into (to_rank, cached, drops): no valid verdict ->
     to_rank; a valid verdict below min_relevance -> an already_ranked
     drop; a valid verdict at or above it (it lost to the daily cap
     before) -> cached, reused as-is. min_relevance is read live, so
     changing it needs no re-scoring."""
-    to_rank: list[Candidate] = []
+    to_rank: list[Item] = []
     cached: list[RankedItem] = []
     drops: list[Drop] = []
     for candidate in candidates:
@@ -58,7 +60,7 @@ def partition(
                 )
             )
         else:
-            cached.append(RankedItem(candidate=candidate, summary=verdict.summary, score=verdict.relevance))
+            cached.append(RankedItem(item=candidate, summary=verdict.summary, score=verdict.relevance))
     return to_rank, cached, drops
 
 
@@ -68,14 +70,14 @@ def record(
     """Cache fresh verdicts. Every ranked item was collected this run, so
     record_seen has already created its state entry. Failed rankings
     aren't cached -- they're retried next run."""
-    for item in ranked:
-        if item.failed:
+    for entry in ranked:
+        if entry.failed:
             continue
-        state[url_hash(item.candidate.url)].ranks[slug] = RankRecord(
-            relevance=item.score,
-            summary=item.summary,
+        state[url_hash(entry.item.url)].ranks[slug] = RankRecord(
+            relevance=entry.score,
+            summary=entry.summary,
             rubric=rubric,
-            source_score=item.candidate.score,
+            source_score=entry.item.score,
             ranked_at=now.isoformat(),
         )
 
@@ -94,10 +96,65 @@ def queued_in_last_24h(state: dict[str, StateEntry], slug: str, now: datetime) -
 
 def select(eligible: list[RankedItem], remaining: int) -> tuple[list[RankedItem], list[RankedItem]]:
     """Best first -- relevance, then points/stars -- split at the cap."""
-    ordered = sorted(eligible, key=lambda item: (item.score, item.candidate.score or 0), reverse=True)
+    ordered = sorted(eligible, key=lambda entry: (entry.score, entry.item.score or 0), reverse=True)
     return ordered[:remaining], ordered[remaining:]
 
 
 def mark_queued(state: dict[str, StateEntry], items: list[RankedItem], slug: str, now: datetime) -> None:
-    for item in items:
-        state[url_hash(item.candidate.url)].ranks[slug].queued_at = now.isoformat()
+    for entry in items:
+        state[url_hash(entry.item.url)].ranks[slug].queued_at = now.isoformat()
+
+
+# --- classified verdicts (a preset feed's items) -------------------------
+# Stored under ranks[<assigned topic slug>] with the classify rubric, so
+# RankRecord and state.json keep their shape and the daily cap
+# (queued_in_last_24h) counts them with the topic's other items. An
+# off-topic verdict goes under OFF_TOPIC, which no topic slug can be.
+OFF_TOPIC = "*"
+
+
+def partition_classified(
+    candidates: list[Item], state: dict[str, StateEntry], rubric: str, topics: dict[str, TopicConfig]
+) -> tuple[list[Item], list[RankedItem], list[Drop]]:
+    """(to_classify, cached, drops): no verdict with this classify rubric
+    -> to_classify; an off-topic verdict, or one below its topic's
+    min_relevance -> an already_ranked drop; otherwise cached, reused with
+    its topic set on the item."""
+    to_classify: list[Item] = []
+    cached: list[RankedItem] = []
+    drops: list[Drop] = []
+    for candidate in candidates:
+        entry = state.get(url_hash(candidate.url))
+        found = None
+        if entry is not None:
+            found = next(((slug, r) for slug, r in entry.ranks.items() if r.rubric == rubric), None)
+        if found is None:
+            to_classify.append(candidate)
+            continue
+        slug, record = found
+        if slug not in topics or record.relevance < topics[slug].min_relevance:
+            drops.append(
+                Drop(
+                    url=candidate.url,
+                    title=candidate.title,
+                    reason="already_ranked",
+                    detail={"relevance": record.relevance, "topic": None if slug == OFF_TOPIC else slug},
+                )
+            )
+        else:
+            cached.append(RankedItem(item=replace(candidate, topic=slug), summary=record.summary, score=record.relevance))
+    return to_classify, cached, drops
+
+
+def record_classified(state: dict[str, StateEntry], ranked: list[RankedItem], rubric: str, now: datetime) -> None:
+    """Cache fresh classifications. Failed ones aren't cached."""
+    for entry in ranked:
+        if entry.failed:
+            continue
+        state[url_hash(entry.item.url)].ranks[entry.item.topic or OFF_TOPIC] = RankRecord(
+            relevance=entry.score,
+            summary=entry.summary,
+            rubric=rubric,
+            source_score=entry.item.score,
+            ranked_at=now.isoformat(),
+        )

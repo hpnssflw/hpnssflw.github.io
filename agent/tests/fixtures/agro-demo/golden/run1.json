@@ -1,0 +1,588 @@
+{
+  "config": {
+    "approval": {
+      "expire_days": 7,
+      "path": "decisions.json",
+      "type": "file"
+    },
+    "cap_window_hours": 23,
+    "delivery": {
+      "cadence_hours": 168,
+      "title": "Агросводка",
+      "type": "file"
+    },
+    "max_age_days": 7,
+    "offline": {
+      "http": "http.yaml",
+      "llm": "verdicts.json",
+      "now": "2026-10-05T05:00:00+00:00"
+    },
+    "preset": {
+      "language": "ru",
+      "legacy": false,
+      "name": "Агродистрибутор (демо)",
+      "slug": "agro-demo"
+    },
+    "ranking": {
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "base_url": "https://api.deepseek.com",
+      "batch_size": 40,
+      "classify_prompt_version": 1,
+      "classify_rubric_hash": "503cc8cd71d7",
+      "model": "deepseek-v4-flash",
+      "rank_prompt_version": 2,
+      "reader": "Руководитель отдела продаж агродистрибутора (СЗР, семена, удобрения). Важно то, что меняет спрос, цены и условия поставок на ближайшие недели.",
+      "temperature": 0
+    },
+    "sources": {
+      "rss": [
+        {
+          "full_text": false,
+          "id": "agro-media",
+          "name": "Отраслевое СМИ (пример)",
+          "url": "https://example-agro-media.ru/rss"
+        },
+        {
+          "full_text": false,
+          "id": "ministry",
+          "name": "Минсельхоз (пример)",
+          "url": "https://example-mcx.ru/press/rss"
+        }
+      ],
+      "telegram_public": {
+        "channels": [
+          {
+            "handle": "example_agro_news",
+            "name": "Агроновости (пример)"
+          },
+          {
+            "handle": "example_grain_market",
+            "name": "Зерновой рынок (пример)"
+          }
+        ],
+        "enabled": false,
+        "status": "coming_soon"
+      }
+    },
+    "topics": [
+      {
+        "attention": {
+          "enabled": false,
+          "min_score_gain": 0
+        },
+        "description": "Цены на зерно, масличные, удобрения, СЗР и семена.",
+        "exclude": [
+          "розничные цены на продукты в магазинах"
+        ],
+        "include": [
+          "цены на зерно, масличные, удобрения, СЗР и семена",
+          "экспортные котировки, логистика"
+        ],
+        "keywords": [],
+        "max_age_days": 7,
+        "max_items_per_day": 3,
+        "min_relevance": 6,
+        "name": "Цены и рынок",
+        "rss": [
+          {
+            "full_text": false,
+            "id": "exchange",
+            "name": "Биржевые котировки (пример)",
+            "url": "https://example-exchange.ru/rss"
+          }
+        ],
+        "rubric_hash": "0d6bf742e3c2",
+        "slug": "prices",
+        "sources": {}
+      },
+      {
+        "attention": {
+          "enabled": false,
+          "min_score_gain": 0
+        },
+        "description": "Пошлины, квоты, субсидии, требования к СЗР и семенам.",
+        "exclude": [],
+        "include": [
+          "пошлины, квоты, субсидии, требования к ввозу и регистрации СЗР и семян"
+        ],
+        "keywords": [],
+        "max_age_days": 7,
+        "max_items_per_day": 2,
+        "min_relevance": 6,
+        "name": "Регулирование",
+        "rss": [],
+        "rubric_hash": "5ecd8193e6db",
+        "slug": "regulation",
+        "sources": {}
+      },
+      {
+        "attention": {
+          "enabled": false,
+          "min_score_gain": 0
+        },
+        "description": "Компании рынка СЗР, семян и удобрений.",
+        "exclude": [],
+        "include": [
+          "новости о дистрибьюторах и производителях СЗР, семян и удобрений"
+        ],
+        "keywords": [],
+        "max_age_days": 7,
+        "max_items_per_day": 2,
+        "min_relevance": 6,
+        "name": "Конкуренты и поставщики",
+        "rss": [],
+        "rubric_hash": "520dc924cd32",
+        "slug": "market-players",
+        "sources": {}
+      },
+      {
+        "attention": {
+          "enabled": false,
+          "min_score_gain": 0
+        },
+        "description": "Посевная, уборка, заморозки, засуха.",
+        "exclude": [],
+        "include": [
+          "посевная, уборка, заморозки, засуха в регионах присутствия"
+        ],
+        "keywords": [],
+        "max_age_days": 7,
+        "max_items_per_day": 2,
+        "min_relevance": 6,
+        "name": "Погода и сезон",
+        "rss": [],
+        "rubric_hash": "8664c9a83d1e",
+        "slug": "season",
+        "sources": {}
+      }
+    ]
+  },
+  "delivery": {
+    "due": false,
+    "last_sent_at": null,
+    "messages": 0,
+    "sent_items": 0,
+    "target": "file"
+  },
+  "failures": [],
+  "preset": {
+    "language": "ru",
+    "name": "Агродистрибутор (демо)",
+    "slug": "agro-demo"
+  },
+  "queue": {
+    "by_topic": {
+      "market-players": 1,
+      "prices": 3,
+      "regulation": 2,
+      "season": 1
+    },
+    "count": 7,
+    "items": [
+      {
+        "decision": "approve",
+        "pending_since": "2026-10-05T05:00:00+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "Пшеница 4 класса — 15 400 ₽/т, +450 за неделю.",
+        "title": "Котировки: пшеница 4 класса, 15 400 ₽/т",
+        "topic": "prices",
+        "topic_name": "Цены и рынок",
+        "url": "https://example-exchange.ru/q/21"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-05T05:00:00+00:00",
+        "score": 6,
+        "source": "rss",
+        "summary": "Подсолнечник — 38 200 ₽/т, −300 за неделю.",
+        "title": "Котировки: подсолнечник, 38 200 ₽/т",
+        "topic": "prices",
+        "topic_name": "Цены и рынок",
+        "url": "https://example-exchange.ru/q/22"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-05T05:00:00+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Пшеница 4 класса подорожала на 3% за неделю из-за задержек в портах.",
+        "title": "Цены на пшеницу 4 класса выросли на 3% за неделю",
+        "topic": "prices",
+        "topic_name": "Цены и рынок",
+        "url": "https://example-agro-media.ru/a/1"
+      },
+      {
+        "decision": "approve",
+        "pending_since": "2026-10-05T05:00:00+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "Квота на экспорт пшеницы до февраля — 10,6 млн тонн.",
+        "title": "Утверждены квоты на экспорт зерна до февраля",
+        "topic": "regulation",
+        "topic_name": "Регулирование",
+        "url": "https://example-mcx.ru/press/11"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-05T05:00:00+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Заявки на субсидии за элитные семена принимают до 15 ноября.",
+        "title": "Субсидии на семена: приём заявок до 15 ноября",
+        "topic": "regulation",
+        "topic_name": "Регулирование",
+        "url": "https://example-mcx.ru/press/12"
+      },
+      {
+        "decision": "reject",
+        "pending_since": "2026-10-05T05:00:00+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "«АгроХим-Юг» открыл в Ростове склад СЗР на 4 тысячи тонн.",
+        "title": "Компания «АгроХим-Юг» открыла склад СЗР в Ростове",
+        "topic": "market-players",
+        "topic_name": "Конкуренты и поставщики",
+        "url": "https://example-agro-media.ru/a/2"
+      },
+      {
+        "decision": "approve",
+        "pending_since": "2026-10-05T05:00:00+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Заморозки повредили озимые, пересев может понадобиться на 12 тысячах гектаров.",
+        "title": "Заморозки повредили посевы озимых в двух районах",
+        "topic": "season",
+        "topic_name": "Погода и сезон",
+        "url": "https://example-agro-media.ru/a/3"
+      }
+    ]
+  },
+  "run": {
+    "at": "2026-10-05T05:00:00+00:00",
+    "id": "2026-10-05T0500Z",
+    "mode": "real",
+    "offline": true
+  },
+  "schema_version": 1,
+  "stages": [
+    {
+      "group": "sources",
+      "scopes": {
+        "*": {
+          "drops": {
+            "undated": 1
+          },
+          "in": 10,
+          "out": 9
+        },
+        "market-players": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "prices": {
+          "drops": {},
+          "in": 3,
+          "out": 3
+        },
+        "regulation": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "season": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "collect"
+    },
+    {
+      "group": "filter",
+      "scopes": {
+        "*": {
+          "drops": {
+            "outside_window": 1
+          },
+          "in": 9,
+          "out": 8
+        },
+        "market-players": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "prices": {
+          "drops": {
+            "outside_window": 1
+          },
+          "in": 3,
+          "out": 2
+        },
+        "regulation": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "season": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "window"
+    },
+    {
+      "group": "filter",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 8,
+          "out": 8
+        },
+        "market-players": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "prices": {
+          "drops": {},
+          "in": 2,
+          "out": 2
+        },
+        "regulation": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "season": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "dedupe"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 8,
+          "out": 8
+        },
+        "market-players": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "prices": {
+          "drops": {},
+          "in": 2,
+          "out": 2
+        },
+        "regulation": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "season": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "cache"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 8,
+          "out": 8
+        },
+        "market-players": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "prices": {
+          "drops": {},
+          "in": 2,
+          "out": 2
+        },
+        "regulation": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "season": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "enrich"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "*": {
+          "assigned": {
+            "market-players": 1,
+            "prices": 1,
+            "regulation": 3,
+            "season": 1
+          },
+          "drops": {
+            "below_relevance": 1,
+            "off_topic": 1
+          },
+          "in": 8,
+          "out": 6
+        },
+        "market-players": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "prices": {
+          "drops": {},
+          "in": 2,
+          "out": 2
+        },
+        "regulation": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "season": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "rank"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "market-players": {
+          "drops": {},
+          "in": 1,
+          "out": 1
+        },
+        "prices": {
+          "drops": {},
+          "in": 3,
+          "out": 3
+        },
+        "regulation": {
+          "drops": {
+            "over_max_items": 1
+          },
+          "in": 3,
+          "out": 2
+        },
+        "season": {
+          "drops": {},
+          "in": 1,
+          "out": 1
+        }
+      },
+      "stage": "cap"
+    },
+    {
+      "group": "approval",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "market-players": {
+          "drops": {},
+          "in": 1,
+          "out": 1
+        },
+        "prices": {
+          "drops": {},
+          "in": 3,
+          "out": 3
+        },
+        "regulation": {
+          "drops": {},
+          "in": 2,
+          "out": 2
+        },
+        "season": {
+          "drops": {},
+          "in": 1,
+          "out": 1
+        }
+      },
+      "stage": "queue"
+    },
+    {
+      "group": "approval",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "market-players": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "prices": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "regulation": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "season": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "review"
+    },
+    {
+      "group": "formatting",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "format"
+    },
+    {
+      "group": "delivery",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "deliver"
+    }
+  ]
+}

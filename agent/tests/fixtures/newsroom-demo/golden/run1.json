@@ -1,0 +1,548 @@
+{
+  "config": {
+    "approval": {
+      "expire_days": 3,
+      "path": "decisions.json",
+      "type": "file"
+    },
+    "cap_window_hours": 23,
+    "delivery": {
+      "cadence_hours": 4,
+      "title": "Сводка редакции",
+      "type": "file"
+    },
+    "max_age_days": 2,
+    "offline": {
+      "http": "http.yaml",
+      "llm": "verdicts.json",
+      "now": "2026-10-06T06:00:00+00:00"
+    },
+    "preset": {
+      "language": "ru",
+      "legacy": false,
+      "name": "Редакция (демо)",
+      "slug": "newsroom-demo"
+    },
+    "ranking": {
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "base_url": "https://api.deepseek.com",
+      "batch_size": 40,
+      "classify_prompt_version": 1,
+      "classify_rubric_hash": "f62414fad1bf",
+      "model": "deepseek-v4-flash",
+      "rank_prompt_version": 2,
+      "reader": "Выпускающий редактор регионального издания. Ищет то, что стоит взять в работу сегодня, а не общий новостной фон.",
+      "temperature": 0
+    },
+    "sources": {
+      "rss": [
+        {
+          "full_text": true,
+          "id": "agency",
+          "name": "Информагентство (пример)",
+          "url": "https://example-agency.ru/rss"
+        },
+        {
+          "full_text": false,
+          "id": "ministry",
+          "name": "Правительство области (пример)",
+          "url": "https://example-region-gov.ru/news.atom"
+        },
+        {
+          "full_text": false,
+          "id": "city",
+          "name": "Городской портал (пример)",
+          "url": "https://example-city.ru/rss"
+        }
+      ],
+      "telegram_public": {
+        "channels": [
+          {
+            "handle": "example_agency",
+            "name": "Информагентство (пример)"
+          },
+          {
+            "handle": "example_region_gov",
+            "name": "Правительство области (пример)"
+          },
+          {
+            "handle": "example_city_chat",
+            "name": "Городской канал (пример)"
+          }
+        ],
+        "enabled": false,
+        "status": "coming_soon"
+      }
+    },
+    "topics": [
+      {
+        "attention": {
+          "enabled": false,
+          "min_score_gain": 0
+        },
+        "description": "ЧП, ДТП, пожары и аварии в регионе.",
+        "exclude": [
+          "происшествия за пределами региона без местных пострадавших"
+        ],
+        "include": [
+          "ЧП, ДТП, пожары, аварии на коммунальных сетях в регионе"
+        ],
+        "keywords": [],
+        "max_age_days": 2,
+        "max_items_per_day": 3,
+        "min_relevance": 6,
+        "name": "Происшествия",
+        "rss": [],
+        "rubric_hash": "9f48681daf68",
+        "slug": "incidents",
+        "sources": {}
+      },
+      {
+        "attention": {
+          "enabled": false,
+          "min_score_gain": 0
+        },
+        "description": "Решения и назначения региональной и городской власти.",
+        "exclude": [
+          "протокольные поздравления и визиты без решений"
+        ],
+        "include": [
+          "решения и назначения региональной и городской власти",
+          "бюджет, тарифы, транспорт"
+        ],
+        "keywords": [],
+        "max_age_days": 2,
+        "max_items_per_day": 3,
+        "min_relevance": 6,
+        "name": "Власть и решения",
+        "rss": [],
+        "rubric_hash": "479adab6b347",
+        "slug": "power",
+        "sources": {}
+      },
+      {
+        "attention": {
+          "enabled": false,
+          "min_score_gain": 0
+        },
+        "description": "Предприятия и деньги региона.",
+        "exclude": [
+          "федеральные макроновости без региональной привязки"
+        ],
+        "include": [
+          "предприятия региона: запуск, закрытие, сокращения, инвестиции",
+          "бюджет и программы развития"
+        ],
+        "keywords": [],
+        "max_age_days": 2,
+        "max_items_per_day": 2,
+        "min_relevance": 6,
+        "name": "Экономика региона",
+        "rss": [],
+        "rubric_hash": "a95b08f65fc7",
+        "slug": "economy",
+        "sources": {}
+      }
+    ]
+  },
+  "delivery": {
+    "due": false,
+    "last_sent_at": null,
+    "messages": 0,
+    "sent_items": 0,
+    "target": "file"
+  },
+  "failures": [],
+  "preset": {
+    "language": "ru",
+    "name": "Редакция (демо)",
+    "slug": "newsroom-demo"
+  },
+  "queue": {
+    "by_topic": {
+      "economy": 2,
+      "incidents": 3,
+      "power": 3
+    },
+    "count": 8,
+    "items": [
+      {
+        "decision": "approve",
+        "pending_since": "2026-10-06T06:00:00+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "На трассе Р-22 грузовик столкнулся с автобусом, шесть пассажиров пострадали.",
+        "title": "На трассе Р-22 столкнулись грузовик и автобус",
+        "topic": "incidents",
+        "topic_name": "Происшествия",
+        "url": "https://example-agency.ru/news/102"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-06T06:00:00+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Прорыв водопровода на Садовой оставил без воды около четырёх тысяч жителей до вечера вторника.",
+        "title": "Прорыв трубы на Садовой оставил без воды три квартала",
+        "topic": "incidents",
+        "topic_name": "Происшествия",
+        "url": "https://example-agency.ru/news/101"
+      },
+      {
+        "decision": "reject",
+        "pending_since": "2026-10-06T06:00:00+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Из горящего общежития на улице Ленина эвакуировали 40 человек, пострадавших нет.",
+        "title": "Пожар в общежитии на улице Ленина: эвакуированы 40 человек",
+        "topic": "incidents",
+        "topic_name": "Происшествия",
+        "url": "https://example-agency.ru/news/107"
+      },
+      {
+        "decision": "approve",
+        "pending_since": "2026-10-06T06:00:00+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "Тарифы ЖКХ вырастут на 9,8% с 1 ноября.",
+        "title": "Приказ о повышении тарифов ЖКХ с 1 ноября",
+        "topic": "power",
+        "topic_name": "Власть и решения",
+        "url": "https://example-region-gov.ru/docs/201"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-06T06:00:00+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Горсовет поднял цену разовой поездки с 40 до 46 рублей с 1 ноября.",
+        "title": "Горсовет утвердил новые тарифы на проезд",
+        "topic": "power",
+        "topic_name": "Власть и решения",
+        "url": "https://example-agency.ru/news/103"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-06T06:00:00+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Губернатор назначил нового министра транспорта.",
+        "title": "Назначен новый министр транспорта области",
+        "topic": "power",
+        "topic_name": "Власть и решения",
+        "url": "https://example-region-gov.ru/docs/202"
+      },
+      {
+        "decision": "approve",
+        "pending_since": "2026-10-06T06:00:00+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "Завод «Металлист» сократит 300 рабочих мест до конца года.",
+        "title": "Завод «Металлист» объявил о сокращении 300 рабочих мест",
+        "topic": "economy",
+        "topic_name": "Экономика региона",
+        "url": "https://example-agency.ru/news/104"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-06T06:00:00+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "Бюджет области на 2027 год с дефицитом 3% внесён в думу.",
+        "title": "Бюджет области на 2027 год внесён в думу",
+        "topic": "economy",
+        "topic_name": "Экономика региона",
+        "url": "https://example-region-gov.ru/docs/204"
+      }
+    ]
+  },
+  "run": {
+    "at": "2026-10-06T06:00:00+00:00",
+    "id": "2026-10-06T0600Z",
+    "mode": "real",
+    "offline": true
+  },
+  "schema_version": 1,
+  "stages": [
+    {
+      "group": "sources",
+      "scopes": {
+        "*": {
+          "drops": {
+            "undated": 2
+          },
+          "in": 21,
+          "out": 19
+        },
+        "economy": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "incidents": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "power": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "collect"
+    },
+    {
+      "group": "filter",
+      "scopes": {
+        "*": {
+          "drops": {
+            "outside_window": 2
+          },
+          "in": 19,
+          "out": 17
+        },
+        "economy": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "incidents": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "power": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "window"
+    },
+    {
+      "group": "filter",
+      "scopes": {
+        "*": {
+          "drops": {
+            "seen": 1
+          },
+          "in": 17,
+          "out": 16
+        },
+        "economy": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "incidents": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "power": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "dedupe"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 16,
+          "out": 16
+        },
+        "economy": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "incidents": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "power": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "cache"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 16,
+          "notes": {
+            "full_text": 3,
+            "full_text_failed": 4
+          },
+          "out": 16
+        },
+        "economy": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "incidents": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "power": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "enrich"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "*": {
+          "assigned": {
+            "economy": 3,
+            "incidents": 4,
+            "power": 4
+          },
+          "drops": {
+            "below_relevance": 3,
+            "off_topic": 2
+          },
+          "in": 16,
+          "out": 11
+        },
+        "economy": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "incidents": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "power": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "rank"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "economy": {
+          "drops": {
+            "over_max_items": 1
+          },
+          "in": 3,
+          "out": 2
+        },
+        "incidents": {
+          "drops": {
+            "over_max_items": 1
+          },
+          "in": 4,
+          "out": 3
+        },
+        "power": {
+          "drops": {
+            "over_max_items": 1
+          },
+          "in": 4,
+          "out": 3
+        }
+      },
+      "stage": "cap"
+    },
+    {
+      "group": "approval",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "economy": {
+          "drops": {},
+          "in": 2,
+          "out": 2
+        },
+        "incidents": {
+          "drops": {},
+          "in": 3,
+          "out": 3
+        },
+        "power": {
+          "drops": {},
+          "in": 3,
+          "out": 3
+        }
+      },
+      "stage": "queue"
+    },
+    {
+      "group": "approval",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "economy": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "incidents": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "power": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "review"
+    },
+    {
+      "group": "formatting",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "format"
+    },
+    {
+      "group": "delivery",
+      "scopes": {
+        "*": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "deliver"
+    }
+  ]
+}

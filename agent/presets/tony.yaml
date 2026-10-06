@@ -1,0 +1,12 @@
+# Tony Scraponi -- Artem's research digest. Its settings stay in
+# agent/defaults.yaml and agent/topics/*.yaml, where the control room
+# reads them at site build time; this file only points there. Once the
+# control room reads run-result.json instead (sub-project D), they move
+# in here and `legacy` goes away.
+preset:
+  slug: tony
+  name: Tony Scraponi
+  language: en
+legacy:
+  defaults: ../defaults.yaml
+  topics: ../topics

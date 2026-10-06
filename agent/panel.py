@@ -1,10 +1,11 @@
-"""Local monitoring panel — python -m agent panel. Serves a single HTML
-page and JSON/SSE endpoints over the agent's JSONL event stream. Binds
-only to 127.0.0.1: this process can start pipeline runs, and a wider
-bind would expose that to the network."""
+"""Local monitoring panel — python -m agent panel [--data-dir DIR]. Serves
+a single HTML page and JSON/SSE endpoints over the agent's JSONL event
+stream in <data-dir>/runs. Binds only to 127.0.0.1: this process can
+start pipeline runs, and a wider bind would expose that to the network."""
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import socketserver
@@ -13,12 +14,12 @@ from pathlib import Path
 
 from agent.events import read_events
 from agent.funnel import compute_funnel
+from agent.paths import DataPaths
 
 HOST = "127.0.0.1"
 PORT = 5679
 
 AGENT_DIR = Path(__file__).parent
-RUNS_DIR = AGENT_DIR / "runs"
 PAGE_PATH = AGENT_DIR / "panel_page.html"
 
 RUN_ID_RE = re.compile(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{4}Z$")
@@ -29,6 +30,8 @@ class ThreadingHTTPServer(socketserver.ThreadingMixIn, HTTPServer):
 
 
 class PanelHandler(BaseHTTPRequestHandler):
+    runs_dir: Path = AGENT_DIR / "runs"  # set per server by run_panel
+
     def do_GET(self) -> None:
         if self.path == "/":
             self._serve_page()
@@ -49,7 +52,7 @@ class PanelHandler(BaseHTTPRequestHandler):
 
     def _serve_runs_list(self) -> None:
         runs = []
-        for path in sorted(RUNS_DIR.glob("*.jsonl"), reverse=True):
+        for path in sorted(self.runs_dir.glob("*.jsonl"), reverse=True):
             run_events = read_events(path)
             runs.append(
                 {
@@ -64,7 +67,7 @@ class PanelHandler(BaseHTTPRequestHandler):
         if not RUN_ID_RE.match(run_id):
             self.send_error(400, "invalid run id")
             return
-        path = RUNS_DIR / f"{run_id}.jsonl"
+        path = self.runs_dir / f"{run_id}.jsonl"
         if not path.exists():
             self.send_error(404)
             return
@@ -84,8 +87,15 @@ class PanelHandler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
 
-def run_panel() -> None:
-    server = ThreadingHTTPServer((HOST, PORT), PanelHandler)
+def handler_for(runs_dir: Path) -> type[PanelHandler]:
+    return type("RunsPanelHandler", (PanelHandler,), {"runs_dir": runs_dir})
+
+
+def run_panel(argv: list[str]) -> None:
+    parser = argparse.ArgumentParser(prog="python -m agent panel")
+    parser.add_argument("--data-dir", type=Path, default=AGENT_DIR)
+    args = parser.parse_args(argv)
+    server = ThreadingHTTPServer((HOST, PORT), handler_for(DataPaths(args.data_dir).runs))
     print(f"Panel running at http://{HOST}:{PORT}/ (Ctrl-C to stop)")
     try:
         server.serve_forever()

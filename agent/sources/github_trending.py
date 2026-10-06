@@ -13,7 +13,8 @@ from datetime import datetime, timedelta
 
 import requests
 
-from agent.sources.base import Candidate, Drop, TopicConfig
+from agent.item import Item
+from agent.sources.base import Drop, TopicConfig
 
 SEARCH_URL = "https://api.github.com/search/repositories"
 EXCERPT_MAX_CHARS = 280
@@ -32,7 +33,7 @@ def _excerpt(repo: dict) -> str | None:
     return description or topic_text or None
 
 
-def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Drop]]:
+def collect(topic: TopicConfig, now: datetime) -> tuple[list[Item], list[Drop]]:
     github_config = topic.sources.get("github_trending")
     if github_config is None:
         return [], []
@@ -58,7 +59,7 @@ def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Dr
         for repo in response.json()["items"]:
             repos_by_name[repo["full_name"]] = repo
 
-    candidates: list[Candidate] = []
+    candidates: list[Item] = []
     drops: list[Drop] = []
     for repo in repos_by_name.values():
         url = repo["html_url"]
@@ -73,14 +74,16 @@ def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Dr
             )
             continue
         candidates.append(
-            Candidate(
+            Item(
                 url=url,
                 title=title,
-                source="github",
+                kind="github",
+                source_id="github_trending",
+                source_name="GitHub",
                 topic=topic.slug,
                 published_at=datetime.fromisoformat(created_at.replace("Z", "+00:00")),
                 score=repo.get("stargazers_count"),
-                excerpt=_excerpt(repo),
+                text=_excerpt(repo),
             )
         )
 

@@ -1,0 +1,14 @@
+{
+  "llm": [
+    {"full_name": "acme/tiny-llm", "description": "A tiny LLM runtime for edge devices", "topics": ["llm", "inference", "edge"], "age_hours": 50, "stargazers_count": 500}
+  ],
+  "cli": [
+    {"full_name": "acme/fastgrep", "description": null, "topics": ["cli", "rust", "search"], "age_hours": 60, "stargazers_count": 900}
+  ],
+  "devtools": [
+    {"full_name": "acme/undated-tool", "description": "A tool with no creation date", "topics": ["devtools"], "age_hours": null, "stargazers_count": 70}
+  ],
+  "data-visualization": [
+    {"full_name": "acme/chartkit", "description": "Declarative charts for the web", "topics": ["data-visualization", "svg"], "age_hours": 72, "stargazers_count": 150}
+  ]
+}

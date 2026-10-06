@@ -1,0 +1,39 @@
+{
+  "https://blog.example/claude-sonnets": {
+    "first_seen": "2026-10-04T10:00:00+00:00", "last_score": 55, "times_sent": 0, "dismissed": null,
+    "ranks": {"ai-engineering": {"relevance": 3, "summary": "A poem generator.", "rubric": "3472af8a46e1", "source_score": 55, "ranked_at": "2026-10-04T10:00:00+00:00", "queued_at": null}}
+  },
+  "https://vllm.example/1.0": {
+    "first_seen": "2026-10-04T08:00:00+00:00", "last_score": 80, "times_sent": 0, "dismissed": null,
+    "ranks": {"ai-engineering": {"relevance": 7, "summary": "vLLM reaches 1.0.", "rubric": "3472af8a46e1", "source_score": 80, "ranked_at": "2026-10-04T08:00:00+00:00", "queued_at": null}}
+  },
+  "https://qwen.example/4": {
+    "first_seen": "2026-10-05T00:00:00+00:00", "last_score": 40, "times_sent": 0, "dismissed": null,
+    "ranks": {"ai-engineering": {"relevance": 4, "summary": "Qwen publishes weights.", "rubric": "3472af8a46e1", "source_score": 40, "ranked_at": "2026-10-05T00:00:00+00:00", "queued_at": null}}
+  },
+  "https://deepseek.example/v4-paper": {
+    "first_seen": "2026-10-03T08:00:00+00:00", "last_score": 180, "times_sent": 0, "dismissed": null,
+    "ranks": {"ai-engineering": {"relevance": 8, "summary": "DeepSeek describes V4.", "rubric": "3472af8a46e1", "source_score": 180, "ranked_at": "2026-10-03T08:00:00+00:00", "queued_at": "2026-10-03T08:00:00+00:00"}}
+  },
+  "https://sqlite.example/appfile": {
+    "first_seen": "2026-10-04T16:00:00+00:00", "last_score": 90, "times_sent": 1, "dismissed": null, "ranks": {}
+  },
+  "https://react.example/compiler-2": {
+    "first_seen": "2026-10-05T08:00:00+00:00", "last_score": 170, "times_sent": 0, "dismissed": "rejected", "ranks": {}
+  },
+  "https://chrome.example/cookies": {
+    "first_seen": "2026-09-28T08:00:00+00:00", "last_score": 240, "times_sent": 0, "dismissed": "expired", "ranks": {}
+  },
+  "https://tool.example/a": {
+    "first_seen": "2026-10-06T07:00:00+00:00", "last_score": 50, "times_sent": 0, "dismissed": null,
+    "ranks": {"tooling": {"relevance": 7, "summary": "Tool A.", "rubric": "02189e2467e9", "source_score": 50, "ranked_at": "2026-10-06T07:00:00+00:00", "queued_at": "2026-10-06T07:00:00+00:00"}}
+  },
+  "https://tool.example/b": {
+    "first_seen": "2026-10-05T16:00:00+00:00", "last_score": 60, "times_sent": 0, "dismissed": null,
+    "ranks": {"tooling": {"relevance": 6, "summary": "Tool B.", "rubric": "02189e2467e9", "source_score": 60, "ranked_at": "2026-10-05T16:00:00+00:00", "queued_at": "2026-10-05T16:00:00+00:00"}}
+  },
+  "https://tool.example/c": {
+    "first_seen": "2026-09-27T20:00:00+00:00", "last_score": 70, "times_sent": 0, "dismissed": null,
+    "ranks": {"tooling": {"relevance": 6, "summary": "Tool C.", "rubric": "02189e2467e9", "source_score": 70, "ranked_at": "2026-09-27T20:00:00+00:00", "queued_at": "2026-10-05T06:00:00+00:00"}}
+  }
+}

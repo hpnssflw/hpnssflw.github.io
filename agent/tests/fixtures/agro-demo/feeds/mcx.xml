@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>Минсельхоз (пример)</title>
+<link>https://example-mcx.ru/</link>
+<description>Вымышленная лента для тестов.</description>
+<item>
+  <title>Утверждены квоты на экспорт зерна до февраля</title>
+  <link>https://example-mcx.ru/press/11</link>
+  <pubDate>Fri, 03 Oct 2026 12:00:00 +0000</pubDate>
+  <description>Квота на пшеницу составит 10,6 млн тонн.</description>
+</item>
+<item>
+  <title>Субсидии на семена: приём заявок до 15 ноября</title>
+  <link>https://example-mcx.ru/press/12</link>
+  <pubDate>Thu, 02 Oct 2026 12:00:00 +0000</pubDate>
+  <description>Компенсируют до 30% стоимости элитных семян.</description>
+</item>
+<item>
+  <title>Новые требования к регистрации СЗР вступят в силу с 1 января</title>
+  <link>https://example-mcx.ru/press/13</link>
+  <pubDate>Wed, 01 Oct 2026 12:00:00 +0000</pubDate>
+  <description>Изменится порядок испытаний препаратов.</description>
+</item>
+<item>
+  <title>Пресс-релиз без даты</title>
+  <link>https://example-mcx.ru/press/14</link>
+  <description>У этой записи нет даты публикации.</description>
+</item>
+</channel>
+</rss>

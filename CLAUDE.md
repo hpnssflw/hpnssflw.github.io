@@ -139,6 +139,19 @@ initiatives — see `PROGRESS.md` for status of each.
   (`next dev` occasionally hangs the TCP handshake in this environment;
   if a port won't come up, kill node and retry, or verify against
   `npm run build` + `npm run serve` instead.)
+- **Verify agent changes** with pytest (Python 3.12 in `agent/venv`:
+  `py -3.12 -m venv agent/venv`, then
+  `agent/venv/Scripts/python -m pip install -r agent/requirements-dev.txt`):
+  ```
+  agent/venv/Scripts/python -m pytest agent/tests -q
+  ```
+  `agent/tests/fixtures/tony/golden/` pins Tony's real run, preview and
+  dry run byte for byte — a golden that changes is a regression unless
+  the change is the point of the work.
+  `agent/tests/test_control_room_contract.py` pins the agent constants
+  the control room reads — the rule is the "`/researcher/queue/` (Tony
+  Scraponi's control room) reads the agent's config at build time"
+  bullet above.
 - The public plan page (`app/researcher/agent/page.tsx`) and
   `docs/agent-plan.md` describe the same agent at two levels of detail
   (narrative vs. technical). Keep them in sync at a high level whenever

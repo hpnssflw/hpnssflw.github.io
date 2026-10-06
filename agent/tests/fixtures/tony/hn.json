@@ -1,0 +1,74 @@
+{
+  "Ollama": [
+    {"objectID": "101", "title": "Ollama adds speculative decoding", "url": "https://ollama.example/blog/speculative-decoding", "age_hours": 30, "points": 120}
+  ],
+  "RAG": [
+    {"objectID": "102", "title": "A tiny RAG eval harness", "url": "https://rag.example/harness", "age_hours": 20, "points": 45}
+  ],
+  "LLM": [
+    {"objectID": "103", "title": "LLM pricing drama at a big lab", "url": "https://news.example/llm-pricing", "age_hours": 10, "points": 300}
+  ],
+  "Claude": [
+    {"objectID": "104", "title": "Claude writes sonnets about Kubernetes", "url": "https://blog.example/claude-sonnets", "age_hours": 50, "points": 60}
+  ],
+  "vLLM": [
+    {"objectID": "105", "title": "vLLM 1.0 released", "url": "https://vllm.example/1.0", "age_hours": 70, "points": 90}
+  ],
+  "Qwen": [
+    {"objectID": "106", "title": "Qwen 4 open weights", "url": "https://qwen.example/4", "age_hours": 40, "points": 150}
+  ],
+  "DeepSeek": [
+    {"objectID": "107", "title": "DeepSeek V4 paper", "url": "https://deepseek.example/v4-paper", "age_hours": 60, "points": 200}
+  ],
+  "MCP": [
+    {"objectID": "108", "title": "MCP server for Postgres", "url": "https://mcp.example/postgres", "age_hours": 15, "points": 70}
+  ],
+  "Gemini": [
+    {"objectID": "109", "title": "Gemini [[bad]] wrapper", "url": "https://bad.example/gemini", "age_hours": 5, "points": 35}
+  ],
+  "agent": [
+    {"objectID": "110", "title": "Ask HN: How do you test agent tool calls?", "url": null, "age_hours": 12, "points": 40, "story_text": "We run <b>agents</b> against mocked tools &amp; record every call."}
+  ],
+  "terminal": [
+    {"objectID": "201", "title": "Show HN: A terminal file manager in Rust", "url": "https://github.example/fm", "age_hours": 26, "points": 80}
+  ],
+  "Rust": [
+    {"objectID": "201", "title": "Show HN: A terminal file manager in Rust", "url": "https://github.example/fm", "age_hours": 26, "points": 80}
+  ],
+  "Neovim": [
+    {"objectID": "202", "title": "Neovim 0.12 released", "url": "https://neovim.example/0.12", "age_hours": 33, "points": 140}
+  ],
+  "Git": [
+    {"objectID": "203", "title": "Git 2.0 released", "url": "https://git.example/2.0", "age_hours": 720, "points": 500}
+  ],
+  "TypeScript": [
+    {"objectID": "204", "title": "Ask HN: Best TypeScript ORM in 2026?", "url": null, "age_hours": 18, "points": 60, "story_text": "Comparing Drizzle, Prisma and Kysely for a new project."}
+  ],
+  "Postgres": [
+    {"objectID": "108", "title": "MCP server for Postgres", "url": "https://mcp.example/postgres", "age_hours": 15, "points": 70}
+  ],
+  "database": [
+    {"objectID": "205", "title": "SQLite as an application file format, revisited", "url": "https://sqlite.example/appfile", "age_hours": 45, "points": 95}
+  ],
+  "Firefox": [
+    {"objectID": "301", "title": "Firefox ships a new CSS layout engine", "url": "https://firefox.example/layout", "age_hours": 22, "points": 200}
+  ],
+  "CSS": [
+    {"objectID": "301", "title": "Firefox ships a new CSS layout engine", "url": "https://firefox.example/layout", "age_hours": 22, "points": 200}
+  ],
+  "React": [
+    {"objectID": "302", "title": "React compiler 2.0", "url": "https://react.example/compiler-2", "age_hours": 28, "points": 180}
+  ],
+  "Chrome": [
+    {"objectID": "303", "title": "Chrome removes third-party cookies for good", "url": "https://chrome.example/cookies", "age_hours": 36, "points": 250}
+  ],
+  "dashboard": [
+    {"objectID": "304", "title": "Building a stock dashboard with D3", "url": "https://d3.example/stock-dashboard", "age_hours": 48, "points": 75}
+  ],
+  "D3": [
+    {"objectID": "304", "title": "Building a stock dashboard with D3", "url": "https://d3.example/stock-dashboard", "age_hours": 48, "points": 75}
+  ],
+  "SaaS": [
+    {"objectID": "305", "title": "How we priced our SaaS", "url": "https://saas.example/pricing", "age_hours": 8, "points": 33}
+  ]
+}
