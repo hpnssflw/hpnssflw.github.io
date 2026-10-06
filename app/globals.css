@@ -963,9 +963,7 @@ a:focus-visible {
 
 /* --- Tony Scraponi teaser -----------------------------------------
    components/AppsStrip.tsx, under the home columns: two dense lines on
-   the home cards' surface. Left: the name, "coming soon" and what it is,
-   then the features. Right: the agent's live numbers, then "follow the
-   build ↗". A slow lime comet along the bottom says "in the works". */
+   the home cards' surface. Left: the name and what it is, then the features. Right: the agent's live numbers, then "open ↗" (the control room) and "follow the build ↗". A slow lime comet along the bottom says the agent is live. */
 
 #apps {
   padding-bottom: 80px;
@@ -1016,10 +1014,6 @@ a:focus-visible {
   color: var(--text-strong);
 }
 
-.tony-eyebrow {
-  color: var(--agent-lime);
-}
-
 .tony-pitch,
 .tony-features {
   color: var(--muted);
@@ -1059,9 +1053,16 @@ a:focus-visible {
   color: var(--text);
 }
 
-.tony-follow {
+.tony-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
   margin: 0;
   text-transform: lowercase;
+}
+
+.tony-links .card-action {
+  margin-left: 0;
 }
 
 .app-icon {

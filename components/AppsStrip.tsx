@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { type AgentStatus, isAgentStatus, isStale, STATUS_URL } from "@/lib/agent-status";
 import TonyMark from "@/components/TonyMark";
 import { TELEGRAM_CHANNEL } from "@/lib/telegram-post";
@@ -10,9 +11,9 @@ const FEATURES = ["themes", "inbox", "publishing", "live runs"];
 /**
  * The home page's teaser for Tony Scraponi, the agent's coming control
  * room, under the columns: two dense lines on the home cards' surface.
- * Left: the name, "coming soon" and what it is, then the features. Right:
+ * Left: the name and what it is, then the features. Right:
  * a proof line from the agent's live status.json (hidden until it loads)
- * and "follow the build ↗" to the Telegram channel.
+ * then "open ↗" (the control room) and "follow the build ↗" (Telegram).
  */
 export default function AppsStrip() {
   const [status, setStatus] = useState<AgentStatus | null>(null);
@@ -42,7 +43,6 @@ export default function AppsStrip() {
           <div className="tony-copy">
             <p className="tony-head">
               <span className="tony-name">Tony Scraponi</span>
-              <span className="tony-eyebrow">coming soon</span>
               <span className="tony-pitch">a control room for the research agent</span>
             </p>
             <ul className="tony-features">
@@ -63,9 +63,14 @@ export default function AppsStrip() {
                 </>
               )}
             </p>
-            <a className="card-action tony-follow" href={`https://t.me/${TELEGRAM_CHANNEL}`}>
-              Follow the build <span aria-hidden="true">↗</span>
-            </a>
+            <p className="tony-links">
+              <Link className="card-action" href="/researcher/queue/">
+                Open <span aria-hidden="true">↗</span>
+              </Link>
+              <a className="card-action" href={`https://t.me/${TELEGRAM_CHANNEL}`}>
+                Follow the build <span aria-hidden="true">↗</span>
+              </a>
+            </p>
           </div>
           <div className="card-comet" aria-hidden="true">
             <span className="card-comet-run" />

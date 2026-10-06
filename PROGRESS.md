@@ -637,14 +637,23 @@ infrastructure.
   Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
   Pushed 2026-10-05 (24882c2); first live run 2026-10-05T18:22Z (workflow_dispatch 37355404165): 159 verdicts cached, queued per topic 4/3/3 (ai-engineering/tooling/web-products), no duplicate URLs in pending.json. Watch for 3 days (spec's success criteria 2–3): items sent to DeepSeek (the scored-per-day line of `python -m agent report`) should drop to single digits per run after the first day, at most 10 queued a day; then run python -m agent report against agent-data's state.json and decide on #7 (Web Products source).
   Tuned with Artem against two live previews: Tooling's keywords gained Claude Code / Codex / Cursor / Copilot / coding agent, and AI Engineering's exclude names coding agents and their add-ons. Final review (opus): 0 Critical, 3 Important — the same URL could be queued twice in one run (fixed: one copy per URL), `new` keeps counting cached over-cap items (watch criterion restated around `report`'s scored-per-day line), and the `lib/topics.ts` merge with main's `subtopics[]` (resolved) — plus a fix wave for a 23h cap window (cron jitter), per-keyword HN and per-topic ranking failure isolation, and doc drift. Parked: failed rankings pass the threshold as score 1 (latent, only if `min_relevance` 1); the local panel's `new` drill-down lists only `seen` drops; `state.json` grows with a `RankRecord` per topic (prune later); same story from several sources still takes several cap slots (story clustering); equal-score ties mix HN points and GitHub stars (break by recency instead). The main checkout's `agent/.env` has no `DEEPSEEK_API_KEY` line (lost around 2026-09-18); local previews read the worktree's `agent/.env`.
-- **Sub-project #8, Tony Scraponi control room: in progress.**
-  Replaces `/researcher/queue/` with a one-screen control room (pulse,
-  pipeline rail, config spine read from `agent/` at build time,
-  moderation queue with j/k/a/r/u/o, 14 days of outcomes).
-  Spec: `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
+- **Sub-project #8, Tony Scraponi control room: built, not merged.**
+  `/researcher/queue/` is now a one-screen control room: pulse (live,
+  last/next run from the workflow cron, streak, digest, owner sign-in),
+  a rail of the last run's nine stages with drop reasons, topic chips,
+  the moderation queue (status filters; j/k/o, owner a/r/u), the config
+  spine read from `agent/` at build time (`lib/agent-config.ts` — a
+  renamed agent constant fails the build on purpose), and 14 days of
+  outcomes from `state.json`. `status.json` now carries `drops` and
+  `failures` (`agent/status_export.py`); the rail's breakdown shows
+  after the first agent run with that code. The home teaser links to
+  it ("open ↗"). Spec:
+  `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-tony-control-room.md`.
-  Worktree `.claude/worktrees/admin-panel`, branch `worktree-admin-panel`
-  (not merged). Done: Tasks 1–6 (page; status.json now carries drops and failures — the rail's breakdown appears after the first agent run with this code). Next: Task 7.
+  Branch `worktree-admin-panel` (worktree `.claude/worktrees/admin-panel`).
+  Later: editing config from the page (a repo the agent only reads, like
+  the inbox); `/researcher/agent/`'s countdown still uses
+  `updated_at + cadence` — switch it to `lib/cron.ts`'s `nextRun`.
 
 ### How to resume in a new session
 
@@ -704,9 +713,7 @@ ordered sub-projects #1-#4 are now complete. The LAB backlog posts
 follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped. Sub-project #6 (topic & source quality) is shipped; its 3-day watch
-and the #7 decision are next (see its bullet above). Also next: the
-agent admin redesign (one-screen admin showing the agent's full config
-and flow), brainstormed in its own worktree. Later candidates: a Web
+and the #7 decision are next (see its bullet above). Sub-project #8 (control room) is built on branch worktree-admin-panel and waits for Artem's go to merge and push; after the push, trigger agent-run.yml once so status.json carries drops and failures. Later candidates: a Web
 Products source (#7), a Telegram DM when items await review, summary
 editing.
 
