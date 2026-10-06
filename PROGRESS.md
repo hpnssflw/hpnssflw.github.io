@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6 shipped; #8 (control room) in progress.**
+**Status: sub-projects #1-#6 and #8 (control room) shipped.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -637,7 +637,7 @@ infrastructure.
   Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
   Pushed 2026-10-05 (24882c2); first live run 2026-10-05T18:22Z (workflow_dispatch 37355404165): 159 verdicts cached, queued per topic 4/3/3 (ai-engineering/tooling/web-products), no duplicate URLs in pending.json. Watch for 3 days (spec's success criteria 2–3): items sent to DeepSeek (the scored-per-day line of `python -m agent report`) should drop to single digits per run after the first day, at most 10 queued a day; then run python -m agent report against agent-data's state.json and decide on #7 (Web Products source).
   Tuned with Artem against two live previews: Tooling's keywords gained Claude Code / Codex / Cursor / Copilot / coding agent, and AI Engineering's exclude names coding agents and their add-ons. Final review (opus): 0 Critical, 3 Important — the same URL could be queued twice in one run (fixed: one copy per URL), `new` keeps counting cached over-cap items (watch criterion restated around `report`'s scored-per-day line), and the `lib/topics.ts` merge with main's `subtopics[]` (resolved) — plus a fix wave for a 23h cap window (cron jitter), per-keyword HN and per-topic ranking failure isolation, and doc drift. Parked: failed rankings pass the threshold as score 1 (latent, only if `min_relevance` 1); the local panel's `new` drill-down lists only `seen` drops; `state.json` grows with a `RankRecord` per topic (prune later); same story from several sources still takes several cap slots (story clustering); equal-score ties mix HN points and GitHub stars (break by recency instead). The main checkout's `agent/.env` has no `DEEPSEEK_API_KEY` line (lost around 2026-09-18); local previews read the worktree's `agent/.env`.
-- **Sub-project #8, Tony Scraponi control room: built, not merged.**
+- **Sub-project #8, Tony Scraponi control room: shipped.**
   `/researcher/queue/` is now a one-screen control room: pulse (live,
   last/next run from the workflow cron, streak, digest, owner sign-in),
   a rail of the last run's nine stages with drop reasons, topic chips,
@@ -645,12 +645,21 @@ infrastructure.
   spine read from `agent/` at build time (`lib/agent-config.ts` — a
   renamed agent constant fails the build on purpose), and 14 days of
   outcomes from `state.json`. `status.json` now carries `drops` and
-  `failures` (`agent/status_export.py`); the rail's breakdown shows
-  after the first agent run with that code. The home teaser links to
-  it ("open ↗"). Spec:
+  `failures` (`agent/status_export.py`), which fill the rail's drop
+  reasons. The home teaser links to it ("open ↗"). Spec:
   `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-tony-control-room.md`.
-  Branch `worktree-admin-panel` (worktree `.claude/worktrees/admin-panel`).
+  **Live since 2026-10-06:** built on branch `worktree-admin-panel`
+  (worktree `.claude/worktrees/admin-panel`), `origin/main` hadn't moved
+  (`ec82c98`, A not merged), so it was pushed as a fast-forward
+  (`ec82c98..505a664`); deploy run 37443933147 succeeded. A manual
+  `agent-run.yml` dispatch (37443988386, 09:35Z — GitHub had skipped the
+  04:00Z and 08:00Z cron slots) wrote `status.json` with `drops` for all
+  three topics and `failures: []`; the live rail read collect 204 →
+  dedupe −56 seen → cache −88 → rank −6 below 6 → cap −54 → review −1
+  expired, every number matching the summed `drops`, and the page fits
+  1440×900. Owner-mode reject → undo was checked live before the merge
+  (`tony-inbox` commits 09:27Z, `decisions.json` left empty).
   The `status.json` `drops`/`failures` assertions (including that
   failures never carry error text) currently live only in the git-ignored
   `.superpowers/sdd/2026-10-06-control-room/task6-check.py`; port them to
@@ -710,7 +719,7 @@ log; if the widget never shows `working`, look for `claude agents failed`.
 Next phase (backend: friends, Yandex ID login, pager) needs its own
 brainstorm, starting from the research report's decision points.
 
-**Content Direction & Tony Scraponi: sub-projects #1-#6 shipped.** See
+**Content Direction & Tony Scraponi: sub-projects #1-#6 and #8 shipped.** See
 this file's section above for what shipped in
 each and what the final reviews found and fixed. Sub-project #2's bot/
 channel now exist (`@hypnosisflow`) and live delivery is verified
@@ -726,9 +735,8 @@ follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped. Sub-project #6 (topic & source quality) is shipped; its 3-day watch
 and the #7 decision are next (see its bullet above). Sub-project #8 (control
-room) is built on branch worktree-admin-panel and waits for Artem's go to
-merge and push; after the push, trigger agent-run.yml once so status.json
-carries drops and failures. Later candidates: a Web
+room) is shipped and live (2026-10-06); its deferred review items (M1, M2,
+M4) and "Later" list are in its bullet above. Later candidates: a Web
 Products source (#7), a Telegram DM when items await review, summary
 editing.
 
