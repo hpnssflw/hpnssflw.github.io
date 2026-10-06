@@ -55,7 +55,7 @@
   "019b8d88a570a342": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 160,
+    "last_score": 161,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -71,7 +71,7 @@
   "01f60ae7b332f1de": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 54,
+    "last_score": 66,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -138,7 +138,7 @@
   "0397e222b2cf1c4f": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 103,
+    "last_score": 104,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -250,7 +250,7 @@
   "07e3fd6f0b87696a": {
     "dismissed": null,
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
-    "last_score": 821,
+    "last_score": 822,
     "ranks": {},
     "times_sent": 0
   },
@@ -322,7 +322,7 @@
   "0bf65300a2ecec70": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 298,
+    "last_score": 299,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -400,6 +400,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "0df6080a7e0590da": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T23:34:58.463501+00:00",
+    "last_score": 101,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 101,
+        "summary": "mortiflix-oss is a motion design studio on your own machine where Claude makes the video step by step and you approve every stage, bringing your own Claude Code or API key."
+      }
+    },
+    "times_sent": 0
+  },
   "0e43358cba15d904": {
     "dismissed": null,
     "first_seen": "2026-09-28T02:20:05.627542+00:00",
@@ -424,7 +440,7 @@
   "0f0ade3dc31a264c": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 111,
+    "last_score": 112,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -561,7 +577,7 @@
   "13d13608380ca28e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 120,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -669,7 +685,7 @@
   "16387ddd1c37344c": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 147,
+    "last_score": 148,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -685,7 +701,7 @@
   "16806dc14c8271a8": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 39,
+    "last_score": 49,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -759,7 +775,7 @@
   "199e14b201fba6c8": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 166,
+    "last_score": 167,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-05T18:22:24.720121+00:00",
@@ -863,7 +879,7 @@
   "1d9e0fedc80d5604": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 173,
+    "last_score": 174,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -967,7 +983,7 @@
   "230850d05f205b60": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 349,
+    "last_score": 352,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-05T18:22:24.720121+00:00",
@@ -1031,6 +1047,30 @@
     "ranks": {},
     "times_sent": 0
   },
+  "278c1d724ea06d22": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T23:34:58.463501+00:00",
+    "last_score": 35,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 35,
+        "summary": "OpenChart is an open-source TradingView alternative where your own AI agent can work directly with charts using Claude and Codex."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 35,
+        "summary": "OpenChart is an open-source TradingView alternative that lets Claude and Codex agents work with markets through charts instead of CLIs."
+      }
+    },
+    "times_sent": 0
+  },
   "286b9039ee8af92c": {
     "dismissed": null,
     "first_seen": "2026-09-13T21:53:17.078470+00:00",
@@ -1041,7 +1081,7 @@
   "28e8a5a06ef91d24": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 126,
+    "last_score": 127,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1101,7 +1141,7 @@
   "2b5450c77abf0beb": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 45,
+    "last_score": 75,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1170,6 +1210,22 @@
     "first_seen": "2026-09-09T01:55:18.173072+00:00",
     "last_score": 605,
     "ranks": {},
+    "times_sent": 0
+  },
+  "2cea8c6dfa6f74be": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T23:34:58.463501+00:00",
+    "last_score": 50,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 50,
+        "summary": "BashCut is a native macOS video editor that Claude Code and Codex can drive through a CLI or MCP server, with layered timeline, captions, voiceover, and plugins."
+      }
+    },
     "times_sent": 0
   },
   "2d4d06d64f22a2f0": {
@@ -1274,7 +1330,7 @@
   "3072b733ed2724e1": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 59,
+    "last_score": 60,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1401,7 +1457,7 @@
   "337e3f19ed608da6": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 242,
+    "last_score": 244,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1518,7 +1574,7 @@
   "37a106d7f924ad98": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 226,
+    "last_score": 228,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1567,7 +1623,7 @@
     "times_sent": 1
   },
   "398b092189690eb9": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-25T22:54:50.790277+00:00",
     "last_score": 297,
     "ranks": {},
@@ -1608,7 +1664,7 @@
   "3a0f9678829920c2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 291,
+    "last_score": 337,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1791,7 +1847,7 @@
   "3f4c009060e23462": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 74,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1907,7 +1963,7 @@
   "45ae20b677e1b28f": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 124,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1996,7 +2052,7 @@
   "4716a7c80e086644": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 152,
+    "last_score": 158,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2422,7 +2478,7 @@
   "562b714120290bd9": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 97,
+    "last_score": 105,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2480,7 +2536,7 @@
   "576ded508c0bb401": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 105,
+    "last_score": 208,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2489,6 +2545,14 @@
         "rubric": "3472af8a46e1",
         "source_score": 105,
         "summary": "A GitHub-linked item titled 'AI is now capable of developing its own inference hardware'; the title alone gives no details on what the project actually is or how it works."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 208,
+        "summary": "OpenTPU is described as an open-source AI accelerator developed by AI."
       }
     },
     "times_sent": 0
@@ -2587,7 +2651,7 @@
   "5e0d593e160323d9": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 84,
+    "last_score": 85,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2909,7 +2973,7 @@
   "6923b5b640af2dc7": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 376,
+    "last_score": 379,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3034,7 +3098,7 @@
   "6cbb376bdb40e04b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 410,
+    "last_score": 414,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3093,7 +3157,7 @@
   "6ea58ec9d1cabcdf": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 36,
+    "last_score": 37,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3206,7 +3270,7 @@
   "70e581165c8b345e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 487,
+    "last_score": 490,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3342,15 +3406,15 @@
   "749983b595aaf313": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 192,
+    "last_score": 212,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-06T01:07:53.906880+00:00",
-        "relevance": 6,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 7,
         "rubric": "3472af8a46e1",
-        "source_score": 101,
-        "summary": "Open Instinct is an open-source personal agent you text on iMessage that has its own computer and a trusted network of other agents, built on Pi, Inkbox, Maritime and Composio."
+        "source_score": 212,
+        "summary": "Open Instinct is an open-source personal agent you text on iMessage, with its own computer and a trusted network of other agents, built on Pi, Inkbox, Maritime, and Composio."
       }
     },
     "times_sent": 0
@@ -3404,7 +3468,7 @@
   "762ec36cca677e1a": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 116,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3560,14 +3624,14 @@
   "7cd1fb3eb9d9482c": {
     "dismissed": null,
     "first_seen": "2026-09-29T06:46:24.490792+00:00",
-    "last_score": 6167,
+    "last_score": 6179,
     "ranks": {},
     "times_sent": 1
   },
   "7cd8f4c772468a6d": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 37,
+    "last_score": 38,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3682,7 +3746,7 @@
   "8058eac658274967": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 60,
+    "last_score": 61,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3720,7 +3784,7 @@
   "836a79b0f997f6d8": {
     "dismissed": null,
     "first_seen": "2026-10-05T16:49:37.554117+00:00",
-    "last_score": 744,
+    "last_score": 766,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -3799,7 +3863,7 @@
   "89be4e220d9f6acb": {
     "dismissed": null,
     "first_seen": "2026-09-28T18:52:41.090824+00:00",
-    "last_score": 921,
+    "last_score": 922,
     "ranks": {},
     "times_sent": 1
   },
@@ -3834,7 +3898,7 @@
   "8b15cc64f73c5966": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 175,
+    "last_score": 176,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3983,7 +4047,7 @@
   "917ba46d3f15f0c5": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 515,
+    "last_score": 539,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4603,7 +4667,7 @@
     "times_sent": 0
   },
   "a9b3d8224acc24cf": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-29T20:27:49.882165+00:00",
     "last_score": 1965,
     "ranks": {},
@@ -4741,6 +4805,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "af6fb58376a65c87": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T23:34:58.463501+00:00",
+    "last_score": 65,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 65,
+        "summary": "A Show HN about using an iPhone and a $20 smart plug as a darkroom f-stop timer for film photography."
+      }
+    },
+    "times_sent": 0
+  },
   "af99cae2ffa3cd3c": {
     "dismissed": null,
     "first_seen": "2026-09-20T18:21:26.211129+00:00",
@@ -4797,7 +4877,7 @@
   "b0ff7ff167326d54": {
     "dismissed": null,
     "first_seen": "2026-10-05T04:14:19.891077+00:00",
-    "last_score": 2917,
+    "last_score": 3087,
     "ranks": {},
     "times_sent": 0
   },
@@ -5069,7 +5149,7 @@
   "b8d29561f841d671": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 152,
+    "last_score": 154,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5113,7 +5193,7 @@
   "ba7d73ca40f2b4c2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 576,
+    "last_score": 577,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5210,7 +5290,7 @@
   "bef31792e452dc24": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 125,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5312,7 +5392,7 @@
   "c192475c2a029669": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 170,
+    "last_score": 177,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -5365,7 +5445,7 @@
   "c2e634ab6cdfaf4b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 56,
+    "last_score": 58,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5446,7 +5526,7 @@
   "c52677dc02f6a886": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 99,
+    "last_score": 100,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5557,7 +5637,7 @@
   "c8c85d1cadaf33e0": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 254,
+    "last_score": 272,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5624,7 +5704,7 @@
   "cc0ef86accf8db5b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 150,
+    "last_score": 155,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5779,14 +5859,14 @@
   "d0c5804a83126e99": {
     "dismissed": null,
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
-    "last_score": 2630,
+    "last_score": 2633,
     "ranks": {},
     "times_sent": 0
   },
   "d0da800340042252": {
     "dismissed": null,
     "first_seen": "2026-10-04T13:42:30.838785+00:00",
-    "last_score": 1737,
+    "last_score": 1764,
     "ranks": {},
     "times_sent": 0
   },
@@ -5936,7 +6016,7 @@
   "d76ab843cb062985": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 242,
+    "last_score": 245,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5973,7 +6053,7 @@
   "d88bfef8fb860939": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 703,
+    "last_score": 1203,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6013,7 +6093,7 @@
   "d9838d6f1098949b": {
     "dismissed": null,
     "first_seen": "2026-10-01T15:07:18.725260+00:00",
-    "last_score": 1587,
+    "last_score": 1603,
     "ranks": {},
     "times_sent": 0
   },
@@ -6048,7 +6128,7 @@
   "dab27c54d8c92fb4": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 699,
+    "last_score": 700,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6085,7 +6165,7 @@
   "dbf6a51fde3f190f": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 447,
+    "last_score": 482,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6136,7 +6216,7 @@
   "dd19469c076fee7d": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 98,
+    "last_score": 101,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6346,7 +6426,7 @@
   "e2711c9ce5a221c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 107,
+    "last_score": 115,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6378,7 +6458,7 @@
   "e345e1e0e83d199b": {
     "dismissed": null,
     "first_seen": "2026-09-30T20:33:36.487127+00:00",
-    "last_score": 3809,
+    "last_score": 3840,
     "ranks": {},
     "times_sent": 0
   },
@@ -6431,6 +6511,22 @@
     "first_seen": "2026-10-01T04:20:51.005866+00:00",
     "last_score": 749,
     "ranks": {},
+    "times_sent": 0
+  },
+  "e6e1d2a9f0a4e91a": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T23:34:58.463501+00:00",
+    "last_score": 186,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 9,
+        "rubric": "3472af8a46e1",
+        "source_score": 186,
+        "summary": "EmbeddingGemma 2 is an open, lightweight multimodal embedding model."
+      }
+    },
     "times_sent": 0
   },
   "e766de53aa63e736": {
@@ -6557,7 +6653,7 @@
   "ec4b5e65913390d0": {
     "dismissed": null,
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
-    "last_score": 1729,
+    "last_score": 98,
     "ranks": {},
     "times_sent": 0
   },
@@ -6611,6 +6707,30 @@
     "last_score": 632,
     "ranks": {},
     "times_sent": 1
+  },
+  "eee53d0231e76d4e": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T23:34:58.463501+00:00",
+    "last_score": 64,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 64,
+        "summary": "An article about Claude Code's suggested message feature, arguing the real customer is the model."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 64,
+        "summary": "An essay arguing that the real customer of Claude Code's suggested message feature is the model."
+      }
+    },
+    "times_sent": 0
   },
   "ef07c84940221c50": {
     "dismissed": null,
@@ -6834,7 +6954,7 @@
   "f72bb50387111952": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 89,
+    "last_score": 125,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6857,7 +6977,7 @@
   "f7794ae26edb3a7c": {
     "dismissed": null,
     "first_seen": "2026-10-01T04:20:51.005866+00:00",
-    "last_score": 4424,
+    "last_score": 4577,
     "ranks": {},
     "times_sent": 0
   },
@@ -6899,7 +7019,7 @@
   "f9c4bac94922d6e0": {
     "dismissed": null,
     "first_seen": "2026-10-02T04:14:08.473534+00:00",
-    "last_score": 1492,
+    "last_score": 1556,
     "ranks": {},
     "times_sent": 0
   },
@@ -6916,6 +7036,22 @@
     "last_score": 323,
     "ranks": {},
     "times_sent": 1
+  },
+  "fa35849781166026": {
+    "dismissed": null,
+    "first_seen": "2026-10-06T23:34:58.463501+00:00",
+    "last_score": 32,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 32,
+        "summary": "Pumpkins.sh is a site where anyone can claim, carve, and display one of a million pumpkins, with VR exploration."
+      }
+    },
+    "times_sent": 0
   },
   "faae7c2b3b774fed": {
     "dismissed": null,
