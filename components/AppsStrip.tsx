@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { type AgentStatus, isAgentStatus, isStale, STATUS_URL } from "@/lib/agent-status";
+import { type AgentStatus, parseAgentStatus, isStale, STATUS_URL } from "@/lib/agent-status";
 import TonyMark from "@/components/TonyMark";
 import { TELEGRAM_CHANNEL } from "@/lib/telegram-post";
 
@@ -23,7 +23,8 @@ export default function AppsStrip() {
     fetch(STATUS_URL, { cache: "no-store" })
       .then((res) => (res.ok ? res.json() : null))
       .then((data: unknown) => {
-        if (!cancelled && isAgentStatus(data)) setStatus(data);
+        const parsed = parseAgentStatus(data);
+        if (!cancelled && parsed) setStatus(parsed);
       })
       .catch(() => {});
     return () => {

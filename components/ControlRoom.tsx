@@ -9,7 +9,7 @@ import QueuePane from "@/components/QueuePane";
 import { useInbox } from "@/components/useInbox";
 import { useJson } from "@/components/useJson";
 import type { AgentConfig } from "@/lib/agent-config";
-import { type AgentStatus, STATUS_URL, isAgentStatus } from "@/lib/agent-status";
+import { STATUS_URL, parseAgentStatus } from "@/lib/agent-status";
 import type { Decision } from "@/lib/inbox";
 import { STATE_URL, buildOutcomes, parseAgentState, topicVerdicts } from "@/lib/outcomes";
 import { type PendingItem, type PendingQueue, PENDING_URL, isPendingQueue } from "@/lib/pending-queue";
@@ -23,7 +23,6 @@ import {
   visibleItems,
 } from "@/lib/queue-view";
 
-const acceptStatus = (value: unknown): AgentStatus | null => (isAgentStatus(value) ? value : null);
 const acceptQueue = (value: unknown): PendingQueue | null => (isPendingQueue(value) ? value : null);
 
 function TopicChips({
@@ -57,7 +56,7 @@ function TopicChips({
  * The topic chips filter the rail, the queue, the spine and the outcomes.
  */
 export default function ControlRoom({ config }: { config: AgentConfig }) {
-  const status = useJson(STATUS_URL, acceptStatus);
+  const status = useJson(STATUS_URL, parseAgentStatus);
   const pending = useJson(PENDING_URL, acceptQueue);
   const state = useJson(STATE_URL, parseAgentState);
   const inbox = useInbox(pending.data, pending.loadedAt);

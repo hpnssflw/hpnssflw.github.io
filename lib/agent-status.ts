@@ -86,33 +86,61 @@ function isRunFailure(value: unknown): value is RunFailure {
   );
 }
 
-/**
- * Structural guard for a fetched `status.json`. The old widget rendered
- * everything inside the fetch `.then()`, so any shape drift landed in
- * `.catch()` → "agent status unavailable". The component renders fields
- * during React render now, so the shape has to be checked before it is
- * accepted, or a bad payload would white-screen the route instead.
- */
-export function isAgentStatus(value: unknown): value is AgentStatus {
-  if (typeof value !== "object" || value === null) return false;
-  const s = value as Record<string, unknown>;
+function isDate(value: unknown): value is string {
+  return typeof value === "string" && !Number.isNaN(Date.parse(value));
+}
+
+function isRunHistoryEntry(value: unknown): value is RunHistoryEntry {
+  return isRecord(value) && typeof value.kept === "number" && isDate(value.ts);
+}
+
+function isRecentEvent(value: unknown): value is RecentEvent {
   return (
-    typeof s.cadence_hours === "number" &&
-    typeof s.streak === "number" &&
-    typeof s.pending_count === "number" &&
-    typeof s.updated_at === "string" &&
-    Array.isArray(s.topics) &&
-    Array.isArray(s.run_history) &&
-    Array.isArray(s.recent_events) &&
-    typeof s.funnel === "object" &&
-    s.funnel !== null &&
-    (s.topics as TopicStatus[]).every(
-      (t) => t && typeof t.slug === "string" && s.funnel != null &&
-        typeof (s.funnel as Record<string, unknown>)[t.slug] === "object",
-    ) &&
-    (s.drops === undefined || isDropCounts(s.drops)) &&
-    (s.failures === undefined || (Array.isArray(s.failures) && s.failures.every(isRunFailure)))
+    isRecord(value) &&
+    isDate(value.ts) &&
+    (value.verdict === "kept" || value.verdict === "drop") &&
+    typeof value.topic === "string" &&
+    typeof value.title === "string" &&
+    (value.reason === undefined || typeof value.reason === "string") &&
+    (value.score === undefined || typeof value.score === "number")
   );
+}
+
+/**
+ * Validates a fetched `status.json` and returns a cleaned copy, or null.
+ * Components read its fields during render, so a bad shape must stop
+ * here. The core — the numbers, `updated_at`, topics with their funnel
+ * entries, the two lists — rejects the whole status when malformed
+ * ("agent status unavailable"). Everything else costs only itself (#8's
+ * M2): malformed `drops`/`failures` are left out, an unparseable
+ * `last_sent_at` becomes null, and list entries with a bad shape or date
+ * are skipped. A date that doesn't parse never reaches toISOString() (M1).
+ */
+export function parseAgentStatus(value: unknown): AgentStatus | null {
+  if (!isRecord(value)) return null;
+  const { funnel, topics, run_history, recent_events } = value;
+  if (
+    typeof value.cadence_hours !== "number" ||
+    typeof value.streak !== "number" ||
+    typeof value.pending_count !== "number" ||
+    !isDate(value.updated_at) ||
+    !Array.isArray(topics) ||
+    !Array.isArray(run_history) ||
+    !Array.isArray(recent_events) ||
+    !isRecord(funnel) ||
+    !topics.every((t) => isRecord(t) && typeof t.slug === "string" && isRecord(funnel[t.slug]))
+  ) {
+    return null;
+  }
+  const status: AgentStatus = {
+    ...(value as unknown as AgentStatus),
+    last_sent_at: isDate(value.last_sent_at) ? value.last_sent_at : null,
+    run_history: run_history.filter(isRunHistoryEntry),
+    recent_events: recent_events.filter(isRecentEvent),
+  };
+  if (!isDropCounts(value.drops)) delete status.drops;
+  if (!(Array.isArray(value.failures) && value.failures.every(isRunFailure))) delete status.failures;
+  return status;
 }
 
 /** Stale once the last run is older than two cadence windows. */

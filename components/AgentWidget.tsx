@@ -7,7 +7,7 @@ import {
   type SparkCell,
   STATUS_URL,
   fmtCountdown,
-  isAgentStatus,
+  parseAgentStatus,
   isStale,
   nextRunAt,
   sparklineCells,
@@ -51,7 +51,8 @@ export default function AgentWidget({ variant }: { variant: Variant }) {
       })
       .then((data: unknown) => {
         if (cancelled) return;
-        if (isAgentStatus(data)) setStatus(data);
+        const parsed = parseAgentStatus(data);
+        if (parsed) setStatus(parsed);
         else setFailed(true);
       })
       .catch(() => {

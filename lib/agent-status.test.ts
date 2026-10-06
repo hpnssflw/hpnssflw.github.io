@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   type AgentStatus,
   fmtCountdown,
-  isAgentStatus,
+  parseAgentStatus,
   isStale,
   nextRunAt,
   sparklineCells,
@@ -24,32 +24,61 @@ function makeStatus(overrides: Partial<AgentStatus> = {}): AgentStatus {
   };
 }
 
-describe("isAgentStatus", () => {
-  const good = {
-    ...makeStatus({
-      topics: [{ slug: "ai-agents", name: "AI Agents", collected: 3, kept: 1 }],
-      funnel: { "ai-agents": { collected: 3, in_window: 3, new: 2, kept: 1 } },
-    }),
+describe("parseAgentStatus", () => {
+  const good = makeStatus({
+    topics: [{ slug: "ai-agents", name: "AI Agents", collected: 3, kept: 1 }],
+    funnel: { "ai-agents": { collected: 3, in_window: 3, new: 2, kept: 1 } },
+  });
+  const event = {
+    ts: "2026-10-06T10:11:06.285593+00:00",
+    verdict: "drop",
+    topic: "ai-agents",
+    title: "x",
+    reason: "over_max_items",
   };
 
-  it("accepts a well-formed payload", () => {
-    expect(isAgentStatus(good)).toBe(true);
+  it("returns a well-formed payload unchanged", () => {
+    expect(parseAgentStatus(good)).toEqual(good);
   });
 
   it("rejects non-objects and nulls", () => {
-    expect(isAgentStatus(null)).toBe(false);
-    expect(isAgentStatus("nope")).toBe(false);
-    expect(isAgentStatus(undefined)).toBe(false);
+    expect(parseAgentStatus(null)).toBeNull();
+    expect(parseAgentStatus("nope")).toBeNull();
+    expect(parseAgentStatus(undefined)).toBeNull();
   });
 
-  it("rejects missing or wrong-typed collections", () => {
-    expect(isAgentStatus({ ...good, run_history: undefined })).toBe(false);
-    expect(isAgentStatus({ ...good, topics: {} })).toBe(false);
-    expect(isAgentStatus({ ...good, funnel: null })).toBe(false);
+  it("rejects missing or wrong-typed core fields", () => {
+    expect(parseAgentStatus({ ...good, run_history: undefined })).toBeNull();
+    expect(parseAgentStatus({ ...good, topics: {} })).toBeNull();
+    expect(parseAgentStatus({ ...good, funnel: null })).toBeNull();
+    expect(parseAgentStatus({ ...good, streak: "3" })).toBeNull();
   });
 
   it("rejects a topic with no matching funnel entry", () => {
-    expect(isAgentStatus({ ...good, funnel: {} })).toBe(false);
+    expect(parseAgentStatus({ ...good, funnel: {} })).toBeNull();
+  });
+
+  it("rejects an updated_at that isn't a date (M1)", () => {
+    expect(parseAgentStatus({ ...good, updated_at: "yesterday" })).toBeNull();
+    expect(parseAgentStatus({ ...good, updated_at: 1 })).toBeNull();
+  });
+
+  it("turns an unparseable last_sent_at into null", () => {
+    expect(parseAgentStatus({ ...good, last_sent_at: "soon" })?.last_sent_at).toBeNull();
+    expect(parseAgentStatus({ ...good, last_sent_at: "2026-09-30T04:08:45.319706+00:00" })?.last_sent_at).toBe(
+      "2026-09-30T04:08:45.319706+00:00",
+    );
+  });
+
+  it("leaves out history and event entries with a bad date or shape", () => {
+    const kept = { kept: 1, ts: "2026-10-06T10:10:42.237399+00:00" };
+    const parsed = parseAgentStatus({
+      ...good,
+      run_history: [kept, { kept: 2, ts: "nope" }, { ts: "2026-10-06T10:00:00Z" }],
+      recent_events: [event, { ...event, ts: "" }, { ...event, verdict: "maybe" }],
+    });
+    expect(parsed?.run_history).toEqual([kept]);
+    expect(parsed?.recent_events).toEqual([event]);
   });
 });
 
@@ -105,38 +134,42 @@ describe("nextRunAt", () => {
   });
 });
 
-describe("isAgentStatus — drops and failures", () => {
+describe("parseAgentStatus — drops and failures", () => {
   const base = makeStatus({
     topics: [{ slug: "tooling", name: "Tooling", collected: 3, kept: 1 }],
     funnel: { tooling: { collected: 3, in_window: 3, new: 2, kept: 1 } },
   });
 
   it("accepts a payload without them (written before the agent change)", () => {
-    expect(isAgentStatus(base)).toBe(true);
+    expect(parseAgentStatus(base)).toEqual(base);
   });
 
-  it("accepts well-formed drops and failures", () => {
-    expect(
-      isAgentStatus({
-        ...base,
-        drops: { tooling: { dedupe: { seen: 2, already_ranked: 1 } } },
-        failures: [
-          { stage: "collect", topic: "tooling", source: "github_trending" },
-          { stage: "deliver", topic: null, source: null },
-        ],
-      }),
-    ).toBe(true);
+  it("keeps well-formed drops and failures", () => {
+    const full = {
+      ...base,
+      drops: { tooling: { dedupe: { seen: 2, already_ranked: 1 } } },
+      failures: [
+        { stage: "collect", topic: "tooling", source: "github_trending" },
+        { stage: "deliver", topic: null, source: null },
+      ],
+    };
+    expect(parseAgentStatus(full)).toEqual(full);
   });
 
-  it("rejects malformed drops", () => {
-    expect(isAgentStatus({ ...base, drops: { tooling: { dedupe: { seen: "2" } } } })).toBe(false);
-    expect(isAgentStatus({ ...base, drops: [] })).toBe(false);
-    expect(isAgentStatus({ ...base, drops: { tooling: [] } })).toBe(false);
+  it("leaves out malformed drops but keeps the status (M2)", () => {
+    for (const drops of [{ tooling: { dedupe: { seen: "2" } } }, [], { tooling: [] }]) {
+      const parsed = parseAgentStatus({ ...base, drops });
+      expect(parsed).not.toBeNull();
+      expect(parsed).not.toHaveProperty("drops");
+      expect(parsed?.streak).toBe(base.streak);
+    }
   });
 
-  it("rejects malformed failures", () => {
-    expect(isAgentStatus({ ...base, failures: {} })).toBe(false);
-    expect(isAgentStatus({ ...base, failures: [{ stage: 1, topic: null, source: null }] })).toBe(false);
-    expect(isAgentStatus({ ...base, failures: [{ stage: "rank", topic: 3, source: null }] })).toBe(false);
+  it("leaves out malformed failures but keeps the status (M2)", () => {
+    for (const failures of [{}, [{ stage: 1, topic: null, source: null }], [{ stage: "rank", topic: 3, source: null }]]) {
+      const parsed = parseAgentStatus({ ...base, failures });
+      expect(parsed).not.toBeNull();
+      expect(parsed).not.toHaveProperty("failures");
+    }
   });
 });
