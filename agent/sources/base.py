@@ -31,8 +31,7 @@ class FeedConfig:
 
 @dataclass(frozen=True)
 class TopicConfig:
-    """One topic's fully merged configuration — defaults.yaml with this
-    topic's overrides from topics/<slug>.yaml applied on top."""
+    """One topic's fully merged configuration -- the preset's defaults with the topic's own settings on top (agent/preset.py)."""
 
     slug: str
     name: str

@@ -5,7 +5,6 @@ from pathlib import Path
 import pytest
 import yaml
 
-from agent import config
 from agent.preset import PresetError, load_preset, require_offline
 from agent.sources.base import FeedConfig
 
@@ -46,38 +45,6 @@ def write_preset(tmp_path: Path, raw: dict) -> Path:
     path = tmp_path / "preset.yaml"
     path.write_text(yaml.safe_dump(raw, allow_unicode=True, sort_keys=False), encoding="utf-8")
     return path
-
-
-def test_tony_preset_matches_the_legacy_files_it_replaces():
-    """The preset-switcher plan (Task 2) moves Tony's settings out of
-    agent/defaults.yaml + agent/topics/ into presets/tony.yaml. Task 6
-    deletes those files, and this test with them."""
-    preset = load_preset(AGENT / "presets" / "tony.yaml")
-    settings = config.load_settings(AGENT / "defaults.yaml")
-    assert (preset.slug, preset.name, preset.language, preset.status_json) == ("tony", "Tony Scraponi", "en", True)
-    assert list(preset.topics) == config.load_topics(AGENT / "topics", AGENT / "defaults.yaml")
-    assert preset.feeds == () and preset.telegram is None and preset.offline is None
-    assert preset.reader == settings.ranking.reader
-    assert (preset.llm.base_url, preset.llm.model, preset.llm.api_key_env) == (
-        settings.llm.base_url,
-        settings.llm.model,
-        "DEEPSEEK_API_KEY",
-    )
-    assert (preset.approval.type, preset.approval.decisions_url, preset.approval.expire_days, preset.approval.token_env) == (
-        "inbox",
-        settings.inbox.decisions_url,
-        settings.inbox.expire_days,
-        "GITHUB_TOKEN",
-    )
-    assert (preset.delivery.type, preset.delivery.chat, preset.delivery.cadence_hours, preset.delivery.title) == (
-        "telegram",
-        settings.delivery.telegram_channel,
-        settings.delivery.delivery_cadence_hours,
-        "Research digest",
-    )
-    assert preset.delivery.bot_token_env == "TELEGRAM_BOT_TOKEN"
-    assert preset.default_data_dir == AGENT
-    assert preset.max_age_days == 10
 
 
 def test_self_contained_preset_loads_every_section(tmp_path):

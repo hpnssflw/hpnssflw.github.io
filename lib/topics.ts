@@ -1,4 +1,4 @@
-// RESEARCHER site copy only — distinct from agent/topics/*.yaml (the agent's own topic config) and lib/agent-status.ts's TopicStatus, deliberately not reconciled with either (see the design spec).
+// RESEARCHER site copy only — distinct from agent/presets/tony.yaml's topics and lib/agent-status.ts's TopicStatus, deliberately not reconciled with either (see the design spec).
 export type Topic = {
   name: string;
   subtopics: string[];

@@ -115,10 +115,5 @@ gets its own spec → plan → implementation cycle:
   `agent/presets/tony.yaml`. Spec:
   `docs/superpowers/specs/2026-10-06-preset-switcher-design.md`.
 
-Item 7 above becomes a topic-scoped `rss` entry for Web Products. A
-alone isn't enough: Tony's topics still load through `agent/config.py`,
-which doesn't read `sources.rss`, so the entry needs either that loader
-taught to read topic feeds or Tony's settings moved into
-`agent/presets/tony.yaml` (D). `agent/topics/*.yaml` is also a file the
-control room reads, so #7 lands after D or together with the control
-room's support for it.
+Item 7 above becomes a topic-scoped `rss` entry for Web Products. This
+goes in `agent/presets/tony.yaml` after sub-project D completes.

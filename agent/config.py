@@ -1,107 +1,10 @@
-"""Load and merge agent configuration: defaults.yaml + one file per topic."""
+"""Environment for local runs: agent/.env, loaded without overriding the
+real environment. Tony's settings live in agent/presets/tony.yaml."""
 
 from __future__ import annotations
 
 import os
-from dataclasses import dataclass
 from pathlib import Path
-
-import yaml
-
-from agent.sources.base import TopicConfig
-
-
-@dataclass(frozen=True)
-class LLMConfig:
-    base_url: str
-    model: str
-
-
-@dataclass(frozen=True)
-class DeliveryConfig:
-    telegram_channel: str
-    delivery_cadence_hours: int
-
-
-@dataclass(frozen=True)
-class InboxConfig:
-    decisions_url: str
-    expire_days: int
-
-
-@dataclass(frozen=True)
-class RankingConfig:
-    reader: str
-
-
-@dataclass(frozen=True)
-class Settings:
-    llm: LLMConfig
-    delivery: DeliveryConfig
-    inbox: InboxConfig
-    ranking: RankingConfig
-
-
-def _load_yaml(path: Path) -> dict:
-    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-
-
-def _deep_merge(base: dict, override: dict) -> dict:
-    """Recursively merge override on top of base; override wins on
-    conflicting scalar keys, dicts are merged key by key."""
-    merged = dict(base)
-    for key, value in override.items():
-        if key in merged and isinstance(merged[key], dict) and isinstance(value, dict):
-            merged[key] = _deep_merge(merged[key], value)
-        else:
-            merged[key] = value
-    return merged
-
-
-def load_settings(defaults_path: Path) -> Settings:
-    raw = _load_yaml(defaults_path)
-    llm_raw = raw["llm"]
-    delivery_raw = raw["delivery"]
-    inbox_raw = raw["inbox"]
-    ranking_raw = raw["ranking"]
-    return Settings(
-        llm=LLMConfig(base_url=llm_raw["base_url"], model=llm_raw["model"]),
-        delivery=DeliveryConfig(
-            telegram_channel=delivery_raw["telegram_channel"],
-            delivery_cadence_hours=delivery_raw["delivery_cadence_hours"],
-        ),
-        inbox=InboxConfig(
-            decisions_url=inbox_raw["decisions_url"],
-            expire_days=inbox_raw["expire_days"],
-        ),
-        ranking=RankingConfig(reader=ranking_raw["reader"].strip()),
-    )
-
-
-def load_topics(topics_dir: Path, defaults_path: Path) -> list[TopicConfig]:
-    defaults = _load_yaml(defaults_path)
-    topics: list[TopicConfig] = []
-    for topic_path in sorted(topics_dir.glob("*.yaml")):
-        topic_raw = _load_yaml(topic_path)
-        merged = _deep_merge(defaults, topic_raw)
-        attention = merged.get("attention", {})
-        topics.append(
-            TopicConfig(
-                slug=topic_path.stem,
-                name=merged["name"],
-                description=merged["description"].strip(),
-                keywords=merged["keywords"],
-                include=merged.get("include", []),
-                exclude=merged.get("exclude", []),
-                sources=merged["sources"],
-                max_age_days=merged["max_age_days"],
-                min_relevance=merged["min_relevance"],
-                max_items_per_day=merged["max_items_per_day"],
-                attention_enabled=attention.get("enabled", False),
-                attention_min_score_gain=attention.get("min_score_gain", 0),
-            )
-        )
-    return topics
 
 
 def load_env(path: Path) -> None:

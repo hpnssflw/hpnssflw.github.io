@@ -67,8 +67,7 @@ inspectable after the fact — see the run panel plan,
 Since sub-project A (`docs/superpowers/specs/2026-10-06-content-engine-core-design.md`)
 the pipeline is an engine run on a preset, one YAML file per client:
 `python -m agent --preset PATH --data-dir DIR`. Tony is the default
-preset, `agent/presets/tony.yaml`, which still reads `defaults.yaml` and
-`topics/*.yaml`; its data stays in `agent/`. Sources come in two scopes:
+preset, `agent/presets/tony.yaml` — its topics, reader, LLM, approval and delivery in one file; its `data` section keeps its data in `agent/` and writes `status.json`. Sources come in two scopes:
 query sources and RSS feeds declared under a topic belong to it and are
 ranked against it, as above; RSS feeds declared at preset level are
 classified across all the preset's topics in batched calls. Feeds can
@@ -76,8 +75,7 @@ fetch each article's full text (trafilatura, behind an SSRF guard).
 Approval (`inbox` or a local `file`) and delivery (`telegram` or a local
 `file`) are adapters the preset chooses. Every real run and dry run
 writes `run-result.json` — the assembled config, numbers per stage, drop
-reasons, failures, the queue and delivery — the contract a future preset
-switcher reads. `--offline` runs a preset on its fixtures with no network;
+reasons, failures, the queue and delivery — the contract the control room and the demo section read (`docs/superpowers/specs/2026-10-06-preset-switcher-design.md`). `--offline` runs a preset on its fixtures with no network;
 the newsroom and agro demo presets in `agent/tests/fixtures/` run that
 way. Tests: `agent/venv/Scripts/python -m pytest agent/tests -q`.
 
@@ -92,7 +90,7 @@ way. Tests: `agent/venv/Scripts/python -m pytest agent/tests -q`.
 ## Cadence & format
 
 Collection and ranking run every 4 hours; Telegram delivery rolls up
-everything approved once a day (`delivery_cadence_hours` in `defaults.yaml`).
+everything approved once a day (`delivery.cadence_hours` in `presets/tony.yaml`).
 Each digest groups items under the three topic headers, one line of
 summary and a link each.
 

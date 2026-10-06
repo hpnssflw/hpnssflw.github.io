@@ -1,7 +1,7 @@
 """Per-(URL, topic) verdict cache and the rolling daily cap. A topic
 scores an item once; the verdict is reused until the topic's rubric
 changes or the item's points/stars grow enough to deserve a second look
-(the `attention` block in defaults.yaml). Pure functions over the dedupe
+(the preset's `attention` settings). Pure functions over the dedupe
 state -- no I/O."""
 
 from __future__ import annotations
