@@ -87,7 +87,7 @@ def process_topic(topic: TopicConfig, ctx: RunContext) -> TopicResult:
     tally.count("cache", scope, len(kept), len(to_rank) + len(cached), cached_below)
     tally.count("enrich", scope, len(to_rank), len(to_rank))
 
-    fresh =ctx.adapters.ranker.rank_topic(topic, to_rank)
+    fresh = ctx.adapters.ranker.rank_topic(topic, to_rank)
     rank_cache.record(state, fresh, topic.slug, rubric, now)
 
     eligible = list(cached)
