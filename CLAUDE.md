@@ -128,7 +128,8 @@ initiatives — see `PROGRESS.md` for status of each.
   npm test                # Vitest — lib/posts, lib/agent-status, lib/pending-queue,
                           # lib/topics, lib/yandex-music, lib/claude-presence,
                           # lib/now-format, lib/github-calendar, lib/telegram-post, lib/home-feed,
-                          # lib/cron, lib/agent-config, lib/pipeline-stages, scripts/presence
+                          # lib/cron, lib/agent-config, lib/pipeline-stages,
+                          # lib/outcomes, lib/queue-view, scripts/presence
   ```
   (`next dev` occasionally hangs the TCP handshake in this environment;
   if a port won't come up, kill node and retry, or verify against
