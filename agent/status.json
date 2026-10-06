@@ -4,24 +4,19 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 37,
+        "already_ranked": 39,
         "seen": 27
       },
       "rank": {
-        "below_relevance": 3,
         "over_max_items": 24
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 43,
-        "seen": 25
-      },
-      "inbox": {
-        "expired": 1
+        "already_ranked": 46,
+        "seen": 24
       },
       "rank": {
-        "below_relevance": 3,
         "over_max_items": 28
       }
     },
@@ -38,16 +33,16 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 91,
-      "in_window": 91,
+      "collected": 90,
+      "in_window": 90,
       "kept": 0,
-      "new": 27
+      "new": 24
     },
     "tooling": {
-      "collected": 99,
-      "in_window": 99,
+      "collected": 98,
+      "in_window": 98,
       "kept": 0,
-      "new": 31
+      "new": 28
     },
     "web-products": {
       "collected": 14,
@@ -63,113 +58,109 @@
       "reason": "over_max_items",
       "title": "GitHub's new dashboard experience now the default",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325808+00:00",
+      "ts": "2026-10-06T10:11:06.285593+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The new Firefox design is here",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325800+00:00",
+      "ts": "2026-10-06T10:11:06.285575+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Every SaaS business will become a harness around a model",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325744+00:00",
+      "ts": "2026-10-06T10:11:06.285492+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "US tells France and Germany to release diesel stocks or face US export ban",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325738+00:00",
+      "ts": "2026-10-06T10:11:06.285480+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Before pixels: Modular industrial dashboards",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325732+00:00",
+      "ts": "2026-10-06T10:11:06.285467+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "uBlock Origin Lite is back on Firefox add-ons",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325727+00:00",
+      "ts": "2026-10-06T10:11:06.285445+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cancel Your Subscription: a free browser game",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325721+00:00",
+      "ts": "2026-10-06T10:11:06.285434+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "MicroLLM Lab \u2013 Try 7 tiny LLM's in the browser",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325715+00:00",
+      "ts": "2026-10-06T10:11:06.285422+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Show HN: Lofi Cities \u2013 Pixel-art city nights with browser-generated lofi",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325708+00:00",
+      "ts": "2026-10-06T10:11:06.285409+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "A browser-native classic Visual Basic VB6 IDE",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325700+00:00",
+      "ts": "2026-10-06T10:11:06.285392+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Improving site performance by shipping more CSS",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325647+00:00",
+      "ts": "2026-10-06T10:11:06.285313+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "CSS Bed: Classless CSS themes to use as starting points in web development",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325640+00:00",
+      "ts": "2026-10-06T10:11:06.285299+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Bez: Generating a browser engine from specs and tests",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325628+00:00",
+      "ts": "2026-10-06T10:11:06.285277+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Owed a billion dollars in Nvidia stock",
       "topic": "web-products",
-      "ts": "2026-10-06T09:36:12.325475+00:00",
+      "ts": "2026-10-06T10:11:06.285106+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Deser: Rethinking Rust Serialization",
       "topic": "tooling",
-      "ts": "2026-10-06T09:36:05.829030+00:00",
+      "ts": "2026-10-06T10:10:59.330372+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-09-29T14:38:27.657579+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-29T20:27:49.882165+00:00"
@@ -261,18 +252,22 @@
     {
       "kept": 0,
       "ts": "2026-10-06T09:35:27.068303+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-06T10:10:42.237399+00:00"
     }
   ],
-  "streak": 239,
+  "streak": 240,
   "topics": [
     {
-      "collected": 91,
+      "collected": 90,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 99,
+      "collected": 98,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
@@ -284,5 +279,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-06T09:35:27.068303+00:00"
+  "updated_at": "2026-10-06T10:10:42.237399+00:00"
 }
