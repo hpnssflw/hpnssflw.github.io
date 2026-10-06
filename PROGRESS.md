@@ -644,7 +644,7 @@ infrastructure.
   Spec: `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-tony-control-room.md`.
   Worktree `.claude/worktrees/admin-panel`, branch `worktree-admin-panel`
-  (not merged). Done: Tasks 1–5 (the full control room page). Next: Task 6 (status_export drops and failures).
+  (not merged). Done: Tasks 1–6 (page; status.json now carries drops and failures — the rail's breakdown appears after the first agent run with this code). Next: Task 7.
 
 ### How to resume in a new session
 
