@@ -10,6 +10,7 @@ from typing import Any
 from agent.dedupe import StateEntry
 from agent.pending import PendingQueue
 from agent.preset import Preset
+from agent.run_result import Tally
 
 
 @dataclass
@@ -17,6 +18,7 @@ class Adapters:
     ranker: Any  # rank_topic(topic, items) -> list[RankedItem]
     approval: Any  # load() -> {url: "approve" | "reject"}; raises inbox.DecisionsUnavailable
     delivery: Any  # label: str; send(messages, run_id) -> None
+    offline: bool = False  # True when nothing above reaches the network
 
 
 @dataclass
@@ -27,3 +29,4 @@ class RunContext:
     adapters: Adapters
     now: datetime
     writer: Any  # events.EventWriter or events.MemoryWriter
+    tally: Tally

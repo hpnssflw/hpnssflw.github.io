@@ -34,6 +34,13 @@ def test_real_run(tony, capsys):
     )
 
 
+def test_real_run_result(tony, capsys):
+    """run-result.json is new in sub-project A: recorded by Task 6, then
+    held like the others."""
+    tony.run_real()
+    assert_goldens({GOLDEN / "real" / "run-result.json": tony.read("run-result.json")})
+
+
 def test_preview_writes_nothing(tony, capsys):
     before = _snapshot(tony.data)
     tony.run_preview()
@@ -59,3 +66,8 @@ def test_dry_run(tony, capsys):
             GOLDEN / "dry" / "events.jsonl": tony.read("runs/2026-10-06T1200Z.jsonl"),
         }
     )
+
+
+def test_dry_run_result(tony, capsys):
+    tony.run_dry()
+    assert_goldens({GOLDEN / "dry" / "run-result.json": tony.read("run-result.json")})
