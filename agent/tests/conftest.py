@@ -4,7 +4,6 @@ DeepSeek through FakeDeepSeek. FROZEN_NOW is the clock every test runs at."""
 
 from __future__ import annotations
 
-import functools
 import hashlib
 import json
 import re
@@ -14,6 +13,8 @@ from types import SimpleNamespace
 
 import pytest
 import requests
+
+from agent.paths import DataPaths
 
 FIXTURES = Path(__file__).parent / "fixtures"
 TONY = FIXTURES / "tony"
@@ -247,28 +248,23 @@ class TonyHarness:
         monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "test-telegram-token")
         monkeypatch.delenv("GITHUB_TOKEN", raising=False)
 
-        # Wiring for the code as of ec82c98: paths and the clock are
-        # module-level names in agent.main.
-        monkeypatch.setattr(main, "STATE_PATH", data / "state.json")
-        monkeypatch.setattr(main, "PENDING_PATH", data / "pending.json")
-        monkeypatch.setattr(main, "STATUS_PATH", data / "status.json")
-        monkeypatch.setattr(events, "EventWriter", functools.partial(events.EventWriter, runs_dir=data / "runs"))
+        # The run clock is still a module-level datetime.now() in agent.main.
         monkeypatch.setattr(main, "datetime", frozen_datetime(lambda: FROZEN_NOW))
 
     def run_real(self) -> None:
         from agent import main
 
-        main.run_real(None)
+        main.run_real(None, DataPaths(self.data))
 
     def run_preview(self) -> None:
         from agent import main
 
-        main.run_preview(None)
+        main.run_preview(None, DataPaths(self.data))
 
     def run_dry(self) -> None:
         from agent import main
 
-        main.run_dry(None)
+        main.run_dry(None, DataPaths(self.data))
 
     def read(self, relative: str) -> str:
         return (self.data / relative).read_text(encoding="utf-8")

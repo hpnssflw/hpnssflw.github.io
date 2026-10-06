@@ -1,7 +1,8 @@
 """Queue outcomes and score distribution per topic, from state.json --
-python -m agent report [--days N]. For tuning min_relevance and the daily
-caps against what Artem actually approves. Reads the local
-agent/state.json: copy it from the agent-data branch first. Only items
+python -m agent report [--days N] [--data-dir DIR]. For tuning
+min_relevance and the daily caps against what Artem actually approves.
+Reads <data-dir>/state.json (default agent/state.json): copy it from the
+agent-data branch first. Only items
 queued since sub-project #6 carry a topic (ranks[slug].queued_at), so
 older ones don't appear."""
 
@@ -14,6 +15,7 @@ from pathlib import Path
 
 from agent import config, dedupe
 from agent.dedupe import StateEntry
+from agent.paths import DataPaths
 
 AGENT_DIR = Path(__file__).parent
 
@@ -57,8 +59,9 @@ def build_report(state: dict[str, StateEntry], topic_names: dict[str, str], now:
 def run_report(argv: list[str]) -> None:
     parser = argparse.ArgumentParser(prog="python -m agent report")
     parser.add_argument("--days", type=int, default=14)
+    parser.add_argument("--data-dir", type=Path, default=AGENT_DIR)
     args = parser.parse_args(argv)
-    state_path = AGENT_DIR / "state.json"
+    state_path = DataPaths(args.data_dir).state
     if not state_path.exists():
         raise SystemExit(f"{state_path} not found -- copy it from the agent-data branch first")
     topics = config.load_topics(AGENT_DIR / "topics", AGENT_DIR / "defaults.yaml")

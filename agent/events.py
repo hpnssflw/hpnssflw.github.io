@@ -11,17 +11,15 @@ from typing import Any
 from agent.item import Item
 from agent.sources.base import Drop
 
-RUNS_DIR = Path(__file__).parent / "runs"
-
 
 def new_run_id(now: datetime) -> str:
     return now.strftime("%Y-%m-%dT%H%MZ")
 
 
 class EventWriter:
-    """Appends one JSON object per line to agent/runs/<run_id>.jsonl."""
+    """Appends one JSON object per line to <data-dir>/runs/<run_id>.jsonl."""
 
-    def __init__(self, run_id: str, runs_dir: Path = RUNS_DIR) -> None:
+    def __init__(self, run_id: str, runs_dir: Path) -> None:
         runs_dir.mkdir(parents=True, exist_ok=True)
         self.path = runs_dir / f"{run_id}.jsonl"
         self._file = self.path.open("a", encoding="utf-8")

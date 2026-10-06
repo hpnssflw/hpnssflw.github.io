@@ -1,4 +1,4 @@
-"""Entry point: python -m agent [--dry-run | --preview] [--topic SLUG] | panel | report [--days N]"""
+"""Entry point: python -m agent [--dry-run | --preview] [--topic SLUG] [--data-dir DIR] | panel | report"""
 
 from __future__ import annotations
 
@@ -11,13 +11,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from agent import config, dedupe, date_guard, deliver, digest, events, inbox, pending, pipeline, status_export
+from agent.paths import DataPaths
 
 AGENT_DIR = Path(__file__).parent
 DEFAULTS_PATH = AGENT_DIR / "defaults.yaml"
 TOPICS_DIR = AGENT_DIR / "topics"
-STATE_PATH = AGENT_DIR / "state.json"
-PENDING_PATH = AGENT_DIR / "pending.json"
-STATUS_PATH = AGENT_DIR / "status.json"
 
 
 def _load_topics(topic_filter: str | None) -> list:
@@ -30,14 +28,14 @@ def _load_topics(topic_filter: str | None) -> list:
     return topics
 
 
-def run_dry(topic_filter: str | None) -> None:
+def run_dry(topic_filter: str | None, paths: DataPaths) -> None:
     now = datetime.now(timezone.utc)
     run_id = events.new_run_id(now)
-    writer = events.EventWriter(run_id)
+    writer = events.EventWriter(run_id, paths.runs)
 
     topics = _load_topics(topic_filter)
 
-    state = dedupe.load_state(STATE_PATH)
+    state = dedupe.load_state(paths.state)
 
     for topic in topics:
         counts: Counter[str] = Counter()
@@ -72,21 +70,21 @@ def run_dry(topic_filter: str | None) -> None:
 
         _print_funnel(topic.name, counts)
 
-    dedupe.save_state(STATE_PATH, state)
+    dedupe.save_state(paths.state, state)
     writer.close()
     print(f"\nRun recorded: {writer.path}")
 
 
-def run_real(topic_filter: str | None) -> None:
+def run_real(topic_filter: str | None, paths: DataPaths) -> None:
     now = datetime.now(timezone.utc)
     run_id = events.new_run_id(now)
-    writer = events.EventWriter(run_id)
+    writer = events.EventWriter(run_id, paths.runs)
 
     settings = config.load_settings(DEFAULTS_PATH)
     topics = _load_topics(topic_filter)
 
-    state = dedupe.load_state(STATE_PATH)
-    queue = pending.load_pending(PENDING_PATH)
+    state = dedupe.load_state(paths.state)
+    queue = pending.load_pending(paths.pending)
 
     try:
         decisions = inbox.load_decisions(settings.inbox.decisions_url, os.environ.get("GITHUB_TOKEN"))
@@ -132,25 +130,25 @@ def run_real(topic_filter: str | None) -> None:
             f"{len(approved)} approved."
         )
 
-    dedupe.save_state(STATE_PATH, state)
-    pending.save_pending(PENDING_PATH, queue)
+    dedupe.save_state(paths.state, state)
+    pending.save_pending(paths.pending, queue)
     writer.emit("run", "complete", detail={"delivered": delivered, "pending_total": len(queue.items)})
     writer.close()
 
     all_topics = config.load_topics(TOPICS_DIR, DEFAULTS_PATH)
     topic_names = {t.slug: t.name for t in all_topics}
-    previous_status = json.loads(STATUS_PATH.read_text(encoding="utf-8")) if STATUS_PATH.exists() else None
+    previous_status = json.loads(paths.status.read_text(encoding="utf-8")) if paths.status.exists() else None
     run_events = events.read_events(writer.path)
     status = status_export.build_status(
         run_events, topic_names, queue, settings.delivery.delivery_cadence_hours, 4, previous_status, now
     )
-    STATUS_PATH.write_text(json.dumps(status, indent=2, sort_keys=True), encoding="utf-8")
+    paths.status.write_text(json.dumps(status, indent=2, sort_keys=True), encoding="utf-8")
 
     print(f"Run recorded: {writer.path}")
-    print(f"Status written: {STATUS_PATH}")
+    print(f"Status written: {paths.status}")
 
 
-def run_preview(topic_filter: str | None) -> None:
+def run_preview(topic_filter: str | None, paths: DataPaths) -> None:
     """Collect and rank exactly like a real run, against in-memory copies
     of state.json and pending.json, and print what would be queued.
     Writes nothing, reads no inbox, delivers nothing. Copy state.json and
@@ -158,8 +156,8 @@ def run_preview(topic_filter: str | None) -> None:
     now = datetime.now(timezone.utc)
     settings = config.load_settings(DEFAULTS_PATH)
     topics = _load_topics(topic_filter)
-    state = dedupe.load_state(STATE_PATH)
-    queue = pending.load_pending(PENDING_PATH)
+    state = dedupe.load_state(paths.state)
+    queue = pending.load_pending(paths.pending)
     writer = events.MemoryWriter()
     for topic in topics:
         try:
@@ -179,16 +177,17 @@ def _print_funnel(topic_name: str, counts: Counter[str]) -> None:
     )
 
 
-def main() -> None:
-    if len(sys.argv) > 1 and sys.argv[1] == "panel":
+def main(argv: list[str] | None = None) -> None:
+    argv = sys.argv[1:] if argv is None else argv
+    if argv[:1] == ["panel"]:
         from agent.panel import run_panel
 
-        run_panel()
+        run_panel(argv[1:])
         return
-    if len(sys.argv) > 1 and sys.argv[1] == "report":
+    if argv[:1] == ["report"]:
         from agent.report import run_report
 
-        run_report(sys.argv[2:])
+        run_report(argv[1:])
         return
 
     parser = argparse.ArgumentParser(prog="python -m agent")
@@ -196,16 +195,19 @@ def main() -> None:
     mode.add_argument("--dry-run", action="store_true")
     mode.add_argument("--preview", action="store_true")
     parser.add_argument("--topic", default=None)
-    args = parser.parse_args()
+    parser.add_argument("--data-dir", type=Path, default=AGENT_DIR)
+    args = parser.parse_args(argv)
 
     config.load_env(AGENT_DIR / ".env")
+    args.data_dir.mkdir(parents=True, exist_ok=True)
+    paths = DataPaths(args.data_dir)
 
     if args.dry_run:
-        run_dry(args.topic)
+        run_dry(args.topic, paths)
     elif args.preview:
-        run_preview(args.topic)
+        run_preview(args.topic, paths)
     else:
-        run_real(args.topic)
+        run_real(args.topic, paths)
 
 
 if __name__ == "__main__":
