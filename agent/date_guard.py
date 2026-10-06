@@ -5,17 +5,18 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 
-from agent.sources.base import Candidate, Drop
+from agent.item import Item
+from agent.sources.base import Drop
 
 
 def apply_recency_window(
-    candidates: list[Candidate],
+    candidates: list[Item],
     max_age_days: int,
     now: datetime,
-) -> tuple[list[Candidate], list[Drop]]:
+) -> tuple[list[Item], list[Drop]]:
     """Keep candidates published within max_age_days of now; drop the rest."""
     cutoff = now - timedelta(days=max_age_days)
-    kept: list[Candidate] = []
+    kept: list[Item] = []
     drops: list[Drop] = []
     for candidate in candidates:
         if candidate.published_at >= cutoff:

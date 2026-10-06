@@ -46,7 +46,7 @@ def test_partition_splits_uncached_cached_below_and_cached_eligible():
     to_rank, cached, drops = rank_cache.partition([new, below, eligible], state, topic, "r1")
 
     assert [item.url for item in to_rank] == [new.url]
-    assert [(r.candidate.url, r.score, r.summary) for r in cached] == [(eligible.url, 7, "cached")]
+    assert [(r.item.url, r.score, r.summary) for r in cached] == [(eligible.url, 7, "cached")]
     assert [(d.url, d.reason, d.detail) for d in drops] == [(below.url, "already_ranked", {"relevance": 3})]
 
 

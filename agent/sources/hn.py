@@ -7,14 +7,15 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 
-from agent.sources.base import Candidate, Drop, TopicConfig
+from agent.item import Item
+from agent.sources.base import Drop, TopicConfig
 
 ALGOLIA_SEARCH_URL = "https://hn.algolia.com/api/v1/search"
 EXCERPT_MAX_CHARS = 280
 HITS_PER_PAGE = 50
 
 
-def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Drop]]:
+def collect(topic: TopicConfig, now: datetime) -> tuple[list[Item], list[Drop]]:
     hn_config = topic.sources.get("hacker_news")
     if hn_config is None:
         return [], []
@@ -51,7 +52,7 @@ def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Dr
     if topic.keywords and len(failures) == len(topic.keywords):
         raise failures[-1]  # every keyword failed: let the pipeline log "collect failed"
 
-    candidates: list[Candidate] = []
+    candidates: list[Item] = []
     drops: list[Drop] = []
     for object_id, hit in hits_by_id.items():
         url = hit.get("url") or f"https://news.ycombinator.com/item?id={object_id}"
@@ -69,14 +70,16 @@ def collect(topic: TopicConfig, now: datetime) -> tuple[list[Candidate], list[Dr
         if excerpt:
             excerpt = excerpt[:EXCERPT_MAX_CHARS]
         candidates.append(
-            Candidate(
+            Item(
                 url=url,
                 title=title,
-                source="hn",
+                kind="hn",
+                source_id="hacker_news",
+                source_name="Hacker News",
                 topic=topic.slug,
                 published_at=datetime.fromtimestamp(created_at_i, tz=timezone.utc),
                 score=hit.get("points"),
-                excerpt=excerpt,
+                text=excerpt,
             )
         )
 

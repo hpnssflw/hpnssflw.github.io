@@ -8,7 +8,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from agent.sources.base import Candidate, Drop
+from agent.item import Item
+from agent.sources.base import Drop
 
 RUNS_DIR = Path(__file__).parent / "runs"
 
@@ -35,7 +36,7 @@ class EventWriter:
         self._file.write(json.dumps(record, sort_keys=True) + "\n")
         self._file.flush()
 
-    def emit_candidate(self, stage: str, source: str, topic: str, candidate: Candidate) -> None:
+    def emit_candidate(self, stage: str, source: str, topic: str | None, candidate: Item) -> None:
         self.emit(
             stage,
             "candidate",
@@ -45,7 +46,7 @@ class EventWriter:
             title=candidate.title,
         )
 
-    def emit_drop(self, stage: str, topic: str, drop: Drop) -> None:
+    def emit_drop(self, stage: str, topic: str | None, drop: Drop) -> None:
         self.emit(
             stage,
             "drop",

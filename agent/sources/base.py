@@ -1,29 +1,14 @@
-"""Shared types every source connector and pipeline stage depends on."""
+"""Shared types every source connector and pipeline stage depends on
+(the collected record itself, Item, lives in agent/item.py)."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
-
-
-@dataclass(frozen=True)
-class Candidate:
-    """One item a source connector found. published_at is mandatory —
-    a connector that cannot determine a date drops the item instead of
-    inventing one."""
-
-    url: str
-    title: str
-    source: str  # hn | github | reddit | rss | releases | web
-    topic: str  # topic slug
-    published_at: datetime  # timezone-aware UTC
-    score: int | None  # HN points, Reddit ups; None where the source has no score
-    excerpt: str | None
 
 
 @dataclass(frozen=True)
 class Drop:
-    """A candidate (or would-be candidate) that a pipeline stage rejected,
+    """An item (or would-be item) that a pipeline stage rejected,
     with enough detail to answer "why" without reading code."""
 
     url: str

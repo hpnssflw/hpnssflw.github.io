@@ -92,43 +92,43 @@ def process_topic(
 
     eligible = list(cached)
     below: list[RankedItem] = []
-    for item in fresh:
-        (eligible if item.score >= topic.min_relevance else below).append(item)
-    for item in below:
+    for ranked in fresh:
+        (eligible if ranked.score >= topic.min_relevance else below).append(ranked)
+    for ranked in below:
         writer.emit_drop(
             "rank",
             topic.slug,
             Drop(
-                url=item.candidate.url,
-                title=item.candidate.title,
+                url=ranked.item.url,
+                title=ranked.item.title,
                 reason="below_relevance",
-                detail={"score": item.score, "min_relevance": topic.min_relevance},
+                detail={"score": ranked.score, "min_relevance": topic.min_relevance},
             ),
         )
 
     queued_before = rank_cache.queued_in_last_24h(state, topic.slug, now)
     remaining = max(0, topic.max_items_per_day - queued_before)
     keep, over_cap = rank_cache.select(eligible, remaining)
-    for item in over_cap:
+    for ranked in over_cap:
         writer.emit_drop(
             "rank",
             topic.slug,
             Drop(
-                url=item.candidate.url,
-                title=item.candidate.title,
+                url=ranked.item.url,
+                title=ranked.item.title,
                 reason="over_max_items",
                 detail={"max_items_per_day": topic.max_items_per_day, "queued_last_24h": queued_before},
             ),
         )
-    for item in keep:
+    for ranked in keep:
         writer.emit(
             "rank",
             "kept",
             topic=topic.slug,
-            source=item.candidate.source,
-            url=item.candidate.url,
-            title=item.candidate.title,
-            score=item.score,
+            source=ranked.item.kind,
+            url=ranked.item.url,
+            title=ranked.item.title,
+            score=ranked.score,
         )
 
     rank_cache.mark_queued(state, keep, topic.slug, now)
@@ -149,16 +149,16 @@ def format_preview(topic: TopicConfig, result: TopicResult) -> str:
         f"{result.queued_before} queued in the last 23h"
     ]
     rows = (
-        [("queue", item) for item in result.kept]
-        + [("over cap", item) for item in result.over_cap]
-        + [("below", item) for item in sorted(result.below, key=lambda i: i.score, reverse=True)]
+        [("queue", ranked) for ranked in result.kept]
+        + [("over cap", ranked) for ranked in result.over_cap]
+        + [("below", ranked) for ranked in sorted(result.below, key=lambda r: r.score, reverse=True)]
     )
-    for verdict, item in rows:
+    for verdict, ranked in rows:
         lines.append(
-            f"  {verdict:<12} {item.score:>2}  {item.candidate.source:<6}  "
-            f"{item.candidate.title[:PREVIEW_TITLE_CHARS]}"
+            f"  {verdict:<12} {ranked.score:>2}  {ranked.item.kind:<6}  "
+            f"{ranked.item.title[:PREVIEW_TITLE_CHARS]}"
         )
-        lines.append(f"  {'':<12}     {item.summary}")
+        lines.append(f"  {'':<12}     {ranked.summary}")
     for drop in result.cached_below:
         lines.append(f"  {'cached-below':<12} {drop.detail['relevance']:>2}  {'':<6}  {drop.title[:PREVIEW_TITLE_CHARS]}")
     if len(lines) == 1:

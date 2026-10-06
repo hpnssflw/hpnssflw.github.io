@@ -14,7 +14,8 @@ from urllib.parse import urlparse
 from openai import OpenAI
 
 from agent.config import Settings
-from agent.sources.base import Candidate, TopicConfig
+from agent.item import Item
+from agent.sources.base import TopicConfig
 
 # Bump whenever RANK_SYSTEM_PROMPT or _build_batch_prompt's wording
 # changes, OR when llm.model changes (the model is not in rubric_hash):
@@ -46,7 +47,7 @@ RANK_SYSTEM_PROMPT = (
 
 @dataclass(frozen=True)
 class RankedItem:
-    candidate: Candidate
+    item: Item
     summary: str
     score: int
     failed: bool = False  # no call produced a verdict; never cached, retried next run
@@ -80,22 +81,22 @@ def _domain(url: str) -> str:
     return host[4:] if host.startswith("www.") else host
 
 
-def _context(candidate: Candidate) -> str:
+def _context(candidate: Item) -> str:
     """`hn · 312 points · example.com` / `github · 1204 stars` — HN link
     posts carry no excerpt, so points and domain are most of what the
     ranker has beyond the title."""
-    parts = [candidate.source]
+    parts = [candidate.kind]
     if candidate.score is not None:
-        unit = "stars" if candidate.source == "github" else "points"
+        unit = "stars" if candidate.kind == "github" else "points"
         parts.append(f"{candidate.score} {unit}")
-    if candidate.source != "github":
+    if candidate.kind != "github":
         domain = _domain(candidate.url)
         if domain:
             parts.append(domain)
     return " · ".join(parts)
 
 
-def _build_batch_prompt(topic: TopicConfig, settings: Settings, candidates: list[Candidate]) -> str:
+def _build_batch_prompt(topic: TopicConfig, settings: Settings, candidates: list[Item]) -> str:
     lines = [
         f"Reader: {settings.ranking.reader}",
         f"Topic: {topic.name}",
@@ -108,7 +109,7 @@ def _build_batch_prompt(topic: TopicConfig, settings: Settings, candidates: list
         "Candidates:",
     ]
     for index, candidate in enumerate(candidates, start=1):
-        excerpt = f" — {candidate.excerpt}" if candidate.excerpt else ""
+        excerpt = f" — {candidate.text}" if candidate.text else ""
         lines.append(f"{index}. [{_context(candidate)}] {candidate.title}{excerpt}")
     return "\n".join(lines)
 
@@ -143,7 +144,7 @@ def _parse_batch_response(raw: str, expected_count: int) -> list[dict] | None:
 
 
 def _call_batch(
-    client: OpenAI, settings: Settings, topic: TopicConfig, candidates: list[Candidate]
+    client: OpenAI, settings: Settings, topic: TopicConfig, candidates: list[Item]
 ) -> list[dict] | None:
     response = client.chat.completions.create(
         model=settings.llm.model,
@@ -159,7 +160,7 @@ def _call_batch(
 
 
 def _rank_chunk(
-    client: OpenAI, settings: Settings, topic: TopicConfig, candidates: list[Candidate]
+    client: OpenAI, settings: Settings, topic: TopicConfig, candidates: list[Item]
 ) -> list[RankedItem]:
     result = _call_batch(client, settings, topic, candidates)
     if result is None:
@@ -168,7 +169,7 @@ def _rank_chunk(
     if result is not None:
         by_id = {entry["id"]: entry for entry in result}
         return [
-            RankedItem(candidate=c, summary=by_id[i]["summary"], score=by_id[i]["score"])
+            RankedItem(item=c, summary=by_id[i]["summary"], score=by_id[i]["score"])
             for i, c in enumerate(candidates, start=1)
         ]
 
@@ -178,14 +179,14 @@ def _rank_chunk(
     for candidate in candidates:
         single = _call_batch(client, settings, topic, [candidate])
         if single is None:
-            ranked.append(RankedItem(candidate=candidate, summary="(ranking failed)", score=1, failed=True))
+            ranked.append(RankedItem(item=candidate, summary="(ranking failed)", score=1, failed=True))
         else:
             entry = single[0]
-            ranked.append(RankedItem(candidate=candidate, summary=entry["summary"], score=entry["score"]))
+            ranked.append(RankedItem(item=candidate, summary=entry["summary"], score=entry["score"]))
     return ranked
 
 
-def rank_topic(topic: TopicConfig, candidates: list[Candidate], settings: Settings) -> list[RankedItem]:
+def rank_topic(topic: TopicConfig, candidates: list[Item], settings: Settings) -> list[RankedItem]:
     if not candidates:
         return []
     client = _client(settings)

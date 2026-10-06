@@ -14,7 +14,8 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 
-from agent.sources.base import Candidate, Drop
+from agent.item import Item
+from agent.sources.base import Drop
 
 
 @dataclass
@@ -59,7 +60,7 @@ def save_state(path: Path, state: dict[str, StateEntry]) -> None:
     path.write_text(json.dumps(raw, indent=2, sort_keys=True), encoding="utf-8")
 
 
-def record_seen(state: dict[str, StateEntry], candidate: Candidate, now: datetime) -> None:
+def record_seen(state: dict[str, StateEntry], candidate: Item, now: datetime) -> None:
     """Update (or create) the state entry for a candidate. Called for
     every candidate collected this run, whether or not it survives later
     filters — this is how score history accumulates for items that are
@@ -78,8 +79,8 @@ def mark_sent_url(state: dict[str, StateEntry], url: str) -> None:
     record_seen to have already run for this URL in some prior run — a
     KeyError here means the pipeline sent something it never recorded,
     which is a bug worth surfacing loudly rather than papering over.
-    Takes a bare URL (not a Candidate) because the pending queue stores
-    items as flat PendingItem records, not Candidates."""
+    Takes a bare URL (not an Item) because the pending queue stores
+    items as flat PendingItem records, not Items."""
     state[url_hash(url)].times_sent += 1
 
 
@@ -93,10 +94,10 @@ def dismiss_url(state: dict[str, StateEntry], url: str, reason: str) -> None:
 
 
 def filter_seen(
-    candidates: list[Candidate],
+    candidates: list[Item],
     state: dict[str, StateEntry],
-) -> tuple[list[Candidate], list[Drop]]:
-    kept: list[Candidate] = []
+) -> tuple[list[Item], list[Drop]]:
+    kept: list[Item] = []
     drops: list[Drop] = []
     for candidate in candidates:
         entry = state.get(url_hash(candidate.url))

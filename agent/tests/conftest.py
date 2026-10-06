@@ -37,10 +37,22 @@ def make_item(
     published_at: datetime = FROZEN_NOW,
 ):
     """One collected item, as the pipeline passes it between stages."""
-    from agent.sources.base import Candidate
+    from agent.item import Item
 
-    return Candidate(
-        url=url, title=title, source=kind, topic=topic, published_at=published_at, score=score, excerpt=text
+    source_id, source_name = {
+        "hn": ("hacker_news", "Hacker News"),
+        "github": ("github_trending", "GitHub"),
+    }.get(kind, ("example-feed", "Example feed"))
+    return Item(
+        url=url,
+        title=title,
+        kind=kind,
+        source_id=source_id,
+        source_name=source_name,
+        topic=topic,
+        published_at=published_at,
+        score=score,
+        text=text,
     )
 
 
