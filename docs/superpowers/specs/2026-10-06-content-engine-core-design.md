@@ -274,12 +274,12 @@ saves `state.json` (as today) and writes `run-result.json`.
   per-topic ranking the fixture's `topic` must match the topic asked.
 
 `--offline` swaps the fetcher and ranker and uses `offline.now` as the
-clock; approval and delivery are whatever the preset says (the demo
-presets use `file` for both). Nothing reaches the network.
+clock. It also requires `file` approval and `file` delivery (the demo
+presets use both), so nothing reaches the network.
 
 ## Classification (`agent/summarize.py`)
 
-- `classify(items, topics, reader, language, settings) -> list[RankedItem]`,
+- `classify(items, topics, llm, reader, language) -> list[RankedItem]`,
   batched by `RANK_BATCH_SIZE`, validated, one retry, then one call per
   item — the same mechanics as `rank_topic`.
 - Its own `CLASSIFY_SYSTEM_PROMPT`: score each candidate 1–10 against the
@@ -323,10 +323,12 @@ source file, commit and license; the full MIT text goes in
 are synchronous over the fetcher.
 
 - **`agent/sources/rss.py`** (from `src/scrapers/rss.py`):
-  `collect_feed(feed, now, fetcher) -> (items, drops)`. `feedparser` on
+  `collect_feed(feed, topic, fetcher) -> (items, drops)` (`topic` is the
+  slug for a topic's feed, `None` for a preset feed). `feedparser` on
   the fetched bytes (so the feed's declared encoding is honored). Date
   from `published`/`updated`/`created`, structured first, then RFC 822;
-  no date → `undated` drop (Tony's rule, where Horizon skips silently).
+  no date → `undated` drop (Tony's rule, where Horizon skips silently);
+  no link → a new `no_link` drop (Horizon falls back to the feed's URL).
   Text prefers `content` over `summary`/`description` (Horizon prefers
   the summary), HTML stripped with `html.parser`, whitespace collapsed,
   cut to 2000 chars. A feed that fails to fetch or parse raises; the
@@ -485,7 +487,7 @@ in A.
   rankings, seeded state, decisions, goldens.
 - `newsroom-demo/` — `preset.yaml`; three preset feeds (an RSS 2.0 feed
   with `full_text: true` and article pages, an Atom feed, an RSS feed
-  where some items have no date), about 25 fictional regional news items;
+  where some items have no date), about 20 fictional regional news items;
   three topics (incidents, power, economy); `telegram_public` disabled
   with three placeholder channels. Deliberate cases: an item outside the
   window, HTML in a description, one URL in two feeds, an off-topic item
@@ -512,8 +514,8 @@ named or fetched.
   narrative doesn't change: Tony behaves the same.
 - `CLAUDE.md` — the pytest command next to `npm test`, and the control
   room's constants rule.
-- `.gitignore` — `agent/run-result.json`, `agent/outbox/` (Tony's local
-  runs write them into `agent/`) and `.pytest_cache/`.
+- `.gitignore` — `agent/run-result.json` (Tony's local runs write it
+  into `agent/`) and `.pytest_cache/`.
 
 ## Order of work
 
