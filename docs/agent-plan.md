@@ -40,7 +40,7 @@ ranker scores against (see Pipeline).
 - GitHub — GitHub's Search API: recently created repos tagged with one of
   each topic's GitHub topics (`topic:cli`, `topic:llm`, …), ranked by
   stars; every topic uses it.
-- Blog and RSS feeds — a curated list maintained by hand, one per topic.
+- Blog and RSS feeds — a curated list maintained by hand, one per topic (the connector exists since sub-project A, but Tony's topics, loaded by `config.py`, can't carry feeds yet — roadmap item 7).
 - Repo release watching — GitHub releases API for a handful of watched repos per topic; a version bump is unambiguous news.
 - A handful of subreddits per topic — chosen once, revisited later if the signal is bad.
 - Web search — broad net via a dedicated search API with a freshness filter (not Claude's built-in web search, which has no date parameter), catches whatever isn't covered above.
@@ -61,6 +61,25 @@ are dropped rather than passed through. Full detail:
 Every stage emits a structured event to a per-run log, so a run is
 inspectable after the fact — see the run panel plan,
 `docs/superpowers/specs/2026-08-12-run-panel-design.md`.
+
+## Presets and engine
+
+Since sub-project A (`docs/superpowers/specs/2026-10-06-content-engine-core-design.md`)
+the pipeline is an engine run on a preset, one YAML file per client:
+`python -m agent --preset PATH --data-dir DIR`. Tony is the default
+preset, `agent/presets/tony.yaml`, which still reads `defaults.yaml` and
+`topics/*.yaml`; its data stays in `agent/`. Sources come in two scopes:
+query sources and RSS feeds declared under a topic belong to it and are
+ranked against it, as above; RSS feeds declared at preset level are
+classified across all the preset's topics in batched calls. Feeds can
+fetch each article's full text (trafilatura, behind an SSRF guard).
+Approval (`inbox` or a local `file`) and delivery (`telegram` or a local
+`file`) are adapters the preset chooses. Every real run and dry run
+writes `run-result.json` — the assembled config, numbers per stage, drop
+reasons, failures, the queue and delivery — the contract a future preset
+switcher reads. `--offline` runs a preset on its fixtures with no network;
+the newsroom and agro demo presets in `agent/tests/fixtures/` run that
+way. Tests: `agent/venv/Scripts/python -m pytest agent/tests -q`.
 
 ## Proposed stack
 

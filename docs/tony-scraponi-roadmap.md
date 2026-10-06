@@ -84,3 +84,33 @@ monitoring panel built by a separate concurrent session — see
 `PROGRESS.md`'s note under the agent status widget section) is directly
 relevant groundwork for item 4 and should be reviewed before designing
 it, rather than duplicated.
+
+## Content engine (sub-projects A–D)
+
+From 2026-10-06 the agent becomes a configurable content-pipeline
+engine — sources → filter → processing → formatting → approval →
+delivery — with one preset file per client and Tony as the first preset
+(research: `docs/research/oss-reuse.md`, local notes). Each sub-project
+gets its own spec → plan → implementation cycle:
+
+- **A. Engine core + presets** — `Item`, presets, two source scopes
+  (topic feeds; preset feeds classified across topics), RSS and full
+  text ported from Horizon (MIT), `--data-dir`, `--offline`,
+  `run-result.json`; Tony unchanged; newsroom and agro demo presets on
+  offline fixtures. Spec:
+  `docs/superpowers/specs/2026-10-06-content-engine-core-design.md`.
+- **B. Stories** — one news item across sources, "who was first", facts
+  tied to their sources.
+- **C. Approval and delivery** — Telegram buttons as a second approval
+  adapter; several delivery targets per preset.
+- **D. Preset switcher in the control room** — the site reads each
+  preset's `run-result.json`; Tony's settings then move into
+  `agent/presets/tony.yaml`.
+
+Item 7 above becomes a topic-scoped `rss` entry for Web Products. A
+alone isn't enough: Tony's topics still load through `agent/config.py`,
+which doesn't read `sources.rss`, so the entry needs either that loader
+taught to read topic feeds or Tony's settings moved into
+`agent/presets/tony.yaml` (D). `agent/topics/*.yaml` is also a file the
+control room reads, so #7 lands after D or together with the control
+room's support for it.
