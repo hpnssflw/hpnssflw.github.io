@@ -29,6 +29,20 @@ export interface RecentEvent {
   score?: number;
 }
 
+/**
+ * Drop counts by topic slug → stage → reason, from the run's drop events
+ * (agent/status_export.py, 2026-10). Stages: collect, date_guard, dedupe,
+ * rank, inbox. Absent from status.json written before that change.
+ */
+export type DropCounts = Record<string, Record<string, Record<string, number>>>;
+
+/** A stage that failed in this run — which one, never why. */
+export interface RunFailure {
+  stage: string;
+  topic: string | null;
+  source: string | null;
+}
+
 export interface AgentStatus {
   cadence_hours: number;
   delivery_cadence_hours: number;
@@ -40,9 +54,37 @@ export interface AgentStatus {
   funnel: Record<string, FunnelCounts>;
   recent_events: RecentEvent[];
   run_history: RunHistoryEntry[];
+  drops?: DropCounts;
+  failures?: RunFailure[];
 }
 
 const SPARK_GLYPHS = ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"];
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isDropCounts(value: unknown): value is DropCounts {
+  return (
+    isRecord(value) &&
+    Object.values(value).every(
+      (stages) =>
+        isRecord(stages) &&
+        Object.values(stages).every(
+          (reasons) => isRecord(reasons) && Object.values(reasons).every((n) => typeof n === "number"),
+        ),
+    )
+  );
+}
+
+function isRunFailure(value: unknown): value is RunFailure {
+  return (
+    isRecord(value) &&
+    typeof value.stage === "string" &&
+    (value.topic === null || typeof value.topic === "string") &&
+    (value.source === null || typeof value.source === "string")
+  );
+}
 
 /**
  * Structural guard for a fetched `status.json`. The old widget rendered
@@ -67,7 +109,9 @@ export function isAgentStatus(value: unknown): value is AgentStatus {
     (s.topics as TopicStatus[]).every(
       (t) => t && typeof t.slug === "string" && s.funnel != null &&
         typeof (s.funnel as Record<string, unknown>)[t.slug] === "object",
-    )
+    ) &&
+    (s.drops === undefined || isDropCounts(s.drops)) &&
+    (s.failures === undefined || (Array.isArray(s.failures) && s.failures.every(isRunFailure)))
   );
 }
 

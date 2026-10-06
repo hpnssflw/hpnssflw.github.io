@@ -104,3 +104,39 @@ describe("nextRunAt", () => {
     expect(nextRunAt(status)).toBe(Date.parse("2026-09-09T12:00:00+00:00"));
   });
 });
+
+describe("isAgentStatus — drops and failures", () => {
+  const base = makeStatus({
+    topics: [{ slug: "tooling", name: "Tooling", collected: 3, kept: 1 }],
+    funnel: { tooling: { collected: 3, in_window: 3, new: 2, kept: 1 } },
+  });
+
+  it("accepts a payload without them (written before the agent change)", () => {
+    expect(isAgentStatus(base)).toBe(true);
+  });
+
+  it("accepts well-formed drops and failures", () => {
+    expect(
+      isAgentStatus({
+        ...base,
+        drops: { tooling: { dedupe: { seen: 2, already_ranked: 1 } } },
+        failures: [
+          { stage: "collect", topic: "tooling", source: "github_trending" },
+          { stage: "deliver", topic: null, source: null },
+        ],
+      }),
+    ).toBe(true);
+  });
+
+  it("rejects malformed drops", () => {
+    expect(isAgentStatus({ ...base, drops: { tooling: { dedupe: { seen: "2" } } } })).toBe(false);
+    expect(isAgentStatus({ ...base, drops: [] })).toBe(false);
+    expect(isAgentStatus({ ...base, drops: { tooling: [] } })).toBe(false);
+  });
+
+  it("rejects malformed failures", () => {
+    expect(isAgentStatus({ ...base, failures: {} })).toBe(false);
+    expect(isAgentStatus({ ...base, failures: [{ stage: 1, topic: null, source: null }] })).toBe(false);
+    expect(isAgentStatus({ ...base, failures: [{ stage: "rank", topic: 3, source: null }] })).toBe(false);
+  });
+});

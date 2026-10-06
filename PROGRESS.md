@@ -644,7 +644,7 @@ infrastructure.
   Spec: `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-tony-control-room.md`.
   Worktree `.claude/worktrees/admin-panel`, branch `worktree-admin-panel`
-  (not merged). Done: Task 1 (build-time config loader). Next: Task 2.
+  (not merged). Done: Tasks 1–2 (config loader, rail numbers). Next: Task 3.
 
 ### How to resume in a new session
 
