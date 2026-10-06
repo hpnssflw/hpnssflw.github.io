@@ -644,7 +644,7 @@ infrastructure.
   Spec: `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-tony-control-room.md`.
   Worktree `.claude/worktrees/admin-panel`, branch `worktree-admin-panel`
-  (not merged). Done: Tasks 1–4 (config loader, rail numbers, outcomes and queue view, the page with pulse, topic chips and the moderation queue). Next: Task 5 (rail, config spine, outcomes).
+  (not merged). Done: Tasks 1–5 (the full control room page). Next: Task 6 (status_export drops and failures).
 
 ### How to resume in a new session
 
