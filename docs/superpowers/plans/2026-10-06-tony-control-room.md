@@ -28,6 +28,15 @@
 - Never stage `.claude/settings.local.json`. Commit messages end with `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
 - After each task: update this sub-project's line in `PROGRESS.md` in the task's commit, then stop and hand off per `CLAUDE.md` ("Clean context after each micro-task").
 
+### Coordination with the content engine (sub-project A, branch `worktree-engine`)
+
+A parallel session refactors the agent into a preset engine (spec `docs/superpowers/specs/2026-10-06-content-engine-core-design.md` and plan `docs/superpowers/plans/2026-10-06-content-engine-core.md`, both on `worktree-engine`). Never enter its worktree (`.claude/worktrees/engine`) or edit its branch. What it means here:
+
+- **The config contract holds.** A keeps `agent/defaults.yaml`, `agent/topics/*.yaml`, `agent/config.py`, `agent-run.yml` and `agent/status_export.py` untouched, and keeps `RANK_BATCH_SIZE = 40`, `RANK_PROMPT_VERSION = 2`, the single `temperature=0` and `QUEUE_WINDOW = timedelta(hours=23)` byte for byte (pinned by its `agent/tests/test_control_room_contract.py`). `lib/agent-config.ts` needs no change for A. A adds `agent/presets/` — the loader reads only `agent/topics/*.yaml`, so that's fine.
+- **`status.json` golden.** A pins Tony's real-run `status.json` byte for byte in `agent/tests/fixtures/tony/golden/real/status.json`, and its rule is that a changed golden is a regression. Task 6 below adds `drops` and `failures` to that file — the one deliberate exception. Task 6 has a pre-step for whichever branch lands first.
+- **`CLAUDE.md`.** This plan's Task 1 adds the bullet about the control room reading agent constants at build time. A's Task 13 adds a "Verify agent changes" bullet that repeats the same rule; when the two meet in a merge, keep one statement of the rule (this plan's bullet) and A's pytest instructions.
+- **Later (sub-project D):** the control room moves from `status.json` to each preset's `run-result.json` (stages with drops, failures with `error_type`, enrich/format stages). Not in this plan. Topic-scoped `rss` sources (#7, after A) aren't shown by the config spine yet — `TopicConfigView` reads only `hacker_news` and `github_trending`.
+
 ## File map
 
 | File | Responsibility | Task |
@@ -3784,6 +3793,20 @@ git commit -m "Add the pipeline rail, config spine and outcomes to the control r
 - Consumes: run events as written by `agent/events.py` (`stage`, `event`, `topic`, `source`, `reason`).
 - Produces: `build_status(...)` output gains `"drops": {slug: {stage: {reason: int}}}` (every configured topic present, `{}` when nothing dropped) and `"failures": [{"stage": str, "topic": str | None, "source": str | None}]` — the shapes `lib/agent-status.ts` (Task 2) accepts.
 
+- [ ] **Step 0: Has the content engine (A) landed on `main`?**
+
+Run: `git fetch origin && git ls-tree -d origin/main agent/tests`
+
+- **Nothing printed (A not merged):** do Steps 1–5 as written. In the commit message body add: `Content engine A: when it merges main, its golden agent/tests/fixtures/tony/golden/real/status.json gains exactly these two keys (re-record it; nothing else may change).` and tell Artem, so the engine session knows.
+- **`agent/tests` printed (A merged):** first `git merge origin/main` into this worktree (resolve; `npm test` and `npm run build` must still pass). Then do Steps 1–5 with two changes: (a) instead of the throwaway script, put the same assertions in `agent/tests/test_status_export.py` as a pytest test (`def test_drops_and_failures():` with the script's body), and run the whole suite with `agent/venv/Scripts/python -m pytest agent/tests -q` (create the venv per `CLAUDE.md` if missing); (b) the real-run characterization test will fail on `golden/real/status.json` only — re-record that one file from the new code, then prove nothing but the two keys changed:
+
+```bash
+git show HEAD:agent/tests/fixtures/tony/golden/real/status.json > .superpowers/sdd/2026-10-06-control-room/status-golden-old.json
+py -3 -c "import json; a=json.load(open('.superpowers/sdd/2026-10-06-control-room/status-golden-old.json', encoding='utf-8')); b=json.load(open('agent/tests/fixtures/tony/golden/real/status.json', encoding='utf-8')); b.pop('drops'); b.pop('failures'); assert a == b, 'golden changed beyond drops/failures'; print('golden ok')"
+```
+
+Expected: `golden ok`, and `git diff --name-status -- agent/tests/fixtures` lists only `M agent/tests/fixtures/tony/golden/real/status.json`. Stage the test and that golden with Step 5's commit.
+
 - [ ] **Step 1: Write the check script (it must fail first)**
 
 Create `.superpowers/sdd/2026-10-06-control-room/task6-check.py`:
@@ -4124,5 +4147,7 @@ git fetch origin
 git merge origin/main            # resolve if needed; re-run Step 3's checks if anything merged
 git push origin HEAD:main        # fast-forward only: the remote refuses anything else
 ```
+
+If `origin/main` now contains the content engine (A) and this branch's Task 6 was done before it, the merge brings A's `status.json` golden: re-record it exactly as Task 6 Step 0 describes (only `drops` and `failures` may differ) and run `agent/venv/Scripts/python -m pytest agent/tests -q` before pushing. Resolve `CLAUDE.md` per the coordination note in Global Constraints.
 
 If the push is refused, fetch, merge `origin/main` again and repeat; never force. Tell Artem to `git pull` in the main checkout (`C:\A\polozov`). After the push: confirm the deploy run succeeds (`gh run list --workflow deploy.yml --limit 1`), trigger `gh workflow run agent-run.yml`, wait for it, and check `git show origin/agent-data:agent/status.json` has `drops` and `failures`; then open the live `/researcher/queue/` and confirm the rail's dedupe and rank numbers are filled. Record all of it in `PROGRESS.md` and commit `Reconcile status docs with the control room shipping` on `main`, then push.
