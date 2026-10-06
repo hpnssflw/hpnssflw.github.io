@@ -34,7 +34,7 @@ function isPendingItem(value: unknown): value is PendingItem {
 
 /**
  * Structural guard for a fetched `pending.json`. Mirrors
- * `lib/agent-status.ts`'s `isAgentStatus`: fields get read during React
+ * `lib/agent-status.ts`'s `parseAgentStatus`: fields get read during React
  * render, not inside a fetch `.then()`, so a shape drift must fail closed
  * to an "unavailable" state rather than crash the route.
  */

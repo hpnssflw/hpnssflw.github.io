@@ -73,6 +73,11 @@ initiatives — see `PROGRESS.md` for status of each.
   `cron:` line from `agent-run.yml`. Anything missing throws and fails the
   site build, on purpose: when agent work renames or moves one of these,
   update `lib/agent-config.ts` in the same change.
+  `status.json` is held to `lib/agent-status.ts`'s `AgentStatus` type the
+  same way at run time: `parseAgentStatus` checks every field the type
+  declares, so an agent change that renames, removes or retypes one (or
+  adds a `recent_events` verdict) must update that type and guard in the
+  same change, or every agent widget shows "unavailable".
 - **The Tony Scraponi inbox's decisions live in a separate public repo,
   `hpnssflw/tony-inbox`** (`decisions.json` on its `main`). The site's
   `/researcher/queue/` owner mode is its only writer, with a

@@ -667,11 +667,15 @@ infrastructure.
   and brings `agent/tests` + pytest.
   Final whole-branch review (opus): 0 Critical; 1 Important (I1,
   reduced-motion comets) and minors M3, M5, M6 fixed in one fix wave.
-  Deferred: M1 (`isAgentStatus` doesn't validate dates — a malformed date
-  would crash the route), M2 (`isAgentStatus` is shared, so a bad
-  `drops`/`failures` would blank the home teaser and agent widget too —
-  consider a softer guard before sub-project D), M4 (the queue could
-  refuse non-http(s) item URLs), plus the remaining task-review minors.
+  Deferred: M4 (the queue could refuse non-http(s) item URLs), plus the
+  remaining task-review minors.
+  **Hardening (in progress, 2026-10-06):** spec
+  `docs/superpowers/specs/2026-10-06-control-room-hardening-design.md`,
+  plan `docs/superpowers/plans/2026-10-06-control-room-hardening.md`.
+  Task 1 done: `parseAgentStatus` replaces `isAgentStatus` — every field
+  the `AgentStatus` type declares is checked, entries included, dates
+  must parse; a malformed `drops`/`failures` is stripped instead of
+  blanking the home widgets (M1, M2). Next: Task 2 (home countdown).
   Later: editing config from the page (a repo the agent only reads, like
   the inbox); `/researcher/agent/`'s countdown still uses
   `updated_at + cadence` — switch it to `lib/cron.ts`'s `nextRun`.
