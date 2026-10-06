@@ -2,16 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { type Decision, type Decisions, itemStatus } from "@/lib/inbox";
-import type { PendingItem } from "@/lib/pending-queue";
+import { type PendingItem, itemDomain, safeHref } from "@/lib/pending-queue";
 import { STATUS_FILTERS, type StatusFilter, moveSelection } from "@/lib/queue-view";
-
-function domain(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, "");
-  } catch {
-    return "";
-  }
-}
 
 function typingIn(target: EventTarget | null): boolean {
   return (
@@ -23,7 +15,7 @@ function typingIn(target: EventTarget | null): boolean {
 /**
  * The moderation queue: status chips, one row per item (score, title,
  * source · domain · topic · date), the selected row unfolded with its
- * summary and actions. Keys: j/k move and o opens for everyone; a/r/u
+ * summary and actions. Keys: j/k move and o opens an http(s) link for everyone; a/r/u
  * approve, reject and undo for the owner.
  */
 export default function QueuePane({
@@ -65,7 +57,8 @@ export default function QueuePane({
       if (key === "j" || key === "k") {
         onSelect(moveSelection(rows, selected?.url ?? null, key === "j" ? 1 : -1));
       } else if (key === "o" && selected) {
-        window.open(selected.url, "_blank", "noopener,noreferrer");
+        const href = safeHref(selected.url);
+        if (href) window.open(href, "_blank", "noopener,noreferrer");
       } else if ((key === "a" || key === "r" || key === "u") && canDecide && !busy && selected) {
         const status = itemStatus(decisions, selected.url);
         if (key === "u" && status !== "waiting") onDecide(selected, null);
@@ -113,6 +106,7 @@ export default function QueuePane({
             {rows.map((item) => {
               const on = selected?.url === item.url;
               const status = itemStatus(decisions, item.url);
+              const href = safeHref(item.url);
               return (
                 <li
                   key={item.url}
@@ -129,7 +123,7 @@ export default function QueuePane({
                     )}
                   </div>
                   <div className="cr-meta">
-                    {item.source} · {domain(item.url)}
+                    {item.source} · {itemDomain(item.url)}
                     {topicNames && ` · ${topicNames[item.topic] ?? item.topic}`} · {item.pending_since.slice(5, 10)}
                   </div>
                   {on && (
@@ -175,15 +169,21 @@ export default function QueuePane({
                               <kbd>u</kbd> undo
                             </button>
                           ))}
-                        <a
-                          className="inbox-button"
-                          href={item.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={(event) => event.stopPropagation()}
-                        >
-                          <kbd>o</kbd> open ↗
-                        </a>
+                        {href ? (
+                          <a
+                            className="inbox-button"
+                            href={href}
+                            target="_blank"
+                            rel="noreferrer"
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            <kbd>o</kbd> open ↗
+                          </a>
+                        ) : (
+                          <button type="button" className="inbox-button" disabled title="not an http(s) link">
+                            <kbd>o</kbd> open ↗
+                          </button>
+                        )}
                       </div>
                     </div>
                   )}

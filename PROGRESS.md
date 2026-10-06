@@ -666,17 +666,19 @@ infrastructure.
   `task6-check.py` once `main` (A) was merged into this branch (`5083043`).
   Final whole-branch review (opus): 0 Critical; 1 Important (I1,
   reduced-motion comets) and minors M3, M5, M6 fixed in one fix wave.
-  Deferred: M4 (the queue could refuse non-http(s) item URLs), plus the
-  remaining task-review minors.
-  **Hardening (in progress, 2026-10-06):** spec
+  Deferred: the remaining task-review minors.
+  **Hardening: shipped 2026-10-06** (spec
   `docs/superpowers/specs/2026-10-06-control-room-hardening-design.md`,
-  plan `docs/superpowers/plans/2026-10-06-control-room-hardening.md`.
-  Task 1 done: `parseAgentStatus` replaces `isAgentStatus` — every field
-  the `AgentStatus` type declares is checked, entries included, dates
-  must parse; a malformed `drops`/`failures` is stripped instead of
-  blanking the home widgets (M1, M2). Task 2 done: the home widget's
-  "next check" counts down to `nextRun` of `agent-run.yml`'s cron (read at
-  build time), the same slot the control room shows. Next: Task 3 (M4).
+  plan `docs/superpowers/plans/2026-10-06-control-room-hardening.md`):
+  `parseAgentStatus` replaces `isAgentStatus` — every field the
+  `AgentStatus` type declares is checked, entries included, dates must
+  parse, and a malformed `drops`/`failures` is stripped instead of
+  blanking the home widgets (M1, M2); the queue links and opens only
+  http(s) item URLs and shows the scheme otherwise (M4); the home
+  widget's "next check" counts down to the cron slot the control room
+  shows. A required `status.json` field renamed, removed or retyped on
+  the agent side must be mirrored in `lib/agent-status.ts` (see
+  `CLAUDE.md`), or every agent widget shows "unavailable".
   Later: editing config from the page (a repo the agent only reads, like
   the inbox).
 - **Content engine, sub-project A (engine core + presets): shipped.**
@@ -780,10 +782,10 @@ follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped. Sub-project #6 (topic & source quality) is shipped; its 3-day watch
 and the #7 decision are next (see its bullet above). Sub-project #8 (control
-room) is shipped and live (2026-10-06); its deferred review items (M1, M2,
-M4) and "Later" list are in its bullet above. Later candidates: a Web
-Products source (#7), a Telegram DM when items await review, summary
-editing. Content engine sub-project A is shipped and live (2026-10-06,
+room) is shipped and live (2026-10-06), and so is its hardening (M1, M2,
+M4, home countdown); its "Later" list is in its bullet above. Later
+candidates: a Web Products source (#7), a Telegram DM when items await
+review, summary editing. Content engine sub-project A is shipped and live (2026-10-06,
 `bed2bb7`); next in that line are B, C, D — each needs its own
 brainstorm → spec → plan (see its bullet above and
 `docs/tony-scraponi-roadmap.md`).
