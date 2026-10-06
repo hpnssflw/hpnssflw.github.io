@@ -1,7 +1,6 @@
 "use client";
 
 import { type FormEvent, useState } from "react";
-import type { Decision, ItemStatus } from "@/lib/inbox";
 
 const TOKEN_KEY = "tony-inbox-token";
 
@@ -32,51 +31,12 @@ export function clearToken(): void {
   }
 }
 
-export function InboxItemActions({
-  status,
-  disabled,
-  onDecide,
-}: {
-  status: ItemStatus;
-  disabled: boolean;
-  onDecide: (decision: Decision | null) => void;
-}) {
-  return (
-    <div className="inbox-actions">
-      {status === "waiting" ? (
-        <>
-          <button
-            type="button"
-            className="inbox-button"
-            disabled={disabled}
-            onClick={() => onDecide("approve")}
-          >
-            approve
-          </button>
-          <button
-            type="button"
-            className="inbox-button"
-            disabled={disabled}
-            onClick={() => onDecide("reject")}
-          >
-            reject
-          </button>
-        </>
-      ) : (
-        <button
-          type="button"
-          className="inbox-button"
-          disabled={disabled}
-          onClick={() => onDecide(null)}
-        >
-          undo
-        </button>
-      )}
-    </div>
-  );
-}
-
-export function InboxOwnerBar({
+/**
+ * The control room pulse's right end: "owner" opens the token field in
+ * place; signed in, "sign out". Errors (a rejected token, a failed write)
+ * show under it in red.
+ */
+export function OwnerSlot({
   signedIn,
   error,
   onSignIn,
@@ -102,17 +62,11 @@ export function InboxOwnerBar({
   }
 
   return (
-    <div className="inbox-owner">
+    <div className="owner-slot">
       {signedIn ? (
-        <>
-          <p className="inbox-note">
-            approved items go out with the next digest; the agent picks up
-            decisions on its run every 4 hours.
-          </p>
-          <button type="button" className="inbox-button" onClick={onSignOut}>
-            sign out
-          </button>
-        </>
+        <button type="button" className="inbox-button" onClick={onSignOut}>
+          sign out
+        </button>
       ) : open ? (
         <form className="inbox-token-form" onSubmit={submit}>
           <input
@@ -121,6 +75,7 @@ export function InboxOwnerBar({
             aria-label="GitHub token for hpnssflw/tony-inbox"
             placeholder="github token"
             autoComplete="off"
+            autoFocus
             value={draft}
             onChange={(event) => setDraft(event.target.value)}
           />

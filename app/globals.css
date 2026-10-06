@@ -963,9 +963,10 @@ a:focus-visible {
 
 /* --- Tony Scraponi teaser -----------------------------------------
    components/AppsStrip.tsx, under the home columns: two dense lines on
-   the home cards' surface. Left: the name, "coming soon" and what it is,
-   then the features. Right: the agent's live numbers, then "follow the
-   build ↗". A slow lime comet along the bottom says "in the works". */
+   the home cards' surface. Left: the name and what it is, then the
+   features. Right: the agent's live numbers, then "open ↗" (the control
+   room) and "follow the build ↗". A slow lime comet along the bottom
+   says the agent is live. */
 
 #apps {
   padding-bottom: 80px;
@@ -1016,10 +1017,6 @@ a:focus-visible {
   color: var(--text-strong);
 }
 
-.tony-eyebrow {
-  color: var(--agent-lime);
-}
-
 .tony-pitch,
 .tony-features {
   color: var(--muted);
@@ -1059,9 +1056,16 @@ a:focus-visible {
   color: var(--text);
 }
 
-.tony-follow {
+.tony-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
   margin: 0;
   text-transform: lowercase;
+}
+
+.tony-links .card-action {
+  margin-left: 0;
 }
 
 .app-icon {
@@ -1341,9 +1345,13 @@ footer a {
     animation-duration: var(--comet-duration) !important;
   }
 
-  /* The agent widget's comet is pure decoration, and an infinite loop at
-     0.01ms would flicker — drop it. */
-  .agent-widget-card .card-comet {
+  /* The agent widget's, the home teaser's and the control room's comets
+     are pure decoration, and an infinite loop at 0.01ms would flicker —
+     drop them. */
+  .agent-widget-card .card-comet,
+  .tony-card .card-comet,
+  .cr-pulse .card-comet,
+  .cr-rail .card-comet {
     display: none;
   }
 }
@@ -1684,12 +1692,6 @@ footer a {
   color: var(--agent-red);
 }
 
-.inbox-actions {
-  display: flex;
-  gap: 20px;
-  margin-top: 12px;
-}
-
 .inbox-button {
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
@@ -1718,14 +1720,6 @@ footer a {
   cursor: default;
 }
 
-.inbox-owner {
-  margin-top: 48px;
-  font-family: var(--font-mono);
-  font-size: var(--fs-2xs);
-  color: var(--muted);
-}
-
-.inbox-note,
 .inbox-error {
   margin: 0 0 8px;
   line-height: 1.8;
@@ -1759,4 +1753,658 @@ footer a {
 .inbox-token:focus-visible {
   outline: 1px solid var(--muted);
   outline-offset: 2px;
+}
+
+/* --- Control room (/researcher/queue/) ---------------------------
+   components/ControlRoom.tsx — Tony Scraponi's one-screen view of the
+   research agent: the pulse, the pipeline rail, topic chips, then the
+   queue beside the config spine and outcomes. The home cards' surface
+   (--card-bg, blur, no borders), mono 10px meta; lime and red only where
+   they already mean kept/approved and dropped/rejected/stale. From 900px
+   wide the page fits the window and the panes scroll inside; below
+   ~690px of height it scrolls rather than cut anything off. */
+
+/* The footer's 96px of bottom air would push the page past one screen. */
+body:has(.cr) footer {
+  padding-bottom: 14px;
+}
+
+.cr {
+  --cr-chrome: 130px; /* the site header (~62px) + this slim footer (~64px) */
+}
+
+.cr-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.cr b,
+.cr-value {
+  font-weight: inherit;
+  color: var(--text-strong);
+}
+
+.cr-label,
+.cr-k {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cr kbd {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text);
+  border: 1px solid var(--agent-border);
+  border-radius: 3px;
+  padding: 0 4px;
+  margin-right: 2px;
+}
+
+/* Pulse: the Tony teaser's strip, with a slow lime comet. */
+.cr-pulse {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 16px;
+  padding: 10px 16px;
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  --comet-duration: 60s;
+  --comet-color: var(--agent-lime);
+}
+
+.cr-pulse .card-comet-run {
+  animation-iteration-count: infinite;
+}
+
+.cr-pulse-id {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 1.4;
+  text-transform: lowercase;
+}
+
+.cr-pulse-line {
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.cr-sep {
+  margin: 0 7px;
+  color: color-mix(in srgb, var(--muted) 50%, transparent);
+}
+
+.owner-slot {
+  text-align: right;
+}
+
+.owner-slot .inbox-error {
+  margin: 4px 0 0;
+}
+
+/* Chips: topic (filters everything) and status (the queue). */
+.cr-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.cr-chip {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+.cr-chip:hover,
+.cr-chip:focus-visible {
+  color: var(--text);
+}
+
+.cr-chip:focus-visible {
+  outline: 1px solid var(--muted);
+  outline-offset: 4px;
+}
+
+.cr-chip[aria-pressed="true"] {
+  color: var(--text-strong);
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+  text-decoration-thickness: 1px;
+}
+
+.cr-chip-n {
+  color: var(--muted);
+}
+
+/* Panes */
+.cr-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 20px;
+}
+
+.cr-pane {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding-top: 10px;
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+}
+
+.cr-pane-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 16px 8px;
+}
+
+.cr-scroll {
+  flex: 1;
+  min-height: 0;
+  padding: 0 16px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a3a transparent;
+}
+
+.cr-empty {
+  margin: 0;
+  padding: 4px 0;
+}
+
+/* Queue */
+.cr-rows {
+  list-style: none;
+  margin: 0 -16px;
+  padding: 0;
+}
+
+.cr-row {
+  padding: 6px 16px;
+  border-left: 1px solid transparent;
+  cursor: pointer;
+}
+
+.cr-row:hover {
+  background: #ffffff05;
+}
+
+.cr-row[data-selected="true"] {
+  background: #ffffff0a;
+  border-left-color: var(--agent-lime);
+}
+
+.cr-row-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.cr-score {
+  flex: none;
+  width: 14px;
+  color: var(--muted);
+}
+
+.cr-score.is-high {
+  color: var(--agent-lime);
+}
+
+.cr-title {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  color: var(--text-strong);
+  text-transform: lowercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cr-row[data-selected="true"] .cr-title {
+  white-space: normal;
+}
+
+.cr-row[data-status="approved"] .cr-title,
+.cr-row[data-status="rejected"] .cr-title {
+  color: var(--muted);
+}
+
+.cr-decision {
+  flex: none;
+}
+
+.cr-meta,
+.cr-open {
+  padding-left: 24px;
+}
+
+.cr-meta {
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.cr-summary {
+  margin: 4px 0 6px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+  text-transform: lowercase;
+}
+
+.cr-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.cr-actions .inbox-button {
+  padding: 2px 0;
+}
+
+.cr-approve:hover:not(:disabled) {
+  color: var(--agent-lime);
+}
+
+.cr-reject:hover:not(:disabled) {
+  color: var(--agent-red);
+}
+
+.cr-keys {
+  margin: 0;
+  padding: 6px 16px 8px;
+  color: var(--muted);
+  border-top: 1px solid #ffffff0d;
+}
+
+@media (min-width: 900px) {
+  .cr {
+    height: calc(100svh - var(--cr-chrome));
+    min-height: 560px;
+  }
+
+  .cr-wrap {
+    height: 100%;
+  }
+
+  .cr-grid {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .cr-scroll {
+    overflow-y: auto;
+  }
+}
+
+/* Narrow: the page scrolls, moderation first. The grid's panes become
+   items of .cr-wrap (display: contents) so `order` can interleave them
+   with the rail. */
+@media (max-width: 899px) {
+  .cr-pulse {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    row-gap: 6px;
+  }
+
+  .cr-pulse-line {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .cr-grid {
+    display: contents;
+  }
+
+  .cr-pulse {
+    order: 1;
+  }
+
+  .cr-topics {
+    order: 2;
+  }
+
+  .cr-queue {
+    order: 3;
+  }
+
+  .cr-queue .cr-scroll {
+    max-height: 70svh;
+    overflow-y: auto;
+  }
+}
+
+/* Rail: the last run's numbers per stage, a quick lime comet underneath. */
+.cr-rail {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 6px 4px;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  background: var(--card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.5;
+  --comet-duration: 20s;
+  --comet-color: var(--agent-lime);
+}
+
+.cr-rail .card-comet-run {
+  animation-iteration-count: infinite;
+}
+
+.cr-rail li + li .cr-node {
+  border-left: 1px solid #ffffff0f;
+}
+
+.cr-node {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3px 8px;
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  background: none;
+  border: 0; /* the divider comes from `.cr-rail li + li .cr-node`, which is more specific */
+  cursor: pointer;
+}
+
+.cr-node:hover {
+  background: #ffffff05;
+}
+
+.cr-node:focus-visible {
+  outline: 1px solid var(--muted);
+  outline-offset: -1px;
+}
+
+.cr-node[aria-pressed="true"] {
+  background: #ffffff0a;
+}
+
+.cr-node[aria-pressed="true"] .cr-label {
+  color: var(--agent-lime);
+}
+
+.cr-node[data-failed="true"] .cr-label,
+.cr-node[data-failed="true"] .cr-node-line {
+  color: var(--agent-red);
+}
+
+.cr-node-n {
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  font-weight: var(--w-light);
+  line-height: 1.3;
+  color: var(--text-strong);
+}
+
+.cr-node-line {
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+/* Spine: one row per stage, a dot on a 1px line. */
+.cr-spine {
+  list-style: none;
+  margin: 0 -16px;
+  padding: 0;
+}
+
+.cr-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 9px 58px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: baseline;
+  padding: 7px 16px;
+  cursor: pointer;
+}
+
+.cr-stage::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--agent-border);
+}
+
+.cr-stage:first-child::before {
+  top: 14px;
+}
+
+.cr-stage:last-child::before {
+  bottom: calc(100% - 14px);
+}
+
+.cr-stage:hover {
+  background: #ffffff05;
+}
+
+.cr-stage[data-active="true"] {
+  background: #ffffff0a;
+}
+
+.cr-dot {
+  position: relative;
+  align-self: start;
+  width: 9px;
+  height: 9px;
+  margin-top: 5px;
+  border: 1px solid var(--agent-lime);
+  border-radius: 50%;
+  background: var(--agent-bg);
+}
+
+.cr-stage[data-active="true"] .cr-dot {
+  background: var(--agent-lime);
+}
+
+.cr-stage[data-active="true"] > .cr-label {
+  color: var(--agent-lime);
+}
+
+.cr-params {
+  text-transform: lowercase;
+}
+
+.cr-detail {
+  grid-column: 3;
+  margin-top: 2px;
+}
+
+.cr-detail-row {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  column-gap: 10px;
+  margin: 4px 0;
+}
+
+.cr-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 5px;
+}
+
+.cr-tag {
+  text-transform: lowercase;
+  padding: 0 5px;
+  border-radius: 3px;
+  background: #ffffff0d;
+}
+
+.cr-more {
+  font: inherit;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+.cr-prose {
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.cr-criteria {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: lowercase;
+}
+
+.cr-include::before {
+  content: "+ ";
+  color: var(--agent-lime);
+}
+
+.cr-exclude {
+  color: var(--muted);
+}
+
+.cr-exclude::before {
+  content: "− ";
+  color: var(--agent-red);
+}
+
+/* Outcomes, at the foot of the config pane. */
+.cr-outcomes {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #ffffff0d;
+  text-transform: lowercase;
+}
+
+.cr-outcomes .cr-label {
+  margin-bottom: 6px;
+}
+
+.cr-out-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: end;
+}
+
+.cr-out-nums p {
+  margin: 0 0 2px;
+}
+
+.cr-days {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+  margin: 0 6px;
+  vertical-align: -2px;
+}
+
+.cr-day {
+  width: 4px;
+  min-height: 1px;
+  background: color-mix(in srgb, var(--muted) 45%, transparent);
+}
+
+.cr-hist {
+  display: flex;
+  align-items: stretch;
+  gap: 3px;
+  height: 78px;
+}
+
+.cr-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16px;
+}
+
+.cr-bar-track {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cr-bar-fill {
+  width: 100%;
+  min-height: 1px;
+  background: color-mix(in srgb, var(--muted) 45%, transparent);
+}
+
+.cr-bar[data-pass="true"] .cr-bar-fill {
+  background: var(--agent-lime);
+}
+
+.cr-bar-n,
+.cr-bar-x {
+  font-size: 9px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+@media (max-width: 899px) {
+  .cr-rail {
+    order: 4;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cr-rail li:nth-child(3n + 1) .cr-node {
+    border-left: 0;
+  }
+
+  .cr-flow {
+    order: 5;
+  }
+
+  .cr-stage {
+    grid-template-columns: 9px minmax(0, 1fr);
+  }
+
+  .cr-dot {
+    grid-row: 1;
+  }
+
+  .cr-stage > .cr-label,
+  .cr-params,
+  .cr-detail {
+    grid-column: 2;
+  }
+
+  .cr-detail-row,
+  .cr-out-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

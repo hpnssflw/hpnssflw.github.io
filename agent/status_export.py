@@ -2,6 +2,11 @@
 fetches -- from a run's JSONL event log, the pending delivery queue, and the
 previous status.json's run history.
 
+Besides the funnel it carries, per topic, every drop counted by stage and
+reason (`drops`), and which stages failed this run (`failures`) -- never
+the error text, which can carry request URLs. The control room
+(/researcher/queue/) reads both.
+
 Deliberately never reads TopicConfig: this module's only entry point
 accepts a plain dict[str, str] of slug -> display name, so topic source
 config (keywords, subreddits, feed URLs, search queries) has no path into
@@ -32,20 +37,31 @@ def build_status(
     funnel: dict[str, dict[str, int]] = {
         slug: {"collected": 0, "in_window": 0, "new": 0, "kept": 0} for slug in topic_names
     }
+    drops: dict[str, dict[str, dict[str, int]]] = {slug: {} for slug in topic_names}
+    failures: list[dict[str, Any]] = []
     recent_events: list[dict[str, Any]] = []
     dropped_by_stage: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
 
     for event in run_events:
         topic = event.get("topic")
-        if topic not in funnel:
-            continue
         stage = event.get("stage")
         kind = event.get("event")
+
+        if kind == "failed":
+            # Which stage broke, never why: error text can carry request URLs.
+            if topic is None or topic in funnel:
+                failures.append({"stage": stage, "topic": topic, "source": event.get("source")})
+            continue
+        if topic not in funnel:
+            continue
 
         if stage == "collect" and kind == "candidate":
             funnel[topic]["collected"] += 1
         elif kind == "drop":
             dropped_by_stage[topic][stage] += 1
+            reasons = drops[topic].setdefault(stage, {})
+            reason = event.get("reason", "")
+            reasons[reason] = reasons.get(reason, 0) + 1
             recent_events.append(
                 {
                     "ts": event["ts"],
@@ -96,6 +112,8 @@ def build_status(
             for slug, c in funnel.items()
         ],
         "funnel": funnel,
+        "drops": drops,
+        "failures": failures,
         "recent_events": recent_events,
         "run_history": run_history,
     }

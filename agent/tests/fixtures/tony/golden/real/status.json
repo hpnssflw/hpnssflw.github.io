@@ -1,6 +1,46 @@
 {
   "cadence_hours": 4,
   "delivery_cadence_hours": 24,
+  "drops": {
+    "ai-engineering": {
+      "dedupe": {
+        "already_ranked": 1,
+        "seen": 1
+      },
+      "rank": {
+        "below_relevance": 2,
+        "over_max_items": 3
+      }
+    },
+    "tooling": {
+      "collect": {
+        "undated": 1
+      },
+      "date_guard": {
+        "outside_window": 1
+      },
+      "dedupe": {
+        "seen": 2
+      },
+      "inbox": {
+        "expired": 1,
+        "rejected": 1
+      },
+      "rank": {
+        "below_relevance": 1,
+        "over_max_items": 2
+      }
+    },
+    "web-products": {
+      "dedupe": {
+        "dismissed": 2
+      },
+      "rank": {
+        "below_relevance": 1
+      }
+    }
+  },
+  "failures": [],
   "funnel": {
     "ai-engineering": {
       "collected": 11,

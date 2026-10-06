@@ -25,7 +25,7 @@ export default function ResearcherIndexPage() {
         </Link>
 
         <Link className="topic-name plan-link" href="/researcher/queue/">
-          Research Queue
+          Tony Scraponi
         </Link>
       </div>
     </section>

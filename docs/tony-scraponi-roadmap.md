@@ -75,6 +75,13 @@ the next one starts.
 7. **A Web Products source.** Hacker News barely covers market data,
    dataviz and SEO, so Web Products needs a source of its own (RSS or
    otherwise) — designed once #6's numbers are in.
+8. **Control room** (built before #7). `/researcher/queue/` becomes
+   Tony Scraponi's one-screen control room: the agent's full config, read
+   from `agent/` at build time; its last run stage by stage with drop
+   reasons; the moderation queue with keyboard shortcuts; 14 days of
+   outcomes. Read-only config for now — editing would live in a repo the
+   agent only reads, like the inbox. Spec:
+   `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
 
 Later candidate: give the ranker Artem's recent inbox decisions as
 few-shot examples, once there are 30–50 of them.

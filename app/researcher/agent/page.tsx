@@ -29,7 +29,7 @@ export default function ResearchAgentPage() {
 
         <div className="body">
           <p>
-            <Link href="/researcher/queue/">See the full pending queue →</Link>
+            <Link href="/researcher/queue/">Open the control room →</Link>
           </p>
 
           <h2 id="goal">
