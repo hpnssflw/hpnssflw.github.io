@@ -16,7 +16,7 @@
 
 - All work happens in the worktree `C:\A\polozov\.claude\worktrees\engine` on branch `worktree-engine` (base `ec82c98`). Nothing is merged into `main` or pushed until Task 13, and then only when Artem says so.
 - Python: a venv at `agent/venv` (git-ignored), Python 3.12 as in CI, created in Task 1. Every command runs from the worktree root: `agent/venv/Scripts/python -m pytest agent/tests -q` (Git Bash) or `agent\venv\Scripts\python -m pytest agent/tests -q` (PowerShell).
-- **Goldens.** Files under `agent/tests/fixtures/*/golden/` are recorded once, by the task that introduces them, and never change afterwards. Before every commit, `git diff --cached --name-status -- agent/tests/fixtures` must list only `A` lines — an `M` or `D` there is a regression: stop and find out why. Tony's goldens are recorded in Task 1 from today's code.
+- **Goldens.** Files under `agent/tests/fixtures/*/golden/` are recorded once, by the task that introduces them, and never change afterwards. Before every commit, `git diff --cached --name-status -- agent/tests/fixtures` must list only `A` lines — an `M` or `D` there is a regression: stop and find out why. Tony's goldens are recorded in Task 1 from today's code. One planned exception: Task 13 Step 7 re-records `tony/golden/real/status.json` once if the control room's `drops`/`failures` keys are on `main` by then (see there).
 - **Pinned rubric hashes** (from `ec82c98`): ai-engineering `3472af8a46e1`, tooling `02189e2467e9`, web-products `080b24af813c`.
 - **The control room's contract** — each exactly once, byte for byte: `RANK_BATCH_SIZE = 40`, `RANK_PROMPT_VERSION = 2` and the only `temperature=0` in `agent/summarize.py` (no comment or docstring may contain the text `temperature=`); `QUEUE_WINDOW = timedelta(hours=23)` in `agent/rank_cache.py`; `cron: "0 */4 * * *"` in `.github/workflows/agent-run.yml`.
 - **Not edited at all:** `agent/defaults.yaml`, `agent/topics/*.yaml`, `agent/status_export.py`, `agent/config.py`, `.github/workflows/agent-run.yml`. After every task, `git diff --stat ec82c98 -- agent/defaults.yaml agent/topics agent/status_export.py agent/config.py .github/workflows/agent-run.yml` prints nothing.
@@ -748,7 +748,7 @@ and `golden/real/telegram.json`:
 ]
 ```
 
-`golden/real/events.jsonl` holds 53 events; its drop reasons: `already_ranked` 1, `below_relevance` 4, `dismissed` 2, `expired` 1, `outside_window` 1, `over_max_items` 5, `rejected` 1, `seen` 3, `undated` 1. `golden/real/prompts.txt` holds 11 calls. If anything differs, the harness or a fixture was copied wrong — fix that, delete `golden/`, and record again.
+`golden/real/events.jsonl` holds 53 events; its drop reasons: `already_ranked` 1, `below_relevance` 4, `dismissed` 2, `expired` 1, `outside_window` 1, `over_max_items` 5, `rejected` 1, `seen` 3, `undated` 1. `golden/real/prompts.txt` holds 12 calls (AI Engineering's batch, its retry and eight per-candidate fallbacks, then one batch each for Tooling and Web Products). If anything differs, the harness or a fixture was copied wrong — fix that, delete `golden/`, and record again.
 
 Run the same command again. Expected: 3 passed.
 
@@ -8458,12 +8458,14 @@ and in "## Sources", change the RSS line to: `- Blog and RSS feeds — a curated
   ```
   `agent/tests/fixtures/tony/golden/` pins Tony's real run, preview and
   dry run byte for byte — a golden that changes is a regression unless
-  the change is the point of the work. The control room reads
-  `RANK_BATCH_SIZE`, `RANK_PROMPT_VERSION` and the single `temperature=`
-  in `agent/summarize.py`, `QUEUE_WINDOW` in `agent/rank_cache.py` and the
-  `cron:` line of `agent-run.yml` by regex at site build time: keep each
-  exactly once (`agent/tests/test_control_room_contract.py`).
+  the change is the point of the work.
+  `agent/tests/test_control_room_contract.py` pins the agent constants
+  the control room reads — the rule is the "`/researcher/queue/` (Tony
+  Scraponi's control room) reads the agent's config at build time"
+  bullet above.
 ````
+
+That bullet comes from the control room's plan (`docs/superpowers/plans/2026-10-06-tony-control-room.md` on `worktree-admin-panel`, its Task 1, section "Coordination with the content engine"): point at it, don't restate its rule here. If it isn't in `CLAUDE.md` yet because the control room hasn't reached `main`, keep the pointer anyway — the bullet arrives with that merge.
 
 - [ ] **Step 6: Final review and commit**
 
@@ -8482,8 +8484,22 @@ Ask Artem. On "yes":
 
 ```bash
 git fetch origin main
-git merge origin/main          # resolve conflicts (PROGRESS.md, maybe the control room's agent/status_export.py); rerun pytest
+git merge origin/main          # resolve conflicts (PROGRESS.md, CLAUDE.md — see below); rerun pytest
 ```
+
+If `CLAUDE.md` conflicts with the control room's bullet, keep both bullets as they are: this plan's "Verify agent changes" already points at the control room's rule instead of restating it.
+
+If `origin/main` already holds the control room's Task 6 (`agent/status_export.py` writes `drops` and `failures` into `status.json`), the real-run characterization test fails on `golden/real/status.json` alone. That is the one deliberate golden change in this plan, not a regression: re-record that file once from the merged code and prove that nothing but those two keys changed:
+
+```bash
+git show HEAD:agent/tests/fixtures/tony/golden/real/status.json > "$S/status-golden-old.json"
+rm agent/tests/fixtures/tony/golden/real/status.json
+agent/venv/Scripts/python -m pytest agent/tests/test_tony_characterization.py -q   # re-records it: test_real_run fails once
+agent/venv/Scripts/python -c "import json, sys; a = json.load(open(sys.argv[1], encoding='utf-8')); b = json.load(open('agent/tests/fixtures/tony/golden/real/status.json', encoding='utf-8')); b.pop('drops'); b.pop('failures'); assert a == b, 'golden changed beyond drops/failures'; print('golden ok')" "$S/status-golden-old.json"
+agent/venv/Scripts/python -m pytest agent/tests -q   # all pass
+```
+
+`git diff --cached --name-status -- agent/tests/fixtures` then shows exactly one `M`, that file; commit it with the merge (or right after it) with a message that names the control room's two keys. Any other golden that changes is still a regression. If instead the control room reaches `main` after this branch, its own plan re-records the golden (its Task 6 Step 0) — nothing to do here. After the merge, run the untouched-files check against `origin/main` instead of `ec82c98` (`git diff --stat origin/main -- agent/defaults.yaml agent/topics agent/status_export.py agent/config.py .github/workflows/agent-run.yml` prints nothing): those files are whatever `main` has now, and this branch still mustn't change them.
 
 Then from the main checkout (`C:\A\polozov`): `git merge --ff-only worktree-engine` and `git push origin main`. Dispatch the agent: `gh workflow run agent-run.yml`. When it finishes (watch `gh run list --workflow agent-run.yml --limit 1`; `gh run view --log` is blocked in auto mode), check `agent-data`:
 
