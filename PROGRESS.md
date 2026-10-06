@@ -674,10 +674,11 @@ infrastructure.
   Task 1 done: `parseAgentStatus` replaces `isAgentStatus` — every field
   the `AgentStatus` type declares is checked, entries included, dates
   must parse; a malformed `drops`/`failures` is stripped instead of
-  blanking the home widgets (M1, M2). Next: Task 2 (home countdown).
+  blanking the home widgets (M1, M2). Task 2 done: the home widget's
+  "next check" counts down to `nextRun` of `agent-run.yml`'s cron (read at
+  build time), the same slot the control room shows. Next: Task 3 (M4).
   Later: editing config from the page (a repo the agent only reads, like
-  the inbox); `/researcher/agent/`'s countdown still uses
-  `updated_at + cadence` — switch it to `lib/cron.ts`'s `nextRun`.
+  the inbox).
 - **Content engine, sub-project A (engine core + presets): shipped.**
   Spec: `docs/superpowers/specs/2026-10-06-content-engine-core-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-content-engine-core.md`.

@@ -66,7 +66,8 @@ initiatives — see `PROGRESS.md` for status of each.
   `t.me/s/hypnosisflow` — no token, but t.me may be unreachable from a
   dev machine without a VPN.
 - **`/researcher/queue/` (Tony Scraponi's control room) reads the agent's
-  config at build time.** `lib/agent-config.ts` parses
+  config at build time** (the home agent widget reads its cron schedule
+  the same way, for its countdown). `lib/agent-config.ts` parses
   `agent/defaults.yaml` + `agent/topics/*.yaml` and pulls
   `RANK_BATCH_SIZE`, `RANK_PROMPT_VERSION` and `temperature=` from
   `agent/summarize.py`, `QUEUE_WINDOW` from `agent/rank_cache.py` and the

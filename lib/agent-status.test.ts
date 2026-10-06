@@ -3,7 +3,6 @@ import {
   type AgentStatus,
   fmtCountdown,
   isStale,
-  nextRunAt,
   parseAgentStatus,
   sparklineCells,
 } from "./agent-status";
@@ -144,16 +143,6 @@ describe("sparklineCells", () => {
     expect(cells[0]).toEqual({ glyph: "▁", zero: true });
     expect(cells[1].zero).toBe(false);
     expect(cells[2]).toEqual({ glyph: "█", zero: false });
-  });
-});
-
-describe("nextRunAt", () => {
-  it("is updated_at plus one cadence window", () => {
-    const status = makeStatus({
-      updated_at: "2026-09-09T08:00:00+00:00",
-      cadence_hours: 4,
-    });
-    expect(nextRunAt(status)).toBe(Date.parse("2026-09-09T12:00:00+00:00"));
   });
 });
 

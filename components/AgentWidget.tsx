@@ -8,12 +8,13 @@ import {
   STATUS_URL,
   fmtCountdown,
   isStale,
-  nextRunAt,
   parseAgentStatus,
   sparklineCells,
 } from "@/lib/agent-status";
+import { type CronSchedule, nextRun } from "@/lib/cron";
 
-type Variant = "compact" | "dashboard";
+/** The home card counts down to agent-run.yml's next cron slot, read at build time. */
+type Props = { variant: "compact"; schedule: CronSchedule } | { variant: "dashboard" };
 
 function Spark({ cells }: { cells: SparkCell[] }) {
   return (
@@ -35,7 +36,9 @@ function Unavailable() {
   return <p className="agent-unavailable mono">agent status unavailable</p>;
 }
 
-export default function AgentWidget({ variant }: { variant: Variant }) {
+export default function AgentWidget(props: Props) {
+  const { variant } = props;
+  const schedule = props.variant === "compact" ? props.schedule : null;
   const mountId = variant === "compact" ? "agent-widget" : "agent-dashboard";
 
   const [status, setStatus] = useState<AgentStatus | null>(null);
@@ -64,16 +67,16 @@ export default function AgentWidget({ variant }: { variant: Variant }) {
   }, []);
 
   useEffect(() => {
-    if (!status || variant !== "compact") return;
-    const target = nextRunAt(status);
+    if (!status || schedule === null) return;
     const tick = () => {
-      const remaining = Math.round((target - Date.now()) / 1000);
+      const now = new Date();
+      const remaining = Math.round((nextRun(schedule, now).getTime() - now.getTime()) / 1000);
       setCountdown(`next check ${fmtCountdown(remaining)}`);
     };
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, [status, variant]);
+  }, [status, schedule]);
 
   if (variant === "compact") {
     return (

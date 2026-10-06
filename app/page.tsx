@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { labSlides, telegramSlides, FEED_PER_SOURCE } from "@/lib/home-feed";
+import { loadAgentConfig } from "@/lib/agent-config";
 import { getAllPosts } from "@/lib/posts";
 import { fetchRecentPosts, TELEGRAM_CHANNEL } from "@/lib/telegram-post";
 import { subtopics, topics } from "@/lib/topics";
@@ -18,6 +19,8 @@ export default async function HomePage() {
     ...labSlides(getAllPosts()),
     ...telegramSlides(await fetchRecentPosts(TELEGRAM_CHANNEL, FEED_PER_SOURCE * 2)),
   ];
+  // The agent widget counts down to agent-run.yml's next cron slot.
+  const { schedule } = loadAgentConfig();
 
   return (
     <>
@@ -75,7 +78,7 @@ export default async function HomePage() {
               .
             </span>
           </p>
-          <AgentWidget variant="compact" />
+          <AgentWidget variant="compact" schedule={schedule} />
           <p className="subtopic-tags">{subtopics.join(", ")}.</p>
         </section>
 

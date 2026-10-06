@@ -203,11 +203,3 @@ export function fmtCountdown(seconds: number): string {
   const s = Math.floor(seconds % 60);
   return `${pad(h)}:${pad(m)}:${pad(s)}`;
 }
-
-/** Epoch ms of the next expected run. */
-export function nextRunAt(status: AgentStatus): number {
-  return (
-    new Date(status.updated_at).getTime() +
-    status.cadence_hours * 3600 * 1000
-  );
-}
