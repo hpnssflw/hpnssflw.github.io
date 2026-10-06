@@ -58,113 +58,109 @@
       "reason": "over_max_items",
       "title": "GitHub's new dashboard experience now the default",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285593+00:00",
+      "ts": "2026-10-06T11:02:11.773683+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The new Firefox design is here",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285575+00:00",
+      "ts": "2026-10-06T11:02:11.773667+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Every SaaS business will become a harness around a model",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285492+00:00",
+      "ts": "2026-10-06T11:02:11.773587+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "US tells France and Germany to release diesel stocks or face US export ban",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285480+00:00",
+      "ts": "2026-10-06T11:02:11.773576+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Before pixels: Modular industrial dashboards",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285467+00:00",
+      "ts": "2026-10-06T11:02:11.773564+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "uBlock Origin Lite is back on Firefox add-ons",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285445+00:00",
+      "ts": "2026-10-06T11:02:11.773541+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cancel Your Subscription: a free browser game",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285434+00:00",
+      "ts": "2026-10-06T11:02:11.773531+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "MicroLLM Lab \u2013 Try 7 tiny LLM's in the browser",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285422+00:00",
+      "ts": "2026-10-06T11:02:11.773519+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Show HN: Lofi Cities \u2013 Pixel-art city nights with browser-generated lofi",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285409+00:00",
+      "ts": "2026-10-06T11:02:11.773507+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "A browser-native classic Visual Basic VB6 IDE",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285392+00:00",
+      "ts": "2026-10-06T11:02:11.773489+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Improving site performance by shipping more CSS",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285313+00:00",
+      "ts": "2026-10-06T11:02:11.773412+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "CSS Bed: Classless CSS themes to use as starting points in web development",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285299+00:00",
+      "ts": "2026-10-06T11:02:11.773398+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Bez: Generating a browser engine from specs and tests",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285277+00:00",
+      "ts": "2026-10-06T11:02:11.773377+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Owed a billion dollars in Nvidia stock",
       "topic": "web-products",
-      "ts": "2026-10-06T10:11:06.285106+00:00",
+      "ts": "2026-10-06T11:02:11.773124+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Deser: Rethinking Rust Serialization",
       "topic": "tooling",
-      "ts": "2026-10-06T10:10:59.330372+00:00",
+      "ts": "2026-10-06T11:02:04.278381+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-09-29T20:27:49.882165+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-09-30T04:08:45.319706+00:00"
@@ -256,9 +252,13 @@
     {
       "kept": 0,
       "ts": "2026-10-06T10:10:42.237399+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-06T11:01:43.604757+00:00"
     }
   ],
-  "streak": 240,
+  "streak": 241,
   "topics": [
     {
       "collected": 90,
@@ -279,5 +279,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-06T10:10:42.237399+00:00"
+  "updated_at": "2026-10-06T11:01:43.604757+00:00"
 }
