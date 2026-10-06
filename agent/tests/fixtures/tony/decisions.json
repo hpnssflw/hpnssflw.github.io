@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "decisions": {
+    "https://deepseek.example/v4-paper": {"decision": "approve", "at": "2026-10-05T20:00:00.000Z"},
+    "https://tool.example/a": {"decision": "reject", "at": "2026-10-06T08:00:00.000Z"},
+    "https://not-in-queue.example/x": {"decision": "approve", "at": "2026-10-01T08:00:00.000Z"}
+  }
+}

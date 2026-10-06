@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "pending_since": "2026-10-05T16:00:00+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "Tool B.",
+      "title": "Tool B",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://tool.example/b"
+    },
+    {
+      "pending_since": "2026-10-06T12:00:00+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "About: Qwen 4 open weights.",
+      "title": "Qwen 4 open weights",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://qwen.example/4"
+    },
+    {
+      "pending_since": "2026-10-06T12:00:00+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "About: Ollama adds speculative decoding.",
+      "title": "Ollama adds speculative decoding",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://ollama.example/blog/speculative-decoding"
+    },
+    {
+      "pending_since": "2026-10-06T12:00:00+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "vLLM reaches 1.0.",
+      "title": "vLLM 1.0 released",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://vllm.example/1.0"
+    },
+    {
+      "pending_since": "2026-10-06T12:00:00+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "About: MCP server for Postgres.",
+      "title": "MCP server for Postgres",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://mcp.example/postgres"
+    },
+    {
+      "pending_since": "2026-10-06T12:00:00+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "About: Show HN: A terminal file manager in Rust.",
+      "title": "Show HN: A terminal file manager in Rust",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.example/fm"
+    },
+    {
+      "pending_since": "2026-10-06T12:00:00+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "About: Firefox ships a new CSS layout engine.",
+      "title": "Firefox ships a new CSS layout engine",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://firefox.example/layout"
+    },
+    {
+      "pending_since": "2026-10-06T12:00:00+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "About: Building a stock dashboard with D3.",
+      "title": "Building a stock dashboard with D3",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://d3.example/stock-dashboard"
+    },
+    {
+      "pending_since": "2026-10-06T12:00:00+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "About: acme/chartkit.",
+      "title": "acme/chartkit",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.com/acme/chartkit"
+    }
+  ],
+  "last_email_at": "2026-10-06T12:00:00+00:00"
+}

@@ -19,3 +19,4 @@ agent/status.json
 agent/runs/
 agent/**/__pycache__/
 agent/venv/
+.pytest_cache/
