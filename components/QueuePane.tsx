@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { type Decision, type Decisions, itemStatus } from "@/lib/inbox";
+import type { Text } from "@/lib/control-room-text";
 import type { PendingItem } from "@/lib/pending-queue";
 import { STATUS_FILTERS, type StatusFilter, moveSelection } from "@/lib/queue-view";
 
@@ -40,6 +41,7 @@ export default function QueuePane({
   loaded,
   failed,
   onDecide,
+  text,
 }: {
   rows: PendingItem[];
   counts: Record<StatusFilter, number>;
@@ -55,6 +57,7 @@ export default function QueuePane({
   loaded: boolean;
   failed: boolean;
   onDecide: (item: PendingItem, decision: Decision | null) => void;
+  text: Text["queue"];
 }) {
   const listRef = useRef<HTMLDivElement>(null);
 
@@ -84,11 +87,11 @@ export default function QueuePane({
   }, [selected?.url]);
 
   return (
-    <section className="cr-pane cr-queue" aria-label="Queue">
+    <section className="cr-pane cr-queue" aria-label={text.label}>
       <header className="cr-pane-head">
-        <span className="cr-label">Queue</span>
+        <span className="cr-label">{text.label}</span>
         {decisions && (
-          <div className="cr-chips" role="group" aria-label="Status">
+          <div className="cr-chips" role="group" aria-label={text.statusLabel}>
             {STATUS_FILTERS.map((status) => (
               <button
                 key={status}
@@ -97,7 +100,7 @@ export default function QueuePane({
                 aria-pressed={statusFilter === status}
                 onClick={() => onStatusFilter(status)}
               >
-                {status} <span className="cr-chip-n">{counts[status]}</span>
+                {text.statuses[status]} <span className="cr-chip-n">{counts[status]}</span>
               </button>
             ))}
           </div>
@@ -105,9 +108,9 @@ export default function QueuePane({
       </header>
       <div className="cr-scroll" ref={listRef}>
         {failed ? (
-          <p className="agent-unavailable cr-empty">queue unavailable</p>
+          <p className="agent-unavailable cr-empty">{text.unavailable}</p>
         ) : loaded && rows.length === 0 ? (
-          <p className="agent-muted cr-empty">nothing here</p>
+          <p className="agent-muted cr-empty">{text.empty}</p>
         ) : (
           <ul className="cr-rows">
             {rows.map((item) => {
@@ -125,7 +128,7 @@ export default function QueuePane({
                     <span className={item.score >= 8 ? "cr-score is-high" : "cr-score"}>{item.score}</span>
                     <span className="cr-title">{item.title}</span>
                     {decisions && status !== "waiting" && (
-                      <span className={`cr-decision inbox-${status}`}>{status}</span>
+                      <span className={`cr-decision inbox-${status}`}>{text.statuses[status]}</span>
                     )}
                   </div>
                   <div className="cr-meta">
@@ -148,7 +151,7 @@ export default function QueuePane({
                                   onDecide(item, "approve");
                                 }}
                               >
-                                <kbd>a</kbd> approve
+                                <kbd>a</kbd> {text.approve}
                               </button>
                               <button
                                 type="button"
@@ -159,7 +162,7 @@ export default function QueuePane({
                                   onDecide(item, "reject");
                                 }}
                               >
-                                <kbd>r</kbd> reject
+                                <kbd>r</kbd> {text.reject}
                               </button>
                             </>
                           ) : (
@@ -172,7 +175,7 @@ export default function QueuePane({
                                 onDecide(item, null);
                               }}
                             >
-                              <kbd>u</kbd> undo
+                              <kbd>u</kbd> {text.undo}
                             </button>
                           ))}
                         <a
@@ -182,7 +185,7 @@ export default function QueuePane({
                           rel="noreferrer"
                           onClick={(event) => event.stopPropagation()}
                         >
-                          <kbd>o</kbd> open ↗
+                          <kbd>o</kbd> {text.open}
                         </a>
                       </div>
                     </div>
@@ -194,13 +197,13 @@ export default function QueuePane({
         )}
       </div>
       <p className="cr-keys">
-        <kbd>j</kbd>/<kbd>k</kbd> move
+        <kbd>j</kbd>/<kbd>k</kbd> {text.keysMove}
         {canDecide && (
           <>
-            {" "}· <kbd>a</kbd> approve · <kbd>r</kbd> reject · <kbd>u</kbd> undo
+            {" "}· <kbd>a</kbd> {text.approve} · <kbd>r</kbd> {text.reject} · <kbd>u</kbd> {text.undo}
           </>
         )}{" "}
-        · <kbd>o</kbd> open
+        · <kbd>o</kbd> {text.keysOpen}
       </p>
     </section>
   );

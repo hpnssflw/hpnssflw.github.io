@@ -1,3 +1,4 @@
+import type { Text } from "@/lib/control-room-text";
 import type { StageKey, StageNumbers } from "@/lib/pipeline-stages";
 
 /**
@@ -10,14 +11,16 @@ export default function PipelineRail({
   active,
   onPick,
   titles,
+  text,
 }: {
   stages: StageNumbers[];
   active: StageKey | null;
   onPick: (key: StageKey) => void;
   titles: Partial<Record<StageKey, string>>;
+  text: Text;
 }) {
   return (
-    <ol className="cr-rail" aria-label="Pipeline, last run">
+    <ol className="cr-rail" aria-label={text.rail.label}>
       {stages.map((stage) => (
         <li key={stage.key}>
           <button
@@ -28,9 +31,9 @@ export default function PipelineRail({
             title={titles[stage.key]}
             onClick={() => onPick(stage.key)}
           >
-            <span className="cr-label">{stage.key}</span>
+            <span className="cr-label">{text.stages[stage.key]}</span>
             <span className="cr-node-n">{stage.value}</span>
-            <span className="cr-node-line">{stage.failed !== null ? `failed: ${stage.failed}` : stage.line}</span>
+            <span className="cr-node-line">{stage.failed !== null ? text.rail.failed(stage.failed) : stage.line}</span>
           </button>
         </li>
       ))}

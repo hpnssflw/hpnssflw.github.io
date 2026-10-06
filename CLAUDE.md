@@ -66,13 +66,14 @@ initiatives — see `PROGRESS.md` for status of each.
   `t.me/s/hypnosisflow` — no token, but t.me may be unreachable from a
   dev machine without a VPN.
 - **`/researcher/queue/` (Tony Scraponi's control room) reads the agent's
-  config at build time.** `lib/agent-config.ts` parses
-  `agent/defaults.yaml` + `agent/topics/*.yaml` and pulls
-  `RANK_BATCH_SIZE`, `RANK_PROMPT_VERSION` and `temperature=` from
-  `agent/summarize.py`, `QUEUE_WINDOW` from `agent/rank_cache.py` and the
-  `cron:` line from `agent-run.yml`. Anything missing throws and fails the
-  site build, on purpose: when agent work renames or moves one of these,
-  update `lib/agent-config.ts` in the same change.
+  last `run-result.json`** (`agent-data/agent/run-result.json`, written
+  by every `agent-run.yml` run) client-side: config, rail stages, drop
+  reasons and failures, through `lib/run-result.ts` (schema 2 only). Only
+  the workflow's `cron:` line is read at build time
+  (`lib/agent-schedule.ts`), and a missing one fails the build on purpose.
+  Tony's config lives in `agent/presets/tony.yaml`. Renaming or removing a
+  `run-result.json` field means bumping `agent/run_result.py`'s
+  `SCHEMA_VERSION` and updating `lib/run-result.ts` in the same push.
 - **The Tony Scraponi inbox's decisions live in a separate public repo,
   `hpnssflw/tony-inbox`** (`decisions.json` on its `main`). The site's
   `/researcher/queue/` owner mode is its only writer, with a
@@ -128,7 +129,8 @@ initiatives — see `PROGRESS.md` for status of each.
   npm test                # Vitest — lib/posts, lib/agent-status, lib/pending-queue,
                           # lib/topics, lib/yandex-music, lib/claude-presence,
                           # lib/now-format, lib/github-calendar, lib/telegram-post, lib/home-feed,
-                          # lib/cron, lib/agent-config, lib/pipeline-stages,
+                          # lib/cron, lib/agent-schedule, lib/run-result, lib/config-view,
+                          # lib/control-room-text, lib/pipeline-stages,
                           # lib/outcomes, lib/queue-view, scripts/presence
   ```
   (`next dev` occasionally hangs the TCP handshake in this environment;
@@ -143,10 +145,8 @@ initiatives — see `PROGRESS.md` for status of each.
   `agent/tests/fixtures/tony/golden/` pins Tony's real run, preview and
   dry run byte for byte — a golden that changes is a regression unless
   the change is the point of the work.
-  `agent/tests/test_control_room_contract.py` pins the agent constants
-  the control room reads — the rule is the "`/researcher/queue/` (Tony
-  Scraponi's control room) reads the agent's config at build time"
-  bullet above.
+  `agent/tests/test_control_room_contract.py` pins the workflow's `cron:`
+  line, which the control room reads at build time.
 - The public plan page (`app/researcher/agent/page.tsx`) and
   `docs/agent-plan.md` describe the same agent at two levels of detail
   (narrative vs. technical). Keep them in sync at a high level whenever

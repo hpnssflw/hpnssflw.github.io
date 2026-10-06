@@ -1,14 +1,14 @@
-import type { AgentConfig } from "./agent-config";
-import type { AgentStatus } from "./agent-status";
+import type { Text } from "./control-room-text";
 import { type Decisions, itemStatus } from "./inbox";
-import type { PendingQueue } from "./pending-queue";
+import type { PendingItem } from "./pending-queue";
+import { FEED_SCOPE, type RunResult, type ScopeCounts } from "./run-result";
 
 /** "all", or one topic's slug. */
 export type TopicFilter = "all" | (string & {});
 
-/** The control room's rail, in reading order. "review" is where your
- * moderation sits logically; the agent applies decisions at the start of
- * its next run. */
+/** The rail, in reading order. "review" is where moderation sits
+ * logically; the agent applies decisions at the start of its next run.
+ * run-result.json's `enrich` folds into rank, `format` into deliver. */
 export const STAGE_KEYS = ["collect", "window", "dedupe", "cache", "rank", "cap", "queue", "review", "deliver"] as const;
 export type StageKey = (typeof STAGE_KEYS)[number];
 
@@ -22,105 +22,164 @@ export interface StageNumbers {
   failed: string | null;
 }
 
-export interface LiveData {
-  status: AgentStatus | null;
-  queue: PendingQueue | null;
+/** What the page knows live on top of the run: Tony's pending.json and
+ * inbox, or the demo's sandbox decisions. */
+export interface LiveOverlay {
+  /** Items in the queue now (all topics); null: the run's own queue. */
+  queue: PendingItem[] | null;
+  /** Decisions counted on the review stage; null: the run's own count. */
   decisions: Decisions | null;
 }
 
 const DASH = "—";
 
-/** status.json failure stages → the rail stage they belong to. */
-const FAILED_STAGE: Record<string, StageKey> = {
+/** Stages where a picked topic with nothing of its own shows the shared
+ * feeds (`*`) instead: everything before items are sorted into topics. */
+const BEFORE_SORTING = new Set(["collect", "window", "dedupe", "cache", "enrich", "rank"]);
+
+/** run-result.json failure stages → the rail stage they show on. */
+const RAIL_STAGE: Record<string, StageKey> = {
   collect: "collect",
+  window: "window",
+  dedupe: "dedupe",
+  cache: "cache",
+  enrich: "rank",
   rank: "rank",
-  inbox: "review",
+  cap: "cap",
+  queue: "queue",
+  review: "review",
+  format: "deliver",
   deliver: "deliver",
 };
 
-export function topicSlugs(config: AgentConfig, topic: TopicFilter): string[] {
-  return topic === "all" ? config.topics.map((t) => t.slug) : [topic];
+const COLLECT_DROPS = ["undated", "no_link", "below_min_points"] as const;
+
+export function topicSlugs(topics: { slug: string }[], topic: TopicFilter): string[] {
+  return topic === "all" ? topics.map((t) => t.slug) : [topic];
 }
 
-function thresholdLabel(config: AgentConfig, slugs: string[]): string {
-  const values = new Set(config.topics.filter((t) => slugs.includes(t.slug)).map((t) => t.minRelevance));
-  return values.size === 1 ? String([...values][0]) : "threshold";
+interface Summed {
+  in: number;
+  out: number;
+  drops: Record<string, number>;
+  notes: Record<string, number>;
+  /** The numbers are the shared feeds', not the picked topic's own. */
+  shared: boolean;
+}
+
+function add(into: Summed, scope: ScopeCounts | undefined): void {
+  if (!scope) return;
+  into.in += scope.in;
+  into.out += scope.out;
+  for (const [reason, n] of Object.entries(scope.drops)) into.drops[reason] = (into.drops[reason] ?? 0) + n;
+  for (const [key, n] of Object.entries(scope.notes ?? {})) into.notes[key] = (into.notes[key] ?? 0) + n;
+}
+
+const isEmpty = (scope: ScopeCounts | undefined): boolean => !scope || (scope.in === 0 && scope.out === 0);
+
+/** One stage's counts over the scopes in view. */
+function sumStage(result: RunResult, stage: string, topic: TopicFilter): Summed {
+  const scopes = result.stages.find((s) => s.stage === stage)?.scopes ?? {};
+  const sum: Summed = { in: 0, out: 0, drops: {}, notes: {}, shared: false };
+  if (topic === "all") {
+    for (const scope of Object.values(scopes)) add(sum, scope);
+    return sum;
+  }
+  const own = scopes[topic];
+  const feeds = scopes[FEED_SCOPE];
+  const sorted = feeds?.assigned?.[topic] ?? 0;
+  if (BEFORE_SORTING.has(stage) && isEmpty(own) && !isEmpty(feeds)) {
+    add(sum, feeds);
+    sum.shared = true;
+    if (stage === "rank") sum.out = sorted;
+    return sum;
+  }
+  add(sum, own);
+  if (stage === "rank") sum.out += sorted;
+  return sum;
 }
 
 /**
- * Each rail stage's number and line for the topics in view, from the last
- * run's status.json (funnel, and drops/failures once the agent writes
- * them), the pending queue and the inbox decisions. See the spec's rail
- * table (docs/superpowers/specs/2026-10-06-tony-control-room-design.md).
+ * Each rail stage's number and line for the topics in view, from a run's
+ * `stages` (run-result.json), with the page's live queue and decisions on
+ * top when it has them. See the rail table in
+ * docs/superpowers/specs/2026-10-06-preset-switcher-design.md § 3.
  */
-export function buildStages(config: AgentConfig, live: LiveData, topic: TopicFilter): StageNumbers[] {
-  const slugs = topicSlugs(config, topic);
-  const { status, queue, decisions } = live;
-  const drops = status?.drops;
-
-  const funnel = (field: "collected" | "in_window" | "new" | "kept"): number | null =>
-    status ? slugs.reduce((n, slug) => n + (status.funnel[slug]?.[field] ?? 0), 0) : null;
-  const drop = (stage: string, reason: string): number =>
-    slugs.reduce((n, slug) => n + (drops?.[slug]?.[stage]?.[reason] ?? 0), 0);
-  const show = (n: number | null): string => (n === null ? DASH : String(n));
-
-  const collected = funnel("collected");
-  const inWindow = funnel("in_window");
-  const fresh = funnel("new");
-  const kept = funnel("kept");
-  const seen = drop("dedupe", "seen");
-  const dismissed = drop("dedupe", "dismissed");
-  const below = drop("rank", "below_relevance");
-
-  const collectDrops = [
-    [drop("collect", "undated"), "undated"],
-    [drop("collect", "below_min_points"), "below min points"],
-  ] as const;
-  const collectLine = !status
-    ? ""
-    : drops && collectDrops.some(([n]) => n > 0)
-      ? collectDrops
-          .filter(([n]) => n > 0)
-          .map(([n, label]) => `−${n} ${label}`)
-          .join(" · ")
-      : "found";
-
-  const inView = queue ? queue.items.filter((i) => slugs.includes(i.topic)) : null;
+export function buildStages(
+  result: RunResult | null,
+  live: LiveOverlay,
+  topic: TopicFilter,
+  text: Text["rail"],
+): StageNumbers[] {
+  const inView = (items: PendingItem[]) => items.filter((i) => topic === "all" || i.topic === topic);
+  const liveQueue = live.queue ? inView(live.queue) : null;
+  const pool = liveQueue ?? (result ? inView(result.queue.items) : null);
   const approved =
-    inView && decisions ? inView.filter((i) => itemStatus(decisions, i.url) === "approved").length : null;
+    live.decisions && pool ? pool.filter((i) => itemStatus(live.decisions, i.url) === "approved").length : null;
+
+  if (!result) {
+    return STAGE_KEYS.map((key) => ({
+      key,
+      value:
+        key === "queue" && liveQueue ? String(liveQueue.length) : key === "review" && approved !== null ? String(approved) : DASH,
+      line: "",
+      failed: null,
+    }));
+  }
+
+  const s = (stage: string) => sumStage(result, stage, topic);
+  const minus = (n: number | undefined, label: string) => `−${n ?? 0} ${label}`;
+  const mark = (sum: Summed, line: string) => (sum.shared ? `${line} · ${text.shared}` : line);
+
+  const collect = s("collect");
+  const window = s("window");
+  const dedupe = s("dedupe");
+  const cache = s("cache");
+  const enrich = s("enrich");
+  const rank = s("rank");
+  const cap = s("cap");
+  const queue = s("queue");
+  const review = s("review");
+
+  const slugs = topicSlugs(result.config.topics, topic);
+  const thresholds = new Set(result.config.topics.filter((t) => slugs.includes(t.slug)).map((t) => t.min_relevance));
+  const threshold = thresholds.size === 1 ? String([...thresholds][0]) : text.threshold;
+
+  const collectDrops = COLLECT_DROPS.filter((reason) => (collect.drops[reason] ?? 0) > 0).map((reason) =>
+    minus(collect.drops[reason], text.drops[reason]),
+  );
+  const rankLine = [minus(rank.drops.below_relevance, text.below(threshold))];
+  if (rank.drops.off_topic) rankLine.push(minus(rank.drops.off_topic, text.drops.off_topic));
+  if (enrich.notes.full_text) rankLine.push(text.fullText(enrich.notes.full_text));
+  const { delivery } = result;
 
   const rows: Omit<StageNumbers, "failed">[] = [
-    { key: "collect", value: show(collected), line: collectLine },
-    { key: "window", value: show(inWindow), line: drops ? `−${drop("date_guard", "outside_window")} too old` : "" },
+    { key: "collect", value: String(collect.out), line: mark(collect, collectDrops.length ? collectDrops.join(" · ") : text.found) },
+    { key: "window", value: String(window.out), line: mark(window, minus(window.drops.outside_window, text.drops.outside_window)) },
     {
       key: "dedupe",
-      value: drops && inWindow !== null ? String(inWindow - seen - dismissed) : DASH,
-      line: drops ? `−${seen} seen · −${dismissed} dismissed` : "",
+      value: String(dedupe.out),
+      line: mark(dedupe, `${minus(dedupe.drops.seen, text.drops.seen)} · ${minus(dedupe.drops.dismissed, text.drops.dismissed)}`),
     },
-    { key: "cache", value: show(fresh), line: drops ? `−${drop("dedupe", "already_ranked")} cached below` : "" },
-    {
-      key: "rank",
-      value: drops && fresh !== null ? String(fresh - below) : DASH,
-      line: drops ? `−${below} below ${thresholdLabel(config, slugs)}` : "",
-    },
-    { key: "cap", value: show(kept), line: drops ? `−${drop("rank", "over_max_items")} over cap` : "" },
-    { key: "queue", value: show(inView ? inView.length : null), line: kept !== null ? `+${kept} this run` : "" },
+    { key: "cache", value: String(cache.out), line: mark(cache, minus(cache.drops.already_ranked, text.drops.already_ranked)) },
+    { key: "rank", value: String(rank.out), line: mark(rank, rankLine.join(" · ")) },
+    { key: "cap", value: String(cap.out), line: minus(cap.drops.over_max_items, text.drops.over_max_items) },
+    { key: "queue", value: String(liveQueue ? liveQueue.length : queue.out), line: text.thisRun(queue.in) },
     {
       key: "review",
-      value: show(approved),
-      line: drops ? `−${drop("inbox", "rejected")} rejected · −${drop("inbox", "expired")} expired` : "",
+      value: String(approved ?? review.notes.approved ?? 0),
+      line: `${minus(review.drops.rejected, text.drops.rejected)} · ${minus(review.drops.expired, text.drops.expired)}`,
     },
     {
       key: "deliver",
-      value: status ? (status.last_sent_at ? status.last_sent_at.slice(5, 10) : "never") : DASH,
-      line: "approved only",
+      value: delivery.last_sent_at ? delivery.last_sent_at.slice(5, 10) : text.never,
+      line: delivery.sent_items > 0 ? text.sent(delivery.sent_items, delivery.messages) : text.approvedOnly,
     },
   ];
 
-  const failures = status?.failures ?? [];
   return rows.map((row) => {
-    const hits = failures.filter(
-      (f) => FAILED_STAGE[f.stage] === row.key && (f.topic === null || slugs.includes(f.topic)),
+    const hits = result.failures.filter(
+      (f) => RAIL_STAGE[f.stage] === row.key && (topic === "all" || f.scope === topic || f.scope === FEED_SCOPE),
     );
     const failed = hits.length ? [...new Set(hits.map((f) => f.source ?? "run"))].join(", ") : null;
     return { ...row, failed };

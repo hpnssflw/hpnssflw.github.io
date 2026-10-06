@@ -1,7 +1,7 @@
 // The agent's schedule, from the `cron:` line of
 // .github/workflows/agent-run.yml. Only the two shapes this repo would use
 // are supported — every N hours at minute M, and once a day at H:M — and
-// anything else throws, so lib/agent-config.ts fails the build instead of
+// anything else throws, so lib/agent-schedule.ts fails the build instead of
 // the control room counting down to the wrong time. UTC, like Actions.
 
 export interface CronSchedule {

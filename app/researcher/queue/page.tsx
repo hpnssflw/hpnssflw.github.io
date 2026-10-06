@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ControlRoom from "@/components/ControlRoom";
-import { loadAgentConfig } from "@/lib/agent-config";
+import { loadSchedule } from "@/lib/agent-schedule";
 
 const description =
   "The research agent's control room: its config, its last run, the moderation queue and two weeks of outcomes.";
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function QueuePage() {
-  // Read from this repo's agent/ at build time (static export: once).
-  return <ControlRoom config={loadAgentConfig()} />;
+  // The workflow's cron line, read from this repo at build time (static
+  // export: once); everything else is fetched by the page.
+  return <ControlRoom schedule={loadSchedule()} />;
 }

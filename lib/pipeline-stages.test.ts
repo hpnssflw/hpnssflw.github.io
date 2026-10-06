@@ -1,188 +1,166 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import type { AgentConfig, TopicConfigView } from "./agent-config";
-import type { AgentStatus } from "./agent-status";
+import { TEXT } from "./control-room-text";
 import type { Decisions } from "./inbox";
-import type { PendingItem, PendingQueue } from "./pending-queue";
+import type { PendingItem } from "./pending-queue";
 import { STAGE_KEYS, type StageNumbers, buildStages, topicSlugs } from "./pipeline-stages";
+import { type RunResult, parseRunResult } from "./run-result";
 
-function topic(slug: string, minRelevance = 6): TopicConfigView {
-  return {
-    slug,
-    name: slug,
-    description: "",
-    include: [],
-    exclude: [],
-    keywords: ["k"],
-    maxAgeDays: 10,
-    minRelevance,
-    maxItemsPerDay: 3,
-    attention: { enabled: true, minScoreGain: 50 },
-    hackerNews: { minPoints: 30 },
-    github: null,
-  };
+function run(...parts: string[]): RunResult {
+  const result = parseRunResult(JSON.parse(readFileSync(join(process.cwd(), "agent", "tests", "fixtures", ...parts), "utf8")));
+  if (!result) throw new Error(`${parts.join("/")} doesn't parse`);
+  return result;
 }
-
-function makeConfig(topics = [topic("tooling"), topic("web")]): AgentConfig {
-  return {
-    cron: "0 */4 * * *",
-    schedule: { minute: 0, hourStep: 4, hour: null },
-    llm: { model: "m", baseUrl: "b", temperature: 0, batchSize: 40, promptVersion: 2 },
-    reader: "r",
-    queueWindowHours: 23,
-    delivery: { channel: "@c", cadenceHours: 24 },
-    inbox: { repo: "o/r", expireDays: 7 },
-    topics,
-  };
-}
-
-const status: AgentStatus = {
-  cadence_hours: 4,
-  delivery_cadence_hours: 24,
-  streak: 3,
-  pending_count: 3,
-  updated_at: "2026-10-05T18:22:00+00:00",
-  last_sent_at: "2026-09-30T04:08:45+00:00",
-  topics: [
-    { slug: "tooling", name: "tooling", collected: 101, kept: 3 },
-    { slug: "web", name: "web", collected: 13, kept: 3 },
-  ],
-  funnel: {
-    tooling: { collected: 101, in_window: 100, new: 70, kept: 3 },
-    web: { collected: 13, in_window: 13, new: 12, kept: 3 },
-  },
-  recent_events: [],
-  run_history: [],
-};
-
-const drops = {
-  tooling: {
-    collect: { undated: 2 },
-    date_guard: { outside_window: 1 },
-    dedupe: { seen: 25, dismissed: 1, already_ranked: 4 },
-    rank: { below_relevance: 45, over_max_items: 22 },
-    inbox: { rejected: 2, expired: 1 },
-  },
-  web: { dedupe: { seen: 1 }, rank: { below_relevance: 7, over_max_items: 2 } },
-};
-
-function item(url: string, topicSlug: string): PendingItem {
-  return {
-    url,
-    title: url,
-    source: "hn",
-    topic: topicSlug,
-    topic_name: topicSlug,
-    summary: "",
-    score: 7,
-    pending_since: "2026-10-05T18:22:00+00:00",
-  };
-}
-
-const queue: PendingQueue = {
-  last_email_at: null,
-  items: [item("https://a", "tooling"), item("https://b", "tooling"), item("https://c", "web")],
-};
-
-const decisions: Decisions = {
-  version: 1,
-  decisions: {
-    "https://a": { decision: "approve", at: "2026-10-05T19:00:00Z" },
-    "https://c": { decision: "reject", at: "2026-10-05T19:00:00Z" },
-  },
-};
+const tony = run("tony", "golden", "real", "run-result.json");
+const newsroom1 = run("newsroom-demo", "golden", "run1.json");
+const agro1 = run("agro-demo", "golden", "run1.json");
+const NONE = { queue: null, decisions: null };
+const en = TEXT.en.rail;
 
 function table(stages: StageNumbers[]): Record<string, [string, string]> {
   return Object.fromEntries(stages.map((s) => [s.key, [s.value, s.line]]));
 }
 
-describe("buildStages", () => {
-  it("returns the nine stages in order", () => {
-    const stages = buildStages(makeConfig(), { status, queue, decisions }, "all");
-    expect(stages.map((s) => s.key)).toEqual([...STAGE_KEYS]);
-  });
+function item(url: string, topic: string): PendingItem {
+  return { url, title: url, source: "hn", topic, topic_name: topic, summary: "", score: 7, pending_since: "2026-10-06T12:00:00+00:00" };
+}
 
-  it("numbers one topic's last run with drop reasons", () => {
-    const stages = buildStages(makeConfig(), { status: { ...status, drops }, queue, decisions }, "tooling");
-    expect(table(stages)).toEqual({
-      collect: ["101", "−2 undated"],
-      window: ["100", "−1 too old"],
-      dedupe: ["74", "−25 seen · −1 dismissed"],
-      cache: ["70", "−4 cached below"],
-      rank: ["25", "−45 below 6"],
-      cap: ["3", "−22 over cap"],
-      queue: ["2", "+3 this run"],
-      review: ["1", "−2 rejected · −1 expired"],
-      deliver: ["09-30", "approved only"],
-    });
-  });
-
-  it("sums every topic under all", () => {
-    const stages = buildStages(makeConfig(), { status: { ...status, drops }, queue, decisions }, "all");
-    expect(table(stages)).toMatchObject({
-      collect: ["114", "−2 undated"],
-      window: ["113", "−1 too old"],
-      dedupe: ["86", "−26 seen · −1 dismissed"],
-      cache: ["82", "−4 cached below"],
-      rank: ["30", "−52 below 6"],
-      cap: ["6", "−24 over cap"],
-      queue: ["3", "+6 this run"],
-      review: ["1", "−2 rejected · −1 expired"],
-    });
-  });
-
-  it("shows what today's status.json allows when drops are missing", () => {
-    const stages = buildStages(makeConfig(), { status, queue, decisions }, "tooling");
-    expect(table(stages)).toEqual({
-      collect: ["101", "found"],
-      window: ["100", ""],
-      dedupe: ["—", ""],
-      cache: ["70", ""],
-      rank: ["—", ""],
-      cap: ["3", ""],
-      queue: ["2", "+3 this run"],
-      review: ["1", ""],
-      deliver: ["09-30", "approved only"],
-    });
-  });
-
-  it("shows dashes when nothing has loaded", () => {
-    const stages = buildStages(makeConfig(), { status: null, queue: null, decisions: null }, "all");
-    expect(stages.map((s) => s.value)).toEqual(Array(9).fill("—"));
-    expect(stages.find((s) => s.key === "deliver")?.line).toBe("approved only");
-    expect(stages.find((s) => s.key === "collect")?.line).toBe("");
-  });
-
-  it("says never when nothing was ever delivered", () => {
-    const stages = buildStages(makeConfig(), { status: { ...status, last_sent_at: null }, queue, decisions }, "all");
-    expect(stages.find((s) => s.key === "deliver")?.value).toBe("never");
-  });
-
-  it("marks failed stages for the topics in view", () => {
-    const failures = [
-      { stage: "collect", topic: "tooling", source: "github_trending" },
-      { stage: "collect", topic: "web", source: "hacker_news" },
-      { stage: "rank", topic: "web", source: null },
-      { stage: "inbox", topic: null, source: null },
-      { stage: "deliver", topic: null, source: null },
-    ];
-    const one = buildStages(makeConfig(), { status: { ...status, failures }, queue, decisions }, "tooling");
-    const failed = Object.fromEntries(one.map((s) => [s.key, s.failed]));
-    expect(failed).toMatchObject({ collect: "github_trending", rank: null, review: "run", deliver: "run", cap: null });
-    const all = buildStages(makeConfig(), { status: { ...status, failures }, queue, decisions }, "all");
-    expect(all.find((s) => s.key === "collect")?.failed).toBe("github_trending, hacker_news");
-    expect(all.find((s) => s.key === "rank")?.failed).toBe("run");
-  });
-
-  it("names the threshold only when the topics agree on it", () => {
-    const config = makeConfig([topic("tooling", 6), topic("web", 7)]);
-    const stages = buildStages(config, { status: { ...status, drops }, queue, decisions }, "all");
-    expect(stages.find((s) => s.key === "rank")?.line).toBe("−52 below threshold");
+describe("topicSlugs", () => {
+  it("is every topic for all, else the one picked", () => {
+    expect(topicSlugs([{ slug: "a" }, { slug: "b" }], "all")).toEqual(["a", "b"]);
+    expect(topicSlugs([{ slug: "a" }, { slug: "b" }], "b")).toEqual(["b"]);
   });
 });
 
-describe("topicSlugs", () => {
-  it("expands all and passes one topic through", () => {
-    expect(topicSlugs(makeConfig(), "all")).toEqual(["tooling", "web"]);
-    expect(topicSlugs(makeConfig(), "web")).toEqual(["web"]);
+describe("buildStages on Tony's run", () => {
+  it("returns the nine stages in order", () => {
+    expect(buildStages(tony, NONE, "all", en).map((s) => s.key)).toEqual([...STAGE_KEYS]);
+  });
+
+  it("sums every topic under all", () => {
+    expect(table(buildStages(tony, NONE, "all", en))).toEqual({
+      collect: ["24", "−1 undated"],
+      window: ["23", "−1 too old"],
+      dedupe: ["18", "−3 seen · −2 dismissed"],
+      cache: ["17", "−1 cached below"],
+      rank: ["13", "−4 below 6"],
+      cap: ["8", "−5 over cap"],
+      queue: ["9", "+8 this run"],
+      review: ["1", "−1 rejected · −1 expired"],
+      deliver: ["10-06", "1 sent in 1 message"],
+    });
+  });
+
+  it("numbers one topic", () => {
+    expect(table(buildStages(tony, NONE, "tooling", en))).toEqual({
+      collect: ["7", "−1 undated"],
+      window: ["6", "−1 too old"],
+      dedupe: ["4", "−2 seen · −0 dismissed"],
+      cache: ["4", "−0 cached below"],
+      rank: ["3", "−1 below 6"],
+      cap: ["1", "−2 over cap"],
+      queue: ["2", "+1 this run"],
+      review: ["0", "−1 rejected · −1 expired"],
+      deliver: ["10-06", "1 sent in 1 message"],
+    });
+  });
+
+  it("counts the live queue and live decisions when the page has them", () => {
+    const queue = [item("https://a", "tooling"), item("https://b", "tooling"), item("https://c", "web-products")];
+    const decisions: Decisions = {
+      version: 1,
+      decisions: {
+        "https://a": { decision: "approve", at: "2026-10-06T13:00:00Z" },
+        "https://c": { decision: "reject", at: "2026-10-06T13:00:00Z" },
+      },
+    };
+    const rows = table(buildStages(tony, { queue, decisions }, "tooling", en));
+    expect(rows.queue).toEqual(["2", "+1 this run"]);
+    expect(rows.review[0]).toBe("1");
+  });
+
+  it("marks the stage and source that failed, in the topics in view", () => {
+    const failing: RunResult = {
+      ...tony,
+      failures: [
+        { stage: "collect", scope: "tooling", source: "hacker_news", error_type: "HTTPError" },
+        { stage: "format", scope: "*", source: null, error_type: "ValueError" },
+      ],
+    };
+    const tooling = Object.fromEntries(buildStages(failing, NONE, "tooling", en).map((s) => [s.key, s.failed]));
+    expect(tooling.collect).toBe("hacker_news");
+    expect(tooling.deliver).toBe("run");
+    expect(tooling.rank).toBeNull();
+    const web = Object.fromEntries(buildStages(failing, NONE, "web-products", en).map((s) => [s.key, s.failed]));
+    expect(web.collect).toBeNull();
+  });
+
+  it("shows dashes without a run, but still the live queue and decisions", () => {
+    const queue = [item("https://a", "tooling")];
+    const decisions: Decisions = { version: 1, decisions: { "https://a": { decision: "approve", at: "2026-10-06T13:00:00Z" } } };
+    expect(table(buildStages(null, { queue, decisions }, "all", en))).toEqual({
+      collect: ["—", ""],
+      window: ["—", ""],
+      dedupe: ["—", ""],
+      cache: ["—", ""],
+      rank: ["—", ""],
+      cap: ["—", ""],
+      queue: ["1", ""],
+      review: ["1", ""],
+      deliver: ["—", ""],
+    });
+  });
+});
+
+describe("buildStages on a demo preset's shared feeds", () => {
+  it("sums the shared feeds into all, with the full-text note", () => {
+    expect(table(buildStages(newsroom1, NONE, "all", en))).toEqual({
+      collect: ["19", "−2 undated"],
+      window: ["17", "−2 too old"],
+      dedupe: ["16", "−1 seen · −0 dismissed"],
+      cache: ["16", "−0 cached below"],
+      rank: ["11", "−3 below 6 · −2 off topic · +3 full text"],
+      cap: ["8", "−3 over cap"],
+      queue: ["8", "+8 this run"],
+      review: ["0", "−0 rejected · −0 expired"],
+      deliver: ["never", "approved only"],
+    });
+  });
+
+  it("shows a topic the shared feeds before sorting, and what was sorted into it", () => {
+    const shared = " · shared feeds, before sorting";
+    expect(table(buildStages(newsroom1, NONE, "power", en))).toEqual({
+      collect: ["19", `−2 undated${shared}`],
+      window: ["17", `−2 too old${shared}`],
+      dedupe: ["16", `−1 seen · −0 dismissed${shared}`],
+      cache: ["16", `−0 cached below${shared}`],
+      rank: ["4", `−3 below 6 · −2 off topic · +3 full text${shared}`],
+      cap: ["3", "−1 over cap"],
+      queue: ["3", "+3 this run"],
+      review: ["0", "−0 rejected · −0 expired"],
+      deliver: ["never", "approved only"],
+    });
+  });
+
+  it("keeps a topic's own feed numbers, plus what the shared feeds added", () => {
+    const rows = table(buildStages(agro1, NONE, "prices", en));
+    expect(rows.collect).toEqual(["3", "found"]);
+    expect(rows.rank).toEqual(["3", "−0 below 6"]);
+  });
+
+  it("counts the sandbox's approvals on review", () => {
+    const decisions: Decisions = {
+      version: 1,
+      decisions: { "https://example-agency.ru/news/102": { decision: "approve", at: "2026-10-06T06:00:00Z" } },
+    };
+    expect(table(buildStages(newsroom1, { queue: null, decisions }, "all", en)).review[0]).toBe("1");
+  });
+
+  it("speaks the preset's language", () => {
+    expect(table(buildStages(newsroom1, NONE, "power", TEXT.ru.rail)).collect).toEqual([
+      "19",
+      "−2 без даты · общие ленты, до сортировки",
+    ]);
   });
 });
