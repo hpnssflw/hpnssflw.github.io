@@ -120,6 +120,16 @@ def write_run_result(path: Path, result: dict) -> None:
 def preset_config(preset: Preset) -> dict:
     """The assembled preset: everything that decides what reaches the
     queue, with environment variables by name only."""
+    config = _base_config(preset)
+    if preset.feeds:
+        config["ranking"]["classify_prompt_version"] = summarize.CLASSIFY_PROMPT_VERSION
+        config["ranking"]["classify_rubric_hash"] = summarize.classify_rubric_hash(
+            list(preset.topics), preset.reader, preset.language
+        )
+    return config
+
+
+def _base_config(preset: Preset) -> dict:
     return {
         "preset": {"slug": preset.slug, "name": preset.name, "language": preset.language, "legacy": preset.legacy},
         "max_age_days": preset.max_age_days,

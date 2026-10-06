@@ -6,6 +6,7 @@ state -- no I/O."""
 
 from __future__ import annotations
 
+from dataclasses import replace
 from datetime import datetime, timedelta
 
 from agent.dedupe import RankRecord, StateEntry, url_hash
@@ -102,3 +103,58 @@ def select(eligible: list[RankedItem], remaining: int) -> tuple[list[RankedItem]
 def mark_queued(state: dict[str, StateEntry], items: list[RankedItem], slug: str, now: datetime) -> None:
     for entry in items:
         state[url_hash(entry.item.url)].ranks[slug].queued_at = now.isoformat()
+
+
+# --- classified verdicts (a preset feed's items) -------------------------
+# Stored under ranks[<assigned topic slug>] with the classify rubric, so
+# RankRecord and state.json keep their shape and the daily cap
+# (queued_in_last_24h) counts them with the topic's other items. An
+# off-topic verdict goes under OFF_TOPIC, which no topic slug can be.
+OFF_TOPIC = "*"
+
+
+def partition_classified(
+    candidates: list[Item], state: dict[str, StateEntry], rubric: str, topics: dict[str, TopicConfig]
+) -> tuple[list[Item], list[RankedItem], list[Drop]]:
+    """(to_classify, cached, drops): no verdict with this classify rubric
+    -> to_classify; an off-topic verdict, or one below its topic's
+    min_relevance -> an already_ranked drop; otherwise cached, reused with
+    its topic set on the item."""
+    to_classify: list[Item] = []
+    cached: list[RankedItem] = []
+    drops: list[Drop] = []
+    for candidate in candidates:
+        entry = state.get(url_hash(candidate.url))
+        found = None
+        if entry is not None:
+            found = next(((slug, r) for slug, r in entry.ranks.items() if r.rubric == rubric), None)
+        if found is None:
+            to_classify.append(candidate)
+            continue
+        slug, record = found
+        if slug not in topics or record.relevance < topics[slug].min_relevance:
+            drops.append(
+                Drop(
+                    url=candidate.url,
+                    title=candidate.title,
+                    reason="already_ranked",
+                    detail={"relevance": record.relevance, "topic": None if slug == OFF_TOPIC else slug},
+                )
+            )
+        else:
+            cached.append(RankedItem(item=replace(candidate, topic=slug), summary=record.summary, score=record.relevance))
+    return to_classify, cached, drops
+
+
+def record_classified(state: dict[str, StateEntry], ranked: list[RankedItem], rubric: str, now: datetime) -> None:
+    """Cache fresh classifications. Failed ones aren't cached."""
+    for entry in ranked:
+        if entry.failed:
+            continue
+        state[url_hash(entry.item.url)].ranks[entry.item.topic or OFF_TOPIC] = RankRecord(
+            relevance=entry.score,
+            summary=entry.summary,
+            rubric=rubric,
+            source_score=entry.item.score,
+            ranked_at=now.isoformat(),
+        )
