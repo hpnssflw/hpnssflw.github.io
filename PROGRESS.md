@@ -661,10 +661,9 @@ infrastructure.
   1440×900. Owner-mode reject → undo was checked live before the merge
   (`tony-inbox` commits 09:27Z, `decisions.json` left empty).
   The `status.json` `drops`/`failures` assertions (including that
-  failures never carry error text) currently live only in the git-ignored
-  `.superpowers/sdd/2026-10-06-control-room/task6-check.py`; port them to
-  `agent/tests/test_status_export.py` when the content engine (A) merges
-  and brings `agent/tests` + pytest.
+  failures never carry error text) are pytest tests now,
+  `agent/tests/test_status_export.py` — ported from the git-ignored
+  `task6-check.py` once `main` (A) was merged into this branch (`5083043`).
   Final whole-branch review (opus): 0 Critical; 1 Important (I1,
   reduced-motion comets) and minors M3, M5, M6 fixed in one fix wave.
   Deferred: M4 (the queue could refuse non-http(s) item URLs), plus the
@@ -719,9 +718,7 @@ infrastructure.
   Next: B (stories), C (Telegram approval buttons, several delivery
   targets), D (preset switcher in the control room); #7 (Web Products RSS)
   becomes a topic `rss` entry, after D (Tony's topics load through
-  `config.py`, which doesn't read `rss` yet). Now that `agent/tests`
-  is on `main`: port #8's `status.json` `drops`/`failures` checks into
-  `agent/tests/test_status_export.py` (see #8's bullet).
+  `config.py`, which doesn't read `rss` yet).
 
 ### How to resume in a new session
 
