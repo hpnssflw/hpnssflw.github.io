@@ -112,7 +112,8 @@ gets its own spec → plan → implementation cycle:
   adapter; several delivery targets per preset.
 - **D. Preset switcher in the control room** — the site reads each
   preset's `run-result.json`; Tony's settings then move into
-  `agent/presets/tony.yaml`.
+  `agent/presets/tony.yaml`. Spec:
+  `docs/superpowers/specs/2026-10-06-preset-switcher-design.md`.
 
 Item 7 above becomes a topic-scoped `rss` entry for Web Products. A
 alone isn't enough: Tony's topics still load through `agent/config.py`,
