@@ -65,6 +65,14 @@ initiatives — see `PROGRESS.md` for status of each.
   `lib/home-feed.ts`), read from its public preview page,
   `t.me/s/hypnosisflow` — no token, but t.me may be unreachable from a
   dev machine without a VPN.
+- **`/researcher/queue/` (Tony Scraponi's control room) reads the agent's
+  config at build time.** `lib/agent-config.ts` parses
+  `agent/defaults.yaml` + `agent/topics/*.yaml` and pulls
+  `RANK_BATCH_SIZE`, `RANK_PROMPT_VERSION` and `temperature=` from
+  `agent/summarize.py`, `QUEUE_WINDOW` from `agent/rank_cache.py` and the
+  `cron:` line from `agent-run.yml`. Anything missing throws and fails the
+  site build, on purpose: when agent work renames or moves one of these,
+  update `lib/agent-config.ts` in the same change.
 - **The Tony Scraponi inbox's decisions live in a separate public repo,
   `hpnssflw/tony-inbox`** (`decisions.json` on its `main`). The site's
   `/researcher/queue/` owner mode is its only writer, with a
@@ -120,7 +128,7 @@ initiatives — see `PROGRESS.md` for status of each.
   npm test                # Vitest — lib/posts, lib/agent-status, lib/pending-queue,
                           # lib/topics, lib/yandex-music, lib/claude-presence,
                           # lib/now-format, lib/github-calendar, lib/telegram-post, lib/home-feed,
-                          # scripts/presence
+                          # lib/cron, lib/agent-config, scripts/presence
   ```
   (`next dev` occasionally hangs the TCP handshake in this environment;
   if a port won't come up, kill node and retry, or verify against

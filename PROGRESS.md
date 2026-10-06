@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6 shipped.**
+**Status: sub-projects #1-#6 shipped; #8 (control room) in progress.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -637,6 +637,14 @@ infrastructure.
   Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
   Pushed 2026-10-05 (24882c2); first live run 2026-10-05T18:22Z (workflow_dispatch 37355404165): 159 verdicts cached, queued per topic 4/3/3 (ai-engineering/tooling/web-products), no duplicate URLs in pending.json. Watch for 3 days (spec's success criteria 2–3): items sent to DeepSeek (the scored-per-day line of `python -m agent report`) should drop to single digits per run after the first day, at most 10 queued a day; then run python -m agent report against agent-data's state.json and decide on #7 (Web Products source).
   Tuned with Artem against two live previews: Tooling's keywords gained Claude Code / Codex / Cursor / Copilot / coding agent, and AI Engineering's exclude names coding agents and their add-ons. Final review (opus): 0 Critical, 3 Important — the same URL could be queued twice in one run (fixed: one copy per URL), `new` keeps counting cached over-cap items (watch criterion restated around `report`'s scored-per-day line), and the `lib/topics.ts` merge with main's `subtopics[]` (resolved) — plus a fix wave for a 23h cap window (cron jitter), per-keyword HN and per-topic ranking failure isolation, and doc drift. Parked: failed rankings pass the threshold as score 1 (latent, only if `min_relevance` 1); the local panel's `new` drill-down lists only `seen` drops; `state.json` grows with a `RankRecord` per topic (prune later); same story from several sources still takes several cap slots (story clustering); equal-score ties mix HN points and GitHub stars (break by recency instead). The main checkout's `agent/.env` has no `DEEPSEEK_API_KEY` line (lost around 2026-09-18); local previews read the worktree's `agent/.env`.
+- **Sub-project #8, Tony Scraponi control room: in progress.**
+  Replaces `/researcher/queue/` with a one-screen control room (pulse,
+  pipeline rail, config spine read from `agent/` at build time,
+  moderation queue with j/k/a/r/u/o, 14 days of outcomes).
+  Spec: `docs/superpowers/specs/2026-10-06-tony-control-room-design.md`.
+  Plan: `docs/superpowers/plans/2026-10-06-tony-control-room.md`.
+  Worktree `.claude/worktrees/admin-panel`, branch `worktree-admin-panel`
+  (not merged). Done: Task 1 (build-time config loader). Next: Task 2.
 
 ### How to resume in a new session
 
