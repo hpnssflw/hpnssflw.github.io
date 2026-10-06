@@ -1,6 +1,4 @@
-"""Where one preset's run data lives -- the --data-dir. Tony's default is
-agent/ itself, where agent-run.yml expects state.json, pending.json and
-status.json."""
+"""Where one preset's run data lives -- the --data-dir, or the preset's data.default_dir (Tony: agent/, where agent-run.yml expects it)."""
 
 from __future__ import annotations
 
@@ -11,9 +9,7 @@ from agent.preset import Preset, PresetError
 
 
 def for_preset(preset: Preset, data_dir: Path | None) -> DataPaths:
-    """--data-dir if given; otherwise the legacy preset's agent/. A
-    self-contained preset has no default, so a demo can't overwrite
-    Tony's local state."""
+    """--data-dir if given; otherwise the preset's data.default_dir. A preset without one (the demos) needs --data-dir, so it can't overwrite Tony's local state."""
     root = data_dir if data_dir is not None else preset.default_data_dir
     if root is None:
         raise PresetError(f"--data-dir is required for preset {preset.slug!r}")

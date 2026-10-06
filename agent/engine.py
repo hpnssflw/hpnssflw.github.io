@@ -21,9 +21,9 @@ from agent.ranker import FixtureRanker, LiveRanker
 from agent.run_result import FEED_SCOPE, Tally, build_run_result, write_run_result
 from agent.sources.base import TopicConfig
 
-# Tony's collection cadence as agent-run.yml schedules it; status.json
-# shows it on the site.
-LEGACY_RUN_CADENCE_HOURS = 4
+# agent-run.yml's collection cadence (every 4 h); status.json shows it on
+# the site.
+RUN_CADENCE_HOURS = 4
 
 
 def live_adapters(preset: Preset, paths: DataPaths) -> Adapters:
@@ -170,13 +170,12 @@ def run_real(
         )
     except Exception as exc:  # noqa: BLE001 — items may be sent already: a failed run record must not fail the run (CI would skip pushing state and deliver them again)
         print(f"Run result not written: {exc}")
-    if preset.legacy:
+    if preset.status_json:
         _write_status(preset, paths, writer, queue, now)
     print(f"Run recorded: {writer.path}")
-    if preset.legacy:
+    if preset.status_json:
         print(f"Status written: {paths.status}")
-    else:
-        print(f"Run result: {paths.result}")
+    print(f"Run result: {paths.result}")
 
 
 def _tally_review(tally: Tally, before: Counter, queue: pending.PendingQueue, inbox_drops: list, approved: list) -> None:
@@ -192,7 +191,7 @@ def _tally_review(tally: Tally, before: Counter, queue: pending.PendingQueue, in
 
 
 def _write_status(preset: Preset, paths: DataPaths, writer, queue: pending.PendingQueue, now: datetime) -> None:
-    """status.json: the public widget's aggregate. Tony's only."""
+    """status.json: the public widget's aggregate, for presets with data.status_json."""
     topic_names = {t.slug: t.name for t in preset.topics}
     previous_status = json.loads(paths.status.read_text(encoding="utf-8")) if paths.status.exists() else None
     status = status_export.build_status(
@@ -200,7 +199,7 @@ def _write_status(preset: Preset, paths: DataPaths, writer, queue: pending.Pendi
         topic_names,
         queue,
         preset.delivery.cadence_hours,
-        LEGACY_RUN_CADENCE_HOURS,
+        RUN_CADENCE_HOURS,
         previous_status,
         now,
     )
@@ -272,8 +271,7 @@ def run_dry(
         ),
     )
     print(f"\nRun recorded: {writer.path}")
-    if not preset.legacy:
-        print(f"Run result: {paths.result}")
+    print(f"Run result: {paths.result}")
 
 
 def _dry_funnel(

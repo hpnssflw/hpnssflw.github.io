@@ -1,13 +1,10 @@
 """Presets: one YAML file describes one client of the engine -- its
-sources, topics, reader, LLM, approval and delivery. Two forms:
+sources, topics, reader, LLM, approval and delivery -- validated before
+any network call. Tony's is agent/presets/tony.yaml; its optional `data`
+section gives it a default data dir (agent/) and status.json.
 
-- self-contained (newsroom, agro, later real clients): every section in
-  the file, validated before any network call;
-- legacy (Tony only): `legacy: {defaults, topics}` points at
-  agent/defaults.yaml and agent/topics/, which the control room reads at
-  site build time, so Tony's settings stay there until sub-project D.
-
-See docs/superpowers/specs/2026-10-06-content-engine-core-design.md."""
+See docs/superpowers/specs/2026-10-06-content-engine-core-design.md and
+docs/superpowers/specs/2026-10-06-preset-switcher-design.md."""
 
 from __future__ import annotations
 
@@ -18,7 +15,6 @@ from pathlib import Path
 
 import yaml
 
-from agent import config
 from agent.sources.base import FeedConfig, TopicConfig
 
 LANGUAGES = ("en", "ru")
@@ -84,7 +80,6 @@ class Preset:
     name: str
     language: str  # en | ru
     path: Path  # the preset file
-    legacy: bool
     max_age_days: int  # recency window for the preset's own feeds
     topics: tuple[TopicConfig, ...]
     feeds: tuple[FeedConfig, ...]  # preset-scope feeds: items are classified into topics
@@ -94,7 +89,8 @@ class Preset:
     approval: ApprovalConfig
     delivery: DeliveryTarget
     offline: OfflineConfig | None
-    default_data_dir: Path | None  # legacy only: agent/
+    status_json: bool  # data.status_json: also write status.json (Tony's site widgets)
+    default_data_dir: Path | None  # data.default_dir, resolved; None: --data-dir is required
 
 
 def load_preset(path: Path) -> Preset:
@@ -107,8 +103,6 @@ def load_preset(path: Path) -> Preset:
         raise PresetError(f"{path}: not valid YAML: {exc}") from None
     if not isinstance(raw, dict):
         raise PresetError(f"{path}: a preset must be a mapping")
-    if "legacy" in raw:
-        return _load_legacy(path, raw)
     return _load_self_contained(path, raw)
 
 
@@ -127,56 +121,11 @@ def require_offline(preset: Preset) -> None:
                 raise PresetError(f"topics[{index}].sources.{source}: has no offline mode")
 
 
-# --- legacy (Tony) ---------------------------------------------------------
-
-
-def _load_legacy(path: Path, raw: dict) -> Preset:
-    _fields(raw, "", ("preset", "legacy"))
-    slug, name, language = _identity(raw["preset"])
-    legacy = _fields(raw["legacy"], "legacy", ("defaults", "topics"))
-    defaults_path = (path.parent / _str(legacy, "defaults", "legacy")).resolve()
-    topics_dir = (path.parent / _str(legacy, "topics", "legacy")).resolve()
-    try:
-        settings = config.load_settings(defaults_path)
-        topics = config.load_topics(topics_dir, defaults_path)
-        max_age_days = config._load_yaml(defaults_path)["max_age_days"]
-    except (OSError, KeyError, TypeError, AttributeError, yaml.YAMLError) as exc:
-        raise PresetError(f"legacy: can't load {defaults_path.name} / {topics_dir.name}: {exc!r}") from None
-    return Preset(
-        slug=slug,
-        name=name,
-        language=language,
-        path=path,
-        legacy=True,
-        max_age_days=max_age_days,
-        topics=tuple(topics),
-        feeds=(),
-        telegram=None,
-        reader=settings.ranking.reader,
-        llm=LLMSettings(base_url=settings.llm.base_url, model=settings.llm.model, api_key_env="DEEPSEEK_API_KEY"),
-        approval=ApprovalConfig(
-            type="inbox",
-            expire_days=settings.inbox.expire_days,
-            decisions_url=settings.inbox.decisions_url,
-            token_env="GITHUB_TOKEN",
-        ),
-        delivery=DeliveryTarget(
-            type="telegram",
-            title="Research digest",
-            cadence_hours=settings.delivery.delivery_cadence_hours,
-            chat=settings.delivery.telegram_channel,
-            bot_token_env="TELEGRAM_BOT_TOKEN",
-        ),
-        offline=None,
-        default_data_dir=defaults_path.parent,
-    )
-
-
 # --- self-contained ----------------------------------------------------------
 
 
 def _load_self_contained(path: Path, raw: dict) -> Preset:
-    _fields(raw, "", ("preset", "defaults", "topics", "ranking", "llm", "approval", "delivery"), ("sources", "offline"))
+    _fields(raw, "", ("preset", "defaults", "topics", "ranking", "llm", "approval", "delivery"), ("sources", "offline", "data"))
     slug, name, language = _identity(raw["preset"])
     defaults = _defaults(raw["defaults"], "defaults")
     feeds, telegram = _preset_sources(raw.get("sources", {}))
@@ -184,12 +133,12 @@ def _load_self_contained(path: Path, raw: dict) -> Preset:
     _check_unique_feed_ids(feeds, topics)
     ranking = _fields(raw["ranking"], "ranking", ("reader",))
     llm = _fields(raw["llm"], "llm", ("base_url", "model", "api_key_env"))
+    data = _data(raw.get("data", {}), path.parent)
     return Preset(
         slug=slug,
         name=name,
         language=language,
         path=path,
-        legacy=False,
         max_age_days=defaults["max_age_days"],
         topics=topics,
         feeds=feeds,
@@ -203,7 +152,8 @@ def _load_self_contained(path: Path, raw: dict) -> Preset:
         approval=_approval(raw["approval"], path.parent),
         delivery=_delivery(raw["delivery"]),
         offline=_offline(raw["offline"], path.parent) if "offline" in raw else None,
-        default_data_dir=None,
+        status_json=data["status_json"],
+        default_data_dir=data["default_dir"],
     )
 
 
@@ -397,6 +347,14 @@ def _offline(raw, base: Path) -> OfflineConfig:
         http=_existing_file(section, "http", "offline", base),
         llm=_existing_file(section, "llm", "offline", base),
     )
+
+
+def _data(raw, base: Path) -> dict:
+    section = _fields(raw, "data", (), ("default_dir", "status_json"))
+    return {
+        "default_dir": (base / _str(section, "default_dir", "data")).resolve() if "default_dir" in section else None,
+        "status_json": _bool(section, "status_json", "data") if "status_json" in section else False,
+    }
 
 
 # --- field readers -----------------------------------------------------------

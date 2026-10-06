@@ -18,7 +18,7 @@ from agent.pending import PendingQueue
 from agent.preset import Preset
 from agent.sources.base import Drop, FeedConfig
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2  # 2: config.preset lost "legacy" (sub-project D)
 FEED_SCOPE = "*"  # a preset feed's items before classification
 
 # Logical order -- the control room's rail plus enrich and format -- not
@@ -131,7 +131,7 @@ def preset_config(preset: Preset) -> dict:
 
 def _base_config(preset: Preset) -> dict:
     return {
-        "preset": {"slug": preset.slug, "name": preset.name, "language": preset.language, "legacy": preset.legacy},
+        "preset": {"slug": preset.slug, "name": preset.name, "language": preset.language},
         "max_age_days": preset.max_age_days,
         "sources": {
             "rss": [_feed(feed) for feed in preset.feeds],

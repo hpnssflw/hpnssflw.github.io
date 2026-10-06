@@ -19,7 +19,6 @@
     },
     "preset": {
       "language": "ru",
-      "legacy": false,
       "name": "Агродистрибутор (демо)",
       "slug": "agro-demo"
     },
@@ -218,7 +217,7 @@
     "mode": "real",
     "offline": true
   },
-  "schema_version": 1,
+  "schema_version": 2,
   "stages": [
     {
       "group": "sources",

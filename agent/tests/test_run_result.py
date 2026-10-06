@@ -107,7 +107,7 @@ def test_build_and_write_are_deterministic(tmp_path):
         delivery={"target": "file", "due": False, "sent_items": 0, "messages": 0, "last_sent_at": None},
     )
     result = build_run_result(**kwargs)
-    assert result["schema_version"] == run_result.SCHEMA_VERSION == 1
+    assert result["schema_version"] == run_result.SCHEMA_VERSION == 2
     assert result["run"] == {"id": "2026-10-06T1200Z", "mode": "real", "offline": True, "at": FROZEN_NOW.isoformat()}
     assert result["queue"]["count"] == 1 and result["queue"]["by_topic"] == {"incidents": 1}
     assert result["queue"]["items"][0]["decision"] == "approve"

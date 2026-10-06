@@ -1,7 +1,8 @@
 """Characterization of Tony: a real run, a preview and a dry run on fixed
 inputs (tests/fixtures/tony), compared byte for byte with goldens
-recorded on ec82c98, before the engine refactor. These goldens are never
-re-recorded in sub-project A: one that would change is a regression."""
+recorded on ec82c98, before the engine refactor. Re-recorded once, in
+sub-project D, for run-result schema 2 and the "Run result:" line;
+otherwise a golden that would change is a regression."""
 
 from __future__ import annotations
 

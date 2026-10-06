@@ -48,10 +48,13 @@ def write_preset(tmp_path: Path, raw: dict) -> Path:
     return path
 
 
-def test_tony_legacy_preset_reads_defaults_and_topics():
+def test_tony_preset_matches_the_legacy_files_it_replaces():
+    """The preset-switcher plan (Task 2) moves Tony's settings out of
+    agent/defaults.yaml + agent/topics/ into presets/tony.yaml. Task 6
+    deletes those files, and this test with them."""
     preset = load_preset(AGENT / "presets" / "tony.yaml")
     settings = config.load_settings(AGENT / "defaults.yaml")
-    assert (preset.slug, preset.name, preset.language, preset.legacy) == ("tony", "Tony Scraponi", "en", True)
+    assert (preset.slug, preset.name, preset.language, preset.status_json) == ("tony", "Tony Scraponi", "en", True)
     assert list(preset.topics) == config.load_topics(AGENT / "topics", AGENT / "defaults.yaml")
     assert preset.feeds == () and preset.telegram is None and preset.offline is None
     assert preset.reader == settings.ranking.reader
@@ -68,8 +71,8 @@ def test_tony_legacy_preset_reads_defaults_and_topics():
     )
     assert (preset.delivery.type, preset.delivery.chat, preset.delivery.cadence_hours, preset.delivery.title) == (
         "telegram",
-        "@hypnosisflow",
-        24,
+        settings.delivery.telegram_channel,
+        settings.delivery.delivery_cadence_hours,
         "Research digest",
     )
     assert preset.delivery.bot_token_env == "TELEGRAM_BOT_TOKEN"
@@ -79,7 +82,7 @@ def test_tony_legacy_preset_reads_defaults_and_topics():
 
 def test_self_contained_preset_loads_every_section(tmp_path):
     preset = load_preset(write_preset(tmp_path, VALID))
-    assert (preset.slug, preset.language, preset.legacy, preset.max_age_days) == ("demo", "ru", False, 2)
+    assert (preset.slug, preset.language, preset.status_json, preset.max_age_days) == ("demo", "ru", False, 2)
     assert preset.feeds == (FeedConfig("agency", "Агентство", "https://example-agency.ru/rss", True),)
     assert [c.handle for c in preset.telegram.channels] == ["example_agency"]
     assert preset.telegram.enabled is False
@@ -121,6 +124,10 @@ def _broken(change):
         (lambda r: r["delivery"].update(cadence_hours="4"), "delivery.cadence_hours: expected an integer"),
         (lambda r: r["offline"].update(now="2026-10-06T09:00:00"), "offline.now: expected an ISO 8601 timestamp with a UTC offset"),
         (lambda r: r["topics"].clear(), "topics: expected a non-empty list"),
+        (lambda r: r.update(data={"extra": 1}), "data.extra: unknown key"),
+        (lambda r: r.update(data={"status_json": "yes"}), "data.status_json: expected true or false"),
+        (lambda r: r.update(data={"default_dir": ""}), "data.default_dir: expected a non-empty string"),
+        (lambda r: r.update(legacy={"defaults": "x", "topics": "y"}), "legacy: unknown key"),
     ],
 )
 def test_invalid_presets_name_the_key(tmp_path, change, message):
@@ -128,16 +135,10 @@ def test_invalid_presets_name_the_key(tmp_path, change, message):
         load_preset(write_preset(tmp_path, _broken(change)))
 
 
-def test_legacy_preset_allows_nothing_else(tmp_path):
-    path = tmp_path / "tony.yaml"
-    path.write_text(
-        "preset: {slug: tony, name: Tony, language: en}\n"
-        f"legacy: {{defaults: {(AGENT / 'defaults.yaml').as_posix()}, topics: {(AGENT / 'topics').as_posix()}}}\n"
-        "delivery: {type: file, title: x, cadence_hours: 1}\n",
-        encoding="utf-8",
-    )
-    with pytest.raises(PresetError, match="delivery: unknown key"):
-        load_preset(path)
+def test_data_section_sets_the_default_dir_and_status_json(tmp_path):
+    preset = load_preset(write_preset(tmp_path, dict(VALID, data={"default_dir": "../data", "status_json": True})))
+    assert preset.default_data_dir == (tmp_path.parent / "data").resolve()
+    assert preset.status_json is True
 
 
 def test_missing_preset_file(tmp_path):

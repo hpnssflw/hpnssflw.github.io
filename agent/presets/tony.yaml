@@ -1,12 +1,123 @@
-# Tony Scraponi -- Artem's research digest. Its settings stay in
-# agent/defaults.yaml and agent/topics/*.yaml, where the control room
-# reads them at site build time; this file only points there. Once the
-# control room reads run-result.json instead (sub-project D), they move
-# in here and `legacy` goes away.
+# Tony Scraponi -- Artem's research digest and the engine's first live
+# preset. The control room (/researcher/queue/) shows this config as the
+# last run's run-result.json reports it.
 preset:
   slug: tony
   name: Tony Scraponi
   language: en
-legacy:
-  defaults: ../defaults.yaml
-  topics: ../topics
+
+# `python -m agent` without --data-dir keeps Tony's data in agent/, where
+# agent-run.yml expects state.json, pending.json, status.json and
+# run-result.json.
+data:
+  default_dir: ..
+  status_json: true # the home teaser and the agent widget read it
+
+# Applies to every topic unless the topic sets its own.
+defaults:
+  max_age_days: 10
+  min_relevance: 6 # 1-10 scale
+  max_items_per_day: 3 # per topic, rolling 23h window (see rank_cache.QUEUE_WINDOW); items over the cap stay eligible for later runs
+  attention:
+    enabled: true
+    min_score_gain: 50
+
+# keywords are matched against HN story titles only -- whole words, no
+# typos -- so keep them short: a multi-word keyword needs every word in
+# the title.
+topics:
+  - slug: ai-engineering
+    name: AI Engineering
+    description: >
+      Agent and automated pipelines and harnesses, LLM assistants,
+      self-hosted/private AI platform development, and LLM/inference
+      optimization.
+    max_items_per_day: 4
+    include:
+      - "building, running or evaluating LLM systems: agent harnesses, tool use, MCP, RAG, evals"
+      - "inference and serving: self-hosted/local models, quantization, speed and cost"
+      - major model, API or dev-platform releases that change what or how you build
+    exclude:
+      - AI policy, lawsuits, regulation, company drama, funding and business news
+      - "coding agents and their add-ons (Claude Code, Codex, Cursor, plugins, skills) used while writing code (they belong to Tooling)"
+      - consumer AI apps with no engineering substance
+    keywords:
+      [LLM, agent, agentic, MCP, RAG, inference, eval, benchmark, Claude, GPT, Gemini,
+       DeepSeek, Qwen, Llama, llama.cpp, vLLM, Ollama, open-weight, fine-tuning, prompt,
+       embeddings]
+    sources:
+      hacker_news: { min_points: 30 }
+      github_trending: { min_stars: 100, topics: [llm, mcp, ai-agents, rag, llm-inference] }
+
+  - slug: tooling
+    name: Tooling
+    description: >
+      Tools developers use to build software: editors, CLIs, libraries,
+      and AI coding tools.
+    include:
+      - "tools used while building software: editors and IDEs, CLIs, terminals, debuggers, build tools, package managers, version control, databases"
+      - "AI tools used while writing code: coding agents, editor plugins, Claude Code skills and hooks"
+      - new or notably improved open-source libraries and frameworks for building software
+    exclude:
+      - "components for building LLM systems: agent frameworks, inference servers, evals (they belong to AI Engineering)"
+      - games, consumer apps, and utilities with no role in software development
+      - nostalgia or legacy-systems threads, career and workplace discussion
+    keywords:
+      [CLI, terminal, editor, IDE, compiler, debugger, Git, GitHub, Rust, TypeScript, Python,
+       Postgres, SQLite, database, Show HN, open source, library, framework, Neovim, VS Code,
+       Claude Code, Codex, Cursor, Copilot, coding agent]
+    sources:
+      hacker_news: { min_points: 30 }
+      github_trending:
+        { min_stars: 50, topics: [developer-tools, cli, devtools, terminal, vscode-extension, neovim] }
+
+  - slug: web-products
+    name: Web Products
+    description: >
+      Product and web trends, securities & market data, data visualization,
+      browser performance, web architecture, and SEO.
+    include:
+      - "the web platform and browsers: new APIs, standards, rendering and browser performance"
+      - "frontend engineering and web architecture: frameworks, CSS, performance, SEO"
+      - data visualization, and products built on market or financial data
+      - "product and web trends: notable launches and how web products make money"
+    exclude:
+      - general tech-company news, earnings and stock moves with no product angle
+      - AI model releases (AI Engineering) and developer tools (Tooling)
+      - games and demos that merely run in a browser
+    keywords:
+      [browser, Chrome, Firefox, Safari, WebKit, WebAssembly, JavaScript, CSS, HTML, React,
+       frontend, SEO, visualization, chart, dashboard, D3, stock, trading, fintech, Stripe, SaaS]
+    sources:
+      hacker_news: { min_points: 30 }
+      github_trending: { min_stars: 50, topics: [data-visualization, web-performance, frontend, seo] }
+
+ranking:
+  # Who the digest is for. Part of every ranking prompt and of each
+  # topic's rubric hash, so editing it re-scores cached verdicts.
+  reader: >
+    Artem, a full-stack engineer who builds web products and LLM agents
+    and writes about both. He wants items he can learn from or act on
+    as a builder, not general tech news.
+
+llm:
+  base_url: https://api.deepseek.com
+  # deepseek-chat was discontinued 2026-07-24; deepseek-v4-flash is its
+  # replacement (the non-thinking mode deepseek-chat used to point to).
+  model: deepseek-v4-flash
+  api_key_env: DEEPSEEK_API_KEY
+
+approval:
+  # Artem's approve/reject decisions (docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md).
+  # Written only by the site's /researcher/queue/ owner mode; the agent only reads it.
+  type: inbox
+  decisions_url: https://api.github.com/repos/hpnssflw/tony-inbox/contents/decisions.json
+  token_env: GITHUB_TOKEN
+  expire_days: 7 # undecided items older than this leave the queue for good
+
+delivery:
+  type: telegram
+  chat: "@hypnosisflow" # the channel's public handle; not a secret.
+  bot_token_env: TELEGRAM_BOT_TOKEN
+  title: Research digest
+  cadence_hours: 24 # digest rollup cadence; collection/ranking run every 4h regardless

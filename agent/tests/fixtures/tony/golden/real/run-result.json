@@ -18,7 +18,6 @@
     "offline": null,
     "preset": {
       "language": "en",
-      "legacy": true,
       "name": "Tony Scraponi",
       "slug": "tony"
     },
@@ -357,7 +356,7 @@
     "mode": "real",
     "offline": false
   },
-  "schema_version": 1,
+  "schema_version": 2,
   "stages": [
     {
       "group": "sources",
