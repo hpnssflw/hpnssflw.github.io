@@ -18,6 +18,18 @@ class Drop:
 
 
 @dataclass(frozen=True)
+class FeedConfig:
+    """One RSS/Atom feed from a preset: under the preset's `sources.rss`
+    (its items get a topic from classification) or under a topic's
+    `sources.rss` (its items belong to that topic)."""
+
+    id: str
+    name: str
+    url: str
+    full_text: bool = False  # fetch each article's full text before ranking
+
+
+@dataclass(frozen=True)
 class TopicConfig:
     """One topic's fully merged configuration — defaults.yaml with this
     topic's overrides from topics/<slug>.yaml applied on top."""
@@ -34,3 +46,4 @@ class TopicConfig:
     max_items_per_day: int  # rolling 23h cap on items this topic adds to the queue
     attention_enabled: bool
     attention_min_score_gain: int
+    feeds: tuple[FeedConfig, ...] = ()  # topic-scoped RSS feeds (a preset's topics only)
