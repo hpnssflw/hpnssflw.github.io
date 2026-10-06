@@ -1,24 +1,30 @@
 import json
 
 import pytest
+import yaml
 
-from agent import main, panel, report
+from agent import engine, main, panel, report
 from agent.paths import DataPaths
 from agent.tests.conftest import TONY, url_hash
+from agent.tests.test_preset import VALID, write_preset
 
 
 @pytest.fixture
 def calls(monkeypatch):
     seen = []
     for name in ("run_real", "run_preview", "run_dry"):
-        monkeypatch.setattr(main, name, lambda topic, paths, name=name: seen.append((name, topic, paths)))
+        monkeypatch.setattr(
+            engine,
+            name,
+            lambda preset, paths, now, adapters, topic, name=name: seen.append((name, preset.slug, paths, topic)),
+        )
     monkeypatch.setattr(main.config, "load_env", lambda path: None)
     return seen
 
 
-def test_data_dir_defaults_to_the_agent_directory(calls):
+def test_tony_is_the_default_preset_and_agent_the_default_data_dir(calls):
     main.main([])
-    assert calls == [("run_real", None, DataPaths(main.AGENT_DIR))]
+    assert calls == [("run_real", "tony", DataPaths(main.AGENT_DIR), None)]
 
 
 def test_data_dir_is_created_and_passed_to_every_mode(calls, tmp_path):
@@ -26,7 +32,28 @@ def test_data_dir_is_created_and_passed_to_every_mode(calls, tmp_path):
     main.main(["--preview", "--topic", "tooling", "--data-dir", str(data)])
     main.main(["--dry-run", "--data-dir", str(data)])
     assert data.is_dir()
-    assert calls == [("run_preview", "tooling", DataPaths(data)), ("run_dry", None, DataPaths(data))]
+    assert calls == [("run_preview", "tony", DataPaths(data), "tooling"), ("run_dry", "tony", DataPaths(data), None)]
+
+
+def test_a_self_contained_preset_needs_a_data_dir(calls, tmp_path, capsys):
+    preset_path = write_preset(tmp_path, VALID)
+    with pytest.raises(SystemExit) as exit_info:
+        main.main(["--preset", str(preset_path)])
+    assert exit_info.value.code == 2
+    assert "--data-dir is required for preset 'demo'" in capsys.readouterr().err
+    main.main(["--preset", str(preset_path), "--data-dir", str(tmp_path / "demo-data")])
+    assert calls == [("run_real", "demo", DataPaths(tmp_path / "demo-data"), None)]
+
+
+def test_an_invalid_preset_exits_2_before_running(calls, tmp_path, capsys):
+    broken = dict(VALID, extra=1)
+    path = tmp_path / "broken.yaml"
+    path.write_text(yaml.safe_dump(broken, allow_unicode=True), encoding="utf-8")
+    with pytest.raises(SystemExit) as exit_info:
+        main.main(["--preset", str(path), "--data-dir", str(tmp_path)])
+    assert exit_info.value.code == 2
+    assert "Preset error: extra: unknown key" in capsys.readouterr().err
+    assert calls == []
 
 
 def test_report_reads_state_from_the_data_dir(tmp_path, capsys):

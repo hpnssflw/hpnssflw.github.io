@@ -6,12 +6,9 @@ whether to save them."""
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
 
 from agent import date_guard, dedupe, pending, rank_cache, summarize
-from agent.config import Settings
-from agent.dedupe import StateEntry
-from agent.pending import PendingQueue
+from agent.context import RunContext
 from agent.sources import github_trending, hn
 from agent.sources.base import Drop, TopicConfig
 from agent.summarize import RankedItem
@@ -31,14 +28,8 @@ class TopicResult:
     queued_before: int  # this topic's items queued in the cap window (23h) before this pass
 
 
-def process_topic(
-    topic: TopicConfig,
-    state: dict[str, StateEntry],
-    queue: PendingQueue,
-    settings: Settings,
-    now: datetime,
-    writer,
-) -> TopicResult:
+def process_topic(topic: TopicConfig, ctx: RunContext) -> TopicResult:
+    state, queue, now, writer = ctx.state, ctx.queue, ctx.now, ctx.writer
     all_candidates = []
     for source_name, connector in CONNECTORS.items():
         if source_name not in topic.sources:
@@ -82,12 +73,12 @@ def process_topic(
             unique.append(candidate)
     kept = unique
 
-    rubric = summarize.rubric_hash(topic, settings)
+    rubric = summarize.rubric_hash(topic, ctx.preset.reader)
     to_rank, cached, cached_below = rank_cache.partition(kept, state, topic, rubric)
     for drop in cached_below:
         writer.emit_drop("dedupe", topic.slug, drop)
 
-    fresh = summarize.rank_topic(topic, to_rank, settings)
+    fresh = ctx.adapters.ranker.rank_topic(topic, to_rank)
     rank_cache.record(state, fresh, topic.slug, rubric, now)
 
     eligible = list(cached)

@@ -1,7 +1,8 @@
 import json
 from pathlib import Path
 
-from agent import config, summarize
+from agent import summarize
+from agent.preset import load_preset
 
 AGENT = Path(__file__).resolve().parents[1]
 
@@ -15,9 +16,8 @@ PINNED_RUBRICS = {
 
 
 def test_rubric_hash_of_the_real_topics_is_pinned():
-    settings = config.load_settings(AGENT / "defaults.yaml")
-    topics = config.load_topics(AGENT / "topics", AGENT / "defaults.yaml")
-    assert {t.slug: summarize.rubric_hash(t, settings) for t in topics} == PINNED_RUBRICS
+    preset = load_preset(AGENT / "presets" / "tony.yaml")
+    assert {t.slug: summarize.rubric_hash(t, preset.reader) for t in preset.topics} == PINNED_RUBRICS
 
 
 def _rankings(*entries):

@@ -13,8 +13,8 @@ from urllib.parse import urlparse
 
 from openai import OpenAI
 
-from agent.config import Settings
 from agent.item import Item
+from agent.preset import LLMSettings
 from agent.sources.base import TopicConfig
 
 # Bump whenever RANK_SYSTEM_PROMPT or _build_batch_prompt's wording
@@ -53,7 +53,7 @@ class RankedItem:
     failed: bool = False  # no call produced a verdict; never cached, retried next run
 
 
-def rubric_hash(topic: TopicConfig, settings: Settings) -> str:
+def rubric_hash(topic: TopicConfig, reader: str) -> str:
     """Identifies everything that shapes a verdict for this topic. Stored
     with each cached verdict (agent/rank_cache.py), so editing any of
     these re-scores the topic's cached items on the next run."""
@@ -62,18 +62,18 @@ def rubric_hash(topic: TopicConfig, settings: Settings) -> str:
         "description": topic.description,
         "include": list(topic.include),
         "exclude": list(topic.exclude),
-        "reader": settings.ranking.reader,
+        "reader": reader,
         "prompt_version": RANK_PROMPT_VERSION,
     }
     canonical = json.dumps(payload, sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:12]
 
 
-def _client(settings: Settings) -> OpenAI:
-    api_key = os.environ.get("DEEPSEEK_API_KEY")
+def _client(llm: LLMSettings) -> OpenAI:
+    api_key = os.environ.get(llm.api_key_env)
     if not api_key:
-        raise RuntimeError("DEEPSEEK_API_KEY is not set")
-    return OpenAI(base_url=settings.llm.base_url, api_key=api_key)
+        raise RuntimeError(f"{llm.api_key_env} is not set")
+    return OpenAI(base_url=llm.base_url, api_key=api_key)
 
 
 def _domain(url: str) -> str:
@@ -96,9 +96,9 @@ def _context(candidate: Item) -> str:
     return " · ".join(parts)
 
 
-def _build_batch_prompt(topic: TopicConfig, settings: Settings, candidates: list[Item]) -> str:
+def _build_batch_prompt(topic: TopicConfig, reader: str, candidates: list[Item]) -> str:
     lines = [
-        f"Reader: {settings.ranking.reader}",
+        f"Reader: {reader}",
         f"Topic: {topic.name}",
         f"Description: {topic.description}",
         "Include:",
@@ -144,15 +144,15 @@ def _parse_batch_response(raw: str, expected_count: int) -> list[dict] | None:
 
 
 def _call_batch(
-    client: OpenAI, settings: Settings, topic: TopicConfig, candidates: list[Item]
+    client: OpenAI, llm: LLMSettings, reader: str, topic: TopicConfig, candidates: list[Item]
 ) -> list[dict] | None:
     response = client.chat.completions.create(
-        model=settings.llm.model,
+        model=llm.model,
         response_format={"type": "json_object"},
         temperature=0,
         messages=[
             {"role": "system", "content": RANK_SYSTEM_PROMPT},
-            {"role": "user", "content": _build_batch_prompt(topic, settings, candidates)},
+            {"role": "user", "content": _build_batch_prompt(topic, reader, candidates)},
         ],
     )
     content = response.choices[0].message.content or ""
@@ -160,11 +160,11 @@ def _call_batch(
 
 
 def _rank_chunk(
-    client: OpenAI, settings: Settings, topic: TopicConfig, candidates: list[Item]
+    client: OpenAI, llm: LLMSettings, reader: str, topic: TopicConfig, candidates: list[Item]
 ) -> list[RankedItem]:
-    result = _call_batch(client, settings, topic, candidates)
+    result = _call_batch(client, llm, reader, topic, candidates)
     if result is None:
-        result = _call_batch(client, settings, topic, candidates)  # one retry
+        result = _call_batch(client, llm, reader, topic, candidates)  # one retry
 
     if result is not None:
         by_id = {entry["id"]: entry for entry in result}
@@ -177,7 +177,7 @@ def _rank_chunk(
     # whole chunk doesn't lose its ranking over one malformed response.
     ranked: list[RankedItem] = []
     for candidate in candidates:
-        single = _call_batch(client, settings, topic, [candidate])
+        single = _call_batch(client, llm, reader, topic, [candidate])
         if single is None:
             ranked.append(RankedItem(item=candidate, summary="(ranking failed)", score=1, failed=True))
         else:
@@ -186,11 +186,11 @@ def _rank_chunk(
     return ranked
 
 
-def rank_topic(topic: TopicConfig, candidates: list[Item], settings: Settings) -> list[RankedItem]:
+def rank_topic(topic: TopicConfig, candidates: list[Item], llm: LLMSettings, reader: str) -> list[RankedItem]:
     if not candidates:
         return []
-    client = _client(settings)
+    client = _client(llm)
     ranked: list[RankedItem] = []
     for start in range(0, len(candidates), RANK_BATCH_SIZE):
-        ranked.extend(_rank_chunk(client, settings, topic, candidates[start : start + RANK_BATCH_SIZE]))
+        ranked.extend(_rank_chunk(client, llm, reader, topic, candidates[start : start + RANK_BATCH_SIZE]))
     return ranked

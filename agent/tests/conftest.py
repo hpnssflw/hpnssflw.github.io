@@ -16,6 +16,7 @@ import requests
 
 from agent.paths import DataPaths
 
+AGENT_DIR = Path(__file__).resolve().parents[1]
 FIXTURES = Path(__file__).parent / "fixtures"
 TONY = FIXTURES / "tony"
 FROZEN_NOW = datetime(2026, 10, 6, 12, 0, tzinfo=timezone.utc)
@@ -233,7 +234,7 @@ class TonyHarness:
     refactored; the inputs they feed must stay identical."""
 
     def __init__(self, data: Path, monkeypatch: pytest.MonkeyPatch):
-        from agent import deliver, events, main, summarize
+        from agent import deliver, events, summarize
 
         self.data = data
         seed_tony_data(data)
@@ -248,23 +249,28 @@ class TonyHarness:
         monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "test-telegram-token")
         monkeypatch.delenv("GITHUB_TOKEN", raising=False)
 
-        # The run clock is still a module-level datetime.now() in agent.main.
-        monkeypatch.setattr(main, "datetime", frozen_datetime(lambda: FROZEN_NOW))
+    def _run_args(self):
+        from agent import engine
+        from agent.preset import load_preset
+
+        preset = load_preset(AGENT_DIR / "presets" / "tony.yaml")
+        paths = DataPaths(self.data)
+        return preset, paths, FROZEN_NOW, engine.live_adapters(preset, paths)
 
     def run_real(self) -> None:
-        from agent import main
+        from agent import engine
 
-        main.run_real(None, DataPaths(self.data))
+        engine.run_real(*self._run_args())
 
     def run_preview(self) -> None:
-        from agent import main
+        from agent import engine
 
-        main.run_preview(None, DataPaths(self.data))
+        engine.run_preview(*self._run_args())
 
     def run_dry(self) -> None:
-        from agent import main
+        from agent import engine
 
-        main.run_dry(None, DataPaths(self.data))
+        engine.run_dry(*self._run_args())
 
     def read(self, relative: str) -> str:
         return (self.data / relative).read_text(encoding="utf-8")

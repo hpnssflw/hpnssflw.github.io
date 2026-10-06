@@ -1,8 +1,8 @@
 """Queue outcomes and score distribution per topic, from state.json --
-python -m agent report [--days N] [--data-dir DIR]. For tuning
-min_relevance and the daily caps against what Artem actually approves.
-Reads <data-dir>/state.json (default agent/state.json): copy it from the
-agent-data branch first. Only items
+python -m agent report [--preset PATH] [--data-dir DIR] [--days N]. For
+tuning min_relevance and the daily caps against what Artem actually
+approves. Reads <data-dir>/state.json (Tony's default: agent/state.json):
+copy it from the agent-data branch first. Only items
 queued since sub-project #6 carry a topic (ranks[slug].queued_at), so
 older ones don't appear."""
 
@@ -13,9 +13,9 @@ from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from agent import config, dedupe
+from agent import dedupe, paths
 from agent.dedupe import StateEntry
-from agent.paths import DataPaths
+from agent.preset import load_preset
 
 AGENT_DIR = Path(__file__).parent
 
@@ -59,11 +59,12 @@ def build_report(state: dict[str, StateEntry], topic_names: dict[str, str], now:
 def run_report(argv: list[str]) -> None:
     parser = argparse.ArgumentParser(prog="python -m agent report")
     parser.add_argument("--days", type=int, default=14)
-    parser.add_argument("--data-dir", type=Path, default=AGENT_DIR)
+    parser.add_argument("--preset", type=Path, default=AGENT_DIR / "presets" / "tony.yaml")
+    parser.add_argument("--data-dir", type=Path, default=None)
     args = parser.parse_args(argv)
-    state_path = DataPaths(args.data_dir).state
+    preset = load_preset(args.preset)
+    state_path = paths.for_preset(preset, args.data_dir).state
     if not state_path.exists():
         raise SystemExit(f"{state_path} not found -- copy it from the agent-data branch first")
-    topics = config.load_topics(AGENT_DIR / "topics", AGENT_DIR / "defaults.yaml")
     state = dedupe.load_state(state_path)
-    print(build_report(state, {t.slug: t.name for t in topics}, datetime.now(timezone.utc), args.days))
+    print(build_report(state, {t.slug: t.name for t in preset.topics}, datetime.now(timezone.utc), args.days))
