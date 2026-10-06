@@ -238,9 +238,10 @@ these YAML fields are read; `agent/.env` and secrets are never touched.
 YAML is parsed with the `yaml` package (2.x, no dependencies), added as a
 direct dependency — it's already in the lockfile under vitest.
 
-`nextRun(cron, now)` supports the `M */N * * *` shape the workflow uses
-(and plain `M H * * *`); anything else throws at build time, so a cron
-change can't silently break the countdown.
+`lib/cron.ts` (`parseCron`, `nextRun`) supports the every-N-hours shape
+the workflow uses (`0 */4 * * *`) and plain daily `M H * * *`; anything
+else throws at build time, so a cron change can't silently break the
+countdown. It's client-safe, so the pulse uses it for the countdown.
 
 ## Agent change — `agent/status_export.py`
 
@@ -281,7 +282,8 @@ untouched.
   `failures`; `isAgentStatus` accepts their absence and rejects a
   malformed shape.
 - `lib/pipeline-stages.ts` — pure: `(config, status, queue, decisions,
-  topic) → Stage[]` with numbers and lines per the rail table; `nextRun`.
+  topic) → Stage[]` with numbers and lines per the rail table.
+- `components/useJson.ts` — fetch one public JSON file with a shape check.
 - `lib/outcomes.ts` — pure: the `report.py` port over a `state.json` shape
   guard (`isAgentState`).
 - `lib/queue-view.ts` — pure: filter by topic and status, sort, counts,
