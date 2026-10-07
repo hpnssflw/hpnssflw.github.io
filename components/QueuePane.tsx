@@ -143,8 +143,8 @@ export default function QueuePane({
                         </p>
                         {story.facts.length > 0 && (
                           <ol className="cr-facts">
-                            {story.facts.map((fact) => (
-                              <li key={fact.text}>
+                            {story.facts.map((fact, i) => (
+                              <li key={i}>
                                 {fact.text}{" "}
                                 {fact.refs.map((n) => {
                                   const href = linkItems ? safeHref(urlOf.get(n) ?? "") : null;

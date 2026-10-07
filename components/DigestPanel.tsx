@@ -30,8 +30,8 @@ export default function DigestPanel({ digest, empty }: { digest: DigestBlocks; e
                   •{" "}
                   <span className="cr-digest-title">{item.title}</span>
                   {story && story.facts.length > 0 ? (
-                    story.facts.map((fact) => (
-                      <Fragment key={fact.text}>
+                    story.facts.map((fact, i) => (
+                      <Fragment key={i}>
                         <br />
                         {fact.text}{" "}
                         {fact.refs.map((n) => (
