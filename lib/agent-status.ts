@@ -94,7 +94,13 @@ const isNumber = (value: unknown): value is number => typeof value === "number";
 const isString = (value: unknown): value is string => typeof value === "string";
 
 function isTopicStatus(value: unknown): value is TopicStatus {
-  return isRecord(value) && isString(value.slug) && isString(value.name) && isNumber(value.collected) && isNumber(value.kept);
+  return (
+    isRecord(value) &&
+    isString(value.slug) &&
+    isString(value.name) &&
+    isNumber(value.collected) &&
+    isNumber(value.kept)
+  );
 }
 
 function isFunnelCounts(value: unknown): value is FunnelCounts {

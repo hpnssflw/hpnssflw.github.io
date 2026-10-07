@@ -78,7 +78,10 @@ initiatives — see `PROGRESS.md` for status of each.
   same way at run time: `parseAgentStatus` checks every field the type
   declares, so an agent change that renames, removes or retypes one (or
   adds a `recent_events` verdict) must update that type and guard in the
-  same change, or every agent widget shows "unavailable".
+  same change, or every agent widget shows "unavailable". `npm test`
+  parses the agent's golden `real/status.json` with `parseAgentStatus`
+  (`lib/agent-status.test.ts`), so a drift fails there — once the
+  golden is re-recorded.
 - **The Tony Scraponi inbox's decisions live in a separate public repo,
   `hpnssflw/tony-inbox`** (`decisions.json` on its `main`). The site's
   `/researcher/queue/` owner mode is its only writer, with a

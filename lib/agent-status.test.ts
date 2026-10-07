@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   type AgentStatus,
@@ -101,6 +103,28 @@ describe("parseAgentStatus", () => {
 
   it("rejects a topic with no funnel entry", () => {
     expect(parseAgentStatus({ ...good, funnel: {} })).toBeNull();
+  });
+
+  it.each(["toString", "__proto__", "constructor"])(
+    "does not let the prototype satisfy topic slug %s with no own funnel entry",
+    (slug) => {
+      const topics = [{ slug, name: "Inherited", collected: 0, kept: 0 }];
+      expect(parseAgentStatus({ ...good, topics, funnel: {} })).toBeNull();
+    },
+  );
+});
+
+describe("parseAgentStatus on the agent's golden status.json", () => {
+  const goldenPath = join(process.cwd(), "agent", "tests", "fixtures", "tony", "golden", "real", "status.json");
+  const golden = JSON.parse(readFileSync(goldenPath, "utf8")) as Record<string, unknown>;
+
+  it("parses the agent's real run output (a drifted shape would blank every agent widget)", () => {
+    const parsed = parseAgentStatus(golden);
+    expect(parsed).not.toBeNull();
+    expect(parsed?.drops).toStrictEqual(golden.drops);
+    expect(parsed?.failures).toStrictEqual(golden.failures);
+    expect(golden.drops).toBeDefined();
+    expect(golden.failures).toBeDefined();
   });
 });
 
