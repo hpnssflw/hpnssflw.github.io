@@ -83,6 +83,21 @@ initiatives — see `PROGRESS.md` for status of each.
   the agent's golden `real/status.json` with `parseAgentStatus`
   (`lib/agent-status.test.ts`), so a drift fails there — once the
   golden is re-recorded.
+- **The unlisted demo section `/researcher/demo/<slug>/`** (`newsroom-demo`,
+  `agro-demo`) is the control room in Russian over the engine's test demos:
+  `lib/demo-presets.ts` reads each demo's
+  `agent/tests/fixtures/<slug>/golden/run1.json` and `run2.json` at build
+  time (`components/DemoRoom.tsx`, `components/DigestPanel.tsx`). It is
+  `noindex, nofollow`, has no index page, and nothing links to it. The
+  build parses those goldens with `parseRunResult`: an agent change that
+  re-records them into something it rejects fails the site deploy, and any
+  re-record changes the live demo at the next deploy (the 6-hourly rebuild
+  included). `lib/digest.ts` mirrors `agent/digest.py` and `agent/pending.py`'s
+  `group_by_topic`, pinned by `lib/digest.test.ts` to the demos'
+  `outbox.html` — change them together, like the run-result schema. The
+  demo's item URLs are synthetic (`example-*.ru`, unregistered), so the demo
+  renders no item links; keep it that way unless the goldens move to a
+  reserved domain (`.example`).
 - **The Tony Scraponi inbox's decisions live in a separate public repo,
   `hpnssflw/tony-inbox`** (`decisions.json` on its `main`). The site's
   `/researcher/queue/` owner mode is its only writer, with a
@@ -140,7 +155,8 @@ initiatives — see `PROGRESS.md` for status of each.
                           # lib/now-format, lib/github-calendar, lib/telegram-post, lib/home-feed,
                           # lib/cron, lib/agent-schedule, lib/run-result, lib/config-view,
                           # lib/control-room-text, lib/pipeline-stages,
-                          # lib/outcomes, lib/queue-view, scripts/presence
+                          # lib/outcomes, lib/queue-view, lib/digest, lib/demo-presets,
+                          # scripts/presence
   ```
   (`next dev` occasionally hangs the TCP handshake in this environment;
   if a port won't come up, kill node and retry, or verify against

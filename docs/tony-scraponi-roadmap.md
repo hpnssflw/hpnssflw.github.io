@@ -114,6 +114,6 @@ gets its own spec → plan → implementation cycle:
   preset's `run-result.json`; Tony's settings then move into
   `agent/presets/tony.yaml`. Spec:
   `docs/superpowers/specs/2026-10-06-preset-switcher-design.md`.
-  Push 1 shipped (Tony on `run-result.json`); push 2 is the demo section.
+  Shipped (push 1: Tony on `run-result.json`; push 2: the demo section).
 
 Item 7 above is now a `rss:` list under Web Products' `sources` in `agent/presets/tony.yaml`; the control room shows it with no site change.

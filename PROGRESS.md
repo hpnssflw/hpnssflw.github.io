@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D's push 1 (preset switcher) and #7 (Web Products RSS) shipped and live 2026-10-07; next is D's push 2 (demo section, Tasks 8-10), then B (stories); #6's 3-day watch ends 2026-10-08 ~18:22Z.**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then B (stories).**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -733,10 +733,10 @@ infrastructure.
   targets), D (preset switcher in the control room); #7 (Web Products RSS)
   becomes a topic `rss` entry, after D (Tony's topics load through
   `config.py`, which doesn't read `rss` yet).
-- **Content engine, sub-project D (preset switcher): push 1 shipped.**
+- **Content engine, sub-project D (preset switcher): both pushes shipped.**
   Spec: `docs/superpowers/specs/2026-10-06-preset-switcher-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-preset-switcher.md` (Tasks
-  1-7 are push 1; push 2, the demo section, is Tasks 8-10 and is next).
+  1-7 are push 1; push 2, the demo section, is Tasks 8-10).
   Push 1 contains: Tony is a self-contained preset in
   `agent/presets/tony.yaml`, with a `data: {default_dir, status_json}`
   section replacing `legacy`; `run-result.json` schema 2, now published
@@ -797,9 +797,35 @@ infrastructure.
   the control room hardening. Reverting D's commits one by one would
   leave `app/page.tsx` importing a deleted module (and bring back
   `lib/agent-config.ts`, which reads the deleted `agent/defaults.yaml`).
-  Next: push 2 (demo section, Tasks 8-10), whose first step is the
-  pre-push-2 fix list in the SDD ledger (ru plurals/wording, full-text
-  shared mark, `window` rename, `Tags` keys).
+  **Push 2 (the demo section): shipped 2026-10-07.** On top of `origin/main`
+  (`e3acae8` merges #7's `1b19f5f` into the branch, no conflicts). Fix
+  wave first (`d6e5901`, `59d9618`, `26f095e`): Russian control-room counts
+  put the number after a label so they read right for any number ("лент:
+  N", "раз в N ч"); a topic's rank line marks "+N full text" that came
+  from the shared feeds; `window` local renamed `inWindow`; config tags
+  keyed by position. Task 8 (`09176d3`): `lib/digest.ts` mirrors the
+  engine's digest, and `lib/digest.test.ts` pins `digestHtml` to both
+  demos' `outbox.html` byte for byte. Task 9 (`72848d1`): the unlisted
+  `/researcher/demo/newsroom-demo/` and `/agro-demo/` (`lib/demo-presets.ts`
+  reads each demo's `run1.json` and `run2.json` at build time). A visitor
+  sees the control room in Russian: run 1 is a sandbox (approve/reject,
+  nothing saved; the review stage and a digest preview follow), run 2
+  shows the preset's recorded decisions and the digest the engine sent.
+  `noindex, nofollow`, no index page, nothing links to it. Whole-branch
+  review (opus): 0 Critical. I1: every demo link went to unregistered
+  `example-*.ru` domains; Artem ruled no links in the demo (digest titles
+  are plain text, no open button or `o` key). I2: the demo pages previewed
+  as the home page's English card; each now has its own Russian description
+  and Open Graph title, description and locale. Minors fixed with them:
+  Russian dates read `dd.mm`, "include / exclude" in Russian, deliver
+  "никогда" is "пока нет" (ru only), Russian item titles and summaries keep
+  their letter case in the demo (Artem's rulings; Tony's page still
+  lowercases). Fix commits `7ba9e18`, `0db391d`, `bcb137b`. Left:
+  sandbox rejections don't move the rail's rejected count; the goldens
+  are parsed several times per build. 327 Vitest tests; `npm run build`
+  lists both demo routes as static; headless checks at 1440×900 and
+  390×844 passed on both demos, Tony's `/researcher/queue/` unchanged.
+  Live check: pending (deploy run id, headless check).
 - **#7, Web Products RSS: shipped and live 2026-10-07.** Eleven feeds
   under `web-products` → `sources` → `rss` in `agent/presets/tony.yaml`
   (`aacac4d`), picked from a live `--preview` over 21 candidates (feeds
@@ -893,15 +919,12 @@ candidates: a market-data source for Web Products, a Telegram DM when
 items await review, summary editing. Content engine sub-project A is shipped and
 live (2026-10-06, `bed2bb7`); sub-project D's push 1 (Tony on
 `run-result.json`, legacy files removed, `main`'s hardening merged in)
-is shipped and live (2026-10-07, `409fbc1`) — next is push 2 (demo
-section, Tasks 8-10) from
-`docs/superpowers/plans/2026-10-06-preset-switcher.md`, starting with the
-pre-push-2 fix list in the SDD ledger (ru plurals/wording, full-text
-shared mark, `window` rename, `Tags` keys). B (stories) has an agreed
+is shipped and live (2026-10-07, `409fbc1`), and so is push 2 (the demo
+section, `/researcher/demo/<slug>/`). B (stories) has an agreed
 spec and plan, committed only on branch `worktree-admin-panel`
 (`5fd92eb`, `2d6cdb4`: `docs/superpowers/specs/2026-10-07-content-engine-stories-design.md`,
 `docs/superpowers/plans/2026-10-07-content-engine-stories.md`); its plan
-starts only once both of D's pushes are on `origin/main` (it extends
+can start now that both of D's pushes are on `origin/main` (it extends
 `lib/digest.ts` and `components/DemoRoom.tsx`). C still needs its own
 brainstorm → spec → plan (see the A bullet above and
 `docs/tony-scraponi-roadmap.md`).
