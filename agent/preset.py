@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import yaml
@@ -19,6 +19,7 @@ from agent.sources.base import FeedConfig, TopicConfig
 
 LANGUAGES = ("en", "ru")
 SLUG = re.compile(r"^[a-z0-9-]+$")
+UTC_OFFSET = re.compile(r"^[+-](0\d|1[0-4]):[0-5]\d$")
 NO_OFFLINE_MODE = ("hacker_news", "github_trending")
 
 
@@ -72,6 +73,24 @@ class OfflineConfig:
     now: datetime  # the clock of an --offline run
     http: Path  # YAML manifest: url -> fixture file
     llm: Path  # JSON verdicts: url -> {topic, score, summary}
+    stories: Path | None = None  # JSON: the LLM merge's groups and facts answers (presets with stories)
+
+
+@dataclass(frozen=True)
+class StoriesConfig:
+    """`stories:` -- reports of one event across the preset's feeds become
+    one story (docs/superpowers/specs/2026-10-07-content-engine-stories-design.md)."""
+
+    window_hours: int = 24  # a story stays matchable this long after its newest report
+    timezone: str = "+00:00"  # fixed UTC offset for the "first" line's clock times
+    near_text: float = 0.6  # word-shingle overlap that counts as the same text
+    llm_merge: bool = True  # one LLM merge per run over what no cheap signal matched
+    max_facts: int = 3
+
+    @property
+    def tzinfo(self) -> timezone:
+        sign = 1 if self.timezone[0] == "+" else -1
+        return timezone(sign * timedelta(hours=int(self.timezone[1:3]), minutes=int(self.timezone[4:6])))
 
 
 @dataclass(frozen=True)
@@ -91,6 +110,7 @@ class Preset:
     offline: OfflineConfig | None
     status_json: bool  # data.status_json: also write status.json (Tony's site widgets)
     default_data_dir: Path | None  # data.default_dir, resolved; None: --data-dir is required
+    stories: StoriesConfig | None = None  # None: every report is its own queue entry
 
 
 def load_preset(path: Path) -> Preset:
@@ -115,6 +135,8 @@ def require_offline(preset: Preset) -> None:
         raise PresetError("approval.type: --offline needs `file`")
     if preset.delivery.type != "file":
         raise PresetError("delivery.type: --offline needs `file`")
+    if preset.stories is not None and preset.offline.stories is None:
+        raise PresetError("offline.stories: required for a preset with stories")
     for index, topic in enumerate(preset.topics):
         for source in NO_OFFLINE_MODE:
             if source in topic.sources:
@@ -125,12 +147,13 @@ def require_offline(preset: Preset) -> None:
 
 
 def _load_self_contained(path: Path, raw: dict) -> Preset:
-    _fields(raw, "", ("preset", "defaults", "topics", "ranking", "llm", "approval", "delivery"), ("sources", "offline", "data"))
+    _fields(raw, "", ("preset", "defaults", "topics", "ranking", "llm", "approval", "delivery"), ("sources", "offline", "data", "stories"))
     slug, name, language = _identity(raw["preset"])
     defaults = _defaults(raw["defaults"], "defaults")
     feeds, telegram = _preset_sources(raw.get("sources", {}))
     topics = _topics(raw["topics"], defaults)
     _check_unique_feed_ids(feeds, topics)
+    stories = _stories(raw["stories"], topics, feeds) if "stories" in raw else None
     ranking = _fields(raw["ranking"], "ranking", ("reader",))
     llm = _fields(raw["llm"], "llm", ("base_url", "model", "api_key_env"))
     data = _data(raw.get("data", {}), path.parent)
@@ -154,6 +177,7 @@ def _load_self_contained(path: Path, raw: dict) -> Preset:
         offline=_offline(raw["offline"], path.parent) if "offline" in raw else None,
         status_json=data["status_json"],
         default_data_dir=data["default_dir"],
+        stories=stories,
     )
 
 
@@ -333,7 +357,7 @@ def _delivery(raw) -> DeliveryTarget:
 
 
 def _offline(raw, base: Path) -> OfflineConfig:
-    section = _fields(raw, "offline", ("now", "http", "llm"))
+    section = _fields(raw, "offline", ("now", "http", "llm"), ("stories",))
     now = section["now"]
     if isinstance(now, str):
         try:
@@ -346,6 +370,7 @@ def _offline(raw, base: Path) -> OfflineConfig:
         now=now,
         http=_existing_file(section, "http", "offline", base),
         llm=_existing_file(section, "llm", "offline", base),
+        stories=_existing_file(section, "stories", "offline", base) if "stories" in section else None,
     )
 
 
@@ -355,6 +380,31 @@ def _data(raw, base: Path) -> dict:
         "default_dir": (base / _str(section, "default_dir", "data")).resolve() if "default_dir" in section else None,
         "status_json": _bool(section, "status_json", "data") if "status_json" in section else False,
     }
+
+
+def _stories(raw, topics: tuple[TopicConfig, ...], feeds: tuple[FeedConfig, ...]) -> StoriesConfig:
+    where = "stories"
+    section = _fields(raw, where, (), ("window_hours", "timezone", "near_text", "llm_merge", "max_facts"))
+    base = StoriesConfig()
+    window_hours = _int(section, "window_hours", where, minimum=1) if "window_hours" in section else base.window_hours
+    if window_hours > 720:
+        raise PresetError("stories.window_hours: expected 1-720")
+    offset = _str(section, "timezone", where) if "timezone" in section else base.timezone
+    if not UTC_OFFSET.match(offset):
+        raise PresetError('stories.timezone: a UTC offset like "+03:00"')
+    near = section.get("near_text", base.near_text)
+    if isinstance(near, bool) or not isinstance(near, (int, float)) or not 0 < near <= 1:
+        raise PresetError("stories.near_text: expected a number in (0, 1]")
+    llm_merge = _bool(section, "llm_merge", where) if "llm_merge" in section else base.llm_merge
+    max_facts = _int(section, "max_facts", where, minimum=1) if "max_facts" in section else base.max_facts
+    if max_facts > 6:
+        raise PresetError("stories.max_facts: expected 1-6")
+    for topic in topics:
+        if topic.sources or topic.feeds:
+            raise PresetError(f"stories: stories group preset feeds only; topic `{topic.slug}` has its own sources")
+    if not feeds:
+        raise PresetError("stories: stories need preset feeds (sources.rss)")
+    return StoriesConfig(window_hours, offset, float(near), llm_merge, max_facts)
 
 
 # --- field readers -----------------------------------------------------------

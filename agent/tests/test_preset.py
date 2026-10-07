@@ -1,12 +1,14 @@
 import copy
-from datetime import datetime, timezone
+import re
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pytest
 import yaml
 
-from agent.preset import PresetError, load_preset, require_offline
+from agent.preset import PresetError, StoriesConfig, load_preset, require_offline
 from agent.sources.base import FeedConfig
+from agent.tests.conftest import STORIES_PRESET, write_stories_preset
 
 AGENT = Path(__file__).resolve().parents[1]
 
@@ -144,3 +146,80 @@ def test_require_offline_rejects_anything_that_needs_the_network(tmp_path, chang
 def test_tony_cannot_run_offline():
     with pytest.raises(PresetError, match="needs an `offline` section"):
         require_offline(load_preset(AGENT / "presets" / "tony.yaml"))
+
+
+def test_stories_defaults(tmp_path):
+    preset = load_preset(write_stories_preset(tmp_path))
+    assert preset.stories == StoriesConfig(window_hours=24, timezone="+00:00", near_text=0.6, llm_merge=True, max_facts=3)
+
+
+def test_stories_values_and_offset(tmp_path):
+    preset = load_preset(
+        write_stories_preset(
+            tmp_path, 'stories: {window_hours: 48, timezone: "+03:00", near_text: 0.5, llm_merge: false, max_facts: 2}\n'
+        )
+    )
+    assert (preset.stories.window_hours, preset.stories.near_text, preset.stories.llm_merge) == (48, 0.5, False)
+    assert preset.stories.tzinfo == timezone(timedelta(hours=3))
+    assert StoriesConfig(timezone="-05:30").tzinfo == timezone(-timedelta(hours=5, minutes=30))
+
+
+def test_no_stories_section_means_none(tmp_path):
+    assert load_preset(write_stories_preset(tmp_path, stories="")).stories is None
+
+
+@pytest.mark.parametrize(
+    "stories, message",
+    [
+        ("stories: {windw_hours: 1}\n", "stories.windw_hours: unknown key"),
+        ("stories: {window_hours: 0}\n", "stories.window_hours: expected an integer >= 1"),
+        ("stories: {window_hours: 721}\n", "stories.window_hours: expected 1-720"),
+        ('stories: {timezone: "Europe/Moscow"}\n', "stories.timezone: a UTC offset"),
+        ('stories: {timezone: "+3:00"}\n', "stories.timezone: a UTC offset"),
+        ("stories: {near_text: 0}\n", "stories.near_text: expected a number in (0, 1]"),
+        ("stories: {near_text: 1.5}\n", "stories.near_text: expected a number in (0, 1]"),
+        ("stories: {near_text: true}\n", "stories.near_text: expected a number in (0, 1]"),
+        ("stories: {llm_merge: 1}\n", "stories.llm_merge: expected true or false"),
+        ("stories: {max_facts: 7}\n", "stories.max_facts: expected 1-6"),
+        ("stories: []\n", "stories: expected a mapping"),
+    ],
+)
+def test_stories_validation(tmp_path, stories, message):
+    with pytest.raises(PresetError, match=re.escape(message)):
+        load_preset(write_stories_preset(tmp_path, stories))
+
+
+def test_stories_reject_topic_sources(tmp_path):
+    text = STORIES_PRESET.replace(
+        "include: [ЧП], exclude: []}",
+        'include: [ЧП], exclude: [], sources: {rss: [{id: own, name: Своя, url: "https://example-own.ru/rss"}]}}',
+    )
+    with pytest.raises(PresetError, match=re.escape("stories: stories group preset feeds only; topic `incidents` has its own sources")):
+        load_preset(write_stories_preset(tmp_path, text=text))
+
+
+def test_stories_need_preset_feeds(tmp_path):
+    text = STORIES_PRESET.replace('sources:\n  rss:\n    - {id: agency, name: Агентство, url: "https://example-agency.ru/rss"}\n', "")
+    with pytest.raises(PresetError, match=re.escape("stories: stories need preset feeds (sources.rss)")):
+        load_preset(write_stories_preset(tmp_path, text=text))
+
+
+def _offline_files(root):
+    for name, content in (("http.yaml", "{}\n"), ("verdicts.json", "{}"), ("stories.json", '{"merge": [], "facts": []}')):
+        (root / name).write_text(content, encoding="utf-8")
+
+
+def test_offline_stories_file(tmp_path):
+    _offline_files(tmp_path)
+    offline = 'offline: {now: "2026-10-06T06:00:00+00:00", http: http.yaml, llm: verdicts.json, stories: stories.json}\n'
+    preset = load_preset(write_stories_preset(tmp_path, extra=offline))
+    require_offline(preset)
+    assert preset.offline.stories == (tmp_path / "stories.json").resolve()
+
+
+def test_offline_preset_with_stories_needs_the_stories_file(tmp_path):
+    _offline_files(tmp_path)
+    offline = 'offline: {now: "2026-10-06T06:00:00+00:00", http: http.yaml, llm: verdicts.json}\n'
+    preset = load_preset(write_stories_preset(tmp_path, extra=offline))
+    with pytest.raises(PresetError, match=re.escape("offline.stories: required for a preset with stories")):
+        require_offline(preset)

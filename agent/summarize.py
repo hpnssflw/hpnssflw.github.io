@@ -69,6 +69,12 @@ CLASSIFY_SYSTEM_PROMPT = (
 )
 LANGUAGE_NAMES = {"en": "English", "ru": "Russian"}
 
+# Stories (sub-project B). Bump when the merge or facts prompt (or its
+# builder) changes. FACTS_PROMPT_VERSION is part of each story's facts_for
+# hash, so a bump regenerates queued stories' facts.
+MERGE_PROMPT_VERSION = 1
+FACTS_PROMPT_VERSION = 1
+
 
 @dataclass(frozen=True)
 class RankedItem:

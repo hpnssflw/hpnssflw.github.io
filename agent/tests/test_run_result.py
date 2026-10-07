@@ -7,7 +7,7 @@ from agent.pending import PendingItem, PendingQueue
 from agent.preset import load_preset
 from agent.run_result import FEED_SCOPE, STAGES, Tally, build_run_result, preset_config, write_run_result
 from agent.sources.base import Drop
-from agent.tests.conftest import FROZEN_NOW, TONY
+from agent.tests.conftest import FROZEN_NOW, TONY, write_stories_preset
 from agent.tests.test_preset import VALID, write_preset
 from agent.tests.test_summarize import PINNED_RUBRICS
 
@@ -133,3 +133,20 @@ def test_a_failed_run_result_write_does_not_fail_tonys_run(tony, capsys, monkeyp
     for name in ("state.json", "pending.json", "status.json"):
         assert tony.read(name) == (golden / name).read_text(encoding="utf-8"), name
     assert not (tony.data / "run-result.json").exists()
+
+
+def test_config_carries_the_stories_settings(tmp_path):
+    preset = load_preset(write_stories_preset(tmp_path, 'stories: {timezone: "+03:00"}\n'))
+    assert preset_config(preset)["stories"] == {
+        "window_hours": 24,
+        "timezone": "+03:00",
+        "near_text": 0.6,
+        "llm_merge": True,
+        "max_facts": 3,
+        "merge_prompt_version": 1,
+        "facts_prompt_version": 1,
+    }
+
+
+def test_config_without_stories_has_no_stories_key(tmp_path):
+    assert "stories" not in preset_config(load_preset(write_stories_preset(tmp_path, stories="")))

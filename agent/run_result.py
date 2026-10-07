@@ -126,6 +126,16 @@ def preset_config(preset: Preset) -> dict:
         config["ranking"]["classify_rubric_hash"] = summarize.classify_rubric_hash(
             list(preset.topics), preset.reader, preset.language
         )
+    if preset.stories is not None:
+        config["stories"] = {
+            "window_hours": preset.stories.window_hours,
+            "timezone": preset.stories.timezone,
+            "near_text": preset.stories.near_text,
+            "llm_merge": preset.stories.llm_merge,
+            "max_facts": preset.stories.max_facts,
+            "merge_prompt_version": summarize.MERGE_PROMPT_VERSION,
+            "facts_prompt_version": summarize.FACTS_PROMPT_VERSION,
+        }
     return config
 
 
@@ -182,6 +192,7 @@ def _base_config(preset: Preset) -> dict:
                 "now": preset.offline.now.isoformat(),
                 "http": _relative(preset, preset.offline.http),
                 "llm": _relative(preset, preset.offline.llm),
+                **({"stories": _relative(preset, preset.offline.stories)} if preset.offline.stories else {}),
             }
         ),
     }

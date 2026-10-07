@@ -310,3 +310,28 @@ def no_network(monkeypatch):
     monkeypatch.setattr(requests, "post", refuse)
     monkeypatch.setattr(requests.Session, "get", refuse)
     monkeypatch.setattr(socket, "getaddrinfo", refuse)
+
+
+STORIES_PRESET = """\
+preset: {slug: s, name: S, language: ru}
+defaults: {max_age_days: 2, min_relevance: 6, max_items_per_day: 3}
+sources:
+  rss:
+    - {id: agency, name: Агентство, url: "https://example-agency.ru/rss"}
+topics:
+  - {slug: incidents, name: Происшествия, description: ЧП., include: [ЧП], exclude: []}
+ranking: {reader: Редактор.}
+llm: {base_url: "https://api.deepseek.com", model: deepseek-v4-flash, api_key_env: DEEPSEEK_API_KEY}
+approval: {type: file, path: decisions.json, expire_days: 3}
+delivery: {type: file, title: Сводка, cadence_hours: 4}
+"""
+
+
+def write_stories_preset(root: Path, stories: str = "stories: {}\n", extra: str = "", text: str = STORIES_PRESET) -> Path:
+    """A minimal self-contained preset with a `stories:` section (or none,
+    with stories=""), plus the decisions file its approval names."""
+    root.mkdir(parents=True, exist_ok=True)
+    (root / "decisions.json").write_text('{"version": 1, "decisions": {}}', encoding="utf-8")
+    path = root / "preset.yaml"
+    path.write_text(text + stories + extra, encoding="utf-8")
+    return path
