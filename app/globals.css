@@ -2408,3 +2408,86 @@ body:has(.cr) footer {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* --- Demo presets (/researcher/demo/<slug>/) -------------------------
+   The control room's shell over an engine preset's two recorded runs:
+   .cr-demo-head takes the pulse's place (name and tag, run toggle,
+   preset switcher); the digest, styled like the Telegram message it is,
+   sits above the config in the right pane. */
+.cr-demo-head {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.cr-runs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cr-sandbox {
+  margin: 0;
+}
+
+.cr-demo-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px 16px;
+  text-transform: lowercase;
+}
+
+.cr-demo-nav a {
+  color: var(--muted);
+}
+
+.cr-demo-nav a:hover,
+.cr-demo-nav a[aria-current="page"] {
+  color: var(--text-strong);
+}
+
+.cr-digest {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-left: 2px solid var(--agent-lime);
+  background: #ffffff08;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.cr-digest p {
+  margin: 0 0 6px;
+}
+
+.cr-digest ul {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.cr-digest li {
+  margin: 0 0 6px;
+}
+
+.cr-digest a {
+  color: var(--text-strong);
+}
+
+.cr-digest-empty {
+  margin: 0 0 16px;
+}
+
+.cr-demo-config {
+  margin: 0 0 6px;
+}
+
+@media (max-width: 899px) {
+  .cr-demo-head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cr-demo-nav {
+    justify-content: flex-start;
+  }
+}

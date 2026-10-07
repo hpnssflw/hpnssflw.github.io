@@ -318,7 +318,7 @@ text from the preset's dictionary:
   to `/researcher/queue/`; a run toggle: "Run 1 — the queue fills" /
   "Run 2 — decisions applied, digest sent".
 - **Rail** from the selected run (§ 3, with the shared-feeds rule).
-- **Topic chips** filter the rail, the queue, the config and the digest.
+- **Topic chips** filter the rail, the queue and the config. The digest stays whole: it is one message, and a filtered one was never sent.
 - **Queue:**
   - run 1 is the **sandbox**: every item starts undecided (the decisions
     recorded in `run1.json` are ignored); approve / reject / undo with
