@@ -247,7 +247,9 @@ def run_preview(
     if preset.feeds and topic_filter is None:
         try:
             feeds = pipeline.process_feeds(ctx)
-            print(pipeline.format_feed_preview(list(preset.topics), feeds))
+            feed_preview = pipeline.format_feed_preview(list(preset.topics), feeds)
+            if feed_preview:
+                print(feed_preview)
             if feeds.stories is not None:
                 print(pipeline.format_stories_preview(feeds.stories, ctx))
         except Exception as exc:  # noqa: BLE001 — the topics' preview above still stands

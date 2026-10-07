@@ -526,7 +526,7 @@ def format_feed_preview(topics: list[TopicConfig], result: FeedResult) -> str:
         _rows(lines, unplaced)
         for drop in result.cached_below:
             lines.append(f"  {'cached':<12} {drop.detail['relevance']:>2}  {'':<6}  {drop.title[:PREVIEW_TITLE_CHARS]}")
-    if not lines:
+    if not lines and result.stories is None:  # with stories, the stories section follows
         lines.append("\n== preset feeds -- (nothing to classify)")
     return "\n".join(lines)
 
@@ -539,7 +539,7 @@ def format_stories_preview(result: StoriesResult, ctx: RunContext) -> str:
     lines = ["\n== stories"]
     for verdict, items in (("queue", result.queued), ("over cap", result.waiting)):
         for story in items:
-            lines.append(f"  {verdict:<12} {story.score():>2}  {len(story.reports)} src  {story.opener().title[:PREVIEW_TITLE_CHARS]}")
+            lines.append(f"  {verdict:<12} {story.score():>2}  {len(story.sources())} src  {story.opener().title[:PREVIEW_TITLE_CHARS]}")
             for r in stories.ordered(story, order):
                 lines.append(f"  {'':<12}     {stories.clock(r.at, config.tzinfo, ctx.now)} {r.source_name} · {r.title[:60]}")
     for label, pairs in (("joined", result.joined), ("same story", result.same_story)):

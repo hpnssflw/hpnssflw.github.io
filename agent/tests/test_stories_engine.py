@@ -1,7 +1,7 @@
 """The feed path with stories, end to end offline (agent/tests/stories_mini.py)."""
 
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from agent import engine, rank_cache, stories
 from agent.dedupe import load_state, url_hash
@@ -13,6 +13,7 @@ from agent.stories import Fact
 from agent.tests import stories_mini as mini
 
 A, C, G = mini.A, mini.C, mini.G
+MSK = timezone(timedelta(hours=3))
 
 
 def run1(tmp_path, fixture=None):
@@ -236,7 +237,22 @@ def test_preview_prints_stories_and_writes_nothing(tmp_path, no_network, capsys)
     engine.run_preview(preset, paths, preset.offline.now, adapters)
     out = capsys.readouterr().out
     assert "== stories" in out and "3 src" in out and "Прорыв трубы на Садовой" in out
+    assert "(nothing to classify)" not in out  # the stories section says what the feeds did
     assert adapters.ranker.facts_calls == 0 and not paths.stories.exists()
+
+
+def test_preview_counts_sources_not_reports():
+    from types import SimpleNamespace
+
+    from agent.pipeline import StoriesResult, format_stories_preview
+    from agent.tests.test_stories import report, story
+
+    two_from_one = story(report("https://a/1"), report("https://a/2", "2026-10-06T04:00:00+00:00"))
+    ctx = SimpleNamespace(
+        preset=SimpleNamespace(stories=SimpleNamespace(tzinfo=MSK), feeds=[]), now=datetime.fromisoformat(mini.NOW)
+    )
+    out = format_stories_preview(StoriesResult([], [], [], [], [two_from_one], []), ctx)
+    assert "  queue         7  1 src  https://a/1" in out
 
 
 def test_a_failed_queue_write_leaves_the_story_waiting(tmp_path, no_network, monkeypatch):
