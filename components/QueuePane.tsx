@@ -130,7 +130,7 @@ export default function QueuePane({
                   </div>
                   <div className="cr-meta">
                     {item.source} · {itemDomain(item.url, text.invalidUrl)}
-                    {topicNames && ` · ${topicNames[item.topic] ?? item.topic}`} · {item.pending_since.slice(5, 10)}
+                    {topicNames && ` · ${topicNames[item.topic] ?? item.topic}`} · {text.date(item.pending_since)}
                   </div>
                   {on && (
                     <div className="cr-open">

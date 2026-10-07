@@ -175,7 +175,7 @@ export function buildStages(
     },
     {
       key: "deliver",
-      value: delivery.last_sent_at ? delivery.last_sent_at.slice(5, 10) : text.never,
+      value: delivery.last_sent_at ? text.date(delivery.last_sent_at) : text.never,
       line: delivery.sent_items > 0 ? text.sent(delivery.sent_items, delivery.messages) : text.approvedOnly,
     },
   ];

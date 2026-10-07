@@ -42,4 +42,16 @@ describe("TEXT", () => {
     expect(TEXT.ru.rail.drops.undated).toBe("без даты");
     expect(TEXT.ru.demo.tag("2026-10-06")).toBe("демо · синтетические данные · офлайн-прогоны 06.10.2026");
   });
+
+  it("writes dates as MM-DD in English and dd.mm in Russian", () => {
+    const iso = "2026-10-06T06:00:00+00:00";
+    expect(TEXT.en.queue.date(iso)).toBe("10-06");
+    expect(TEXT.ru.queue.date(iso)).toBe("06.10");
+    expect(TEXT.en.rail.date(iso)).toBe("10-06");
+    expect(TEXT.ru.rail.date(iso)).toBe("06.10");
+  });
+
+  it("says the Russian rail has never sent as \"пока нет\"", () => {
+    expect(TEXT.ru.rail.never).toBe("пока нет");
+  });
 });

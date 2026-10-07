@@ -2482,6 +2482,12 @@ body:has(.cr) footer {
   margin: 0 0 6px;
 }
 
+/* Russian content keeps its case: lowercasing turns abbreviations and names into "жкх". */
+.cr[lang="ru"] .cr-title,
+.cr[lang="ru"] .cr-summary {
+  text-transform: none;
+}
+
 @media (max-width: 899px) {
   .cr-demo-head {
     grid-template-columns: minmax(0, 1fr);

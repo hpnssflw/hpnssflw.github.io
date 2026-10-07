@@ -9,6 +9,10 @@ import type { Language } from "./run-result";
 
 export type Part = string | { v: string | number };
 
+// An ISO timestamp as a short date: "10-06" in English, "06.10" in Russian.
+const dateEn = (iso: string) => iso.slice(5, 10);
+const dateRu = (iso: string) => `${iso.slice(8, 10)}.${iso.slice(5, 7)}`;
+
 const en = {
   stages: {
     collect: "collect",
@@ -22,6 +26,7 @@ const en = {
     deliver: "deliver",
   },
   rail: {
+    date: dateEn,
     label: "Pipeline, last run",
     found: "found",
     drops: {
@@ -53,6 +58,7 @@ const en = {
   },
   topics: { label: "Topic", all: "all" },
   queue: {
+    date: dateEn,
     label: "Queue",
     statusLabel: "Status",
     statuses: { waiting: "waiting", approved: "approved", rejected: "rejected", all: "all" },
@@ -167,6 +173,7 @@ const ru: Text = {
     deliver: "доставка",
   },
   rail: {
+    date: dateRu,
     label: "Конвейер, последний прогон",
     found: "найдено",
     drops: {
@@ -186,7 +193,7 @@ const ru: Text = {
     threshold: "порога",
     fullText: (n: number) => `полный текст: +${n}`,
     thisRun: (n: number) => `+${n} за прогон`,
-    never: "никогда",
+    never: "пока нет",
     approvedOnly: "только одобренное",
     sent: (items: number, messages: number) => `отправлено: ${items} · сообщений: ${messages}`,
     shared: "общие ленты, до сортировки",
@@ -198,6 +205,7 @@ const ru: Text = {
   },
   topics: { label: "Тема", all: "все" },
   queue: {
+    date: dateRu,
     label: "Очередь",
     statusLabel: "Статус",
     statuses: { waiting: "ждут", approved: "одобрено", rejected: "отклонено", all: "все" },
@@ -253,7 +261,7 @@ const ru: Text = {
     ],
     reader: "читатель",
     criteria: "критерии",
-    pickTopic: "выберите тему, чтобы увидеть include / exclude",
+    pickTopic: "выберите тему, чтобы увидеть, что она включает и исключает",
     cap: (perDay: string, windowHours: number): Part[] => [
       { v: perDay },
       " в день · окно ",

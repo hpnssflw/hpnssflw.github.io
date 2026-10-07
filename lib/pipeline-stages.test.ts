@@ -14,6 +14,7 @@ function run(...parts: string[]): RunResult {
 }
 const tony = run("tony", "golden", "real", "run-result.json");
 const newsroom1 = run("newsroom-demo", "golden", "run1.json");
+const newsroom2 = run("newsroom-demo", "golden", "run2.json");
 const agro1 = run("agro-demo", "golden", "run1.json");
 const NONE = { queue: null, decisions: null };
 const en = TEXT.en.rail;
@@ -174,5 +175,10 @@ describe("buildStages on a demo preset's shared feeds", () => {
       "19",
       "−2 без даты · общие ленты, до сортировки",
     ]);
+  });
+
+  it("shows the sent date as dd.mm in Russian", () => {
+    expect(table(buildStages(newsroom2, NONE, "all", TEXT.ru.rail)).deliver[0]).toBe("06.10");
+    expect(table(buildStages(newsroom2, NONE, "all", en)).deliver[0]).toBe("10-06");
   });
 });
