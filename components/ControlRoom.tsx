@@ -58,7 +58,7 @@ export default function ControlRoom({ schedule }: { schedule: CronSchedule }) {
   const rows = visibleItems(items, inbox.decisions, topic, statusFilter);
   const topicNames = topic === "all" ? Object.fromEntries(topics.map((t) => [t.slug, t.name])) : null;
   const thresholds = (config?.topics ?? []).filter((t) => slugs.includes(t.slug)).map((t) => t.minRelevance);
-  const threshold = thresholds.length ? Math.min(...thresholds) : Infinity;
+  const threshold = thresholds.length ? Math.min(...thresholds) : null;
   const cadence = schedule.hourStep !== null ? text.rail.every(schedule.hourStep) : text.rail.daily;
   const caption = run.data
     ? `${text.configPane.fromRun(new Date(run.data.run.at).toISOString().slice(11, 16))} · ${text.configPane.hint}`

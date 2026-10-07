@@ -1,11 +1,11 @@
 import type { Outcomes as OutcomesData } from "@/lib/outcomes";
 
-function Histogram({ counts, threshold }: { counts: number[]; threshold: number }) {
+function Histogram({ counts, threshold }: { counts: number[]; threshold: number | null }) {
   const max = Math.max(1, ...counts);
   return (
     <div className="cr-hist" role="img" aria-label={`relevance 1 to 10: ${counts.join(", ")}`}>
       {counts.map((n, i) => (
-        <div key={i} className="cr-bar" data-pass={i + 1 >= threshold}>
+        <div key={i} className="cr-bar" data-pass={threshold === null ? undefined : i + 1 >= threshold}>
           <span className="cr-bar-n">{n || ""}</span>
           <span className="cr-bar-track">
             <span className="cr-bar-fill" style={{ height: `${(n / max) * 100}%` }} />
@@ -29,7 +29,7 @@ export default function Outcomes({
 }: {
   data: OutcomesData | null;
   failed: boolean;
-  threshold: number;
+  threshold: number | null;
 }) {
   const today = data?.scoredPerDay.at(-1);
   const dayMax = Math.max(1, ...(data?.scoredPerDay.map((d) => d.count) ?? []));
