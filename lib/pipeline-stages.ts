@@ -193,8 +193,12 @@ export function buildStages(
   if (railKeys(result).includes("stories")) {
     const group = s("group");
     const facts = s("facts");
-    const line = [text.joined(group.notes.joined ?? 0), minus(group.drops.same_story, text.sameStory)];
-    if (facts.out || facts.notes.flagged) line.push(text.withFacts(facts.out), text.flagged(facts.notes.flagged ?? 0));
+    // only the parts that happened: a quiet run's cell has no "+0 joined"
+    const line: string[] = [];
+    if (group.notes.joined) line.push(text.joined(group.notes.joined));
+    if (group.drops.same_story) line.push(minus(group.drops.same_story, text.sameStory));
+    if (facts.out) line.push(text.withFacts(facts.out));
+    if (facts.notes.flagged) line.push(text.flagged(facts.notes.flagged));
     rows.splice(rows.findIndex((r) => r.key === "rank") + 1, 0, { key: "stories", value: String(group.out), line: line.join(" · ") });
   }
 

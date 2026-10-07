@@ -122,7 +122,7 @@ describe("buildStages on a demo preset's shared feeds", () => {
       dedupe: ["19", "−1 seen · −0 dismissed"],
       cache: ["19", "−0 cached below"],
       rank: ["14", "−3 below 6 · −2 off topic · +3 full text"],
-      stories: ["11", "+0 joined · −0 same story · 2 with facts · 0 flagged"],
+      stories: ["11", "2 with facts"],
       cap: ["8", "−3 over cap"],
       queue: ["8", "+8 this run"],
       review: ["0", "−0 rejected · −0 expired"],
@@ -138,7 +138,7 @@ describe("buildStages on a demo preset's shared feeds", () => {
       dedupe: ["19", `−1 seen · −0 dismissed${shared}`],
       cache: ["19", `−0 cached below${shared}`],
       rank: ["4", `−3 below 6 · −2 off topic · +3 full text${shared}`],
-      stories: ["4", "+0 joined · −0 same story"],
+      stories: ["4", ""],
       cap: ["3", "−1 over cap"],
       queue: ["3", "+3 this run"],
       review: ["0", "−0 rejected · −0 expired"],
@@ -178,6 +178,22 @@ describe("buildStages on a demo preset's shared feeds", () => {
     expect(keys(tony)).not.toContain("stories");
     const cell = buildStages(newsroom1, NONE, "all", TEXT.ru.rail).find((s) => s.key === "stories")!;
     expect(cell.value).toBe("11"); // stories formed in run 1: incidents 4, power 4, economy 3
+    expect(cell.line).toBe("с фактами: 2"); // nothing joined, dropped or flagged: those parts are left out
+  });
+
+  it("shows each stories part that isn't zero", () => {
+    const busy: RunResult = structuredClone(newsroom1);
+    const group = busy.stages.find((s) => s.stage === "group");
+    const facts = busy.stages.find((s) => s.stage === "facts");
+    if (!group || !facts) throw new Error("fixture lacks group or facts");
+    group.scopes.incidents = { in: 6, out: 2, drops: { same_story: 1 }, notes: { joined: 3 } };
+    facts.scopes.power = { in: 1, out: 0, drops: {}, notes: { facts: 0, flagged: 1 } };
+    const line = (text: typeof en) => buildStages(busy, NONE, "all", text).find((s) => s.key === "stories")!.line;
+    expect(line(en)).toBe("+3 joined · −1 same story · 2 with facts · 1 flagged");
+    expect(line(TEXT.ru.rail)).toBe("в сюжеты: +3 · −1 тот же сюжет · с фактами: 2 · без фактов: 1");
+    facts.scopes.economy = { in: 1, out: 0, drops: {} };
+    facts.scopes.incidents = { in: 1, out: 0, drops: {} };
+    expect(line(en)).toBe("+3 joined · −1 same story · 1 flagged"); // no story got facts: no "0 with facts"
   });
 
   it("speaks the preset's language", () => {
