@@ -7,6 +7,7 @@ that topic into multiple chunks (one per-topic header repeated as needed)."""
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from html import escape
 
 from agent.pending import PendingItem
@@ -20,21 +21,36 @@ COUNT_PHRASES = {
 }
 
 
+@dataclass(frozen=True)
+class StoryBlock:
+    """A story with two or more reports, as the digest renders it under its
+    linked title: each fact followed by links to the reports it cites (or
+    the summary when there are no facts), then who reported first.
+    agent/stories.py builds it."""
+
+    facts: tuple[tuple[str, tuple[tuple[int, str], ...]], ...]  # (text, ((n, url), ...))
+    first: str | None
+
+
 def build(
-    items_by_topic: dict[str, list[PendingItem]], title: str = "Research digest", language: str = "en"
+    items_by_topic: dict[str, list[PendingItem]],
+    title: str = "Research digest",
+    language: str = "en",
+    stories: dict[str, StoryBlock] | None = None,
 ) -> list[str]:
     """Return one or more parse_mode=HTML message bodies, each under
     Telegram's per-message character limit."""
+    stories = stories or {}
     total = sum(len(items) for items in items_by_topic.values())
     header = f"<b>{escape(title)} — {COUNT_PHRASES[language](total)}</b>"
 
     # Render all topics, splitting large topics if needed
     topic_blocks = []
     for name, items in items_by_topic.items():
-        rendered = _render_topic(name, items)
+        rendered = _render_topic(name, items, stories)
         # If a single topic is too large, split it into smaller pieces
         if len(rendered) > MESSAGE_LIMIT:
-            topic_blocks.extend(_split_large_topic(name, items))
+            topic_blocks.extend(_split_large_topic(name, items, stories))
         else:
             topic_blocks.append(rendered)
 
@@ -47,7 +63,7 @@ def build(
     return [header, *topic_blocks]
 
 
-def _split_large_topic(name: str, items: list[PendingItem]) -> list[str]:
+def _split_large_topic(name: str, items: list[PendingItem], stories: dict[str, StoryBlock]) -> list[str]:
     """Split a large topic into multiple message-sized chunks. Each chunk
     respects the MESSAGE_LIMIT, except for unavoidable cases where a single
     item's rendered size (with topic header) exceeds the limit — in that case,
@@ -62,12 +78,12 @@ def _split_large_topic(name: str, items: list[PendingItem]) -> list[str]:
         # whatever follows it in the chunk (see _render_topic's "\n".join);
         # _render_item's own return value already has one internal "\n"
         # between its bullet and summary lines.
-        item_size = len(_render_item(item)) + 1
+        item_size = len(_render_item(item, stories.get(item.url))) + 1
 
         # If adding this item would exceed limit AND we already have items, flush current chunk
         # (This prevents bundling normal items with oversized ones to exceed the limit)
         if current_items and current_size + item_size + topic_header_size > MESSAGE_LIMIT:
-            chunks.append(_render_topic(name, current_items))
+            chunks.append(_render_topic(name, current_items, stories))
             current_items = [item]
             current_size = item_size
         else:
@@ -76,24 +92,35 @@ def _split_large_topic(name: str, items: list[PendingItem]) -> list[str]:
             current_size += item_size
 
     if current_items:
-        chunks.append(_render_topic(name, current_items))
+        chunks.append(_render_topic(name, current_items, stories))
 
     return chunks
 
 
-def _render_topic(topic_name: str, items: list[PendingItem]) -> str:
+def _render_topic(topic_name: str, items: list[PendingItem], stories: dict[str, StoryBlock]) -> str:
     lines = [f"<b>{escape(topic_name)}</b>"]
     for item in items:
-        lines.append(_render_item(item))
+        lines.append(_render_item(item, stories.get(item.url)))
     return "\n".join(lines)
 
 
-def _render_item(item: PendingItem) -> str:
-    """Render one item's bullet+summary block (two lines, joined by \\n):
-    the linked title, then the escaped summary. Shared by _render_topic
-    (actual output) and _split_large_topic (size estimate for chunking) so
-    the two can't drift apart."""
+def _render_item(item: PendingItem, story: StoryBlock | None = None) -> str:
+    """Render one item's block: the linked title, then the escaped summary
+    -- or, for a story, its facts with links to the reports they cite (the
+    summary when it has none) and who reported first. Shared by
+    _render_topic (actual output) and _split_large_topic (size estimate for
+    chunking) so the two can't drift apart."""
     url = escape(item.url, quote=True)
-    title = escape(item.title)
-    summary = escape(item.summary)
-    return f'• <a href="{url}">{title}</a>\n{summary}'
+    head = f'• <a href="{url}">{escape(item.title)}</a>'
+    if story is None:
+        return f"{head}\n{escape(item.summary)}"
+    lines = [head]
+    if story.facts:
+        for text, refs in story.facts:
+            links = "".join(f'<a href="{escape(ref_url, quote=True)}">[{n}]</a>' for n, ref_url in refs)
+            lines.append(f"{escape(text)} {links}")
+    else:
+        lines.append(escape(item.summary))
+    if story.first:
+        lines.append(escape(story.first))
+    return "\n".join(lines)

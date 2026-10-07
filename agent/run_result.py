@@ -103,6 +103,7 @@ def build_run_result(
     queue: PendingQueue,
     decisions: dict[str, str] | None,
     delivery: dict,
+    stories: dict[str, dict] | None = None,
 ) -> dict:
     decisions = decisions or {}
     by_topic = Counter(item.topic for item in queue.items)
@@ -116,7 +117,10 @@ def build_run_result(
         "queue": {
             "count": len(queue.items),
             "by_topic": dict(by_topic),
-            "items": [{**asdict(item), "decision": decisions.get(item.url)} for item in queue.items],
+            "items": [
+                {**asdict(item), "decision": decisions.get(item.url), **({"story": stories[item.url]} if stories and item.url in stories else {})}
+                for item in queue.items
+            ],
         },
         "delivery": delivery,
     }

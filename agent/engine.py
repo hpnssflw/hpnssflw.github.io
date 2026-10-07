@@ -120,7 +120,12 @@ def run_real(
     messages: list[str] = []
     if due:
         grouped = pending.group_by_topic(approved)
-        messages = digest.build(grouped, preset.delivery.title, preset.language)
+        blocks = (
+            stories.digest_blocks(ctx.stories, approved, stories.feed_order(preset), preset.stories.tzinfo, now, preset.language)
+            if ctx.stories is not None
+            else None
+        )
+        messages = digest.build(grouped, preset.delivery.title, preset.language, blocks)
         tally.count("format", FEED_SCOPE, len(approved), len(messages))
         try:
             adapters.delivery.send(messages, run_id)
@@ -176,6 +181,7 @@ def run_real(
                     "messages": len(messages),
                     "last_sent_at": queue.last_email_at,
                 },
+                stories=_story_view(preset, ctx, queue, now),
             ),
         )
     except Exception as exc:  # noqa: BLE001 — items may be sent already: a failed run record must not fail the run (CI would skip pushing state and deliver them again)
@@ -186,6 +192,12 @@ def run_real(
     if preset.status_json:
         print(f"Status written: {paths.status}")
     print(f"Run result: {paths.result}")
+
+
+def _story_view(preset: Preset, ctx: RunContext, queue: pending.PendingQueue, now: datetime) -> dict | None:
+    if ctx.stories is None:
+        return None
+    return stories.queue_view(ctx.stories, queue.items, stories.feed_order(preset), preset.stories.tzinfo, now, preset.language)
 
 
 def _tally_review(tally: Tally, before: Counter, queue: pending.PendingQueue, inbox_drops: list, approved: list) -> None:
@@ -281,6 +293,7 @@ def run_dry(
                 "messages": 0,
                 "last_sent_at": ctx.queue.last_email_at,
             },
+            stories=_story_view(preset, ctx, ctx.queue, now),
         ),
     )
     print(f"\nRun recorded: {writer.path}")

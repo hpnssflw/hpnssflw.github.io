@@ -189,3 +189,28 @@ def test_preview_prints_stories_and_writes_nothing(tmp_path, no_network, capsys)
     out = capsys.readouterr().out
     assert "== stories" in out and "3 src" in out and "Прорыв трубы на Садовой" in out
     assert adapters.ranker.facts_calls == 0 and not paths.stories.exists()
+
+
+def test_run_result_carries_each_queue_items_story(tmp_path, no_network):
+    _, _, _, result = run1(tmp_path)
+    by_url = {i["url"]: i for i in result["queue"]["items"]}
+    pipe = by_url[f"{A}/1"]["story"]
+    assert [(r["n"], r["source_id"]) for r in pipe["reports"]] == [(1, "agency"), (2, "city"), (3, "gov")]
+    assert pipe["facts"] == [
+        {"text": "Без холодной воды остались три квартала.", "refs": [1, 2]},
+        {"text": "Организован подвоз питьевой воды.", "refs": [3]},
+    ]
+    assert pipe["first"] == "Первым — Агентство, 06:10; через 42 мин — Город; через 1 ч 30 мин — Правительство"
+    assert by_url[f"{A}/2"]["story"]["first"] == "Первым — Агентство, 05.10 15:00; через 25 мин — Город"
+    assert by_url[f"{A}/3"]["story"]["first"] is None and by_url[f"{A}/3"]["story"]["flagged"] is False
+    assert result["config"]["stories"]["timezone"] == "+03:00"
+
+
+def test_run_two_sends_the_plant_story_block(tmp_path, no_network):
+    preset, paths, _, _ = run1(tmp_path)
+    _, result = run2(preset, paths, tmp_path)
+    outbox = (paths.outbox / f"{result['run']['id']}.html").read_text(encoding="utf-8")
+    assert (
+        f'Завод сократит 300 рабочих мест. <a href="{A}/2">[1]</a><a href="{C}/c2">[2]</a>\n'
+        "Первым — Агентство, 05.10 15:00; через 25 мин — Город"
+    ) in outbox

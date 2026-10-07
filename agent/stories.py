@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Callable
 
 from agent import dedupe, summarize
+from agent.digest import StoryBlock
 from agent.item import Item
 from agent.preset import StoriesConfig
 from agent.sources.base import Drop
@@ -484,3 +485,42 @@ def mark_delivered(store: StoryStore, state: dict, urls: list[str]) -> None:
         for report in story.reports:
             if report.url != story.key:
                 dedupe.mark_sent_url(state, report.url)
+
+
+def _refs(fact: Fact, reports: list[Report]) -> list[tuple[int, str]]:
+    return [(n, r.url) for n, r in enumerate(reports, start=1) if r.url in fact.urls]
+
+
+def digest_blocks(store: StoryStore, items: list, order: dict[str, int], tz: tzinfo, now: datetime, language: str) -> dict[str, StoryBlock]:
+    """StoryBlocks for the queue items that are stories with two or more reports."""
+    blocks: dict[str, StoryBlock] = {}
+    for item in items:
+        story = store.stories.get(item.url)
+        if story is None or len(story.reports) < 2:
+            continue
+        reports = ordered(story, order)
+        blocks[item.url] = StoryBlock(
+            facts=tuple((f.text, tuple(_refs(f, reports))) for f in story.facts),
+            first=first_line(story, order, tz, now, language),
+        )
+    return blocks
+
+
+def queue_view(store: StoryStore, items: list, order: dict[str, int], tz: tzinfo, now: datetime, language: str) -> dict[str, dict]:
+    """run-result.json's queue.items[].story, by queue item url."""
+    view: dict[str, dict] = {}
+    for item in items:
+        story = store.stories.get(item.url)
+        if story is None:
+            continue
+        reports = ordered(story, order)
+        view[item.url] = {
+            "reports": [
+                {"n": n, "url": r.url, "title": r.title, "source_id": r.source_id, "source_name": r.source_name, "published_at": r.published_at, "score": r.score}
+                for n, r in enumerate(reports, start=1)
+            ],
+            "facts": [{"text": f.text, "refs": [n for n, _ in _refs(f, reports)]} for f in story.facts],
+            "flagged": story.flagged,
+            "first": first_line(story, order, tz, now, language),
+        }
+    return view
