@@ -97,7 +97,7 @@ def run_real(
         for topic_slug, drop in inbox_drops:
             writer.emit_drop("inbox", topic_slug, drop)
         if ctx.stories is not None:
-            stories.apply_review(ctx.stories, state, approved, inbox_drops)
+            stories.apply_review(ctx.stories, state, approved, inbox_drops, queue.items)
     _tally_review(tally, queued_before_review, queue, inbox_drops, approved)
 
     for topic in topics:

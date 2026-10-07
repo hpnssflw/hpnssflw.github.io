@@ -458,13 +458,20 @@ def filter_members(items: list[Item], store: StoryStore) -> tuple[list[Item], li
 # --- review and delivery -----------------------------------------------------
 
 
-def apply_review(store: StoryStore, state: dict, approved: list, drops: list) -> None:
-    """After inbox.apply_decisions: approve closes a story for joining; a
-    reject or expiry dismisses every report, so none comes back."""
+def apply_review(store: StoryStore, state: dict, approved: list, drops: list, pending_items: list) -> None:
+    """After inbox.apply_decisions (pending_items: the queue it left):
+    approve closes a story for joining, and an approval taken back before
+    delivery reopens it; a reject or expiry dismisses every report, so none
+    comes back."""
+    approved_urls = {item.url for item in approved}
     for item in approved:
         story = store.stories.get(item.url)
         if story is not None:
             story.status = "approved"
+    for item in pending_items:
+        story = store.stories.get(item.url)
+        if story is not None and story.status == "approved" and item.url not in approved_urls:
+            story.status = "queued"
     for _, drop in drops:
         story = store.stories.get(drop.url)
         if story is None:

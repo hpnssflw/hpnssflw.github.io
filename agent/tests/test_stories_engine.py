@@ -3,7 +3,7 @@
 import json
 from datetime import datetime, timedelta
 
-from agent import engine, stories
+from agent import engine, rank_cache, stories
 from agent.dedupe import load_state, url_hash
 from agent.fetch import OfflineFetcher
 from agent.paths import DataPaths
@@ -56,6 +56,18 @@ def test_a_waiting_story_competes_again_without_a_new_merge(tmp_path, no_network
     engine.run_real(preset, paths, preset.offline.now, adapters)
     assert adapters.ranker.merge_calls == 0  # every report is already in a story
     assert stories.load_store(paths.stories).stories[f"{A}/4"].status == "waiting"  # the cap is still full
+
+
+def test_a_stale_waiting_story_is_pruned_before_the_cap(tmp_path, no_network):
+    preset, paths, _, _ = run1(tmp_path)
+    later = datetime.fromisoformat(mini.NOW) + timedelta(hours=49)  # every report is now outside the 48 h window
+    engine.run_real(preset, paths, later, engine.offline_adapters(preset, paths))
+    result = json.loads(paths.result.read_text(encoding="utf-8"))
+
+    assert stage(result, "window")["*"]["out"] == 0
+    assert f"{A}/4" not in stories.load_store(paths.stories).stories  # 54 h old: pruned, not queued
+    assert [i.url for i in load_pending(paths.pending).items] == [f"{A}/1"]  # A/2 sent, A/3 rejected
+    assert stage(result, "cap")["incidents"] == {"in": 0, "out": 0, "drops": {}}  # no waiting story competed
 
 
 def test_a_failed_merge_holds_the_lone_report_for_the_next_run(tmp_path, no_network):
@@ -153,6 +165,42 @@ def test_a_rejected_story_dismisses_every_report(tmp_path, no_network):
     assert f"{A}/1" not in [i.url for i in load_pending(paths.pending).items]
 
 
+def test_an_approval_taken_back_reopens_the_story(tmp_path, no_network):
+    preset, paths, _, _ = run1(tmp_path)
+    now = datetime.fromisoformat(mini.NOW)
+    engine.run_real(preset, paths, now + timedelta(hours=1), engine.offline_adapters(preset, paths))  # sends A/2
+    decisions_path = tmp_path / "mini" / "decisions.json"
+    approve_pipe = {**mini.DECISIONS["decisions"], f"{A}/1": {"decision": "approve", "at": "2026-10-06T07:30:00Z"}}
+    decisions_path.write_text(json.dumps({"version": 1, "decisions": approve_pipe}), encoding="utf-8")
+    engine.run_real(preset, paths, now + timedelta(hours=2), engine.offline_adapters(preset, paths))  # inside the cadence
+    assert stories.load_store(paths.stories).stories[f"{A}/1"].status == "approved"
+    assert [i.url for i in load_pending(paths.pending).items] == [f"{A}/1"]  # approved, not delivered yet
+
+    decisions_path.write_text(json.dumps(mini.DECISIONS), encoding="utf-8")  # the owner undoes the approval
+    _, result = run2(preset, paths, tmp_path)  # still inside the cadence: nothing is delivered
+
+    pipe = stories.load_store(paths.stories).stories[f"{A}/1"]
+    assert pipe.status == "queued" and f"{A}/5" in [r.url for r in pipe.reports]  # the follow-up joined
+    assert stage(result, "group")["incidents"]["notes"] == {"joined": 2}
+    state = load_state(paths.state)
+    assert state[url_hash(f"{A}/5")].dismissed is None and state[url_hash(f"{G}/g2")].dismissed is None
+
+
+def test_apply_review_reopens_only_approved_stories_still_undecided_in_the_queue():
+    from agent.pending import PendingItem
+    from agent.tests.test_stories import report, story
+
+    def item(url):
+        return PendingItem(url=url, title="t", source="rss", topic="t", topic_name="T", summary="s", score=7, pending_since=mini.NOW)
+
+    taken_back = story(report("https://a/1"), status="approved")
+    kept = story(report("https://a/2"), status="approved")
+    sent = story(report("https://a/3"), status="sent")
+    store = stories.StoryStore({s.key: s for s in (taken_back, kept, sent)})
+    stories.apply_review(store, {}, [item("https://a/2")], [], [item("https://a/1"), item("https://a/2")])
+    assert (taken_back.status, kept.status, sent.status) == ("queued", "approved", "sent")
+
+
 def test_an_expired_story_dismisses_every_report(tmp_path, no_network, monkeypatch):
     preset, paths, _, _ = run1(tmp_path)
     monkeypatch.setattr(stories, "prune", lambda *args: None)  # a closed story past the window is pruned on save
@@ -189,6 +237,17 @@ def test_preview_prints_stories_and_writes_nothing(tmp_path, no_network, capsys)
     out = capsys.readouterr().out
     assert "== stories" in out and "3 src" in out and "Прорыв трубы на Садовой" in out
     assert adapters.ranker.facts_calls == 0 and not paths.stories.exists()
+
+
+def test_a_failed_queue_write_leaves_the_story_waiting(tmp_path, no_network, monkeypatch):
+    def fail(*args):
+        raise OSError("disk full")
+
+    monkeypatch.setattr(rank_cache, "mark_queued_url", fail)
+    _, paths, _, result = run1(tmp_path)
+    assert [f["stage"] for f in result["failures"]] == ["rank"]  # the feeds failed; the run went on
+    assert load_pending(paths.pending).items == []
+    assert {s.status for s in stories.load_store(paths.stories).stories.values()} == {"waiting"}  # none queued without its item
 
 
 def test_run_result_carries_each_queue_items_story(tmp_path, no_network):

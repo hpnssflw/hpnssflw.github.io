@@ -324,6 +324,9 @@ def _process_stories(ctx: RunContext, eligible: dict[str, list[RankedItem]]) -> 
     that story compete again."""
     preset, store, now = ctx.preset, ctx.stories, ctx.now
     config = preset.stories
+    # before the cap: a waiting story whose reports have all left the window
+    # (after an outage, say) must not take a free cap slot
+    stories.prune(store, now, config.window_hours, preset.max_age_days)
     index = stories.member_index(store)
     reports: list[stories.Report] = []
     topic_of: dict[str, str] = {}
@@ -414,7 +417,6 @@ def _cap_stories(ctx: RunContext) -> tuple[list[stories.Story], list[stories.Sto
             ctx.writer.emit_drop("cap", topic.slug, drop)
         for story in keep:
             opener = story.opener()
-            story.status = "queued"
             rank_cache.mark_queued_url(state, story.key, topic.slug, now)
             ctx.queue.items.append(
                 PendingItem(
@@ -428,6 +430,7 @@ def _cap_stories(ctx: RunContext) -> tuple[list[stories.Story], list[stories.Sto
                     pending_since=now.isoformat(),
                 )
             )
+            story.status = "queued"  # last: a raise above must not leave a queued story without its pending item
             ctx.writer.emit("rank", "kept", topic=topic.slug, source=opener.kind, url=story.key, title=opener.title, score=story.score())
         ctx.tally.count("queue", topic.slug, len(keep), 0)
         queued += keep

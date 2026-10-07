@@ -35,7 +35,7 @@ class StateEntry:
     first_seen: str  # ISO 8601
     last_score: int | None
     times_sent: int
-    dismissed: str | None = None  # "rejected" | "expired" -- set by the inbox, never cleared
+    dismissed: str | None = None  # "rejected" | "expired" (the inbox) | "same_story" (stories) -- never cleared
     ranks: dict[str, RankRecord] = field(default_factory=dict)  # topic slug -> verdict
 
 

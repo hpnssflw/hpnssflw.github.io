@@ -41,7 +41,7 @@ def build_report(state: dict[str, StateEntry], topic_names: dict[str, str], now:
                 if entry.times_sent > 0:
                     outcomes["sent"] += 1
                 elif entry.dismissed is not None:
-                    outcomes[entry.dismissed] += 1  # "rejected" | "expired"
+                    outcomes[entry.dismissed] += 1  # "rejected" | "expired" | "same_story"
                 else:
                     outcomes["pending"] += 1
         lines.append("")
