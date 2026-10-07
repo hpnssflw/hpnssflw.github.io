@@ -158,7 +158,8 @@ function hasRequiredFields(
  * to be caught here or it crashes the route. Every required field is
  * checked, entries included, and dates must parse: any failure returns
  * null, which the pages show as "unavailable". The optional `drops` and
- * `failures` (only the control room's rail reads them) fail soft — a
+ * `failures` (status.json still carries them, but since D the control room's
+ * rail reads run-result.json instead) fail soft — a
  * malformed one is left out, so it can't blank the home widgets. Returns
  * a copy; unknown keys pass through.
  */

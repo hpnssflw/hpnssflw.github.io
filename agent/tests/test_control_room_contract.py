@@ -1,6 +1,7 @@
-"""The control room (/researcher/queue/) reads one thing from this repo at
-site build time: the workflow's cron line (lib/agent-schedule.ts). It
-must exist exactly once; a failure here would also fail the site build.
+"""The site reads one thing from this repo at build time: the workflow's
+cron line (lib/agent-schedule.ts), used by both the control room's pulse
+(/researcher/queue/) and the home widget's countdown. It must exist
+exactly once; a failure here would also fail the site build.
 Everything else it shows comes from run-result.json (test_run_result.py)."""
 
 import re

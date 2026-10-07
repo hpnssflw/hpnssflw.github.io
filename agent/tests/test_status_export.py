@@ -1,6 +1,8 @@
 """status.json's `drops` and `failures` (docs/superpowers/specs/2026-10-06-tony-control-room-design.md):
-the control room's rail reads drop reasons per topic and stage, and which
-stages failed -- never the error text, since status.json is public."""
+status.json still carries drop reasons per topic and stage, and which
+stages failed -- never the error text, since status.json is public. Since
+sub-project D the control room's rail reads run-result.json instead; these
+fields are validated by the site's guard and pinned by this test."""
 
 import json
 

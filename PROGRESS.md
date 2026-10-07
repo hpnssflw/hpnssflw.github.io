@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D's push 1 committed with `main`'s hardening merged in, awaiting go-ahead to push.**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D's push 1 (preset switcher) shipped and live 2026-10-07; next is D's push 2 (demo section, Tasks 8-10).**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -762,12 +762,45 @@ infrastructure.
   `lib/control-room-text.ts`. `agent/tests/test_status_export.py` came
   from both sides with the same cases; main's copy was kept. After the
   merge: 133 pytest tests, 313 Vitest tests.
-  **Revert push 1 as a unit:** reverting only the site commits brings
-  back `lib/agent-config.ts`, which reads the deleted
-  `agent/defaults.yaml`, and breaks the build; the merge commit belongs
-  to the unit too (it points the home page at `lib/agent-schedule.ts`).
-  Next: push 2 (demo section, Tasks 8-10); #7 (Web Products RSS) is now
-  a `rss:` list in `agent/presets/tony.yaml`, no site change.
+  **Shipped and live 2026-10-07:** fast-forward `49b9e43..409fbc1`;
+  deploy run 37570840544; manual agent run 37570861917
+  (workflow_dispatch, 04:18:52Z, success) wrote `agent-data` e00245f
+  with `agent/run-result.json`: `schema_version: 2`, `failures: []`,
+  topics ai-engineering / tooling / web-products, rubric hashes
+  3472af8a46e1 / 02189e2467e9 / 080b24af813c (unchanged), queue 67
+  items, 2 tooling items expired. Rail sums (all topics): collect 210,
+  window 210, dedupe 154 (-56 seen), cache 57 (-97 cached below), rank
+  46 (-11 below 6), cap 0 (-46 over cap), queue 67, review -0 rejected
+  / -2 expired, deliver 09-30 (last digest; not due, nothing approved).
+  `python -m agent report` on the live state: sent to DeepSeek on
+  2026-10-07 = 4 / 8 / 1, exactly this run's new items (enrich stage
+  4/8/1), so no re-scoring. `status.json` is still written (streak 244,
+  pending_count 67). Live headless check (1440x900, after the Pages fix
+  below): `/researcher/queue/` rail nodes collect 210, window 210,
+  dedupe 154 (-56 seen, -0 dismissed), cache 57 (-97 cached below),
+  rank 46 (-11 below 6), cap 0 (-46 over cap), queue 67 (+0 this run),
+  review 0 (-0 rejected, -2 expired), deliver 09-30 (approved only);
+  config caption `as of last run 04:19 utc · a criteria change
+  re-scores the topic`; no "config unavailable"; hn/github rows
+  present. Home: Tony teaser proof line `agent live · 210 found · 0
+  kept · 67 queued`, widget shows its "next check" countdown.
+  **Pages outage found during the check:** GitHub Pages had been
+  switched to build_type "legacy" (source main /), so Pages served raw
+  repo files and every page 404'd. A legacy `pages-build-deployment`
+  run appears on every push since at least 2026-10-06 10:20Z, so the
+  outage predates push 1 and who switched it is unknown. Fixed
+  2026-10-07 ~04:35Z by switching back to "workflow" (as CLAUDE.md
+  requires; `gh api -X PUT repos/hpnssflw/hpnssflw.github.io/pages -f
+  build_type=workflow`) and re-running Deploy site (run 37571506524).
+  **Revert push 1 as a unit:** `git revert -m 2 409fbc1` (parent 2 is
+  main) undoes all of D's push 1, including the merge, without touching
+  the control room hardening. Reverting D's commits one by one would
+  leave `app/page.tsx` importing a deleted module (and bring back
+  `lib/agent-config.ts`, which reads the deleted `agent/defaults.yaml`).
+  Next: push 2 (demo section, Tasks 8-10), whose first step is the
+  pre-push-2 fix list in the SDD ledger (ru plurals/wording, full-text
+  shared mark, `window` rename, `Tags` keys); #7 (Web Products RSS) is
+  now a `rss:` list in `agent/presets/tony.yaml`, no site change.
 
 ### How to resume in a new session
 
@@ -834,11 +867,12 @@ candidates: a Web Products source (#7), a Telegram DM when items await
 review, summary editing. Content engine sub-project A is shipped and
 live (2026-10-06, `bed2bb7`); sub-project D's push 1 (Tony on
 `run-result.json`, legacy files removed, `main`'s hardening merged in)
-is committed and awaiting Artem's go-ahead to push — next is the
-regression-check/live-check in Task 7, then push 2 (demo section, Tasks
-8-10) from `docs/superpowers/plans/2026-10-06-preset-switcher.md`. B
-(stories) and C each need their own brainstorm → spec → plan (see the A
-bullet above and
+is shipped and live (2026-10-07, `409fbc1`) — next is push 2 (demo
+section, Tasks 8-10) from
+`docs/superpowers/plans/2026-10-06-preset-switcher.md`, starting with the
+pre-push-2 fix list in the SDD ledger (ru plurals/wording, full-text
+shared mark, `window` rename, `Tags` keys). B (stories) and C each need
+their own brainstorm → spec → plan (see the A bullet above and
 `docs/tony-scraponi-roadmap.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
