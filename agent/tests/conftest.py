@@ -8,6 +8,7 @@ import hashlib
 import json
 import re
 import socket
+from dataclasses import replace
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
@@ -229,6 +230,14 @@ def seed_tony_data(data: Path) -> None:
     (data / "status.json").write_text((TONY / "seed_status.json").read_text(encoding="utf-8"), encoding="utf-8")
 
 
+class RefusingFetcher:
+    """The fetcher for runs with no feed fixtures: a fetch is a test bug,
+    not a request to the live web."""
+
+    def get(self, url: str):
+        raise AssertionError(f"unexpected fetch {url}")
+
+
 class TonyHarness:
     """One Tony run on fixed inputs: seeded data dir, fake network, fixed
     clock. Only run_real/run_preview/run_dry change as the engine is
@@ -255,8 +264,13 @@ class TonyHarness:
         from agent.preset import load_preset
 
         preset = load_preset(AGENT_DIR / "presets" / "tony.yaml")
+        # The goldens pin Tony's HN and GitHub inputs; tony.yaml's RSS feeds
+        # have no fixtures here, so they're left out (RSS has its own tests:
+        # test_rss.py, test_feed_path.py, the demo goldens).
+        preset = replace(preset, feeds=(), topics=tuple(replace(topic, feeds=()) for topic in preset.topics))
         paths = DataPaths(self.data)
-        return preset, paths, FROZEN_NOW, engine.live_adapters(preset, paths)
+        adapters = replace(engine.live_adapters(preset, paths), fetcher=RefusingFetcher())
+        return preset, paths, FROZEN_NOW, adapters
 
     def run_real(self) -> None:
         from agent import engine
