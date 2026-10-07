@@ -1,4 +1,11 @@
 {
+  "0025f60e00e81831": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "005eb16ce8806c19": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -55,7 +62,7 @@
   "019b8d88a570a342": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 163,
+    "last_score": 164,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -165,10 +172,24 @@
     "ranks": {},
     "times_sent": 0
   },
+  "0461e0bc6d74d83c": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "04c613c6bac80c12": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 811,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "04cb417716f3bc92": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -261,6 +282,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "089a9f1a88b14c9f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "08a2531986b8fc49": {
     "dismissed": null,
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
@@ -273,6 +301,22 @@
     "first_seen": "2026-09-11T15:25:13.710288+00:00",
     "last_score": 340,
     "ranks": {},
+    "times_sent": 0
+  },
+  "08fcf37c0fa6bf91": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Google Search Central announces curated YouTube learning paths for Search fundamentals and Technical SEO from its video library."
+      }
+    },
     "times_sent": 0
   },
   "0966d3f1308faae0": {
@@ -305,12 +349,44 @@
     "ranks": {},
     "times_sent": 0
   },
+  "0a863d1d6e105f8b": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 1,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A brief note that Jane Wickline impersonated Anthropic CEO Dario Amodei on Saturday Night Live's Weekend Update."
+      }
+    },
+    "times_sent": 0
+  },
   "0ab11f3b2e260b4f": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 1577,
     "ranks": {},
     "times_sent": 1
+  },
+  "0abddbec6008e2e7": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Ahrefs guide to eight SEO problems to watch for on static sites, where CMS plugins no longer handle canonicals, sitemaps, redirects, metadata, schema, and 404s."
+      }
+    },
+    "times_sent": 0
   },
   "0bcba8f8a5e3ff02": {
     "dismissed": null,
@@ -339,6 +415,13 @@
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 890,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "0c692ddf6e27d9c0": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -372,6 +455,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "0d2373a93812c353": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A piece about MIT installing over 500 AI-enabled surveillance cameras and professors organizing to bedazzle them in protest."
+      }
+    },
+    "times_sent": 0
+  },
   "0d2a8b8a244118d8": {
     "dismissed": null,
     "first_seen": "2026-09-03T18:57:53.147814+00:00",
@@ -382,7 +481,7 @@
   "0d2b759c8ff8305d": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 62,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -419,7 +518,7 @@
   "0df6080a7e0590da": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 159,
+    "last_score": 164,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -475,6 +574,13 @@
     "last_score": 198,
     "ranks": {},
     "times_sent": 1
+  },
+  "0f5b640f6cf31228": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "0fc024f4e5a6a81b": {
     "dismissed": null,
@@ -541,12 +647,26 @@
     "ranks": {},
     "times_sent": 0
   },
+  "1141cab4ed72e3f7": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "1146cd439a1fb9f7": {
     "dismissed": null,
     "first_seen": "2026-08-29T15:52:16.442313+00:00",
     "last_score": 137,
     "ranks": {},
     "times_sent": 1
+  },
+  "11831a886ff76694": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "1184a5bd50000cdd": {
     "dismissed": null,
@@ -670,6 +790,29 @@
     "ranks": {},
     "times_sent": 0
   },
+  "15b8fdbcdf7931b1": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "15caadab6491fa6f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Stripe shares three improvements to Link aimed at helping agent builders navigate checkout and earn consumer trust for agent-driven purchases."
+      }
+    },
+    "times_sent": 0
+  },
   "15e2051c5046525f": {
     "dismissed": null,
     "first_seen": "2026-09-11T22:04:17.894699+00:00",
@@ -694,7 +837,7 @@
   "1622e539f5fe4b6e": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 55,
+    "last_score": 59,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -866,6 +1009,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "1b5e6a38b67111a1": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "1b8e35a5a0147eea": {
     "dismissed": null,
     "first_seen": "2026-09-17T08:58:39.700444+00:00",
@@ -911,7 +1061,7 @@
   "1d9e0fedc80d5604": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 176,
+    "last_score": 177,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -957,7 +1107,7 @@
   "1e6d0aa6065c4bd5": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 109,
+    "last_score": 118,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1028,6 +1178,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "22100060fb57e3b9": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "230850d05f205b60": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -1042,6 +1199,13 @@
         "summary": "A fast, native, keyboard-driven database client for macOS supporting 20 databases, with an AI assistant that shows its work."
       }
     },
+    "times_sent": 0
+  },
+  "234692c6daccbe4c": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
     "times_sent": 0
   },
   "23693f7b66c2e7cc": {
@@ -1065,6 +1229,13 @@
         "summary": "NSL is a WSL-like tool for Linux for developing with multiple different distros."
       }
     },
+    "times_sent": 0
+  },
+  "246910f432e4e604": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
     "times_sent": 0
   },
   "2529c4416d7268f8": {
@@ -1117,6 +1288,29 @@
         "summary": "OpenChart is an open-source TradingView alternative that lets Claude and Codex agents work with markets through charts instead of CLIs."
       }
     },
+    "times_sent": 0
+  },
+  "27b9450b14cebcbe": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Highlights a decade-old Front-End Checklist of general frontend advice (print stylesheets, hero image loading, reduced motion) now with an AI skill and MCP for agent-based checking."
+      }
+    },
+    "times_sent": 0
+  },
+  "2869e2138d2ad439": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
     "times_sent": 0
   },
   "286b9039ee8af92c": {
@@ -1184,6 +1378,20 @@
         "summary": "A blog post about using any C++ library in the Godot game engine."
       }
     },
+    "times_sent": 0
+  },
+  "2aefc56327d4dd90": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "2b00ffc997dd8ff7": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
     "times_sent": 0
   },
   "2b5450c77abf0beb": {
@@ -1329,6 +1537,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "2f1b526d3addd09f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 5,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Stripe announces that Open USD (OUSD), a stablecoin built for global money movement, is now the default and available across Stripe for managing funds and payments."
+      }
+    },
+    "times_sent": 0
+  },
   "2f5fb05374a295a1": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -1361,10 +1585,33 @@
     },
     "times_sent": 0
   },
+  "2fbb28d8ffbaec19": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-07T04:58:06.518389+00:00",
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 9,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A look at the annual Interop effort for 2027, listing proposed web platform features like gamut mapping, border-shape, and interest invokers, with a decision due February 4, 2027."
+      }
+    },
+    "times_sent": 0
+  },
   "2ff75c1a9ffbcd64": {
     "dismissed": null,
     "first_seen": "2026-10-04T04:28:57.570485+00:00",
     "last_score": 585,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "2ffb15d5522db566": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -1488,10 +1735,33 @@
     "ranks": {},
     "times_sent": 1
   },
+  "3288015068afff41": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 4,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A DebugBear article examining the recent changes to example.com and the visual evolution of the reserved documentation domain over 20+ years."
+      }
+    },
+    "times_sent": 0
+  },
   "3336633e70bcfc63": {
     "dismissed": null,
     "first_seen": "2026-09-24T08:49:08.300484+00:00",
     "last_score": 625,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "3339260f7d633c46": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -1501,6 +1771,13 @@
     "last_score": 413,
     "ranks": {},
     "times_sent": 1
+  },
+  "3373b7ec02c5cbf6": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "337e3f19ed608da6": {
     "dismissed": null,
@@ -1612,6 +1889,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "376b124027d721d8": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "The author recounts how a political data visualization called '\u00c0 sa place' failed to circulate on social media, prompting them to revisit the data behind it."
+      }
+    },
+    "times_sent": 0
+  },
   "378bc05252a724ff": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -1622,7 +1915,7 @@
   "37a106d7f924ad98": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 228,
+    "last_score": 229,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1656,6 +1949,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "38f25dff89dbec5f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "38ffa19f0aa61b7d": {
     "dismissed": null,
     "first_seen": "2026-09-19T14:58:16.912195+00:00",
@@ -1673,7 +1973,7 @@
   "393266ea5adfae70": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 155,
+    "last_score": 163,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1725,10 +2025,17 @@
     },
     "times_sent": 0
   },
+  "39ca315f074bb0ad": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "3a0f9678829920c2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 363,
+    "last_score": 366,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1754,6 +2061,13 @@
     "last_score": 37,
     "ranks": {},
     "times_sent": 1
+  },
+  "3b13f39d91672535": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "3b1f2e42d0fa637c": {
     "dismissed": null,
@@ -1982,6 +2296,22 @@
     },
     "times_sent": 0
   },
+  "41c857134ce518f0": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "An article on data visualization as postage stamp art, starting from a 1974 Ethiopian stamp tracking world population and other mathematically themed stamps."
+      }
+    },
+    "times_sent": 0
+  },
   "42a0a790dd58cb73": {
     "dismissed": null,
     "first_seen": "2026-09-18T01:56:40.951217+00:00",
@@ -2016,6 +2346,20 @@
     "last_score": 29,
     "ranks": {},
     "times_sent": 1
+  },
+  "4530a8b4eb505ad4": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "455e278c5a2ad1d8": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "45ac5aa2ac7f0687": {
     "dismissed": null,
@@ -2070,6 +2414,13 @@
     "last_score": 330,
     "ranks": {},
     "times_sent": 1
+  },
+  "4603fa908ee8d265": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "4683cd570ef39deb": {
     "dismissed": null,
@@ -2129,6 +2480,13 @@
     },
     "times_sent": 0
   },
+  "4769673330592cdc": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "477dc310d3ad3c10": {
     "dismissed": null,
     "first_seen": "2026-09-01T02:24:08.690856+00:00",
@@ -2150,6 +2508,13 @@
         "summary": "A Reuters article about the FTC chair suggesting AI developers should be liable for agents' conduct."
       }
     },
+    "times_sent": 0
+  },
+  "47d0376f4ec744d8": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
     "times_sent": 0
   },
   "47e03999969744ed": {
@@ -2181,6 +2546,13 @@
     "last_score": 35,
     "ranks": {},
     "times_sent": 1
+  },
+  "47fd6d62876d3732": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "48193acfd9cea883": {
     "dismissed": null,
@@ -2224,6 +2596,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "4aba63dcaad36686": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "4b894348badcd9a5": {
     "dismissed": null,
     "first_seen": "2026-09-26T18:47:40.661012+00:00",
@@ -2249,6 +2628,13 @@
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
     "last_score": 389,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "4c0e724c8e3888ea": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -2334,6 +2720,13 @@
     "last_score": 39,
     "ranks": {},
     "times_sent": 1
+  },
+  "4e5df4d489a601eb": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "4e776fcc0d1418ab": {
     "dismissed": null,
@@ -2421,6 +2814,20 @@
         "summary": "A project for training a 22KiB transformer in 13 seconds, inspired by minGPT, requiring CUDA 13.4 and a Windows-only build script."
       }
     },
+    "times_sent": 0
+  },
+  "503a006b2766af57": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "5080e499ecd1c271": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
     "times_sent": 0
   },
   "50c59a00840eee09": {
@@ -2539,6 +2946,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "55b59291bdcde5c1": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "562b714120290bd9": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
@@ -2567,6 +2981,22 @@
     "first_seen": "2026-09-19T14:58:16.912195+00:00",
     "last_score": 118,
     "ranks": {},
+    "times_sent": 0
+  },
+  "570438c02080cdf0": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Aatish Bhatia uses a playable puzzle to demonstrate how limited training data leads LLMs to be confidently wrong at the jagged boundary of their accuracy."
+      }
+    },
     "times_sent": 0
   },
   "571ff77c20a531cb": {
@@ -2652,7 +3082,7 @@
   "5831c667660a690e": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 886,
+    "last_score": 892,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -2665,10 +3095,61 @@
     },
     "times_sent": 0
   },
+  "58ed9c97a2be3587": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 5,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Discusses bidirectional text and the challenges of mixing right-to-left languages like Arabic, Persian, and Hebrew with left-to-right text in web content."
+      }
+    },
+    "times_sent": 0
+  },
+  "59127373ff860f25": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "592746e2dc2c081d": {
     "dismissed": null,
     "first_seen": "2026-09-30T04:08:45.319706+00:00",
     "last_score": 62,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "5957562e174a8c86": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "59ace04c551b77a9": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "5a20474e7b0de6cc": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "5a517161a9c7f0e3": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -2686,6 +3167,20 @@
     "ranks": {},
     "times_sent": 1
   },
+  "5b4d00210288a9f5": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "5b88557199a26697": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "5be41d31baf99ed3": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -2700,10 +3195,40 @@
     "ranks": {},
     "times_sent": 1
   },
+  "5c39cbd1bec4aace": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A Pudding visualization by Alvin Chang that maps people's beliefs in an afterlife by age and response using a scrollable dot plot with music and narration."
+      }
+    },
+    "times_sent": 0
+  },
+  "5c9d13f97faabce4": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "5cc25c4929de125e": {
     "dismissed": null,
     "first_seen": "2026-09-23T22:31:50.850872+00:00",
     "last_score": 547,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "5cc3b7a825a78904": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -2713,6 +3238,20 @@
     "last_score": 233,
     "ranks": {},
     "times_sent": 1
+  },
+  "5d4f47ea25619b19": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "5d81b11e2d23aa0e": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "5d983802dffc9736": {
     "dismissed": null,
@@ -2790,6 +3329,20 @@
     "ranks": {},
     "times_sent": 1
   },
+  "5f9244ee99781805": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "5f9958012ef15de0": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "608eb672ebb7d160": {
     "dismissed": null,
     "first_seen": "2026-09-23T08:53:43.403564+00:00",
@@ -2826,6 +3379,13 @@
     "last_score": 2264,
     "ranks": {},
     "times_sent": 1
+  },
+  "61848ca210d0959f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "6256763adbf7df5f": {
     "dismissed": null,
@@ -2961,6 +3521,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "6539018313350eb5": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Explores how sibling-count() counts siblings rather than children and how the parent element can't access that count, with a children-count() proposal still in discussion."
+      }
+    },
+    "times_sent": 0
+  },
   "6563ee51c0806a24": {
     "dismissed": null,
     "first_seen": "2026-09-30T04:08:45.319706+00:00",
@@ -2982,6 +3558,22 @@
     "first_seen": "2026-09-27T19:24:46.293417+00:00",
     "last_score": 2299,
     "ranks": {},
+    "times_sent": 0
+  },
+  "65cacd3d41651ff9": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Explains the new CSS progress() function that returns a unitless 0-1 value between bounds, and how to manually replicate its normalization math with calc() while browser support grows."
+      }
+    },
     "times_sent": 0
   },
   "65df8625d18442d3": {
@@ -3013,6 +3605,13 @@
         "summary": "GitHub's new dashboard experience is now the default."
       }
     },
+    "times_sent": 0
+  },
+  "66d35dbb834cf6ec": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
     "times_sent": 0
   },
   "674262d286f369d0": {
@@ -3058,6 +3657,13 @@
     "last_score": 316,
     "ranks": {},
     "times_sent": 1
+  },
+  "6867301e644dfaff": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "68e26a102112f38b": {
     "dismissed": null,
@@ -3126,6 +3732,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "69ff4980ec42aec2": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "6a4b286a2859849a": {
     "dismissed": null,
     "first_seen": "2026-08-19T00:33:30.843388+00:00",
@@ -3133,10 +3746,31 @@
     "ranks": {},
     "times_sent": 0
   },
+  "6a79bd937fc16a1d": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "6a7d03524b07a459": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "6aab9ebe3f5136f7": {
     "dismissed": null,
     "first_seen": "2026-10-03T09:43:15.596705+00:00",
     "last_score": 1034,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "6aadb016cfb4b913": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -3161,6 +3795,29 @@
     "ranks": {},
     "times_sent": 0
   },
+  "6bf11c99f367a4fd": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "6c2646e1d5071c17": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Ahrefs piece on measuring AI search visibility when referral attribution undercounts AI's influence on signups."
+      }
+    },
+    "times_sent": 0
+  },
   "6c45c914258f8293": {
     "dismissed": null,
     "first_seen": "2026-09-13T15:13:11.174945+00:00",
@@ -3182,6 +3839,13 @@
         "summary": "A free browser game about cancelling subscriptions."
       }
     },
+    "times_sent": 0
+  },
+  "6caeb50e0e37d10e": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
     "times_sent": 0
   },
   "6caecbaec8883e4a": {
@@ -3300,6 +3964,13 @@
     "dismissed": null,
     "first_seen": "2026-09-17T15:48:05.731542+00:00",
     "last_score": 633,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "6f3cf43890177fbe": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -3591,6 +4262,20 @@
     "ranks": {},
     "times_sent": 1
   },
+  "7657c5a6d4398f7c": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "76b4f021366a08af": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "77d557ff72732488": {
     "dismissed": null,
     "first_seen": "2026-09-20T18:21:26.211129+00:00",
@@ -3675,6 +4360,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "7a712946e5f05598": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "7aa5d9ee437de50c": {
     "dismissed": null,
     "first_seen": "2026-09-23T19:17:21.992271+00:00",
@@ -3720,9 +4412,16 @@
   "7cd1fb3eb9d9482c": {
     "dismissed": null,
     "first_seen": "2026-09-29T06:46:24.490792+00:00",
-    "last_score": 6225,
+    "last_score": 6232,
     "ranks": {},
     "times_sent": 1
+  },
+  "7cd5c5f86a7292e3": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "7cd8f4c772468a6d": {
     "dismissed": null,
@@ -3752,6 +4451,22 @@
         "rubric": "080b24af813c",
         "source_score": 164,
         "summary": "An argument that every SaaS business will become a harness around a model."
+      }
+    },
+    "times_sent": 0
+  },
+  "7db9283f58ddcf64": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Ahrefs study finding AI Overviews now appear for 83% of branded searches, potentially reducing clicks to brand websites in favor of third-party sources."
       }
     },
     "times_sent": 0
@@ -3839,6 +4554,22 @@
     },
     "times_sent": 0
   },
+  "8041e45008b1328f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 5,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A research report from Ahrefs on 301 respondents' AI content creation habits, tool use, and productivity, finding 93% use AI and 69% publish more AI content than last year."
+      }
+    },
+    "times_sent": 0
+  },
   "8058eac658274967": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
@@ -3870,6 +4601,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "8184df2e21520d58": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": 100,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 100,
+        "summary": "A GitHub project for long-document search using Jev and PageIndex, tagged with rag and search."
+      }
+    },
+    "times_sent": 0
+  },
   "821f418aced5c526": {
     "dismissed": null,
     "first_seen": "2026-09-24T16:03:10.191448+00:00",
@@ -3889,6 +4636,29 @@
         "rubric": "3472af8a46e1",
         "source_score": 646,
         "summary": "Backburner lets an iPhone help a Mac run a 27B model with faster prompt reading and more context over a USB-C cable, a local inference setup."
+      }
+    },
+    "times_sent": 0
+  },
+  "837cc4715a97df6e": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "83b5297dec1e9cb2": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A monthly Smashing Magazine collection of free October and Halloween-themed desktop wallpapers in various screen resolutions."
       }
     },
     "times_sent": 0
@@ -3977,6 +4747,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "8a58908f992b26b1": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "8ae745ce13cdef63": {
     "dismissed": null,
     "first_seen": "2026-09-24T22:48:04.749226+00:00",
@@ -4045,12 +4822,26 @@
     "ranks": {},
     "times_sent": 1
   },
+  "8c0236e798872c07": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "8c2aa81a2d6a6bea": {
     "dismissed": null,
     "first_seen": "2026-09-20T15:00:58.383335+00:00",
     "last_score": 33,
     "ranks": {},
     "times_sent": 1
+  },
+  "8c536f5a983907f5": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "8caf905bf681196c": {
     "dismissed": null,
@@ -4089,12 +4880,42 @@
     "ranks": {},
     "times_sent": 1
   },
+  "8de4c4144e18ab27": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "8def1cb6f6fb0618": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "8e504dd30c75f2ce": {
     "dismissed": null,
     "first_seen": "2026-09-18T15:21:10.307708+00:00",
     "last_score": 3960,
     "ranks": {},
     "times_sent": 1
+  },
+  "8e7f3ec4d98dc29d": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "OKpalette is a browser tool that extracts a color palette from a loaded image by setting the number of colors and defining a region, with images staying on the user's computer."
+      }
+    },
+    "times_sent": 0
   },
   "8e94f98b07fe49fd": {
     "dismissed": null,
@@ -4107,6 +4928,20 @@
     "dismissed": null,
     "first_seen": "2026-09-01T18:56:44.057525+00:00",
     "last_score": 201,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "8f216ec363408e7c": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "8f41a6b4f1e1b884": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -4140,6 +4975,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "906c26c75ab30909": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A practical guide to choosing names for design tokens, HTML classes, and variables, covering how language shapes thinking and common naming pitfalls."
+      }
+    },
+    "times_sent": 0
+  },
   "917ba46d3f15f0c5": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
@@ -4160,6 +5011,13 @@
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 1192,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "93d07ded2ec1af8a": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -4223,6 +5081,29 @@
     "ranks": {},
     "times_sent": 0
   },
+  "9525633b3fb49082": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "9577abc3cff9b239": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Ahrefs piece on diagnosing AI visibility problems such as missing from conversations, losing recommendations, wrong topic associations, and inaccessible content."
+      }
+    },
+    "times_sent": 0
+  },
   "95a993d6f6d60068": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -4250,6 +5131,13 @@
     "dismissed": null,
     "first_seen": "2026-09-23T15:42:15.861111+00:00",
     "last_score": 80,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "966c961f67e46c0d": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -4339,6 +5227,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "992ae29aaf8ec30d": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "9973f8e7ebb5939a": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -4419,6 +5314,13 @@
     "dismissed": null,
     "first_seen": "2026-08-28T15:45:01.523799+00:00",
     "last_score": 78,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "9c61ed6865ce91e3": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -4533,6 +5435,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "9fc250b80444fc9a": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "a061c44f7783dde2": {
     "dismissed": null,
     "first_seen": "2026-09-13T18:24:03.258227+00:00",
@@ -4556,6 +5465,22 @@
     },
     "times_sent": 0
   },
+  "a0d0b5f6920e1fa7": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 3,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Issue No. 408 of Nathan Yau's paywalled Process newsletter about finding your way by getting lost in the data."
+      }
+    },
+    "times_sent": 0
+  },
   "a1207931485d8a73": {
     "dismissed": null,
     "first_seen": "2026-09-28T02:20:05.627542+00:00",
@@ -4570,10 +5495,40 @@
     "ranks": {},
     "times_sent": 0
   },
+  "a13bc6d255e36776": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Phosphor, a tool by Joshua Stevens built with chroma.js, fills in gaps between hex colors to produce accessible, perceptually steady gradients with color space and deficiency preview options."
+      }
+    },
+    "times_sent": 0
+  },
   "a14dc90036f4ae6e": {
     "dismissed": null,
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
     "last_score": 466,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "a1fbb11723ca6f2e": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "a25a3559cc196e05": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -4658,6 +5613,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "a65d74639a9bd18e": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "a698b79619728662": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -4678,6 +5640,13 @@
     "dismissed": "expired",
     "first_seen": "2026-09-29T14:38:27.657579+00:00",
     "last_score": 889,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "a7207514cf5789f2": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -4732,6 +5701,13 @@
     },
     "times_sent": 0
   },
+  "a88e24112a42eec8": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "a8f075e6856ea052": {
     "dismissed": null,
     "first_seen": "2026-08-22T16:10:36.164469+00:00",
@@ -4769,6 +5745,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "aa069eb43cab4d11": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "aa340e4c033e8463": {
     "dismissed": null,
     "first_seen": "2026-09-23T08:53:43.403564+00:00",
@@ -4782,6 +5765,13 @@
     "last_score": 381,
     "ranks": {},
     "times_sent": 1
+  },
+  "aad1d6e0114d0476": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "ab03af192490887b": {
     "dismissed": null,
@@ -4806,6 +5796,29 @@
     "ranks": {},
     "times_sent": 0
   },
+  "ab579cab3a9f8945": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "ab74b9e1c6a7f159": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 3,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A Skift Global Forum report quoting Airbnb CEO Brian Chesky calling AI both 'an existential risk' and 'the best thing to ever happen' to his company."
+      }
+    },
+    "times_sent": 0
+  },
   "ab8ae868ff007297": {
     "dismissed": null,
     "first_seen": "2026-08-15T16:10:52.886374+00:00",
@@ -4816,7 +5829,7 @@
   "abd0a7583c198356": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 62,
+    "last_score": 65,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4917,10 +5930,17 @@
     "ranks": {},
     "times_sent": 1
   },
+  "ae93fb765ce454ff": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "af6fb58376a65c87": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 77,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4959,7 +5979,7 @@
   "afdecd136fba8911": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 45,
+    "last_score": 48,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4979,6 +5999,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "b008f772ace718d6": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "b02a83309c90edb8": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -4995,6 +6022,13 @@
     },
     "times_sent": 0
   },
+  "b0c0fc02b1f86089": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "b0c6399c6bbfa9ca": {
     "dismissed": null,
     "first_seen": "2026-09-07T16:46:19.412515+00:00",
@@ -5005,7 +6039,7 @@
   "b0ff7ff167326d54": {
     "dismissed": null,
     "first_seen": "2026-10-05T04:14:19.891077+00:00",
-    "last_score": 3181,
+    "last_score": 3191,
     "ranks": {},
     "times_sent": 0
   },
@@ -5060,6 +6094,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "b39584fdea8352ff": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "b3e7800c98d0d828": {
     "dismissed": null,
     "first_seen": "2026-09-17T02:09:45.875907+00:00",
@@ -5078,6 +6119,13 @@
     "dismissed": null,
     "first_seen": "2026-09-27T22:38:48.330387+00:00",
     "last_score": 269,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "b52205299b17c7e3": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -5123,6 +6171,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "b615dc09013e4987": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "b619101bd54770f5": {
     "dismissed": null,
     "first_seen": "2026-09-18T03:43:43.729747+00:00",
@@ -5152,6 +6207,20 @@
     "last_score": 483,
     "ranks": {},
     "times_sent": 1
+  },
+  "b669b50578351e6f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "b6a3dadc05fae9fc": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "b6d8a562a29fa342": {
     "dismissed": null,
@@ -5304,6 +6373,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "b9ebb45a53c36397": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "b9ef69b6ceb72779": {
     "dismissed": null,
     "first_seen": "2026-09-10T08:28:12.519648+00:00",
@@ -5348,10 +6424,17 @@
     "ranks": {},
     "times_sent": 0
   },
+  "bb679d3a9016d345": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "bb80d48523c945ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 60,
+    "last_score": 77,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5387,11 +6470,41 @@
     "ranks": {},
     "times_sent": 1
   },
+  "bc571d12f546f3f3": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "bc6b312716924890": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "bc95fcb81271a1b9": {
     "dismissed": null,
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
     "last_score": 191,
     "ranks": {},
+    "times_sent": 0
+  },
+  "bd41449f24c71495": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 3,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "In a NYT Opinion piece, Giorgia Lupi argues that the best ideas come from getting lost in a problem rather than letting AI skip to the answer."
+      }
+    },
     "times_sent": 0
   },
   "bd51b467a6b479d0": {
@@ -5430,6 +6543,13 @@
     "last_score": 544,
     "ranks": {},
     "times_sent": 1
+  },
+  "be2e5eae3c74d2c5": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "bef31792e452dc24": {
     "dismissed": null,
@@ -5536,7 +6656,7 @@
   "c192475c2a029669": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 187,
+    "last_score": 188,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -5606,6 +6726,13 @@
     "dismissed": null,
     "first_seen": "2026-08-28T15:45:01.523799+00:00",
     "last_score": 626,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "c33b9fc5569fab9a": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -5750,6 +6877,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "c728b3a6294ad475": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "c7e3edff3242b059": {
     "dismissed": null,
     "first_seen": "2026-09-19T08:20:59.907364+00:00",
@@ -5781,7 +6915,7 @@
   "c8c85d1cadaf33e0": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 291,
+    "last_score": 293,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5800,6 +6934,29 @@
     "last_score": 335,
     "ranks": {},
     "times_sent": 1
+  },
+  "c906b41a139a5f62": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A Stripe article arguing that token billing is useful infrastructure but a bad customer-facing pricing model, since invoices should define delivered value rather than cost."
+      }
+    },
+    "times_sent": 0
+  },
+  "c95cbd85f445fdeb": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "c9ebc6e443b6871f": {
     "dismissed": null,
@@ -5838,6 +6995,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "cbbf919959b44ced": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "cbceafd8fc0a50ae": {
     "dismissed": null,
     "first_seen": "2026-10-04T04:28:57.570485+00:00",
@@ -5848,7 +7012,7 @@
   "cc0ef86accf8db5b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 156,
+    "last_score": 157,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5881,6 +7045,13 @@
     "last_score": 46,
     "ranks": {},
     "times_sent": 1
+  },
+  "ccce5c4b0f21d4b6": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "cce0dfb96fd525d5": {
     "dismissed": null,
@@ -5917,12 +7088,35 @@
     "ranks": {},
     "times_sent": 1
   },
+  "cd70c104ce9ee7cf": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "cd7b1f853dec1333": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 647,
     "ranks": {},
     "times_sent": 1
+  },
+  "cdc7755a3d68093f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Researchers at the University of Toronto's School of Cities build interactive mapping and visualization tools to measure potential localized impacts of U.S. tariffs on jobs and businesses across Canadian cities."
+      }
+    },
+    "times_sent": 0
   },
   "ce4292656cc975bc": {
     "dismissed": null,
@@ -5970,6 +7164,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "cfbdf059a080aa7f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "cfdd20dacb8ecd61": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -5981,6 +7182,20 @@
     "dismissed": null,
     "first_seen": "2026-08-23T16:11:41.117217+00:00",
     "last_score": 473,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "d0832f9330ec4df8": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "d0ad885894e88ca2": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -6010,7 +7225,7 @@
   "d0da800340042252": {
     "dismissed": null,
     "first_seen": "2026-10-04T13:42:30.838785+00:00",
-    "last_score": 1825,
+    "last_score": 1833,
     "ranks": {},
     "times_sent": 0
   },
@@ -6106,6 +7321,13 @@
     },
     "times_sent": 0
   },
+  "d3a3c479b35ac294": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "d46eac7ee8aa7230": {
     "dismissed": null,
     "first_seen": "2026-09-23T22:31:50.850872+00:00",
@@ -6129,6 +7351,22 @@
     },
     "times_sent": 0
   },
+  "d4c7741608361b4b": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A list of 35 practical ways to use Claude Code for SEO, from content briefs and Search Console analysis to internal linking and technical fixes."
+      }
+    },
+    "times_sent": 0
+  },
   "d5878edb592e55f0": {
     "dismissed": null,
     "first_seen": "2026-09-08T15:33:13.824552+00:00",
@@ -6140,6 +7378,20 @@
     "dismissed": null,
     "first_seen": "2026-09-24T16:03:10.191448+00:00",
     "last_score": 631,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "d66862a7bdca3e93": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "d722de0994c8c693": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -6197,7 +7449,7 @@
   "d88bfef8fb860939": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 1463,
+    "last_score": 1487,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6269,6 +7521,13 @@
     "ranks": {},
     "times_sent": 1
   },
+  "daa82b4679cb7dcf": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "dab27c54d8c92fb4": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
@@ -6290,6 +7549,22 @@
     "first_seen": "2026-09-25T09:09:50.571142+00:00",
     "last_score": 90,
     "ranks": {},
+    "times_sent": 0
+  },
+  "db2a8980ee991b11": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Ahrefs article citing Forrester and NielsenIQ data on AI search usage and arguing for measuring AI search ROI despite messy attribution."
+      }
+    },
     "times_sent": 0
   },
   "dbaf7f3960580783": {
@@ -6356,6 +7631,13 @@
     "last_score": 1743,
     "ranks": {},
     "times_sent": 1
+  },
+  "dd0ab4b7c6482178": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "dd19469c076fee7d": {
     "dismissed": null,
@@ -6431,11 +7713,34 @@
     "ranks": {},
     "times_sent": 0
   },
+  "e0555e3ee6651da7": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "e062ea2071079849": {
     "dismissed": null,
     "first_seen": "2026-09-19T21:52:36.261347+00:00",
     "last_score": 228,
     "ranks": {},
+    "times_sent": 0
+  },
+  "e076df8360c1d73b": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Covers how TypeScript's DOM types lag behind the evolving web platform and introduces modern-web-types as a drop-in replacement for the official DOM and WebWorker libraries."
+      }
+    },
     "times_sent": 0
   },
   "e0884a94b246efcd": {
@@ -6458,6 +7763,20 @@
     "dismissed": null,
     "first_seen": "2026-08-15T16:10:52.886374+00:00",
     "last_score": 218,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "e111be34e51f8802": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "e126386923ffcd8b": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -6599,6 +7918,13 @@
     },
     "times_sent": 0
   },
+  "e2fab1dddb37f565": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "e345e1e0e83d199b": {
     "dismissed": null,
     "first_seen": "2026-09-30T20:33:36.487127+00:00",
@@ -6660,7 +7986,7 @@
   "e6e1d2a9f0a4e91a": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 257,
+    "last_score": 265,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6673,10 +7999,31 @@
     },
     "times_sent": 0
   },
+  "e722229913162334": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "e766de53aa63e736": {
     "dismissed": null,
     "first_seen": "2026-10-01T15:07:18.725260+00:00",
     "last_score": 1026,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "e78ce9bc03faef20": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "e7be7c03ac755c4d": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -6743,6 +8090,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "ea1cd9dcce953cf0": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "ea7503cf09cfe26b": {
     "dismissed": null,
     "first_seen": "2026-09-11T18:50:08.711427+00:00",
@@ -6797,7 +8151,7 @@
   "ec4b5e65913390d0": {
     "dismissed": null,
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
-    "last_score": 105,
+    "last_score": 107,
     "ranks": {},
     "times_sent": 0
   },
@@ -6820,6 +8174,22 @@
         "rubric": "02189e2467e9",
         "source_score": 399,
         "summary": "The article is titled 'RIP, vector database'."
+      }
+    },
+    "times_sent": 0
+  },
+  "ee73f4e7395b3bf7": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A Pudding piece visualizing a room of thousands of humans wrestling with beliefs about what comes after death."
       }
     },
     "times_sent": 0
@@ -6855,7 +8225,7 @@
   "eee53d0231e76d4e": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 139,
+    "last_score": 149,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6991,6 +8361,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "f2711d1c005bbcf3": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "f2dca02215efd099": {
     "dismissed": null,
     "first_seen": "2026-09-29T20:27:49.882165+00:00",
@@ -7014,6 +8391,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "f31650760a1c6ee3": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 4,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Describes using Vercel's AI SDK and AI Gateway with Cloudflare Durable Objects to make structured LLM requests in an app."
+      }
+    },
+    "times_sent": 0
+  },
   "f31a42c30415229f": {
     "dismissed": null,
     "first_seen": "2026-09-10T08:28:12.519648+00:00",
@@ -7021,10 +8414,24 @@
     "ranks": {},
     "times_sent": 0
   },
+  "f35723ea297ed0d9": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "f37dddc4211d2923": {
     "dismissed": null,
     "first_seen": "2026-08-24T20:17:06.243950+00:00",
     "last_score": 123,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "f3d759ed6d8c8025": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
     "ranks": {},
     "times_sent": 0
   },
@@ -7081,6 +8488,13 @@
     },
     "times_sent": 0
   },
+  "f581af7e51d61294": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "f5a3377364fa992c": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -7095,10 +8509,17 @@
     "ranks": {},
     "times_sent": 1
   },
+  "f6642ca652c685eb": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "f72bb50387111952": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 128,
+    "last_score": 129,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7111,6 +8532,13 @@
     },
     "times_sent": 0
   },
+  "f7335d167e73b07f": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "f74cafbb38d402aa": {
     "dismissed": null,
     "first_seen": "2026-08-30T02:07:59.736472+00:00",
@@ -7121,7 +8549,7 @@
   "f7794ae26edb3a7c": {
     "dismissed": null,
     "first_seen": "2026-10-01T04:20:51.005866+00:00",
-    "last_score": 4700,
+    "last_score": 4709,
     "ranks": {},
     "times_sent": 0
   },
@@ -7163,7 +8591,7 @@
   "f9c4bac94922d6e0": {
     "dismissed": null,
     "first_seen": "2026-10-02T04:14:08.473534+00:00",
-    "last_score": 1619,
+    "last_score": 1626,
     "ranks": {},
     "times_sent": 0
   },
@@ -7180,6 +8608,13 @@
     "last_score": 323,
     "ranks": {},
     "times_sent": 1
+  },
+  "fa0b3ac1fdf63a82": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "fa35849781166026": {
     "dismissed": null,
@@ -7225,6 +8660,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "fb333b514d18d00b": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
+  },
   "fccc7d07a058e306": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -7238,6 +8680,13 @@
     "last_score": 40,
     "ranks": {},
     "times_sent": 1
+  },
+  "fd144320d0729e99": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {},
+    "times_sent": 0
   },
   "fd9501555129fca1": {
     "dismissed": null,
@@ -7282,6 +8731,22 @@
     "last_score": 120,
     "ranks": {},
     "times_sent": 1
+  },
+  "fed4ba7ba0eea4eb": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T04:58:06.518389+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T04:58:06.518389+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A zine by Duncan Bradley collecting one-liners from data visualization people, titled 'How to Sound Smart When Talking About Charts.'"
+      }
+    },
+    "times_sent": 0
   },
   "ff48af0ae762e938": {
     "dismissed": null,

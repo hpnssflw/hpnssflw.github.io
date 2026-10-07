@@ -8,7 +8,7 @@
         "seen": 27
       },
       "rank": {
-        "over_max_items": 21
+        "over_max_items": 22
       }
     },
     "tooling": {
@@ -21,19 +21,26 @@
       }
     },
     "web-products": {
+      "date_guard": {
+        "outside_window": 127
+      },
       "dedupe": {
         "already_ranked": 9,
         "seen": 5
+      },
+      "rank": {
+        "below_relevance": 12,
+        "over_max_items": 22
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 87,
-      "in_window": 87,
+      "collected": 88,
+      "in_window": 88,
       "kept": 0,
-      "new": 21
+      "new": 22
     },
     "tooling": {
       "collected": 109,
@@ -42,126 +49,123 @@
       "new": 25
     },
     "web-products": {
-      "collected": 14,
-      "in_window": 14,
-      "kept": 0,
-      "new": 0
+      "collected": 176,
+      "in_window": 49,
+      "kept": 1,
+      "new": 35
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 67,
+  "pending_count": 68,
   "recent_events": [
     {
-      "reason": "already_ranked",
-      "title": "oil-oil/oil-ui",
+      "score": 9,
+      "source": "rss",
+      "title": "Interop 2027",
       "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140671+00:00",
-      "verdict": "drop"
+      "ts": "2026-10-07T04:58:45.864074+00:00",
+      "verdict": "kept"
     },
     {
-      "reason": "already_ranked",
-      "title": "Every SaaS business will become a harness around a model",
+      "reason": "over_max_items",
+      "title": "Helping personal agents shop more intelligently and reliably with Link",
       "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140663+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "US tells France and Germany to release diesel stocks or face US export ban",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140654+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Before pixels: Modular industrial dashboards",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140645+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "uBlock Origin Lite is back on Firefox add-ons",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140637+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Cancel Your Subscription: a free browser game",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140629+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "MicroLLM Lab \u2013 Try 7 tiny LLM's in the browser",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140620+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Show HN: Lofi Cities \u2013 Pixel-art city nights with browser-generated lofi",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140599+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "A browser-native classic Visual Basic VB6 IDE",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140588+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "GitHub's new dashboard experience now the default",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140523+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "CSS Bed: Classless CSS themes to use as starting points in web development",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140514+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "The new Firefox design is here",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140505+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "Bez: Generating a browser engine from specs and tests",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140491+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "seen",
-      "title": "Owed a billion dollars in Nvidia stock",
-      "topic": "web-products",
-      "ts": "2026-10-07T04:29:57.140360+00:00",
+      "ts": "2026-10-07T04:58:45.864059+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
-      "title": "Deser: Rethinking Rust Serialization",
-      "topic": "tooling",
-      "ts": "2026-10-07T04:29:50.607426+00:00",
+      "title": "Extract color palettes from images",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.864051+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Sound smart about charts",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.864040+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.864032+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Claude Code for SEO: 35 Use Cases",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.864024+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "AI Visibility Data Paralysis: How to Get Unstuck",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.864016+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.864008+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Why I tried to kill token billing (and why we kept it)",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.863999+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Who believes in an afterlife?",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.863991+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "\u00c0 sa place: When Beauty Hides the Message",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.863983+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Tiny Charts: Data Viz as Postage Stamp Art",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.863975+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Color gradients that are accessible and perceptually steady",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.863967+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Beliefs in life after death",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.863959+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "AI Overviews Currently Appear for 83% of Branded Searches",
+      "topic": "web-products",
+      "ts": "2026-10-07T04:58:45.863950+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-10-01T15:07:18.725260+00:00"
-    },
     {
       "kept": 7,
       "ts": "2026-10-02T04:14:08.473534+00:00"
@@ -253,12 +257,16 @@
     {
       "kept": 0,
       "ts": "2026-10-07T04:29:34.247172+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-07T04:58:06.518389+00:00"
     }
   ],
-  "streak": 245,
+  "streak": 246,
   "topics": [
     {
-      "collected": 87,
+      "collected": 88,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
@@ -270,11 +278,11 @@
       "slug": "tooling"
     },
     {
-      "collected": 14,
-      "kept": 0,
+      "collected": 176,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-07T04:29:34.247172+00:00"
+  "updated_at": "2026-10-07T04:58:06.518389+00:00"
 }

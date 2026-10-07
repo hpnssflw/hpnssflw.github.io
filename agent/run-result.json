@@ -208,7 +208,74 @@
         "max_items_per_day": 3,
         "min_relevance": 6,
         "name": "Web Products",
-        "rss": [],
+        "rss": [
+          {
+            "full_text": false,
+            "id": "frontend-masters",
+            "name": "Frontend Masters Blog",
+            "url": "https://frontendmasters.com/blog/feed/"
+          },
+          {
+            "full_text": false,
+            "id": "smashing",
+            "name": "Smashing Magazine",
+            "url": "https://www.smashingmagazine.com/feed/"
+          },
+          {
+            "full_text": false,
+            "id": "webkit",
+            "name": "WebKit blog",
+            "url": "https://webkit.org/feed/"
+          },
+          {
+            "full_text": false,
+            "id": "bram-us",
+            "name": "Bram.us",
+            "url": "https://www.bram.us/feed/"
+          },
+          {
+            "full_text": false,
+            "id": "debugbear",
+            "name": "DebugBear",
+            "url": "https://www.debugbear.com/blog/rss.xml"
+          },
+          {
+            "full_text": false,
+            "id": "ahrefs",
+            "name": "Ahrefs blog",
+            "url": "https://ahrefs.com/blog/feed/"
+          },
+          {
+            "full_text": false,
+            "id": "google-search",
+            "name": "Google Search Central",
+            "url": "https://developers.google.com/static/search/blog/feed.xml"
+          },
+          {
+            "full_text": false,
+            "id": "flowingdata",
+            "name": "FlowingData",
+            "url": "https://flowingdata.com/feed"
+          },
+          {
+            "full_text": false,
+            "id": "nightingale",
+            "name": "Nightingale",
+            "url": "https://nightingaledvs.com/feed/"
+          },
+          {
+            "full_text": false,
+            "id": "pudding",
+            "name": "The Pudding",
+            "url": "https://pudding.cool/feed/index.xml"
+          },
+          {
+            "full_text": false,
+            "id": "stripe",
+            "name": "Stripe blog",
+            "url": "https://stripe.com/blog/feed.rss"
+          }
+        ],
         "rubric_hash": "080b24af813c",
         "slug": "web-products",
         "sources": {
@@ -245,9 +312,9 @@
     "by_topic": {
       "ai-engineering": 16,
       "tooling": 40,
-      "web-products": 11
+      "web-products": 12
     },
-    "count": 67,
+    "count": 68,
     "items": [
       {
         "decision": null,
@@ -985,12 +1052,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://github.blog/changelog/2026-10-01-new-dashboard-experience-now-the-default/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-07T04:58:06.518389+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "A look at the annual Interop effort for 2027, listing proposed web platform features like gamut mapping, border-shape, and interest invokers, with a decision due February 4, 2027.",
+        "title": "Interop 2027",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/interop-2027/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-07T04:29:34.247172+00:00",
-    "id": "2026-10-07T0429Z",
+    "at": "2026-10-07T04:58:06.518389+00:00",
+    "id": "2026-10-07T0458Z",
     "mode": "real",
     "offline": false
   },
@@ -1001,8 +1079,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 87,
-          "out": 87
+          "in": 88,
+          "out": 88
         },
         "tooling": {
           "drops": {},
@@ -1011,8 +1089,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 14,
-          "out": 14
+          "in": 176,
+          "out": 176
         }
       },
       "stage": "collect"
@@ -1022,8 +1100,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 87,
-          "out": 87
+          "in": 88,
+          "out": 88
         },
         "tooling": {
           "drops": {},
@@ -1031,9 +1109,11 @@
           "out": 109
         },
         "web-products": {
-          "drops": {},
-          "in": 14,
-          "out": 14
+          "drops": {
+            "outside_window": 127
+          },
+          "in": 176,
+          "out": 49
         }
       },
       "stage": "window"
@@ -1045,8 +1125,8 @@
           "drops": {
             "seen": 27
           },
-          "in": 87,
-          "out": 60
+          "in": 88,
+          "out": 61
         },
         "tooling": {
           "drops": {
@@ -1059,8 +1139,8 @@
           "drops": {
             "seen": 5
           },
-          "in": 14,
-          "out": 9
+          "in": 49,
+          "out": 44
         }
       },
       "stage": "dedupe"
@@ -1072,8 +1152,8 @@
           "drops": {
             "already_ranked": 39
           },
-          "in": 60,
-          "out": 21
+          "in": 61,
+          "out": 22
         },
         "tooling": {
           "drops": {
@@ -1086,8 +1166,8 @@
           "drops": {
             "already_ranked": 9
           },
-          "in": 9,
-          "out": 0
+          "in": 44,
+          "out": 35
         }
       },
       "stage": "cache"
@@ -1097,8 +1177,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "out": 1
         },
         "tooling": {
           "drops": {},
@@ -1107,8 +1187,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 35,
+          "out": 35
         }
       },
       "stage": "enrich"
@@ -1118,8 +1198,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 21,
-          "out": 21
+          "in": 22,
+          "out": 22
         },
         "tooling": {
           "drops": {},
@@ -1127,9 +1207,11 @@
           "out": 25
         },
         "web-products": {
-          "drops": {},
-          "in": 0,
-          "out": 0
+          "drops": {
+            "below_relevance": 12
+          },
+          "in": 35,
+          "out": 23
         }
       },
       "stage": "rank"
@@ -1139,9 +1221,9 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 21
+            "over_max_items": 22
           },
-          "in": 21,
+          "in": 22,
           "out": 0
         },
         "tooling": {
@@ -1152,9 +1234,11 @@
           "out": 0
         },
         "web-products": {
-          "drops": {},
-          "in": 0,
-          "out": 0
+          "drops": {
+            "over_max_items": 22
+          },
+          "in": 23,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1174,8 +1258,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 11
+          "in": 1,
+          "out": 12
         }
       },
       "stage": "queue"
