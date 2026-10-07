@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room) and content engine A shipped.**
+**Status: sub-projects #1-#6, #8 (control room) and content engine A shipped; D's push 1 committed, awaiting go-ahead to push.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -669,7 +669,8 @@ infrastructure.
   Deferred: M1 (`isAgentStatus` doesn't validate dates — a malformed date
   would crash the route), M2 (`isAgentStatus` is shared, so a bad
   `drops`/`failures` would blank the home teaser and agent widget too —
-  consider a softer guard before sub-project D), M4 (the queue could
+  consider a softer guard before sub-project D; M1 and M2 fixed in D,
+  Task 1), M4 (the queue could
   refuse non-http(s) item URLs), plus the remaining task-review minors.
   Later: editing config from the page (a repo the agent only reads, like
   the inbox); `/researcher/agent/`'s countdown still uses
@@ -717,6 +718,30 @@ infrastructure.
   `config.py`, which doesn't read `rss` yet). #8's `status.json`
   `drops`/`failures` checks are ported into
   `agent/tests/test_status_export.py` (131 pytest tests).
+- **Content engine, sub-project D (preset switcher): push 1 shipped.**
+  Spec: `docs/superpowers/specs/2026-10-06-preset-switcher-design.md`.
+  Plan: `docs/superpowers/plans/2026-10-06-preset-switcher.md` (Tasks
+  1-7 are push 1; push 2, the demo section, is Tasks 8-10 and is next).
+  Push 1 contains: a soft `status.json` guard (`parseAgentStatus`; #8's
+  M1 and M2 fixed); Tony is a self-contained preset in
+  `agent/presets/tony.yaml`, with a `data: {default_dir, status_json}`
+  section replacing `legacy`; `run-result.json` schema 2, now published
+  to `agent-data` by `agent-run.yml`; `agent-run.yml` gained a
+  `concurrency: agent-run` group (a manual dispatch can't overlap a
+  scheduled run); the control room reads its config and rail from
+  `run-result.json` client-side (`lib/run-result.ts`,
+  `lib/config-view.ts`, `lib/control-room-text.ts` en/ru,
+  `lib/pipeline-stages.ts`), and only the workflow's cron line is read
+  at build time (`lib/agent-schedule.ts` replaces `lib/agent-config.ts`;
+  the `yaml` dependency is dropped); legacy `agent/defaults.yaml`,
+  `agent/topics/` and their loaders are removed; the outcomes histogram
+  stays neutral while the threshold is unknown. Whole-branch review: 0
+  Critical, 1 Important (the concurrency group), fixed.
+  **Revert push 1 as a unit:** reverting only the site commits brings
+  back `lib/agent-config.ts`, which reads the deleted
+  `agent/defaults.yaml`, and breaks the build.
+  Next: push 2 (demo section, Tasks 8-10); #7 (Web Products RSS) is now
+  a `rss:` list in `agent/presets/tony.yaml`, no site change.
 
 ### How to resume in a new session
 
@@ -781,8 +806,12 @@ room) is shipped and live (2026-10-06); its deferred review items (M1, M2,
 M4) and "Later" list are in its bullet above. Later candidates: a Web
 Products source (#7), a Telegram DM when items await review, summary
 editing. Content engine sub-project A is shipped and live (2026-10-06,
-`bed2bb7`); next in that line are B, C, D — each needs its own
-brainstorm → spec → plan (see its bullet above and
+`bed2bb7`); sub-project D's push 1 (Tony on `run-result.json`, legacy
+files removed) is committed and awaiting Artem's go-ahead to push — next
+is the regression-check/live-check in Task 7, then push 2 (demo section,
+Tasks 8-10) from
+`docs/superpowers/plans/2026-10-06-preset-switcher.md`. B and C each
+need their own brainstorm → spec → plan (see the A bullet above and
 `docs/tony-scraponi-roadmap.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
