@@ -11,6 +11,7 @@ from agent.dedupe import StateEntry
 from agent.pending import PendingQueue
 from agent.preset import Preset
 from agent.run_result import Tally
+from agent.stories import StoryStore
 
 
 @dataclass
@@ -32,3 +33,5 @@ class RunContext:
     writer: Any  # events.EventWriter or events.MemoryWriter
     tally: Tally
     seen_urls: set[str] = field(default_factory=set)  # every URL collected this run
+    stories: StoryStore | None = None  # presets with `stories:` only
+    preview: bool = False  # --preview: no facts calls, nothing saved

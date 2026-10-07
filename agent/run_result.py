@@ -37,17 +37,28 @@ STAGES = (
     ("deliver", "delivery"),
 )
 RUN_WIDE_STAGES = ("format", "deliver")  # one digest per run: scope "*" only
+STORY_STAGES = {"rank": ("group", "processing"), "cap": ("facts", "processing")}  # each comes right after its key
+
+
+def stage_order(stories: bool) -> tuple[tuple[str, str], ...]:
+    order: list[tuple[str, str]] = []
+    for stage in STAGES:
+        order.append(stage)
+        if stories and stage[0] in STORY_STAGES:
+            order.append(STORY_STAGES[stage[0]])
+    return tuple(order)
 
 
 class Tally:
     """Counts per (stage, scope) where each stage runs: items in and out,
     drops by reason, notes. Failures carry the exception's class name only."""
 
-    def __init__(self, topic_slugs: list[str], has_feeds: bool) -> None:
+    def __init__(self, topic_slugs: list[str], has_feeds: bool, stories: bool = False) -> None:
         topic_scopes = [*topic_slugs, *([FEED_SCOPE] if has_feeds else [])]
+        self._order = stage_order(stories)
         self._stages: dict[str, dict[str, dict]] = {
             stage: {scope: _empty() for scope in ([FEED_SCOPE] if stage in RUN_WIDE_STAGES else topic_scopes)}
-            for stage, _ in STAGES
+            for stage, _ in self._order
         }
         self.failures: list[dict] = []
 
@@ -71,7 +82,7 @@ class Tally:
         self.failures.append({"stage": stage, "scope": scope, "source": source, "error_type": type(exc).__name__})
 
     def stages(self) -> list[dict]:
-        return [{"stage": stage, "group": group, "scopes": self._stages[stage]} for stage, group in STAGES]
+        return [{"stage": stage, "group": group, "scopes": self._stages[stage]} for stage, group in self._order]
 
     def _entry(self, stage: str, scope: str) -> dict:
         return self._stages[stage].setdefault(scope, _empty())

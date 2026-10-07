@@ -10,7 +10,7 @@ import sys
 from collections import Counter, defaultdict
 from datetime import datetime
 
-from agent import dedupe, date_guard, digest, events, inbox, pending, pipeline, status_export
+from agent import dedupe, date_guard, digest, events, inbox, pending, pipeline, status_export, stories
 from agent.approval import approval_for
 from agent.context import Adapters, RunContext
 from agent.deliver import delivery_for
@@ -57,7 +57,9 @@ def select_topics(preset: Preset, topic_filter: str | None) -> list[TopicConfig]
     return topics
 
 
-def _context(preset: Preset, paths: DataPaths, now: datetime, adapters: Adapters, writer) -> RunContext:
+def _context(
+    preset: Preset, paths: DataPaths, now: datetime, adapters: Adapters, writer, preview: bool = False
+) -> RunContext:
     return RunContext(
         preset=preset,
         state=dedupe.load_state(paths.state),
@@ -65,7 +67,9 @@ def _context(preset: Preset, paths: DataPaths, now: datetime, adapters: Adapters
         adapters=adapters,
         now=now,
         writer=writer,
-        tally=Tally([t.slug for t in preset.topics], has_feeds=bool(preset.feeds)),
+        tally=Tally([t.slug for t in preset.topics], has_feeds=bool(preset.feeds), stories=preset.stories is not None),
+        stories=stories.load_store(paths.stories) if preset.stories is not None else None,
+        preview=preview,
     )
 
 
@@ -144,6 +148,8 @@ def run_real(
 
     dedupe.save_state(paths.state, state)
     pending.save_pending(paths.pending, queue)
+    if ctx.stories is not None:
+        stories.save_store(paths.stories, ctx.stories, now, preset.stories.window_hours, preset.max_age_days)
     writer.emit("run", "complete", detail={"delivered": delivered, "pending_total": len(queue.items)})
     writer.close()
 
@@ -214,7 +220,7 @@ def run_preview(
     Writes nothing, reads no approvals, delivers nothing. Copy state.json
     and pending.json from the agent-data branch first for a realistic run."""
     topics = select_topics(preset, topic_filter)
-    ctx = _context(preset, paths, now, adapters, events.MemoryWriter())
+    ctx = _context(preset, paths, now, adapters, events.MemoryWriter(), preview=True)
     for topic in topics:
         try:
             result = pipeline.process_topic(topic, ctx)

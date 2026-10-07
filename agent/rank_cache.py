@@ -105,6 +105,11 @@ def mark_queued(state: dict[str, StateEntry], items: list[RankedItem], slug: str
         state[url_hash(entry.item.url)].ranks[slug].queued_at = now.isoformat()
 
 
+def mark_queued_url(state: dict[str, StateEntry], url: str, slug: str, now: datetime) -> None:
+    """mark_queued for a story's opener: the cap counts stories, not reports."""
+    state[url_hash(url)].ranks[slug].queued_at = now.isoformat()
+
+
 # --- classified verdicts (a preset feed's items) -------------------------
 # Stored under ranks[<assigned topic slug>] with the classify rubric, so
 # RankRecord and state.json keep their shape and the daily cap

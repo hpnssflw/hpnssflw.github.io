@@ -11,12 +11,13 @@ whether to save them."""
 
 from __future__ import annotations
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 
-from agent import date_guard, dedupe, pending, rank_cache, summarize
+from agent import date_guard, dedupe, pending, rank_cache, stories, summarize
 from agent.context import RunContext
 from agent.item import Item
+from agent.pending import PendingItem
 from agent.run_result import FEED_SCOPE
 from agent.sources import fulltext, github_trending, hn, rss
 from agent.sources.base import Drop, TopicConfig
@@ -38,12 +39,23 @@ class TopicResult:
 
 
 @dataclass
+class StoriesResult:
+    opened: list[stories.Story]
+    joined: list[tuple[stories.Story, stories.Report]]
+    same_story: list[tuple[stories.Story, stories.Report]]
+    held: list[stories.Report]
+    queued: list[stories.Story]  # queued this run
+    waiting: list[stories.Story]  # over the cap
+
+
+@dataclass
 class FeedResult:
     kept: dict[str, list[RankedItem]]  # topic slug -> queued this run
     over_cap: dict[str, list[RankedItem]]
     below: list[RankedItem]  # fresh, below their topic's min_relevance, or failed
     off_topic: list[RankedItem]  # fresh, no topic fits
     cached_below: list[Drop]  # already_ranked
+    stories: StoriesResult | None = None  # presets with `stories:`; kept/over_cap stay empty then
 
 
 def _collect_source(ctx: RunContext, scope: str, event_topic: str | None, source_id: str, fetch) -> tuple[list[Item], int]:
@@ -234,6 +246,9 @@ def process_feeds(ctx: RunContext) -> FeedResult:
     dedupe_drops += drops
     kept, drops = pending.filter_already_pending(kept, queue)
     dedupe_drops += drops
+    if ctx.stories is not None:
+        kept, drops = stories.filter_members(kept, ctx.stories)
+        dedupe_drops += drops
     unique, urls = [], set()
     for item in kept:
         if item.url in collected_by_topics or item.url in urls:
@@ -289,6 +304,10 @@ def process_feeds(ctx: RunContext) -> FeedResult:
     for slug, entries in eligible.items():
         tally.assign(slug, len(entries))
 
+    if ctx.stories is not None:
+        return FeedResult(
+            kept={}, over_cap={}, below=below, off_topic=off_topic, cached_below=cached_below, stories=_process_stories(ctx, eligible)
+        )
     kept_by_topic: dict[str, list[RankedItem]] = {}
     over_by_topic: dict[str, list[RankedItem]] = {}
     for topic in topics:
@@ -297,6 +316,121 @@ def process_feeds(ctx: RunContext) -> FeedResult:
     return FeedResult(
         kept=kept_by_topic, over_cap=over_by_topic, below=below, off_topic=off_topic, cached_below=cached_below
     )
+
+
+def _process_stories(ctx: RunContext, eligible: dict[str, list[RankedItem]]) -> StoriesResult:
+    """Eligible reports -> stories (join, same story, new), then the cap
+    over waiting stories. A report already in a waiting story only lets
+    that story compete again."""
+    preset, store, now = ctx.preset, ctx.stories, ctx.now
+    config = preset.stories
+    index = stories.member_index(store)
+    reports: list[stories.Report] = []
+    topic_of: dict[str, str] = {}
+    eligible_by_topic: Counter = Counter()
+    for slug, entries in eligible.items():
+        for ranked in entries:
+            eligible_by_topic[slug] += 1
+            if ranked.item.url not in index:
+                reports.append(stories.report_from(ranked))
+                topic_of[ranked.item.url] = slug
+    merge = (lambda known, entries: ctx.adapters.ranker.merge(known, entries, config.tzinfo)) if config.llm_merge else None
+    grouping = stories.group_reports(reports, topic_of, stories.matchable(store, now, config.window_hours), config, now, merge)
+    stories.apply_grouping(store, grouping)
+    for _, report in grouping.same_story:
+        # dismissed, so filter_seen drops it next run instead of grouping it again
+        dedupe.dismiss_url(ctx.state, report.url, "same_story")
+    for exc in grouping.failures:
+        ctx.writer.emit("group", "failed", detail={"error": str(exc)})
+        ctx.tally.fail("group", FEED_SCOPE, None, exc)
+    _tally_group(ctx, eligible_by_topic, grouping, topic_of)
+
+    for story in {id(s): s for s, _ in grouping.joined}.values():
+        if story.status == "queued":
+            for item in ctx.queue.items:
+                if item.url == story.key:
+                    item.score = story.score()
+    queued, waiting = _cap_stories(ctx)
+    return StoriesResult(
+        opened=grouping.opened,
+        joined=grouping.joined,
+        same_story=grouping.same_story,
+        held=grouping.held,
+        queued=queued,
+        waiting=waiting,
+    )
+
+
+def _tally_group(ctx: RunContext, eligible_by_topic: Counter, grouping: stories.Grouping, topic_of: dict[str, str]) -> None:
+    opened_by_topic = Counter(s.topic for s in grouping.opened)
+    for slug in sorted(set(eligible_by_topic) | set(opened_by_topic)):
+        drops = [
+            Drop(url=r.url, title=r.title, reason="same_story", detail={"story": story.key, "status": story.status})
+            for story, r in grouping.same_story
+            if topic_of[r.url] == slug
+        ]
+        ctx.tally.count("group", slug, eligible_by_topic[slug], opened_by_topic[slug], drops)
+        for drop in drops:
+            ctx.writer.emit_drop("group", slug, drop)
+    for slug, n in Counter(topic_of[r.url] for _, r in grouping.joined).items():
+        ctx.tally.note("group", slug, "joined", n)
+    for slug, n in Counter(topic_of[r.url] for r in grouping.held).items():
+        ctx.tally.note("group", slug, "held", n)
+    for signal in ("text", "near", "llm"):
+        if grouping.matched[signal]:
+            ctx.tally.note("group", FEED_SCOPE, f"matched_{signal}", grouping.matched[signal])
+
+
+def _cap_stories(ctx: RunContext) -> tuple[list[stories.Story], list[stories.Story]]:
+    """Per topic, waiting stories compete for what the daily cap leaves;
+    winners are queued as their opener. Joins never count."""
+    preset, store, state, now = ctx.preset, ctx.stories, ctx.state, ctx.now
+    order = stories.feed_order(preset)
+    queued: list[stories.Story] = []
+    waiting: list[stories.Story] = []
+    for topic in preset.topics:
+        candidates = sorted(
+            (s for s in store.stories.values() if s.status == "waiting" and s.topic == topic.slug),
+            key=lambda s: stories.cap_key(s, order),
+        )
+        if not candidates:
+            continue
+        queued_before = rank_cache.queued_in_last_24h(state, topic.slug, now)
+        remaining = max(0, topic.max_items_per_day - queued_before)
+        keep, over = candidates[:remaining], candidates[remaining:]
+        over_drops = [
+            Drop(
+                url=s.key,
+                title=s.opener().title,
+                reason="over_max_items",
+                detail={"score": s.score(), "queued_before": queued_before},
+            )
+            for s in over
+        ]
+        ctx.tally.count("cap", topic.slug, len(candidates), len(keep), over_drops)
+        for drop in over_drops:
+            ctx.writer.emit_drop("cap", topic.slug, drop)
+        for story in keep:
+            opener = story.opener()
+            story.status = "queued"
+            rank_cache.mark_queued_url(state, story.key, topic.slug, now)
+            ctx.queue.items.append(
+                PendingItem(
+                    url=story.key,
+                    title=opener.title,
+                    source=opener.kind,
+                    topic=topic.slug,
+                    topic_name=topic.name,
+                    summary=opener.summary,
+                    score=story.score(),
+                    pending_since=now.isoformat(),
+                )
+            )
+            ctx.writer.emit("rank", "kept", topic=topic.slug, source=opener.kind, url=story.key, title=opener.title, score=story.score())
+        ctx.tally.count("queue", topic.slug, len(keep), 0)
+        queued += keep
+        waiting += over
+    return queued, waiting
 
 
 PREVIEW_TITLE_CHARS = 90
