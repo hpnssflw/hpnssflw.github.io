@@ -35,27 +35,39 @@ def test_demo_preset_matches_its_goldens(name, tmp_path, no_network):
     assert_goldens({golden / "run1.json": first, golden / "run2.json": second, golden / "outbox.html": outbox})
 
 
-@pytest.mark.parametrize("name", ["newsroom-demo", "agro-demo"])
-def test_second_run_ranks_nothing_and_queues_nothing_new(name, tmp_path, no_network):
+@pytest.mark.parametrize(("name", "delivered"), [("newsroom-demo", 4), ("agro-demo", 3)])
+def test_second_run_ranks_nothing_and_queues_nothing_new(name, delivered, tmp_path, no_network):
     run1, run2, second_adapters, *_ = _run_twice(name, tmp_path)
     assert run1["failures"] == [] and run2["failures"] == []
     assert second_adapters.ranker.calls == 0
+    assert second_adapters.ranker.merge_calls == 0 and second_adapters.ranker.facts_calls == 0
     first_urls = {item["url"] for item in run1["queue"]["items"]}
     assert {item["url"] for item in run2["queue"]["items"]} <= first_urls
-    assert run2["delivery"]["due"] is True and run2["delivery"]["sent_items"] == 3
+    assert run2["delivery"]["due"] is True and run2["delivery"]["sent_items"] == delivered
 
 
 def test_newsroom_demo(tmp_path, no_network):
     run1, run2, *_ = _run_twice("newsroom-demo", tmp_path)
     stages = {s["stage"]: s["scopes"] for s in run1["stages"]}
     assert run1["config"]["sources"]["telegram_public"]["status"] == "coming_soon"
-    assert stages["collect"]["*"] == {"in": 21, "out": 19, "drops": {"undated": 2}}
+    assert stages["collect"]["*"] == {"in": 24, "out": 22, "drops": {"undated": 2}}
     assert stages["window"]["*"]["drops"] == {"outside_window": 2}
     assert stages["dedupe"]["*"]["drops"] == {"seen": 1}
     assert stages["enrich"]["*"]["notes"] == {"full_text": 3, "full_text_failed": 4}
     assert stages["rank"]["*"]["drops"] == {"below_relevance": 3, "off_topic": 2}
     assert run1["queue"]["by_topic"] == {"incidents": 3, "power": 3, "economy": 2}
     assert {s["stage"]: s["scopes"] for s in run2["stages"]}["review"]["incidents"]["drops"] == {"rejected": 1}
+    group = stages["group"]
+    assert group["incidents"]["out"] == 4 and group["*"]["notes"] == {"matched_text": 1, "matched_near": 1, "matched_llm": 1}
+    items = {i["url"]: i for i in run1["queue"]["items"]}
+    pipe = items["https://example-agency.ru/news/101"]["story"]
+    assert [r["source_id"] for r in pipe["reports"]] == ["agency", "city", "ministry"]
+    assert len(pipe["facts"]) == 2  # the fact citing [4] was dropped
+    assert pipe["first"] == (
+        "Первым — Информагентство (пример), 06:10; через 42 мин — Городской портал (пример); "
+        "через 1 ч 30 мин — Правительство области (пример)"
+    )
+    assert items["https://example-agency.ru/news/104"]["story"]["first"].startswith("Первым — Информагентство (пример), 05.10 15:00")
 
 
 def test_agro_demo_uses_both_scopes(tmp_path, no_network):

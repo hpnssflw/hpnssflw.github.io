@@ -1,0 +1,20 @@
+{
+  "merge": [["https://example-agency.ru/news/101", "https://example-region-gov.ru/docs/207"]],
+  "facts": [
+    {
+      "reports": ["https://example-agency.ru/news/101", "https://example-city.ru/n/308", "https://example-region-gov.ru/docs/207"],
+      "response": {"facts": [
+        {"text": "Прорыв водопровода на улице Садовой оставил без холодной воды три квартала, около четырёх тысяч человек.", "refs": [1, 2]},
+        {"text": "Подвоз питьевой воды организован; подачу обещают восстановить к вечеру 7 октября.", "refs": [1, 3]},
+        {"text": "Повреждённый участок трубы проложен в 1974 году.", "refs": [4]}
+      ]}
+    },
+    {
+      "reports": ["https://example-agency.ru/news/104", "https://example-city.ru/n/309"],
+      "response": {"facts": [
+        {"text": "Завод «Металлист» сократит 300 рабочих мест до конца года.", "refs": [1, 2]},
+        {"text": "Сокращения затронут литейный и механический цеха.", "refs": [1, 2]}
+      ]}
+    }
+  ]
+}
