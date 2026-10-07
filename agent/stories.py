@@ -377,6 +377,8 @@ def group_reports(
         if entries and len(entries) + len(listed) >= 2:
             for start in range(0, len(entries), MERGE_BATCH):
                 chunk = entries[start : start + MERGE_BATCH]
+                if len(chunk) + len(listed) < 2:
+                    continue  # nothing to merge with: no call, its report opens its own story
                 try:
                     answer = merge([known[i] for i in listed], [[reports[j] for j in members[root]] for root in chunk])
                 except Exception as exc:  # noqa: BLE001 -- a failed merge holds this chunk's lone reports for the next run

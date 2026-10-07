@@ -99,6 +99,10 @@ def test_merge_is_skipped_with_fewer_than_two_entries_or_no_new_entry():
 def test_merge_runs_in_chunks_of_thirty_new_entries():
     sizes = []
     group([report(f"https://a/{i}") for i in range(31)], merge=lambda k, e: sizes.append(len(e)) or [])
+    assert sizes == [30]  # the lone 31st entry has nothing to merge with: no call
+    sizes.clear()
+    known = story(report("https://k/1", text=OTHER))
+    group([report(f"https://a/{i}") for i in range(31)], known=[known], merge=lambda k, e: sizes.append(len(e)) or [])
     assert sizes == [30, 1]
 
 
