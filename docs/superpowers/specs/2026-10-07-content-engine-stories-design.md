@@ -441,19 +441,28 @@ In a stories preset, each queue entry renders by its story:
   - `config.stories` is optional;
   - stage names are already free strings.
 - **`lib/digest.ts`**:
-  - `digestBlocks` and `digestHtml` render the story block exactly as
+  - `digestHtml` (the Telegram HTML mirror, pinned to `outbox.html` and
+    never rendered on the page) renders the story block exactly as
     `digest.py` does: facts with `[n]` links to the reports, the `first`
-    line verbatim, the summary when there are no facts;
+    line verbatim, the summary when there are no facts. `digestBlocks`
+    carries each item's story; the demo's digest panel renders it with
+    the title and every `[n]` as plain text — the demo renders no item
+    links (its URLs are synthetic);
   - Vitest: `digestHtml` of the newsroom's approved `run1.json` items
     equals its `golden/outbox.html` byte for byte; agro's check doesn't
     change.
 - **Demo queue rows** (`DemoRoom` / `QueuePane`), for a story with two
   or more reports:
-  - a second line `3 источника · первым — Информагентство (пример)`, with
-    ru plurals from the dictionary;
-  - the facts below it, each `[n]` linking to its report;
+  - a second line `источников: 3 · первым — Информагентство (пример)`:
+    the count after a label, like every Russian count in the control
+    room, so no plural forms;
+  - the facts below it, each followed by its `[n]` markers — plain text
+    in the demo (`linkItems` false: the demo renders no item links);
+    they link to their reports (http(s) only) only where `linkItems` is
+    true;
   - `flagged` → a badge, `без фактов — проверьте источники`;
-  - `o` still opens the key URL;
+  - `o` opens the key URL only where `linkItems` is true — never in the
+    demo;
   - the sandbox approves and rejects stories like any other queue item.
 - **Rail**: when the run has a `group` stage, a stories cell sits
   between rank and cap:

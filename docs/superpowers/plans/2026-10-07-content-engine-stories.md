@@ -13,12 +13,12 @@
 ## Global Constraints
 
 - **Starts after D.** Both of D's pushes (`docs/superpowers/plans/2026-10-06-preset-switcher.md`, Tasks 7 and 10) must be on `origin/main`: `git ls-tree -r --name-only origin/main lib/digest.ts components/DemoRoom.tsx agent/presets/tony.yaml` prints all three. If not, stop — B extends D's files.
-- Work in a fresh worktree off `origin/main` (superpowers:using-git-worktrees), branch `worktree-stories`. If the spec or this plan is missing there, cherry-pick their commits from branch `worktree-admin-panel` (`git log --oneline worktree-admin-panel -- docs/superpowers/specs/2026-10-07-content-engine-stories-design.md docs/superpowers/plans/2026-10-07-content-engine-stories.md`).
+- Work in the worktree `C:\A\polozov\.claude\worktrees\engine`, branch `worktree-engine`: it is `origin/main` plus the spec and this plan (reconciled with D's shipped code), and it holds the git-ignored `.superpowers/tools/cdp.mjs` the headless checks use. Don't execute the older copies of this plan on `worktree-stories` / `worktree-admin-panel`: they predate that reconcile. In a fresh worktree off `origin/main` instead (superpowers:using-git-worktrees), cherry-pick the spec and plan commits from `worktree-engine` (`git log --oneline worktree-engine -- docs/superpowers/specs/2026-10-07-content-engine-stories-design.md docs/superpowers/plans/2026-10-07-content-engine-stories.md`) and copy `C:\A\polozov\.claude\worktrees\engine\.superpowers\tools\cdp.mjs` into its `.superpowers/tools/`.
 - Nothing reaches `main` until Task 12, after its checks **and Artem's explicit go-ahead**: every push to `main` changes the code the next scheduled agent run executes.
 - Never stage `.claude/settings.local.json`. Stage only the files a task lists.
 - Commit messages end with the trailer `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
 - **Tony and agro don't change:** Tony's goldens (`agent/tests/fixtures/tony/golden/`), the pinned rubric hashes (`ai-engineering 3472af8a46e1`, `tooling 02189e2467e9`, `web-products 080b24af813c`) and agro's goldens stay byte-identical. After every agent task: `git status --short agent/tests/fixtures/tony agent/tests/fixtures/agro-demo` prints nothing. Only Task 9 re-records goldens, and only the newsroom's.
-- `run-result.json` stays `schema_version: 2` — B only adds fields (`config.stories`, the `group`/`facts` stages, `queue.items[].story`), and only for presets with `stories:`.
+- `run-result.json` stays `schema_version: 2` — B only adds fields (`config.stories`, `config.offline.stories`, the `group`/`facts` stages, `queue.items[].story`), and only for presets with `stories:`.
 - `pending.json`, `state.json`, `decisions.json` v1 keep their formats.
 - One `temperature=` in `agent/summarize.py` (every prompt goes through `_complete`).
 - No new pip or npm dependencies. No timezone database: `stories.timezone` is a fixed offset.
@@ -42,7 +42,7 @@
 | `agent/digest.py` | 8 | `StoryBlock` rendering |
 | `agent/tests/fixtures/newsroom-demo/*` | 9 | three new reports, `stories.json`, re-recorded goldens |
 | `lib/run-result.ts`, `lib/digest.ts` (+ tests) | 10 | story fields; the digest's story block |
-| `lib/control-room-text.ts`, `lib/pipeline-stages.ts`, `lib/config-view.ts`, `components/QueuePane.tsx`, `components/DigestPanel.tsx`, `components/PipelineRail.tsx`, `components/ConfigSpine.tsx`, `components/DemoRoom.tsx`, `app/globals.css` | 11 | demo UI |
+| `lib/control-room-text.ts`, `lib/pipeline-stages.ts`, `lib/config-view.ts`, `components/QueuePane.tsx`, `components/DigestPanel.tsx`, `components/PipelineRail.tsx`, `components/ConfigSpine.tsx`, `app/globals.css` | 11 | demo UI |
 | `PROGRESS.md`, `docs/tony-scraponi-roadmap.md`, `docs/agent-plan.md` | 12 | docs |
 
 ---
@@ -58,7 +58,7 @@
 
 - [ ] **Step 1: Set up the worktree and check the baseline**
 
-Per Global Constraints: create `worktree-stories` off `origin/main`, build `agent/venv`, `npm ci`. Run `agent/venv/Scripts/python -m pytest agent/tests -q` and `npm test`. Expected: both green. Record the counts in the ledger.
+Per Global Constraints: work in `worktree-engine` (or a fresh worktree set up as described there), build `agent/venv` if it's missing, `npm ci`. Run `agent/venv/Scripts/python -m pytest agent/tests -q` and `npm test`. Expected: both green. Record the counts in the ledger.
 
 - [ ] **Step 2: Add the shared preset helper to `agent/tests/conftest.py`**
 
@@ -2363,14 +2363,13 @@ git commit -m "Write story facts and carry decisions and delivery to every repor
 
 - [ ] **Step 1: Write the failing tests**
 
-Append to `agent/tests/test_digest.py`:
+Append to `agent/tests/test_digest.py` (it already imports `PendingItem` and defines its own `_pending(title, …)` for the existing tests, so the story helper gets its own name):
 
 ```python
 from agent.digest import StoryBlock, build
-from agent.pending import PendingItem
 
 
-def _pending(url, title="Прорыв", summary="Кратко.", topic_name="Происшествия", score=8):
+def _story_item(url, title="Прорыв", summary="Кратко.", topic_name="Происшествия", score=8):
     return PendingItem(url=url, title=title, source="rss", topic="incidents", topic_name=topic_name, summary=summary, score=score, pending_since="2026-10-06T06:00:00+00:00")
 
 
@@ -2379,7 +2378,7 @@ def test_story_block_renders_facts_with_report_links_and_the_first_line():
         facts=(("Без воды три квартала.", ((1, "https://a/1"), (2, "https://c/1"))), ("Подвоз & вода.", ((3, "https://g/1"),))),
         first="Первым — Агентство, 06:10; через 42 мин — Город",
     )
-    [message] = build({"Происшествия": [_pending("https://a/1")]}, "Сводка", "ru", {"https://a/1": block})
+    [message] = build({"Происшествия": [_story_item("https://a/1")]}, "Сводка", "ru", {"https://a/1": block})
     assert message == (
         "<b>Сводка — материалов: 1</b>\n\n<b>Происшествия</b>\n"
         '• <a href="https://a/1">Прорыв</a>\n'
@@ -2391,13 +2390,16 @@ def test_story_block_renders_facts_with_report_links_and_the_first_line():
 
 def test_story_block_without_facts_shows_the_summary():
     block = StoryBlock(facts=(), first="Первым — Агентство, 06:10; через 5 мин — Город")
-    [message] = build({"T": [_pending("https://a/1")]}, "S", "ru", {"https://a/1": block})
+    [message] = build({"T": [_story_item("https://a/1")]}, "S", "ru", {"https://a/1": block})
     assert message.endswith('• <a href="https://a/1">Прорыв</a>\nКратко.\nПервым — Агентство, 06:10; через 5 мин — Город')
 
 
 def test_items_without_a_story_block_render_as_before():
-    items = {"T": [_pending("https://a/1")]}
-    assert build(items, "S", "ru", {}) == build(items, "S", "ru")
+    items = {"T": [_story_item("https://a/1")]}
+    other = {"https://other/1": StoryBlock(facts=(), first="x")}  # a block for another url: never applied here
+    assert build(items, "S", "ru", other) == build(items, "S", "ru") == [
+        '<b>S — материалов: 1</b>\n\n<b>T</b>\n• <a href="https://a/1">Прорыв</a>\nКратко.'
+    ]
 ```
 
 Append to `agent/tests/test_stories_engine.py`:
@@ -2608,15 +2610,14 @@ offline:
 </item>
 ```
 
-`feeds/region-gov.atom` — a new entry, in the file's existing Atom style (copy an existing `<entry>`'s element set; dates as `2026-10-06T04:40:00Z`):
+`feeds/region-gov.atom` — a new entry, in the file's existing Atom style (title, link, `urn:` id, `updated`, summary — no `<published>`; `updated` carries the date):
 
 ```xml
 <entry>
   <title>Об аварийном отключении водоснабжения на улице Садовой</title>
   <link href="https://example-region-gov.ru/docs/207"/>
-  <id>https://example-region-gov.ru/docs/207</id>
+  <id>urn:example-region-gov:207</id>
   <updated>2026-10-06T04:40:00Z</updated>
-  <published>2026-10-06T04:40:00Z</published>
   <summary>Министерство ЖКХ области сообщает: из-за повреждения водовода на улице Садовой временно прекращена подача воды в три квартала. Организован подвоз питьевой воды. Восстановительные работы ведёт МУП «Водоканал», срок — до вечера 7 октября.</summary>
 </entry>
 ```
@@ -2708,7 +2709,7 @@ agent/venv/Scripts/python -m pytest agent/tests -q                          # no
 git diff -- agent/tests/fixtures/newsroom-demo/golden                        # tracked files: a real diff against HEAD
 ```
 
-Review the diff — it may hold only: `config.stories` and `config.offline.stories`; the `group` and `facts` stages; collect/window counts from the three new reports; `queue.items[].story` on every newsroom item; run 2's decisions on 101 and the fourth delivered item; story blocks for 101 and 104 in `outbox.html`. Anything else changing is a regression: stop and find out why. Then confirm `git status --short agent/tests/fixtures/tony agent/tests/fixtures/agro-demo` prints nothing.
+Review the diff — it may hold only: `config.stories` and `config.offline.stories`; the `group` and `facts` stages; collect/window counts from the three new reports (both runs); run 1's dedupe/cache/enrich/rank `in`/`out` +3 and `rank["*"].assigned` from them (incidents 4→6, economy 3→4); `queue.items[].story` on every newsroom item; power's queue order, 202 before 103 in both runs (run 1 `[201, 202, 103]`, run 2 `[202, 103]`) — the story cap breaks a score tie by the earliest report (`stories.cap_key`) where `rank_cache.select` kept feed order; run 2's dedupe `in` and `seen` +3 (the story members 308, 207 and 309, dropped by `filter_members`) and its `group` counts (`in` 1 per topic: the waiting stories 306, 203 and 301 come back from the cache); run 2's decisions on 101 and the fourth delivered item; story blocks for 101 and 104 in `outbox.html`. Anything else changing is a regression: stop and find out why. Then confirm `git status --short agent/tests/fixtures/tony agent/tests/fixtures/agro-demo` prints nothing.
 
 - [ ] **Step 5: Commit**
 
@@ -2717,7 +2718,7 @@ git add agent/tests/fixtures/newsroom-demo agent/tests/test_presets_offline.py
 git commit -m "Turn stories on in the newsroom demo"
 ```
 
-`npm test`'s digest check (`lib/digest.test.ts`) now fails against the new `outbox.html` — by design; Task 10 makes it pass. Don't push between Tasks 9 and 10.
+`npm test` now fails, by design, in four files that read the newsroom goldens: `lib/digest.test.ts` (the new `outbox.html`), `lib/demo-presets.test.ts` (newsroom's run 2 sends 4), `lib/run-result.test.ts` (`rank["*"].assigned`) and `lib/pipeline-stages.test.ts` (newsroom counts +3). Task 10 fixes all four. Don't push between Tasks 9 and 10.
 
 ---
 
@@ -2725,7 +2726,7 @@ git commit -m "Turn stories on in the newsroom demo"
 
 **Files:**
 - Modify: `lib/run-result.ts`, `lib/run-result.test.ts`, `lib/digest.ts`, `lib/digest.test.ts`
-- Modify where needed: other Vitest expectations that read the newsroom goldens (e.g. `lib/pipeline-stages.test.ts`) — update numbers that the three new reports change, never weaken an assertion.
+- Modify: the other Vitest expectations Task 9's re-record broke — `lib/demo-presets.test.ts` and `lib/pipeline-stages.test.ts` (Step 4 lists the values) — update numbers that the three new reports change, never weaken an assertion.
 
 **Interfaces:**
 - Consumes: D's `lib/run-result.ts` (`QueueItem`, `RunConfig`, `parseRunResult`, helpers `rec`/`str`/`num`/`bool`/`date`/`list`/`optional`) and `lib/digest.ts` (`DigestBlocks`, `digestBlocks`, `recordedDigest`, `digestHtml`, `escapeHtml`) — read the shipped files first; if D's review renamed anything, use the shipped names.
@@ -2733,12 +2734,12 @@ git commit -m "Turn stories on in the newsroom demo"
 
 - [ ] **Step 1: Write the failing tests**
 
-`lib/run-result.test.ts` — add (reuse the file's existing golden-reading helper; shown here as `golden(slug, file)`):
+`lib/run-result.test.ts` — add `storyOf` to its `./run-result` import, then add (the file's golden helpers `tony()`, `newsroom(run)` and `agro(run)` return fresh JSON copies):
 
 ```ts
 describe("stories", () => {
   it("parses the newsroom's story fields", () => {
-    const run = parseRunResult(golden("newsroom-demo", "run1.json"))!;
+    const run = parseRunResult(newsroom(1))!;
     const pipe = run.queue.items.find((i) => i.url === "https://example-agency.ru/news/101")!;
     expect(pipe.story!.reports.map((r) => r.source_id)).toEqual(["agency", "city", "ministry"]);
     expect(pipe.story!.facts).toHaveLength(2);
@@ -2747,13 +2748,17 @@ describe("stories", () => {
   });
 
   it("leaves Tony and agro without stories", () => {
-    const agro = parseRunResult(golden("agro-demo", "run1.json"))!;
-    expect(agro.config.stories).toBeUndefined();
-    expect(agro.queue.items.every((i) => i.story === undefined)).toBe(true);
+    expect(readFileSync(join(process.cwd(), "agent", "presets", "tony.yaml"), "utf8")).not.toMatch(/^stories:/m);
+    const tonyRun = parseRunResult(tony())!;
+    expect(tonyRun.config.stories).toBeUndefined();
+    expect(tonyRun.queue.items.every((i) => i.story === undefined)).toBe(true);
+    const agroRun = parseRunResult(agro(1))!;
+    expect(agroRun.config.stories).toBeUndefined();
+    expect(agroRun.queue.items.every((i) => i.story === undefined)).toBe(true);
   });
 
   it("drops a malformed story but keeps the item", () => {
-    const raw = golden("newsroom-demo", "run1.json") as { queue: { items: Record<string, unknown>[] } };
+    const raw = newsroom(1);
     raw.queue.items[0].story = { reports: "nope" };
     const run = parseRunResult(raw)!;
     expect(run.queue.items[0].story).toBeUndefined();
@@ -2923,13 +2928,18 @@ function itemHtml(i: DigestItem): string {
 
 - [ ] **Step 4: Run all site tests and the build**
 
+First update the expectations Task 9's re-record broke (values traced from Task 9's fixtures — where the re-recorded golden says otherwise, the golden is right; find out why before changing a number):
+- `lib/demo-presets.test.ts`: `expect(demo.run2.delivery.sent_items).toBe(slug === "newsroom-demo" ? 4 : 3);`.
+- `lib/run-result.test.ts`: the newsroom's `rank` `scopes["*"].assigned` is `{ economy: 4, incidents: 6, power: 4 }`.
+- `lib/pipeline-stages.test.ts`, newsroom tables: "sums the shared feeds into all" — collect `"22"`, window `"20"`, dedupe `"19"`, cache `"19"`, rank `"14"` (lines unchanged); "shows a topic the shared feeds before sorting" — collect/window/dedupe/cache `"22"`/`"20"`/`"19"`/`"19"` (power's rank stays `"4"`); "speaks the preset's language" — `"19"` → `"22"`. (Task 11 adds the `stories` rows.)
+
 Run: `npm test`, then `npm run build`.
-Expected: PASS. Where a test that reads the newsroom goldens fails on numbers the new reports changed (collect +3, the `group` stage's presence), update the expected value to what the golden now says and note it in the commit body.
+Expected: PASS. If another test that reads the newsroom goldens fails on numbers the new reports changed, update the expected value to what the golden now says and note it in the commit body.
 
 - [ ] **Step 5: Commit**
 
 ```bash
-git add lib/run-result.ts lib/run-result.test.ts lib/digest.ts lib/digest.test.ts
+git add lib/run-result.ts lib/run-result.test.ts lib/digest.ts lib/digest.test.ts lib/demo-presets.test.ts lib/pipeline-stages.test.ts
 git add <any other updated *.test.ts>
 git commit -m "Read stories from run-result.json and mirror the story block"
 ```
@@ -2939,7 +2949,7 @@ git commit -m "Read stories from run-result.json and mirror the story block"
 ### Task 11: Site — stories in the demo
 
 **Files:**
-- Modify: `lib/control-room-text.ts` (+ its test if it lists keys), `lib/pipeline-stages.ts` (+ test), `lib/config-view.ts` (+ test), `components/PipelineRail.tsx`, `components/ConfigSpine.tsx`, `components/QueuePane.tsx`, `components/DigestPanel.tsx`, `components/DemoRoom.tsx`, `app/globals.css`
+- Modify: `lib/control-room-text.ts` (+ its test), `lib/pipeline-stages.ts` (+ test), `lib/config-view.ts` (+ test), `components/PipelineRail.tsx`, `components/ConfigSpine.tsx`, `components/QueuePane.tsx`, `components/DigestPanel.tsx`, `app/globals.css`
 
 **Interfaces:**
 - Consumes: Task 10's `storyOf`, `QueueStory`, `StoriesConfig`; D's components (read the shipped files first).
@@ -2947,27 +2957,40 @@ git commit -m "Read stories from run-result.json and mirror the story block"
 
 - [ ] **Step 1: Write the failing tests**
 
-`lib/pipeline-stages.test.ts` — add:
+`lib/pipeline-stages.test.ts` — add (it uses the file's module constants `tony`, `newsroom1`, `NONE` and `en`):
 
 ```ts
 it("shows a stories cell only for runs with a group stage", () => {
-  const newsroom = parseRunResult(golden("newsroom-demo", "run1.json"))!;
-  const tony = parseRunResult(golden("tony", "real/run-result.json"))!; // the file's existing Tony golden path
-  const keys = (r: RunResult) => buildStages(r, { queue: null, decisions: null }, "all", TEXT.en.rail).map((s) => s.key);
-  expect(keys(newsroom)).toEqual(["collect", "window", "dedupe", "cache", "rank", "stories", "cap", "queue", "review", "deliver"]);
+  const keys = (r: RunResult) => buildStages(r, NONE, "all", en).map((s) => s.key);
+  expect(keys(newsroom1)).toEqual(["collect", "window", "dedupe", "cache", "rank", "stories", "cap", "queue", "review", "deliver"]);
   expect(keys(tony)).not.toContain("stories");
-  const cell = buildStages(newsroom, { queue: null, decisions: null }, "all", TEXT.ru.rail).find((s) => s.key === "stories")!;
+  const cell = buildStages(newsroom1, NONE, "all", TEXT.ru.rail).find((s) => s.key === "stories")!;
   expect(cell.value).toBe("11"); // stories formed in run 1: incidents 4, power 4, economy 3
 });
 ```
 
 (11 = the newsroom `run1.json`'s `group` `out` summed over its topics: incidents 101+308+207, 102, 107, 306; power 103, 201, 202, 301; economy 104+309, 204, 203. If the golden says otherwise, the golden is right — find out why before changing the number.)
 
-`lib/config-view.test.ts` — add: `configView(newsroomRun1.config).stories` equals `{ windowHours: 24, timezone: "+03:00", nearText: 0.6, llmMerge: true, maxFacts: 3 }`, and agro's is `null`.
+and update the three existing tests the stories cell breaks (Tony keeps nine cells while `STAGE_KEYS` has ten; the newsroom tables gain a row):
+- "returns the nine stages in order": `expect(buildStages(tony, NONE, "all", en).map((s) => s.key)).toEqual(railKeys(tony));` (add `railKeys` to the `./pipeline-stages` import).
+- "sums the shared feeds into all": add `stories: ["11", "+0 joined · −0 same story · 2 with facts · 0 flagged"]` to the table.
+- "shows a topic the shared feeds before sorting": add `stories: ["4", "+0 joined · −0 same story"]` to the table.
+
+(Rows traced from Tasks 6–7's code: run 1 opens every story, so nothing joins a known one; only 101's and 104's stories get facts. Take the final values from the re-recorded golden.)
+
+`lib/config-view.test.ts` — add: `configView(run("newsroom-demo", "golden", "run1.json").config).stories` equals `{ windowHours: 24, timezone: "+03:00", nearText: 0.6, llmMerge: true, maxFacts: 3 }`, and `configView(run("agro-demo", "golden", "run1.json").config).stories` is `null`.
+
+`lib/control-room-text.test.ts` — in "puts Russian numbers after a label so they never need a plural form", add:
+
+```ts
+    expect(TEXT.ru.queue.sources(3)).toBe("источников: 3");
+    expect(TEXT.ru.rail.joined(2)).toBe("в сюжеты: +2");
+    expect(TEXT.ru.rail.withFacts(1)).toBe("с фактами: 1");
+```
 
 - [ ] **Step 2: Run them to see them fail**
 
-Run: `npx vitest run lib/pipeline-stages.test.ts lib/config-view.test.ts`
+Run: `npx vitest run lib/pipeline-stages.test.ts lib/config-view.test.ts lib/control-room-text.test.ts`
 Expected: FAIL — no `stories` key.
 
 - [ ] **Step 3: Implement**
@@ -2978,14 +3001,14 @@ Expected: FAIL — no `stories` key.
   stages: { /* … */ stories: "stories" },          // ru: "сюжеты"
   rail: {
     /* … */
-    joined: (n: number) => `+${n} joined`,          // ru: (n) => `+${n} в сюжеты`
+    joined: (n: number) => `+${n} joined`,          // ru: (n) => `в сюжеты: +${n}`
     sameStory: "same story",                         // ru: "тот же сюжет"
     withFacts: (n: number) => `${n} with facts`,     // ru: (n) => `с фактами: ${n}`
     flagged: (n: number) => `${n} flagged`,          // ru: (n) => `без фактов: ${n}`
   },
   queue: {
     /* … */
-    sources: (n: number) => `${n} sources`,          // ru: см. ruSources ниже
+    sources: (n: number) => `${n} source${n === 1 ? "" : "s"}`, // ru: (n) => `источников: ${n}`
     firstBy: (name: string) => `first: ${name}`,     // ru: (name) => `первым — ${name}`
     flagged: "no facts — check the sources",         // ru: "без фактов — проверьте источники"
   },
@@ -2997,16 +3020,7 @@ Expected: FAIL — no `stories` key.
   },
 ```
 
-with the Russian plural:
-
-```ts
-/** 1 источник, 2–4 источника, 5+ источников (11–14 → источников). */
-function ruSources(n: number): string {
-  const tens = n % 100, ones = n % 10;
-  const word = tens >= 11 && tens <= 14 ? "источников" : ones === 1 ? "источник" : ones >= 2 && ones <= 4 ? "источника" : "источников";
-  return `${n} ${word}`;
-}
-```
+Russian counts follow d6e5901's rule (pinned by `lib/control-room-text.test.ts`): the number comes after a label (`источников: 3`, `в сюжеты: +2`, like `полный текст: +21`), so no plural forms and no plural helper. English plurals use the file's inline `=== 1` ternary, as `rail.sent` does.
 
 `lib/pipeline-stages.ts`:
 - `STAGE_KEYS = ["collect", "window", "dedupe", "cache", "rank", "stories", "cap", "queue", "review", "deliver"] as const;`
@@ -3057,9 +3071,16 @@ export function railKeys(result: RunResult | null): StageKey[] {
           {story.facts.map((fact) => (
             <li key={fact.text}>
               {fact.text}{" "}
-              {fact.refs.map((n) => (
-                <a key={n} href={safeHref(urlOf.get(n))} target="_blank" rel="noreferrer">[{n}]</a>
-              ))}
+              {fact.refs.map((n) => {
+                const href = linkItems ? safeHref(urlOf.get(n) ?? "") : null;
+                return href ? (
+                  <a key={n} href={href} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>
+                    [{n}]
+                  </a>
+                ) : (
+                  <span key={n}>[{n}]</span>
+                );
+              })}
             </li>
           ))}
         </ol>
@@ -3069,11 +3090,11 @@ export function railKeys(result: RunResult | null): StageKey[] {
 })()}
 ```
 
-(`safeHref` = whatever the file already uses to keep links http(s)-only — #8's M4 fix; reuse it, don't add a new one.)
+(Import `storyOf` from `@/lib/run-result`. `safeHref` (`string → string | null`) is the http(s) guard the file already imports from `@/lib/pending-queue` — reuse it, don't add a new one. `[n]` links only when `linkItems` is true; the demo, the only place stories render, passes `linkItems={false}` (its URLs are synthetic), so there every `[n]` is plain text, like the row titles.)
 
-`components/DigestPanel.tsx` — render a story item like `itemHtml`: title link, then facts with `[n]` links (or the summary), then `story.first`, using `storyOf(item)`.
+`components/DigestPanel.tsx` — for `storyOf(item)`: keep the title as `<span className="cr-digest-title">`; below it each fact's text followed by its `[n]` markers as plain text (no `<a>` — the demo's URLs are synthetic), or the summary when there are no facts; then `story.first`.
 
-`components/DemoRoom.tsx` — type `items` as `QueueItem[]` (from `lib/run-result.ts`) so the digest gets each item's `story`; nothing else changes.
+(`components/DemoRoom.tsx` needs no change: the digest is built from `run1.queue.items`, already `QueueItem[]`, so its items keep their `story`; the queue rows are typed `PendingItem[]` but carry `story` at run time, which is what `storyOf` reads.)
 
 `app/globals.css` — after the demo block: `.cr-story` (small muted text under the title), `.cr-facts` (compact list, links in the accent colour), `.cr-flag` (the warning colour the control room already uses for failures).
 
@@ -3087,12 +3108,12 @@ node --experimental-websocket .superpowers/tools/cdp.mjs http://localhost:<port>
 node --experimental-websocket .superpowers/tools/cdp.mjs http://localhost:<port>/researcher/queue/ <scratchpad>/tony-1440.png 1440 900 <scratchpad>/noop.js
 ```
 
-Expected: the newsroom page shows the stories cell between rank and cap, the pipe-burst row with "3 источника · первым — Информагентство (пример)" and its two facts; approving it in run 1 puts its story block in the digest preview; run 2's digest shows both story blocks. Tony's control room shows nine cells, unchanged. No horizontal scroll at 390.
+Expected: the newsroom page shows the stories cell between rank and cap, the pipe-burst row with "источников: 3 · первым — Информагентство (пример)" and its two facts, their `[n]` as plain text (no links anywhere in the demo); approving it in run 1 puts its story block in the digest preview; run 2's digest shows both story blocks. Tony's control room shows nine cells, unchanged. No horizontal scroll at 390.
 
 - [ ] **Step 5: Commit**
 
 ```bash
-git add lib/control-room-text.ts lib/pipeline-stages.ts lib/pipeline-stages.test.ts lib/config-view.ts lib/config-view.test.ts components/PipelineRail.tsx components/ConfigSpine.tsx components/QueuePane.tsx components/DigestPanel.tsx components/DemoRoom.tsx app/globals.css
+git add lib/control-room-text.ts lib/control-room-text.test.ts lib/pipeline-stages.ts lib/pipeline-stages.test.ts lib/config-view.ts lib/config-view.test.ts components/PipelineRail.tsx components/ConfigSpine.tsx components/QueuePane.tsx components/DigestPanel.tsx app/globals.css
 git commit -m "Show stories in the demo: rail cell, queue rows, digest"
 ```
 
@@ -3118,11 +3139,11 @@ agent/venv/Scripts/python -m agent --preview --data-dir $S/data-branch > $S/prev
 diff $S/preview-main.txt $S/preview-branch.txt
 ```
 
-Expected: identical except rows DeepSeek scored fresh in both runs. Then the same pair with `--dry-run` (each into its own data dir): stdout identical bar live HN points/stars; the two `run-result.json` files identical except `run.id`/`run.at` and live points/stars (Tony has no `stories`, so no `group`/`facts` stages and no `story` keys).
+Expected: identical except rows DeepSeek scored fresh in both runs and items the live HN/GitHub/RSS sources (web-products' 11 feeds, #7) changed between the two runs. Then the same pair with `--dry-run` (each into its own data dir): stdout identical bar live HN points/stars and the same live-source changes; the two `run-result.json` files identical except `run.id`/`run.at`, live points/stars and those live-source changes (Tony has no `stories`, so no `group`/`facts` stages and no `story` keys).
 
 - [ ] **Step 2: Docs**
 
-- `PROGRESS.md`, under "Content Direction & Tony Scraponi": a bullet **Content engine, sub-project B (stories): shipped** — spec and plan paths; what it does (stories from preset feeds only, `stories.json`, the cheap signals + LLM merge, facts with citations, the "first" line, newsroom demo on, Tony and agro off); test counts; the regression result. Update the status line and "How to resume" (next: C — Telegram approval buttons and several delivery targets — or #7 if not applied yet).
+- `PROGRESS.md`, under "Content Direction & Tony Scraponi": a bullet **Content engine, sub-project B (stories): shipped** — spec and plan paths; what it does (stories from preset feeds only, `stories.json`, the cheap signals + LLM merge, facts with citations, the "first" line, newsroom demo on, Tony and agro off); test counts; the regression result. Update the status line and "How to resume" (next: C — Telegram approval buttons and several delivery targets).
 - `docs/tony-scraponi-roadmap.md`: B's line → "Shipped: preset feeds only; Tony and agro off; spec …".
 - `docs/agent-plan.md`, "Presets and engine": a short paragraph on stories and `<data-dir>/stories.json`.
 
