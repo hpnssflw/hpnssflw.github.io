@@ -229,7 +229,8 @@ Two other cases need no addition:
    Matches are transitive within a run (union-find).
 3. **Each group ends one way:**
    - **it holds a closed story**: each new report drops as `same_story`
-     (`detail: {story, status}`);
+     (`detail: {story, status}`) and is dismissed in `state.json`, so it
+     isn't grouped again;
    - **it holds an open story**: the new reports join it;
    - **only new reports**: a new story, `waiting` until the cap. Its
      opener is the earliest report (ties: higher score, then URL).
@@ -406,8 +407,10 @@ In a stories preset, each queue entry renders by its story:
     topic:
     - `in`: eligible reports; `out`: new stories formed;
     - drops: `same_story`;
-    - notes: `joined` (reports that joined an open story), `held`,
-      `matched_text`, `matched_near`, `matched_llm`.
+    - notes: `joined` (reports that joined an open story) and `held`, on
+      the report's topic; `matched_text`, `matched_near` and
+      `matched_llm` (links made by each signal) on the `*` scope, since a
+      link can join reports of different topics.
   - **`facts`** (processing, after `cap`), scoped by the story's topic:
     - `in`: stories sent for facts; `out`: stories with facts;
     - notes: `flagged`, `facts` (the number of facts kept).
@@ -526,9 +529,13 @@ New fictional reports:
   to the cheap 101+308 group, giving a three-report story first reported
   by the agency at 06:10 (+03:00). One fixture fact cites a `[4]` that
   doesn't exist, so it is dropped.
-- `example-city.ru/n/309`: a verbatim reprint of agency 102 (the Р-22
-  crash), 23:15Z. Both texts are at least 30 words, and identical text
-  gives a two-report story.
+- `example-city.ru/n/309`: a verbatim reprint of agency 104 (the
+  Metallist plant's layoffs), 12:25Z on 10-05, so the "first" line shows
+  the date prefix. Agency 104 has no article page, so its text stays the
+  feed's own. Its description grows to 34 words, the reprint copies it,
+  and identical text gives a two-report story. (Agency 102's text is
+  replaced by its article's full text, so an exact copy of it would
+  depend on trafilatura's output.)
 
 Other fixture changes:
 
