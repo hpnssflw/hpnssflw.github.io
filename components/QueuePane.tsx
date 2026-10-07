@@ -16,10 +16,11 @@ function typingIn(target: EventTarget | null): boolean {
 
 /**
  * The moderation queue: status chips, one row per item (score, title,
- * a story's sources and cited facts, source · domain · topic · date), the
- * selected row unfolded with its summary and actions. A fact's [n] links
- * its report only when linkItems is on. Keys: j/k move and o opens an http(s) link for everyone; a/r/u
- * approve, reject and undo for the owner.
+ * source · domain · topic · date, then a story's sources and who was
+ * first), the selected row unfolded with its summary — a story's cited
+ * facts instead, when it has any — and actions. A fact's [n] links its
+ * report only when linkItems is on. Keys: j/k move and o opens an http(s)
+ * link for everyone; a/r/u approve, reject and undo for the owner.
  */
 export default function QueuePane({
   rows,
@@ -115,6 +116,7 @@ export default function QueuePane({
               const on = selected?.url === item.url;
               const status = itemStatus(decisions, item.url);
               const href = safeHref(item.url);
+              const story = storyOf(item);
               return (
                 <li
                   key={item.url}
@@ -130,52 +132,47 @@ export default function QueuePane({
                       <span className={`cr-decision inbox-${status}`}>{text.statuses[status]}</span>
                     )}
                   </div>
-                  {(() => {
-                    const story = storyOf(item);
-                    if (!story) return null;
-                    const urlOf = new Map(story.reports.map((r) => [r.n, r.url]));
-                    return (
-                      <div className="cr-story">
-                        <p className="agent-muted">
-                          {text.sources(new Set(story.reports.map((r) => r.source_id)).size)} ·{" "}
-                          {text.firstBy(story.reports[0].source_name)}
-                          {story.flagged && <span className="cr-flag"> · {text.flagged}</span>}
-                        </p>
-                        {story.facts.length > 0 && (
-                          <ol className="cr-facts">
-                            {story.facts.map((fact, i) => (
-                              <li key={i}>
-                                {fact.text}{" "}
-                                {fact.refs.map((n) => {
-                                  const href = linkItems ? safeHref(urlOf.get(n) ?? "") : null;
-                                  return href ? (
-                                    <a
-                                      key={n}
-                                      href={href}
-                                      target="_blank"
-                                      rel="noreferrer"
-                                      onClick={(event) => event.stopPropagation()}
-                                    >
-                                      [{n}]
-                                    </a>
-                                  ) : (
-                                    <span key={n}>[{n}]</span>
-                                  );
-                                })}
-                              </li>
-                            ))}
-                          </ol>
-                        )}
-                      </div>
-                    );
-                  })()}
                   <div className="cr-meta">
                     {item.source} · {itemDomain(item.url, text.invalidUrl)}
                     {topicNames && ` · ${topicNames[item.topic] ?? item.topic}`} · {text.date(item.pending_since)}
                   </div>
+                  {story && (
+                    <p className="cr-story">
+                      {text.sources(new Set(story.reports.map((r) => r.source_id)).size)} ·{" "}
+                      {text.firstBy(story.reports[0].source_name)}
+                      {story.flagged && <span className="cr-flag"> · {text.flagged}</span>}
+                    </p>
+                  )}
                   {on && (
                     <div className="cr-open">
-                      <p className="cr-summary">{item.summary}</p>
+                      {story && story.facts.length > 0 ? (
+                        <ol className="cr-facts">
+                          {story.facts.map((fact, i) => (
+                            <li key={i}>
+                              {fact.text}{" "}
+                              {fact.refs.map((n) => {
+                                const report = story.reports.find((r) => r.n === n);
+                                const href = linkItems && report ? safeHref(report.url) : null;
+                                return href ? (
+                                  <a
+                                    key={n}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    onClick={(event) => event.stopPropagation()}
+                                  >
+                                    [{n}]
+                                  </a>
+                                ) : (
+                                  <span key={n}>[{n}]</span>
+                                );
+                              })}
+                            </li>
+                          ))}
+                        </ol>
+                      ) : (
+                        <p className="cr-summary">{item.summary}</p>
+                      )}
                       <div className="cr-actions">
                         {canDecide &&
                           (status === "waiting" ? (

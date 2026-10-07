@@ -2500,22 +2500,22 @@ body:has(.cr) footer {
 }
 
 /* --- Stories (presets with `stories:`) -------------------------------
-   Under a queue row's title: how many sources reported the story and who
-   was first, then its cited facts, each with the [n] of its reports —
-   links only where the queue links items (the demo's URLs are synthetic,
-   so there they're plain text). A story the facts step found nothing
-   checkable in is flagged in the control room's failure red. */
+   Under a queue row's meta line: how many sources reported the story and
+   who was first. The selected row shows the story's cited facts in place
+   of the summary, each with the [n] of its reports — links only where the
+   queue links items (the demo's URLs are synthetic, so there they're
+   plain text). A story the facts step found nothing checkable in is
+   flagged in the control room's failure red. A decided story's line and
+   facts are muted, like its title. */
 .cr-story {
-  padding-left: 24px;
-}
-
-.cr-story p {
   margin: 0;
+  padding-left: 24px;
+  color: var(--muted);
 }
 
 .cr-facts {
   list-style: none;
-  margin: 2px 0 0;
+  margin: 4px 0 6px;
   padding: 0;
   font-family: var(--font-sans);
   font-size: var(--fs-xs);
@@ -2538,4 +2538,13 @@ body:has(.cr) footer {
 
 .cr-flag {
   color: var(--agent-red);
+}
+
+.cr-row[data-status="approved"] .cr-facts,
+.cr-row[data-status="rejected"] .cr-facts,
+.cr-row[data-status="approved"] .cr-facts a,
+.cr-row[data-status="rejected"] .cr-facts a,
+.cr-row[data-status="approved"] .cr-flag,
+.cr-row[data-status="rejected"] .cr-flag {
+  color: var(--muted);
 }
