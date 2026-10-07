@@ -28,6 +28,7 @@ export default function QueuePane({
   onSelect,
   decisions,
   topicNames,
+  linkItems = true,
   canDecide,
   busy,
   loaded,
@@ -44,6 +45,8 @@ export default function QueuePane({
   decisions: Decisions | null;
   /** slug → name, shown in each row's meta line; null when one topic is picked. */
   topicNames: Record<string, string> | null;
+  /** false: no open button, no `o` key, no `o` in the keys legend (the demo's URLs are synthetic). Default true. */
+  linkItems?: boolean;
   canDecide: boolean;
   busy: boolean;
   loaded: boolean;
@@ -59,7 +62,7 @@ export default function QueuePane({
       const key = event.key;
       if (key === "j" || key === "k") {
         onSelect(moveSelection(rows, selected?.url ?? null, key === "j" ? 1 : -1));
-      } else if (key === "o" && selected) {
+      } else if (key === "o" && linkItems && selected) {
         const href = safeHref(selected.url);
         if (href) window.open(href, "_blank", "noopener,noreferrer");
       } else if ((key === "a" || key === "r" || key === "u") && canDecide && !busy && selected) {
@@ -73,7 +76,7 @@ export default function QueuePane({
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [rows, selected, canDecide, busy, decisions, onSelect, onDecide]);
+  }, [rows, selected, canDecide, busy, decisions, onSelect, onDecide, linkItems]);
 
   useEffect(() => {
     listRef.current?.querySelector('[data-selected="true"]')?.scrollIntoView({ block: "nearest" });
@@ -172,21 +175,22 @@ export default function QueuePane({
                               <kbd>u</kbd> {text.undo}
                             </button>
                           ))}
-                        {href ? (
-                          <a
-                            className="inbox-button"
-                            href={href}
-                            target="_blank"
-                            rel="noreferrer"
-                            onClick={(event) => event.stopPropagation()}
-                          >
-                            <kbd>o</kbd> {text.open}
-                          </a>
-                        ) : (
-                          <button type="button" className="inbox-button" disabled title={text.notWebLink}>
-                            <kbd>o</kbd> {text.open}
-                          </button>
-                        )}
+                        {linkItems &&
+                          (href ? (
+                            <a
+                              className="inbox-button"
+                              href={href}
+                              target="_blank"
+                              rel="noreferrer"
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              <kbd>o</kbd> {text.open}
+                            </a>
+                          ) : (
+                            <button type="button" className="inbox-button" disabled title={text.notWebLink}>
+                              <kbd>o</kbd> {text.open}
+                            </button>
+                          ))}
                       </div>
                     </div>
                   )}
@@ -202,8 +206,12 @@ export default function QueuePane({
           <>
             {" "}· <kbd>a</kbd> {text.approve} · <kbd>r</kbd> {text.reject} · <kbd>u</kbd> {text.undo}
           </>
-        )}{" "}
-        · <kbd>o</kbd> {text.keysOpen}
+        )}
+        {linkItems && (
+          <>
+            {" "}· <kbd>o</kbd> {text.keysOpen}
+          </>
+        )}
       </p>
     </section>
   );

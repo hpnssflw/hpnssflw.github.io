@@ -322,7 +322,7 @@ text from the preset's dictionary:
 - **Queue:**
   - run 1 is the **sandbox**: every item starts undecided (the decisions
     recorded in `run1.json` are ignored); approve / reject / undo with
-    the buttons and a/r/u, j/k/o to move and open, status filters, and a
+    the buttons and a/r/u, j/k to move, status filters, and a
     "reset" control. State lives in React only and resets on reload. The
     review stage on the rail follows the sandbox's decisions;
   - run 2 is read-only: `run2.json`'s queue.
@@ -331,7 +331,9 @@ text from the preset's dictionary:
     built from the sandbox's approved items, with an empty state ("approve
     items to build the digest"); run 2: the digest the engine sent,
     built by the same renderer from run 1's recorded decisions. It is
-    styled like a Telegram message;
+    styled like a Telegram message. In the demo, item titles aren't links
+    and the queue has no "open" action (no `o` key): the demo goldens'
+    URLs are synthetic (`example-*.ru`, unregistered domains);
   - **config** from the run's `config`: preset RSS feeds (with "full
     text" where `full_text`), topics with include/exclude, threshold, daily
     cap, reader;

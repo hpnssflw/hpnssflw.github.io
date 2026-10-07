@@ -135,6 +135,7 @@ export default function DemoRoom({ demo, presets }: { demo: Demo; presets: DemoL
             onSelect={setSelectedUrl}
             decisions={decisions}
             topicNames={topic === "all" ? Object.fromEntries(config.topics.map((t) => [t.slug, t.name])) : null}
+            linkItems={false}
             canDecide={runNo === 1}
             busy={false}
             loaded

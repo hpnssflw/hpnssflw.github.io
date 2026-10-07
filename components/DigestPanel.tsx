@@ -1,7 +1,8 @@
 import type { DigestBlocks } from "@/lib/digest";
 
 /** A digest as the editor gets it in Telegram: bold header and topic
- * names, each item a linked title over its one-line summary. */
+ * names, each item a title over its one-line summary. Titles aren't linked:
+ * this panel is the demo's, and the demo's URLs are synthetic. */
 export default function DigestPanel({ digest, empty }: { digest: DigestBlocks; empty: string }) {
   if (digest.topics.length === 0) return <p className="agent-muted cr-digest-empty">{empty}</p>;
   return (
@@ -20,9 +21,7 @@ export default function DigestPanel({ digest, empty }: { digest: DigestBlocks; e
             {topic.items.map((item) => (
               <li key={item.url}>
                 •{" "}
-                <a href={item.url} target="_blank" rel="noreferrer">
-                  {item.title}
-                </a>
+                <span className="cr-digest-title">{item.title}</span>
                 <br />
                 {item.summary}
               </li>

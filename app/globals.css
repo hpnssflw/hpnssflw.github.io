@@ -2470,7 +2470,7 @@ body:has(.cr) footer {
   margin: 0 0 6px;
 }
 
-.cr-digest a {
+.cr-digest-title {
   color: var(--text-strong);
 }
 
