@@ -102,3 +102,75 @@ def test_fixture_ranker_merge_maps_url_groups_to_ids(tmp_path):
     (tmp_path / "stories.json").write_text(json.dumps({"merge": None, "facts": []}), encoding="utf-8")
     with pytest.raises(summarize.MergeFailed):
         ranker.FixtureRanker(tmp_path / "verdicts.json", tmp_path / "stories.json").merge([known], [[report("https://g/1")]], MSK)
+
+
+from agent.stories import Fact
+
+
+@pytest.mark.parametrize(
+    "facts, expected",
+    [
+        ([{"text": " Факт. ", "refs": [2, 1, 2]}], [("Факт.", [1, 2])]),
+        ([{"text": "Факт.", "refs": [4]}], []),  # out of range
+        ([{"text": "Факт.", "refs": []}], []),  # no citation
+        ([{"text": "Факт.", "refs": [True]}], []),  # bool isn't an int here
+        ([{"text": "", "refs": [1]}], []),
+        ([{"text": "<b>Факт</b>", "refs": [1]}], []),
+        ([{"text": "я" * 301, "refs": [1]}], []),
+        ([{"text": f"Факт {i}.", "refs": [1]} for i in range(5)], [(f"Факт {i}.", [1]) for i in range(3)]),  # max_facts
+        ("not a list", []),
+    ],
+)
+def test_validate_facts(facts, expected):
+    assert summarize.validate_facts(facts, report_count=3, max_facts=3) == expected
+
+
+def test_parse_facts_response_needs_every_story_once():
+    assert summarize._parse_facts_response('{"stories": [{"id": "s1", "facts": []}, {"id": "s2", "facts": []}]}', 2) == {1: [], 2: []}
+    assert summarize._parse_facts_response('{"stories": [{"id": "s1", "facts": []}]}', 2) is None
+    assert summarize._parse_facts_response('{"stories": [{"id": "s1", "facts": []}, {"id": "s1", "facts": []}]}', 2) is None
+    assert summarize._parse_facts_response('{"stories": [{"id": "x1", "facts": []}]}', 1) is None
+
+
+SOURCES = [summarize.FactsSource(label="Агентство · 06.10 06:10", title="Прорыв", text="Текст.")]
+
+
+def test_story_facts_prompt_and_fallback(scripted):
+    fake = scripted(
+        "nope",
+        "nope again",
+        '{"stories": [{"id": "s1", "facts": [{"text": "Факт.", "refs": [1]}]}]}',
+        "still nope",
+    )
+    answers = summarize.story_facts([SOURCES, SOURCES], LLM, "ru", 3)
+    assert answers == [[("Факт.", [1])], None]  # batch failed twice; then one call per story
+    user = fake.prompts[0]["messages"][1]["content"]
+    assert user.splitlines()[:2] == ["Language: Russian", "Facts per story: at most 3"]
+    assert "[1] Агентство · 06.10 06:10 · Прорыв — Текст." in user
+
+
+def test_live_ranker_story_facts_maps_refs_to_urls(scripted):
+    scripted('{"stories": [{"id": "s1", "facts": [{"text": "Факт.", "refs": [1, 2]}]}]}')
+    s = story(report("https://c/1", "2026-10-06T03:52:00+00:00", "city"), report("https://a/1", "2026-10-06T03:10:00+00:00"))
+    order = {"agency": 0, "city": 1}
+    assert ranker.LiveRanker(LLM, "Р.", "ru").story_facts([s], 3, order, MSK) == [[Fact(text="Факт.", urls=["https://a/1", "https://c/1"])]]
+
+
+def test_fixture_ranker_story_facts(tmp_path):
+    (tmp_path / "verdicts.json").write_text("{}", encoding="utf-8")
+    fixture = {
+        "merge": [],
+        "facts": [
+            {"reports": ["https://a/1", "https://c/1"], "response": {"facts": [{"text": "Факт.", "refs": [2]}, {"text": "Нет.", "refs": [3]}]}},
+            {"reports": ["https://a/2", "https://c/2"], "response": None},
+        ],
+    }
+    (tmp_path / "stories.json").write_text(json.dumps(fixture), encoding="utf-8")
+    fake = ranker.FixtureRanker(tmp_path / "verdicts.json", tmp_path / "stories.json")
+    order = {"agency": 0, "city": 1}
+    one = story(report("https://a/1"), report("https://c/1", "2026-10-06T04:00:00+00:00", "city"))
+    two = story(report("https://a/2"), report("https://c/2", "2026-10-06T04:00:00+00:00", "city"))
+    assert fake.story_facts([one, two], 3, order, MSK) == [[Fact(text="Факт.", urls=["https://c/1"])], None]
+    assert fake.facts_calls == 1
+    with pytest.raises(ranker.FixtureError):
+        fake.story_facts([story(report("https://x/1"), report("https://y/1"))], 3, order, MSK)

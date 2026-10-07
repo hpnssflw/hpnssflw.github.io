@@ -174,6 +174,19 @@ def merge_entry(reports: list[Report], tz: tzinfo) -> summarize.MergeEntry:
     return summarize.MergeEntry(title=first.title, text=first.text, source=f"{first.source_name} · {clock(first.at, tz)}")
 
 
+def facts_sources(reports: list[Report], tz: tzinfo) -> list[summarize.FactsSource]:
+    """The facts prompt's numbered reports, in published order."""
+    return [summarize.FactsSource(label=f"{r.source_name} · {stamp(r.at, tz)}", title=r.title, text=r.text) for r in reports]
+
+
+def facts_from_refs(answer: list[tuple[str, list[int]]] | None, reports: list[Report]) -> list[Fact] | None:
+    """Numbers (into the published order) -> report URLs, which stay right
+    when a later report changes the numbering."""
+    if answer is None:
+        return None
+    return [Fact(text=text, urls=[reports[n - 1].url for n in refs]) for text, refs in answer]
+
+
 def _gap(minutes: int, units: tuple[str, str, str]) -> str:
     days, rest = divmod(minutes, 1440)
     hours, mins = divmod(rest, 60)

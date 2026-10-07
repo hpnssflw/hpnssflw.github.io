@@ -12,7 +12,7 @@ from agent import stories, summarize
 from agent.item import Item
 from agent.preset import LLMSettings
 from agent.sources.base import TopicConfig
-from agent.stories import Report, Story
+from agent.stories import Fact, Report, Story
 from agent.summarize import RankedItem
 
 
@@ -34,6 +34,11 @@ class LiveRanker:
             [stories.merge_entry(reports, tz) for reports in entries],
             self.llm,
         )
+
+    def story_facts(self, stories_: list[Story], max_facts: int, order: dict[str, int], tz) -> list[list[Fact] | None]:
+        numbered = [stories.ordered(s, order) for s in stories_]
+        answers = summarize.story_facts([stories.facts_sources(r, tz) for r in numbered], self.llm, self.language, max_facts)
+        return [stories.facts_from_refs(answer, reports) for answer, reports in zip(answers, numbered)]
 
 
 class FixtureError(RuntimeError):
@@ -74,6 +79,24 @@ class FixtureRanker:
         if checked is None:
             raise FixtureError(f"the merge fixture gives an invalid answer: {groups}")
         return checked
+
+    def story_facts(self, stories_: list[Story], max_facts: int, order: dict[str, int], tz) -> list[list[Fact] | None]:
+        """The fixture answer for each story's exact report set, through the
+        real validator; "response": null answers None (a failed call)."""
+        self.facts_calls += 1
+        answers: list[list[Fact] | None] = []
+        for story in stories_:
+            reports = stories.ordered(story, order)
+            urls = sorted(r.url for r in reports)
+            fixture = next((f for f in self._story_fixture("facts") if sorted(f["reports"]) == urls), None)
+            if fixture is None:
+                raise FixtureError(f"no facts fixture for {urls}")
+            if fixture["response"] is None:
+                answers.append(None)
+                continue
+            answer = summarize.validate_facts(fixture["response"]["facts"], len(reports), max_facts)
+            answers.append(stories.facts_from_refs(answer, reports))
+        return answers
 
     def rank_topic(self, topic: TopicConfig, items: list[Item]) -> list[RankedItem]:
         if items:
