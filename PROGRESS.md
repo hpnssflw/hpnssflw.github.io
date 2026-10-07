@@ -678,7 +678,15 @@ infrastructure.
   widget's "next check" counts down to the cron slot the control room
   shows. A required `status.json` field renamed, removed or retyped on
   the agent side must be mirrored in `lib/agent-status.ts` (see
-  `CLAUDE.md`), or every agent widget shows "unavailable".
+  `CLAUDE.md`), or every agent widget shows "unavailable"; `npm test`
+  parses the agent's golden `real/status.json` with `parseAgentStatus`,
+  so that drift fails there once the golden is re-recorded. Final
+  whole-branch review (opus): 0 Critical, 0 Important; the golden
+  contract test came out of it. Pushed `97fe18f` (fast-forward from
+  `0c0d02d`), deploy run 37564470443; live home, `/researcher/agent/`
+  and `/researcher/queue/` re-checked 2026-10-07 (no "unavailable",
+  home countdown and control room pulse both on the 04:00Z slot, queue
+  rows link https).
   Later: editing config from the page (a repo the agent only reads, like
   the inbox).
 - **Content engine, sub-project A (engine core + presets): shipped.**
@@ -785,9 +793,9 @@ and the #7 decision are next (see its bullet above). Sub-project #8 (control
 room) is shipped and live (2026-10-06), and so is its hardening (M1, M2,
 M4, home countdown); its "Later" list is in its bullet above. Later
 candidates: a Web Products source (#7), a Telegram DM when items await
-review, summary editing. Content engine sub-project A is shipped and live (2026-10-06,
-`bed2bb7`); next in that line are B, C, D — each needs its own
-brainstorm → spec → plan (see its bullet above and
+review, summary editing. Content engine sub-project A is shipped and
+live (2026-10-06, `bed2bb7`); next in that line are B (stories), C, D —
+each needs its own brainstorm → spec → plan (see its bullet above and
 `docs/tony-scraponi-roadmap.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
