@@ -44,3 +44,7 @@ class DataPaths:
     @property
     def outbox(self) -> Path:
         return self.root / "outbox"
+
+    @property
+    def stories(self) -> Path:
+        return self.root / "stories.json"
