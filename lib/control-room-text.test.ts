@@ -20,6 +20,23 @@ describe("TEXT", () => {
     expect(TEXT.en.spine.window("10")).toEqual(["published in the last ", { v: "10" }, " days"]);
   });
 
+  it("puts Russian numbers after a label so they never need a plural form", () => {
+    const flat = (parts: (string | { v: string | number })[]) =>
+      parts.map((part) => (typeof part === "string" ? part : String(part.v))).join("");
+    expect(TEXT.ru.rail.drops.already_ranked).toBe("ранее оценены ниже порога");
+    expect(TEXT.ru.rail.sent(1, 1)).toBe("отправлено: 1 · сообщений: 1");
+    expect(TEXT.ru.rail.every(1)).toBe("раз в 1 ч");
+    expect(TEXT.ru.rail.fullText(21)).toBe("полный текст: +21");
+    expect(flat(TEXT.ru.spine.rssOn(1))).toBe("rss — лент: 1");
+    expect(flat(TEXT.ru.spine.hnOn(21, 5))).toBe("hn — слов в заголовке: 21, очки ≥5");
+    expect(flat(TEXT.ru.spine.githubOn(1, 100))).toBe("github — тем: 1, ≥100★");
+    expect(flat(TEXT.ru.spine.hnSearch("5"))).toBe("поиск hn по заголовкам, очки ≥5");
+    expect(flat(TEXT.ru.spine.window("1"))).toBe("опубликовано не раньше чем 1 дн. назад");
+    expect(flat(TEXT.ru.spine.regrow("1"))).toBe("переоценка при 2× и +1 к очкам/звёздам");
+    expect(flat(TEXT.ru.spine.deliverTelegram("@c", 1))).toBe("только одобренное · telegram @c · раз в 1 ч");
+    expect(flat(TEXT.ru.spine.deliverFile("T", 21))).toBe("только одобренное · сводка «T» · раз в 21 ч");
+  });
+
   it("speaks Russian for ru presets", () => {
     expect(TEXT.ru.stages.collect).toBe("сбор");
     expect(TEXT.ru.rail.drops.undated).toBe("без даты");
