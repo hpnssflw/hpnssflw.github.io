@@ -35,8 +35,8 @@ function Tags({ items, max, text }: { items: string[]; max?: number; text: Text[
   const shown = open || max === undefined ? items : items.slice(0, max);
   return (
     <span className="cr-tags">
-      {shown.map((item) => (
-        <span key={item} className="cr-tag">
+      {shown.map((item, i) => (
+        <span key={i} className="cr-tag">
           {item}
         </span>
       ))}
