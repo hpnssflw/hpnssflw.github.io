@@ -39,7 +39,7 @@ def offline_adapters(preset: Preset, paths: DataPaths) -> Adapters:
     """Fixtures instead of the network (preset.require_offline has
     checked that approval and delivery are files)."""
     return Adapters(
-        ranker=FixtureRanker(preset.offline.llm),
+        ranker=FixtureRanker(preset.offline.llm, preset.offline.stories),
         approval=approval_for(preset),
         delivery=delivery_for(preset, paths),
         fetcher=OfflineFetcher(preset.offline.http),

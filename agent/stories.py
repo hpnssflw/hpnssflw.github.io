@@ -168,6 +168,12 @@ def stamp(at: datetime, tz: tzinfo) -> str:
     return at.astimezone(tz).strftime("%d.%m %H:%M")
 
 
+def merge_entry(reports: list[Report], tz: tzinfo) -> summarize.MergeEntry:
+    """A new LLM-merge entry (one report, or a cheap group): its earliest report."""
+    first = min(reports, key=lambda r: (r.at, r.url))
+    return summarize.MergeEntry(title=first.title, text=first.text, source=f"{first.source_name} · {clock(first.at, tz)}")
+
+
 def _gap(minutes: int, units: tuple[str, str, str]) -> str:
     days, rest = divmod(minutes, 1440)
     hours, mins = divmod(rest, 60)
