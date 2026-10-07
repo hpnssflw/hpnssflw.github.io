@@ -102,11 +102,22 @@ class MergeEntry:
     source: str | None = None  # new entries: "<source name> · <hh:mm>"
 
 
+def _one_line(text: str | None) -> str:
+    """Every whitespace run -> one space, so a feed's title or text can't
+    start a line of its own (a forged "N2:", "Story s2:" or "[2]" entry)."""
+    return " ".join((text or "").split())
+
+
 def _build_merge_prompt(known: list[MergeEntry], new: list[MergeEntry]) -> str:
     lines = ["Known stories:"]
-    lines += [f"S{i}: {e.title} — {e.text[:MERGE_TEXT_CHARS]}" for i, e in enumerate(known, start=1)] or ["(none)"]
+    lines += [
+        f"S{i}: {_one_line(e.title)} — {_one_line(e.text)[:MERGE_TEXT_CHARS]}" for i, e in enumerate(known, start=1)
+    ] or ["(none)"]
     lines += ["", "New entries:"]
-    lines += [f"N{j}: [{e.source}] {e.title} — {e.text[:MERGE_TEXT_CHARS]}" for j, e in enumerate(new, start=1)]
+    lines += [
+        f"N{j}: [{_one_line(e.source)}] {_one_line(e.title)} — {_one_line(e.text)[:MERGE_TEXT_CHARS]}"
+        for j, e in enumerate(new, start=1)
+    ]
     return "\n".join(lines)
 
 
@@ -177,8 +188,9 @@ def _build_facts_prompt(stories: list[list[FactsSource]], language: str, max_fac
     for index, sources in enumerate(stories, start=1):
         lines += ["", f"Story s{index}:"]
         for n, source in enumerate(sources, start=1):
-            excerpt = f" — {source.text[:FACTS_TEXT_CHARS]}" if source.text else ""
-            lines.append(f"[{n}] {source.label} · {source.title}{excerpt}")
+            text = _one_line(source.text)
+            excerpt = f" — {text[:FACTS_TEXT_CHARS]}" if text else ""
+            lines.append(f"[{n}] {_one_line(source.label)} · {_one_line(source.title)}{excerpt}")
     return "\n".join(lines)
 
 
