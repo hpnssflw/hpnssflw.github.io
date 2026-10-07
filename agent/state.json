@@ -62,7 +62,7 @@
   "019b8d88a570a342": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 164,
+    "last_score": 165,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -78,7 +78,7 @@
   "01f60ae7b332f1de": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 66,
+    "last_score": 75,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -87,6 +87,22 @@
         "rubric": "02189e2467e9",
         "source_score": 54,
         "summary": "A security engineer's Show HN post about MailAccess, an email OSINT framework that gathers emails for a domain."
+      }
+    },
+    "times_sent": 0
+  },
+  "020a2e848d32ee02": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 85,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 4,
+        "rubric": "080b24af813c",
+        "source_score": 85,
+        "summary": "The author describes hiring an illustrator to draw their house and using it as a Home Assistant dashboard."
       }
     },
     "times_sent": 0
@@ -106,7 +122,7 @@
     "times_sent": 1
   },
   "0241e600b90d751e": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-30T20:33:36.487127+00:00",
     "last_score": 194,
     "ranks": {},
@@ -142,10 +158,26 @@
     "ranks": {},
     "times_sent": 0
   },
+  "035fa5abb5c7987c": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 45,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 45,
+        "summary": "Procinsh is a Show HN 3D process inspector for Linux."
+      }
+    },
+    "times_sent": 0
+  },
   "0397e222b2cf1c4f": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 106,
+    "last_score": 110,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -271,7 +303,7 @@
   "07e3fd6f0b87696a": {
     "dismissed": null,
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
-    "last_score": 825,
+    "last_score": 835,
     "ranks": {},
     "times_sent": 0
   },
@@ -343,7 +375,7 @@
     "times_sent": 0
   },
   "0a35da841b590b7d": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
     "last_score": 1418,
     "ranks": {},
@@ -398,7 +430,7 @@
   "0bf65300a2ecec70": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 299,
+    "last_score": 300,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -481,15 +513,15 @@
   "0d2b759c8ff8305d": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 78,
+    "last_score": 274,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-07T04:19:10.896068+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
         "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 61,
-        "summary": "A small open-source decision model, which is an AI component rather than a developer tool."
+        "source_score": 274,
+        "summary": "Strands Decider 2B is described as a small, open-source decision model."
       }
     },
     "times_sent": 0
@@ -518,15 +550,15 @@
   "0df6080a7e0590da": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 164,
+    "last_score": 357,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
         "relevance": 7,
         "rubric": "3472af8a46e1",
-        "source_score": 101,
-        "summary": "mortiflix-oss is a motion design studio on your own machine where Claude makes the video step by step and you approve every stage, bringing your own Claude Code or API key."
+        "source_score": 357,
+        "summary": "A GitHub project description for Mortiflix OSS, a motion design studio where Claude makes video step by step and you approve each stage, with topics ai-agents, claude, claude-code, harness."
       }
     },
     "times_sent": 0
@@ -611,7 +643,7 @@
     "times_sent": 1
   },
   "101caf814283203f": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-29T14:38:27.657579+00:00",
     "last_score": 484,
     "ranks": {},
@@ -837,7 +869,7 @@
   "1622e539f5fe4b6e": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 59,
+    "last_score": 97,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -860,7 +892,7 @@
   "16387ddd1c37344c": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 154,
+    "last_score": 165,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -876,7 +908,7 @@
   "16806dc14c8271a8": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 51,
+    "last_score": 52,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -908,6 +940,22 @@
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
     "last_score": 39,
     "ranks": {},
+    "times_sent": 0
+  },
+  "174b55a6fc6d0bfd": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 106,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 106,
+        "summary": "A GitHub project description for FOREST, a research agent for long-horizon science that explores ideas, runs experiments, analyzes results, and builds a paper in an editable graph."
+      }
+    },
     "times_sent": 0
   },
   "1758bb396fd30f1c": {
@@ -973,7 +1021,7 @@
   "1a400703ecdf7ec7": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 116,
+    "last_score": 117,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1091,7 +1139,7 @@
   "1e543f09854abc69": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 53,
+    "last_score": 54,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1107,15 +1155,15 @@
   "1e6d0aa6065c4bd5": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 118,
+    "last_score": 230,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-07T04:19:10.896068+00:00",
-        "relevance": 1,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 108,
-        "summary": "An open-source Rust email client for Linux with AI, which is a consumer application rather than a software development tool."
+        "source_score": 230,
+        "summary": "Penguin Mail is described as an open-source Rust email client for Linux with AI features."
       }
     },
     "times_sent": 0
@@ -1123,7 +1171,7 @@
   "1ef1b38c39d01608": {
     "dismissed": null,
     "first_seen": "2026-10-03T19:00:43.940612+00:00",
-    "last_score": 422,
+    "last_score": 423,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1178,6 +1226,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "21a58c9dd1189df7": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 153,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 153,
+        "summary": "A GitHub project description for Bops, a team of AI bots that run business ops, each with its own computer, email and phone number."
+      }
+    },
+    "times_sent": 0
+  },
   "22100060fb57e3b9": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -1188,7 +1252,7 @@
   "230850d05f205b60": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 353,
+    "last_score": 355,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-05T18:22:24.720121+00:00",
@@ -1266,10 +1330,26 @@
     "ranks": {},
     "times_sent": 0
   },
+  "26b86f5d18ba5944": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 5,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A replication of a Harvard nuclear-power-plant cancer study showing that, by the same methodology, proximity to any landmark such as a Costco also predicts higher cancer risk."
+      }
+    },
+    "times_sent": 0
+  },
   "278c1d724ea06d22": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 40,
+    "last_score": 43,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1320,10 +1400,26 @@
     "ranks": {},
     "times_sent": 0
   },
+  "286c732492720fc1": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 98,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 98,
+        "summary": "A GitHub link titled 'Docker Agent' with no further description in the given text."
+      }
+    },
+    "times_sent": 0
+  },
   "28e8a5a06ef91d24": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 129,
+    "last_score": 138,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1397,7 +1493,7 @@
   "2b5450c77abf0beb": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 82,
+    "last_score": 84,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1413,7 +1509,7 @@
   "2bb517d901795da9": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 245,
+    "last_score": 254,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1447,6 +1543,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "2c95a3500d47ac55": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 52,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 52,
+        "summary": "codex-mobile-bridge offers self-hosted browser access to existing Codex chats from phone, tablet, or computer, with local/SSH sessions, approvals, and notifications."
+      }
+    },
+    "times_sent": 0
+  },
   "2ca5ec8cdcd17d1e": {
     "dismissed": null,
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
@@ -1471,7 +1583,7 @@
   "2cea8c6dfa6f74be": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 51,
+    "last_score": 54,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1625,7 +1737,7 @@
   "3072b733ed2724e1": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 60,
+    "last_score": 65,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1782,7 +1894,7 @@
   "337e3f19ed608da6": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 245,
+    "last_score": 247,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1815,6 +1927,22 @@
     "first_seen": "2026-08-15T16:10:52.886374+00:00",
     "last_score": 153,
     "ranks": {},
+    "times_sent": 0
+  },
+  "34499f1d407d3b3c": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 30,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 30,
+        "summary": "An article titled 'LLMs and Data Poisoning Are Weaponized to Manufacture Consensus' on data poisoning and consensus manipulation; the title suggests a societal/security angle rather than an engineering build topic."
+      }
+    },
     "times_sent": 0
   },
   "3488691bcda7b404": {
@@ -1915,7 +2043,7 @@
   "37a106d7f924ad98": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 229,
+    "last_score": 231,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1973,15 +2101,15 @@
   "393266ea5adfae70": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 163,
+    "last_score": 337,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-07T04:19:10.896068+00:00",
-        "relevance": 1,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 150,
-        "summary": "A project to port PS5 binaries to PC without emulation, which is game-related and not a software development tool."
+        "source_score": 337,
+        "summary": "AnyPS5 ports PS5 binaries to PC without emulation, with 87% of system libraries mapped."
       }
     },
     "times_sent": 0
@@ -2035,7 +2163,7 @@
   "3a0f9678829920c2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 366,
+    "last_score": 425,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2044,6 +2172,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 291,
         "summary": "agent-smith is a project offering adaptive model routing, a Codex usage monitor, and reproducible benchmarks, tagged ai-agents, benchmark, codex, cost-optimization, llm-routing and local-first."
+      }
+    },
+    "times_sent": 0
+  },
+  "3a76c2d59eb8f9ff": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A CSS and JS library that recreates Internet Explorer's 23 proprietary Interpage Transition effects in modern browsers using the View Transition API."
       }
     },
     "times_sent": 0
@@ -2099,6 +2243,22 @@
     },
     "times_sent": 0
   },
+  "3b904b47899eb2a6": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 235,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 235,
+        "summary": "A GitHub project description for ARTEX Korean localization, an AI autonomous penetration testing framework with topics including ai-agent and cybersecurity."
+      }
+    },
+    "times_sent": 0
+  },
   "3c304742ec6fc08d": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -2148,6 +2308,22 @@
     "first_seen": "2026-09-15T15:50:04.627470+00:00",
     "last_score": 163,
     "ranks": {},
+    "times_sent": 0
+  },
+  "3e1fccb6ce25ce74": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 226,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 226,
+        "summary": "Bigwords.page is a Show HN project that turns any screen into a sign, where the URL itself is the app."
+      }
+    },
     "times_sent": 0
   },
   "3e2a5cd2937bfab5": {
@@ -2225,7 +2401,7 @@
   "3f4c009060e23462": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 130,
+    "last_score": 145,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2371,7 +2547,7 @@
   "45ae20b677e1b28f": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 130,
+    "last_score": 137,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2627,7 +2803,7 @@
   "4c0dda885d8e8248": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 389,
+    "last_score": 390,
     "ranks": {},
     "times_sent": 0
   },
@@ -2956,7 +3132,7 @@
   "562b714120290bd9": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 61,
+    "last_score": 63,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3030,7 +3206,7 @@
   "576ded508c0bb401": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 255,
+    "last_score": 334,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3082,7 +3258,7 @@
   "5831c667660a690e": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 892,
+    "last_score": 1007,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -3263,7 +3439,7 @@
   "5dd99e91ba7b07ac": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 50,
+    "last_score": 52,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3286,7 +3462,7 @@
   "5e0d593e160323d9": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 85,
+    "last_score": 86,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3455,7 +3631,7 @@
   "6381db252deeabb6": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 1701,
+    "last_score": 1702,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-05T18:22:24.720121+00:00",
@@ -3527,7 +3703,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
         "ranked_at": "2026-10-07T04:58:06.518389+00:00",
         "relevance": 8,
         "rubric": "080b24af813c",
@@ -3617,7 +3793,7 @@
   "674262d286f369d0": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 104,
+    "last_score": 105,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3675,7 +3851,7 @@
   "6923b5b640af2dc7": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 379,
+    "last_score": 380,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3737,6 +3913,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "6a32fb718fac59b1": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A post on testing an iframe's postMessage handler, explaining how embedded widgets in a separate document communicate back and forth."
+      }
+    },
     "times_sent": 0
   },
   "6a4b286a2859849a": {
@@ -3858,7 +4050,7 @@
   "6cbb376bdb40e04b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 414,
+    "last_score": 415,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3886,6 +4078,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "6cdf64e41cbdbd50": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 83,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 83,
+        "summary": "A Bloomberg study article titled 'Claude, ChatGPT Offer Different Shopping Prices Based on Wealth,' focused on consumer pricing outcomes."
+      }
+    },
+    "times_sent": 0
+  },
   "6d2df90bf70679d3": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
@@ -3905,6 +4113,22 @@
     "first_seen": "2026-09-20T22:00:04.118633+00:00",
     "last_score": 362,
     "ranks": {},
+    "times_sent": 0
+  },
+  "6d9764f86ada5bb1": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 108,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 108,
+        "summary": "A technical article arguing that Rust's derive macro often implies inlining."
+      }
+    },
     "times_sent": 0
   },
   "6e96c111f32d0712": {
@@ -4037,7 +4261,7 @@
   "70e581165c8b345e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 490,
+    "last_score": 494,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4136,7 +4360,7 @@
     "times_sent": 0
   },
   "73fddb6774391e5a": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
     "last_score": 686,
     "ranks": {},
@@ -4173,7 +4397,7 @@
   "749983b595aaf313": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 219,
+    "last_score": 238,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4235,7 +4459,7 @@
   "762ec36cca677e1a": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 123,
+    "last_score": 145,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4412,7 +4636,7 @@
   "7cd1fb3eb9d9482c": {
     "dismissed": null,
     "first_seen": "2026-09-29T06:46:24.490792+00:00",
-    "last_score": 6232,
+    "last_score": 6380,
     "ranks": {},
     "times_sent": 1
   },
@@ -4426,7 +4650,7 @@
   "7cd8f4c772468a6d": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 39,
+    "last_score": 40,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4442,7 +4666,7 @@
   "7d79f8594f999d47": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 165,
+    "last_score": 166,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -4604,7 +4828,7 @@
   "8184df2e21520d58": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
-    "last_score": 100,
+    "last_score": 108,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4627,7 +4851,7 @@
   "836a79b0f997f6d8": {
     "dismissed": null,
     "first_seen": "2026-10-05T16:49:37.554117+00:00",
-    "last_score": 783,
+    "last_score": 841,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -4698,6 +4922,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "86bf5cd3a2e65085": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 86,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 86,
+        "summary": "agent-guard provides behavior-guardrail hooks for Claude Code, covering test-tampering and outbound-action guards."
+      }
+    },
+    "times_sent": 0
+  },
   "87060bd958a6a516": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -4729,7 +4969,7 @@
   "89be4e220d9f6acb": {
     "dismissed": null,
     "first_seen": "2026-09-28T18:52:41.090824+00:00",
-    "last_score": 922,
+    "last_score": 925,
     "ranks": {},
     "times_sent": 1
   },
@@ -4771,7 +5011,7 @@
   "8b15cc64f73c5966": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 176,
+    "last_score": 177,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4994,7 +5234,7 @@
   "917ba46d3f15f0c5": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 543,
+    "last_score": 549,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5014,6 +5254,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "92764e5cb69e9660": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 30,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 30,
+        "summary": "A Bluesky post claiming someone decompiled the Adobe suite, rebuilt it in Rust, and released it as open source."
+      }
+    },
+    "times_sent": 0
+  },
   "93d07ded2ec1af8a": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -5031,7 +5287,7 @@
   "9480bf3ba69c779f": {
     "dismissed": null,
     "first_seen": "2026-09-29T06:46:24.490792+00:00",
-    "last_score": 37,
+    "last_score": 38,
     "ranks": {},
     "times_sent": 1
   },
@@ -5061,7 +5317,7 @@
   "94f7add19cb43287": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 363,
+    "last_score": 364,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-05T18:22:24.720121+00:00",
@@ -5107,7 +5363,7 @@
   "95a993d6f6d60068": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 281,
+    "last_score": 282,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5125,6 +5381,22 @@
     "first_seen": "2026-08-24T20:17:06.243950+00:00",
     "last_score": 51,
     "ranks": {},
+    "times_sent": 0
+  },
+  "960053f9bf22ff8d": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 63,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 63,
+        "summary": "position-sizer provides CLI position size calculators for perpetual futures and DeFi."
+      }
+    },
     "times_sent": 0
   },
   "9640d6753792d23c": {
@@ -5148,6 +5420,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "96d307df56097d10": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 427,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 9,
+        "rubric": "080b24af813c",
+        "source_score": 427,
+        "summary": "A post on shipping JPEG XL image support in Chrome."
+      }
+    },
+    "times_sent": 0
+  },
   "970990b3d767b409": {
     "dismissed": null,
     "first_seen": "2026-08-18T20:10:44.487670+00:00",
@@ -5165,7 +5453,7 @@
   "97a5f50a708038f2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 152,
+    "last_score": 153,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5657,6 +5945,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "a73302ba4a04aa42": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 135,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 135,
+        "summary": "A Show HN walkable 3D art history museum built from Wikipedia content."
+      }
+    },
+    "times_sent": 0
+  },
   "a753eed3a43d2636": {
     "dismissed": null,
     "first_seen": "2026-10-02T14:28:33.609973+00:00",
@@ -5683,6 +5987,22 @@
     "first_seen": "2026-09-23T22:31:50.850872+00:00",
     "last_score": 355,
     "ranks": {},
+    "times_sent": 0
+  },
+  "a851a0a421bf0c60": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 54,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 54,
+        "summary": "ThinkTerm is a Rust terminal with a built-in multiplexer that keeps sessions running after closing and runs shells and AI agents across machines with desktop, browser, and TUI interfaces."
+      }
+    },
     "times_sent": 0
   },
   "a88d76565e5f66b1": {
@@ -5759,6 +6079,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "aa78453a3cdbb830": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 191,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 191,
+        "summary": "A GitHub project description for openqodex, open-source AI code review for Claude Code and Codex with scanner/reviewer processes and topics including agent-skills, claude-code-plugin, claude-skills."
+      }
+    },
+    "times_sent": 0
+  },
   "aac59927e545ab79": {
     "dismissed": null,
     "first_seen": "2026-09-27T22:38:48.330387+00:00",
@@ -5829,7 +6165,7 @@
   "abd0a7583c198356": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 65,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5940,7 +6276,7 @@
   "af6fb58376a65c87": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 78,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5979,7 +6315,7 @@
   "afdecd136fba8911": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 48,
+    "last_score": 70,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6039,7 +6375,7 @@
   "b0ff7ff167326d54": {
     "dismissed": null,
     "first_seen": "2026-10-05T04:14:19.891077+00:00",
-    "last_score": 3191,
+    "last_score": 3496,
     "ranks": {},
     "times_sent": 0
   },
@@ -6346,7 +6682,7 @@
   "b8d29561f841d671": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 157,
+    "last_score": 161,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6434,15 +6770,15 @@
   "bb80d48523c945ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 77,
+    "last_score": 499,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-07T04:19:10.896068+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
         "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 58,
-        "summary": "A developer complaint that GitHub refuses to remove cracked copies of their web-based photo editor, which isn't a software-building tool."
+        "source_score": 499,
+        "summary": "A developer of the web photo editor Photopea complains GitHub won't remove cracked copies of their software that others generated by stripping ads with AI models."
       }
     },
     "times_sent": 0
@@ -6598,7 +6934,7 @@
   "c0a0a5f5affd2692": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 640,
+    "last_score": 641,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6656,7 +6992,7 @@
   "c192475c2a029669": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 188,
+    "last_score": 212,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -6709,7 +7045,7 @@
   "c2e634ab6cdfaf4b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 59,
+    "last_score": 61,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6734,6 +7070,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "c33ea439a7b8b573": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 223,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 223,
+        "summary": "A GitHub status incident report about Git operations, pull requests, and Actions, now resolved."
+      }
+    },
     "times_sent": 0
   },
   "c3b293ba4737b211": {
@@ -6797,7 +7149,7 @@
   "c52677dc02f6a886": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 101,
+    "last_score": 106,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6915,10 +7267,10 @@
   "c8c85d1cadaf33e0": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 293,
+    "last_score": 353,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -6965,6 +7317,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "ca4a41726cd02267": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 80,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 80,
+        "summary": "An article titled 'Write Like It's 1866: LLMs Relearn Telegraphese' about LLMs and telegraphic style; the title doesn't indicate a builder-focused engineering topic."
+      }
+    },
+    "times_sent": 0
+  },
   "caa03cc38739079c": {
     "dismissed": null,
     "first_seen": "2026-09-19T21:52:36.261347+00:00",
@@ -6975,7 +7343,7 @@
   "cab2b62248188536": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 73,
+    "last_score": 74,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7012,7 +7380,7 @@
   "cc0ef86accf8db5b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 157,
+    "last_score": 175,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7102,6 +7470,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "cdb1d51fae043110": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 454,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 9,
+        "rubric": "3472af8a46e1",
+        "source_score": 454,
+        "summary": "An Anthropic link titled 'Claude Haiku 5.5,' indicating a model release."
+      }
+    },
+    "times_sent": 0
+  },
   "cdc7755a3d68093f": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -7114,6 +7498,22 @@
         "rubric": "080b24af813c",
         "source_score": null,
         "summary": "Researchers at the University of Toronto's School of Cities build interactive mapping and visualization tools to measure potential localized impacts of U.S. tariffs on jobs and businesses across Canadian cities."
+      }
+    },
+    "times_sent": 0
+  },
+  "cdcba032143cd057": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 86,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 86,
+        "summary": "AstroHelm is a Show HN app that uses your phone camera and plate solving to aim a telescope or telephoto lens."
       }
     },
     "times_sent": 0
@@ -7144,7 +7544,7 @@
   "cf64edd36b9e7709": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 89,
+    "last_score": 90,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7202,7 +7602,7 @@
   "d0bacd5807e55bc8": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 340,
+    "last_score": 342,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7216,7 +7616,7 @@
     "times_sent": 0
   },
   "d0c5804a83126e99": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
     "last_score": 2635,
     "ranks": {},
@@ -7225,7 +7625,7 @@
   "d0da800340042252": {
     "dismissed": null,
     "first_seen": "2026-10-04T13:42:30.838785+00:00",
-    "last_score": 1833,
+    "last_score": 2027,
     "ranks": {},
     "times_sent": 0
   },
@@ -7271,7 +7671,7 @@
   "d1edfb1393e6c151": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 59,
+    "last_score": 67,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7303,6 +7703,22 @@
     "first_seen": "2026-10-02T14:28:33.609973+00:00",
     "last_score": 576,
     "ranks": {},
+    "times_sent": 0
+  },
+  "d39539253b0e3a2e": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 35,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 35,
+        "summary": "A low-poly SimCity 2000 clone built with Opus 5.5 in TypeScript/WebGL from a single prompt."
+      }
+    },
     "times_sent": 0
   },
   "d39c5e2e4a5f7ccc": {
@@ -7388,6 +7804,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "d66b18709c4ba948": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 330,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 10,
+        "rubric": "3472af8a46e1",
+        "source_score": 330,
+        "summary": "An OpenAI link titled 'GPT\u20116 and Intelligent UI for everyone,' indicating a major model/platform release."
+      }
+    },
+    "times_sent": 0
+  },
   "d722de0994c8c693": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -7440,7 +7872,7 @@
     "times_sent": 1
   },
   "d88266bfe030164d": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-25T16:03:42.753888+00:00",
     "last_score": 402,
     "ranks": {},
@@ -7449,7 +7881,7 @@
   "d88bfef8fb860939": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 1487,
+    "last_score": 61,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7466,6 +7898,30 @@
         "rubric": "02189e2467e9",
         "source_score": 1450,
         "summary": "An open-source library of WebGPU shader components for React, Vue, Svelte, Solid, JS and Framer."
+      },
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": 61,
+        "summary": "A set of shader and WebGPU components for React, Vue, Svelte, Solid, JavaScript and Framer."
+      }
+    },
+    "times_sent": 0
+  },
+  "d8d38d395f9eac94": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 130,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": 130,
+        "summary": "A PSP game, God of War, recompiled to WebAssembly and running in the browser."
       }
     },
     "times_sent": 0
@@ -7489,7 +7945,7 @@
   "d9838d6f1098949b": {
     "dismissed": null,
     "first_seen": "2026-10-01T15:07:18.725260+00:00",
-    "last_score": 1648,
+    "last_score": 1698,
     "ranks": {},
     "times_sent": 0
   },
@@ -7531,10 +7987,10 @@
   "dab27c54d8c92fb4": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 701,
+    "last_score": 703,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -7549,6 +8005,22 @@
     "first_seen": "2026-09-25T09:09:50.571142+00:00",
     "last_score": 90,
     "ranks": {},
+    "times_sent": 0
+  },
+  "dabe8020b5e63706": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 30,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 30,
+        "summary": "An XDA article arguing a free local LLM can replace $20 ChatGPT or Claude subscriptions, touching on self-hosted/local model cost."
+      }
+    },
     "times_sent": 0
   },
   "db2a8980ee991b11": {
@@ -7584,7 +8056,7 @@
   "dbf6a51fde3f190f": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 482,
+    "last_score": 488,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7642,7 +8114,7 @@
   "dd19469c076fee7d": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 101,
+    "last_score": 102,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7746,7 +8218,7 @@
   "e0884a94b246efcd": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 233,
+    "last_score": 234,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7764,6 +8236,30 @@
     "first_seen": "2026-08-15T16:10:52.886374+00:00",
     "last_score": 218,
     "ranks": {},
+    "times_sent": 0
+  },
+  "e0bb7480c75f38cb": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 45,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 45,
+        "summary": "A collection of 160 open-source sound visualization experiments."
+      },
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 4,
+        "rubric": "080b24af813c",
+        "source_score": 45,
+        "summary": "An open-source collection of 160 sound visualization experiments."
+      }
+    },
     "times_sent": 0
   },
   "e111be34e51f8802": {
@@ -7889,7 +8385,7 @@
   "e2711c9ce5a221c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 115,
+    "last_score": 122,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7926,14 +8422,14 @@
     "times_sent": 0
   },
   "e345e1e0e83d199b": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-30T20:33:36.487127+00:00",
     "last_score": 3840,
     "ranks": {},
     "times_sent": 0
   },
   "e395188ccbcee80e": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-09-30T20:33:36.487127+00:00",
     "last_score": 32,
     "ranks": {},
@@ -7986,15 +8482,15 @@
   "e6e1d2a9f0a4e91a": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 265,
+    "last_score": 412,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
-        "ranked_at": "2026-10-06T23:34:58.463501+00:00",
+        "queued_at": "2026-10-07T21:01:09.362592+00:00",
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
-        "source_score": 186,
-        "summary": "EmbeddingGemma 2 is an open, lightweight multimodal embedding model."
+        "source_score": 412,
+        "summary": "A Google blog post titled 'EmbeddingGemma 2: An open, lightweight multimodal embedding model,' indicating an open embedding model release."
       }
     },
     "times_sent": 0
@@ -8127,6 +8623,22 @@
     },
     "times_sent": 0
   },
+  "eb00eeb3dc386b6c": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 73,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 73,
+        "summary": "commander-mangen generates man pages from a commander.js program, including every subcommand's options."
+      }
+    },
+    "times_sent": 0
+  },
   "eb27cd2dd2ee8eb1": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -8151,7 +8663,7 @@
   "ec4b5e65913390d0": {
     "dismissed": null,
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
-    "last_score": 107,
+    "last_score": 123,
     "ranks": {},
     "times_sent": 0
   },
@@ -8165,7 +8677,7 @@
   "ed68526f7a15f49a": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 401,
+    "last_score": 402,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8174,6 +8686,30 @@
         "rubric": "02189e2467e9",
         "source_score": 399,
         "summary": "The article is titled 'RIP, vector database'."
+      }
+    },
+    "times_sent": 0
+  },
+  "ee4f657a56bd17f5": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 54,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 54,
+        "summary": "Show HN for NanoMuse, described as an open-source AI agent for phone and computer."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 54,
+        "summary": "NanoMuse is an open-source AI agent for your phone and computer."
       }
     },
     "times_sent": 0
@@ -8225,7 +8761,7 @@
   "eee53d0231e76d4e": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 149,
+    "last_score": 261,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8519,7 +9055,7 @@
   "f72bb50387111952": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 129,
+    "last_score": 130,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8549,7 +9085,7 @@
   "f7794ae26edb3a7c": {
     "dismissed": null,
     "first_seen": "2026-10-01T04:20:51.005866+00:00",
-    "last_score": 4709,
+    "last_score": 5138,
     "ranks": {},
     "times_sent": 0
   },
@@ -8574,6 +9110,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "f912fde3e281653a": {
+    "dismissed": null,
+    "first_seen": "2026-10-07T21:01:09.362592+00:00",
+    "last_score": 149,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 149,
+        "summary": "An article titled 'Meta and Microsoft take steps to reduce employee usage of Claude AI,' which is company/business news."
+      }
+    },
+    "times_sent": 0
+  },
   "f936f1287ec538eb": {
     "dismissed": null,
     "first_seen": "2026-09-24T22:48:04.749226+00:00",
@@ -8591,7 +9143,7 @@
   "f9c4bac94922d6e0": {
     "dismissed": null,
     "first_seen": "2026-10-02T04:14:08.473534+00:00",
-    "last_score": 1626,
+    "last_score": 1693,
     "ranks": {},
     "times_sent": 0
   },

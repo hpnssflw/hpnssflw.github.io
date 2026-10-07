@@ -1,86 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-09-30T14:38:26.953769+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "A discussion about Pi.dev and its stance on MCP, directly relevant to LLM agent tooling and integration.",
-      "title": "Pi.dev: You Said No MCP",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://earendil.com/posts/you-said-no-mcp/"
-    },
-    {
-      "pending_since": "2026-09-30T14:38:26.953769+00:00",
-      "score": 10,
-      "source": "github",
-      "summary": "A highly relevant open-source web AI agent with its own browser that avoids blocking, fitting trending GitHub repos and web tools.",
-      "title": "feder-cr/dots",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/feder-cr/dots"
-    },
-    {
-      "pending_since": "2026-09-30T14:38:26.953769+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "A GitHub repository likely offering a 3D floorplan web tool, making it relevant to web development tooling.",
-      "title": "wy51ai/floorplan-3d",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/wy51ai/floorplan-3d"
-    },
-    {
-      "pending_since": "2026-09-30T14:38:26.953769+00:00",
-      "score": 7,
-      "source": "hn",
-      "summary": "A market and company news item about ASML's European sales, directly relevant to securities and market data trends.",
-      "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-says-its-sells-absolutely-nothing-in-europe-calls-on-eu-to-help-create-demand"
-    },
-    {
-      "pending_since": "2026-09-30T20:33:36.487127+00:00",
-      "score": 10,
-      "source": "hn",
-      "summary": "A self-optimizing inference engine for agents that runs faster than llama.cpp, directly relevant to LLM/inference optimization and agent pipelines.",
-      "title": "Launch HN: Magnitude (YC S25) \u2013 Self-optimizing inference engine for agents",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/magnitudedev/magnitude"
-    },
-    {
-      "pending_since": "2026-09-30T20:33:36.487127+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "Show HN about APIaxess, a free zero-setup Burp/Caido alternative for API testing, directly matching tooling and web development tools.",
-      "title": "Show HN: I built a free Burp/Caido alternative but, zero setup - API Testing",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://apiaxess.dev"
-    },
-    {
-      "pending_since": "2026-09-30T20:33:36.487127+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "A GitHub project providing a tiny macOS/Windows companion that monitors Claude Code sessions, making it a relevant developer tool.",
-      "title": "Louis-CFM/coucou",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/Louis-CFM/coucou"
-    },
-    {
-      "pending_since": "2026-09-30T20:33:36.487127+00:00",
-      "score": 6,
-      "source": "hn",
-      "summary": "A story about kids turning low-traffic NPR Spotify comments into a secret group chat, reflecting an internet community and product misuse trend relevant to web products.",
-      "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://www.thisamericanlife.org/897/transcript"
-    },
-    {
       "pending_since": "2026-10-01T04:20:51.005866+00:00",
       "score": 8,
       "source": "hn",
@@ -679,6 +599,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://blog.master.dev/interop-2027/"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 10,
+      "source": "hn",
+      "summary": "An OpenAI link titled 'GPT\u20116 and Intelligent UI for everyone,' indicating a major model/platform release.",
+      "title": "GPT\u20116 and Intelligent UI for everyone",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://openai.com/index/gpt-6-for-everyone/"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "An Anthropic link titled 'Claude Haiku 5.5,' indicating a model release.",
+      "title": "Claude Haiku 5.5",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://www.anthropic.com/claude-haiku-5-5"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A Google blog post titled 'EmbeddingGemma 2: An open, lightweight multimodal embedding model,' indicating an open embedding model release.",
+      "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Aleph Alpha announces Kolibri, a sovereign open-weight model, accompanied by a technical report and an additional paper.",
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "agent-guard provides behavior-guardrail hooks for Claude Code, covering test-tampering and outbound-action guards.",
+      "title": "hahahahahahahahah6/agent-guard",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/hahahahahahahahah6/agent-guard"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "ThinkTerm is a Rust terminal with a built-in multiplexer that keeps sessions running after closing and runs shells and AI agents across machines with desktop, browser, and TUI interfaces.",
+      "title": "RoversX/ThinkTerm",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/RoversX/ThinkTerm"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "An AI coding desktop client with Aegis governance built into execution, offering baseline-aware changes and evidence-backed delivery with a choice of model.",
+      "title": "GanyuanRan/Autoloom",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/GanyuanRan/Autoloom"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A post on shipping JPEG XL image support in Chrome.",
+      "title": "Shipping JPEG XL in Chrome",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome"
+    },
+    {
+      "pending_since": "2026-10-07T21:01:09.362592+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "Explores how sibling-count() counts siblings rather than children and how the parent element can't access that count, with a children-count() proposal still in discussion.",
+      "title": "Transferring sibling-count() to a Parent Element",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://blog.master.dev/transferring-sibling-count-to-a-parent-element/"
     }
   ],
   "last_email_at": "2026-09-30T04:08:45.319706+00:00"
