@@ -132,7 +132,7 @@ export function buildStages(
   const mark = (sum: Summed, line: string) => (sum.shared ? `${line} · ${text.shared}` : line);
 
   const collect = s("collect");
-  const window = s("window");
+  const inWindow = s("window");
   const dedupe = s("dedupe");
   const cache = s("cache");
   const enrich = s("enrich");
@@ -150,12 +150,15 @@ export function buildStages(
   );
   const rankLine = [minus(rank.drops.below_relevance, text.below(threshold))];
   if (rank.drops.off_topic) rankLine.push(minus(rank.drops.off_topic, text.drops.off_topic));
-  if (enrich.notes.full_text) rankLine.push(text.fullText(enrich.notes.full_text));
+  if (enrich.notes.full_text) {
+    const fullText = text.fullText(enrich.notes.full_text);
+    rankLine.push(enrich.shared && !rank.shared ? `${fullText} (${text.shared})` : fullText);
+  }
   const { delivery } = result;
 
   const rows: Omit<StageNumbers, "failed">[] = [
     { key: "collect", value: String(collect.out), line: mark(collect, collectDrops.length ? collectDrops.join(" · ") : text.found) },
-    { key: "window", value: String(window.out), line: mark(window, minus(window.drops.outside_window, text.drops.outside_window)) },
+    { key: "window", value: String(inWindow.out), line: mark(inWindow, minus(inWindow.drops.outside_window, text.drops.outside_window)) },
     {
       key: "dedupe",
       value: String(dedupe.out),

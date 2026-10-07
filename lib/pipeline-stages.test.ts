@@ -143,6 +143,18 @@ describe("buildStages on a demo preset's shared feeds", () => {
     });
   });
 
+  it("marks the shared full-text count on a topic's own rank line", () => {
+    const mixed: RunResult = structuredClone(newsroom1);
+    const rank = mixed.stages.find((s) => s.stage === "rank");
+    const enrich = mixed.stages.find((s) => s.stage === "enrich");
+    if (!rank || !enrich) throw new Error("fixture lacks rank or enrich");
+    rank.scopes.power = { in: 5, out: 2, drops: { below_relevance: 3 } };
+    delete enrich.scopes.power;
+    expect(enrich.scopes["*"]?.notes?.full_text).toBeGreaterThan(0);
+    const n = enrich.scopes["*"]?.notes?.full_text;
+    expect(table(buildStages(mixed, NONE, "power", en)).rank[1]).toBe(`−3 below 6 · +${n} full text (shared feeds, before sorting)`);
+  });
+
   it("keeps a topic's own feed numbers, plus what the shared feeds added", () => {
     const rows = table(buildStages(agro1, NONE, "prices", en));
     expect(rows.collect).toEqual(["3", "found"]);
