@@ -13,7 +13,7 @@
 ## Global Constraints
 
 - **Starts after D.** Both of D's pushes (`docs/superpowers/plans/2026-10-06-preset-switcher.md`, Tasks 7 and 10) must be on `origin/main`: `git ls-tree -r --name-only origin/main lib/digest.ts components/DemoRoom.tsx agent/presets/tony.yaml` prints all three. If not, stop — B extends D's files.
-- Work in the worktree `C:\A\polozov\.claude\worktrees\engine`, branch `worktree-engine`: it is `origin/main` plus the spec and this plan (reconciled with D's shipped code), and it holds the git-ignored `.superpowers/tools/cdp.mjs` the headless checks use. Don't execute the older copies of this plan on `worktree-stories` / `worktree-admin-panel`: they predate that reconcile. In a fresh worktree off `origin/main` instead (superpowers:using-git-worktrees), cherry-pick the spec and plan commits from `worktree-engine` (`git log --oneline worktree-engine -- docs/superpowers/specs/2026-10-07-content-engine-stories-design.md docs/superpowers/plans/2026-10-07-content-engine-stories.md`) and copy `C:\A\polozov\.claude\worktrees\engine\.superpowers\tools\cdp.mjs` into its `.superpowers/tools/`.
+- Work in a fresh worktree off `origin/main` (superpowers:using-git-worktrees), branch `worktree-stories`. Its spec and plan must include "Reconcile plan B with D's shipped code" (and the commit after it) from branch `worktree-engine`: the first copies on `worktree-admin-panel` predate D's shipped code. If `git log --oneline -- docs/superpowers/plans/2026-10-07-content-engine-stories.md` doesn't show it, cherry-pick the spec and plan commits from `worktree-engine` (`git log --oneline worktree-engine -- docs/superpowers/specs/2026-10-07-content-engine-stories-design.md docs/superpowers/plans/2026-10-07-content-engine-stories.md`). The headless checks need the git-ignored `.superpowers/tools/cdp.mjs`; if it's missing, copy it from `C:\A\polozov\.claude\worktrees\engine\.superpowers\tools\`.
 - Nothing reaches `main` until Task 12, after its checks **and Artem's explicit go-ahead**: every push to `main` changes the code the next scheduled agent run executes.
 - Never stage `.claude/settings.local.json`. Stage only the files a task lists.
 - Commit messages end with the trailer `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
@@ -58,7 +58,7 @@
 
 - [ ] **Step 1: Set up the worktree and check the baseline**
 
-Per Global Constraints: work in `worktree-engine` (or a fresh worktree set up as described there), build `agent/venv` if it's missing, `npm ci`. Run `agent/venv/Scripts/python -m pytest agent/tests -q` and `npm test`. Expected: both green. Record the counts in the ledger.
+Per Global Constraints: create `worktree-stories` off `origin/main` with the reconciled spec and plan, build `agent/venv`, `npm ci`. Run `agent/venv/Scripts/python -m pytest agent/tests -q` and `npm test`. Expected: both green. Record the counts in the ledger.
 
 - [ ] **Step 2: Add the shared preset helper to `agent/tests/conftest.py`**
 
