@@ -27,6 +27,9 @@ describe("TEXT", () => {
     expect(TEXT.ru.rail.sent(1, 1)).toBe("отправлено: 1 · сообщений: 1");
     expect(TEXT.ru.rail.every(1)).toBe("раз в 1 ч");
     expect(TEXT.ru.rail.fullText(21)).toBe("полный текст: +21");
+    expect(TEXT.ru.queue.sources(3)).toBe("источников: 3");
+    expect(TEXT.ru.rail.joined(2)).toBe("в сюжеты: +2");
+    expect(TEXT.ru.rail.withFacts(1)).toBe("с фактами: 1");
     expect(flat(TEXT.ru.spine.rssOn(1))).toBe("rss — лент: 1");
     expect(flat(TEXT.ru.spine.hnOn(21, 5))).toBe("hn — слов в заголовке: 21, очки ≥5");
     expect(flat(TEXT.ru.spine.githubOn(1, 100))).toBe("github — тем: 1, ≥100★");

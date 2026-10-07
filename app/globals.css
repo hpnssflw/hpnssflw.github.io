@@ -2104,7 +2104,8 @@ body:has(.cr) footer {
   margin: 0;
   padding: 6px 4px;
   display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
+  /* --rail-cells: set by PipelineRail — nine stages, ten with stories. */
+  grid-template-columns: repeat(var(--rail-cells, 9), minmax(0, 1fr));
   background: var(--card-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -2496,4 +2497,45 @@ body:has(.cr) footer {
   .cr-demo-nav {
     justify-content: flex-start;
   }
+}
+
+/* --- Stories (presets with `stories:`) -------------------------------
+   Under a queue row's title: how many sources reported the story and who
+   was first, then its cited facts, each with the [n] of its reports —
+   links only where the queue links items (the demo's URLs are synthetic,
+   so there they're plain text). A story the facts step found nothing
+   checkable in is flagged in the control room's failure red. */
+.cr-story {
+  padding-left: 24px;
+}
+
+.cr-story p {
+  margin: 0;
+}
+
+.cr-facts {
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.cr-facts li + li {
+  margin-top: 2px;
+}
+
+.cr-facts span {
+  color: var(--muted);
+}
+
+.cr-facts a {
+  color: var(--agent-lime);
+}
+
+.cr-flag {
+  color: var(--agent-red);
 }

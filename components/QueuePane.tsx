@@ -5,6 +5,7 @@ import { type Decision, type Decisions, itemStatus } from "@/lib/inbox";
 import type { Text } from "@/lib/control-room-text";
 import { type PendingItem, itemDomain, safeHref } from "@/lib/pending-queue";
 import { STATUS_FILTERS, type StatusFilter, moveSelection } from "@/lib/queue-view";
+import { storyOf } from "@/lib/run-result";
 
 function typingIn(target: EventTarget | null): boolean {
   return (
@@ -15,8 +16,9 @@ function typingIn(target: EventTarget | null): boolean {
 
 /**
  * The moderation queue: status chips, one row per item (score, title,
- * source · domain · topic · date), the selected row unfolded with its
- * summary and actions. Keys: j/k move and o opens an http(s) link for everyone; a/r/u
+ * a story's sources and cited facts, source · domain · topic · date), the
+ * selected row unfolded with its summary and actions. A fact's [n] links
+ * its report only when linkItems is on. Keys: j/k move and o opens an http(s) link for everyone; a/r/u
  * approve, reject and undo for the owner.
  */
 export default function QueuePane({
@@ -128,6 +130,45 @@ export default function QueuePane({
                       <span className={`cr-decision inbox-${status}`}>{text.statuses[status]}</span>
                     )}
                   </div>
+                  {(() => {
+                    const story = storyOf(item);
+                    if (!story) return null;
+                    const urlOf = new Map(story.reports.map((r) => [r.n, r.url]));
+                    return (
+                      <div className="cr-story">
+                        <p className="agent-muted">
+                          {text.sources(new Set(story.reports.map((r) => r.source_id)).size)} ·{" "}
+                          {text.firstBy(story.reports[0].source_name)}
+                          {story.flagged && <span className="cr-flag"> · {text.flagged}</span>}
+                        </p>
+                        {story.facts.length > 0 && (
+                          <ol className="cr-facts">
+                            {story.facts.map((fact) => (
+                              <li key={fact.text}>
+                                {fact.text}{" "}
+                                {fact.refs.map((n) => {
+                                  const href = linkItems ? safeHref(urlOf.get(n) ?? "") : null;
+                                  return href ? (
+                                    <a
+                                      key={n}
+                                      href={href}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      onClick={(event) => event.stopPropagation()}
+                                    >
+                                      [{n}]
+                                    </a>
+                                  ) : (
+                                    <span key={n}>[{n}]</span>
+                                  );
+                                })}
+                              </li>
+                            ))}
+                          </ol>
+                        )}
+                      </div>
+                    );
+                  })()}
                   <div className="cr-meta">
                     {item.source} · {itemDomain(item.url, text.invalidUrl)}
                     {topicNames && ` · ${topicNames[item.topic] ?? item.topic}`} · {text.date(item.pending_since)}

@@ -31,13 +31,23 @@ export interface ConfigView {
   feeds: FeedConfig[];
   /** telegram_public's channels, shown as "coming soon"; null when the preset has none. */
   telegram: { handle: string; name: string }[] | null;
+  /** How reports group into stories; null when the preset has no `stories:`. */
+  stories: StoriesView | null;
   topics: TopicView[];
+}
+
+export interface StoriesView {
+  windowHours: number;
+  timezone: string;
+  nearText: number;
+  llmMerge: boolean;
+  maxFacts: number;
 }
 
 const INBOX_REPO_RE = /^https:\/\/api\.github\.com\/repos\/([^/]+\/[^/]+)\/contents\//;
 
 export function configView(config: RunConfig): ConfigView {
-  const { approval, delivery, ranking } = config;
+  const { approval, delivery, ranking, stories } = config;
   return {
     llm: {
       model: ranking.model,
@@ -59,6 +69,15 @@ export function configView(config: RunConfig): ConfigView {
     delivery: { kind: delivery.type, chat: delivery.chat, title: delivery.title, cadenceHours: delivery.cadence_hours },
     feeds: config.sources.rss,
     telegram: config.sources.telegram_public?.channels ?? null,
+    stories: stories
+      ? {
+          windowHours: stories.window_hours,
+          timezone: stories.timezone,
+          nearText: stories.near_text,
+          llmMerge: stories.llm_merge,
+          maxFacts: stories.max_facts,
+        }
+      : null,
     topics: config.topics.map((t) => ({
       slug: t.slug,
       name: t.name,

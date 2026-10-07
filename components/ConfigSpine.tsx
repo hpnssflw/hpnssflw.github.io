@@ -193,6 +193,19 @@ function rowsFor(
         </>
       ),
     },
+    stories: {
+      params: config.stories ? (
+        <Parts
+          parts={text.stories(
+            config.stories.windowHours,
+            config.stories.timezone,
+            config.stories.nearText,
+            config.stories.llmMerge,
+            config.stories.maxFacts,
+          )}
+        />
+      ) : null,
+    },
     cap: { params: <Parts parts={text.cap(scope.map((t) => t.maxItemsPerDay).join(" + "), config.queueWindowHours)} /> },
     queue: { params: text.queue },
     review: {
@@ -224,7 +237,8 @@ function rowsFor(
  * A preset's config, one row per rail stage on a vertical spine. With a
  * topic picked, collect unfolds its keywords, GitHub topics and feeds,
  * and rank its include/exclude criteria. Preset feeds and the Telegram
- * "coming soon" channels unfold under collect.
+ * "coming soon" channels unfold under collect. The stories row shows only
+ * for presets with `stories:`.
  */
 export default function ConfigSpine({
   config,
@@ -250,7 +264,7 @@ export default function ConfigSpine({
 
   return (
     <ol className="cr-spine" aria-label={text.spine.label}>
-      {STAGE_KEYS.map((key) => (
+      {(config.stories ? STAGE_KEYS : STAGE_KEYS.filter((k) => k !== "stories")).map((key) => (
         <li key={key} id={`cr-stage-${key}`} className="cr-stage" data-active={active === key} onClick={() => onPick(key)}>
           <span className="cr-dot" aria-hidden="true" />
           <span className="cr-label">{text.stages[key]}</span>

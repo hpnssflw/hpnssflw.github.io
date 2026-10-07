@@ -8,9 +8,17 @@ export type TopicFilter = "all" | (string & {});
 
 /** The rail, in reading order. "review" is where moderation sits
  * logically; the agent applies decisions at the start of its next run.
- * run-result.json's `enrich` folds into rank, `format` into deliver. */
-export const STAGE_KEYS = ["collect", "window", "dedupe", "cache", "rank", "cap", "queue", "review", "deliver"] as const;
+ * run-result.json's `enrich` folds into rank, `format` into deliver;
+ * `group` and `facts` make "stories", which only runs that grouped
+ * stories show (railKeys). */
+export const STAGE_KEYS = ["collect", "window", "dedupe", "cache", "rank", "stories", "cap", "queue", "review", "deliver"] as const;
 export type StageKey = (typeof STAGE_KEYS)[number];
+
+/** The rail's cells for a run: "stories" only when the run grouped stories. */
+export function railKeys(result: RunResult | null): StageKey[] {
+  const grouped = result?.stages.some((s) => s.stage === "group") ?? false;
+  return STAGE_KEYS.filter((key) => key !== "stories" || grouped);
+}
 
 export interface StageNumbers {
   key: StageKey;
@@ -45,6 +53,8 @@ const RAIL_STAGE: Record<string, StageKey> = {
   cache: "cache",
   enrich: "rank",
   rank: "rank",
+  group: "stories",
+  facts: "stories",
   cap: "cap",
   queue: "queue",
   review: "review",
@@ -118,7 +128,7 @@ export function buildStages(
     live.decisions && pool ? pool.filter((i) => itemStatus(live.decisions, i.url) === "approved").length : null;
 
   if (!result) {
-    return STAGE_KEYS.map((key) => ({
+    return railKeys(null).map((key) => ({
       key,
       value:
         key === "queue" && liveQueue ? String(liveQueue.length) : key === "review" && approved !== null ? String(approved) : DASH,
@@ -179,6 +189,14 @@ export function buildStages(
       line: delivery.sent_items > 0 ? text.sent(delivery.sent_items, delivery.messages) : text.approvedOnly,
     },
   ];
+
+  if (railKeys(result).includes("stories")) {
+    const group = s("group");
+    const facts = s("facts");
+    const line = [text.joined(group.notes.joined ?? 0), minus(group.drops.same_story, text.sameStory)];
+    if (facts.out || facts.notes.flagged) line.push(text.withFacts(facts.out), text.flagged(facts.notes.flagged ?? 0));
+    rows.splice(rows.findIndex((r) => r.key === "rank") + 1, 0, { key: "stories", value: String(group.out), line: line.join(" · ") });
+  }
 
   return rows.map((row) => {
     const hits = result.failures.filter(

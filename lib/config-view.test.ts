@@ -47,6 +47,17 @@ describe("configView", () => {
     ]);
   });
 
+  it("shows a preset's stories settings, and none for a preset without stories", () => {
+    expect(configView(run("newsroom-demo", "golden", "run1.json").config).stories).toEqual({
+      windowHours: 24,
+      timezone: "+03:00",
+      nearText: 0.6,
+      llmMerge: true,
+      maxFacts: 3,
+    });
+    expect(configView(run("agro-demo", "golden", "run1.json").config).stories).toBeNull();
+  });
+
   it("keeps a topic's own feeds", () => {
     const view = configView(run("agro-demo", "golden", "run1.json").config);
     expect(view.topics.find((t) => t.slug === "prices")?.rss.map((f) => f.name)).toEqual(["Биржевые котировки (пример)"]);

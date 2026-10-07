@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { TEXT } from "./control-room-text";
 import type { Decisions } from "./inbox";
 import type { PendingItem } from "./pending-queue";
-import { STAGE_KEYS, type StageNumbers, buildStages, topicSlugs } from "./pipeline-stages";
+import { type StageNumbers, buildStages, railKeys, topicSlugs } from "./pipeline-stages";
 import { type RunResult, parseRunResult } from "./run-result";
 
 function run(...parts: string[]): RunResult {
@@ -36,7 +36,7 @@ describe("topicSlugs", () => {
 
 describe("buildStages on Tony's run", () => {
   it("returns the nine stages in order", () => {
-    expect(buildStages(tony, NONE, "all", en).map((s) => s.key)).toEqual([...STAGE_KEYS]);
+    expect(buildStages(tony, NONE, "all", en).map((s) => s.key)).toEqual(railKeys(tony));
   });
 
   it("sums every topic under all", () => {
@@ -122,6 +122,7 @@ describe("buildStages on a demo preset's shared feeds", () => {
       dedupe: ["19", "−1 seen · −0 dismissed"],
       cache: ["19", "−0 cached below"],
       rank: ["14", "−3 below 6 · −2 off topic · +3 full text"],
+      stories: ["11", "+0 joined · −0 same story · 2 with facts · 0 flagged"],
       cap: ["8", "−3 over cap"],
       queue: ["8", "+8 this run"],
       review: ["0", "−0 rejected · −0 expired"],
@@ -137,6 +138,7 @@ describe("buildStages on a demo preset's shared feeds", () => {
       dedupe: ["19", `−1 seen · −0 dismissed${shared}`],
       cache: ["19", `−0 cached below${shared}`],
       rank: ["4", `−3 below 6 · −2 off topic · +3 full text${shared}`],
+      stories: ["4", "+0 joined · −0 same story"],
       cap: ["3", "−1 over cap"],
       queue: ["3", "+3 this run"],
       review: ["0", "−0 rejected · −0 expired"],
@@ -168,6 +170,14 @@ describe("buildStages on a demo preset's shared feeds", () => {
       decisions: { "https://example-agency.ru/news/102": { decision: "approve", at: "2026-10-06T06:00:00Z" } },
     };
     expect(table(buildStages(newsroom1, { queue: null, decisions }, "all", en)).review[0]).toBe("1");
+  });
+
+  it("shows a stories cell only for runs with a group stage", () => {
+    const keys = (r: RunResult) => buildStages(r, NONE, "all", en).map((s) => s.key);
+    expect(keys(newsroom1)).toEqual(["collect", "window", "dedupe", "cache", "rank", "stories", "cap", "queue", "review", "deliver"]);
+    expect(keys(tony)).not.toContain("stories");
+    const cell = buildStages(newsroom1, NONE, "all", TEXT.ru.rail).find((s) => s.key === "stories")!;
+    expect(cell.value).toBe("11"); // stories formed in run 1: incidents 4, power 4, economy 3
   });
 
   it("speaks the preset's language", () => {

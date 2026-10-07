@@ -1,10 +1,11 @@
+import type { CSSProperties } from "react";
 import type { Text } from "@/lib/control-room-text";
 import type { StageKey, StageNumbers } from "@/lib/pipeline-stages";
 
 /**
- * The nine stages of the last run, left to right: each a number and a
- * muted line of what it removed. A stage that failed this run turns red.
- * Clicking one highlights its row in the config spine.
+ * The stages of the last run, left to right (nine; ten with stories):
+ * each a number and a muted line of what it removed. A stage that failed
+ * this run turns red. Clicking one highlights its row in the config spine.
  */
 export default function PipelineRail({
   stages,
@@ -20,7 +21,7 @@ export default function PipelineRail({
   text: Text;
 }) {
   return (
-    <ol className="cr-rail" aria-label={text.rail.label}>
+    <ol className="cr-rail" aria-label={text.rail.label} style={{ "--rail-cells": stages.length } as CSSProperties}>
       {stages.map((stage) => (
         <li key={stage.key}>
           <button
