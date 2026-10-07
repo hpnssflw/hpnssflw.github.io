@@ -81,6 +81,41 @@ export interface DeliveryConfig {
   chat: string | null;
 }
 
+export interface StoryReport {
+  n: number;
+  url: string;
+  title: string;
+  source_id: string;
+  source_name: string;
+  published_at: string;
+  score: number;
+}
+
+export interface StoryFact {
+  text: string;
+  /** Report numbers (StoryReport.n), ascending. */
+  refs: number[];
+}
+
+/** A queue item's story (presets with `stories:`): its reports in
+ * published order, cited facts, and the rendered "who was first" line. */
+export interface QueueStory {
+  reports: StoryReport[];
+  facts: StoryFact[];
+  flagged: boolean;
+  first: string | null;
+}
+
+export interface StoriesConfig {
+  window_hours: number;
+  timezone: string;
+  near_text: number;
+  llm_merge: boolean;
+  max_facts: number;
+  merge_prompt_version: number;
+  facts_prompt_version: number;
+}
+
 export interface RunConfig {
   max_age_days: number;
   sources: { rss: FeedConfig[]; telegram_public: TelegramStub | null };
@@ -96,10 +131,12 @@ export interface RunConfig {
   cap_window_hours: number;
   approval: ApprovalResult;
   delivery: DeliveryConfig;
+  stories?: StoriesConfig;
 }
 
 export interface QueueItem extends PendingItem {
   decision: "approve" | "reject" | null;
+  story?: QueueStory;
 }
 
 export interface RunResult {
@@ -273,8 +310,55 @@ function failure(value: unknown): RunFailureRecord {
   };
 }
 
+function storyReport(value: unknown): StoryReport {
+  const r = rec(value);
+  return {
+    n: num(r.n),
+    url: str(r.url),
+    title: str(r.title),
+    source_id: str(r.source_id),
+    source_name: str(r.source_name),
+    published_at: date(r.published_at),
+    score: num(r.score),
+  };
+}
+
+function story(value: unknown): QueueStory {
+  const s = rec(value);
+  return {
+    reports: list(s.reports, storyReport),
+    facts: list(s.facts, (f) => {
+      const fact = rec(f);
+      return { text: str(fact.text), refs: list(fact.refs, num) };
+    }),
+    flagged: bool(s.flagged),
+    first: s.first === null ? null : str(s.first),
+  };
+}
+
+function storiesConfig(value: unknown): StoriesConfig {
+  const c = rec(value);
+  return {
+    window_hours: num(c.window_hours),
+    timezone: str(c.timezone),
+    near_text: num(c.near_text),
+    llm_merge: bool(c.llm_merge),
+    max_facts: num(c.max_facts),
+    merge_prompt_version: num(c.merge_prompt_version),
+    facts_prompt_version: num(c.facts_prompt_version),
+  };
+}
+
+/** The item's story when it has two or more reports; null otherwise
+ * (a single-report story renders like any queue item). */
+export function storyOf(item: PendingItem): QueueStory | null {
+  const s = (item as Partial<QueueItem>).story;
+  return s && s.reports.length >= 2 ? s : null;
+}
+
 function queueItem(value: unknown): QueueItem {
   const i = rec(value);
+  const parsed = i.story === undefined ? undefined : optional<QueueStory | undefined>(() => story(i.story), undefined);
   return {
     url: str(i.url),
     title: str(i.title),
@@ -285,6 +369,7 @@ function queueItem(value: unknown): QueueItem {
     score: num(i.score),
     pending_since: str(i.pending_since),
     decision: decisionOf(i.decision),
+    ...(parsed ? { story: parsed } : {}),
   };
 }
 
@@ -298,6 +383,8 @@ export function parseRunResult(value: unknown): RunResult | null {
     const sources = rec(config.sources);
     const ranking = rec(config.ranking);
     const delivery = optional(() => rec(r.delivery), {} as Raw);
+    const stories =
+      config.stories === undefined ? undefined : optional<StoriesConfig | undefined>(() => storiesConfig(config.stories), undefined);
     return {
       schema_version: RUN_RESULT_SCHEMA,
       preset: { slug: str(preset.slug), name: str(preset.name), language: languageOf(preset.language) },
@@ -320,6 +407,7 @@ export function parseRunResult(value: unknown): RunResult | null {
         cap_window_hours: num(config.cap_window_hours),
         approval: approval(config.approval),
         delivery: deliveryConfig(config.delivery),
+        ...(stories ? { stories } : {}),
       },
       stages: list(r.stages, stage),
       failures: optional(() => list(r.failures, failure), []),

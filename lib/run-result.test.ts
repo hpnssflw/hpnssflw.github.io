@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { parseRunResult } from "./run-result";
+import { parseRunResult, storyOf } from "./run-result";
 
 const FIXTURES = join(process.cwd(), "agent", "tests", "fixtures");
 
@@ -55,7 +55,7 @@ describe("parseRunResult on the goldens", () => {
       "example_region_gov",
       "example_city_chat",
     ]);
-    expect(news?.stages.find((s) => s.stage === "rank")?.scopes["*"].assigned).toEqual({ economy: 3, incidents: 4, power: 4 });
+    expect(news?.stages.find((s) => s.stage === "rank")?.scopes["*"].assigned).toEqual({ economy: 4, incidents: 6, power: 4 });
     expect(news?.queue.items[0].decision).toBe("approve");
     expect(parseRunResult(agro(1))?.config.topics.find((t) => t.slug === "prices")?.rss.map((f) => f.id)).toEqual(["exchange"]);
   });
@@ -107,5 +107,34 @@ describe("parseRunResult drops a bad optional part", () => {
     const raw = newsroom(1);
     raw.config.sources.telegram_public = { channels: "x" };
     expect(parseRunResult(raw)?.config.sources.telegram_public).toBeNull();
+  });
+});
+
+describe("stories", () => {
+  it("parses the newsroom's story fields", () => {
+    const run = parseRunResult(newsroom(1))!;
+    const pipe = run.queue.items.find((i) => i.url === "https://example-agency.ru/news/101")!;
+    expect(pipe.story!.reports.map((r) => r.source_id)).toEqual(["agency", "city", "ministry"]);
+    expect(pipe.story!.facts).toHaveLength(2);
+    expect(run.config.stories?.timezone).toBe("+03:00");
+    expect(storyOf(pipe)).not.toBeNull();
+  });
+
+  it("leaves Tony and agro without stories", () => {
+    expect(readFileSync(join(process.cwd(), "agent", "presets", "tony.yaml"), "utf8")).not.toMatch(/^stories:/m);
+    const tonyRun = parseRunResult(tony())!;
+    expect(tonyRun.config.stories).toBeUndefined();
+    expect(tonyRun.queue.items.every((i) => i.story === undefined)).toBe(true);
+    const agroRun = parseRunResult(agro(1))!;
+    expect(agroRun.config.stories).toBeUndefined();
+    expect(agroRun.queue.items.every((i) => i.story === undefined)).toBe(true);
+  });
+
+  it("drops a malformed story but keeps the item", () => {
+    const raw = newsroom(1);
+    raw.queue.items[0].story = { reports: "nope" };
+    const run = parseRunResult(raw)!;
+    expect(run.queue.items[0].story).toBeUndefined();
+    expect(run.queue.items).toHaveLength(raw.queue.items.length);
   });
 });

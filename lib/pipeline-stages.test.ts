@@ -117,11 +117,11 @@ describe("buildStages on Tony's run", () => {
 describe("buildStages on a demo preset's shared feeds", () => {
   it("sums the shared feeds into all, with the full-text note", () => {
     expect(table(buildStages(newsroom1, NONE, "all", en))).toEqual({
-      collect: ["19", "−2 undated"],
-      window: ["17", "−2 too old"],
-      dedupe: ["16", "−1 seen · −0 dismissed"],
-      cache: ["16", "−0 cached below"],
-      rank: ["11", "−3 below 6 · −2 off topic · +3 full text"],
+      collect: ["22", "−2 undated"],
+      window: ["20", "−2 too old"],
+      dedupe: ["19", "−1 seen · −0 dismissed"],
+      cache: ["19", "−0 cached below"],
+      rank: ["14", "−3 below 6 · −2 off topic · +3 full text"],
       cap: ["8", "−3 over cap"],
       queue: ["8", "+8 this run"],
       review: ["0", "−0 rejected · −0 expired"],
@@ -132,10 +132,10 @@ describe("buildStages on a demo preset's shared feeds", () => {
   it("shows a topic the shared feeds before sorting, and what was sorted into it", () => {
     const shared = " · shared feeds, before sorting";
     expect(table(buildStages(newsroom1, NONE, "power", en))).toEqual({
-      collect: ["19", `−2 undated${shared}`],
-      window: ["17", `−2 too old${shared}`],
-      dedupe: ["16", `−1 seen · −0 dismissed${shared}`],
-      cache: ["16", `−0 cached below${shared}`],
+      collect: ["22", `−2 undated${shared}`],
+      window: ["20", `−2 too old${shared}`],
+      dedupe: ["19", `−1 seen · −0 dismissed${shared}`],
+      cache: ["19", `−0 cached below${shared}`],
       rank: ["4", `−3 below 6 · −2 off topic · +3 full text${shared}`],
       cap: ["3", "−1 over cap"],
       queue: ["3", "+3 this run"],
@@ -172,7 +172,7 @@ describe("buildStages on a demo preset's shared feeds", () => {
 
   it("speaks the preset's language", () => {
     expect(table(buildStages(newsroom1, NONE, "power", TEXT.ru.rail)).collect).toEqual([
-      "19",
+      "22",
       "−2 без даты · общие ленты, до сортировки",
     ]);
   });

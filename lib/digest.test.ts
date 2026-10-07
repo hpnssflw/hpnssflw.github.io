@@ -28,6 +28,25 @@ describe("digestHtml", () => {
         '• <a href="https://x.example/?a=1&amp;b=&quot;2&quot;">&lt;a &amp; &quot;b&quot;&gt;</a>\nit&#x27;s',
     );
   });
+
+  it("renders a story with facts, report links and the first line", () => {
+    const story = {
+      reports: [
+        { n: 1, url: "https://a/1", title: "a", source_id: "agency", source_name: "А", published_at: "2026-10-06T03:10:00+00:00", score: 8 },
+        { n: 2, url: "https://c/1", title: "c", source_id: "city", source_name: "Г", published_at: "2026-10-06T03:52:00+00:00", score: 7 },
+      ],
+      facts: [{ text: "Факт & два.", refs: [1, 2] }],
+      flagged: false,
+      first: "Первым — А, 06:10; через 42 мин — Г",
+    };
+    const html = digestHtml(digestBlocks([{ ...item("https://a/1", "T", 8, "Прорыв"), story }], "S", "ru"));
+    expect(html).toBe(
+      "<b>S — материалов: 1</b>\n\n<b>T</b>\n" +
+        '• <a href="https://a/1">Прорыв</a>\n' +
+        'Факт &amp; два. <a href="https://a/1">[1]</a><a href="https://c/1">[2]</a>\n' +
+        "Первым — А, 06:10; через 42 мин — Г",
+    );
+  });
 });
 
 describe("digestBlocks", () => {

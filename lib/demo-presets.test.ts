@@ -7,7 +7,7 @@ describe("demo presets", () => {
     expect(demo.run1.preset.slug).toBe(slug);
     expect(demo.run2.preset.slug).toBe(slug);
     expect(demo.run1.preset.language).toBe("ru");
-    expect(demo.run2.delivery.sent_items).toBe(3);
+    expect(demo.run2.delivery.sent_items).toBe(slug === "newsroom-demo" ? 4 : 3);
   });
 
   it("names them for the switcher", () => {
