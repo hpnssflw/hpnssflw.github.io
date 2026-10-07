@@ -96,6 +96,8 @@ def run_real(
         approved, inbox_drops = inbox.apply_decisions(queue, decisions, state, now, preset.approval.expire_days)
         for topic_slug, drop in inbox_drops:
             writer.emit_drop("inbox", topic_slug, drop)
+        if ctx.stories is not None:
+            stories.apply_review(ctx.stories, state, approved, inbox_drops)
     _tally_review(tally, queued_before_review, queue, inbox_drops, approved)
 
     for topic in topics:
@@ -130,6 +132,8 @@ def run_real(
         else:
             for item in approved:
                 dedupe.mark_sent_url(state, item.url)
+            if ctx.stories is not None:
+                stories.mark_delivered(ctx.stories, state, [item.url for item in approved])
             sent_urls = {item.url for item in approved}
             queue.items = [item for item in queue.items if item.url not in sent_urls]
             queue.last_email_at = now.isoformat()
@@ -230,7 +234,10 @@ def run_preview(
         print(pipeline.format_preview(topic, result))
     if preset.feeds and topic_filter is None:
         try:
-            print(pipeline.format_feed_preview(list(preset.topics), pipeline.process_feeds(ctx)))
+            feeds = pipeline.process_feeds(ctx)
+            print(pipeline.format_feed_preview(list(preset.topics), feeds))
+            if feeds.stories is not None:
+                print(pipeline.format_stories_preview(feeds.stories, ctx))
         except Exception as exc:  # noqa: BLE001 — the topics' preview above still stands
             print(f"\n== preset feeds -- failed: {exc}")
     print("\nPreview only: nothing was written.")

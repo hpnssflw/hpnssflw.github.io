@@ -4,9 +4,12 @@ import json
 from datetime import datetime
 
 from agent import engine, stories
+from agent.dedupe import load_state, url_hash
+from agent.fetch import OfflineFetcher
 from agent.paths import DataPaths
 from agent.pending import load_pending
 from agent.preset import load_preset
+from agent.stories import Fact
 from agent.tests import stories_mini as mini
 
 A, C, G = mini.A, mini.C, mini.G
@@ -75,3 +78,74 @@ def test_presets_without_stories_keep_eleven_stages():
 
     assert len(STAGES) == 11
     assert [s["stage"] for s in Tally(["t"], has_feeds=True).stages()] == [s for s, _ in STAGES]
+
+
+def run2(preset, paths, tmp_path):
+    adapters = engine.offline_adapters(preset, paths)
+    adapters.fetcher = OfflineFetcher(tmp_path / "mini" / "http-later.yaml")
+    engine.run_real(preset, paths, datetime.fromisoformat(mini.LATER), adapters)
+    return adapters, json.loads(paths.result.read_text(encoding="utf-8"))
+
+
+def test_run_one_writes_facts_for_multi_report_stories(tmp_path, no_network):
+    _, paths, adapters, result = run1(tmp_path)
+    store = stories.load_store(paths.stories)
+    assert store.stories[f"{A}/1"].facts == [
+        Fact(text="Без холодной воды остались три квартала.", urls=[f"{A}/1", f"{C}/c1"]),
+        Fact(text="Организован подвоз питьевой воды.", urls=[f"{G}/g1"]),
+    ]  # the fact citing [4] was dropped
+    assert store.stories[f"{A}/2"].facts == [Fact(text="Завод сократит 300 рабочих мест.", urls=[f"{A}/2", f"{C}/c2"])]
+    assert store.stories[f"{A}/3"].facts == [] and store.stories[f"{A}/3"].facts_for is None  # one report: no facts
+    assert stage(result, "facts")["incidents"] == {"in": 1, "out": 1, "drops": {}, "notes": {"facts": 2}}
+    assert adapters.ranker.facts_calls == 1
+
+
+def test_run_two_joins_drops_reviews_and_delivers(tmp_path, no_network):
+    preset, paths, _, _ = run1(tmp_path)
+    adapters, result = run2(preset, paths, tmp_path)
+
+    store = stories.load_store(paths.stories)
+    pipe = store.stories[f"{A}/1"]
+    assert [r.url for r in stories.ordered(pipe, stories.feed_order(preset))][0] == f"{G}/g2"  # published first, collected late
+    assert pipe.status == "queued" and pipe.facts == [Fact(text="Давление упало ночью.", urls=[f"{G}/g2"])]
+    assert (store.stories[f"{A}/2"].status, store.stories[f"{A}/3"].status, store.stories[f"{A}/4"].status) == ("sent", "rejected", "waiting")
+
+    group = stage(result, "group")
+    assert group["incidents"]["notes"] == {"joined": 2}
+    assert group["economy"]["drops"] == {"same_story": 1}  # c3 reprints the approved plant story
+    assert adapters.ranker.merge_calls == 1 and adapters.ranker.facts_calls == 1
+
+    state = load_state(paths.state)
+    assert state[url_hash(f"{C}/c2")].times_sent == 1  # delivery marks every report of the story
+    assert state[url_hash(f"{A}/3")].dismissed == "rejected"
+    assert state[url_hash(f"{C}/c3")].dismissed == "same_story"  # never grouped again
+    assert [i.url for i in load_pending(paths.pending).items] == [f"{A}/1"]
+
+
+def test_facts_failure_keeps_the_story_unflagged(tmp_path, no_network):
+    failing = json.loads(json.dumps(mini.STORIES))
+    failing["facts"][0]["response"] = None
+    _, paths, _, result = run1(tmp_path, failing)
+    pipe = stories.load_store(paths.stories).stories[f"{A}/1"]
+    assert (pipe.facts, pipe.facts_for, pipe.flagged) == ([], None, False)
+    assert [f["stage"] + ":" + f["error_type"] for f in result["failures"]] == ["facts:FactsInvalid"]
+
+
+def test_all_facts_invalid_flags_the_story(tmp_path, no_network):
+    invalid = json.loads(json.dumps(mini.STORIES))
+    invalid["facts"][0]["response"] = {"facts": [{"text": "Без ссылки.", "refs": []}]}
+    _, paths, _, result = run1(tmp_path, invalid)
+    pipe = stories.load_store(paths.stories).stories[f"{A}/1"]
+    assert (pipe.facts, pipe.flagged) == ([], True) and pipe.facts_for is not None
+    assert stage(result, "facts")["incidents"]["notes"] == {"facts": 0, "flagged": 1}
+
+
+def test_preview_prints_stories_and_writes_nothing(tmp_path, no_network, capsys):
+    preset = load_preset(mini.write(tmp_path / "mini"))
+    paths = DataPaths(tmp_path / "data")
+    paths.root.mkdir(parents=True)
+    adapters = engine.offline_adapters(preset, paths)
+    engine.run_preview(preset, paths, preset.offline.now, adapters)
+    out = capsys.readouterr().out
+    assert "== stories" in out and "3 src" in out and "Прорыв трубы на Садовой" in out
+    assert adapters.ranker.facts_calls == 0 and not paths.stories.exists()

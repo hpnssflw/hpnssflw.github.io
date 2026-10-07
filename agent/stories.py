@@ -16,7 +16,7 @@ from datetime import datetime, timedelta, tzinfo
 from pathlib import Path
 from typing import Callable
 
-from agent import summarize
+from agent import dedupe, summarize
 from agent.item import Item
 from agent.preset import StoriesConfig
 from agent.sources.base import Drop
@@ -452,3 +452,35 @@ def filter_members(items: list[Item], store: StoryStore) -> tuple[list[Item], li
         else:
             kept.append(item)
     return kept, drops
+
+
+# --- review and delivery -----------------------------------------------------
+
+
+def apply_review(store: StoryStore, state: dict, approved: list, drops: list) -> None:
+    """After inbox.apply_decisions: approve closes a story for joining; a
+    reject or expiry dismisses every report, so none comes back."""
+    for item in approved:
+        story = store.stories.get(item.url)
+        if story is not None:
+            story.status = "approved"
+    for _, drop in drops:
+        story = store.stories.get(drop.url)
+        if story is None:
+            continue
+        story.status = drop.reason  # rejected | expired
+        for report in story.reports:
+            if report.url != story.key:
+                dedupe.dismiss_url(state, report.url, drop.reason)
+
+
+def mark_delivered(store: StoryStore, state: dict, urls: list[str]) -> None:
+    """After delivery (the engine marks each key sent): every other report too."""
+    for url in urls:
+        story = store.stories.get(url)
+        if story is None:
+            continue
+        story.status = "sent"
+        for report in story.reports:
+            if report.url != story.key:
+                dedupe.mark_sent_url(state, report.url)

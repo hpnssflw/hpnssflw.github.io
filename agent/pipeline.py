@@ -351,6 +351,8 @@ def _process_stories(ctx: RunContext, eligible: dict[str, list[RankedItem]]) -> 
                 if item.url == story.key:
                     item.score = story.score()
     queued, waiting = _cap_stories(ctx)
+    if not ctx.preview:
+        _story_facts(ctx)
     return StoriesResult(
         opened=grouping.opened,
         joined=grouping.joined,
@@ -433,6 +435,42 @@ def _cap_stories(ctx: RunContext) -> tuple[list[stories.Story], list[stories.Sto
     return queued, waiting
 
 
+def _story_facts(ctx: RunContext) -> None:
+    """Facts for queued stories with two or more reports whose report set
+    (or max_facts, language, prompt version) changed since their facts."""
+    preset, store = ctx.preset, ctx.stories
+    config = preset.stories
+    needs = sorted(
+        (
+            s
+            for s in store.stories.values()
+            if s.status == "queued" and len(s.reports) >= 2 and s.facts_for != stories.facts_hash(s, config.max_facts, preset.language)
+        ),
+        key=lambda s: s.key,
+    )
+    if not needs:
+        return
+    try:
+        answers = ctx.adapters.ranker.story_facts(needs, config.max_facts, stories.feed_order(preset), config.tzinfo)
+    except Exception as exc:  # noqa: BLE001 -- stories keep their previous facts; tried again next run
+        ctx.writer.emit("facts", "failed", detail={"error": str(exc)})
+        ctx.tally.fail("facts", FEED_SCOPE, None, exc)
+        for story in needs:
+            ctx.tally.count("facts", story.topic, 1, 0)
+        return
+    for story, answer in zip(needs, answers):
+        if answer is None:
+            ctx.tally.count("facts", story.topic, 1, 0)
+            ctx.tally.fail("facts", story.topic, None, summarize.FactsInvalid(story.key))
+            continue
+        story.facts, story.flagged = answer, not answer
+        story.facts_for = stories.facts_hash(story, config.max_facts, preset.language)
+        ctx.tally.count("facts", story.topic, 1, 1 if answer else 0)
+        ctx.tally.note("facts", story.topic, "facts", len(answer))
+        if not answer:
+            ctx.tally.note("facts", story.topic, "flagged")
+
+
 PREVIEW_TITLE_CHARS = 90
 
 
@@ -487,4 +525,25 @@ def format_feed_preview(topics: list[TopicConfig], result: FeedResult) -> str:
             lines.append(f"  {'cached':<12} {drop.detail['relevance']:>2}  {'':<6}  {drop.title[:PREVIEW_TITLE_CHARS]}")
     if not lines:
         lines.append("\n== preset feeds -- (nothing to classify)")
+    return "\n".join(lines)
+
+
+def format_stories_preview(result: StoriesResult, ctx: RunContext) -> str:
+    """Stories a real run would queue or hold over the cap, each report on
+    its own line, then joins, same-story drops and held reports."""
+    config = ctx.preset.stories
+    order = stories.feed_order(ctx.preset)
+    lines = ["\n== stories"]
+    for verdict, items in (("queue", result.queued), ("over cap", result.waiting)):
+        for story in items:
+            lines.append(f"  {verdict:<12} {story.score():>2}  {len(story.reports)} src  {story.opener().title[:PREVIEW_TITLE_CHARS]}")
+            for r in stories.ordered(story, order):
+                lines.append(f"  {'':<12}     {stories.clock(r.at, config.tzinfo, ctx.now)} {r.source_name} · {r.title[:60]}")
+    for label, pairs in (("joined", result.joined), ("same story", result.same_story)):
+        for story, r in pairs:
+            lines.append(f"  {label:<12}     {r.title[:50]} -> {story.opener().title[:50]}")
+    for r in result.held:
+        lines.append(f"  {'held':<12}     {r.title[:PREVIEW_TITLE_CHARS]}")
+    if len(lines) == 1:
+        lines.append("  (no stories)")
     return "\n".join(lines)
