@@ -91,6 +91,18 @@ topics:
     sources:
       hacker_news: { min_points: 30 }
       github_trending: { min_stars: 50, topics: [data-visualization, web-performance, frontend, seo] }
+      rss: # picked 2026-10-07 from a live --preview: feeds with items at 6+
+        - { id: frontend-masters, name: "Frontend Masters Blog", url: "https://frontendmasters.com/blog/feed/" }
+        - { id: smashing, name: "Smashing Magazine", url: "https://www.smashingmagazine.com/feed/" }
+        - { id: webkit, name: "WebKit blog", url: "https://webkit.org/feed/" }
+        - { id: bram-us, name: "Bram.us", url: "https://www.bram.us/feed/" }
+        - { id: debugbear, name: "DebugBear", url: "https://www.debugbear.com/blog/rss.xml" }
+        - { id: ahrefs, name: "Ahrefs blog", url: "https://ahrefs.com/blog/feed/" }
+        - { id: google-search, name: "Google Search Central", url: "https://developers.google.com/static/search/blog/feed.xml" }
+        - { id: flowingdata, name: "FlowingData", url: "https://flowingdata.com/feed" }
+        - { id: nightingale, name: "Nightingale", url: "https://nightingaledvs.com/feed/" }
+        - { id: pudding, name: "The Pudding", url: "https://pudding.cool/feed/index.xml" }
+        - { id: stripe, name: "Stripe blog", url: "https://stripe.com/blog/feed.rss" }
 
 ranking:
   # Who the digest is for. Part of every ranking prompt and of each
