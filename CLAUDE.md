@@ -70,10 +70,19 @@ initiatives — see `PROGRESS.md` for status of each.
   by every `agent-run.yml` run) client-side: config, rail stages, drop
   reasons and failures, through `lib/run-result.ts` (schema 2 only). Only
   the workflow's `cron:` line is read at build time
-  (`lib/agent-schedule.ts`), and a missing one fails the build on purpose.
+  (`lib/agent-schedule.ts`; the home agent widget reads it the same way,
+  for its countdown), and a missing one fails the build on purpose.
   Tony's config lives in `agent/presets/tony.yaml`. Renaming or removing a
   `run-result.json` field means bumping `agent/run_result.py`'s
   `SCHEMA_VERSION` and updating `lib/run-result.ts` in the same push.
+  `status.json` is held to `lib/agent-status.ts`'s `AgentStatus` type at
+  run time: `parseAgentStatus` checks every field the type declares, so
+  an agent change that renames, removes or retypes one (or adds a
+  `recent_events` verdict) must update that type and guard in the same
+  change, or every agent widget shows "unavailable". `npm test` parses
+  the agent's golden `real/status.json` with `parseAgentStatus`
+  (`lib/agent-status.test.ts`), so a drift fails there — once the
+  golden is re-recorded.
 - **The Tony Scraponi inbox's decisions live in a separate public repo,
   `hpnssflw/tony-inbox`** (`decisions.json` on its `main`). The site's
   `/researcher/queue/` owner mode is its only writer, with a
@@ -146,7 +155,8 @@ initiatives — see `PROGRESS.md` for status of each.
   dry run byte for byte — a golden that changes is a regression unless
   the change is the point of the work.
   `agent/tests/test_control_room_contract.py` pins the workflow's `cron:`
-  line, which the control room reads at build time.
+  line, which the control room and the home agent widget read at build
+  time.
 - The public plan page (`app/researcher/agent/page.tsx`) and
   `docs/agent-plan.md` describe the same agent at two levels of detail
   (narrative vs. technical). Keep them in sync at a high level whenever

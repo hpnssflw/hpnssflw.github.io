@@ -17,6 +17,39 @@ export interface PendingQueue {
   items: PendingItem[];
 }
 
+function parseUrl(url: string): URL | null {
+  try {
+    return new URL(url);
+  } catch {
+    return null;
+  }
+}
+
+const isWebLink = (parsed: URL) => parsed.protocol === "http:" || parsed.protocol === "https:";
+
+/**
+ * The item's URL if it is an http(s) link, else null. The control room
+ * (where the owner's inbox token lives) only links or opens these;
+ * React already blocks `javascript:`, this also stops `file:`, `data:` and
+ * app schemes.
+ */
+export function safeHref(url: string): string | null {
+  const parsed = parseUrl(url);
+  return parsed && isWebLink(parsed) ? url : null;
+}
+
+/**
+ * A queue row's domain: the hostname without `www.` for an http(s) link,
+ * otherwise the scheme (`javascript:`) or `invalid` ("invalid url"; the
+ * control room passes its preset language's word) — so a row with no open
+ * link says why.
+ */
+export function itemDomain(url: string, invalid: string = "invalid url"): string {
+  const parsed = parseUrl(url);
+  if (!parsed) return invalid;
+  return isWebLink(parsed) ? parsed.hostname.replace(/^www\./, "") : parsed.protocol;
+}
+
 function isPendingItem(value: unknown): value is PendingItem {
   if (typeof value !== "object" || value === null) return false;
   const i = value as Record<string, unknown>;
@@ -33,7 +66,7 @@ function isPendingItem(value: unknown): value is PendingItem {
 }
 
 /**
- * Structural guard for a fetched `pending.json`. Like
+ * Structural guard for a fetched `pending.json`. Mirrors
  * `lib/agent-status.ts`'s `parseAgentStatus`: fields get read during React
  * render, not inside a fetch `.then()`, so a shape drift must fail closed
  * to an "unavailable" state rather than crash the route.

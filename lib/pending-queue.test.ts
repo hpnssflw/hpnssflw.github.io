@@ -4,6 +4,8 @@ import {
   type PendingQueue,
   groupByTopic,
   isPendingQueue,
+  itemDomain,
+  safeHref,
 } from "./pending-queue";
 
 function makeItem(overrides: Partial<PendingItem> = {}): PendingItem {
@@ -115,5 +117,48 @@ describe("groupByTopic", () => {
     });
     expect(() => groupByTopic(queue)).not.toThrow();
     expect(groupByTopic(queue)["AI Engineering"]).toHaveLength(2);
+  });
+});
+
+describe("safeHref", () => {
+  it("keeps http(s) links as they are", () => {
+    expect(safeHref("https://example.com/a")).toBe("https://example.com/a");
+    expect(safeHref("http://example.com/a?b=1")).toBe("http://example.com/a?b=1");
+  });
+
+  it.each([
+    "javascript:alert(1)",
+    "  JavaScript:alert(1)",
+    "data:text/html,x",
+    "mailto:a@b.c",
+    "file:///etc/passwd",
+    "vscode://file/x",
+    "/relative",
+    "not a url",
+    "",
+  ])("refuses %j", (url) => {
+    expect(safeHref(url)).toBeNull();
+  });
+});
+
+describe("itemDomain", () => {
+  it("shows the hostname of an http(s) link, without www.", () => {
+    expect(itemDomain("https://www.example.com/a")).toBe("example.com");
+    expect(itemDomain("http://news.ycombinator.com/item?id=1")).toBe("news.ycombinator.com");
+  });
+
+  it("shows the scheme of any other link", () => {
+    expect(itemDomain("javascript:alert(1)")).toBe("javascript:");
+    expect(itemDomain("file:///etc/passwd")).toBe("file:");
+  });
+
+  it("says so when the url doesn't parse", () => {
+    expect(itemDomain("/relative")).toBe("invalid url");
+    expect(itemDomain("")).toBe("invalid url");
+  });
+
+  it("uses the caller's word for an invalid url (the control room's preset language)", () => {
+    expect(itemDomain("/relative", "неверный url")).toBe("неверный url");
+    expect(itemDomain("https://example.com/a", "неверный url")).toBe("example.com");
   });
 });

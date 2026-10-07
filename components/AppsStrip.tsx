@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { type AgentStatus, parseAgentStatus, isStale, STATUS_URL } from "@/lib/agent-status";
+import { type AgentStatus, isStale, parseAgentStatus, STATUS_URL } from "@/lib/agent-status";
 import TonyMark from "@/components/TonyMark";
 import { TELEGRAM_CHANNEL } from "@/lib/telegram-post";
 

@@ -90,8 +90,31 @@ function isDate(value: unknown): value is string {
   return typeof value === "string" && !Number.isNaN(Date.parse(value));
 }
 
+const isNumber = (value: unknown): value is number => typeof value === "number";
+const isString = (value: unknown): value is string => typeof value === "string";
+
+function isTopicStatus(value: unknown): value is TopicStatus {
+  return (
+    isRecord(value) &&
+    isString(value.slug) &&
+    isString(value.name) &&
+    isNumber(value.collected) &&
+    isNumber(value.kept)
+  );
+}
+
+function isFunnelCounts(value: unknown): value is FunnelCounts {
+  return (
+    isRecord(value) &&
+    isNumber(value.collected) &&
+    isNumber(value.in_window) &&
+    isNumber(value.new) &&
+    isNumber(value.kept)
+  );
+}
+
 function isRunHistoryEntry(value: unknown): value is RunHistoryEntry {
-  return isRecord(value) && typeof value.kept === "number" && isDate(value.ts);
+  return isRecord(value) && isNumber(value.kept) && isDate(value.ts);
 }
 
 function isRecentEvent(value: unknown): value is RecentEvent {
@@ -99,47 +122,53 @@ function isRecentEvent(value: unknown): value is RecentEvent {
     isRecord(value) &&
     isDate(value.ts) &&
     (value.verdict === "kept" || value.verdict === "drop") &&
-    typeof value.topic === "string" &&
-    typeof value.title === "string" &&
-    (value.reason === undefined || typeof value.reason === "string") &&
-    (value.score === undefined || typeof value.score === "number")
+    isString(value.topic) &&
+    isString(value.title) &&
+    (value.reason === undefined || isString(value.reason)) &&
+    (value.score === undefined || isNumber(value.score))
+  );
+}
+
+function hasRequiredFields(
+  s: Record<string, unknown>,
+): s is Record<string, unknown> & Omit<AgentStatus, "drops" | "failures"> {
+  const { topics, funnel } = s;
+  return (
+    isNumber(s.cadence_hours) &&
+    isNumber(s.delivery_cadence_hours) &&
+    isNumber(s.streak) &&
+    isNumber(s.pending_count) &&
+    isDate(s.updated_at) &&
+    (s.last_sent_at === null || isDate(s.last_sent_at)) &&
+    Array.isArray(topics) &&
+    topics.every(isTopicStatus) &&
+    isRecord(funnel) &&
+    Object.values(funnel).every(isFunnelCounts) &&
+    topics.every((t) => isFunnelCounts(funnel[t.slug])) &&
+    Array.isArray(s.run_history) &&
+    s.run_history.every(isRunHistoryEntry) &&
+    Array.isArray(s.recent_events) &&
+    s.recent_events.every(isRecentEvent)
   );
 }
 
 /**
- * Validates a fetched `status.json` and returns a cleaned copy, or null.
- * Components read its fields during render, so a bad shape must stop
- * here. The core — the numbers, `updated_at`, topics with their funnel
- * entries, the two lists — rejects the whole status when malformed
- * ("agent status unavailable"). Everything else costs only itself (#8's
- * M2): malformed `drops`/`failures` are left out, an unparseable
- * `last_sent_at` becomes null, and list entries with a bad shape or date
- * are skipped. A date that doesn't parse never reaches toISOString() (M1).
+ * Validates a fetched `status.json` against `AgentStatus`. Its fields are
+ * read during React render, so a payload that doesn't match the type has
+ * to be caught here or it crashes the route. Every required field is
+ * checked, entries included, and dates must parse: any failure returns
+ * null, which the pages show as "unavailable". The optional `drops` and
+ * `failures` (only the control room's rail reads them) fail soft — a
+ * malformed one is left out, so it can't blank the home widgets. Returns
+ * a copy; unknown keys pass through.
  */
 export function parseAgentStatus(value: unknown): AgentStatus | null {
   if (!isRecord(value)) return null;
-  const { funnel, topics, run_history, recent_events } = value;
-  if (
-    typeof value.cadence_hours !== "number" ||
-    typeof value.streak !== "number" ||
-    typeof value.pending_count !== "number" ||
-    !isDate(value.updated_at) ||
-    !Array.isArray(topics) ||
-    !Array.isArray(run_history) ||
-    !Array.isArray(recent_events) ||
-    !isRecord(funnel) ||
-    !topics.every((t) => isRecord(t) && typeof t.slug === "string" && isRecord(funnel[t.slug]))
-  ) {
-    return null;
-  }
-  const status: AgentStatus = {
-    ...(value as unknown as AgentStatus),
-    last_sent_at: isDate(value.last_sent_at) ? value.last_sent_at : null,
-    run_history: run_history.filter(isRunHistoryEntry),
-    recent_events: recent_events.filter(isRecentEvent),
-  };
-  if (!isDropCounts(value.drops)) delete status.drops;
-  if (!(Array.isArray(value.failures) && value.failures.every(isRunFailure))) delete status.failures;
+  const { drops, failures, ...rest } = value;
+  if (!hasRequiredFields(rest)) return null;
+  const status: AgentStatus = { ...rest };
+  if (isDropCounts(drops)) status.drops = drops;
+  if (Array.isArray(failures) && failures.every(isRunFailure)) status.failures = failures;
   return status;
 }
 
@@ -179,12 +208,4 @@ export function fmtCountdown(seconds: number): string {
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
   return `${pad(h)}:${pad(m)}:${pad(s)}`;
-}
-
-/** Epoch ms of the next expected run. */
-export function nextRunAt(status: AgentStatus): number {
-  return (
-    new Date(status.updated_at).getTime() +
-    status.cadence_hours * 3600 * 1000
-  );
 }

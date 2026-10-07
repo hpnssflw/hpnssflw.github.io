@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room) and content engine A shipped; D's push 1 committed, awaiting go-ahead to push.**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D's push 1 committed with `main`'s hardening merged in, awaiting go-ahead to push.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -661,20 +661,37 @@ infrastructure.
   1440×900. Owner-mode reject → undo was checked live before the merge
   (`tony-inbox` commits 09:27Z, `decisions.json` left empty).
   The `status.json` `drops`/`failures` assertions (including that
-  failures never carry error text) are pytest cases now,
+  failures never carry error text) are pytest tests now,
   `agent/tests/test_status_export.py` — ported from the git-ignored
-  `task6-check.py` once A brought `agent/tests` to `main`.
+  `task6-check.py` once `main` (A) was merged into this branch (`5083043`).
   Final whole-branch review (opus): 0 Critical; 1 Important (I1,
   reduced-motion comets) and minors M3, M5, M6 fixed in one fix wave.
-  Deferred: M1 (`isAgentStatus` doesn't validate dates — a malformed date
-  would crash the route), M2 (`isAgentStatus` is shared, so a bad
-  `drops`/`failures` would blank the home teaser and agent widget too —
-  consider a softer guard before sub-project D; M1 and M2 fixed in D,
-  Task 1), M4 (the queue could
-  refuse non-http(s) item URLs), plus the remaining task-review minors.
+  Deferred: the remaining task-review minors.
+  **Hardening: shipped 2026-10-06** (spec
+  `docs/superpowers/specs/2026-10-06-control-room-hardening-design.md`,
+  plan `docs/superpowers/plans/2026-10-06-control-room-hardening.md`):
+  `parseAgentStatus` replaces `isAgentStatus` — every field the
+  `AgentStatus` type declares is checked, entries included, dates must
+  parse, and a malformed `drops`/`failures` is stripped instead of
+  blanking the home widgets (M1, M2); the queue links and opens only
+  http(s) item URLs and shows the scheme otherwise (M4); the home
+  widget's "next check" counts down to the cron slot the control room
+  shows. A required `status.json` field renamed, removed or retyped on
+  the agent side must be mirrored in `lib/agent-status.ts` (see
+  `CLAUDE.md`), or every agent widget shows "unavailable"; `npm test`
+  parses the agent's golden `real/status.json` with `parseAgentStatus`,
+  so that drift fails there once the golden is re-recorded. Final
+  whole-branch review (opus): 0 Critical, 0 Important; the golden
+  contract test came out of it. Pushed `97fe18f` (fast-forward from
+  `0c0d02d`), deploy run 37564470443; live home, `/researcher/agent/`
+  and `/researcher/queue/` re-checked 2026-10-07 (no "unavailable",
+  home countdown and control room pulse both on the 04:00Z slot, queue
+  rows link https). M1, M2 and M4 were fixed by this hardening on
+  `main`, not by D: D's Task 1 had built its own softer `parseAgentStatus`
+  in parallel, and merging `main` into D's branch kept main's guard and
+  its tests (including the golden `real/status.json` contract test).
   Later: editing config from the page (a repo the agent only reads, like
-  the inbox); `/researcher/agent/`'s countdown still uses
-  `updated_at + cadence` — switch it to `lib/cron.ts`'s `nextRun`.
+  the inbox).
 - **Content engine, sub-project A (engine core + presets): shipped.**
   Spec: `docs/superpowers/specs/2026-10-06-content-engine-core-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-content-engine-core.md`.
@@ -715,15 +732,12 @@ infrastructure.
   Next: B (stories), C (Telegram approval buttons, several delivery
   targets), D (preset switcher in the control room); #7 (Web Products RSS)
   becomes a topic `rss` entry, after D (Tony's topics load through
-  `config.py`, which doesn't read `rss` yet). #8's `status.json`
-  `drops`/`failures` checks are ported into
-  `agent/tests/test_status_export.py` (131 pytest tests).
+  `config.py`, which doesn't read `rss` yet).
 - **Content engine, sub-project D (preset switcher): push 1 shipped.**
   Spec: `docs/superpowers/specs/2026-10-06-preset-switcher-design.md`.
   Plan: `docs/superpowers/plans/2026-10-06-preset-switcher.md` (Tasks
   1-7 are push 1; push 2, the demo section, is Tasks 8-10 and is next).
-  Push 1 contains: a soft `status.json` guard (`parseAgentStatus`; #8's
-  M1 and M2 fixed); Tony is a self-contained preset in
+  Push 1 contains: Tony is a self-contained preset in
   `agent/presets/tony.yaml`, with a `data: {default_dir, status_json}`
   section replacing `legacy`; `run-result.json` schema 2, now published
   to `agent-data` by `agent-run.yml`; `agent-run.yml` gained a
@@ -737,9 +751,21 @@ infrastructure.
   `agent/topics/` and their loaders are removed; the outcomes histogram
   stays neutral while the threshold is unknown. Whole-branch review: 0
   Critical, 1 Important (the concurrency group), fixed.
+  `main` at `49b9e43` (#8's control room hardening) was merged into the
+  branch before push 1. D's Task 1 (its own soft `status.json` guard)
+  overlapped the hardening; main's `parseAgentStatus` and
+  `lib/agent-status.test.ts` were kept, plus the one D Task 1 case main
+  didn't cover (a numeric `updated_at` is rejected). Main's http(s)-only
+  queue links and home widget countdown were kept: the countdown reads
+  its schedule through `lib/agent-schedule.ts`'s `loadSchedule()`, and
+  the queue's new strings (`not an http(s) link`, `invalid url`) are in
+  `lib/control-room-text.ts`. `agent/tests/test_status_export.py` came
+  from both sides with the same cases; main's copy was kept. After the
+  merge: 133 pytest tests, 313 Vitest tests.
   **Revert push 1 as a unit:** reverting only the site commits brings
   back `lib/agent-config.ts`, which reads the deleted
-  `agent/defaults.yaml`, and breaks the build.
+  `agent/defaults.yaml`, and breaks the build; the merge commit belongs
+  to the unit too (it points the home page at `lib/agent-schedule.ts`).
   Next: push 2 (demo section, Tasks 8-10); #7 (Web Products RSS) is now
   a `rss:` list in `agent/presets/tony.yaml`, no site change.
 
@@ -802,16 +828,17 @@ follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped. Sub-project #6 (topic & source quality) is shipped; its 3-day watch
 and the #7 decision are next (see its bullet above). Sub-project #8 (control
-room) is shipped and live (2026-10-06); its deferred review items (M1, M2,
-M4) and "Later" list are in its bullet above. Later candidates: a Web
-Products source (#7), a Telegram DM when items await review, summary
-editing. Content engine sub-project A is shipped and live (2026-10-06,
-`bed2bb7`); sub-project D's push 1 (Tony on `run-result.json`, legacy
-files removed) is committed and awaiting Artem's go-ahead to push — next
-is the regression-check/live-check in Task 7, then push 2 (demo section,
-Tasks 8-10) from
-`docs/superpowers/plans/2026-10-06-preset-switcher.md`. B and C each
-need their own brainstorm → spec → plan (see the A bullet above and
+room) is shipped and live (2026-10-06), and so is its hardening (M1, M2,
+M4, home countdown); its "Later" list is in its bullet above. Later
+candidates: a Web Products source (#7), a Telegram DM when items await
+review, summary editing. Content engine sub-project A is shipped and
+live (2026-10-06, `bed2bb7`); sub-project D's push 1 (Tony on
+`run-result.json`, legacy files removed, `main`'s hardening merged in)
+is committed and awaiting Artem's go-ahead to push — next is the
+regression-check/live-check in Task 7, then push 2 (demo section, Tasks
+8-10) from `docs/superpowers/plans/2026-10-06-preset-switcher.md`. B
+(stories) and C each need their own brainstorm → spec → plan (see the A
+bullet above and
 `docs/tony-scraponi-roadmap.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
