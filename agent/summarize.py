@@ -121,9 +121,11 @@ def _parse_merge_response(raw: str, known_count: int, new_count: int) -> list[li
     seen: set[str] = set()
     groups: list[list[str]] = []
     for group in parsed["groups"]:
-        if not isinstance(group, list) or len(group) < 2 or len(set(group)) != len(group):
+        if not isinstance(group, list) or len(group) < 2 or not all(isinstance(e, str) for e in group):
             return None
-        if not all(isinstance(e, str) and e in valid and e not in seen for e in group):
+        if len(set(group)) != len(group):
+            return None
+        if not all(e in valid and e not in seen for e in group):
             return None
         if sum(e.startswith("S") for e in group) > 1 or not any(e.startswith("N") for e in group):
             return None

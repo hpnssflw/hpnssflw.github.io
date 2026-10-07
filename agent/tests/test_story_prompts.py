@@ -62,6 +62,9 @@ def test_merge_prompt_lists_known_and_new_entries():
         ('{"groups": [["S1", "N1"], ["N1", "N2"]]}', False),  # id twice
         ('{"groups": [["S1", "N9"]]}', False),  # unknown id
         ('{"groups": [["S1", "S2"]]}', False),  # no new entry
+        ('{"groups": [[["S1"], "N1"]]}', False),  # unhashable member
+        ('{"groups": [[{"a": 1}, "N1"]]}', False),  # unhashable member
+        ('{"groups": [[1, "N1"]]}', False),  # non-string member
         ('{"group": []}', False),
         ("not json", False),
     ],
