@@ -5,6 +5,11 @@ on:
     - cron: "0 */4 * * *"
   workflow_dispatch: {}
 
+# A manual dispatch must never overlap a scheduled run: both would deliver the due digest and one would lose its state push.
+concurrency:
+  group: agent-run
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
