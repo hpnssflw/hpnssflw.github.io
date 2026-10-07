@@ -825,7 +825,18 @@ infrastructure.
   are parsed several times per build. 327 Vitest tests; `npm run build`
   lists both demo routes as static; headless checks at 1440×900 and
   390×844 passed on both demos, Tony's `/researcher/queue/` unchanged.
-  Live check: pending (deploy run id, headless check).
+  **Live since 2026-10-07:** fast-forward `1b19f5f..45b3a67`, deploy run
+  37578425299 (success); Pages `build_type` still `workflow`. `/`,
+  `/researcher/queue/` and both demos answer 200; `/researcher/demo/`
+  and `/package.json` 404. Headless on the live site: newsroom at
+  1440×900 — `lang="ru"`, `robots` `noindex, nofollow`, `og:title`
+  "Редакция (демо)", `og:locale` `ru_RU`, titles not lowercased, 0 item
+  links, two sandbox approvals give "Сводка редакции — материалов: 2",
+  run 2 shows the recorded 3-item digest with no approve buttons; agro at
+  390×844 — rail in Russian, deliver "пока нет", review 2 after two
+  approvals, run 2 deliver "05.10 · отправлено: 3 · сообщений: 1", no
+  horizontal scroll. `/researcher/queue/` unchanged: 68 rows, titles
+  lowercased, "j/k move · o open", collect shows #7's "rss: 11 feeds".
 - **#7, Web Products RSS: shipped and live 2026-10-07.** Eleven feeds
   under `web-products` → `sources` → `rss` in `agent/presets/tony.yaml`
   (`aacac4d`), picked from a live `--preview` over 21 candidates (feeds
