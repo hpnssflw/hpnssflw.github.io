@@ -148,6 +148,7 @@ const en = {
     digestPreview: "what the editor would receive",
     digestSent: "what the engine sent",
     digestEmpty: "approve items to build the digest",
+    description: "A content-engine demo on synthetic data: collection, ranking, moderation and the editor's digest.",
   },
 };
 
@@ -298,6 +299,7 @@ const ru: Text = {
     digestPreview: "что уйдёт редактору",
     digestSent: "что отправил движок",
     digestEmpty: "одобрите материалы — здесь появится сводка",
+    description: "Демо контент-движка на синтетических данных: сбор, оценка, модерация и сводка для редактора.",
   },
 };
 
