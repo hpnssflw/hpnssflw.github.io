@@ -1,7 +1,7 @@
 """The feed path with stories, end to end offline (agent/tests/stories_mini.py)."""
 
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from agent import engine, stories
 from agent.dedupe import load_state, url_hash
@@ -138,6 +138,46 @@ def test_all_facts_invalid_flags_the_story(tmp_path, no_network):
     pipe = stories.load_store(paths.stories).stories[f"{A}/1"]
     assert (pipe.facts, pipe.flagged) == ([], True) and pipe.facts_for is not None
     assert stage(result, "facts")["incidents"]["notes"] == {"facts": 0, "flagged": 1}
+
+
+def test_a_rejected_story_dismisses_every_report(tmp_path, no_network):
+    preset, paths, _, _ = run1(tmp_path)
+    decisions = {**mini.DECISIONS["decisions"], f"{A}/1": {"decision": "reject", "at": "2026-10-06T07:00:00Z"}}
+    (tmp_path / "mini" / "decisions.json").write_text(json.dumps({"version": 1, "decisions": decisions}), encoding="utf-8")
+    run2(preset, paths, tmp_path)
+
+    assert stories.load_store(paths.stories).stories[f"{A}/1"].status == "rejected"
+    state = load_state(paths.state)
+    assert {url: state[url_hash(url)].dismissed for url in mini.PIPE_RUN1} == dict.fromkeys(mini.PIPE_RUN1, "rejected")
+    assert state[url_hash(f"{A}/5")].dismissed == state[url_hash(f"{G}/g2")].dismissed == "same_story"  # none comes back
+    assert f"{A}/1" not in [i.url for i in load_pending(paths.pending).items]
+
+
+def test_an_expired_story_dismisses_every_report(tmp_path, no_network, monkeypatch):
+    preset, paths, _, _ = run1(tmp_path)
+    monkeypatch.setattr(stories, "prune", lambda *args: None)  # a closed story past the window is pruned on save
+    later = datetime.fromisoformat(mini.NOW) + timedelta(days=preset.approval.expire_days + 1)
+    engine.run_real(preset, paths, later, engine.offline_adapters(preset, paths))
+
+    assert stories.load_store(paths.stories).stories[f"{A}/1"].status == "expired"
+    state = load_state(paths.state)
+    assert {url: state[url_hash(url)].dismissed for url in mini.PIPE_RUN1} == dict.fromkeys(mini.PIPE_RUN1, "expired")
+
+
+def test_a_facts_failure_keeps_the_previous_facts(tmp_path, no_network):
+    preset, paths, _, _ = run1(tmp_path)
+    before = stories.load_store(paths.stories).stories[f"{A}/1"]
+    assert len(before.facts) == 2 and before.facts_for is not None
+    failing = json.loads(json.dumps(mini.STORIES))
+    next(f for f in failing["facts"] if f["reports"] == mini.PIPE_RUN2)["response"] = None
+    mini.write(tmp_path / "mini", failing)
+    adapters, result = run2(preset, paths, tmp_path)
+
+    pipe = stories.load_store(paths.stories).stories[f"{A}/1"]
+    assert len(pipe.reports) == 5 and adapters.ranker.facts_calls == 1
+    assert (pipe.facts, pipe.facts_for, pipe.flagged) == (before.facts, before.facts_for, False)
+    assert [f["stage"] + ":" + f["error_type"] for f in result["failures"]] == ["facts:FactsInvalid"]
+    assert stage(result, "facts")["incidents"] == {"in": 1, "out": 0, "drops": {}}
 
 
 def test_preview_prints_stories_and_writes_nothing(tmp_path, no_network, capsys):
