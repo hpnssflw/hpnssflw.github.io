@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D's push 1 (preset switcher) shipped and live 2026-10-07; next is D's push 2 (demo section, Tasks 8-10).**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D's push 1 (preset switcher) and #7 (Web Products RSS) shipped and live 2026-10-07; next is D's push 2 (demo section, Tasks 8-10), then B (stories); #6's 3-day watch ends 2026-10-08 ~18:22Z.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -799,8 +799,30 @@ infrastructure.
   `lib/agent-config.ts`, which reads the deleted `agent/defaults.yaml`).
   Next: push 2 (demo section, Tasks 8-10), whose first step is the
   pre-push-2 fix list in the SDD ledger (ru plurals/wording, full-text
-  shared mark, `window` rename, `Tags` keys); #7 (Web Products RSS) is
-  now a `rss:` list in `agent/presets/tony.yaml`, no site change.
+  shared mark, `window` rename, `Tags` keys).
+- **#7, Web Products RSS: shipped and live 2026-10-07.** Eleven feeds
+  under `web-products` → `sources` → `rss` in `agent/presets/tony.yaml`
+  (`aacac4d`), picked from a live `--preview` over 21 candidates (feeds
+  with items scored 6+; left out: Cloudflare, Tearsheet, Fintech Business
+  Weekly, Lenny's, Stratechery, Alpaca, Igalia with none; Product Hunt and
+  Search Engine Roundtable too noisy; Datawrapper's feed carries its whole
+  ~1078-item archive; Chrome for Developers, web.dev, Vercel, Search
+  Engine Land, Observable dead or broken). Market data is still
+  uncovered. `6964f73` came first: Tony's characterization harness loads
+  the live preset but faked only HN/GitHub/inbox/Telegram, so the feeds
+  would have been fetched from the live web inside `pytest` (goldens
+  failed, the suite took 175 s); the harness now drops the preset's feeds
+  and fails any fetch — goldens unchanged, 133 tests in ~10 s.
+  Fast-forward `6bab9e3..aacac4d`; manual agent run 37573967182
+  (04:58Z, success): `failures: []`, web-products rubric hash still
+  `080b24af813c`, collect 176 (was 14) → window 49 (-127 old feed items)
+  → dedupe 44 → cache 35 → rank 23 (-12 below 6) → cap 1. `report`'s
+  scored-per-day for web-products on 10-07 is 36 = 1 earlier + the 35 new
+  feed items (no re-scoring); ai-engineering/tooling 5/8. One-time
+  `state.json` growth of 163 entries (781 → 944): `record_seen` runs
+  before the recency window, so the feeds' old items are recorded too.
+  Expect about 3-4 new web-products items a day from here; 22 over-cap
+  items stay eligible for later runs.
 
 ### How to resume in a new session
 
@@ -860,19 +882,28 @@ ordered sub-projects #1-#4 are now complete. The LAB backlog posts
 follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped. Sub-project #6 (topic & source quality) is shipped; its 3-day watch
-and the #7 decision are next (see its bullet above). Sub-project #8 (control
+ends 2026-10-08 ~18:22Z — then run `python -m agent report` on
+`agent-data`'s `state.json` against the spec's criteria 2-3, reading
+web-products' 10-07 scored-per-day (36) as #7's one-time feed intake. #7
+(Web Products RSS) is shipped and live (2026-10-07, `aacac4d`; see its
+bullet above). Sub-project #8 (control
 room) is shipped and live (2026-10-06), and so is its hardening (M1, M2,
 M4, home countdown); its "Later" list is in its bullet above. Later
-candidates: a Web Products source (#7), a Telegram DM when items await
-review, summary editing. Content engine sub-project A is shipped and
+candidates: a market-data source for Web Products, a Telegram DM when
+items await review, summary editing. Content engine sub-project A is shipped and
 live (2026-10-06, `bed2bb7`); sub-project D's push 1 (Tony on
 `run-result.json`, legacy files removed, `main`'s hardening merged in)
 is shipped and live (2026-10-07, `409fbc1`) — next is push 2 (demo
 section, Tasks 8-10) from
 `docs/superpowers/plans/2026-10-06-preset-switcher.md`, starting with the
 pre-push-2 fix list in the SDD ledger (ru plurals/wording, full-text
-shared mark, `window` rename, `Tags` keys). B (stories) and C each need
-their own brainstorm → spec → plan (see the A bullet above and
+shared mark, `window` rename, `Tags` keys). B (stories) has an agreed
+spec and plan, committed only on branch `worktree-admin-panel`
+(`5fd92eb`, `2d6cdb4`: `docs/superpowers/specs/2026-10-07-content-engine-stories-design.md`,
+`docs/superpowers/plans/2026-10-07-content-engine-stories.md`); its plan
+starts only once both of D's pushes are on `origin/main` (it extends
+`lib/digest.ts` and `components/DemoRoom.tsx`). C still needs its own
+brainstorm → spec → plan (see the A bullet above and
 `docs/tony-scraponi-roadmap.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
