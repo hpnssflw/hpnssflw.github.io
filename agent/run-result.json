@@ -989,8 +989,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-07T04:19:10.896068+00:00",
-    "id": "2026-10-07T0419Z",
+    "at": "2026-10-07T04:29:34.247172+00:00",
+    "id": "2026-10-07T0429Z",
     "mode": "real",
     "offline": false
   },
@@ -1070,24 +1070,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 35
+            "already_ranked": 39
           },
           "in": 60,
-          "out": 25
+          "out": 21
         },
         "tooling": {
           "drops": {
-            "already_ranked": 54
+            "already_ranked": 60
           },
           "in": 85,
-          "out": 31
+          "out": 25
         },
         "web-products": {
           "drops": {
-            "already_ranked": 8
+            "already_ranked": 9
           },
           "in": 9,
-          "out": 1
+          "out": 0
         }
       },
       "stage": "cache"
@@ -1097,18 +1097,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1117,24 +1117,18 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "below_relevance": 4
-          },
-          "in": 25,
+          "drops": {},
+          "in": 21,
           "out": 21
         },
         "tooling": {
-          "drops": {
-            "below_relevance": 6
-          },
-          "in": 31,
+          "drops": {},
+          "in": 25,
           "out": 25
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 1,
+          "drops": {},
+          "in": 0,
           "out": 0
         }
       },
@@ -1195,10 +1189,8 @@
           "out": 16
         },
         "tooling": {
-          "drops": {
-            "expired": 2
-          },
-          "in": 42,
+          "drops": {},
+          "in": 40,
           "out": 40
         },
         "web-products": {
