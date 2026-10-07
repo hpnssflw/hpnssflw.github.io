@@ -10,11 +10,16 @@ import hashlib
 import json
 import re
 import unicodedata
+from collections import Counter
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta, tzinfo
 from pathlib import Path
+from typing import Callable
 
 from agent import summarize
+from agent.item import Item
+from agent.preset import StoriesConfig
+from agent.sources.base import Drop
 from agent.summarize import RankedItem
 
 STORE_VERSION = 1
@@ -271,3 +276,158 @@ def matchable(store: StoryStore, now: datetime, window_hours: int) -> list[Story
     """Stories whose newest report is inside the window, earliest opened first."""
     cutoff = now - timedelta(hours=window_hours)
     return sorted((s for s in store.stories.values() if s.newest() >= cutoff), key=lambda s: (s.opened_at, s.key))
+
+
+# --- grouping ----------------------------------------------------------------
+
+MERGE_BATCH = 30  # new entries per LLM merge call
+MERGE_KNOWN_LIMIT = 60  # known stories listed in each call, most recent first
+
+Merge = Callable[[list[Story], list[list[Report]]], list[list[str]]]
+
+
+@dataclass
+class Grouping:
+    joined: list[tuple[Story, Report]]  # new reports taken by an open story
+    same_story: list[tuple[Story, Report]]  # new reports of a closed story: dropped
+    opened: list[Story]  # new stories, status "waiting" until the cap
+    held: list[Report]  # the LLM merge failed: unmatched reports wait for the next run
+    matched: Counter  # links made: "text", "near", "llm"
+    failures: list[BaseException]
+
+
+class _Groups:
+    """Union-find over known stories ("K", i) and new reports ("R", j)
+    that never puts two known stories in one group."""
+
+    def __init__(self, known_count: int, report_count: int) -> None:
+        nodes = [("K", i) for i in range(known_count)] + [("R", j) for j in range(report_count)]
+        self.parent = {node: node for node in nodes}
+        self.known = {("K", i): ("K", i) for i in range(known_count)}  # root -> its known-story node
+
+    def find(self, node):
+        while self.parent[node] != node:
+            self.parent[node] = self.parent[self.parent[node]]
+            node = self.parent[node]
+        return node
+
+    def union(self, a, b) -> bool:
+        ra, rb = self.find(a), self.find(b)
+        if ra == rb:
+            return False
+        ka, kb = self.known.get(ra), self.known.get(rb)
+        if ka is not None and kb is not None:
+            return False
+        self.parent[rb] = ra
+        self.known.pop(rb, None)
+        if ka is None and kb is not None:
+            self.known[ra] = kb
+        return True
+
+
+def group_reports(
+    reports: list[Report],
+    topic_of: dict[str, str],
+    known: list[Story],
+    config: StoriesConfig,
+    now: datetime,
+    merge: Merge | None,
+) -> Grouping:
+    """Identical text, then near-identical text, against known stories and
+    each other; then `merge` (the LLM) over everything new that isn't in a
+    known story yet. Pure: apply_grouping changes the store."""
+    groups = _Groups(len(known), len(reports))
+    matched: Counter = Counter()
+    earliest_first = sorted(range(len(known)), key=lambda i: (known[i].opened_at, known[i].key))
+    known_hashes = [{r.text_hash for r in s.reports if r.text_hash} for s in known]
+    known_shingles = [[shingles(r.text) for r in s.reports] for s in known]
+    report_shingles = [shingles(r.text) for r in reports]
+
+    for j, r in enumerate(reports):  # identical text: report -> known story
+        if r.text_hash:
+            for i in earliest_first:
+                if r.text_hash in known_hashes[i] and groups.union(("K", i), ("R", j)):
+                    matched["text"] += 1
+                    break
+    for j in range(len(reports)):  # identical text: report -> report
+        for k in range(j + 1, len(reports)):
+            if reports[j].text_hash and reports[j].text_hash == reports[k].text_hash and groups.union(("R", j), ("R", k)):
+                matched["text"] += 1
+    for j in range(len(reports)):  # near text: report -> known story
+        for i in earliest_first:
+            near = any(overlap(report_shingles[j], other) >= config.near_text for other in known_shingles[i])
+            if near and groups.union(("K", i), ("R", j)):
+                matched["near"] += 1
+                break
+    for j in range(len(reports)):  # near text: report -> report
+        for k in range(j + 1, len(reports)):
+            if overlap(report_shingles[j], report_shingles[k]) >= config.near_text and groups.union(("R", j), ("R", k)):
+                matched["near"] += 1
+
+    held: list[int] = []
+    failures: list[BaseException] = []
+    if merge is not None:
+        entries: list = []  # roots of components with no known story, in report order
+        for j in range(len(reports)):
+            root = groups.find(("R", j))
+            if root not in groups.known and root not in entries:
+                entries.append(root)
+        members = {root: [j for j in range(len(reports)) if groups.find(("R", j)) == root] for root in entries}
+        listed = sorted(range(len(known)), key=lambda i: known[i].newest(), reverse=True)[:MERGE_KNOWN_LIMIT]
+        if entries and len(entries) + len(listed) >= 2:
+            for start in range(0, len(entries), MERGE_BATCH):
+                chunk = entries[start : start + MERGE_BATCH]
+                try:
+                    answer = merge([known[i] for i in listed], [[reports[j] for j in members[root]] for root in chunk])
+                except Exception as exc:  # noqa: BLE001 -- a failed merge holds this chunk's lone reports for the next run
+                    failures.append(exc)
+                    held += [members[root][0] for root in chunk if len(members[root]) == 1]
+                    continue
+                for ids in answer:
+                    nodes = [("K", listed[int(e[1:]) - 1]) if e[0] == "S" else chunk[int(e[1:]) - 1] for e in ids]
+                    for node in nodes[1:]:
+                        if groups.union(nodes[0], node):
+                            matched["llm"] += 1
+
+    held_set = set(held)
+    components: dict = {}
+    for j in range(len(reports)):
+        if j not in held_set:
+            components.setdefault(groups.find(("R", j)), []).append(j)
+    joined: list[tuple[Story, Report]] = []
+    same_story: list[tuple[Story, Report]] = []
+    opened: list[Story] = []
+    for root, js in components.items():
+        new = sorted((reports[j] for j in js), key=lambda r: (r.at, -r.score, r.url))
+        k = groups.known.get(root)
+        if k is not None:
+            story = known[k[1]]
+            (joined if story.is_open else same_story).extend((story, r) for r in new)
+        else:
+            opener = new[0]
+            opened.append(
+                Story(key=opener.url, topic=topic_of[opener.url], status="waiting", opened_at=now.isoformat(), reports=new)
+            )
+    return Grouping(joined, same_story, opened, [reports[j] for j in held], matched, failures)
+
+
+def apply_grouping(store: StoryStore, grouping: Grouping) -> None:
+    for story, report in grouping.joined:
+        story.reports.append(report)
+    for story in grouping.opened:
+        store.stories[story.key] = story
+
+
+def filter_members(items: list[Item], store: StoryStore) -> tuple[list[Item], list[Drop]]:
+    """Reports of queued or approved stories: only the opener is in
+    pending.json, so filter_already_pending alone would miss the others."""
+    index = member_index(store)
+    kept: list[Item] = []
+    drops: list[Drop] = []
+    for item in items:
+        story = index.get(item.url)
+        if story is not None and story.status in ("queued", "approved"):
+            drops.append(Drop(url=item.url, title=item.title, reason="seen", detail={"story": story.key}))
+        else:
+            kept.append(item)
+    return kept, drops
