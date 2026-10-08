@@ -124,3 +124,23 @@ def test_preview_and_dry_run_never_touch_telegram(setup, capsys):
     engine.run_preview(preset, paths, FROZEN_NOW, adapters)
     engine.run_dry(preset, paths, FROZEN_NOW, adapters)
     assert bot.calls == [] and not paths.telegram.exists()
+
+
+def test_a_crashing_telegram_step_does_not_fail_the_run_or_repeat_the_digest(setup, capsys, monkeypatch):
+    preset, paths, bot = setup
+    preset.approval.path.write_text(
+        json.dumps({"version": 1, "decisions": {A: {"decision": "approve", "at": "2026-10-06T11:00:00Z"}}}), encoding="utf-8"
+    )
+
+    def boom(self, *args, **kwargs):
+        raise RuntimeError("secret detail")
+
+    monkeypatch.setattr(telegram_review.TelegramReview, "ask", boom)
+    _run(preset, paths, FROZEN_NOW)
+    out = capsys.readouterr().out
+    assert "Telegram review failed: RuntimeError" in out and "secret detail" not in out
+    assert [p.read_text(encoding="utf-8").count("example.com/a") for p in paths.outbox.iterdir()] == [1]
+    assert dedupe.load_state(paths.state)[url_hash(A)].times_sent == 1
+    assert [item.url for item in pending.load_pending(paths.pending).items] == [B]
+    result = json.loads(paths.result.read_text(encoding="utf-8"))
+    assert {"stage": "review", "scope": "*", "source": "telegram", "error_type": "RuntimeError"} in result["failures"]

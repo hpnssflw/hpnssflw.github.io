@@ -154,12 +154,16 @@ def run_real(
         )
 
     if review is not None and telegram_decisions is not None:
-        if decisions is not None:
-            rejected_urls = {drop.url for _, drop in inbox_drops if drop.reason == "rejected"}
-            review.update(before_review, queue.items, decisions, sent_urls, rejected_urls, now, tally)
-        asked = review.ask(queue.items, decisions, now, tally)
-        review.save()
-        print(f"Telegram: {taps} tap(s) picked up, {asked} item(s) asked.")
+        try:
+            if decisions is not None:
+                rejected_urls = {drop.url for _, drop in inbox_drops if drop.reason == "rejected"}
+                review.update(before_review, queue.items, decisions, sent_urls, rejected_urls, now, tally)
+            asked = review.ask(queue.items, decisions, now, tally)
+            review.save()
+            print(f"Telegram: {taps} tap(s) picked up, {asked} item(s) asked.")
+        except Exception as exc:  # noqa: BLE001 — the digest is already posted: a Telegram bug must not skip saving state, or the next run posts it again
+            tally.fail("review", FEED_SCOPE, "telegram", exc)
+            print(f"Telegram review failed: {type(exc).__name__}")
 
     for slug, count in Counter(item.topic for item in queue.items).items():
         tally.count("queue", slug, 0, count)
