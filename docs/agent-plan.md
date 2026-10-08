@@ -79,6 +79,28 @@ reasons, failures, the queue and delivery — the contract the control room and 
 the newsroom and agro demo presets in `agent/tests/fixtures/` run that
 way. Tests: `agent/venv/Scripts/python -m pytest agent/tests -q`.
 
+Since sub-project B (`docs/superpowers/specs/2026-10-07-content-engine-stories-design.md`)
+a preset can turn on `stories:`: reports of one event across its preset
+feeds become one story (preset feeds only — `stories:` with topic-scoped
+sources is a preset error). Stories live in `<data-dir>/stories.json`,
+written by real runs only (`--preview` groups in memory, `--dry-run`
+doesn't group). After rank, reports are grouped by identical text, then
+near-identical text (word-shingle overlap), then one LLM merge over what's
+still unmatched; a merge call with fewer than two entries is skipped, and
+a failed merge holds those reports to the next run. The story is the unit
+of moderation, cap and delivery: one queue entry keyed by its opener's
+URL, so `pending.json` and `decisions.json` keep their format. A report of
+a closed story drops as `same_story`, stale waiting stories are pruned
+before grouping and the cap, and an approval taken back reopens its story.
+After the cap, a multi-report story gets facts citing its reports, and the
+digest adds a "who was first" line. `run-result.json` gains
+`config.stories`, the `group` and `facts` stages and `queue.items[].story`
+only when stories are on. The newsroom demo has them on; Tony and agro
+don't. Known limits: held reports can wait indefinitely if the LLM merge
+keeps failing (no fallback yet), and turning `stories:` on or off for a
+preset with an existing queue has no migration — turning it off would
+re-queue the non-opener reports of queued stories.
+
 ## Proposed stack
 
 - A single Python script, run on a schedule rather than a long-lived service.

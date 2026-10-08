@@ -107,7 +107,9 @@ gets its own spec → plan → implementation cycle:
   offline fixtures. Spec:
   `docs/superpowers/specs/2026-10-06-content-engine-core-design.md`.
 - **B. Stories** — one news item across sources, "who was first", facts
-  tied to their sources.
+  tied to their sources. Shipped: preset feeds only; Tony and agro off
+  (the newsroom demo has it on). Spec:
+  `docs/superpowers/specs/2026-10-07-content-engine-stories-design.md`.
 - **C. Approval and delivery** — Telegram buttons as a second approval
   adapter; several delivery targets per preset.
 - **D. Preset switcher in the control room** — the site reads each

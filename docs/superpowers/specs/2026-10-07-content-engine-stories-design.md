@@ -453,13 +453,15 @@ In a stories preset, each queue entry renders by its story:
     change.
 - **Demo queue rows** (`DemoRoom` / `QueuePane`), for a story with two
   or more reports:
-  - a second line `источников: 3 · первым — Информагентство (пример)`:
-    the count after a label, like every Russian count in the control
-    room, so no plural forms;
-  - the facts below it, each followed by its `[n]` markers — plain text
-    in the demo (`linkItems` false: the demo renders no item links);
-    they link to their reports (http(s) only) only where `linkItems` is
-    true;
+  - a line `источников: 3 · первым — Информагентство (пример)` under the
+    meta line: the count after a label, like every Russian count in the
+    control room, so no plural forms;
+  - the facts, each followed by its `[n]` markers, only on the selected
+    row, in place of the summary (Artem's ruling in the final fix wave;
+    a decided row's facts and story line are muted like its title) —
+    plain text in the demo (`linkItems` false: the demo renders no item
+    links); they link to their reports (http(s) only) only where
+    `linkItems` is true;
   - `flagged` → a badge, `без фактов — проверьте источники`;
   - `o` opens the key URL only where `linkItems` is true — never in the
     demo;
@@ -467,8 +469,10 @@ In a stories preset, each queue entry renders by its story:
 - **Rail**: when the run has a `group` stage, a stories cell sits
   between rank and cap:
   - value: stories formed;
-  - line: `N joined · M same story`, with the facts stage folded in:
-    `K with facts · F flagged`.
+  - line: `N joined · M same story · K with facts · F flagged` (the facts
+    stage folded in), each part only when it isn't zero: the newsroom
+    demo's run 1 reads `с фактами: 2`, and an all-zero run's line is
+    empty.
 
   Tony's rail doesn't change (no `group` stage).
 - **Config pane**: the stories settings.

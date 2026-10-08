@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then B (stories).**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped on branch `worktree-stories` and regression-checked 2026-10-07, on `main` once Artem okays the push; next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then C (Telegram approval buttons, several delivery targets).**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -860,6 +860,67 @@ infrastructure.
   before the recency window, so the feeds' old items are recorded too.
   Expect about 3-4 new web-products items a day from here; 22 over-cap
   items stay eligible for later runs.
+- **Content engine, sub-project B (stories): shipped.**
+  Spec: `docs/superpowers/specs/2026-10-07-content-engine-stories-design.md`.
+  Plan: `docs/superpowers/plans/2026-10-07-content-engine-stories.md`
+  (subagent-driven, 12 tasks, a whole-branch review and one fix wave;
+  ledger `.superpowers/sdd/2026-10-07-content-engine-stories/progress.md`).
+  Built in worktree `.claude/worktrees/stories` (branch
+  `worktree-stories`) on `origin/main` `fbb3eaa`; it goes to `main` only on
+  Artem's word, and the live check is added here after the push.
+  What it does: an opt-in `stories:` preset section (`window_hours`,
+  `timezone` as a fixed UTC offset, `near_text`, `llm_merge`, `max_facts`)
+  groups reports of one event across the preset's feeds into a story —
+  preset feeds only (`stories:` with topic-scoped sources is a
+  `PresetError`). Stories live in `<data-dir>/stories.json`, written by
+  real runs only (`--preview` groups in memory; `--dry-run` doesn't
+  group). Grouping runs after rank: identical text (`text_hash`), then
+  near-identical text (word-shingle overlap ≥ `near_text`), then one LLM
+  merge over what's still unmatched, through a strict validator. A merge
+  call with fewer than two entries is skipped; a failed merge holds the
+  unmatched reports to the next run. The story is the unit of moderation,
+  cap and delivery: one queue entry keyed by its opener's URL (so
+  `pending.json` and `decisions.json` keep their format), the daily cap
+  counts stories, and a report of a closed story drops as `same_story`
+  (dismissed in `state.json`). Stale waiting stories are pruned before
+  grouping and the cap; an approval taken back reopens its story. A
+  multi-report story gets up to `max_facts` facts, each citing its reports
+  (`[n]`; all facts failing → the summary and a flag), and a "first" line
+  (`Первым — X, 06:10; через 42 мин — Y`). `run-result.json` stays schema
+  2: `config.stories`, the `group` and `facts` stages (thirteen in all) and
+  `queue.items[].story` appear only when stories are on.
+  Newsroom demo on: run 1 has a three-report story (first: the agency;
+  facts with citations, one invalid fact dropped) and a two-report reprint
+  story whose "first" line carries a date; run 2's digest has both story
+  blocks. Tony and agro off; their goldens are byte-identical. Site:
+  `lib/run-result.ts` reads `story` leniently; `lib/digest.ts` mirrors the
+  story block (pinned to `outbox.html`); the demo's story rows read title,
+  meta, then `источников: N · первым — X`, with facts only on the selected
+  row (in place of the summary) and decided rows muted; the rail gains a
+  stories cell between rank and cap that leaves out zero parts (`с
+  фактами: 2` in the newsroom demo); demo URLs stay unlinked. Tony's
+  `/researcher/queue/` is unchanged.
+  Whole-branch review (opus): 1 Important — a stale waiting story could
+  still win the cap (pruning ran only on save) — fixed in the fix wave
+  (`dd5cbc5`..`f9b6eb6`) with its minors (undone approvals reopen,
+  `--preview` counts sources, merge/facts prompt entries kept on one line,
+  React keys by position) and Artem's UX rulings (facts on the selected
+  row, decided rows muted, zero parts omitted). Tests: 233 pytest, 334
+  Vitest in 23 files; `npm run build` passes and lists both demo routes.
+  Regression (Tony, `origin/main` `fbb3eaa` vs `f9b6eb6`, each on its own
+  copy of `agent-data` `a41f328`'s state/pending, 2026-10-07 12:26-12:44Z):
+  `--preview` identical — the same three topic headers and caps, the same
+  176 rows with the same statuses — except rows DeepSeek scored fresh in
+  both runs (5 scores off by one, 4 summaries reworded) and which GitHub
+  search request hit the unauthenticated rate limit for tooling (its
+  GitHub source failed in both runs). `--dry-run` (with `GITHUB_TOKEN`):
+  stdout identical, `run-result.json` identical bar `run.id`/`run.at`
+  (eleven stages, no `group`/`facts`, no `story`, no `config.stories`),
+  events equal up to HN's ordering, `state.json` differs only in
+  `last_score` on 10 entries (live points/stars), no `stories.json`
+  written. Known limits (in `docs/agent-plan.md`): held reports wait
+  indefinitely if the LLM merge keeps failing; turning `stories:` on or
+  off for a preset with an existing queue has no migration.
 
 ### How to resume in a new session
 
@@ -904,7 +965,7 @@ log; if the widget never shows `working`, look for `claude agents failed`.
 Next phase (backend: friends, Yandex ID login, pager) needs its own
 brainstorm, starting from the research report's decision points.
 
-**Content Direction & Tony Scraponi: sub-projects #1-#6 and #8 shipped.** See
+**Content Direction & Tony Scraponi: sub-projects #1-#8 and content engine A, D and B shipped (B pending its push).** See
 this file's section above for what shipped in
 each and what the final reviews found and fixed. Sub-project #2's bot/
 channel now exist (`@hypnosisflow`) and live delivery is verified
@@ -919,9 +980,7 @@ ordered sub-projects #1-#4 are now complete. The LAB backlog posts
 follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped. Sub-project #6 (topic & source quality) is shipped; its 3-day watch
-ends 2026-10-08 ~18:22Z — then run `python -m agent report` on
-`agent-data`'s `state.json` against the spec's criteria 2-3, reading
-web-products' 10-07 scored-per-day (36) as #7's one-time feed intake. #7
+ends 2026-10-08 ~18:22Z (its summary is next step 1 below). #7
 (Web Products RSS) is shipped and live (2026-10-07, `aacac4d`; see its
 bullet above). Sub-project #8 (control
 room) is shipped and live (2026-10-06), and so is its hardening (M1, M2,
@@ -931,14 +990,20 @@ items await review, summary editing. Content engine sub-project A is shipped and
 live (2026-10-06, `bed2bb7`); sub-project D's push 1 (Tony on
 `run-result.json`, legacy files removed, `main`'s hardening merged in)
 is shipped and live (2026-10-07, `409fbc1`), and so is push 2 (the demo
-section, `/researcher/demo/<slug>/`). B (stories) has an agreed
-spec and plan, committed only on branch `worktree-admin-panel`
-(`5fd92eb`, `2d6cdb4`: `docs/superpowers/specs/2026-10-07-content-engine-stories-design.md`,
-`docs/superpowers/plans/2026-10-07-content-engine-stories.md`); its plan
-can start now that both of D's pushes are on `origin/main` (it extends
-`lib/digest.ts` and `components/DemoRoom.tsx`). C still needs its own
-brainstorm → spec → plan (see the A bullet above and
-`docs/tony-scraponi-roadmap.md`).
+section, `/researcher/demo/<slug>/`). B (stories) is built on branch
+`worktree-stories` and regression-checked against Tony (see its bullet
+above); it goes to `main` only on Artem's word, then the agent is
+dispatched by hand and the live check is recorded in B's bullet.
+Next, in order:
+1. **#6's 3-day observation summary** — only after 2026-10-08 ~18:22Z:
+   run `python -m agent report` on `state.json` from `agent-data` against
+   criteria 2-3 of
+   `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
+   Web-products' 36 scored on 10-07 is #7's one-off feed load, not a
+   regression.
+2. **Sub-project C** — Telegram approval buttons and several delivery
+   targets. It still needs its own brainstorm → spec → plan (see
+   `docs/tony-scraponi-roadmap.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages
