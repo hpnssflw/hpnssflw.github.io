@@ -2081,7 +2081,7 @@ On Artem's word: merge `origin/main` into the branch if it moved (`git fetch ori
 
 Dispatch `agent-run.yml` (`gh workflow run agent-run.yml --repo hpnssflw/hpnssflw.github.io`), wait for success (`gh run list --workflow agent-run.yml --limit 1`). Check:
 - Artem got up to 10 asks in the private chat, newest first.
-- `git fetch origin agent-data` → `git show origin/agent-data:agent/telegram.json`: `messages` for the asked items, `offset` set, and the chat id absent (search for it).
+- `git fetch origin agent-data` → `git show origin/agent-data:agent/telegram.json`: `messages` for the asked items (`offset` stays 0 if `/start` was sent more than 24 h before this run: getUpdates then returns nothing, which is not a failure), and the chat id absent (search for it).
 - `git show origin/agent-data:agent/run-result.json`: `config.approval.telegram` present, `failures: []`.
 
 - [ ] **Step 4: Taps and second run**
@@ -2094,4 +2094,4 @@ Artem approves one item and rejects another in Telegram. Dispatch again (or wait
 
 - [ ] **Step 5: Record**
 
-Add the live check to C's bullet in `PROGRESS.md` (run ids, what was seen), change "built, not pushed" to "shipped", commit (`Record Telegram approval's live check`) and push on Artem's word.
+Add the live check to C's bullet in `PROGRESS.md` (run ids, what was seen), change "built, not pushed" to "shipped" there, in `docs/tony-scraponi-roadmap.md`'s C line and in the spec's status table, drop anything else that still says "not pushed" or "designing", commit (`Record Telegram approval's live check`) and push on Artem's word.

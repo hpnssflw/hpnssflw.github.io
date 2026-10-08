@@ -12,7 +12,7 @@ D's control room on `run-result.json`
 |---|---|---|
 | A | Engine core + presets | shipped 2026-10-06 |
 | B | Stories | shipped 2026-10-08 |
-| **C** | Telegram approval buttons (this spec) | designing |
+| **C** | Telegram approval buttons (this spec) | built, not pushed |
 | D | Preset switcher + demo section | shipped 2026-10-07 |
 
 The roadmap's C also named "several delivery targets per preset". Artem
@@ -232,6 +232,7 @@ The Telegram side never fails a run:
 | `getUpdates` (network, HTTP error, 409 because a webhook is set) or a malformed `telegram.json` | `DecisionsUnavailable`: nothing dropped or delivered, as when `decisions.json` can't be read; failure `review` / `telegram`. Asks and updates are skipped this run. `telegram.json` isn't rewritten. |
 | Sending an ask | The item gets no `messages` entry and is asked again next run; failure `review` / `telegram`. The other asks still go out. |
 | Editing a message | For an item still in the queue, `shown` stays, so the edit is retried next run; failure `review` / `telegram`. A final edit (the item left the queue this run) is tried once: the entry is removed either way, since the next run has no item to render. If Telegram says the message is gone (deleted by Artem), `shown` becomes `gone`. "Message is not modified" counts as success. |
+| Ask message ids never saved (failed push to `agent-data`, or a crash in the guarded block) | Those asks are never edited: their buttons stay live, and taps on them still work (matched by URL hash). |
 | A tap older than 24 h before a run reads it | Telegram has dropped it. The item stays undecided and its buttons are still there: tap again. |
 
 Failures carry the error type only, never text (the bot token is in the

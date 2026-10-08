@@ -116,8 +116,11 @@ initiatives — see `PROGRESS.md` for status of each.
   the site's and Telegram's decision wins: `agent/approval.py`'s
   `merge_decisions` and `lib/telegram-decisions.ts`'s `mergeDecisions` are
   pinned to `agent/tests/fixtures/approval-merge.json` — change them
-  together. A webhook set on the bot breaks `getUpdates` (409) and blocks
-  delivery. Never make the agent write `decisions.json`, and never
+  together. A webhook set on the bot breaks `getUpdates` (409), and a
+  missing or invalid `TELEGRAM_OWNER_CHAT_ID` or `TELEGRAM_BOT_TOKEN`
+  does the same: no drops, no delivery. Any second `getUpdates` consumer
+  of this bot (a local real Tony run with the owner id set) confirms
+  updates CI then never sees. Never make the agent write `decisions.json`, and never
   give the site a token for this repo (`hpnssflw.github.io`): one that
   can push here can change agent code that runs with the Telegram and
   DeepSeek secrets. If the agent side is ever reverted, keep

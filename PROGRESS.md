@@ -384,7 +384,7 @@ infrastructure.
   initiative alongside the site and the agent: reworking the agent's
   content themes, adding Telegram delivery, fixing the blog's content
   direction, and eventually a Tony Scraponi control page. Decomposed
-  into 4 ordered sub-projects; each gets its own brainstorm → spec →
+  into numbered sub-projects 1-8 (plus the content engine A-E); each gets its own brainstorm → spec →
   plan → implementation cycle.
 - **Sub-project #1, agent themes rework: shipped.** Spec:
   `docs/superpowers/specs/2026-09-16-agent-themes-rework-design.md`.
@@ -1050,8 +1050,8 @@ passed (summary in its bullet above, 2026-10-14). #7
 bullet above). Sub-project #8 (control
 room) is shipped and live (2026-10-06), and so is its hardening (M1, M2,
 M4, home countdown); its "Later" list is in its bullet above. Later
-candidates: a market-data source for Web Products, a Telegram DM when
-items await review, summary editing. Content engine sub-project A is shipped and
+candidates: a market-data source for Web Products, summary editing (the
+Telegram prompt for items awaiting review is content engine C). Content engine sub-project A is shipped and
 live (2026-10-06, `bed2bb7`); sub-project D's push 1 (Tony on
 `run-result.json`, legacy files removed, `main`'s hardening merged in)
 is shipped and live (2026-10-07, `409fbc1`), and so is push 2 (the demo
