@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped on branch `worktree-stories` and regression-checked 2026-10-07, on `main` once Artem okays the push; next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then C (Telegram approval buttons, several delivery targets).**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then C (Telegram approval buttons, several delivery targets).**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -866,8 +866,8 @@ infrastructure.
   (subagent-driven, 12 tasks, a whole-branch review and one fix wave;
   ledger `.superpowers/sdd/2026-10-07-content-engine-stories/progress.md`).
   Built in worktree `.claude/worktrees/stories` (branch
-  `worktree-stories`) on `origin/main` `fbb3eaa`; it goes to `main` only on
-  Artem's word, and the live check is added here after the push.
+  `worktree-stories`) on `origin/main` `fbb3eaa`; pushed to `main` on
+  Artem's word 2026-10-08 (`fbb3eaa..928ba26`), live check below.
   What it does: an opt-in `stories:` preset section (`window_hours`,
   `timezone` as a fixed UTC offset, `near_text`, `llm_merge`, `max_facts`)
   groups reports of one event across the preset's feeds into a story —
@@ -921,6 +921,16 @@ infrastructure.
   written. Known limits (in `docs/agent-plan.md`): held reports wait
   indefinitely if the LLM merge keeps failing; turning `stories:` on or
   off for a preset with an existing queue has no migration.
+  Live check 2026-10-08: deploy run `37737965138` and the dispatched agent
+  run `37737974593` both green; Pages `build_type` still `workflow`.
+  `agent-data` `a82e04d`'s `run-result.json`: schema 2, no failures, the
+  eleven stages (no `group`/`facts`), no `config.stories`, no `story` keys;
+  no `stories.json` on `agent-data`. `python -m agent report --days 2`: no
+  re-scoring burst (10-08 scored 4 ai-engineering, 7 tooling). Live pages:
+  `/researcher/demo/newsroom-demo/` has the stories cell (`--rail-cells:10`,
+  `сюжеты 11 · с фактами: 2`), collapsed story rows with
+  `источников: N · первым — …`, no links in facts or digest, no horizontal
+  scroll at 1440; `/researcher/queue/` keeps nine cells (`--rail-cells:9`).
 
 ### How to resume in a new session
 
