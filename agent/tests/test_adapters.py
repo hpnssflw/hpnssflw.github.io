@@ -72,3 +72,20 @@ def _pending(title):
 def test_digest_header_follows_the_preset_title_and_language():
     messages = digest.build({"Власть": [_pending("Решение"), _pending("Назначение")]}, "Сводка <редакции>", "ru")
     assert messages[0].startswith("<b>Сводка &lt;редакции&gt; — материалов: 2</b>\n\n<b>Власть</b>\n")
+
+
+def test_file_approval_entries_keep_the_time(tmp_path):
+    path = tmp_path / "decisions.json"
+    path.write_text(
+        json.dumps({"version": 1, "decisions": {"https://a": {"decision": "reject", "at": "2026-10-06T00:00:00Z"}}}),
+        encoding="utf-8",
+    )
+    assert approval.FileApproval(path).load_entries() == {"https://a": inbox.DecisionEntry("reject", "2026-10-06T00:00:00Z")}
+
+
+def test_inbox_approval_reads_the_token_from_the_named_variable(monkeypatch):
+    seen = {}
+    monkeypatch.setattr(inbox, "load_decision_entries", lambda url, token: seen.update(url=url, token=token) or {})
+    monkeypatch.setenv("INBOX_TOKEN", "t0k")
+    approval.InboxApproval("https://api.github.com/repos/x/y/contents/decisions.json", "INBOX_TOKEN").load()
+    assert seen == {"url": "https://api.github.com/repos/x/y/contents/decisions.json", "token": "t0k"}

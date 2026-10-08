@@ -7,6 +7,7 @@ docs/superpowers/specs/2026-09-28-tony-scraponi-inbox-design.md."""
 from __future__ import annotations
 
 import urllib.parse
+from dataclasses import dataclass
 from datetime import datetime
 
 import requests
@@ -24,8 +25,17 @@ class DecisionsUnavailable(Exception):
     then treats every item as undecided: nothing is dropped or delivered."""
 
 
-def parse_decisions(raw: object) -> dict[str, str]:
-    """Validate a decoded decisions.json payload and return {url: decision}.
+@dataclass(frozen=True)
+class DecisionEntry:
+    """One decision and when it was made. decisions.json holds approve or
+    reject; Telegram's store (agent/telegram_review.py) adds clear (Undo)."""
+
+    decision: str
+    at: str
+
+
+def parse_decision_entries(raw: object) -> dict[str, DecisionEntry]:
+    """Validate a decoded decisions.json payload and return {url: DecisionEntry}.
     Any shape problem fails the whole file -- no partial application."""
     if (
         not isinstance(raw, dict)
@@ -36,7 +46,7 @@ def parse_decisions(raw: object) -> dict[str, str]:
     entries = raw.get("decisions")
     if not isinstance(entries, dict):
         raise DecisionsUnavailable("decisions.json: 'decisions' is not an object")
-    result: dict[str, str] = {}
+    result: dict[str, DecisionEntry] = {}
     for url, entry in entries.items():
         if (
             not isinstance(entry, dict)
@@ -44,11 +54,21 @@ def parse_decisions(raw: object) -> dict[str, str]:
             or not isinstance(entry.get("at"), str)
         ):
             raise DecisionsUnavailable(f"decisions.json: invalid entry for {url}")
-        result[url] = entry["decision"]
+        result[url] = DecisionEntry(entry["decision"], entry["at"])
     return result
 
 
-def load_decisions(url: str, token: str | None) -> dict[str, str]:
+def decisions_of(entries: dict[str, DecisionEntry]) -> dict[str, str]:
+    return {url: entry.decision for url, entry in entries.items()}
+
+
+def parse_decisions(raw: object) -> dict[str, str]:
+    """Validate a decoded decisions.json payload and return {url: decision}.
+    Any shape problem fails the whole file -- no partial application."""
+    return decisions_of(parse_decision_entries(raw))
+
+
+def load_decision_entries(url: str, token: str | None) -> dict[str, DecisionEntry]:
     """GET decisions.json through the GitHub Contents API (raw media type).
     The token is optional -- the repo is public -- but authenticated reads
     dodge the 60/h anonymous limit that Actions runners share by IP."""
@@ -68,7 +88,11 @@ def load_decisions(url: str, token: str | None) -> dict[str, str]:
         raw = response.json()
     except ValueError as exc:
         raise DecisionsUnavailable("decisions.json is not valid JSON") from exc
-    return parse_decisions(raw)
+    return parse_decision_entries(raw)
+
+
+def load_decisions(url: str, token: str | None) -> dict[str, str]:
+    return decisions_of(load_decision_entries(url, token))
 
 
 def apply_decisions(

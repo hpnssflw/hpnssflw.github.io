@@ -1,0 +1,80 @@
+{
+  "cases": [
+    {
+      "name": "site only",
+      "site": { "https://a": { "decision": "approve", "at": "2026-10-09T08:00:00.000Z" } },
+      "telegram": {},
+      "expected": { "https://a": "approve" },
+      "via_telegram": []
+    },
+    {
+      "name": "telegram only",
+      "site": {},
+      "telegram": { "https://a": { "decision": "reject", "at": "2026-10-09T08:00:00+00:00" } },
+      "expected": { "https://a": "reject" },
+      "via_telegram": ["https://a"]
+    },
+    {
+      "name": "a later telegram tap wins",
+      "site": { "https://a": { "decision": "approve", "at": "2026-10-09T08:00:00.000Z" } },
+      "telegram": { "https://a": { "decision": "reject", "at": "2026-10-09T12:00:00+00:00" } },
+      "expected": { "https://a": "reject" },
+      "via_telegram": ["https://a"]
+    },
+    {
+      "name": "a later site decision wins",
+      "site": { "https://a": { "decision": "reject", "at": "2026-10-09T13:00:00.000Z" } },
+      "telegram": { "https://a": { "decision": "approve", "at": "2026-10-09T12:00:00+00:00" } },
+      "expected": { "https://a": "reject" },
+      "via_telegram": []
+    },
+    {
+      "name": "a tie goes to the site",
+      "site": { "https://a": { "decision": "approve", "at": "2026-10-09T12:00:00.000Z" } },
+      "telegram": { "https://a": { "decision": "reject", "at": "2026-10-09T12:00:00+00:00" } },
+      "expected": { "https://a": "approve" },
+      "via_telegram": []
+    },
+    {
+      "name": "undo in telegram takes back an older site approval",
+      "site": { "https://a": { "decision": "approve", "at": "2026-10-09T08:00:00.000Z" } },
+      "telegram": { "https://a": { "decision": "clear", "at": "2026-10-09T12:00:00+00:00" } },
+      "expected": {},
+      "via_telegram": []
+    },
+    {
+      "name": "undo with no site entry leaves the item undecided",
+      "site": {},
+      "telegram": { "https://a": { "decision": "clear", "at": "2026-10-09T12:00:00+00:00" } },
+      "expected": {},
+      "via_telegram": []
+    },
+    {
+      "name": "an undo older than the site's decision changes nothing",
+      "site": { "https://a": { "decision": "reject", "at": "2026-10-09T13:00:00.000Z" } },
+      "telegram": { "https://a": { "decision": "clear", "at": "2026-10-09T12:00:00+00:00" } },
+      "expected": { "https://a": "reject" },
+      "via_telegram": []
+    },
+    {
+      "name": "an unparseable site time counts as the oldest",
+      "site": { "https://a": { "decision": "approve", "at": "yesterday" } },
+      "telegram": { "https://a": { "decision": "reject", "at": "2026-10-09T12:00:00+00:00" } },
+      "expected": { "https://a": "reject" },
+      "via_telegram": ["https://a"]
+    },
+    {
+      "name": "several urls at once",
+      "site": {
+        "https://a": { "decision": "approve", "at": "2026-10-09T08:00:00.000Z" },
+        "https://b": { "decision": "reject", "at": "2026-10-09T08:00:00.000Z" }
+      },
+      "telegram": {
+        "https://b": { "decision": "approve", "at": "2026-10-09T12:00:00+00:00" },
+        "https://c": { "decision": "approve", "at": "2026-10-09T12:00:00+00:00" }
+      },
+      "expected": { "https://a": "approve", "https://b": "approve", "https://c": "approve" },
+      "via_telegram": ["https://b", "https://c"]
+    }
+  ]
+}

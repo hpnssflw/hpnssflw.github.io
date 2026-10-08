@@ -17,7 +17,7 @@ from agent.stories import StoryStore
 @dataclass
 class Adapters:
     ranker: Any  # rank_topic(topic, items) / classify(items, topics) -> list[RankedItem]
-    approval: Any  # load() -> {url: "approve" | "reject"}; raises inbox.DecisionsUnavailable
+    approval: Any  # load_entries() -> {url: inbox.DecisionEntry}; raises inbox.DecisionsUnavailable
     delivery: Any  # label: str; send(messages, run_id) -> None
     fetcher: Any = None  # get(url) -> fetch.Fetched; RSS feeds and full text
     offline: bool = False  # True when nothing above reaches the network
