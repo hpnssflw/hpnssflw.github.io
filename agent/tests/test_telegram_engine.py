@@ -106,6 +106,16 @@ def test_a_failed_poll_drops_and_delivers_nothing_and_writes_no_store(setup, cap
     assert result["failures"] == [{"stage": "review", "scope": "*", "source": "telegram", "error_type": "DecisionsUnavailable"}]
 
 
+def test_a_failed_poll_leaves_an_existing_store_untouched(setup, capsys):
+    preset, paths, bot = setup
+    paths.telegram.write_text('{"version": 1, "offset": 9, "decisions": {}, "messages": {}}', encoding="utf-8")
+    before = paths.telegram.read_bytes()
+    bot.fail["getUpdates"] = [FakeResponse(409, {"ok": False, "description": "Conflict"})]
+    _run(preset, paths, FROZEN_NOW)
+    assert paths.telegram.read_bytes() == before
+    assert bot.sent("sendMessage") == []
+
+
 def test_a_failed_site_still_collects_taps_and_asks(setup, capsys):
     preset, paths, bot = setup
     preset.approval.path.write_text("not json", encoding="utf-8")
@@ -136,7 +146,9 @@ def test_a_crashing_telegram_step_does_not_fail_the_run_or_repeat_the_digest(set
         raise RuntimeError("secret detail")
 
     monkeypatch.setattr(telegram_review.TelegramReview, "ask", boom)
+    bot.updates = [tap(3, f"a:{url_hash(A)}", message_id=7)]
     _run(preset, paths, FROZEN_NOW)
+    assert _store(paths)["offset"] == 4  # the crash still saves what the poll confirmed
     out = capsys.readouterr().out
     assert "Telegram review failed: RuntimeError" in out and "secret detail" not in out
     assert [p.read_text(encoding="utf-8").count("example.com/a") for p in paths.outbox.iterdir()] == [1]

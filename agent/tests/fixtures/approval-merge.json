@@ -22,6 +22,13 @@
       "via_telegram": ["https://a"]
     },
     {
+      "name": "a later microsecond telegram tap beats a site decision in the same second",
+      "site": { "https://a": { "decision": "approve", "at": "2026-10-09T12:00:03.000Z" } },
+      "telegram": { "https://a": { "decision": "reject", "at": "2026-10-09T12:00:03.123456+00:00" } },
+      "expected": { "https://a": "reject" },
+      "via_telegram": ["https://a"]
+    },
+    {
       "name": "a later site decision wins",
       "site": { "https://a": { "decision": "reject", "at": "2026-10-09T13:00:00.000Z" } },
       "telegram": { "https://a": { "decision": "approve", "at": "2026-10-09T12:00:00+00:00" } },

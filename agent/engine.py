@@ -164,6 +164,10 @@ def run_real(
         except Exception as exc:  # noqa: BLE001 — the digest is already posted: a Telegram bug must not skip saving state, or the next run posts it again
             tally.fail("review", FEED_SCOPE, "telegram", exc)
             print(f"Telegram review failed: {type(exc).__name__}")
+            try:
+                review.save()  # keep the offset, taps and asks already made, or the next run re-asks and the taps expire
+            except Exception:  # noqa: BLE001 — best effort: the failure is already recorded, and the text may carry the token
+                pass
 
     for slug, count in Counter(item.topic for item in queue.items).items():
         tally.count("queue", slug, 0, count)
@@ -245,7 +249,7 @@ def _collect_taps(review, items, now: datetime, writer, tally: Tally) -> tuple[d
 
 
 def _decisions_unavailable(writer, tally: Tally, source: str | None, exc: Exception) -> None:
-    writer.emit("inbox", "failed", detail={"error": str(exc)})
+    writer.emit("inbox", "failed", source=source, detail={"error": str(exc)})
     tally.fail("review", FEED_SCOPE, source, exc)
     print(f"Inbox decisions unavailable; nothing is dropped or delivered this run: {exc}")
 
