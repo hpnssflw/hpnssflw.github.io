@@ -40,7 +40,7 @@ ranker scores against (see Pipeline).
 - GitHub — GitHub's Search API: recently created repos tagged with one of
   each topic's GitHub topics (`topic:cli`, `topic:llm`, …), ranked by
   stars; every topic uses it.
-- Blog and RSS feeds — a curated list maintained by hand, one per topic (the connector exists since sub-project A, but Tony's topics, loaded by `config.py`, can't carry feeds yet — roadmap item 7).
+- Blog and RSS feeds — a curated list maintained by hand per topic, as the topic's `sources.rss` in `agent/presets/tony.yaml`. Since roadmap item 7 (2026-10-07) Web Products reads 11 feeds; AI Engineering and Tooling have none yet.
 - Repo release watching — GitHub releases API for a handful of watched repos per topic; a version bump is unambiguous news.
 - A handful of subreddits per topic — chosen once, revisited later if the signal is bad.
 - Web search — broad net via a dedicated search API with a freshness filter (not Claude's built-in web search, which has no date parameter), catches whatever isn't covered above.

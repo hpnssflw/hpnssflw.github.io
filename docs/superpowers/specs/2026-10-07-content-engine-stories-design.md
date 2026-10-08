@@ -13,9 +13,9 @@ relies on from them is restated here.
 | # | Sub-project | Status |
 |---|---|---|
 | A | Engine core + presets | shipped 2026-10-06 |
-| **B** | Stories: one event across sources, who was first, facts tied to sources (this spec) | designing |
+| **B** | Stories: one event across sources, who was first, facts tied to sources (this spec) | shipped 2026-10-08 |
 | C | Approval and delivery: Telegram buttons, several delivery targets | later |
-| D | Preset switcher + demo section | push 1 in review, push 2 next |
+| D | Preset switcher + demo section | shipped 2026-10-07 |
 
 ## Problem
 
