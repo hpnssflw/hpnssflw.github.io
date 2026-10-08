@@ -1030,7 +1030,7 @@ log; if the widget never shows `working`, look for `claude agents failed`.
 Next phase (backend: friends, Yandex ID login, pager) needs its own
 brainstorm, starting from the research report's decision points.
 
-**Content Direction & Tony Scraponi: sub-projects #1-#8 and content engine A, D and B shipped (B pending its push).** See
+**Content Direction & Tony Scraponi: sub-projects #1-#8 and content engine A, D and B shipped; C built, not pushed.** See
 this file's section above for what shipped in
 each and what the final reviews found and fixed. Sub-project #2's bot/
 channel now exist (`@hypnosisflow`) and live delivery is verified
@@ -1055,10 +1055,10 @@ items await review, summary editing. Content engine sub-project A is shipped and
 live (2026-10-06, `bed2bb7`); sub-project D's push 1 (Tony on
 `run-result.json`, legacy files removed, `main`'s hardening merged in)
 is shipped and live (2026-10-07, `409fbc1`), and so is push 2 (the demo
-section, `/researcher/demo/<slug>/`). B (stories) is built on branch
-`worktree-stories` and regression-checked against Tony (see its bullet
-above); it goes to `main` only on Artem's word, then the agent is
-dispatched by hand and the live check is recorded in B's bullet.
+section, `/researcher/demo/<slug>/`). B (stories) is shipped and
+live-checked (2026-10-08, see its bullet above). C (Telegram approval)
+is built on branch `worktree-stories`, nothing pushed, and waits for its
+rollout on Artem's word (item 1 below).
 Next:
 1. **Sub-project C's rollout** — built on branch `worktree-stories`, not
    pushed (see its bullet above). Start with `CLAUDE.md`'s session-start
@@ -1068,7 +1068,8 @@ Next:
    no webhook (`getWebhookInfo`), set the `TELEGRAM_OWNER_CHAT_ID` secret
    (before the push, or every run delivers nothing); push to `main`;
    dispatch `agent-run.yml` twice (asks, then his taps); record the live
-   check in C's bullet. Several delivery targets per preset are now E in
+   check in C's bullet (that final record step, plan Task 9 Step 5, also
+   flips the roadmap's C line to "shipped"). Several delivery targets per preset are now E in
    `docs/tony-scraponi-roadmap.md`, waiting for a real second target.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —

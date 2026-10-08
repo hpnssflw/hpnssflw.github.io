@@ -110,8 +110,11 @@ gets its own spec → plan → implementation cycle:
   tied to their sources. Shipped: preset feeds only; Tony and agro off
   (the newsroom demo has it on). Spec:
   `docs/superpowers/specs/2026-10-07-content-engine-stories-design.md`.
-- **C. Approval: Telegram buttons** — shipped: asks in the owner's private chat, polled each run, merged with the inbox. Spec: `docs/superpowers/specs/2026-10-08-telegram-approval-design.md`.
-- **E. Several delivery targets per preset** — split out of C on 2026-10-08; waits for a real second target.
+- **C. Approval: Telegram buttons** — built, not pushed: asks in the
+  owner's private chat, polled each run, merged with the inbox. Spec:
+  `docs/superpowers/specs/2026-10-08-telegram-approval-design.md`.
+- **E. Several delivery targets per preset** — split out of C on
+  2026-10-08; waits for a real second target.
 - **D. Preset switcher in the control room** — the site reads each
   preset's `run-result.json`; Tony's settings then move into
   `agent/presets/tony.yaml`. Spec:
