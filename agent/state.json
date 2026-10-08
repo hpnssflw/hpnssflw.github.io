@@ -62,7 +62,7 @@
   "019b8d88a570a342": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 165,
+    "last_score": 166,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -94,7 +94,7 @@
   "020a2e848d32ee02": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 88,
+    "last_score": 91,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -161,7 +161,7 @@
   "035fa5abb5c7987c": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 52,
+    "last_score": 54,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -177,7 +177,7 @@
   "0397e222b2cf1c4f": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 114,
+    "last_score": 120,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -293,6 +293,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "075a69bf2ebf7943": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A Nathan Yau Process post about helping data stand out visually when there are many points, with access for members."
+      }
+    },
+    "times_sent": 0
+  },
   "07b1b8e0159752e8": {
     "dismissed": null,
     "first_seen": "2026-08-20T16:20:33.961835+00:00",
@@ -303,7 +319,7 @@
   "07e3fd6f0b87696a": {
     "dismissed": null,
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
-    "last_score": 850,
+    "last_score": 861,
     "ranks": {},
     "times_sent": 0
   },
@@ -331,7 +347,7 @@
   "08b6276066eb000d": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 33,
+    "last_score": 37,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -529,7 +545,7 @@
   "0d2b759c8ff8305d": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 276,
+    "last_score": 280,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -566,7 +582,7 @@
   "0df6080a7e0590da": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 401,
+    "last_score": 429,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -600,10 +616,34 @@
     "ranks": {},
     "times_sent": 0
   },
+  "0ed82d6d4259c6df": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 59,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 59,
+        "summary": "A Reddit post about using Claude Code to find a planet."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 59,
+        "summary": "A Reddit post claiming to have found a planet using Claude Code."
+      }
+    },
+    "times_sent": 0
+  },
   "0f0ade3dc31a264c": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 112,
+    "last_score": 113,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -675,7 +715,7 @@
   "10bd62dfbc4796aa": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 135,
+    "last_score": 186,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -901,7 +941,7 @@
   "1622e539f5fe4b6e": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 97,
+    "last_score": 99,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -924,7 +964,7 @@
   "16387ddd1c37344c": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 169,
+    "last_score": 170,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -977,7 +1017,7 @@
   "171b3799501d2795": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 52,
+    "last_score": 57,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -993,7 +1033,7 @@
   "174b55a6fc6d0bfd": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 113,
+    "last_score": 120,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1069,7 +1109,7 @@
   "1a400703ecdf7ec7": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 118,
+    "last_score": 119,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1203,7 +1243,7 @@
   "1e6d0aa6065c4bd5": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 232,
+    "last_score": 235,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1350,6 +1390,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "248e562807794d83": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 65,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 65,
+        "summary": "work-tracebook shows what your coding agents did for you via a timeline of each day and week on your Mac, tracking where your time went project by project."
+      }
+    },
+    "times_sent": 0
+  },
   "2529c4416d7268f8": {
     "dismissed": null,
     "first_seen": "2026-09-17T22:30:45.116044+00:00",
@@ -1397,7 +1453,7 @@
   "278c1d724ea06d22": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 44,
+    "last_score": 45,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1451,7 +1507,7 @@
   "286c732492720fc1": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 213,
+    "last_score": 277,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1557,7 +1613,7 @@
   "2bb517d901795da9": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 256,
+    "last_score": 263,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1594,7 +1650,7 @@
   "2c95a3500d47ac55": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 56,
+    "last_score": 57,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1631,7 +1687,7 @@
   "2cea8c6dfa6f74be": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 55,
+    "last_score": 56,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1942,7 +1998,7 @@
   "337e3f19ed608da6": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 247,
+    "last_score": 248,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1980,7 +2036,7 @@
   "34499f1d407d3b3c": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 30,
+    "last_score": 31,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2149,7 +2205,7 @@
   "393266ea5adfae70": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 350,
+    "last_score": 356,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2211,7 +2267,7 @@
   "3a0f9678829920c2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 458,
+    "last_score": 483,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2294,15 +2350,15 @@
   "3b904b47899eb2a6": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 337,
+    "last_score": 592,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
         "relevance": 6,
         "rubric": "3472af8a46e1",
-        "source_score": 235,
-        "summary": "A GitHub project description for ARTEX Korean localization, an AI autonomous penetration testing framework with topics including ai-agent and cybersecurity."
+        "source_score": 592,
+        "summary": "A Korean localization of the ARTEX AI autonomous penetration testing framework, with topics including ai-agent and autonomous-agents."
       }
     },
     "times_sent": 0
@@ -2361,15 +2417,15 @@
   "3e1fccb6ce25ce74": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 451,
+    "last_score": 602,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-07T21:01:09.362592+00:00",
-        "relevance": 2,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 1,
         "rubric": "02189e2467e9",
-        "source_score": 226,
-        "summary": "Bigwords.page is a Show HN project that turns any screen into a sign, where the URL itself is the app."
+        "source_score": 602,
+        "summary": "Show HN for Bigwords.page, a tool that turns any screen into a sign where the URL is the app."
       }
     },
     "times_sent": 0
@@ -2543,6 +2599,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "42c65eec41ba96dc": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 61,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 61,
+        "summary": "skill-cabinet is a tool to find the skills your coding agents load, see which agents can use each one, and count how often you use them."
+      }
+    },
+    "times_sent": 0
+  },
   "432aa6d44c5543d8": {
     "dismissed": null,
     "first_seen": "2026-08-16T00:35:22.159242+00:00",
@@ -2595,7 +2667,7 @@
   "45ae20b677e1b28f": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 141,
+    "last_score": 150,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2851,7 +2923,7 @@
   "4c0dda885d8e8248": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 390,
+    "last_score": 391,
     "ranks": {},
     "times_sent": 0
   },
@@ -3254,7 +3326,7 @@
   "576ded508c0bb401": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 338,
+    "last_score": 340,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3306,7 +3378,7 @@
   "5831c667660a690e": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 1034,
+    "last_score": 1080,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -3315,6 +3387,22 @@
         "rubric": "080b24af813c",
         "source_score": 884,
         "summary": "A GitHub project, oil-ui, that aims to push AI UI design by exploring distinct design directions, comparing them side by side, and refining against real screenshots."
+      }
+    },
+    "times_sent": 0
+  },
+  "584dd46a13ca6f2c": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 133,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": 133,
+        "summary": "The link features classic PC demoscene productions running natively in the browser."
       }
     },
     "times_sent": 0
@@ -3487,7 +3575,7 @@
   "5dd99e91ba7b07ac": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 52,
+    "last_score": 51,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4098,7 +4186,7 @@
   "6cbb376bdb40e04b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 415,
+    "last_score": 416,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4129,7 +4217,7 @@
   "6cdf64e41cbdbd50": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 95,
+    "last_score": 97,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4166,7 +4254,7 @@
   "6d9764f86ada5bb1": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 113,
+    "last_score": 117,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4299,6 +4387,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "70620861a7df5ed7": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 170,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 170,
+        "summary": "A blog post about giving Opus 5.5 one prompt and six hours to visualize Invisible Cities."
+      }
+    },
+    "times_sent": 0
+  },
   "70e117d494aa90cf": {
     "dismissed": null,
     "first_seen": "2026-09-18T01:56:40.951217+00:00",
@@ -4309,7 +4413,7 @@
   "70e581165c8b345e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 497,
+    "last_score": 502,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4445,7 +4549,7 @@
   "749983b595aaf313": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 243,
+    "last_score": 251,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4507,7 +4611,7 @@
   "762ec36cca677e1a": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 149,
+    "last_score": 153,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4866,6 +4970,22 @@
     },
     "times_sent": 0
   },
+  "80938972c60fcb74": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 50,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 50,
+        "summary": "A Show HN post about the author paying for a rural Tanzanian's education for ten years."
+      }
+    },
+    "times_sent": 0
+  },
   "80c2f34d29a9d3da": {
     "dismissed": null,
     "first_seen": "2026-09-14T17:10:09.041768+00:00",
@@ -4876,7 +4996,7 @@
   "8184df2e21520d58": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
-    "last_score": 110,
+    "last_score": 117,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4899,7 +5019,7 @@
   "836a79b0f997f6d8": {
     "dismissed": null,
     "first_seen": "2026-10-05T16:49:37.554117+00:00",
-    "last_score": 860,
+    "last_score": 878,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -4973,7 +5093,7 @@
   "864cbfe55cb5547f": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 38,
+    "last_score": 39,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5033,7 +5153,7 @@
   "89be4e220d9f6acb": {
     "dismissed": null,
     "first_seen": "2026-09-28T18:52:41.090824+00:00",
-    "last_score": 927,
+    "last_score": 929,
     "ranks": {},
     "times_sent": 1
   },
@@ -5321,7 +5441,7 @@
   "92764e5cb69e9660": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 32,
+    "last_score": 35,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5487,7 +5607,7 @@
   "96d307df56097d10": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 528,
+    "last_score": 557,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -5568,7 +5688,7 @@
   "98a1a75f4d9a62cb": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 37,
+    "last_score": 41,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5947,7 +6067,7 @@
   "a471abc5ffd98dd9": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 41,
+    "last_score": 43,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6044,7 +6164,7 @@
   "a73302ba4a04aa42": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 151,
+    "last_score": 160,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6088,7 +6208,7 @@
   "a851a0a421bf0c60": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 64,
+    "last_score": 66,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -6178,7 +6298,7 @@
   "aa78453a3cdbb830": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 315,
+    "last_score": 381,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6369,6 +6489,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "af0dc0f74bb4c40a": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 197,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 197,
+        "summary": "A team of AI bots called Bops that run business ops, each with its own computer, email, and phone number."
+      }
+    },
+    "times_sent": 0
+  },
   "af6fb58376a65c87": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
@@ -6424,6 +6560,22 @@
     },
     "times_sent": 0
   },
+  "afef5afb12819e98": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 52,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 52,
+        "summary": "sno-station-skills offers 31 tested skills that turn Claude Code and Codex into one working team with cross-vendor peer review, automatic handoff, morning briefs, work orders with proof, and a nightly learning loop."
+      }
+    },
+    "times_sent": 0
+  },
   "b0044a139501308e": {
     "dismissed": null,
     "first_seen": "2026-09-20T22:00:04.118633+00:00",
@@ -6471,7 +6623,7 @@
   "b0ff7ff167326d54": {
     "dismissed": null,
     "first_seen": "2026-10-05T04:14:19.891077+00:00",
-    "last_score": 3626,
+    "last_score": 3730,
     "ranks": {},
     "times_sent": 0
   },
@@ -6494,6 +6646,22 @@
         "rubric": "02189e2467e9",
         "source_score": 42,
         "summary": "Neomacs is a GPU-rendered Rust hard fork of Emacs."
+      }
+    },
+    "times_sent": 0
+  },
+  "b18f5389985699d5": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 36,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 3,
+        "rubric": "080b24af813c",
+        "source_score": 36,
+        "summary": "The link presents an analog computer simulator that runs in the browser."
       }
     },
     "times_sent": 0
@@ -6764,7 +6932,7 @@
   "b856de0518197d6e": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 54,
+    "last_score": 63,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6802,7 +6970,7 @@
   "b8d29561f841d671": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 162,
+    "last_score": 164,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6853,7 +7021,7 @@
   "ba7d73ca40f2b4c2": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 577,
+    "last_score": 579,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6890,7 +7058,7 @@
   "bb80d48523c945ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 531,
+    "last_score": 550,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6991,6 +7159,22 @@
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
     "last_score": 33,
     "ranks": {},
+    "times_sent": 0
+  },
+  "be1ae401637add81": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 52,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 52,
+        "summary": "pullboard is a local-first work board for teams of coding agents where nothing ships until a second agent verifies it."
+      }
+    },
     "times_sent": 0
   },
   "be1fb63f82e400b1": {
@@ -7112,7 +7296,7 @@
   "c192475c2a029669": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 226,
+    "last_score": 243,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -7195,7 +7379,7 @@
   "c33ea439a7b8b573": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 224,
+    "last_score": 226,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7269,7 +7453,7 @@
   "c52677dc02f6a886": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 106,
+    "last_score": 107,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7387,7 +7571,7 @@
   "c8c85d1cadaf33e0": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 389,
+    "last_score": 421,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -7440,7 +7624,7 @@
   "ca4a41726cd02267": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 88,
+    "last_score": 92,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7593,7 +7777,7 @@
   "cdb1d51fae043110": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 803,
+    "last_score": 973,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -7625,7 +7809,7 @@
   "cdcba032143cd057": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 90,
+    "last_score": 93,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7745,7 +7929,7 @@
   "d0da800340042252": {
     "dismissed": null,
     "first_seen": "2026-10-04T13:42:30.838785+00:00",
-    "last_score": 2178,
+    "last_score": 2307,
     "ranks": {},
     "times_sent": 0
   },
@@ -7775,7 +7959,7 @@
   "d1baa948a9e2b03e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 114,
+    "last_score": 115,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7791,7 +7975,7 @@
   "d1edfb1393e6c151": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 71,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7828,7 +8012,7 @@
   "d39539253b0e3a2e": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 35,
+    "last_score": 37,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7927,7 +8111,7 @@
   "d66b18709c4ba948": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 579,
+    "last_score": 705,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -7936,6 +8120,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 330,
         "summary": "An OpenAI link titled 'GPT\u20116 and Intelligent UI for everyone,' indicating a major model/platform release."
+      }
+    },
+    "times_sent": 0
+  },
+  "d6ea8aa46ff4b50e": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 9,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "An Astro tutorial for building an interactive coffee blog using core concepts like file-based routing, content collections, and islands architecture, with Astro described as performance-friendly and zero-JavaScript by default."
       }
     },
     "times_sent": 0
@@ -8001,23 +8201,23 @@
   "d88bfef8fb860939": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 62,
+    "last_score": 63,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-07T04:19:10.896068+00:00",
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
         "relevance": 2,
         "rubric": "3472af8a46e1",
-        "source_score": 1450,
-        "summary": "A GitHub repository of WebGPU shader components for React, Vue, Svelte, Solid, JS, and Framer, with topics including cli, javascript, mcp, react, shaders, and solid."
+        "source_score": 3275,
+        "summary": "A project providing WebGPU components for React, Vue, Svelte, Solid, JS, and Framer, with topics including cli, javascript, mcp."
       },
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-07T04:19:10.896068+00:00",
-        "relevance": 7,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 8,
         "rubric": "02189e2467e9",
-        "source_score": 1450,
-        "summary": "An open-source library of WebGPU shader components for React, Vue, Svelte, Solid, JS and Framer."
+        "source_score": 3276,
+        "summary": "shaders provides WebGPU components for React, Vue, Svelte, Solid, JS, and Framer."
       },
       "web-products": {
         "queued_at": null,
@@ -8033,7 +8233,7 @@
   "d8d38d395f9eac94": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 188,
+    "last_score": 208,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8063,9 +8263,9 @@
     "times_sent": 0
   },
   "d9838d6f1098949b": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-01T15:07:18.725260+00:00",
-    "last_score": 1729,
+    "last_score": 1757,
     "ranks": {},
     "times_sent": 0
   },
@@ -8107,7 +8307,7 @@
   "dab27c54d8c92fb4": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 704,
+    "last_score": 706,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -8130,7 +8330,7 @@
   "dabe8020b5e63706": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 43,
+    "last_score": 47,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8176,7 +8376,7 @@
   "dbf6a51fde3f190f": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 489,
+    "last_score": 490,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8199,15 +8399,23 @@
   "dc50683096dec8f9": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 45,
+    "last_score": 95,
     "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 95,
+        "summary": "A GitHub project that ports the TypeScript compiler, checker, and LSP to Rust, reportedly by LLM."
+      },
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-08T04:40:37.892950+00:00",
-        "relevance": 7,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 8,
         "rubric": "02189e2467e9",
-        "source_score": 45,
-        "summary": "A GitHub project titled \"Rust Port of TypeScript (Tsc),\" indicating a Rust reimplementation of the TypeScript compiler."
+        "source_score": 95,
+        "summary": "A project porting the TypeScript compiler, checker, and LSP to Rust, reportedly built by an LLM."
       }
     },
     "times_sent": 0
@@ -8377,7 +8585,7 @@
   "e0bb7480c75f38cb": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 54,
+    "last_score": 56,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8521,7 +8729,7 @@
   "e2711c9ce5a221c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 124,
+    "last_score": 131,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8618,7 +8826,7 @@
   "e6e1d2a9f0a4e91a": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 420,
+    "last_score": 426,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -8639,7 +8847,7 @@
     "times_sent": 0
   },
   "e766de53aa63e736": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-01T15:07:18.725260+00:00",
     "last_score": 1026,
     "ranks": {},
@@ -8799,7 +9007,7 @@
   "ec4b5e65913390d0": {
     "dismissed": null,
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
-    "last_score": 124,
+    "last_score": 126,
     "ranks": {},
     "times_sent": 0
   },
@@ -8829,7 +9037,7 @@
   "ee4f657a56bd17f5": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 56,
+    "last_score": 58,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8897,7 +9105,7 @@
   "eee53d0231e76d4e": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 264,
+    "last_score": 266,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9221,8 +9429,24 @@
   "f7794ae26edb3a7c": {
     "dismissed": "expired",
     "first_seen": "2026-10-01T04:20:51.005866+00:00",
-    "last_score": 5305,
+    "last_score": 5470,
     "ranks": {},
+    "times_sent": 0
+  },
+  "f7c0d10c27cf67ab": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 59,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 59,
+        "summary": "rustdsh is a Rust launcher for DSH with native fast commands, guarded agent tools, and a local project dashboard."
+      }
+    },
     "times_sent": 0
   },
   "f7e973b8e33d7327": {
@@ -9249,7 +9473,7 @@
   "f912fde3e281653a": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 333,
+    "last_score": 356,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9353,6 +9577,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "fbed806234063e73": {
+    "dismissed": null,
+    "first_seen": "2026-10-08T15:14:12.896889+00:00",
+    "last_score": 30,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 30,
+        "summary": "A collection of open-source Rust alternatives to Adobe applications."
+      }
+    },
     "times_sent": 0
   },
   "fccc7d07a058e306": {

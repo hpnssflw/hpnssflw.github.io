@@ -311,33 +311,11 @@
   "queue": {
     "by_topic": {
       "ai-engineering": 17,
-      "tooling": 34,
+      "tooling": 32,
       "web-products": 13
     },
-    "count": 64,
+    "count": 62,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-01T15:07:18.725260+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "A Claude Code skill kit for AI-assisted business videos with Three.js patterns, directly relevant as a development tool.",
-        "title": "echris6/motion-video-kit",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/echris6/motion-video-kit"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-01T15:07:18.725260+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "An Agent Skill for refining AI-generated Japanese, a practical tool for AI agent workflows.",
-        "title": "nanaism/yomiyasu",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/nanaism/yomiyasu"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-02T04:14:08.473534+00:00",
@@ -1023,8 +1001,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-08T06:30:40.543876+00:00",
-    "id": "2026-10-08T0630Z",
+    "at": "2026-10-08T15:14:12.896889+00:00",
+    "id": "2026-10-08T1514Z",
     "mode": "real",
     "offline": false
   },
@@ -1035,18 +1013,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 98,
+          "out": 98
         },
         "tooling": {
           "drops": {},
-          "in": 113,
-          "out": 113
+          "in": 118,
+          "out": 118
         },
         "web-products": {
           "drops": {},
-          "in": 179,
-          "out": 179
+          "in": 181,
+          "out": 181
         }
       },
       "stage": "collect"
@@ -1056,20 +1034,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 98,
+          "out": 98
         },
         "tooling": {
           "drops": {},
-          "in": 113,
-          "out": 113
+          "in": 118,
+          "out": 118
         },
         "web-products": {
           "drops": {
-            "outside_window": 126
+            "outside_window": 125
           },
-          "in": 179,
-          "out": 53
+          "in": 181,
+          "out": 56
         }
       },
       "stage": "window"
@@ -1079,26 +1057,26 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
-            "seen": 26
+            "dismissed": 4,
+            "seen": 25
           },
-          "in": 96,
-          "out": 67
+          "in": 98,
+          "out": 69
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
             "seen": 21
           },
-          "in": 113,
-          "out": 91
+          "in": 118,
+          "out": 96
         },
         "web-products": {
           "drops": {
             "seen": 8
           },
-          "in": 53,
-          "out": 45
+          "in": 56,
+          "out": 48
         }
       },
       "stage": "dedupe"
@@ -1108,24 +1086,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 41
+            "already_ranked": 40
           },
-          "in": 67,
-          "out": 26
+          "in": 69,
+          "out": 29
         },
         "tooling": {
           "drops": {
-            "already_ranked": 66
+            "already_ranked": 64
           },
-          "in": 91,
-          "out": 25
+          "in": 96,
+          "out": 32
         },
         "web-products": {
           "drops": {
-            "already_ranked": 22
+            "already_ranked": 21
           },
-          "in": 45,
-          "out": 23
+          "in": 48,
+          "out": 27
         }
       },
       "stage": "cache"
@@ -1135,18 +1113,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 6,
+          "out": 6
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 11,
+          "out": 11
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "out": 4
         }
       },
       "stage": "enrich"
@@ -1155,19 +1133,25 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
-          "in": 26,
-          "out": 26
-        },
-        "tooling": {
-          "drops": {},
-          "in": 25,
+          "drops": {
+            "below_relevance": 4
+          },
+          "in": 29,
           "out": 25
         },
+        "tooling": {
+          "drops": {
+            "below_relevance": 4
+          },
+          "in": 32,
+          "out": 28
+        },
         "web-products": {
-          "drops": {},
-          "in": 23,
-          "out": 23
+          "drops": {
+            "below_relevance": 2
+          },
+          "in": 27,
+          "out": 25
         }
       },
       "stage": "rank"
@@ -1177,23 +1161,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 26
-          },
-          "in": 26,
-          "out": 0
-        },
-        "tooling": {
-          "drops": {
             "over_max_items": 25
           },
           "in": 25,
           "out": 0
         },
+        "tooling": {
+          "drops": {
+            "over_max_items": 28
+          },
+          "in": 28,
+          "out": 0
+        },
         "web-products": {
           "drops": {
-            "over_max_items": 23
+            "over_max_items": 25
           },
-          "in": 23,
+          "in": 25,
           "out": 0
         }
       },
@@ -1210,7 +1194,7 @@
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 34
+          "out": 32
         },
         "web-products": {
           "drops": {},
@@ -1229,9 +1213,11 @@
           "out": 17
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 2
+          },
           "in": 34,
-          "out": 34
+          "out": 32
         },
         "web-products": {
           "drops": {},
