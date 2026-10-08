@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-01T04:20:51.005866+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "An open-source smart meeting recorder with an AI co-pilot on Mac, directly relevant as an LLM assistant application.",
-      "title": "Show HN: Parrot \u2013 Open-Source Smart Meeting Recorder with Co-Pilot on Mac",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://openparrot.app"
-    },
-    {
-      "pending_since": "2026-10-01T04:20:51.005866+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "A GitHub toolset that lets Claude Code mod PC games using skills, tools, and fal MCP, relevant to AI and developer tooling.",
-      "title": "rehan-remade/universal-modder",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/rehan-remade/universal-modder"
-    },
-    {
-      "pending_since": "2026-10-01T04:20:51.005866+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "A GitHub agent-native reverse engineering and client-side authorization audit workbench, a relevant security tooling repo.",
-      "title": "angusdevgo/Seep-Reverse-Lab",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/angusdevgo/Seep-Reverse-Lab"
-    },
-    {
-      "pending_since": "2026-10-01T04:20:51.005866+00:00",
-      "score": 7,
-      "source": "github",
-      "summary": "A GitHub repo for a sensible Zulip client, a relevant open-source web/desktop communication tool.",
-      "title": "slop-place/zulu",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/slop-place/zulu"
-    },
-    {
-      "pending_since": "2026-10-01T04:20:51.005866+00:00",
-      "score": 6,
-      "source": "github",
-      "summary": "A GitHub benchmark for tracking model capability after release, useful as an AI evaluation tool.",
-      "title": "ninjahawk/livenerf",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/ninjahawk/livenerf"
-    },
-    {
-      "pending_since": "2026-10-01T04:20:51.005866+00:00",
-      "score": 6,
-      "source": "github",
-      "summary": "A GitHub repo offering reusable style prompts and code-made short films directed by an AI agent, a creative AI tooling resource.",
-      "title": "lemomo-ai/lemo-opuscar",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/lemomo-ai/lemo-opuscar"
-    },
-    {
       "pending_since": "2026-10-01T15:07:18.725260+00:00",
       "score": 9,
       "source": "github",
@@ -689,6 +629,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://blog.master.dev/transferring-sibling-count-to-a-parent-element/"
+    },
+    {
+      "pending_since": "2026-10-08T04:40:37.892950+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "Explains the new CSS progress() function that returns a unitless 0-1 value between bounds, and how to manually replicate its normalization math with calc() while browser support grows.",
+      "title": "Fallbacks for CSS `progress()`",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://blog.master.dev/fallbacks-for-css-progress/"
     }
   ],
   "last_email_at": "2026-09-30T04:08:45.319706+00:00"

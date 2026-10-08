@@ -310,78 +310,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 18,
-      "tooling": 39,
-      "web-products": 12
+      "ai-engineering": 17,
+      "tooling": 34,
+      "web-products": 13
     },
-    "count": 69,
+    "count": 64,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-01T04:20:51.005866+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "An open-source smart meeting recorder with an AI co-pilot on Mac, directly relevant as an LLM assistant application.",
-        "title": "Show HN: Parrot – Open-Source Smart Meeting Recorder with Co-Pilot on Mac",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://openparrot.app"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-01T04:20:51.005866+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "A GitHub toolset that lets Claude Code mod PC games using skills, tools, and fal MCP, relevant to AI and developer tooling.",
-        "title": "rehan-remade/universal-modder",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/rehan-remade/universal-modder"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-01T04:20:51.005866+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "A GitHub agent-native reverse engineering and client-side authorization audit workbench, a relevant security tooling repo.",
-        "title": "angusdevgo/Seep-Reverse-Lab",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/angusdevgo/Seep-Reverse-Lab"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-01T04:20:51.005866+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "A GitHub repo for a sensible Zulip client, a relevant open-source web/desktop communication tool.",
-        "title": "slop-place/zulu",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/slop-place/zulu"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-01T04:20:51.005866+00:00",
-        "score": 6,
-        "source": "github",
-        "summary": "A GitHub benchmark for tracking model capability after release, useful as an AI evaluation tool.",
-        "title": "ninjahawk/livenerf",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/ninjahawk/livenerf"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-01T04:20:51.005866+00:00",
-        "score": 6,
-        "source": "github",
-        "summary": "A GitHub repo offering reusable style prompts and code-made short films directed by an AI agent, a creative AI tooling resource.",
-        "title": "lemomo-ai/lemo-opuscar",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/lemomo-ai/lemo-opuscar"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-01T15:07:18.725260+00:00",
@@ -1074,12 +1008,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://blog.master.dev/transferring-sibling-count-to-a-parent-element/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T04:40:37.892950+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Explains the new CSS progress() function that returns a unitless 0-1 value between bounds, and how to manually replicate its normalization math with calc() while browser support grows.",
+        "title": "Fallbacks for CSS `progress()`",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/fallbacks-for-css-progress/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-07T21:01:09.362592+00:00",
-    "id": "2026-10-07T2101Z",
+    "at": "2026-10-08T04:40:37.892950+00:00",
+    "id": "2026-10-08T0440Z",
     "mode": "real",
     "offline": false
   },
@@ -1090,18 +1035,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 96,
+          "out": 96
         },
         "tooling": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 113,
+          "out": 113
         },
         "web-products": {
           "drops": {},
-          "in": 180,
-          "out": 180
+          "in": 179,
+          "out": 179
         }
       },
       "stage": "collect"
@@ -1111,20 +1056,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 96,
+          "out": 96
         },
         "tooling": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 113,
+          "out": 113
         },
         "web-products": {
           "drops": {
-            "outside_window": 125
+            "outside_window": 126
           },
-          "in": 180,
-          "out": 55
+          "in": 179,
+          "out": 53
         }
       },
       "stage": "window"
@@ -1134,25 +1079,26 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 2,
-            "seen": 24
+            "dismissed": 3,
+            "seen": 26
           },
-          "in": 97,
-          "out": 71
+          "in": 96,
+          "out": 67
         },
         "tooling": {
           "drops": {
+            "dismissed": 1,
             "seen": 21
           },
-          "in": 114,
-          "out": 93
+          "in": 113,
+          "out": 91
         },
         "web-products": {
           "drops": {
-            "seen": 6
+            "seen": 7
           },
-          "in": 55,
-          "out": 49
+          "in": 53,
+          "out": 46
         }
       },
       "stage": "dedupe"
@@ -1162,24 +1108,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 36
+            "already_ranked": 38
           },
-          "in": 71,
-          "out": 35
+          "in": 67,
+          "out": 29
         },
         "tooling": {
           "drops": {
-            "already_ranked": 52
+            "already_ranked": 62
           },
-          "in": 93,
-          "out": 41
+          "in": 91,
+          "out": 29
         },
         "web-products": {
           "drops": {
-            "already_ranked": 19
+            "already_ranked": 22
           },
-          "in": 49,
-          "out": 30
+          "in": 46,
+          "out": 24
         }
       },
       "stage": "cache"
@@ -1189,18 +1135,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 15,
-          "out": 15
+          "in": 4,
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 19,
-          "out": 19
+          "in": 7,
+          "out": 7
         },
         "web-products": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1210,24 +1156,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 6
+            "below_relevance": 3
           },
-          "in": 35,
-          "out": 29
+          "in": 29,
+          "out": 26
         },
         "tooling": {
           "drops": {
-            "below_relevance": 14
-          },
-          "in": 41,
-          "out": 27
-        },
-        "web-products": {
-          "drops": {
             "below_relevance": 4
           },
-          "in": 30,
-          "out": 26
+          "in": 29,
+          "out": 25
+        },
+        "web-products": {
+          "drops": {},
+          "in": 24,
+          "out": 24
         }
       },
       "stage": "rank"
@@ -1237,24 +1181,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 25
+            "over_max_items": 26
           },
-          "in": 29,
-          "out": 4
+          "in": 26,
+          "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 24
+            "over_max_items": 25
           },
-          "in": 27,
-          "out": 3
+          "in": 25,
+          "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 24
+            "over_max_items": 23
           },
-          "in": 26,
-          "out": 2
+          "in": 24,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1264,18 +1208,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "out": 18
+          "in": 0,
+          "out": 17
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "out": 39
+          "in": 0,
+          "out": 34
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 12
+          "in": 1,
+          "out": 13
         }
       },
       "stage": "queue"
@@ -1285,24 +1229,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "expired": 2
+            "expired": 1
           },
-          "in": 16,
-          "out": 14
+          "in": 18,
+          "out": 17
         },
         "tooling": {
           "drops": {
-            "expired": 4
+            "expired": 5
           },
-          "in": 40,
-          "out": 36
+          "in": 39,
+          "out": 34
         },
         "web-products": {
-          "drops": {
-            "expired": 2
-          },
+          "drops": {},
           "in": 12,
-          "out": 10
+          "out": 12
         }
       },
       "stage": "review"
