@@ -4,5 +4,185 @@
     "text": "<b>Research digest — 1 item</b>\n\n<b>AI Engineering</b>\n• <a href=\"https://deepseek.example/v4-paper\">DeepSeek V4 paper</a>\nDeepSeek describes V4.",
     "parse_mode": "HTML",
     "disable_web_page_preview": true
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>AI Engineering</b> · 7/10 · hn\n<a href=\"https://vllm.example/1.0\">vLLM 1.0 released</a>\nvLLM reaches 1.0.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:ede850743c54f181"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:ede850743c54f181"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>AI Engineering</b> · 8/10 · hn\n<a href=\"https://qwen.example/4\">Qwen 4 open weights</a>\nAbout: Qwen 4 open weights.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:c8f1edc1ce1fcb4f"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:c8f1edc1ce1fcb4f"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>AI Engineering</b> · 8/10 · hn\n<a href=\"https://ollama.example/blog/speculative-decoding\">Ollama adds speculative decoding</a>\nAbout: Ollama adds speculative decoding.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:55d61990c7e0687e"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:55d61990c7e0687e"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>AI Engineering</b> · 7/10 · hn\n<a href=\"https://mcp.example/postgres\">MCP server for Postgres</a>\nAbout: MCP server for Postgres.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:131b92c7e3761b52"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:131b92c7e3761b52"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>Tooling</b> · 9/10 · hn\n<a href=\"https://github.example/fm\">Show HN: A terminal file manager in Rust</a>\nAbout: Show HN: A terminal file manager in Rust.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:192a59b681eaa973"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:192a59b681eaa973"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>Web Products</b> · 6/10 · github\n<a href=\"https://github.com/acme/chartkit\">acme/chartkit</a>\nAbout: acme/chartkit.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:1b81b07ece4825df"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:1b81b07ece4825df"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>Web Products</b> · 8/10 · hn\n<a href=\"https://firefox.example/layout\">Firefox ships a new CSS layout engine</a>\nAbout: Firefox ships a new CSS layout engine.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:3113794661d787d2"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:3113794661d787d2"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>Web Products</b> · 7/10 · hn\n<a href=\"https://d3.example/stock-dashboard\">Building a stock dashboard with D3</a>\nAbout: Building a stock dashboard with D3.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:f2f8be98af563bc1"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:f2f8be98af563bc1"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "chat_id": 1001,
+    "text": "<b>Tooling</b> · 6/10 · hn\n<a href=\"https://tool.example/b\">Tool B</a>\nTool B.",
+    "parse_mode": "HTML",
+    "disable_web_page_preview": true,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "✅ Approve",
+            "callback_data": "a:e08e7ff548152eb4"
+          },
+          {
+            "text": "❌ Reject",
+            "callback_data": "r:e08e7ff548152eb4"
+          }
+        ]
+      ]
+    }
   }
 ]

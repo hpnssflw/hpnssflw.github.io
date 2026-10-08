@@ -126,6 +126,12 @@ approval:
   decisions_url: https://api.github.com/repos/hpnssflw/tony-inbox/contents/decisions.json
   token_env: GITHUB_TOKEN
   expire_days: 7 # undecided items older than this leave the queue for good
+  # The bot also asks Artem in his private chat (docs/superpowers/specs/2026-10-08-telegram-approval-design.md);
+  # his taps are read at the start of each run and merged with the inbox, latest action wins.
+  telegram:
+    bot_token_env: TELEGRAM_BOT_TOKEN
+    owner_chat_env: TELEGRAM_OWNER_CHAT_ID # repo secret: Artem's private chat with the bot
+    max_asks_per_run: 10
 
 delivery:
   type: telegram

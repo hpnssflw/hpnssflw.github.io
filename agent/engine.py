@@ -10,7 +10,7 @@ import sys
 from collections import Counter, defaultdict
 from datetime import datetime
 
-from agent import dedupe, date_guard, digest, events, inbox, pending, pipeline, status_export, stories
+from agent import approval, dedupe, date_guard, digest, events, inbox, pending, pipeline, status_export, stories, telegram_review
 from agent.approval import approval_for
 from agent.context import Adapters, RunContext
 from agent.deliver import delivery_for
@@ -32,6 +32,7 @@ def live_adapters(preset: Preset, paths: DataPaths) -> Adapters:
         approval=approval_for(preset),
         delivery=delivery_for(preset, paths),
         fetcher=LiveFetcher(),
+        review=telegram_review.review_for(preset, paths),
     )
 
 
@@ -83,16 +84,15 @@ def run_real(
     state, queue, tally = ctx.state, ctx.queue, ctx.tally
 
     queued_before_review = Counter(item.topic for item in queue.items)
+    before_review = {item.url: item for item in queue.items}
+    review = adapters.review
     decisions: dict[str, str] | None = None
+    approved: list[pending.PendingItem] = []
     inbox_drops: list = []
-    try:
-        decisions = adapters.approval.load()
-    except inbox.DecisionsUnavailable as exc:
-        writer.emit("inbox", "failed", detail={"error": str(exc)})
-        tally.fail("review", FEED_SCOPE, None, exc)
-        print(f"Inbox decisions unavailable; nothing is dropped or delivered this run: {exc}")
-        approved: list[pending.PendingItem] = []
-    else:
+    site = _load_site_decisions(adapters, writer, tally)
+    telegram_decisions, taps = (None, 0) if review is None else _collect_taps(review, queue.items, now, writer, tally)
+    if site is not None and (review is None or telegram_decisions is not None):
+        decisions = approval.merge_decisions(site, telegram_decisions or {})
         approved, inbox_drops = inbox.apply_decisions(queue, decisions, state, now, preset.approval.expire_days)
         for topic_slug, drop in inbox_drops:
             writer.emit_drop("inbox", topic_slug, drop)
@@ -116,6 +116,7 @@ def run_real(
             print(f"Preset feeds failed: {exc}")
 
     delivered = False
+    sent_urls: set[str] = set()
     due = pending.is_email_due(approved, queue.last_email_at, now, preset.delivery.cadence_hours)
     messages: list[str] = []
     if due:
@@ -139,7 +140,7 @@ def run_real(
                 dedupe.mark_sent_url(state, item.url)
             if ctx.stories is not None:
                 stories.mark_delivered(ctx.stories, state, [item.url for item in approved])
-            sent_urls = {item.url for item in approved}
+            sent_urls.update(item.url for item in approved)
             queue.items = [item for item in queue.items if item.url not in sent_urls]
             queue.last_email_at = now.isoformat()
             writer.emit("deliver", "sent", detail={"items": len(approved), "topics": len(grouped)})
@@ -151,6 +152,14 @@ def run_real(
             f"Nothing delivered this run. Pending queue: {len(queue.items)} item(s), "
             f"{len(approved)} approved."
         )
+
+    if review is not None and telegram_decisions is not None:
+        if decisions is not None:
+            rejected_urls = {drop.url for _, drop in inbox_drops if drop.reason == "rejected"}
+            review.update(before_review, queue.items, decisions, sent_urls, rejected_urls, now, tally)
+        asked = review.ask(queue.items, decisions, now, tally)
+        review.save()
+        print(f"Telegram: {taps} tap(s) picked up, {asked} item(s) asked.")
 
     for slug, count in Counter(item.topic for item in queue.items).items():
         tally.count("queue", slug, 0, count)
@@ -210,6 +219,31 @@ def _tally_review(tally: Tally, before: Counter, queue: pending.PendingQueue, in
         tally.count("review", slug, before[slug], after[slug], drops_by_topic[slug])
         if approved_by_topic[slug]:
             tally.note("review", slug, "approved", approved_by_topic[slug])
+
+
+def _load_site_decisions(adapters: Adapters, writer, tally: Tally) -> dict[str, inbox.DecisionEntry] | None:
+    try:
+        return adapters.approval.load_entries()
+    except inbox.DecisionsUnavailable as exc:
+        _decisions_unavailable(writer, tally, None, exc)
+        return None
+
+
+def _collect_taps(review, items, now: datetime, writer, tally: Tally) -> tuple[dict[str, inbox.DecisionEntry] | None, int]:
+    try:
+        decisions, tapped = review.collect(items, now)
+    except inbox.DecisionsUnavailable as exc:
+        _decisions_unavailable(writer, tally, "telegram", exc)
+        return None, 0
+    for item in tapped:
+        tally.note("review", item.topic, "telegram_taps")
+    return decisions, len(tapped)
+
+
+def _decisions_unavailable(writer, tally: Tally, source: str | None, exc: Exception) -> None:
+    writer.emit("inbox", "failed", detail={"error": str(exc)})
+    tally.fail("review", FEED_SCOPE, source, exc)
+    print(f"Inbox decisions unavailable; nothing is dropped or delivered this run: {exc}")
 
 
 def _write_status(preset: Preset, paths: DataPaths, writer, queue: pending.PendingQueue, now: datetime) -> None:

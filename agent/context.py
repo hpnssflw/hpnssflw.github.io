@@ -20,6 +20,7 @@ class Adapters:
     approval: Any  # load_entries() -> {url: inbox.DecisionEntry}; raises inbox.DecisionsUnavailable
     delivery: Any  # label: str; send(messages, run_id) -> None
     fetcher: Any = None  # get(url) -> fetch.Fetched; RSS feeds and full text
+    review: Any = None  # telegram_review.TelegramReview for presets with approval.telegram, else None
     offline: bool = False  # True when nothing above reaches the network
 
 

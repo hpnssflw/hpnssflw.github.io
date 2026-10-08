@@ -2,7 +2,9 @@
 inputs (tests/fixtures/tony), compared byte for byte with goldens
 recorded on ec82c98, before the engine refactor. Re-recorded once, in
 sub-project D, for run-result schema 2 and the "Run result:" line;
-otherwise a golden that would change is a regression."""
+otherwise a golden that would change is a regression. Re-recorded once more
+in sub-project C for Tony's approval.telegram block (asks after the digest,
+the review line on stdout, config.approval.telegram)."""
 
 from __future__ import annotations
 
@@ -30,6 +32,7 @@ def test_real_run(tony, capsys):
             GOLDEN / "real" / "status.json": tony.read("status.json"),
             GOLDEN / "real" / "events.jsonl": tony.read("runs/2026-10-06T1200Z.jsonl"),
             GOLDEN / "real" / "telegram.json": json.dumps(tony.http.posts, indent=2, ensure_ascii=False) + "\n",
+            GOLDEN / "real" / "telegram-store.json": tony.read("telegram.json"),
             GOLDEN / "real" / "prompts.txt": tony.llm.transcript(),
         }
     )
@@ -47,7 +50,7 @@ def test_preview_writes_nothing(tony, capsys):
     tony.run_preview()
     stdout = tony.normalize(capsys.readouterr().out)
     assert _snapshot(tony.data) == before
-    assert tony.http.posts == []
+    assert tony.http.bot.calls == []
     assert_goldens(
         {
             GOLDEN / "preview" / "stdout.txt": stdout,
@@ -60,6 +63,7 @@ def test_dry_run(tony, capsys):
     tony.run_dry()
     stdout = tony.normalize(capsys.readouterr().out)
     assert tony.llm.calls == []
+    assert tony.http.bot.calls == []
     assert_goldens(
         {
             GOLDEN / "dry" / "stdout.txt": stdout,

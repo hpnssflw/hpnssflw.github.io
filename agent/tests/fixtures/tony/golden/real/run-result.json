@@ -3,6 +3,11 @@
     "approval": {
       "decisions_url": "https://api.github.com/repos/hpnssflw/tony-inbox/contents/decisions.json",
       "expire_days": 7,
+      "telegram": {
+        "bot_token_env": "TELEGRAM_BOT_TOKEN",
+        "max_asks_per_run": 10,
+        "owner_chat_env": "TELEGRAM_OWNER_CHAT_ID"
+      },
       "token_env": "GITHUB_TOKEN",
       "type": "inbox"
     },
@@ -555,7 +560,8 @@
           "drops": {},
           "in": 1,
           "notes": {
-            "approved": 1
+            "approved": 1,
+            "asked": 4
           },
           "out": 1
         },
@@ -565,11 +571,17 @@
             "rejected": 1
           },
           "in": 3,
+          "notes": {
+            "asked": 2
+          },
           "out": 1
         },
         "web-products": {
           "drops": {},
           "in": 0,
+          "notes": {
+            "asked": 3
+          },
           "out": 0
         }
       },

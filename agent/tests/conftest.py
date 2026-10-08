@@ -147,13 +147,17 @@ def tap(update_id: int, data: str, user: int = OWNER, chat: int = OWNER, message
 
 class FakeHttp:
     """Serves HN Algolia hits by query keyword, GitHub search results by
-    `topic:` qualifier, and decisions.json; records Telegram posts."""
+    `topic:` qualifier, and decisions.json; serves the Bot API through FakeBot."""
 
     def __init__(self, hn: dict, github: dict, decisions: dict):
         self.hn = hn
         self.github = github
         self.decisions = decisions
-        self.posts: list[dict] = []
+        self.bot = FakeBot()
+
+    @property
+    def posts(self) -> list[dict]:
+        return self.bot.sent("sendMessage")
 
     def get(self, url, params=None, headers=None, timeout=None, **kwargs):
         if url == ALGOLIA_URL:
@@ -166,9 +170,7 @@ class FakeHttp:
         raise AssertionError(f"unexpected GET {url}")
 
     def post(self, url, json=None, timeout=None, **kwargs):
-        assert url.startswith("https://api.telegram.org/bot"), url
-        self.posts.append(json)
-        return FakeResponse(200, {"ok": True})
+        return self.bot.post(url, json=json, timeout=timeout, **kwargs)
 
     @staticmethod
     def _hit(raw: dict) -> dict:
@@ -293,7 +295,7 @@ class TonyHarness:
     refactored; the inputs they feed must stay identical."""
 
     def __init__(self, data: Path, monkeypatch: pytest.MonkeyPatch):
-        from agent import deliver, events, summarize
+        from agent import deliver, events, summarize, telegram_review
 
         self.data = data
         seed_tony_data(data)
@@ -303,9 +305,11 @@ class TonyHarness:
         monkeypatch.setattr(requests, "post", self.http.post)
         monkeypatch.setattr(summarize, "OpenAI", self.llm)
         monkeypatch.setattr(deliver.time, "sleep", lambda seconds: None)
+        monkeypatch.setattr(telegram_review.time, "sleep", lambda seconds: None)
         monkeypatch.setattr(events, "datetime", frozen_datetime(ticking_clock(FROZEN_NOW)))
         monkeypatch.setenv("DEEPSEEK_API_KEY", "test-deepseek-key")
         monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "test-telegram-token")
+        monkeypatch.setenv("TELEGRAM_OWNER_CHAT_ID", str(OWNER))
         monkeypatch.delenv("GITHUB_TOKEN", raising=False)
 
     def _run_args(self):

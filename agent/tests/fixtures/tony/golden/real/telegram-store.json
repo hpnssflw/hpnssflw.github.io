@@ -1,0 +1,43 @@
+{
+  "decisions": {},
+  "messages": {
+    "https://d3.example/stock-dashboard": {
+      "message_id": 9,
+      "shown": "waiting"
+    },
+    "https://firefox.example/layout": {
+      "message_id": 8,
+      "shown": "waiting"
+    },
+    "https://github.com/acme/chartkit": {
+      "message_id": 7,
+      "shown": "waiting"
+    },
+    "https://github.example/fm": {
+      "message_id": 6,
+      "shown": "waiting"
+    },
+    "https://mcp.example/postgres": {
+      "message_id": 5,
+      "shown": "waiting"
+    },
+    "https://ollama.example/blog/speculative-decoding": {
+      "message_id": 4,
+      "shown": "waiting"
+    },
+    "https://qwen.example/4": {
+      "message_id": 3,
+      "shown": "waiting"
+    },
+    "https://tool.example/b": {
+      "message_id": 10,
+      "shown": "waiting"
+    },
+    "https://vllm.example/1.0": {
+      "message_id": 2,
+      "shown": "waiting"
+    }
+  },
+  "offset": 0,
+  "version": 1
+}
