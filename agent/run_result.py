@@ -220,13 +220,21 @@ def _feed(feed: FeedConfig) -> dict:
 def _approval(preset: Preset) -> dict:
     approval = preset.approval
     if approval.type == "inbox":
-        return {
+        out = {
             "type": "inbox",
             "decisions_url": approval.decisions_url,
             "token_env": approval.token_env,
             "expire_days": approval.expire_days,
         }
-    return {"type": "file", "path": _relative(preset, approval.path), "expire_days": approval.expire_days}
+    else:
+        out = {"type": "file", "path": _relative(preset, approval.path), "expire_days": approval.expire_days}
+    if approval.telegram is not None:
+        out["telegram"] = {
+            "bot_token_env": approval.telegram.bot_token_env,
+            "owner_chat_env": approval.telegram.owner_chat_env,
+            "max_asks_per_run": approval.telegram.max_asks_per_run,
+        }
+    return out
 
 
 def _delivery(preset: Preset) -> dict:

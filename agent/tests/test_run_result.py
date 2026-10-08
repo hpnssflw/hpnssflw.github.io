@@ -150,3 +150,16 @@ def test_config_carries_the_stories_settings(tmp_path):
 
 def test_config_without_stories_has_no_stories_key(tmp_path):
     assert "stories" not in preset_config(load_preset(write_stories_preset(tmp_path, stories="")))
+
+
+def test_config_shows_telegram_approval_by_env_names_only(tmp_path, monkeypatch):
+    monkeypatch.setenv("TELEGRAM_OWNER_CHAT_ID", "424242")
+    block = {"bot_token_env": "TELEGRAM_BOT_TOKEN", "owner_chat_env": "TELEGRAM_OWNER_CHAT_ID", "max_asks_per_run": 10}
+    raw = dict(VALID, approval=dict(VALID["approval"], telegram=block))
+    config = preset_config(load_preset(write_preset(tmp_path, raw)))
+    assert config["approval"]["telegram"] == block
+    assert "424242" not in json.dumps(config)
+
+
+def test_config_without_telegram_approval_has_no_telegram_key(tmp_path):
+    assert "telegram" not in preset_config(load_preset(write_preset(tmp_path, VALID)))["approval"]

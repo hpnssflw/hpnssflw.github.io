@@ -48,3 +48,7 @@ class DataPaths:
     @property
     def stories(self) -> Path:
         return self.root / "stories.json"
+
+    @property
+    def telegram(self) -> Path:
+        return self.root / "telegram.json"

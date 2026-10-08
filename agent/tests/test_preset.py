@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from agent.preset import PresetError, StoriesConfig, load_preset, require_offline
+from agent.preset import PresetError, StoriesConfig, TelegramApprovalConfig, load_preset, require_offline
 from agent.sources.base import FeedConfig
 from agent.tests.conftest import STORIES_PRESET, write_stories_preset
 
@@ -222,4 +222,44 @@ def test_offline_preset_with_stories_needs_the_stories_file(tmp_path):
     offline = 'offline: {now: "2026-10-06T06:00:00+00:00", http: http.yaml, llm: verdicts.json}\n'
     preset = load_preset(write_stories_preset(tmp_path, extra=offline))
     with pytest.raises(PresetError, match=re.escape("offline.stories: required for a preset with stories")):
+        require_offline(preset)
+
+
+TELEGRAM_BLOCK = {"bot_token_env": "TELEGRAM_BOT_TOKEN", "owner_chat_env": "TELEGRAM_OWNER_CHAT_ID", "max_asks_per_run": 10}
+
+
+@pytest.mark.parametrize(
+    "approval",
+    [
+        {"type": "file", "path": "fixtures/decisions.json", "expire_days": 3},
+        {"type": "inbox", "decisions_url": "https://x", "expire_days": 7, "token_env": "GITHUB_TOKEN"},
+    ],
+)
+def test_approval_takes_an_optional_telegram_block(tmp_path, approval):
+    preset = load_preset(write_preset(tmp_path, dict(VALID, approval=dict(approval, telegram=TELEGRAM_BLOCK))))
+    assert preset.approval.telegram == TelegramApprovalConfig("TELEGRAM_BOT_TOKEN", "TELEGRAM_OWNER_CHAT_ID", 10)
+
+
+def test_approval_without_the_block_has_no_telegram(tmp_path):
+    assert load_preset(write_preset(tmp_path, VALID)).approval.telegram is None
+
+
+@pytest.mark.parametrize(
+    ("block", "message"),
+    [
+        ({k: v for k, v in TELEGRAM_BLOCK.items() if k != "owner_chat_env"}, "approval.telegram.owner_chat_env: required"),
+        (dict(TELEGRAM_BLOCK, max_asks_per_run=0), "approval.telegram.max_asks_per_run: expected an integer >= 1"),
+        (dict(TELEGRAM_BLOCK, chat="@x"), "approval.telegram.chat: unknown key"),
+        ("yes", "approval.telegram: expected a mapping"),
+    ],
+)
+def test_invalid_telegram_blocks_name_the_key(tmp_path, block, message):
+    raw = dict(VALID, approval=dict(VALID["approval"], telegram=block))
+    with pytest.raises(PresetError, match=message):
+        load_preset(write_preset(tmp_path, raw))
+
+
+def test_offline_refuses_telegram_approval(tmp_path):
+    preset = load_preset(write_preset(tmp_path, dict(VALID, approval=dict(VALID["approval"], telegram=TELEGRAM_BLOCK))))
+    with pytest.raises(PresetError, match="approval.telegram: --offline can't use Telegram"):
         require_offline(preset)

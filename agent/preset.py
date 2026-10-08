@@ -51,12 +51,23 @@ class TelegramSection:
 
 
 @dataclass(frozen=True)
+class TelegramApprovalConfig:
+    """`approval.telegram`: the bot asks the owner about each new queue
+    item in a private chat (docs/superpowers/specs/2026-10-08-telegram-approval-design.md)."""
+
+    bot_token_env: str  # names of environment variables, never the values
+    owner_chat_env: str
+    max_asks_per_run: int
+
+
+@dataclass(frozen=True)
 class ApprovalConfig:
     type: str  # inbox | file
     expire_days: int
     decisions_url: str | None = None  # inbox
     token_env: str | None = None  # inbox
     path: Path | None = None  # file
+    telegram: TelegramApprovalConfig | None = None
 
 
 @dataclass(frozen=True)
@@ -133,6 +144,8 @@ def require_offline(preset: Preset) -> None:
         raise PresetError(f"{preset.slug}: --offline needs an `offline` section")
     if preset.approval.type != "file":
         raise PresetError("approval.type: --offline needs `file`")
+    if preset.approval.telegram is not None:
+        raise PresetError("approval.telegram: --offline can't use Telegram")
     if preset.delivery.type != "file":
         raise PresetError("delivery.type: --offline needs `file`")
     if preset.stories is not None and preset.offline.stories is None:
@@ -318,21 +331,35 @@ def _check_unique_feed_ids(feeds: tuple[FeedConfig, ...], topics: tuple[TopicCon
 def _approval(raw, base: Path) -> ApprovalConfig:
     kind = raw.get("type") if isinstance(raw, dict) else None
     if kind == "inbox":
-        section = _fields(raw, "approval", ("type", "decisions_url", "expire_days", "token_env"))
+        section = _fields(raw, "approval", ("type", "decisions_url", "expire_days", "token_env"), ("telegram",))
         return ApprovalConfig(
             type="inbox",
             expire_days=_int(section, "expire_days", "approval", minimum=1),
             decisions_url=_str(section, "decisions_url", "approval"),
             token_env=_str(section, "token_env", "approval"),
+            telegram=_approval_telegram(section),
         )
     if kind == "file":
-        section = _fields(raw, "approval", ("type", "path", "expire_days"))
+        section = _fields(raw, "approval", ("type", "path", "expire_days"), ("telegram",))
         return ApprovalConfig(
             type="file",
             expire_days=_int(section, "expire_days", "approval", minimum=1),
             path=_existing_file(section, "path", "approval", base),
+            telegram=_approval_telegram(section),
         )
     raise PresetError("approval.type: one of inbox, file")
+
+
+def _approval_telegram(section: dict) -> TelegramApprovalConfig | None:
+    if "telegram" not in section:
+        return None
+    where = "approval.telegram"
+    raw = _fields(section["telegram"], where, ("bot_token_env", "owner_chat_env", "max_asks_per_run"))
+    return TelegramApprovalConfig(
+        bot_token_env=_str(raw, "bot_token_env", where),
+        owner_chat_env=_str(raw, "owner_chat_env", where),
+        max_asks_per_run=_int(raw, "max_asks_per_run", where, minimum=1),
+    )
 
 
 def _delivery(raw) -> DeliveryTarget:
