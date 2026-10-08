@@ -101,6 +101,16 @@ keeps failing (no fallback yet), and turning `stories:` on or off for a
 preset with an existing queue has no migration — turning it off would
 re-queue the non-opener reports of queued stories.
 
+Since sub-project C (`docs/superpowers/specs/2026-10-08-telegram-approval-design.md`)
+approval has a second source: with `approval.telegram` in the preset, the
+bot asks the owner about each new queue item in his private chat, with
+Approve and Reject buttons. The agent polls the taps (`getUpdates`) at the
+start of each real run and merges them with the inbox's `decisions.json`,
+the latest action per item winning; either source unavailable means no
+decisions this run. Asks are capped per run, and the offset, Telegram
+decisions and ask message ids live in `telegram.json` in the data dir
+(no chat id or token). Tony has it on; the demos don't.
+
 ## Proposed stack
 
 - A single Python script, run on a schedule rather than a long-lived service.

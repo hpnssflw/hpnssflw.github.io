@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); the preset select on the control room built 2026-10-12, pushed and live 2026-10-14; #6's watch passed (summary 2026-10-14); next is C (Telegram approval buttons, several delivery targets).**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); C (Telegram approval buttons) built 2026-10-08, not pushed; the preset select on the control room built 2026-10-12, pushed and live 2026-10-14; #6's watch passed (summary 2026-10-14); next is C's rollout on Artem's word. Several delivery targets split out of C as E.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -944,6 +944,48 @@ infrastructure.
   `сюжеты 11 · с фактами: 2`), collapsed story rows with
   `источников: N · первым — …`, no links in facts or digest, no horizontal
   scroll at 1440; `/researcher/queue/` keeps nine cells (`--rail-cells:9`).
+- **Content engine, sub-project C (Telegram approval): built, not pushed.**
+  Spec: `docs/superpowers/specs/2026-10-08-telegram-approval-design.md`.
+  Plan: `docs/superpowers/plans/2026-10-08-telegram-approval.md` (9 tasks;
+  8 built, Task 9 is the rollout). Built in worktree
+  `.claude/worktrees/stories` (branch `worktree-stories`) on `origin/main`
+  `91ac622`, nothing pushed. What it does: with `approval.telegram` in the
+  preset (Tony's has it; the demos don't), the bot sends Artem each new
+  queue item in his private chat with Approve and Reject buttons (capped
+  per run). The agent reads his taps with `getUpdates` at the start of each
+  real run and applies them like the site's decisions: per item the later
+  of the site's `decisions.json` and Telegram's decision wins
+  (`approval.merge_decisions`, mirrored by `mergeDecisions` in
+  `lib/telegram-decisions.ts`, both pinned to
+  `agent/tests/fixtures/approval-merge.json`); either source unavailable
+  means no decisions that run. A tap shows no reaction right away: its
+  message updates on the next run. The offset, Telegram decisions and ask
+  message ids live in `agent/telegram.json` on `agent-data` (no chat id or
+  token); the owner's chat id is the repo secret `TELEGRAM_OWNER_CHAT_ID`.
+  The agent still never writes `decisions.json`. The control room shows
+  Telegram decisions (`approved · telegram`) and the Telegram part of the
+  review line. Commits: `e9f7abd` bot_api client, `1be0e7c` decision
+  entries and merge, `8f96829` the preset block, `c297cc6`
+  `telegram_review`, `ce94d87` engine wiring + Tony's block + workflow,
+  `b062737` a guard so a failing Telegram step never fails the run (the
+  run records `tally.fail(review, *, telegram)` and still saves state, so
+  the digest is never re-posted), `adece59` the site's merge mirror,
+  `4cc5ccc` the control room. Tests: 287 pytest, 356 Vitest in 24 files;
+  `npm run build` passes. Tony golden diff (Task 5 re-record): only
+  `real/stdout.txt` (+1 line `Telegram: 0 tap(s) picked up, 9 item(s)
+  asked.`), `real/telegram.json` (digest payload unchanged, then 9 ask
+  payloads to the test owner chat), `real/run-result.json`
+  (`config.approval.telegram` and `asked` notes on the review stage),
+  `dry/run-result.json` (`config.approval.telegram`), and a new
+  `real/telegram-store.json` (no chat id); demo goldens and every other
+  Tony golden unchanged. Local check: `/researcher/queue/` built and
+  served against live data rendered as before (64 rows matching live
+  `pending.json`, no `· telegram` labels; `agent/telegram.json` is 404 on
+  `agent-data`, expected before the first live run). Still to do (plan
+  Task 9, each on Artem's word): `/start` to the bot, then the
+  `TELEGRAM_OWNER_CHAT_ID` secret (must exist before the push, and the bot
+  must have no webhook, or every run delivers nothing), push to `main`,
+  two live runs (asks, then taps), and record the live check here.
 
 ### How to resume in a new session
 
@@ -1018,12 +1060,16 @@ section, `/researcher/demo/<slug>/`). B (stories) is built on branch
 above); it goes to `main` only on Artem's word, then the agent is
 dispatched by hand and the live check is recorded in B's bullet.
 Next:
-1. **Sub-project C** — Telegram approval buttons and several delivery
-   targets. It still needs its own brainstorm → spec → plan (see
-   `docs/tony-scraponi-roadmap.md`). C is built on branch
-   `worktree-stories`, unpushed; rebase it onto `main` before its rollout —
-   `main` gained the preset select (pushed 2026-10-14) after it branched (expect
-   a conflict in `PROGRESS.md`).
+1. **Sub-project C's rollout** — built on branch `worktree-stories`, not
+   pushed (see its bullet above). Start with `CLAUDE.md`'s session-start
+   protocol, then plan Task 9
+   (`docs/superpowers/plans/2026-10-08-telegram-approval.md`), step by
+   step on Artem's word: he sends `/start` to the bot; check the bot has
+   no webhook (`getWebhookInfo`), set the `TELEGRAM_OWNER_CHAT_ID` secret
+   (before the push, or every run delivers nothing); push to `main`;
+   dispatch `agent-run.yml` twice (asks, then his taps); record the live
+   check in C's bullet. Several delivery targets per preset are now E in
+   `docs/tony-scraponi-roadmap.md`, waiting for a real second target.
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages

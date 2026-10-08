@@ -121,7 +121,9 @@ export default function ResearchAgentPage() {
             </li>
             <li>
               Deliver — once a day, the items I&apos;ve approved on the queue
-              page go out to a public Telegram channel. Anything I reject
+              page go out to a public Telegram channel. I can approve or
+              reject each item from Telegram too; the agent picks the taps
+              up on its next run. Anything I reject
               never comes back; anything I leave undecided for a week drops
               off.
             </li>

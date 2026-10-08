@@ -107,7 +107,17 @@ initiatives — see `PROGRESS.md` for status of each.
   fine-grained PAT scoped to that repo alone and kept in the owner's
   `localStorage`; the agent only reads it at the start of each run and
   delivers approved items only (rejected/expired → `dismissed` in
-  `state.json`). Never make the agent write `decisions.json`, and never
+  `state.json`). Since sub-project C the bot also asks Artem about each
+  new queue item in his private chat; the agent reads his taps with
+  `getUpdates` at the start of each run and keeps them in
+  `agent/telegram.json` on `agent-data` (update offset, Telegram
+  decisions, ask message ids — never a chat id or token; the owner's chat
+  id is the repo secret `TELEGRAM_OWNER_CHAT_ID`). Per item the later of
+  the site's and Telegram's decision wins: `agent/approval.py`'s
+  `merge_decisions` and `lib/telegram-decisions.ts`'s `mergeDecisions` are
+  pinned to `agent/tests/fixtures/approval-merge.json` — change them
+  together. A webhook set on the bot breaks `getUpdates` (409) and blocks
+  delivery. Never make the agent write `decisions.json`, and never
   give the site a token for this repo (`hpnssflw.github.io`): one that
   can push here can change agent code that runs with the Telegram and
   DeepSeek secrets. If the agent side is ever reverted, keep
@@ -158,7 +168,7 @@ initiatives — see `PROGRESS.md` for status of each.
                           # lib/now-format, lib/github-calendar, lib/telegram-post, lib/home-feed,
                           # lib/cron, lib/agent-schedule, lib/run-result, lib/config-view,
                           # lib/control-room-text, lib/pipeline-stages,
-                          # lib/outcomes, lib/queue-view, lib/digest, lib/demo-presets,
+                          # lib/outcomes, lib/queue-view, lib/digest, lib/demo-presets, lib/telegram-decisions,
                           # scripts/presence
   ```
   (`next dev` occasionally hangs the TCP handshake in this environment;
