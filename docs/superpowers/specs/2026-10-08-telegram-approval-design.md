@@ -112,14 +112,16 @@ and published to `agent-data` with `state.json`:
   the Bot API gives callback queries no timestamp).
 - `messages` — per queue item that has a message: its `message_id` and
   `shown`, the status its text and buttons last showed (`waiting`,
-  `approved`, `sent`, `rejected`, `expired`).
+  `approved`, `sent`, `rejected`, `expired`), or `gone` once Telegram
+  said the message no longer exists (no more edits, and the item isn't
+  asked again).
 - Everything in it is public on `agent-data` already (item URLs) or
   harmless without the bot token (message ids, the update offset). No
   chat id, user id, name or token.
 - A missing file reads as empty. A malformed one makes the Telegram side
   unavailable (see Failures).
 - Entries for URLs that are no longer in the queue are removed once their
-  final message edit is done (or failed for good).
+  final message edit has been tried.
 
 `agent/paths.py` gains `DataPaths.telegram`.
 
@@ -229,7 +231,7 @@ The Telegram side never fails a run:
 |---|---|
 | `getUpdates` (network, HTTP error, 409 because a webhook is set) or a malformed `telegram.json` | `DecisionsUnavailable`: nothing dropped or delivered, as when `decisions.json` can't be read; failure `review` / `telegram`. Asks and updates are skipped this run. `telegram.json` isn't rewritten. |
 | Sending an ask | The item gets no `messages` entry and is asked again next run; failure `review` / `telegram`. The other asks still go out. |
-| Editing a message | `shown` stays, so the edit is retried next run; failure `review` / `telegram`. If Telegram says the message is gone (deleted by Artem), the entry is dropped and not retried. "Message is not modified" counts as success. |
+| Editing a message | For an item still in the queue, `shown` stays, so the edit is retried next run; failure `review` / `telegram`. A final edit (the item left the queue this run) is tried once: the entry is removed either way, since the next run has no item to render. If Telegram says the message is gone (deleted by Artem), `shown` becomes `gone`. "Message is not modified" counts as success. |
 | A tap older than 24 h before a run reads it | Telegram has dropped it. The item stays undecided and its buttons are still there: tap again. |
 
 Failures carry the error type only, never text (the bot token is in the
