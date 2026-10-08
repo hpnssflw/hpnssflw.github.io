@@ -72,6 +72,7 @@ const en = {
     approve: "approve",
     reject: "reject",
     undo: "undo",
+    viaTelegram: "telegram",
     open: "open ↗",
     notWebLink: "not an http(s) link",
     invalidUrl: "invalid url",
@@ -137,6 +138,7 @@ const en = {
       { v: `${days}d` },
     ],
     reviewFile: (days: number): Part[] => ["the editor's decisions file · undecided expire after ", { v: `${days}d` }],
+    reviewTelegram: (asks: number): Part[] => [" · and telegram buttons, up to ", { v: asks }, " new a run"],
     deliverTelegram: (chat: string, hours: number): Part[] => [
       "approved only · telegram ",
       { v: chat },
@@ -238,6 +240,7 @@ const ru: Text = {
     approve: "одобрить",
     reject: "отклонить",
     undo: "отменить",
+    viaTelegram: "в telegram",
     open: "открыть ↗",
     notWebLink: "не http(s)-ссылка",
     invalidUrl: "неверный url",
@@ -303,6 +306,7 @@ const ru: Text = {
       { v: `${days} дн.` },
     ],
     reviewFile: (days: number): Part[] => ["файл решений редактора · без решения истекают через ", { v: `${days} дн.` }],
+    reviewTelegram: (asks: number): Part[] => [" · и кнопки в telegram, до ", { v: asks }, " новых за прогон"],
     deliverTelegram: (chat: string, hours: number): Part[] => [
       "только одобренное · telegram ",
       { v: chat },

@@ -16,7 +16,7 @@ describe("configView", () => {
     expect(view.llm).toEqual({ model: "deepseek-v4-flash", baseUrl: "https://api.deepseek.com", temperature: 0, batchSize: 40, promptVersion: 2 });
     expect(view.reader).toMatch(/^Artem/);
     expect(view.queueWindowHours).toBe(23);
-    expect(view.approval).toEqual({ kind: "inbox", repo: "hpnssflw/tony-inbox", expireDays: 7 });
+    expect(view.approval).toEqual({ kind: "inbox", repo: "hpnssflw/tony-inbox", expireDays: 7, telegramAsks: 10 });
     expect(view.delivery).toEqual({ kind: "telegram", chat: "@hypnosisflow", title: "Research digest", cadenceHours: 24 });
     expect(view.feeds).toEqual([]);
     expect(view.telegram).toBeNull();
@@ -36,7 +36,7 @@ describe("configView", () => {
 
   it("shows a demo preset's feeds, file approval and delivery, and the Telegram stub", () => {
     const view = configView(run("newsroom-demo", "golden", "run1.json").config);
-    expect(view.approval).toEqual({ kind: "file", expireDays: 3 });
+    expect(view.approval).toEqual({ kind: "file", expireDays: 3, telegramAsks: null });
     expect(view.delivery).toEqual({ kind: "file", chat: null, title: "Сводка редакции", cadenceHours: 4 });
     expect(view.feeds.map((f) => f.id)).toEqual(["agency", "ministry", "city"]);
     expect(view.telegram?.map((c) => c.handle)).toEqual(["example_agency", "example_region_gov", "example_city_chat"]);

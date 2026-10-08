@@ -28,6 +28,7 @@ describe("parseRunResult on the goldens", () => {
       type: "inbox",
       decisions_url: "https://api.github.com/repos/hpnssflw/tony-inbox/contents/decisions.json",
       expire_days: 7,
+      telegram: { bot_token_env: "TELEGRAM_BOT_TOKEN", owner_chat_env: "TELEGRAM_OWNER_CHAT_ID", max_asks_per_run: 10 },
     });
     expect(result?.config.delivery).toEqual({ type: "telegram", title: "Research digest", cadence_hours: 24, chat: "@hypnosisflow" });
     expect(result?.config.sources).toEqual({ rss: [], telegram_public: null });
@@ -42,6 +43,7 @@ describe("parseRunResult on the goldens", () => {
       const result = parseRunResult(raw);
       expect(result?.preset.language).toBe("ru");
       expect(result?.config.approval.type).toBe("file");
+      expect(result?.config.approval.telegram).toBeNull();
       expect(result?.config.delivery.chat).toBeNull();
     }
     const news = parseRunResult(newsroom(1));
@@ -58,6 +60,17 @@ describe("parseRunResult on the goldens", () => {
     expect(news?.stages.find((s) => s.stage === "rank")?.scopes["*"].assigned).toEqual({ economy: 4, incidents: 6, power: 4 });
     expect(news?.queue.items[0].decision).toBe("approve");
     expect(parseRunResult(agro(1))?.config.topics.find((t) => t.slug === "prices")?.rss.map((f) => f.id)).toEqual(["exchange"]);
+  });
+});
+
+describe("parseRunResult approval.telegram", () => {
+  it("reads a missing or malformed approval.telegram as none", () => {
+    const missing = tony();
+    delete missing.config.approval.telegram;
+    expect(parseRunResult(missing)?.config.approval.telegram).toBeNull();
+    const malformed = tony();
+    malformed.config.approval.telegram = { bot_token_env: 1 };
+    expect(parseRunResult(malformed)?.config.approval.telegram).toBeNull();
   });
 });
 

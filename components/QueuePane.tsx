@@ -4,8 +4,16 @@ import { useEffect, useRef } from "react";
 import { type Decision, type Decisions, itemStatus } from "@/lib/inbox";
 import type { Text } from "@/lib/control-room-text";
 import { type PendingItem, itemDomain, safeHref } from "@/lib/pending-queue";
-import { STATUS_FILTERS, type StatusFilter, moveSelection } from "@/lib/queue-view";
+import { type QueueAction, STATUS_FILTERS, type StatusFilter, allowedActions, moveSelection } from "@/lib/queue-view";
 import { storyOf } from "@/lib/run-result";
+
+const NO_URLS: ReadonlySet<string> = new Set();
+const ACTION_KEYS: Record<QueueAction, string> = { approve: "a", reject: "r", undo: "u" };
+const ACTION_CLASS: Record<QueueAction, string> = {
+  approve: "inbox-button cr-approve",
+  reject: "inbox-button cr-reject",
+  undo: "inbox-button",
+};
 
 function typingIn(target: EventTarget | null): boolean {
   return (
@@ -20,7 +28,9 @@ function typingIn(target: EventTarget | null): boolean {
  * first), the selected row unfolded with its summary — a story's cited
  * facts instead, when it has any — and actions. A fact's [n] links its
  * report only when linkItems is on. Keys: j/k move and o opens an http(s)
- * link for everyone; a/r/u approve, reject and undo for the owner.
+ * link for everyone; a/r/u approve, reject and undo for the owner. A row
+ * decided in Telegram says so, and the owner can only flip it (Undo for it
+ * is in Telegram).
  */
 export default function QueuePane({
   rows,
@@ -30,6 +40,7 @@ export default function QueuePane({
   selected,
   onSelect,
   decisions,
+  viaTelegram = NO_URLS,
   topicNames,
   linkItems = true,
   canDecide,
@@ -46,6 +57,8 @@ export default function QueuePane({
   selected: PendingItem | null;
   onSelect: (url: string | null) => void;
   decisions: Decisions | null;
+  /** URLs whose decision came from Telegram: labelled, and the owner can only flip them. */
+  viaTelegram?: ReadonlySet<string>;
   /** slug → name, shown in each row's meta line; null when one topic is picked. */
   topicNames: Record<string, string> | null;
   /** false: no open button, no `o` key, no `o` in the keys legend (the demo's URLs are synthetic). Default true. */
@@ -69,9 +82,11 @@ export default function QueuePane({
         const href = safeHref(selected.url);
         if (href) window.open(href, "_blank", "noopener,noreferrer");
       } else if ((key === "a" || key === "r" || key === "u") && canDecide && !busy && selected) {
+        const action: QueueAction = key === "a" ? "approve" : key === "r" ? "reject" : "undo";
         const status = itemStatus(decisions, selected.url);
-        if (key === "u" && status !== "waiting") onDecide(selected, null);
-        if (key !== "u" && status === "waiting") onDecide(selected, key === "a" ? "approve" : "reject");
+        if (allowedActions(status, viaTelegram.has(selected.url)).includes(action)) {
+          onDecide(selected, action === "undo" ? null : action);
+        }
       } else {
         return;
       }
@@ -79,7 +94,7 @@ export default function QueuePane({
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [rows, selected, canDecide, busy, decisions, onSelect, onDecide, linkItems]);
+  }, [rows, selected, canDecide, busy, decisions, viaTelegram, onSelect, onDecide, linkItems]);
 
   useEffect(() => {
     listRef.current?.querySelector('[data-selected="true"]')?.scrollIntoView({ block: "nearest" });
@@ -129,7 +144,10 @@ export default function QueuePane({
                     <span className={item.score >= 8 ? "cr-score is-high" : "cr-score"}>{item.score}</span>
                     <span className="cr-title">{item.title}</span>
                     {decisions && status !== "waiting" && (
-                      <span className={`cr-decision inbox-${status}`}>{text.statuses[status]}</span>
+                      <span className={`cr-decision inbox-${status}`}>
+                        {text.statuses[status]}
+                        {viaTelegram.has(item.url) && ` · ${text.viaTelegram}`}
+                      </span>
                     )}
                   </div>
                   <div className="cr-meta">
@@ -175,42 +193,18 @@ export default function QueuePane({
                       )}
                       <div className="cr-actions">
                         {canDecide &&
-                          (status === "waiting" ? (
-                            <>
-                              <button
-                                type="button"
-                                className="inbox-button cr-approve"
-                                disabled={busy}
-                                onClick={(event) => {
-                                  event.stopPropagation();
-                                  onDecide(item, "approve");
-                                }}
-                              >
-                                <kbd>a</kbd> {text.approve}
-                              </button>
-                              <button
-                                type="button"
-                                className="inbox-button cr-reject"
-                                disabled={busy}
-                                onClick={(event) => {
-                                  event.stopPropagation();
-                                  onDecide(item, "reject");
-                                }}
-                              >
-                                <kbd>r</kbd> {text.reject}
-                              </button>
-                            </>
-                          ) : (
+                          allowedActions(status, viaTelegram.has(item.url)).map((action) => (
                             <button
+                              key={action}
                               type="button"
-                              className="inbox-button"
+                              className={ACTION_CLASS[action]}
                               disabled={busy}
                               onClick={(event) => {
                                 event.stopPropagation();
-                                onDecide(item, null);
+                                onDecide(item, action === "undo" ? null : action);
                               }}
                             >
-                              <kbd>u</kbd> {text.undo}
+                              <kbd>{ACTION_KEYS[action]}</kbd> {text[action]}
                             </button>
                           ))}
                         {linkItems &&

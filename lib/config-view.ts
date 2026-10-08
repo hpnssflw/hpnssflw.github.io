@@ -25,7 +25,9 @@ export interface ConfigView {
   llm: { model: string; baseUrl: string; temperature: number; batchSize: number; promptVersion: number };
   reader: string;
   queueWindowHours: number;
-  approval: { kind: "inbox"; repo: string; expireDays: number } | { kind: "file"; expireDays: number };
+  approval:
+    | { kind: "inbox"; repo: string; expireDays: number; telegramAsks: number | null }
+    | { kind: "file"; expireDays: number; telegramAsks: number | null };
   delivery: { kind: "telegram" | "file"; chat: string | null; title: string; cadenceHours: number };
   /** Preset-level feeds, classified across the topics. */
   feeds: FeedConfig[];
@@ -64,8 +66,9 @@ export function configView(config: RunConfig): ConfigView {
             kind: "inbox",
             repo: INBOX_REPO_RE.exec(approval.decisions_url)?.[1] ?? approval.decisions_url,
             expireDays: approval.expire_days,
+            telegramAsks: approval.telegram?.max_asks_per_run ?? null,
           }
-        : { kind: "file", expireDays: approval.expire_days },
+        : { kind: "file", expireDays: approval.expire_days, telegramAsks: approval.telegram?.max_asks_per_run ?? null },
     delivery: { kind: delivery.type, chat: delivery.chat, title: delivery.title, cadenceHours: delivery.cadence_hours },
     feeds: config.sources.rss,
     telegram: config.sources.telegram_public?.channels ?? null,

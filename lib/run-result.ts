@@ -70,9 +70,15 @@ export interface TelegramStub {
   channels: { handle: string; name: string }[];
 }
 
+export interface TelegramApproval {
+  bot_token_env: string;
+  owner_chat_env: string;
+  max_asks_per_run: number;
+}
+
 export type ApprovalResult =
-  | { type: "inbox"; decisions_url: string; expire_days: number }
-  | { type: "file"; path: string; expire_days: number };
+  | { type: "inbox"; decisions_url: string; expire_days: number; telegram: TelegramApproval | null }
+  | { type: "file"; path: string; expire_days: number; telegram: TelegramApproval | null };
 
 export interface DeliveryConfig {
   type: "telegram" | "file";
@@ -254,10 +260,17 @@ function telegram(value: unknown): TelegramStub | null {
   };
 }
 
+function telegramApproval(value: unknown): TelegramApproval | null {
+  if (value === undefined || value === null) return null;
+  const t = rec(value);
+  return { bot_token_env: str(t.bot_token_env), owner_chat_env: str(t.owner_chat_env), max_asks_per_run: num(t.max_asks_per_run) };
+}
+
 function approval(value: unknown): ApprovalResult {
   const a = rec(value);
-  if (a.type === "inbox") return { type: "inbox", decisions_url: str(a.decisions_url), expire_days: num(a.expire_days) };
-  if (a.type === "file") return { type: "file", path: str(a.path), expire_days: num(a.expire_days) };
+  const telegram = optional(() => telegramApproval(a.telegram), null);
+  if (a.type === "inbox") return { type: "inbox", decisions_url: str(a.decisions_url), expire_days: num(a.expire_days), telegram };
+  if (a.type === "file") return { type: "file", path: str(a.path), expire_days: num(a.expire_days), telegram };
   throw new Malformed();
 }
 

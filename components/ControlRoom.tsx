@@ -27,6 +27,7 @@ import {
   visibleItems,
 } from "@/lib/queue-view";
 import { RUN_RESULT_URL, parseRunResult } from "@/lib/run-result";
+import { TELEGRAM_URL, mergeDecisions, parseTelegramDecisions } from "@/lib/telegram-decisions";
 
 const acceptQueue = (value: unknown): PendingQueue | null => (isPendingQueue(value) ? value : null);
 const text = TEXT.en;
@@ -35,7 +36,8 @@ const text = TEXT.en;
  * Tony Scraponi's control room (/researcher/queue/). The config and the
  * rail come from the last run's run-result.json; the pulse from
  * status.json and the workflow's schedule (read at build time); the
- * queue from pending.json with the inbox's decisions; the outcomes from
+ * queue from pending.json with the inbox's decisions merged with Telegram's
+ * (agent/telegram.json; a missing file means none); the outcomes from
  * state.json. Each is fetched on its own, so one failing source never
  * blanks the rest. The topic chips filter the rail, the queue, the spine
  * and the outcomes.
@@ -46,6 +48,12 @@ export default function ControlRoom({ schedule, presets }: { schedule: CronSched
   const pending = useJson(PENDING_URL, acceptQueue);
   const state = useJson(STATE_URL, parseAgentState);
   const inbox = useInbox(pending.data, pending.loadedAt);
+  const telegram = useJson(TELEGRAM_URL, parseTelegramDecisions);
+  const merged = useMemo(
+    () => (inbox.decisions ? mergeDecisions(inbox.decisions, telegram.data) : null),
+    [inbox.decisions, telegram.data],
+  );
+  const decisions = merged?.decisions ?? null;
 
   const [topic, setTopic] = useState<TopicFilter>("all");
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("waiting");
@@ -56,7 +64,7 @@ export default function ControlRoom({ schedule, presets }: { schedule: CronSched
   const topics: { slug: string; name: string }[] = config?.topics ?? status.data?.topics ?? [];
   const slugs = topicSlugs(topics, topic);
   const items = pending.data?.items ?? [];
-  const rows = visibleItems(items, inbox.decisions, topic, statusFilter);
+  const rows = visibleItems(items, decisions, topic, statusFilter);
   const topicNames = topic === "all" ? Object.fromEntries(topics.map((t) => [t.slug, t.name])) : null;
   const thresholds = (config?.topics ?? []).filter((t) => slugs.includes(t.slug)).map((t) => t.minRelevance);
   const threshold = thresholds.length ? Math.min(...thresholds) : null;
@@ -81,7 +89,7 @@ export default function ControlRoom({ schedule, presets }: { schedule: CronSched
           owner={{ signedIn: inbox.signedIn, error: inbox.error, onSignIn: inbox.signIn, onSignOut: inbox.signOut }}
         />
         <PipelineRail
-          stages={buildStages(run.data, { queue: pending.data?.items ?? null, decisions: inbox.decisions }, topic, text.rail)}
+          stages={buildStages(run.data, { queue: pending.data?.items ?? null, decisions }, topic, text.rail)}
           active={stage}
           onPick={(key) => setStage((current) => (current === key ? null : key))}
           titles={{ review: text.rail.reviewHint(cadence) }}
@@ -97,12 +105,13 @@ export default function ControlRoom({ schedule, presets }: { schedule: CronSched
         <div className="cr-grid">
           <QueuePane
             rows={rows}
-            counts={statusCounts(items, inbox.decisions, topic)}
+            counts={statusCounts(items, decisions, topic)}
             statusFilter={statusFilter}
             onStatusFilter={setStatusFilter}
             selected={resolveSelection(rows, selectedUrl)}
             onSelect={setSelectedUrl}
-            decisions={inbox.decisions}
+            decisions={decisions}
+            viaTelegram={merged?.viaTelegram}
             topicNames={topicNames}
             canDecide={inbox.canWrite}
             busy={inbox.busy}

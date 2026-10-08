@@ -211,11 +211,12 @@ function rowsFor(
     review: {
       params: (
         <Parts
-          parts={
-            config.approval.kind === "inbox"
+          parts={[
+            ...(config.approval.kind === "inbox"
               ? text.reviewInbox(config.approval.repo, config.approval.expireDays)
-              : text.reviewFile(config.approval.expireDays)
-          }
+              : text.reviewFile(config.approval.expireDays)),
+            ...(config.approval.telegramAsks !== null ? text.reviewTelegram(config.approval.telegramAsks) : []),
+          ]}
         />
       ),
     },
