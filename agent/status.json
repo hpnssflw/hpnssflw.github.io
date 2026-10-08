@@ -4,29 +4,21 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 38,
+        "already_ranked": 41,
         "dismissed": 3,
         "seen": 26
       },
-      "inbox": {
-        "expired": 1
-      },
       "rank": {
-        "below_relevance": 3,
         "over_max_items": 26
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 62,
+        "already_ranked": 66,
         "dismissed": 1,
         "seen": 21
       },
-      "inbox": {
-        "expired": 5
-      },
       "rank": {
-        "below_relevance": 4,
         "over_max_items": 25
       }
     },
@@ -36,7 +28,7 @@
       },
       "dedupe": {
         "already_ranked": 22,
-        "seen": 7
+        "seen": 8
       },
       "rank": {
         "over_max_items": 23
@@ -49,136 +41,131 @@
       "collected": 96,
       "in_window": 96,
       "kept": 0,
-      "new": 29
+      "new": 26
     },
     "tooling": {
       "collected": 113,
       "in_window": 113,
       "kept": 0,
-      "new": 29
+      "new": 25
     },
     "web-products": {
       "collected": 179,
       "in_window": 53,
-      "kept": 1,
-      "new": 24
+      "kept": 0,
+      "new": 23
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
   "pending_count": 64,
   "recent_events": [
     {
-      "score": 8,
-      "source": "rss",
-      "title": "Fallbacks for CSS `progress()`",
-      "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122811+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
       "title": "Helping personal agents shop more intelligently and reliably with Link",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122796+00:00",
+      "ts": "2026-10-08T06:31:23.669918+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122788+00:00",
+      "ts": "2026-10-08T06:31:23.669910+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122779+00:00",
+      "ts": "2026-10-08T06:31:23.669901+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122771+00:00",
+      "ts": "2026-10-08T06:31:23.669891+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Claude Code for SEO: 35 Use Cases",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122763+00:00",
+      "ts": "2026-10-08T06:31:23.669883+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Visibility Data Paralysis: How to Get Unstuck",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122754+00:00",
+      "ts": "2026-10-08T06:31:23.669874+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122746+00:00",
+      "ts": "2026-10-08T06:31:23.669866+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Why I tried to kill token billing (and why we kept it)",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122735+00:00",
+      "ts": "2026-10-08T06:31:23.669858+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Who believes in an afterlife?",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122727+00:00",
+      "ts": "2026-10-08T06:31:23.669850+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u00c0 sa place: When Beauty Hides the Message",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122718+00:00",
+      "ts": "2026-10-08T06:31:23.669841+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122710+00:00",
+      "ts": "2026-10-08T06:31:23.669833+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122701+00:00",
+      "ts": "2026-10-08T06:31:23.669825+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122693+00:00",
+      "ts": "2026-10-08T06:31:23.669816+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Overviews Currently Appear for 83% of Branded Searches",
       "topic": "web-products",
-      "ts": "2026-10-08T04:41:16.122684+00:00",
+      "ts": "2026-10-08T06:31:23.669808+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "How to Measure AI Search Visibility When Attribution Falls Short",
+      "topic": "web-products",
+      "ts": "2026-10-08T06:31:23.669799+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-10-02T20:22:17.411105+00:00"
-    },
     {
       "kept": 4,
       "ts": "2026-10-03T03:56:08.946753+00:00"
@@ -270,9 +257,13 @@
     {
       "kept": 1,
       "ts": "2026-10-08T04:40:37.892950+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-08T06:30:40.543876+00:00"
     }
   ],
-  "streak": 248,
+  "streak": 249,
   "topics": [
     {
       "collected": 96,
@@ -288,10 +279,10 @@
     },
     {
       "collected": 179,
-      "kept": 1,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-08T04:40:37.892950+00:00"
+  "updated_at": "2026-10-08T06:30:40.543876+00:00"
 }
