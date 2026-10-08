@@ -1,4 +1,4 @@
-import { type Decisions, itemStatus } from "./inbox";
+import { type Decision, type Decisions, type ItemStatus, itemStatus } from "./inbox";
 import type { PendingItem } from "./pending-queue";
 import type { TopicFilter } from "./pipeline-stages";
 
@@ -62,4 +62,17 @@ export function moveSelection(rows: PendingItem[], url: string | null, delta: nu
   if (rows.length === 0) return null;
   const i = Math.max(0, rows.findIndex((r) => r.url === url));
   return rows[Math.min(rows.length - 1, Math.max(0, i + delta))].url;
+}
+
+export type QueueAction = Decision | "undo";
+
+/**
+ * What the owner can do to a row: decide a waiting one; undo the site's
+ * own decision; flip a Telegram decision with a newer site one (the site
+ * can't undo it — that's Undo in Telegram).
+ */
+export function allowedActions(status: ItemStatus, fromTelegram: boolean): QueueAction[] {
+  if (status === "waiting") return ["approve", "reject"];
+  if (!fromTelegram) return ["undo"];
+  return [status === "approved" ? "reject" : "approve"];
 }

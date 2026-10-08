@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { Decisions } from "./inbox";
 import type { PendingItem } from "./pending-queue";
-import { moveSelection, nextSelection, resolveSelection, statusCounts, topicCounts, visibleItems } from "./queue-view";
+import { allowedActions, moveSelection, nextSelection, resolveSelection, statusCounts, topicCounts, visibleItems } from "./queue-view";
 
 function item(url: string, topic: string, score: number, since: string): PendingItem {
   return { url, title: url, source: "hn", topic, topic_name: topic, summary: "", score, pending_since: since };
@@ -71,5 +71,19 @@ describe("selection", () => {
     expect(moveSelection(rows, "b", -1)).toBe("b");
     expect(moveSelection(rows, "a", 1)).toBe("a");
     expect(moveSelection([], null, 1)).toBeNull();
+  });
+});
+
+describe("allowedActions", () => {
+  it("decides a waiting row", () => {
+    expect(allowedActions("waiting", false)).toEqual(["approve", "reject"]);
+  });
+  it("undoes the site's own decision", () => {
+    expect(allowedActions("approved", false)).toEqual(["undo"]);
+    expect(allowedActions("rejected", false)).toEqual(["undo"]);
+  });
+  it("can only flip a Telegram decision", () => {
+    expect(allowedActions("approved", true)).toEqual(["reject"]);
+    expect(allowedActions("rejected", true)).toEqual(["approve"]);
   });
 });
