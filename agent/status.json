@@ -4,27 +4,24 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 40,
+        "already_ranked": 42,
         "dismissed": 4,
-        "seen": 25
+        "seen": 23
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 25
+        "below_relevance": 3,
+        "over_max_items": 21
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 64,
+        "already_ranked": 66,
         "dismissed": 1,
-        "seen": 21
-      },
-      "inbox": {
-        "expired": 2
+        "seen": 19
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 28
+        "below_relevance": 5,
+        "over_max_items": 27
       }
     },
     "web-products": {
@@ -32,150 +29,148 @@
         "outside_window": 125
       },
       "dedupe": {
-        "already_ranked": 21,
-        "seen": 8
+        "already_ranked": 19,
+        "seen": 9
       },
       "rank": {
         "below_relevance": 2,
-        "over_max_items": 25
+        "over_max_items": 24
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 98,
-      "in_window": 98,
-      "kept": 0,
-      "new": 29
+      "collected": 97,
+      "in_window": 97,
+      "kept": 4,
+      "new": 28
     },
     "tooling": {
-      "collected": 118,
-      "in_window": 118,
-      "kept": 0,
-      "new": 32
+      "collected": 121,
+      "in_window": 121,
+      "kept": 3,
+      "new": 35
     },
     "web-products": {
       "collected": 181,
       "in_window": 56,
-      "kept": 0,
-      "new": 27
+      "kept": 2,
+      "new": 28
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 62,
+  "pending_count": 71,
   "recent_events": [
+    {
+      "score": 8,
+      "source": "rss",
+      "title": "SEO for Static Sites: 8 Problems to Watch For",
+      "topic": "web-products",
+      "ts": "2026-10-08T21:03:49.417581+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "rss",
+      "title": "Astro Tutorial: Make a Static Site with Interactive Components",
+      "topic": "web-products",
+      "ts": "2026-10-08T21:03:49.417571+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Helping personal agents shop more intelligently and reliably with Link",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522905+00:00",
+      "ts": "2026-10-08T21:03:49.417556+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522895+00:00",
+      "ts": "2026-10-08T21:03:49.417548+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522884+00:00",
+      "ts": "2026-10-08T21:03:49.417539+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522873+00:00",
+      "ts": "2026-10-08T21:03:49.417531+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Claude Code for SEO: 35 Use Cases",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522863+00:00",
+      "ts": "2026-10-08T21:03:49.417523+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Visibility Data Paralysis: How to Get Unstuck",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522853+00:00",
+      "ts": "2026-10-08T21:03:49.417514+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522842+00:00",
+      "ts": "2026-10-08T21:03:49.417503+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
-      "title": "\u271a Draw attention visually",
+      "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522827+00:00",
+      "ts": "2026-10-08T21:03:49.417495+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Why I tried to kill token billing (and why we kept it)",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522817+00:00",
+      "ts": "2026-10-08T21:03:49.417486+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Who believes in an afterlife?",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522805+00:00",
+      "ts": "2026-10-08T21:03:49.417478+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u00c0 sa place: When Beauty Hides the Message",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522794+00:00",
+      "ts": "2026-10-08T21:03:49.417470+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522784+00:00",
+      "ts": "2026-10-08T21:03:49.417462+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522773+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Beliefs in life after death",
-      "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522762+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "AI Overviews Currently Appear for 83% of Branded Searches",
-      "topic": "web-products",
-      "ts": "2026-10-08T15:15:26.522751+00:00",
+      "ts": "2026-10-08T21:03:49.417453+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-03T09:43:15.596705+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-10-03T15:47:33.701565+00:00"
@@ -267,28 +262,32 @@
     {
       "kept": 0,
       "ts": "2026-10-08T15:14:12.896889+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-08T21:02:42.379376+00:00"
     }
   ],
-  "streak": 250,
+  "streak": 251,
   "topics": [
     {
-      "collected": 98,
-      "kept": 0,
+      "collected": 97,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 118,
-      "kept": 0,
+      "collected": 121,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 181,
-      "kept": 0,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-08T15:14:12.896889+00:00"
+  "updated_at": "2026-10-08T21:02:42.379376+00:00"
 }

@@ -619,6 +619,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://blog.master.dev/fallbacks-for-css-progress/"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "A Rust sandbox for running AI agents that restricts what they can execute, read, write and reach on the network, using OS isolation, default-deny policies and credential injection.",
+      "title": "strands-agents/box",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/strands-agents/box"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "An item on compressing LLMs to sub-1-bit precision via latent factorization, which relates directly to inference and serving optimization.",
+      "title": "Sub-1-Bit LLM Compression via Latent Factorization",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/SamsungLabs/LittleBit"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Cloudflare announces Clef, open-weight decision models plus a new RL fine-tuning platform.",
+      "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://blog.cloudflare.com/clef-decision-models/"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Announces Beam, Reflection's 501B open-weight model, a major model release relevant to what builders can run or serve.",
+      "title": "Beam: Reflection's 501B open-weight model",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://reflection.ai/blog/introducing-beam"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "skill-cabinet is a tool to find the skills your coding agents load, see which agents can use each one, and count how often you use them.",
+      "title": "flaviocopes/skill-cabinet",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/flaviocopes/skill-cabinet"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "sno-station-skills offers 31 tested skills that turn Claude Code and Codex into one working team with cross-vendor peer review, automatic handoff, morning briefs, work orders with proof, and a nightly learning loop.",
+      "title": "sno-ai/sno-station-skills",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/sno-ai/sno-station-skills"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "shaders provides WebGPU components for React, Vue, Svelte, Solid, JS, and Framer.",
+      "title": "shader-effects-inc/shaders",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/shader-effects-inc/shaders"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 9,
+      "source": "rss",
+      "summary": "An Astro tutorial for building an interactive coffee blog using core concepts like file-based routing, content collections, and islands architecture, with Astro described as performance-friendly and zero-JavaScript by default.",
+      "title": "Astro Tutorial: Make a Static Site with Interactive Components",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://www.debugbear.com/blog/astro-tutorial"
+    },
+    {
+      "pending_since": "2026-10-08T21:02:42.379376+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "Ahrefs guide to eight SEO problems to watch for on static sites, where CMS plugins no longer handle canonicals, sitemaps, redirects, metadata, schema, and 404s.",
+      "title": "SEO for Static Sites: 8 Problems to Watch For",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://ahrefs.com/blog/seo-for-static-sites/"
     }
   ],
   "last_email_at": "2026-09-30T04:08:45.319706+00:00"

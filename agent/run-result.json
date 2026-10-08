@@ -310,11 +310,11 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 17,
-      "tooling": 32,
-      "web-products": 13
+      "ai-engineering": 21,
+      "tooling": 35,
+      "web-products": 15
     },
-    "count": 62,
+    "count": 71,
     "items": [
       {
         "decision": null,
@@ -997,12 +997,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://blog.master.dev/fallbacks-for-css-progress/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "A Rust sandbox for running AI agents that restricts what they can execute, read, write and reach on the network, using OS isolation, default-deny policies and credential injection.",
+        "title": "strands-agents/box",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/strands-agents/box"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "An item on compressing LLMs to sub-1-bit precision via latent factorization, which relates directly to inference and serving optimization.",
+        "title": "Sub-1-Bit LLM Compression via Latent Factorization",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/SamsungLabs/LittleBit"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Cloudflare announces Clef, open-weight decision models plus a new RL fine-tuning platform.",
+        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://blog.cloudflare.com/clef-decision-models/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Announces Beam, Reflection's 501B open-weight model, a major model release relevant to what builders can run or serve.",
+        "title": "Beam: Reflection's 501B open-weight model",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://reflection.ai/blog/introducing-beam"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "skill-cabinet is a tool to find the skills your coding agents load, see which agents can use each one, and count how often you use them.",
+        "title": "flaviocopes/skill-cabinet",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/flaviocopes/skill-cabinet"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "sno-station-skills offers 31 tested skills that turn Claude Code and Codex into one working team with cross-vendor peer review, automatic handoff, morning briefs, work orders with proof, and a nightly learning loop.",
+        "title": "sno-ai/sno-station-skills",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/sno-ai/sno-station-skills"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "shaders provides WebGPU components for React, Vue, Svelte, Solid, JS, and Framer.",
+        "title": "shader-effects-inc/shaders",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/shader-effects-inc/shaders"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "An Astro tutorial for building an interactive coffee blog using core concepts like file-based routing, content collections, and islands architecture, with Astro described as performance-friendly and zero-JavaScript by default.",
+        "title": "Astro Tutorial: Make a Static Site with Interactive Components",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://www.debugbear.com/blog/astro-tutorial"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-08T21:02:42.379376+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Ahrefs guide to eight SEO problems to watch for on static sites, where CMS plugins no longer handle canonicals, sitemaps, redirects, metadata, schema, and 404s.",
+        "title": "SEO for Static Sites: 8 Problems to Watch For",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://ahrefs.com/blog/seo-for-static-sites/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-08T15:14:12.896889+00:00",
-    "id": "2026-10-08T1514Z",
+    "at": "2026-10-08T21:02:42.379376+00:00",
+    "id": "2026-10-08T2102Z",
     "mode": "real",
     "offline": false
   },
@@ -1013,13 +1112,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 97,
+          "out": 97
         },
         "tooling": {
           "drops": {},
-          "in": 118,
-          "out": 118
+          "in": 121,
+          "out": 121
         },
         "web-products": {
           "drops": {},
@@ -1034,13 +1133,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 97,
+          "out": 97
         },
         "tooling": {
           "drops": {},
-          "in": 118,
-          "out": 118
+          "in": 121,
+          "out": 121
         },
         "web-products": {
           "drops": {
@@ -1058,25 +1157,25 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 4,
-            "seen": 25
+            "seen": 23
           },
-          "in": 98,
-          "out": 69
+          "in": 97,
+          "out": 70
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
-            "seen": 21
+            "seen": 19
           },
-          "in": 118,
-          "out": 96
+          "in": 121,
+          "out": 101
         },
         "web-products": {
           "drops": {
-            "seen": 8
+            "seen": 9
           },
           "in": 56,
-          "out": 48
+          "out": 47
         }
       },
       "stage": "dedupe"
@@ -1086,24 +1185,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 40
+            "already_ranked": 42
           },
-          "in": 69,
-          "out": 29
+          "in": 70,
+          "out": 28
         },
         "tooling": {
           "drops": {
-            "already_ranked": 64
+            "already_ranked": 66
           },
-          "in": 96,
-          "out": 32
+          "in": 101,
+          "out": 35
         },
         "web-products": {
           "drops": {
-            "already_ranked": 21
+            "already_ranked": 19
           },
-          "in": 48,
-          "out": 27
+          "in": 47,
+          "out": 28
         }
       },
       "stage": "cache"
@@ -1113,13 +1212,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 5,
+          "out": 5
         },
         "tooling": {
           "drops": {},
-          "in": 11,
-          "out": 11
+          "in": 7,
+          "out": 7
         },
         "web-products": {
           "drops": {},
@@ -1134,24 +1233,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 3
           },
-          "in": 29,
+          "in": 28,
           "out": 25
         },
         "tooling": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 5
           },
-          "in": 32,
-          "out": 28
+          "in": 35,
+          "out": 30
         },
         "web-products": {
           "drops": {
             "below_relevance": 2
           },
-          "in": 27,
-          "out": 25
+          "in": 28,
+          "out": 26
         }
       },
       "stage": "rank"
@@ -1161,24 +1260,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 25
+            "over_max_items": 21
           },
           "in": 25,
-          "out": 0
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 28
+            "over_max_items": 27
           },
-          "in": 28,
-          "out": 0
+          "in": 30,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 25
+            "over_max_items": 24
           },
-          "in": 25,
-          "out": 0
+          "in": 26,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1188,18 +1287,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 17
+          "in": 4,
+          "out": 21
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 32
+          "in": 3,
+          "out": 35
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 13
+          "in": 2,
+          "out": 15
         }
       },
       "stage": "queue"
@@ -1213,10 +1312,8 @@
           "out": 17
         },
         "tooling": {
-          "drops": {
-            "expired": 2
-          },
-          "in": 34,
+          "drops": {},
+          "in": 32,
           "out": 32
         },
         "web-products": {
