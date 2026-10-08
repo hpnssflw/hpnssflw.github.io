@@ -96,6 +96,55 @@ class FakeResponse:
             raise requests.HTTPError(f"HTTP {self.status_code}", response=self)
 
 
+OWNER = 1001  # the owner's private chat id in tests (TELEGRAM_OWNER_CHAT_ID)
+
+
+class FakeBot:
+    """The Bot API behind requests.post: getUpdates serves `updates` from
+    the requested offset, sendMessage numbers messages from 1,
+    editMessageText answers ok. `fail[method]` holds responses returned
+    instead, first in first out. Records every call as (method, payload)."""
+
+    def __init__(self, updates: list[dict] | None = None):
+        self.updates = list(updates or [])
+        self.calls: list[tuple[str, dict]] = []
+        self.fail: dict[str, list[FakeResponse]] = {}
+        self._next_message_id = 1
+
+    def post(self, url, json=None, timeout=None, **kwargs):
+        assert url.startswith("https://api.telegram.org/bot"), url
+        method = url.rsplit("/", 1)[1]
+        self.calls.append((method, json))
+        if self.fail.get(method):
+            return self.fail[method].pop(0)
+        if method == "getUpdates":
+            fresh = [u for u in self.updates if u["update_id"] >= json.get("offset", 0)]
+            return FakeResponse(200, {"ok": True, "result": fresh[: json.get("limit", 100)]})
+        if method == "sendMessage":
+            message_id = self._next_message_id
+            self._next_message_id += 1
+            return FakeResponse(200, {"ok": True, "result": {"message_id": message_id}})
+        if method == "editMessageText":
+            return FakeResponse(200, {"ok": True, "result": True})
+        raise AssertionError(f"unexpected Bot API method {method}")
+
+    def sent(self, method: str) -> list[dict]:
+        return [payload for name, payload in self.calls if name == method]
+
+
+def tap(update_id: int, data: str, user: int = OWNER, chat: int = OWNER, message_id: int = 1) -> dict:
+    """A callback_query update: someone pressed an inline button."""
+    return {
+        "update_id": update_id,
+        "callback_query": {
+            "id": str(update_id),
+            "from": {"id": user},
+            "message": {"message_id": message_id, "chat": {"id": chat}},
+            "data": data,
+        },
+    }
+
+
 class FakeHttp:
     """Serves HN Algolia hits by query keyword, GitHub search results by
     `topic:` qualifier, and decisions.json; records Telegram posts."""
