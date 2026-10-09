@@ -4,26 +4,29 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 39,
+        "already_ranked": 44,
         "dismissed": 6,
-        "seen": 25
+        "seen": 23
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 6,
-        "over_max_items": 23
+        "below_relevance": 2,
+        "over_max_items": 19
       }
     },
     "tooling": {
       "dedupe": {
         "already_ranked": 66,
-        "dismissed": 3,
-        "seen": 18
+        "dismissed": 4,
+        "seen": 17
       },
       "inbox": {
-        "expired": 2
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 3,
+        "below_relevance": 5,
         "over_max_items": 30
       }
     },
@@ -32,150 +35,147 @@
         "outside_window": 123
       },
       "dedupe": {
-        "already_ranked": 20,
+        "already_ranked": 23,
         "seen": 11
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 26
+        "over_max_items": 24
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 99,
-      "in_window": 99,
-      "kept": 0,
-      "new": 29
+      "collected": 98,
+      "in_window": 98,
+      "kept": 4,
+      "new": 25
     },
     "tooling": {
-      "collected": 120,
-      "in_window": 120,
-      "kept": 0,
-      "new": 33
+      "collected": 125,
+      "in_window": 125,
+      "kept": 3,
+      "new": 38
     },
     "web-products": {
       "collected": 183,
       "in_window": 60,
-      "kept": 0,
-      "new": 29
+      "kept": 2,
+      "new": 26
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 63,
+  "pending_count": 70,
   "recent_events": [
+    {
+      "score": 8,
+      "source": "rss",
+      "title": "Release Notes for Safari Technology Preview 254",
+      "topic": "web-products",
+      "ts": "2026-10-09T20:34:47.063649+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "rss",
+      "title": "Interactive map of the Hebrew Bible",
+      "topic": "web-products",
+      "ts": "2026-10-09T20:34:47.063636+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593081+00:00",
+      "ts": "2026-10-09T20:34:47.063615+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593074+00:00",
+      "ts": "2026-10-09T20:34:47.063603+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593065+00:00",
+      "ts": "2026-10-09T20:34:47.063591+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Claude Code for SEO: 35 Use Cases",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593059+00:00",
+      "ts": "2026-10-09T20:34:47.063579+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Visibility Data Paralysis: How to Get Unstuck",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593053+00:00",
+      "ts": "2026-10-09T20:34:47.063567+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593046+00:00",
+      "ts": "2026-10-09T20:34:47.063551+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593039+00:00",
+      "ts": "2026-10-09T20:34:47.063539+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "5 Good Choices for HTML Containers",
+      "topic": "web-products",
+      "ts": "2026-10-09T20:34:47.063528+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Why I tried to kill token billing (and why we kept it)",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593032+00:00",
+      "ts": "2026-10-09T20:34:47.063516+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Who believes in an afterlife?",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593026+00:00",
+      "ts": "2026-10-09T20:34:47.063504+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u00c0 sa place: When Beauty Hides the Message",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593019+00:00",
+      "ts": "2026-10-09T20:34:47.063492+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593013+00:00",
+      "ts": "2026-10-09T20:34:47.063480+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.593006+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Beliefs in life after death",
-      "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.592999+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "\u271a Draw attention visually",
-      "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.592992+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "AI Overviews Currently Appear for 83% of Branded Searches",
-      "topic": "web-products",
-      "ts": "2026-10-09T15:01:11.592985+00:00",
+      "ts": "2026-10-09T20:34:47.063468+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 3,
-      "ts": "2026-10-03T22:41:56.516034+00:00"
-    },
     {
       "kept": 2,
       "ts": "2026-10-04T04:28:57.570485+00:00"
@@ -267,28 +267,32 @@
     {
       "kept": 0,
       "ts": "2026-10-09T14:59:29.651785+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-09T20:33:56.005527+00:00"
     }
   ],
-  "streak": 253,
+  "streak": 254,
   "topics": [
     {
-      "collected": 99,
-      "kept": 0,
+      "collected": 98,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 120,
-      "kept": 0,
+      "collected": 125,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 183,
-      "kept": 0,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-09T14:59:29.651785+00:00"
+  "updated_at": "2026-10-09T20:33:56.005527+00:00"
 }

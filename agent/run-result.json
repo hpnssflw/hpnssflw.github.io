@@ -310,34 +310,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 19,
-      "tooling": 29,
-      "web-products": 15
+      "ai-engineering": 22,
+      "tooling": 31,
+      "web-products": 17
     },
-    "count": 63,
+    "count": 70,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-02T20:22:17.411105+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A local encrypted Mac recorder that captures screen, meeting, and AI transcript context into searchable memory for AI assistants.",
-        "title": "Show HN: Breadcrumb, record everything on your mac + context manager for AI",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://innerloop.works/breadcrumb"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-02T20:22:17.411105+00:00",
-        "score": 10,
-        "source": "github",
-        "summary": "A GitHub repository for a high-performance token-based structured data engine for .NET, directly relevant as a developer tool.",
-        "title": "CAPCOM-TD-OSS/REDox",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/CAPCOM-TD-OSS/REDox"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-03T03:56:08.946753+00:00",
@@ -1008,12 +986,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/10/08/population-pyramid-in-3-d-and-over-time/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "agent-smith is a project offering adaptive model routing, a Codex usage monitor, and reproducible benchmarks, tagged ai-agents, benchmark, codex, cost-optimization, llm-routing and local-first.",
+        "title": "Chengjun023/agent-smith",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/Chengjun023/agent-smith"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A post arguing that agents don't need memory, they need documentation.",
+        "title": "Agents don't need memory, they need documentation",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://liao.gg/blog/agents-dont-need-memory"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "An Artificial Analysis piece analyzes Gemini 4 Argon (High) on intelligence, performance and price.",
+        "title": "Gemini 4 Argon (High): Intelligence, Performance and Price Analysis",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://artificialanalysis.ai/models/gemini-4-argon"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "An Artificial Analysis piece reports that GPT-6.1 Sol replaces GPT-6 Sol after just seven days, with near-Astra intelligence, covering model performance and price.",
+        "title": "GPT-6.1 Sol replaces GPT-6 Sol after just 7 days, with near-Astra intelligence",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Mold Linker version 3.0.0 has been released and rewritten in Rust.",
+        "title": "Mold Linker Version 3.0.0 Release – Rewritten in Rust",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/rui314/mold/releases/tag/v3.0.0"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A proposal for an OSC 7501 terminal protocol that reports program status in the terminal.",
+        "title": "A Terminal Protocol for Program Status (OSC 7501)",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://mitchellh.com/writing/program-status-osc7501"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "A collection of Claude Code mods including live lines above the prompt, guards, panes, and games.",
+        "title": "hamzafer/claude-code-mods",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/hamzafer/claude-code-mods"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "An interactive visualization of the Hebrew Bible by Danyel Fisher, with columns for books, lines for chapters, and squares for verses, allowing zoom and pan.",
+        "title": "Interactive map of the Hebrew Bible",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/10/09/interactive-map-of-the-hebrew-bible/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-09T20:33:56.005527+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Safari Technology Preview 254 is available for macOS, with WebKit changes including accessibility fixes such as VoiceOver behavior on date, time, and color inputs and on controls styled with pointer-events: none.",
+        "title": "Release Notes for Safari Technology Preview 254",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://webkit.org/blog/18420/release-notes-for-safari-technology-preview-254/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-09T14:59:29.651785+00:00",
-    "id": "2026-10-09T1459Z",
+    "at": "2026-10-09T20:33:56.005527+00:00",
+    "id": "2026-10-09T2033Z",
     "mode": "real",
     "offline": false
   },
@@ -1024,13 +1101,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 98,
+          "out": 98
         },
         "tooling": {
           "drops": {},
-          "in": 120,
-          "out": 120
+          "in": 125,
+          "out": 125
         },
         "web-products": {
           "drops": {},
@@ -1045,13 +1122,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 98,
+          "out": 98
         },
         "tooling": {
           "drops": {},
-          "in": 120,
-          "out": 120
+          "in": 125,
+          "out": 125
         },
         "web-products": {
           "drops": {
@@ -1069,18 +1146,18 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 6,
-            "seen": 25
+            "seen": 23
           },
-          "in": 99,
-          "out": 68
+          "in": 98,
+          "out": 69
         },
         "tooling": {
           "drops": {
-            "dismissed": 3,
-            "seen": 18
+            "dismissed": 4,
+            "seen": 17
           },
-          "in": 120,
-          "out": 99
+          "in": 125,
+          "out": 104
         },
         "web-products": {
           "drops": {
@@ -1097,24 +1174,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 39
+            "already_ranked": 44
           },
-          "in": 68,
-          "out": 29
+          "in": 69,
+          "out": 25
         },
         "tooling": {
           "drops": {
             "already_ranked": 66
           },
-          "in": 99,
-          "out": 33
+          "in": 104,
+          "out": 38
         },
         "web-products": {
           "drops": {
-            "already_ranked": 20
+            "already_ranked": 23
           },
           "in": 49,
-          "out": 29
+          "out": 26
         }
       },
       "stage": "cache"
@@ -1124,18 +1201,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 9,
-          "out": 9
+          "in": 3,
+          "out": 3
         },
         "tooling": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 8,
+          "out": 8
         },
         "web-products": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1145,23 +1222,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 6
+            "below_relevance": 2
           },
-          "in": 29,
+          "in": 25,
           "out": 23
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 5
           },
-          "in": 33,
-          "out": 30
+          "in": 38,
+          "out": 33
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 3
-          },
-          "in": 29,
+          "drops": {},
+          "in": 26,
           "out": 26
         }
       },
@@ -1172,24 +1247,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 23
+            "over_max_items": 19
           },
           "in": 23,
-          "out": 0
+          "out": 4
         },
         "tooling": {
           "drops": {
             "over_max_items": 30
           },
-          "in": 30,
-          "out": 0
+          "in": 33,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 26
+            "over_max_items": 24
           },
           "in": 26,
-          "out": 0
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1199,18 +1274,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 19
+          "in": 4,
+          "out": 22
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 29
+          "in": 3,
+          "out": 31
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 15
+          "in": 2,
+          "out": 17
         }
       },
       "stage": "queue"
@@ -1219,16 +1294,18 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 19,
-          "out": 19
+          "out": 18
         },
         "tooling": {
           "drops": {
-            "expired": 2
+            "expired": 1
           },
-          "in": 31,
-          "out": 29
+          "in": 29,
+          "out": 28
         },
         "web-products": {
           "drops": {},
