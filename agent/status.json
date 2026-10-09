@@ -4,30 +4,27 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 40,
+        "already_ranked": 39,
         "dismissed": 6,
         "seen": 25
+      },
+      "rank": {
+        "below_relevance": 6,
+        "over_max_items": 23
+      }
+    },
+    "tooling": {
+      "dedupe": {
+        "already_ranked": 66,
+        "dismissed": 3,
+        "seen": 18
       },
       "inbox": {
         "expired": 2
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 20
-      }
-    },
-    "tooling": {
-      "dedupe": {
-        "already_ranked": 65,
-        "dismissed": 3,
-        "seen": 18
-      },
-      "inbox": {
-        "expired": 4
-      },
-      "rank": {
-        "below_relevance": 4,
-        "over_max_items": 28
+        "below_relevance": 3,
+        "over_max_items": 30
       }
     },
     "web-products": {
@@ -38,151 +35,143 @@
         "already_ranked": 20,
         "seen": 11
       },
-      "inbox": {
-        "expired": 1
-      },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 25
+        "below_relevance": 3,
+        "over_max_items": 26
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 95,
-      "in_window": 95,
+      "collected": 99,
+      "in_window": 99,
       "kept": 0,
-      "new": 24
+      "new": 29
     },
     "tooling": {
-      "collected": 118,
-      "in_window": 118,
+      "collected": 120,
+      "in_window": 120,
       "kept": 0,
-      "new": 32
+      "new": 33
     },
     "web-products": {
-      "collected": 181,
-      "in_window": 58,
-      "kept": 1,
-      "new": 27
+      "collected": 183,
+      "in_window": 60,
+      "kept": 0,
+      "new": 29
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 65,
+  "pending_count": 63,
   "recent_events": [
-    {
-      "score": 8,
-      "source": "rss",
-      "title": "Population pyramid in 3-D and over time",
-      "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.199072+00:00",
-      "verdict": "kept"
-    },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.199055+00:00",
+      "ts": "2026-10-09T15:01:11.593081+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.199047+00:00",
+      "ts": "2026-10-09T15:01:11.593074+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.199038+00:00",
+      "ts": "2026-10-09T15:01:11.593065+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Claude Code for SEO: 35 Use Cases",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.199030+00:00",
+      "ts": "2026-10-09T15:01:11.593059+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Visibility Data Paralysis: How to Get Unstuck",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.199022+00:00",
+      "ts": "2026-10-09T15:01:11.593053+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.199014+00:00",
+      "ts": "2026-10-09T15:01:11.593046+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.199005+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "How an accessibility designer adds keyboard shortcuts to a web app",
-      "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.198997+00:00",
+      "ts": "2026-10-09T15:01:11.593039+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Why I tried to kill token billing (and why we kept it)",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.198986+00:00",
+      "ts": "2026-10-09T15:01:11.593032+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Who believes in an afterlife?",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.198978+00:00",
+      "ts": "2026-10-09T15:01:11.593026+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u00c0 sa place: When Beauty Hides the Message",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.198969+00:00",
+      "ts": "2026-10-09T15:01:11.593019+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.198961+00:00",
+      "ts": "2026-10-09T15:01:11.593013+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.198952+00:00",
+      "ts": "2026-10-09T15:01:11.593006+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-09T04:44:59.198943+00:00",
+      "ts": "2026-10-09T15:01:11.592999+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "\u271a Draw attention visually",
+      "topic": "web-products",
+      "ts": "2026-10-09T15:01:11.592992+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "AI Overviews Currently Appear for 83% of Branded Searches",
+      "topic": "web-products",
+      "ts": "2026-10-09T15:01:11.592985+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-03T19:00:43.940612+00:00"
-    },
     {
       "kept": 3,
       "ts": "2026-10-03T22:41:56.516034+00:00"
@@ -274,28 +263,32 @@
     {
       "kept": 1,
       "ts": "2026-10-09T04:43:57.809400+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-09T14:59:29.651785+00:00"
     }
   ],
-  "streak": 252,
+  "streak": 253,
   "topics": [
     {
-      "collected": 95,
+      "collected": 99,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 118,
+      "collected": 120,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 181,
-      "kept": 1,
+      "collected": 183,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-09T04:43:57.809400+00:00"
+  "updated_at": "2026-10-09T14:59:29.651785+00:00"
 }
