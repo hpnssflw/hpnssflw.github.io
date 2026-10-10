@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import DemoRoom from "@/components/DemoRoom";
 import { TEXT } from "@/lib/control-room-text";
-import { DEMO_SLUGS, demoLinks, loadDemo } from "@/lib/demo-presets";
+import { DEMO_SLUGS, loadDemo, presetLinks } from "@/lib/demo-presets";
 
 export function generateStaticParams() {
   return DEMO_SLUGS.map((slug) => ({ slug }));
@@ -27,5 +27,5 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function DemoPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   // Read from the committed demo goldens at build time (static export: once).
-  return <DemoRoom demo={loadDemo(slug)} presets={demoLinks()} />;
+  return <DemoRoom demo={loadDemo(slug)} presets={presetLinks()} />;
 }

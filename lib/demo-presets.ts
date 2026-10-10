@@ -16,9 +16,12 @@ export interface Demo {
   run2: RunResult;
 }
 
-export interface DemoLink {
+/** One entry of the preset switch: Tony's live control room or a demo page. */
+export interface PresetLink {
   slug: string;
   name: string;
+  href: string;
+  live: boolean;
 }
 
 function readRun(root: string, slug: string, file: string): RunResult {
@@ -33,6 +36,19 @@ export function loadDemo(slug: string, root: string = process.cwd()): Demo {
   return { slug, run1: readRun(root, slug, "run1.json"), run2: readRun(root, slug, "run2.json") };
 }
 
-export function demoLinks(root: string = process.cwd()): DemoLink[] {
-  return DEMO_SLUGS.map((slug) => ({ slug, name: loadDemo(slug, root).run1.preset.name }));
+/**
+ * The preset switch's list (/researcher/queue/ and the demo pages): Tony
+ * first — the live control room, named here because the site parses no
+ * agent YAML — then each demo, named from its golden.
+ */
+export function presetLinks(root: string = process.cwd()): PresetLink[] {
+  return [
+    { slug: "tony", name: "Tony Scraponi", href: "/researcher/queue/", live: true },
+    ...DEMO_SLUGS.map((slug) => ({
+      slug,
+      name: loadDemo(slug, root).run1.preset.name,
+      href: `/researcher/demo/${slug}/`,
+      live: false,
+    })),
+  ];
 }

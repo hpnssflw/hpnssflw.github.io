@@ -9,7 +9,7 @@ import QueuePane from "@/components/QueuePane";
 import TopicChips from "@/components/TopicChips";
 import { configView } from "@/lib/config-view";
 import { TEXT } from "@/lib/control-room-text";
-import type { Demo, DemoLink } from "@/lib/demo-presets";
+import type { Demo, PresetLink } from "@/lib/demo-presets";
 import { digestBlocks, recordedDigest } from "@/lib/digest";
 import { type Decision, type Decisions, EMPTY_DECISIONS, itemStatus, setDecision } from "@/lib/inbox";
 import type { PendingItem } from "@/lib/pending-queue";
@@ -40,7 +40,7 @@ function recordedDecisions(run: RunResult): Decisions {
  * the digest preview follow, nothing is saved; run 2 is what the engine
  * did with the preset's own decisions, and the digest it sent.
  */
-export default function DemoRoom({ demo, presets }: { demo: Demo; presets: DemoLink[] }) {
+export default function DemoRoom({ demo, presets }: { demo: Demo; presets: PresetLink[] }) {
   const { run1, run2 } = demo;
   const language = run1.preset.language;
   const text = TEXT[language];
@@ -108,13 +108,12 @@ export default function DemoRoom({ demo, presets }: { demo: Demo; presets: DemoL
             {presets.map((preset) => (
               <Link
                 key={preset.slug}
-                href={`/researcher/demo/${preset.slug}/`}
+                href={preset.href}
                 aria-current={preset.slug === demo.slug ? "page" : undefined}
               >
-                {preset.name}
+                {preset.live ? text.demo.tonyLive : preset.name}
               </Link>
             ))}
-            <Link href="/researcher/queue/">{text.demo.tonyLive}</Link>
           </nav>
         </header>
         <PipelineRail
