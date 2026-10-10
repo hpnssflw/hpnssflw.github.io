@@ -62,7 +62,7 @@
   "019b8d88a570a342": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 166,
+    "last_score": 167,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -94,7 +94,7 @@
   "020a2e848d32ee02": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 911,
+    "last_score": 919,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -142,7 +142,7 @@
         "summary": "An open-source coding agent that lives in your terminal, understands your repository, plans multi-step changes, writes and edits files, runs commands and tests, and iterates until the task is done with a transparent, extensible tool loop."
       },
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
         "ranked_at": "2026-10-10T14:15:10.018893+00:00",
         "relevance": 9,
         "rubric": "02189e2467e9",
@@ -201,7 +201,7 @@
   "0397e222b2cf1c4f": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 126,
+    "last_score": 127,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -299,7 +299,7 @@
   "058a183131d2f1ac": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 51,
+    "last_score": 55,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -471,6 +471,22 @@
     },
     "times_sent": 0
   },
+  "09dc3a60ddefc94e": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T19:47:33.070266+00:00",
+    "last_score": 103,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 103,
+        "summary": "A browser extension for the DeepSeek Harness desktop app that lets the model read the current page as text with numbered controls and click, type, scroll, navigate, manage tabs, and optionally inspect images."
+      }
+    },
+    "times_sent": 0
+  },
   "0a1c1662feed9cd0": {
     "dismissed": null,
     "first_seen": "2026-09-23T15:42:15.861111+00:00",
@@ -617,7 +633,7 @@
   "0d2b759c8ff8305d": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 284,
+    "last_score": 285,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -654,7 +670,7 @@
   "0df6080a7e0590da": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 512,
+    "last_score": 529,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -691,7 +707,7 @@
   "0ed82d6d4259c6df": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 280,
+    "last_score": 286,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -787,7 +803,7 @@
   "10bd62dfbc4796aa": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 303,
+    "last_score": 310,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-08T21:02:42.379376+00:00",
@@ -900,7 +916,7 @@
         "summary": "A Show HN for Pi pod, which runs sessions of the pi coding agent in isolated sandboxes on a server you run."
       },
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -1089,7 +1105,7 @@
   "171b3799501d2795": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 71,
+    "last_score": 73,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1158,15 +1174,15 @@
   "1929017f5df96ae4": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 1805,
+    "last_score": 2092,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-09T14:59:29.651785+00:00",
-        "relevance": 2,
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 3,
         "rubric": "3472af8a46e1",
-        "source_score": 1000,
-        "summary": "An open-source personal finance app with an AI financial advisor for tracking net worth, investments, ETFs, cash, and debts on a local computer."
+        "source_score": 2092,
+        "summary": "An open-source personal finance app with an AI financial advisor for tracking net worth, investments, ETFs, cash and debts on your own computer."
       }
     },
     "times_sent": 0
@@ -1581,7 +1597,7 @@
   "2856f86a7db806ab": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 94,
+    "last_score": 97,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1771,6 +1787,22 @@
         "rubric": "02189e2467e9",
         "source_score": 52,
         "summary": "codex-mobile-bridge offers self-hosted browser access to existing Codex chats from phone, tablet, or computer, with local/SSH sessions, approvals, and notifications."
+      }
+    },
+    "times_sent": 0
+  },
+  "2ca3d7a8b94cb0f0": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T19:47:33.070266+00:00",
+    "last_score": 83,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 83,
+        "summary": "This link reports that PVX-001, an open-source Covid-19 vaccine, has started a Phase 1 trial."
       }
     },
     "times_sent": 0
@@ -2510,7 +2542,7 @@
   "3b904b47899eb2a6": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 924,
+    "last_score": 949,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2526,7 +2558,7 @@
   "3c0a025fc282b32b": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 118,
+    "last_score": 119,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2545,7 +2577,7 @@
     "last_score": 39,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
         "ranked_at": "2026-10-05T18:22:24.720121+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -2568,6 +2600,22 @@
     "last_score": 56,
     "ranks": {},
     "times_sent": 1
+  },
+  "3cf7d8a3c334ad50": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T19:47:33.070266+00:00",
+    "last_score": 32,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 32,
+        "summary": "A New York Times report that Anthropic agents attempted to fill out visa forms on a State Department website."
+      }
+    },
+    "times_sent": 0
   },
   "3d4b4eb8babd8a24": {
     "dismissed": null,
@@ -2593,7 +2641,7 @@
   "3e1fccb6ce25ce74": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 714,
+    "last_score": 717,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2787,7 +2835,7 @@
   "42219d8d26148ddc": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 58,
+    "last_score": 59,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2899,7 +2947,7 @@
   "45ae20b677e1b28f": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 177,
+    "last_score": 180,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3064,7 +3112,7 @@
   "47f52aa565d83c9c": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 55,
+    "last_score": 56,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3166,7 +3214,7 @@
   "4b172ad16523e609": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 105,
+    "last_score": 106,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3224,7 +3272,7 @@
   "4cbcd95ee497859b": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 116,
+    "last_score": 122,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3256,7 +3304,7 @@
   "4d8b68140620bc6a": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 219,
+    "last_score": 220,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3453,7 +3501,7 @@
     "times_sent": 0
   },
   "5145c3435354921d": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-03T15:47:33.701565+00:00",
     "last_score": 1377,
     "ranks": {},
@@ -3469,7 +3517,7 @@
   "51a16d922cf4ef1f": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 31,
+    "last_score": 32,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -3552,7 +3600,7 @@
   "53e46f9938d2b269": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 49,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3651,7 +3699,7 @@
   "56ae1b27cc90a7bd": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 67,
+    "last_score": 68,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3843,6 +3891,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "59b5f2b30e7d8fe7": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T19:47:33.070266+00:00",
+    "last_score": 110,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 110,
+        "summary": "An open-source clean-room reimplementation of Autodesk Fusion 360 in Rust offering parametric 3D CAD for desktop, browser, and AI agents via MCP."
+      }
+    },
+    "times_sent": 0
+  },
   "5a20474e7b0de6cc": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -3888,10 +3952,10 @@
   "5bb1c16aff1d31b3": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 57,
+    "last_score": 60,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
         "ranked_at": "2026-10-10T04:29:22.971524+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -3926,15 +3990,15 @@
   "5c1db9239c15fa63": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 82,
+    "last_score": 196,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
-        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
-        "relevance": 9,
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 8,
         "rubric": "3472af8a46e1",
-        "source_score": 82,
-        "summary": "A self-hosted personal AI agent that runs on Cloudflare's free tier."
+        "source_score": 196,
+        "summary": "A self-hosted personal AI agent project distributed on GitHub that runs on Cloudflare's free tier, per the title."
       }
     },
     "times_sent": 0
@@ -3986,7 +4050,7 @@
   "5d492ba0d8e6395e": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 43,
+    "last_score": 45,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4231,7 +4295,7 @@
   "63943982f089ed8b": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 103,
+    "last_score": 127,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4300,7 +4364,7 @@
   "64581bfda36978c6": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 361,
+    "last_score": 396,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4499,7 +4563,7 @@
   "6923b5b640af2dc7": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 388,
+    "last_score": 389,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-09T20:33:56.005527+00:00",
@@ -4601,7 +4665,7 @@
     "times_sent": 0
   },
   "6aab9ebe3f5136f7": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-03T09:43:15.596705+00:00",
     "last_score": 1034,
     "ranks": {},
@@ -4925,7 +4989,7 @@
   "70e581165c8b345e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 504,
+    "last_score": 505,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5061,7 +5125,7 @@
   "749983b595aaf313": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 285,
+    "last_score": 289,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5123,7 +5187,7 @@
   "762ec36cca677e1a": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 185,
+    "last_score": 188,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5408,7 +5472,7 @@
   "7f2096f4faffa1e3": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 90,
+    "last_score": 92,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5563,7 +5627,7 @@
   "836a79b0f997f6d8": {
     "dismissed": null,
     "first_seen": "2026-10-05T16:49:37.554117+00:00",
-    "last_score": 926,
+    "last_score": 933,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -5683,7 +5747,7 @@
   "876449a0944e93d0": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 147,
+    "last_score": 157,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5706,7 +5770,7 @@
   "893d0d33ad1406e4": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 101,
+    "last_score": 113,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5729,7 +5793,7 @@
   "89be4e220d9f6acb": {
     "dismissed": null,
     "first_seen": "2026-09-28T18:52:41.090824+00:00",
-    "last_score": 934,
+    "last_score": 935,
     "ranks": {},
     "times_sent": 1
   },
@@ -5865,6 +5929,22 @@
     "last_score": 61,
     "ranks": {},
     "times_sent": 1
+  },
+  "8cba259cd103107b": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T19:47:33.070266+00:00",
+    "last_score": 51,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": 51,
+        "summary": "Rampart is presented as a browser-native, on-device PII redaction capability."
+      }
+    },
+    "times_sent": 0
   },
   "8ce604a0ae0da1f4": {
     "dismissed": null,
@@ -6026,7 +6106,7 @@
   "9139f009d0a21056": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 230,
+    "last_score": 234,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6050,7 +6130,7 @@
   "917ba46d3f15f0c5": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 553,
+    "last_score": 554,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-08T21:02:42.379376+00:00",
@@ -6089,7 +6169,7 @@
   "9356b6751b5ecf7a": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 94,
+    "last_score": 101,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6255,7 +6335,7 @@
   "96d307df56097d10": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 572,
+    "last_score": 573,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -6271,7 +6351,7 @@
   "96eff79c1b7bf812": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 299,
+    "last_score": 302,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6352,7 +6432,7 @@
   "98a1a75f4d9a62cb": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 51,
+    "last_score": 52,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6458,7 +6538,7 @@
   "9bce984ffc5c19d3": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 75,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6826,7 +6906,7 @@
   "a533e0f8af8be0f9": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 51,
+    "last_score": 52,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -6886,10 +6966,10 @@
   "a7100dc6c0045ce8": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 39,
+    "last_score": 40,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
         "ranked_at": "2026-10-09T14:59:29.651785+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -6976,7 +7056,7 @@
   "a851a0a421bf0c60": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 78,
+    "last_score": 80,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -7066,7 +7146,7 @@
   "aa78453a3cdbb830": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 543,
+    "last_score": 563,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7223,7 +7303,7 @@
   "ad986333f66a8a31": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 64,
+    "last_score": 65,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7239,7 +7319,7 @@
   "ae501e2203fc2e43": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 49,
+    "last_score": 50,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7266,6 +7346,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "ae7c9336500624c0": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T19:47:33.070266+00:00",
+    "last_score": 38,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 1,
+        "rubric": "080b24af813c",
+        "source_score": 38,
+        "summary": "A Kotaku article about vibe-coded browser ports of Halo, The Simpsons: Hit And Run, and GTA that are said to work well."
+      }
+    },
+    "times_sent": 0
+  },
   "ae93fb765ce454ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -7276,7 +7372,7 @@
   "af0dc0f74bb4c40a": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 243,
+    "last_score": 245,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7363,7 +7459,7 @@
   "afef5afb12819e98": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 115,
+    "last_score": 124,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-08T21:02:42.379376+00:00",
@@ -7476,7 +7572,7 @@
   "b20ed8debfa3069f": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 191,
+    "last_score": 204,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7534,7 +7630,7 @@
   "b4a1803a79623440": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 32,
+    "last_score": 34,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7764,7 +7860,7 @@
   "b856de0518197d6e": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 71,
+    "last_score": 72,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7802,7 +7898,7 @@
   "b8d29561f841d671": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 172,
+    "last_score": 173,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7883,7 +7979,7 @@
   "bb2de73f7c5cd437": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 51,
+    "last_score": 55,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8058,7 +8154,7 @@
   "bf2149b8045ec7a8": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 547,
+    "last_score": 570,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8168,7 +8264,7 @@
   "c192475c2a029669": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 265,
+    "last_score": 270,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -8325,7 +8421,7 @@
   "c52677dc02f6a886": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 109,
+    "last_score": 110,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8556,7 +8652,7 @@
   "cbd7ea75fd5495be": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 183,
+    "last_score": 185,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-09T20:33:56.005527+00:00",
@@ -8684,7 +8780,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
         "ranked_at": "2026-10-07T04:58:06.518389+00:00",
         "relevance": 8,
         "rubric": "080b24af813c",
@@ -8817,7 +8913,7 @@
   "d0da800340042252": {
     "dismissed": null,
     "first_seen": "2026-10-04T13:42:30.838785+00:00",
-    "last_score": 2699,
+    "last_score": 2744,
     "ranks": {},
     "times_sent": 0
   },
@@ -8863,7 +8959,7 @@
   "d1edfb1393e6c151": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 95,
+    "last_score": 100,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8886,7 +8982,7 @@
   "d210a03fc1915694": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 77,
+    "last_score": 86,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8902,7 +8998,7 @@
   "d2fc0d722b1f4562": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 126,
+    "last_score": 169,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9130,7 +9226,7 @@
   "d8006ec1144c99be": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 130,
+    "last_score": 145,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9141,7 +9237,7 @@
         "summary": "A tool that creates animated, explorable diagrams for Claude and other coding agents from a short JSON spec."
       },
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-10T19:47:33.070266+00:00",
         "ranked_at": "2026-10-09T14:59:29.651785+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -9226,6 +9322,22 @@
         "rubric": "02189e2467e9",
         "source_score": 62,
         "summary": "Rhun is a small open-source code editor for Linux, Windows, and Apple silicon Macs with Vim mode, a terminal, Git diffs, and a panel for Claude Code or Codex sessions."
+      }
+    },
+    "times_sent": 0
+  },
+  "d97094e29ce578d9": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T19:47:33.070266+00:00",
+    "last_score": 53,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T19:47:33.070266+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 53,
+        "summary": "A Business Insider account of a personal AI agent leaking the author's bank details into company Slack."
       }
     },
     "times_sent": 0
@@ -9367,7 +9479,7 @@
   "dc50683096dec8f9": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 112,
+    "last_score": 113,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9569,7 +9681,7 @@
   "e0bb7480c75f38cb": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 63,
+    "last_score": 64,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9810,7 +9922,7 @@
   "e6e1d2a9f0a4e91a": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 435,
+    "last_score": 436,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -9917,7 +10029,7 @@
   "e9cddd1fb5fbfddf": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 58,
+    "last_score": 59,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9993,7 +10105,7 @@
   "eb7b4293d4abd6bf": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 1101,
+    "last_score": 1107,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,

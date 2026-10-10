@@ -4,40 +4,40 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 45,
-        "dismissed": 3,
+        "already_ranked": 47,
+        "dismissed": 1,
         "seen": 25
       },
       "rank": {
-        "below_relevance": 5,
-        "over_max_items": 21
+        "below_relevance": 4,
+        "over_max_items": 18
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 71,
-        "dismissed": 5,
-        "seen": 16
+        "already_ranked": 70,
+        "dismissed": 3,
+        "seen": 18
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 34
+        "below_relevance": 1,
+        "over_max_items": 31
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 127
+        "outside_window": 131
       },
       "dedupe": {
-        "already_ranked": 19,
-        "seen": 14
+        "already_ranked": 15,
+        "seen": 16
       },
       "rank": {
         "below_relevance": 1,
-        "over_max_items": 22
+        "over_max_items": 19
       }
     }
   },
@@ -46,136 +46,134 @@
     "ai-engineering": {
       "collected": 99,
       "in_window": 99,
-      "kept": 0,
+      "kept": 4,
       "new": 26
     },
     "tooling": {
-      "collected": 129,
-      "in_window": 129,
-      "kept": 0,
-      "new": 37
+      "collected": 126,
+      "in_window": 126,
+      "kept": 3,
+      "new": 35
     },
     "web-products": {
-      "collected": 183,
-      "in_window": 56,
-      "kept": 0,
-      "new": 23
+      "collected": 184,
+      "in_window": 53,
+      "kept": 2,
+      "new": 22
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 66,
+  "pending_count": 73,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "hn",
+      "title": "Rampart: Browser native on-device PII radaction",
+      "topic": "web-products",
+      "ts": "2026-10-10T19:48:15.059736+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 8,
+      "source": "rss",
+      "title": "Exposure to tariffs in Canada",
+      "topic": "web-products",
+      "ts": "2026-10-10T19:48:15.059722+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303975+00:00",
+      "ts": "2026-10-10T19:48:15.059697+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303963+00:00",
+      "ts": "2026-10-10T19:48:15.059658+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303951+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Claude Code for SEO: 35 Use Cases",
-      "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303930+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "AI Visibility Data Paralysis: How to Get Unstuck",
-      "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303918+00:00",
+      "ts": "2026-10-10T19:48:15.059647+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303907+00:00",
+      "ts": "2026-10-10T19:48:15.059635+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303895+00:00",
+      "ts": "2026-10-10T19:48:15.059623+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Why I tried to kill token billing (and why we kept it)",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303883+00:00",
+      "ts": "2026-10-10T19:48:15.059612+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Who believes in an afterlife?",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303872+00:00",
+      "ts": "2026-10-10T19:48:15.059600+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303860+00:00",
+      "ts": "2026-10-10T19:48:15.059587+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303848+00:00",
+      "ts": "2026-10-10T19:48:15.059574+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303836+00:00",
+      "ts": "2026-10-10T19:48:15.059563+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303824+00:00",
+      "ts": "2026-10-10T19:48:15.059550+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Overviews Currently Appear for 83% of Branded Searches",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303812+00:00",
+      "ts": "2026-10-10T19:48:15.059538+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-10T14:16:18.303798+00:00",
+      "ts": "2026-10-10T19:48:15.059523+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 3,
-      "ts": "2026-10-04T19:12:38.830179+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-04T22:46:38.798671+00:00"
@@ -267,28 +265,32 @@
     {
       "kept": 0,
       "ts": "2026-10-10T14:15:10.018893+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-10T19:47:33.070266+00:00"
     }
   ],
-  "streak": 256,
+  "streak": 257,
   "topics": [
     {
       "collected": 99,
-      "kept": 0,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 129,
-      "kept": 0,
+      "collected": 126,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 183,
-      "kept": 0,
+      "collected": 184,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-10T14:15:10.018893+00:00"
+  "updated_at": "2026-10-10T19:47:33.070266+00:00"
 }

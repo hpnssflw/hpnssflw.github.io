@@ -310,34 +310,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 21,
-      "tooling": 27,
-      "web-products": 18
+      "ai-engineering": 25,
+      "tooling": 28,
+      "web-products": 20
     },
-    "count": 66,
+    "count": 73,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-03T15:47:33.701565+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "An open source SDK for building Muse gadgets, directly relevant as a development tool.",
-        "title": "facebookincubator/muse-gadget-sdk",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/facebookincubator/muse-gadget-sdk"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-03T15:47:33.701565+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "DroidDeck brings the SteamOS experience to Android, a software tool for gaming.",
-        "title": "Droid-Deck/DroidDeck",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/Droid-Deck/DroidDeck"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-03T22:41:56.516034+00:00",
@@ -1041,12 +1019,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://www.bram.us/2026/10/08/calc-input-a-custom-input-element-that-accepts-mathematical-formulas/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A self-hosted personal AI agent project distributed on GitHub that runs on Cloudflare's free tier, per the title.",
+        "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/rociiu/talorys"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "An article about rewriting Prime Agent in Rust.",
+        "title": "Rewriting Prime Agent in Rust",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://www.primeintellect.ai/blog/prime-agent-rust"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A Show HN project for a self-hosted life dashboard that includes an MCP server for AI.",
+        "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/edrisranjbar/lifeos"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A builder describes using an iPhone as a second GPU for a MacBook, speeding up Qwen 3.8 27B prefills by 29-44%, a local inference optimization.",
+        "title": "I made my iPhone a second GPU for my MacBook-Qwen 3.8 27B prefills 29–44% faster",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://reddit.com/comments/1wvz1ex/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "CodeAgent is an open-source coding agent that lives in your terminal, understands your repo, plans multi-step changes, edits files, runs commands and tests, and iterates via an extensible tool loop.",
+        "title": "Harvil1/codeAgent",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Harvil1/codeAgent"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "A tool that generates animated, explorable diagrams for Claude and other coding agents from a short JSON spec, tagged with claude-code and codex topics.",
+        "title": "Aryanutkarsh/SeeCode",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Aryanutkarsh/SeeCode"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Pi pod runs sessions of the pi coding agent in isolated sandboxes ('pods') on a server you run, in composable environments.",
+        "title": "Show HN: Pi pod – Run your pi coding agent in sandboxes on your own server",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://pipod.dev/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Researchers at the University of Toronto's School of Cities build interactive mapping and visualization tools to measure potential localized impacts of U.S. tariffs on jobs and businesses across Canadian cities.",
+        "title": "Exposure to tariffs in Canada",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/10/06/exposure-to-tariffs-in-canada/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T19:47:33.070266+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Rampart is presented as a browser-native, on-device PII redaction capability.",
+        "title": "Rampart: Browser native on-device PII radaction",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://ndstudio.gov/posts/say-hello-to-rampart"
       }
     ]
   },
   "run": {
-    "at": "2026-10-10T14:15:10.018893+00:00",
-    "id": "2026-10-10T1415Z",
+    "at": "2026-10-10T19:47:33.070266+00:00",
+    "id": "2026-10-10T1947Z",
     "mode": "real",
     "offline": false
   },
@@ -1062,13 +1139,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 129,
-          "out": 129
+          "in": 126,
+          "out": 126
         },
         "web-products": {
           "drops": {},
-          "in": 183,
-          "out": 183
+          "in": 184,
+          "out": 184
         }
       },
       "stage": "collect"
@@ -1083,15 +1160,15 @@
         },
         "tooling": {
           "drops": {},
-          "in": 129,
-          "out": 129
+          "in": 126,
+          "out": 126
         },
         "web-products": {
           "drops": {
-            "outside_window": 127
+            "outside_window": 131
           },
-          "in": 183,
-          "out": 56
+          "in": 184,
+          "out": 53
         }
       },
       "stage": "window"
@@ -1101,26 +1178,26 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
+            "dismissed": 1,
             "seen": 25
           },
           "in": 99,
-          "out": 71
+          "out": 73
         },
         "tooling": {
           "drops": {
-            "dismissed": 5,
-            "seen": 16
+            "dismissed": 3,
+            "seen": 18
           },
-          "in": 129,
-          "out": 108
+          "in": 126,
+          "out": 105
         },
         "web-products": {
           "drops": {
-            "seen": 14
+            "seen": 16
           },
-          "in": 56,
-          "out": 42
+          "in": 53,
+          "out": 37
         }
       },
       "stage": "dedupe"
@@ -1130,24 +1207,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 45
+            "already_ranked": 47
           },
-          "in": 71,
+          "in": 73,
           "out": 26
         },
         "tooling": {
           "drops": {
-            "already_ranked": 71
+            "already_ranked": 70
           },
-          "in": 108,
-          "out": 37
+          "in": 105,
+          "out": 35
         },
         "web-products": {
           "drops": {
-            "already_ranked": 19
+            "already_ranked": 15
           },
-          "in": 42,
-          "out": 23
+          "in": 37,
+          "out": 22
         }
       },
       "stage": "cache"
@@ -1157,18 +1234,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 6,
+          "out": 6
         },
         "tooling": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 1,
+          "out": 1
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 2,
+          "out": 2
         }
       },
       "stage": "enrich"
@@ -1178,24 +1255,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 5
+            "below_relevance": 4
           },
           "in": 26,
-          "out": 21
+          "out": 22
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 1
           },
-          "in": 37,
+          "in": 35,
           "out": 34
         },
         "web-products": {
           "drops": {
             "below_relevance": 1
           },
-          "in": 23,
-          "out": 22
+          "in": 22,
+          "out": 21
         }
       },
       "stage": "rank"
@@ -1205,24 +1282,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 21
+            "over_max_items": 18
           },
-          "in": 21,
-          "out": 0
+          "in": 22,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 34
+            "over_max_items": 31
           },
           "in": 34,
-          "out": 0
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 22
+            "over_max_items": 19
           },
-          "in": 22,
-          "out": 0
+          "in": 21,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1232,18 +1309,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 21
+          "in": 4,
+          "out": 25
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 27
+          "in": 3,
+          "out": 28
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 18
+          "in": 2,
+          "out": 20
         }
       },
       "stage": "queue"
@@ -1258,10 +1335,10 @@
         },
         "tooling": {
           "drops": {
-            "expired": 1
+            "expired": 2
           },
-          "in": 28,
-          "out": 27
+          "in": 27,
+          "out": 25
         },
         "web-products": {
           "drops": {},
