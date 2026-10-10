@@ -64,7 +64,7 @@ Props: `presets: PresetLink[]`, `current: string` (a slug), `text:
   preset's name and a caret; `aria-label` on the wrapping `<nav>` is
   `text.label`.
 - The open list (`<ul>`) holds one `next/link` per preset; the current one
-  carries `aria-current="page"`; Tony's entry adds a muted `text.live`
+  carries `aria-current="page"`; Tony's entry adds a lime `text.live`
   tag. Names are shown as each preset wrote them, in its own language.
 - Client JS only closes it: on Escape (focus returns to the summary) and on
   a pointer-down outside the element, both listening only while open.
