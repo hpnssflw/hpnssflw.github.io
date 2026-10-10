@@ -94,7 +94,7 @@
   "020a2e848d32ee02": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 898,
+    "last_score": 911,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -126,6 +126,30 @@
     "first_seen": "2026-09-30T20:33:36.487127+00:00",
     "last_score": 194,
     "ranks": {},
+    "times_sent": 0
+  },
+  "027781bd51eef9fa": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 219,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 219,
+        "summary": "An open-source coding agent that lives in your terminal, understands your repository, plans multi-step changes, writes and edits files, runs commands and tests, and iterates until the task is done with a transparent, extensible tool loop."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 219,
+        "summary": "CodeAgent is an open-source coding agent that lives in your terminal, understands your repo, plans multi-step changes, edits files, runs commands and tests, and iterates via an extensible tool loop."
+      }
+    },
     "times_sent": 0
   },
   "028d5cd17cb0362b": {
@@ -177,7 +201,7 @@
   "0397e222b2cf1c4f": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 125,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -272,6 +296,22 @@
     },
     "times_sent": 0
   },
+  "058a183131d2f1ac": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 51,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 51,
+        "summary": "A plugin/dashboard displaying tok/s, cache hit rate, and five-hour and weekly quotas, with English and Chinese switching and reversible Windows installation."
+      }
+    },
+    "times_sent": 0
+  },
   "06203f6b8b0bcd5d": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -333,7 +373,7 @@
     "times_sent": 0
   },
   "07e3fd6f0b87696a": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
     "last_score": 883,
     "ranks": {},
@@ -395,6 +435,22 @@
         "rubric": "080b24af813c",
         "source_score": null,
         "summary": "Google Search Central announces curated YouTube learning paths for Search fundamentals and Technical SEO from its video library."
+      }
+    },
+    "times_sent": 0
+  },
+  "0936620e9d9c7d1d": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 147,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 147,
+        "summary": "A tool to chat with your documents to create and refine editable architecture diagrams, with a local workspace, Excalidraw canvas, and optional Tavily search."
       }
     },
     "times_sent": 0
@@ -598,7 +654,7 @@
   "0df6080a7e0590da": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 498,
+    "last_score": 512,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -635,7 +691,7 @@
   "0ed82d6d4259c6df": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 269,
+    "last_score": 280,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -731,7 +787,7 @@
   "10bd62dfbc4796aa": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 296,
+    "last_score": 303,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-08T21:02:42.379376+00:00",
@@ -1033,7 +1089,7 @@
   "171b3799501d2795": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 68,
+    "last_score": 71,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1102,7 +1158,7 @@
   "1929017f5df96ae4": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 1556,
+    "last_score": 1805,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1141,7 +1197,7 @@
   "1a400703ecdf7ec7": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 120,
+    "last_score": 122,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1425,7 +1481,7 @@
   "248e562807794d83": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 65,
+    "last_score": 66,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1525,7 +1581,7 @@
   "2856f86a7db806ab": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 79,
+    "last_score": 94,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2309,7 +2365,7 @@
   "393266ea5adfae70": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 369,
+    "last_score": 370,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2454,7 +2510,7 @@
   "3b904b47899eb2a6": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 868,
+    "last_score": 924,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2470,7 +2526,7 @@
   "3c0a025fc282b32b": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 113,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2537,7 +2593,7 @@
   "3e1fccb6ce25ce74": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 709,
+    "last_score": 714,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2731,7 +2787,7 @@
   "42219d8d26148ddc": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 55,
+    "last_score": 58,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2791,7 +2847,7 @@
   "44dc45513a84d09d": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 31,
+    "last_score": 33,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2800,6 +2856,14 @@
         "rubric": "3472af8a46e1",
         "source_score": 30,
         "summary": "A Show HN post about reverse-engineering a Nokia 110 to run an AI agent and automate a few actions despite its 48MB RAM."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 33,
+        "summary": "A Show HN project that reverse-engineered a Nokia 110 to run an AI agent that automates a few actions."
       }
     },
     "times_sent": 0
@@ -2835,7 +2899,7 @@
   "45ae20b677e1b28f": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 170,
+    "last_score": 177,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3065,7 +3129,7 @@
   "49c489e07a9e5dd3": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 85,
+    "last_score": 88,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3102,7 +3166,7 @@
   "4b172ad16523e609": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 104,
+    "last_score": 105,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3160,7 +3224,7 @@
   "4cbcd95ee497859b": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 113,
+    "last_score": 116,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3402,6 +3466,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "51a16d922cf4ef1f": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 31,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 4,
+        "rubric": "080b24af813c",
+        "source_score": 31,
+        "summary": "Meadows is a small language for stock-and-flow diagrams that run."
+      }
+    },
+    "times_sent": 0
+  },
   "51bcfbd26675d967": {
     "dismissed": null,
     "first_seen": "2026-09-23T08:53:43.403564+00:00",
@@ -3469,6 +3549,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "53e46f9938d2b269": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 49,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 49,
+        "summary": "An article titled \"C for Rust Programmers,\" which reads as a learning resource rather than a tool."
+      }
+    },
+    "times_sent": 0
+  },
   "5427d679c7eaa44b": {
     "dismissed": null,
     "first_seen": "2026-09-05T11:26:57.737477+00:00",
@@ -3516,7 +3612,7 @@
   "55ca6d06f45cd7e4": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 89,
+    "last_score": 93,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3622,7 +3718,7 @@
   "576ded508c0bb401": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 345,
+    "last_score": 346,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3792,7 +3888,7 @@
   "5bb1c16aff1d31b3": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 34,
+    "last_score": 57,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3826,6 +3922,22 @@
     "last_score": 95,
     "ranks": {},
     "times_sent": 1
+  },
+  "5c1db9239c15fa63": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 82,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 9,
+        "rubric": "3472af8a46e1",
+        "source_score": 82,
+        "summary": "A self-hosted personal AI agent that runs on Cloudflare's free tier."
+      }
+    },
+    "times_sent": 0
   },
   "5c39cbd1bec4aace": {
     "dismissed": null,
@@ -3874,7 +3986,7 @@
   "5d492ba0d8e6395e": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 41,
+    "last_score": 43,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4119,15 +4231,15 @@
   "63943982f089ed8b": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 38,
+    "last_score": 103,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-10T04:29:22.971524+00:00",
-        "relevance": 8,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 6,
         "rubric": "02189e2467e9",
-        "source_score": 38,
-        "summary": "Eurydice is a tool that compiles Rust into readable C, a compiler/build-adjacent utility relevant to developers."
+        "source_score": 103,
+        "summary": "A tool called Eurydice that compiles Rust into readable C, presented on lwn.net."
       }
     },
     "times_sent": 0
@@ -4188,7 +4300,7 @@
   "64581bfda36978c6": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 240,
+    "last_score": 361,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4197,6 +4309,22 @@
         "rubric": "02189e2467e9",
         "source_score": 240,
         "summary": "A side project that archives and decodes phone carrier settings for iPhone, Pixel, and Galaxy, with no stated role in software development."
+      }
+    },
+    "times_sent": 0
+  },
+  "64d6a55bf274d367": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 51,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 51,
+        "summary": "Gluon is described as a control platform for coding agents, tagged with claude-code, cli, codex, and coding-agents."
       }
     },
     "times_sent": 0
@@ -4774,7 +4902,7 @@
   "70620861a7df5ed7": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 406,
+    "last_score": 408,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4933,7 +5061,7 @@
   "749983b595aaf313": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 283,
+    "last_score": 285,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4995,7 +5123,7 @@
   "762ec36cca677e1a": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 172,
+    "last_score": 185,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5280,7 +5408,7 @@
   "7f2096f4faffa1e3": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 85,
+    "last_score": 90,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5435,7 +5563,7 @@
   "836a79b0f997f6d8": {
     "dismissed": null,
     "first_seen": "2026-10-05T16:49:37.554117+00:00",
-    "last_score": 920,
+    "last_score": 926,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -5555,7 +5683,7 @@
   "876449a0944e93d0": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 91,
+    "last_score": 147,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5578,15 +5706,15 @@
   "893d0d33ad1406e4": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 49,
+    "last_score": 101,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-10T04:29:22.971524+00:00",
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
         "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 49,
-        "summary": "A small open-source project providing Proton Drive for Linux, a file-sync utility rather than a software development tool."
+        "source_score": 101,
+        "summary": "A small project providing a Proton Drive client for Linux, born from the lack of an official Linux version."
       }
     },
     "times_sent": 0
@@ -5898,7 +6026,7 @@
   "9139f009d0a21056": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 225,
+    "last_score": 230,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5961,7 +6089,7 @@
   "9356b6751b5ecf7a": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 72,
+    "last_score": 94,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6090,7 +6218,7 @@
   "960053f9bf22ff8d": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 63,
+    "last_score": 64,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6127,7 +6255,7 @@
   "96d307df56097d10": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 571,
+    "last_score": 572,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -6143,7 +6271,7 @@
   "96eff79c1b7bf812": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 291,
+    "last_score": 299,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6330,7 +6458,7 @@
   "9bce984ffc5c19d3": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 73,
+    "last_score": 75,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6390,6 +6518,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 95,
         "summary": "A project that generates fonts where every LLM token is the same width."
+      }
+    },
+    "times_sent": 0
+  },
+  "9d6753bc983d8e9c": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 225,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 225,
+        "summary": "An AI novel generation tool with world building, interactive choices, and persistent character state, built with Next.js and Go."
       }
     },
     "times_sent": 0
@@ -6612,7 +6756,7 @@
   "a40db2c445455d8c": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 31,
+    "last_score": 32,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6922,7 +7066,7 @@
   "aa78453a3cdbb830": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 518,
+    "last_score": 543,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6952,7 +7096,7 @@
   "ab03af192490887b": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 31,
+    "last_score": 32,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7132,7 +7276,7 @@
   "af0dc0f74bb4c40a": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 239,
+    "last_score": 243,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7203,7 +7347,7 @@
   "afdecd136fba8911": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 78,
+    "last_score": 79,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7219,7 +7363,7 @@
   "afef5afb12819e98": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 103,
+    "last_score": 115,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-08T21:02:42.379376+00:00",
@@ -7309,7 +7453,7 @@
   "b18f5389985699d5": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 43,
+    "last_score": 44,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -7332,7 +7476,7 @@
   "b20ed8debfa3069f": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 169,
+    "last_score": 191,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7385,6 +7529,22 @@
     "first_seen": "2026-08-16T04:24:16.550920+00:00",
     "last_score": 219,
     "ranks": {},
+    "times_sent": 0
+  },
+  "b4a1803a79623440": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 32,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 32,
+        "summary": "A collection of alternatives to FOSS projects that have chosen to use LLMs/AI."
+      }
+    },
     "times_sent": 0
   },
   "b4cdbb097b6655c4": {
@@ -7642,7 +7802,7 @@
   "b8d29561f841d671": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 170,
+    "last_score": 172,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7718,6 +7878,22 @@
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 867,
     "ranks": {},
+    "times_sent": 0
+  },
+  "bb2de73f7c5cd437": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 51,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 51,
+        "summary": "A CLI/homebrew tool that turns your app icon into a blueprint version like Xcode's, for debug builds."
+      }
+    },
     "times_sent": 0
   },
   "bb679d3a9016d345": {
@@ -7836,7 +8012,7 @@
   "be1ae401637add81": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 79,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7866,7 +8042,7 @@
   "bef31792e452dc24": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 126,
+    "last_score": 127,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7882,7 +8058,7 @@
   "bf2149b8045ec7a8": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 493,
+    "last_score": 547,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7992,7 +8168,7 @@
   "c192475c2a029669": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 257,
+    "last_score": 265,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-06T17:58:27.899830+00:00",
@@ -8149,7 +8325,7 @@
   "c52677dc02f6a886": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 108,
+    "last_score": 109,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8320,7 +8496,7 @@
   "ca4a41726cd02267": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 94,
+    "last_score": 96,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8380,7 +8556,7 @@
   "cbd7ea75fd5495be": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 178,
+    "last_score": 183,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-09T20:33:56.005527+00:00",
@@ -8489,7 +8665,7 @@
   "cdb1d51fae043110": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 1044,
+    "last_score": 1045,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -8641,7 +8817,7 @@
   "d0da800340042252": {
     "dismissed": null,
     "first_seen": "2026-10-04T13:42:30.838785+00:00",
-    "last_score": 2598,
+    "last_score": 2699,
     "ranks": {},
     "times_sent": 0
   },
@@ -8687,7 +8863,7 @@
   "d1edfb1393e6c151": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 89,
+    "last_score": 95,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8710,7 +8886,7 @@
   "d210a03fc1915694": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 70,
+    "last_score": 77,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8719,6 +8895,22 @@
         "rubric": "02189e2467e9",
         "source_score": 60,
         "summary": "A Claude Code mod providing themed transcript skins with tool rows, reply gutters, and spinner words, swapped live via /skin."
+      }
+    },
+    "times_sent": 0
+  },
+  "d2fc0d722b1f4562": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 126,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 126,
+        "summary": "Animated 3D robot heads for React that show what your agent is doing."
       }
     },
     "times_sent": 0
@@ -8825,7 +9017,7 @@
   "d608eb71f802f71b": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 83,
+    "last_score": 88,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8855,7 +9047,7 @@
   "d66b18709c4ba948": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 753,
+    "last_score": 755,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -8938,7 +9130,7 @@
   "d8006ec1144c99be": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 123,
+    "last_score": 130,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9009,7 +9201,7 @@
   "d8d38d395f9eac94": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 240,
+    "last_score": 241,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -9106,7 +9298,7 @@
   "dabe8020b5e63706": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 51,
+    "last_score": 52,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9234,7 +9426,7 @@
   "dd19469c076fee7d": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 102,
+    "last_score": 103,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9521,7 +9713,7 @@
   "e2711c9ce5a221c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 150,
+    "last_score": 154,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9725,7 +9917,7 @@
   "e9cddd1fb5fbfddf": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 55,
+    "last_score": 58,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9801,7 +9993,7 @@
   "eb7b4293d4abd6bf": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 1089,
+    "last_score": 1101,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10276,7 +10468,7 @@
   "f7c0d10c27cf67ab": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 67,
+    "last_score": 68,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10380,6 +10572,22 @@
         "rubric": "02189e2467e9",
         "source_score": 32,
         "summary": "Pumpkins.sh is a site where anyone can claim, carve, and display one of a million pumpkins, with VR exploration."
+      }
+    },
+    "times_sent": 0
+  },
+  "fa5cd199ec83c6c6": {
+    "dismissed": null,
+    "first_seen": "2026-10-10T14:15:10.018893+00:00",
+    "last_score": 34,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-10T14:15:10.018893+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 34,
+        "summary": "An article titled 'LLMs Aren't Inevitable'."
       }
     },
     "times_sent": 0

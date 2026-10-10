@@ -4,181 +4,174 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 44,
-        "dismissed": 4,
-        "seen": 26
+        "already_ranked": 45,
+        "dismissed": 3,
+        "seen": 25
+      },
+      "rank": {
+        "below_relevance": 5,
+        "over_max_items": 21
+      }
+    },
+    "tooling": {
+      "dedupe": {
+        "already_ranked": 71,
+        "dismissed": 5,
+        "seen": 16
       },
       "inbox": {
         "expired": 1
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 19
-      }
-    },
-    "tooling": {
-      "dedupe": {
-        "already_ranked": 68,
-        "dismissed": 5,
-        "seen": 16
-      },
-      "inbox": {
-        "expired": 3
-      },
-      "rank": {
-        "below_relevance": 5,
-        "over_max_items": 30
+        "below_relevance": 3,
+        "over_max_items": 34
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 125
+        "outside_window": 127
       },
       "dedupe": {
-        "already_ranked": 20,
-        "seen": 13
+        "already_ranked": 19,
+        "seen": 14
       },
       "rank": {
-        "over_max_items": 23
+        "below_relevance": 1,
+        "over_max_items": 22
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 94,
-      "in_window": 94,
+      "collected": 99,
+      "in_window": 99,
       "kept": 0,
-      "new": 20
+      "new": 26
     },
     "tooling": {
-      "collected": 124,
-      "in_window": 124,
+      "collected": 129,
+      "in_window": 129,
       "kept": 0,
-      "new": 35
+      "new": 37
     },
     "web-products": {
-      "collected": 182,
-      "in_window": 57,
-      "kept": 1,
-      "new": 24
+      "collected": 183,
+      "in_window": 56,
+      "kept": 0,
+      "new": 23
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 67,
+  "pending_count": 66,
   "recent_events": [
-    {
-      "score": 8,
-      "source": "rss",
-      "title": "<\u200bcalc-input>, a custom input element that accepts mathematical formulas",
-      "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318347+00:00",
-      "verdict": "kept"
-    },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318324+00:00",
+      "ts": "2026-10-10T14:16:18.303975+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318313+00:00",
+      "ts": "2026-10-10T14:16:18.303963+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318302+00:00",
+      "ts": "2026-10-10T14:16:18.303951+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Claude Code for SEO: 35 Use Cases",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318291+00:00",
+      "ts": "2026-10-10T14:16:18.303930+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Visibility Data Paralysis: How to Get Unstuck",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318280+00:00",
+      "ts": "2026-10-10T14:16:18.303918+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318269+00:00",
+      "ts": "2026-10-10T14:16:18.303907+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318258+00:00",
+      "ts": "2026-10-10T14:16:18.303895+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Why I tried to kill token billing (and why we kept it)",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318247+00:00",
+      "ts": "2026-10-10T14:16:18.303883+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Who believes in an afterlife?",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318236+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "\u00c0 sa place: When Beauty Hides the Message",
-      "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318225+00:00",
+      "ts": "2026-10-10T14:16:18.303872+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318214+00:00",
+      "ts": "2026-10-10T14:16:18.303860+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318203+00:00",
+      "ts": "2026-10-10T14:16:18.303848+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318191+00:00",
+      "ts": "2026-10-10T14:16:18.303836+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-10T04:30:01.318176+00:00",
+      "ts": "2026-10-10T14:16:18.303824+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "AI Overviews Currently Appear for 83% of Branded Searches",
+      "topic": "web-products",
+      "ts": "2026-10-10T14:16:18.303812+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "How to Measure AI Search Visibility When Attribution Falls Short",
+      "topic": "web-products",
+      "ts": "2026-10-10T14:16:18.303798+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 3,
-      "ts": "2026-10-04T13:42:30.838785+00:00"
-    },
     {
       "kept": 3,
       "ts": "2026-10-04T19:12:38.830179+00:00"
@@ -270,28 +263,32 @@
     {
       "kept": 1,
       "ts": "2026-10-10T04:29:22.971524+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-10T14:15:10.018893+00:00"
     }
   ],
-  "streak": 255,
+  "streak": 256,
   "topics": [
     {
-      "collected": 94,
+      "collected": 99,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 124,
+      "collected": 129,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 182,
-      "kept": 1,
+      "collected": 183,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-10T04:29:22.971524+00:00"
+  "updated_at": "2026-10-10T14:15:10.018893+00:00"
 }
