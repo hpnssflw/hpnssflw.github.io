@@ -5,25 +5,25 @@
     "ai-engineering": {
       "dedupe": {
         "already_ranked": 44,
-        "dismissed": 6,
-        "seen": 23
+        "dismissed": 4,
+        "seen": 26
       },
       "inbox": {
         "expired": 1
       },
       "rank": {
-        "below_relevance": 2,
+        "below_relevance": 1,
         "over_max_items": 19
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 66,
-        "dismissed": 4,
-        "seen": 17
+        "already_ranked": 68,
+        "dismissed": 5,
+        "seen": 16
       },
       "inbox": {
-        "expired": 1
+        "expired": 3
       },
       "rank": {
         "below_relevance": 5,
@@ -32,154 +32,149 @@
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 123
+        "outside_window": 125
       },
       "dedupe": {
-        "already_ranked": 23,
-        "seen": 11
+        "already_ranked": 20,
+        "seen": 13
       },
       "rank": {
-        "over_max_items": 24
+        "over_max_items": 23
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 98,
-      "in_window": 98,
-      "kept": 4,
-      "new": 25
+      "collected": 94,
+      "in_window": 94,
+      "kept": 0,
+      "new": 20
     },
     "tooling": {
-      "collected": 125,
-      "in_window": 125,
-      "kept": 3,
-      "new": 38
+      "collected": 124,
+      "in_window": 124,
+      "kept": 0,
+      "new": 35
     },
     "web-products": {
-      "collected": 183,
-      "in_window": 60,
-      "kept": 2,
-      "new": 26
+      "collected": 182,
+      "in_window": 57,
+      "kept": 1,
+      "new": 24
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 70,
+  "pending_count": 67,
   "recent_events": [
     {
       "score": 8,
       "source": "rss",
-      "title": "Release Notes for Safari Technology Preview 254",
+      "title": "<\u200bcalc-input>, a custom input element that accepts mathematical formulas",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063649+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 9,
-      "source": "rss",
-      "title": "Interactive map of the Hebrew Bible",
-      "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063636+00:00",
+      "ts": "2026-10-10T04:30:01.318347+00:00",
       "verdict": "kept"
     },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063615+00:00",
+      "ts": "2026-10-10T04:30:01.318324+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063603+00:00",
+      "ts": "2026-10-10T04:30:01.318313+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063591+00:00",
+      "ts": "2026-10-10T04:30:01.318302+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Claude Code for SEO: 35 Use Cases",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063579+00:00",
+      "ts": "2026-10-10T04:30:01.318291+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Visibility Data Paralysis: How to Get Unstuck",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063567+00:00",
+      "ts": "2026-10-10T04:30:01.318280+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063551+00:00",
+      "ts": "2026-10-10T04:30:01.318269+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063539+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "5 Good Choices for HTML Containers",
-      "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063528+00:00",
+      "ts": "2026-10-10T04:30:01.318258+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Why I tried to kill token billing (and why we kept it)",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063516+00:00",
+      "ts": "2026-10-10T04:30:01.318247+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Who believes in an afterlife?",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063504+00:00",
+      "ts": "2026-10-10T04:30:01.318236+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u00c0 sa place: When Beauty Hides the Message",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063492+00:00",
+      "ts": "2026-10-10T04:30:01.318225+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063480+00:00",
+      "ts": "2026-10-10T04:30:01.318214+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-09T20:34:47.063468+00:00",
+      "ts": "2026-10-10T04:30:01.318203+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Beliefs in life after death",
+      "topic": "web-products",
+      "ts": "2026-10-10T04:30:01.318191+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "\u271a Draw attention visually",
+      "topic": "web-products",
+      "ts": "2026-10-10T04:30:01.318176+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 2,
-      "ts": "2026-10-04T04:28:57.570485+00:00"
-    },
     {
       "kept": 3,
       "ts": "2026-10-04T13:42:30.838785+00:00"
@@ -271,28 +266,32 @@
     {
       "kept": 9,
       "ts": "2026-10-09T20:33:56.005527+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-10T04:29:22.971524+00:00"
     }
   ],
-  "streak": 254,
+  "streak": 255,
   "topics": [
     {
-      "collected": 98,
-      "kept": 4,
+      "collected": 94,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 125,
-      "kept": 3,
+      "collected": 124,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 183,
-      "kept": 2,
+      "collected": 182,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-09T20:33:56.005527+00:00"
+  "updated_at": "2026-10-10T04:29:22.971524+00:00"
 }

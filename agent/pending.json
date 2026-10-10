@@ -1,46 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-03T03:56:08.946753+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "A Show HN open-source Lego AI generator that uses ChatGPT and Claude to generate LDraw assembly code.",
-      "title": "Show HN: Made an open-source Lego AI generator",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/anteloc/ldraw-nova"
-    },
-    {
-      "pending_since": "2026-10-03T03:56:08.946753+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "A GitHub plugin that enables free frontier-model access in dsh, making it a directly relevant developer tool.",
-      "title": "zouyuxuan122/dsh-our-free-model",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/zouyuxuan122/dsh-our-free-model"
-    },
-    {
-      "pending_since": "2026-10-03T03:56:08.946753+00:00",
-      "score": 7,
-      "source": "github",
-      "summary": "A scientific hypothesis-discovery workbench with pluggable adapters and Elo tournaments, relevant as a technical research tool.",
-      "title": "OpSafari/hypoarena",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/OpSafari/hypoarena"
-    },
-    {
-      "pending_since": "2026-10-03T03:56:08.946753+00:00",
-      "score": 6,
-      "source": "github",
-      "summary": "An educational GitHub repo on designing LLM, RAG, and agent systems, relevant as AI developer learning material.",
-      "title": "amitshekhariitbhu/ai-system-design",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/amitshekhariitbhu/ai-system-design"
-    },
-    {
       "pending_since": "2026-10-03T09:43:15.596705+00:00",
       "score": 6,
       "source": "github",
@@ -699,6 +659,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://webkit.org/blog/18420/release-notes-for-safari-technology-preview-254/"
+    },
+    {
+      "pending_since": "2026-10-10T04:29:22.971524+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "Bram.us presents <calc-input>, a custom input element that accepts mathematical formulas like 2 + 3 and toggles between showing the formula on focus and the calculated result on blur.",
+      "title": "<\u200bcalc-input>, a custom input element that accepts mathematical formulas",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://www.bram.us/2026/10/08/calc-input-a-custom-input-element-that-accepts-mathematical-formulas/"
     }
   ],
   "last_email_at": "2026-09-30T04:08:45.319706+00:00"

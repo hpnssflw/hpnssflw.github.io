@@ -310,56 +310,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 22,
-      "tooling": 31,
-      "web-products": 17
+      "ai-engineering": 21,
+      "tooling": 28,
+      "web-products": 18
     },
-    "count": 70,
+    "count": 67,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-03T03:56:08.946753+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A Show HN open-source Lego AI generator that uses ChatGPT and Claude to generate LDraw assembly code.",
-        "title": "Show HN: Made an open-source Lego AI generator",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/anteloc/ldraw-nova"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-03T03:56:08.946753+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "A GitHub plugin that enables free frontier-model access in dsh, making it a directly relevant developer tool.",
-        "title": "zouyuxuan122/dsh-our-free-model",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/zouyuxuan122/dsh-our-free-model"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-03T03:56:08.946753+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "A scientific hypothesis-discovery workbench with pluggable adapters and Elo tournaments, relevant as a technical research tool.",
-        "title": "OpSafari/hypoarena",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/OpSafari/hypoarena"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-03T03:56:08.946753+00:00",
-        "score": 6,
-        "source": "github",
-        "summary": "An educational GitHub repo on designing LLM, RAG, and agent systems, relevant as AI developer learning material.",
-        "title": "amitshekhariitbhu/ai-system-design",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/amitshekhariitbhu/ai-system-design"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-03T09:43:15.596705+00:00",
@@ -1085,12 +1041,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://webkit.org/blog/18420/release-notes-for-safari-technology-preview-254/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-10T04:29:22.971524+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Bram.us presents <calc-input>, a custom input element that accepts mathematical formulas like 2 + 3 and toggles between showing the formula on focus and the calculated result on blur.",
+        "title": "<​calc-input>, a custom input element that accepts mathematical formulas",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://www.bram.us/2026/10/08/calc-input-a-custom-input-element-that-accepts-mathematical-formulas/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-09T20:33:56.005527+00:00",
-    "id": "2026-10-09T2033Z",
+    "at": "2026-10-10T04:29:22.971524+00:00",
+    "id": "2026-10-10T0429Z",
     "mode": "real",
     "offline": false
   },
@@ -1101,18 +1068,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 94,
+          "out": 94
         },
         "tooling": {
           "drops": {},
-          "in": 125,
-          "out": 125
+          "in": 124,
+          "out": 124
         },
         "web-products": {
           "drops": {},
-          "in": 183,
-          "out": 183
+          "in": 182,
+          "out": 182
         }
       },
       "stage": "collect"
@@ -1122,20 +1089,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 94,
+          "out": 94
         },
         "tooling": {
           "drops": {},
-          "in": 125,
-          "out": 125
+          "in": 124,
+          "out": 124
         },
         "web-products": {
           "drops": {
-            "outside_window": 123
+            "outside_window": 125
           },
-          "in": 183,
-          "out": 60
+          "in": 182,
+          "out": 57
         }
       },
       "stage": "window"
@@ -1145,26 +1112,26 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 6,
-            "seen": 23
+            "dismissed": 4,
+            "seen": 26
           },
-          "in": 98,
-          "out": 69
+          "in": 94,
+          "out": 64
         },
         "tooling": {
           "drops": {
-            "dismissed": 4,
-            "seen": 17
+            "dismissed": 5,
+            "seen": 16
           },
-          "in": 125,
-          "out": 104
+          "in": 124,
+          "out": 103
         },
         "web-products": {
           "drops": {
-            "seen": 11
+            "seen": 13
           },
-          "in": 60,
-          "out": 49
+          "in": 57,
+          "out": 44
         }
       },
       "stage": "dedupe"
@@ -1176,22 +1143,22 @@
           "drops": {
             "already_ranked": 44
           },
-          "in": 69,
-          "out": 25
+          "in": 64,
+          "out": 20
         },
         "tooling": {
           "drops": {
-            "already_ranked": 66
+            "already_ranked": 68
           },
-          "in": 104,
-          "out": 38
+          "in": 103,
+          "out": 35
         },
         "web-products": {
           "drops": {
-            "already_ranked": 23
+            "already_ranked": 20
           },
-          "in": 49,
-          "out": 26
+          "in": 44,
+          "out": 24
         }
       },
       "stage": "cache"
@@ -1201,18 +1168,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 2,
+          "out": 2
         },
         "tooling": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 7,
+          "out": 7
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1222,22 +1189,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 1
           },
-          "in": 25,
-          "out": 23
+          "in": 20,
+          "out": 19
         },
         "tooling": {
           "drops": {
             "below_relevance": 5
           },
-          "in": 38,
-          "out": 33
+          "in": 35,
+          "out": 30
         },
         "web-products": {
           "drops": {},
-          "in": 26,
-          "out": 26
+          "in": 24,
+          "out": 24
         }
       },
       "stage": "rank"
@@ -1249,22 +1216,22 @@
           "drops": {
             "over_max_items": 19
           },
-          "in": 23,
-          "out": 4
+          "in": 19,
+          "out": 0
         },
         "tooling": {
           "drops": {
             "over_max_items": 30
           },
-          "in": 33,
-          "out": 3
+          "in": 30,
+          "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 24
+            "over_max_items": 23
           },
-          "in": 26,
-          "out": 2
+          "in": 24,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1274,18 +1241,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "out": 22
+          "in": 0,
+          "out": 21
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "out": 31
+          "in": 0,
+          "out": 28
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 17
+          "in": 1,
+          "out": 18
         }
       },
       "stage": "queue"
@@ -1297,20 +1264,20 @@
           "drops": {
             "expired": 1
           },
-          "in": 19,
-          "out": 18
+          "in": 22,
+          "out": 21
         },
         "tooling": {
           "drops": {
-            "expired": 1
+            "expired": 3
           },
-          "in": 29,
+          "in": 31,
           "out": 28
         },
         "web-products": {
           "drops": {},
-          "in": 15,
-          "out": 15
+          "in": 17,
+          "out": 17
         }
       },
       "stage": "review"
