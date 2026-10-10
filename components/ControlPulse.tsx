@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { OwnerSlot } from "@/components/InboxControls";
+import PresetSwitch from "@/components/PresetSwitch";
 import TonyMark from "@/components/TonyMark";
 import { type AgentStatus, fmtCountdown, isStale, sparklineCells } from "@/lib/agent-status";
+import { TEXT } from "@/lib/control-room-text";
 import { type CronSchedule, nextRun } from "@/lib/cron";
+import type { PresetLink } from "@/lib/demo-presets";
 
 function hhmm(date: Date): string {
   return date.toISOString().slice(11, 16);
@@ -35,7 +38,9 @@ export default function ControlPulse({
   failed,
   schedule,
   owner,
+  presets,
 }: {
+  presets: PresetLink[];
   status: AgentStatus | null;
   failed: boolean;
   schedule: CronSchedule;
@@ -57,10 +62,10 @@ export default function ControlPulse({
   return (
     <div className="cr-pulse">
       <TonyMark size={32} />
-      <p className="cr-pulse-id">
-        <span className="tony-name">Tony Scraponi</span>
+      <div className="cr-pulse-id">
+        <PresetSwitch presets={presets} current="tony" text={TEXT.en.presets} />
         <span className="agent-muted">control room</span>
-      </p>
+      </div>
       <p className="cr-pulse-line">
         {status ? (
           <>

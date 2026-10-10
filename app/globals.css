@@ -1810,6 +1810,7 @@ body:has(.cr) footer {
 /* Pulse: the Tony teaser's strip, with a slow lime comet. */
 .cr-pulse {
   position: relative;
+  z-index: 1; /* the preset switch's open list floats over the rail */
   display: grid;
   grid-template-columns: auto auto minmax(0, 1fr) auto;
   align-items: center;
@@ -2416,7 +2417,7 @@ body:has(.cr) footer {
    preset switcher); the digest, styled like the Telegram message it is,
    sits above the config in the right pane. */
 .cr-demo-head {
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
 }
 
 .cr-runs {
@@ -2429,21 +2430,70 @@ body:has(.cr) footer {
   margin: 0;
 }
 
-.cr-demo-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 4px 16px;
-  text-transform: lowercase;
+/* Preset switch (control room and demo pages): a <details> dropdown of
+   plain links; the summary reads as the preset's name with a caret. */
+.cr-preset {
+  position: relative;
 }
 
-.cr-demo-nav a {
+.cr-preset summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.cr-preset summary::-webkit-details-marker {
+  display: none;
+}
+
+.cr-preset summary::after {
+  content: "▾";
+  margin-left: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
   color: var(--muted);
 }
 
-.cr-demo-nav a:hover,
-.cr-demo-nav a[aria-current="page"] {
+.cr-preset summary:hover::after,
+.cr-preset details[open] summary::after {
   color: var(--text-strong);
+}
+
+.cr-preset summary:focus-visible {
+  outline: 1px solid var(--muted);
+  outline-offset: 4px;
+}
+
+.cr-preset ul {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 10;
+  min-width: max-content;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--agent-bg);
+  border: 1px solid var(--agent-border);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  line-height: 1.7;
+  text-transform: lowercase;
+}
+
+.cr-preset a {
+  display: block;
+  padding: 2px 12px;
+  color: var(--muted);
+}
+
+.cr-preset a:hover,
+.cr-preset a:focus-visible,
+.cr-preset a[aria-current="page"] {
+  color: var(--text-strong);
+}
+
+.cr-preset-live {
+  color: var(--agent-lime);
 }
 
 .cr-digest {
@@ -2492,10 +2542,6 @@ body:has(.cr) footer {
 @media (max-width: 899px) {
   .cr-demo-head {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .cr-demo-nav {
-    justify-content: flex-start;
   }
 }
 

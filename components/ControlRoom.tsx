@@ -13,6 +13,7 @@ import { STATUS_URL, parseAgentStatus } from "@/lib/agent-status";
 import { configView } from "@/lib/config-view";
 import { TEXT } from "@/lib/control-room-text";
 import type { CronSchedule } from "@/lib/cron";
+import type { PresetLink } from "@/lib/demo-presets";
 import type { Decision } from "@/lib/inbox";
 import { STATE_URL, buildOutcomes, parseAgentState, topicVerdicts } from "@/lib/outcomes";
 import { type PendingItem, type PendingQueue, PENDING_URL, isPendingQueue } from "@/lib/pending-queue";
@@ -39,7 +40,7 @@ const text = TEXT.en;
  * blanks the rest. The topic chips filter the rail, the queue, the spine
  * and the outcomes.
  */
-export default function ControlRoom({ schedule }: { schedule: CronSchedule }) {
+export default function ControlRoom({ schedule, presets }: { schedule: CronSchedule; presets: PresetLink[] }) {
   const status = useJson(STATUS_URL, parseAgentStatus);
   const run = useJson(RUN_RESULT_URL, parseRunResult);
   const pending = useJson(PENDING_URL, acceptQueue);
@@ -76,6 +77,7 @@ export default function ControlRoom({ schedule }: { schedule: CronSchedule }) {
           status={status.data}
           failed={status.failed}
           schedule={schedule}
+          presets={presets}
           owner={{ signedIn: inbox.signedIn, error: inbox.error, onSignIn: inbox.signIn, onSignOut: inbox.signOut }}
         />
         <PipelineRail

@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import ConfigSpine from "@/components/ConfigSpine";
 import DigestPanel from "@/components/DigestPanel";
 import PipelineRail from "@/components/PipelineRail";
+import PresetSwitch from "@/components/PresetSwitch";
 import QueuePane from "@/components/QueuePane";
 import TopicChips from "@/components/TopicChips";
 import { configView } from "@/lib/config-view";
@@ -83,10 +83,10 @@ export default function DemoRoom({ demo, presets }: { demo: Demo; presets: Prese
     <section className="cr" lang={language}>
       <div className="wrap cr-wrap">
         <header className="cr-pulse cr-demo-head">
-          <p className="cr-pulse-id">
-            <span className="tony-name">{run1.preset.name}</span>
+          <div className="cr-pulse-id">
+            <PresetSwitch presets={presets} current={demo.slug} text={text.presets} />
             <span className="agent-muted">{text.demo.tag(run1.run.at.slice(0, 10))}</span>
-          </p>
+          </div>
           <div className="cr-runs">
             <div className="cr-chips" role="group" aria-label={text.demo.runs}>
               {([1, 2] as const).map((n) => (
@@ -104,17 +104,6 @@ export default function DemoRoom({ demo, presets }: { demo: Demo; presets: Prese
               </p>
             )}
           </div>
-          <nav className="cr-demo-nav" aria-label={text.demo.switcher}>
-            {presets.map((preset) => (
-              <Link
-                key={preset.slug}
-                href={preset.href}
-                aria-current={preset.slug === demo.slug ? "page" : undefined}
-              >
-                {preset.live ? text.demo.tonyLive : preset.name}
-              </Link>
-            ))}
-          </nav>
         </header>
         <PipelineRail
           stages={buildStages(run, { queue: null, decisions: runNo === 1 ? sandbox : null }, topic, text.rail)}

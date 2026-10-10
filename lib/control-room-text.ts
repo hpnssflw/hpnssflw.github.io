@@ -163,8 +163,6 @@ const en = {
   },
   demo: {
     tag: (isoDate: string) => `demo · synthetic data · offline runs of ${isoDate}`,
-    switcher: "Presets",
-    tonyLive: "Tony live ↗",
     runs: "Run",
     run1: "run 1 — the queue fills",
     run2: "run 2 — decisions applied, digest sent",
@@ -176,6 +174,7 @@ const en = {
     digestEmpty: "approve items to build the digest",
     description: "A content-engine demo on synthetic data: collection, ranking, moderation and the editor's digest.",
   },
+  presets: { label: "Presets", live: "live" },
 };
 
 export type Text = typeof en;
@@ -335,8 +334,6 @@ const ru: Text = {
   demo: {
     tag: (isoDate: string) =>
       `демо · синтетические данные · офлайн-прогоны ${isoDate.slice(8, 10)}.${isoDate.slice(5, 7)}.${isoDate.slice(0, 4)}`,
-    switcher: "Пресеты",
-    tonyLive: "Tony live ↗",
     runs: "Прогон",
     run1: "прогон 1 — очередь наполнилась",
     run2: "прогон 2 — решения применены, сводка ушла",
@@ -348,6 +345,7 @@ const ru: Text = {
     digestEmpty: "одобрите материалы — здесь появится сводка",
     description: "Демо контент-движка на синтетических данных: сбор, оценка, модерация и сводка для редактора.",
   },
+  presets: { label: "Пресеты", live: "live" },
 };
 
 export const TEXT: Record<Language, Text> = { en, ru };
