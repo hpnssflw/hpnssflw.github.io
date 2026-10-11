@@ -4,183 +4,175 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 49,
-        "dismissed": 3,
-        "seen": 25
-      },
-      "inbox": {
-        "expired": 1
+        "already_ranked": 54,
+        "dismissed": 2,
+        "seen": 24
       },
       "rank": {
-        "below_relevance": 7,
-        "over_max_items": 17
+        "below_relevance": 2,
+        "over_max_items": 13
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 68,
+        "already_ranked": 70,
         "dismissed": 7,
-        "seen": 14
+        "seen": 13
       },
       "inbox": {
         "expired": 3
       },
       "rank": {
         "below_relevance": 3,
-        "over_max_items": 33
+        "over_max_items": 31
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 135
+        "outside_window": 136
       },
       "dedupe": {
         "already_ranked": 15,
-        "seen": 19
-      },
-      "inbox": {
-        "expired": 1
+        "seen": 17
       },
       "rank": {
-        "over_max_items": 15
+        "over_max_items": 13
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 101,
-      "in_window": 101,
-      "kept": 0,
-      "new": 24
+      "collected": 99,
+      "in_window": 99,
+      "kept": 4,
+      "new": 19
     },
     "tooling": {
-      "collected": 125,
-      "in_window": 125,
-      "kept": 0,
-      "new": 36
+      "collected": 127,
+      "in_window": 127,
+      "kept": 3,
+      "new": 37
     },
     "web-products": {
-      "collected": 184,
-      "in_window": 49,
-      "kept": 0,
+      "collected": 183,
+      "in_window": 47,
+      "kept": 2,
       "new": 15
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 66,
+  "pending_count": 72,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "Testing an iframe\u2019s postMessage Handler",
+      "topic": "web-products",
+      "ts": "2026-10-11T19:56:34.615820+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "How an accessibility designer adds keyboard shortcuts to a web app",
+      "topic": "web-products",
+      "ts": "2026-10-11T19:56:34.615811+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473498+00:00",
+      "ts": "2026-10-11T19:56:34.615799+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473491+00:00",
+      "ts": "2026-10-11T19:56:34.615788+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473484+00:00",
+      "ts": "2026-10-11T19:56:34.615779+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473477+00:00",
+      "ts": "2026-10-11T19:56:34.615770+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473470+00:00",
+      "ts": "2026-10-11T19:56:34.615762+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473463+00:00",
+      "ts": "2026-10-11T19:56:34.615754+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473456+00:00",
+      "ts": "2026-10-11T19:56:34.615746+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473449+00:00",
+      "ts": "2026-10-11T19:56:34.615737+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473441+00:00",
+      "ts": "2026-10-11T19:56:34.615729+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Overviews Currently Appear for 83% of Branded Searches",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473433+00:00",
+      "ts": "2026-10-11T19:56:34.615721+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473426+00:00",
+      "ts": "2026-10-11T19:56:34.615712+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473418+00:00",
+      "ts": "2026-10-11T19:56:34.615703+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "A Practical Guide To Naming Things",
       "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473411+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Testing an iframe\u2019s postMessage Handler",
-      "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473403+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "How an accessibility designer adds keyboard shortcuts to a web app",
-      "topic": "web-products",
-      "ts": "2026-10-11T14:41:07.473390+00:00",
+      "ts": "2026-10-11T19:56:34.615691+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 10,
-      "ts": "2026-10-05T18:22:24.720121+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-06T01:07:53.906880+00:00"
@@ -272,28 +264,32 @@
     {
       "kept": 0,
       "ts": "2026-10-11T14:40:21.388865+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-11T19:55:42.477843+00:00"
     }
   ],
-  "streak": 260,
+  "streak": 261,
   "topics": [
     {
-      "collected": 101,
-      "kept": 0,
+      "collected": 99,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 125,
-      "kept": 0,
+      "collected": 127,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 184,
-      "kept": 0,
+      "collected": 183,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-11T14:40:21.388865+00:00"
+  "updated_at": "2026-10-11T19:55:42.477843+00:00"
 }

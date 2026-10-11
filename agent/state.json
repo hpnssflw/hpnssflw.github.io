@@ -94,7 +94,7 @@
   "020a2e848d32ee02": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 925,
+    "last_score": 927,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -185,7 +185,7 @@
   "035fa5abb5c7987c": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 60,
+    "last_score": 62,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -299,7 +299,7 @@
   "058a183131d2f1ac": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 77,
+    "last_score": 82,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -315,7 +315,7 @@
   "06088e13776139ae": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 64,
+    "last_score": 67,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -458,7 +458,7 @@
   "09304fa0e0751d6f": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 178,
+    "last_score": 184,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -578,6 +578,22 @@
     "last_score": 766,
     "ranks": {},
     "times_sent": 1
+  },
+  "0bd395eb4c1e1020": {
+    "dismissed": null,
+    "first_seen": "2026-10-11T19:55:42.477843+00:00",
+    "last_score": 107,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 107,
+        "summary": "A TypeScript bot that connects WeChat to a personal AI agent (Grok, Muse, Claude, etc.) via official iLink."
+      }
+    },
+    "times_sent": 0
   },
   "0bf65300a2ecec70": {
     "dismissed": null,
@@ -702,7 +718,7 @@
   "0df6080a7e0590da": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 564,
+    "last_score": 570,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -739,7 +755,7 @@
   "0ed82d6d4259c6df": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 295,
+    "last_score": 298,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -835,7 +851,7 @@
   "10bd62dfbc4796aa": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 323,
+    "last_score": 327,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-08T21:02:42.379376+00:00",
@@ -1137,7 +1153,7 @@
   "171b3799501d2795": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 75,
+    "last_score": 77,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1206,7 +1222,7 @@
   "1929017f5df96ae4": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 2115,
+    "last_score": 2156,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1245,7 +1261,7 @@
   "1a400703ecdf7ec7": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 123,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1312,23 +1328,23 @@
   "1c6440c4fed57598": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 170,
+    "last_score": 206,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-11T04:12:07.356599+00:00",
-        "relevance": 2,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 1,
         "rubric": "3472af8a46e1",
-        "source_score": 93,
-        "summary": "A blog post about five months of treating bugs like patients and organizing coding agents as a medical team in a development workflow."
+        "source_score": 206,
+        "summary": "A post about five months of treating bugs like patients and coding agents like a medical team."
       },
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-11T04:12:07.356599+00:00",
-        "relevance": 8,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 4,
         "rubric": "02189e2467e9",
-        "source_score": 93,
-        "summary": "A post about a five-month approach to bugs and coding agents framed as patients and a medical team."
+        "source_score": 206,
+        "summary": "A Cockroach Labs post describes five months of treating bugs like patients and coding agents like a medical team."
       }
     },
     "times_sent": 0
@@ -1452,6 +1468,22 @@
     "last_score": 596,
     "ranks": {},
     "times_sent": 1
+  },
+  "204e3d90b8978211": {
+    "dismissed": null,
+    "first_seen": "2026-10-11T19:55:42.477843+00:00",
+    "last_score": 32,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 32,
+        "summary": "apsw is another Python SQLite wrapper library for working with SQLite databases."
+      }
+    },
+    "times_sent": 0
   },
   "213f7fae1d5f35a0": {
     "dismissed": null,
@@ -1653,7 +1685,7 @@
   "2856f86a7db806ab": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 101,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1850,7 +1882,7 @@
   "2ca3d7a8b94cb0f0": {
     "dismissed": null,
     "first_seen": "2026-10-10T19:47:33.070266+00:00",
-    "last_score": 137,
+    "last_score": 139,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2018,7 +2050,7 @@
     "times_sent": 0
   },
   "2ff75c1a9ffbcd64": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-04T04:28:57.570485+00:00",
     "last_score": 585,
     "ranks": {},
@@ -2170,7 +2202,7 @@
   "327c0f18d34614c8": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 51,
+    "last_score": 52,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2614,15 +2646,15 @@
   "3b904b47899eb2a6": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 1129,
+    "last_score": 1193,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
-        "ranked_at": "2026-10-08T15:14:12.896889+00:00",
-        "relevance": 6,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 7,
         "rubric": "3472af8a46e1",
-        "source_score": 592,
-        "summary": "A Korean localization of the ARTEX AI autonomous penetration testing framework, with topics including ai-agent and autonomous-agents."
+        "source_score": 1193,
+        "summary": "A Korean translation of ARTEX, an AI autonomous penetration testing framework, with topics including ai-agent, autonomous-agents, cybersecurity, and detection-engineering."
       }
     },
     "times_sent": 0
@@ -2630,7 +2662,7 @@
   "3c0a025fc282b32b": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 123,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2907,7 +2939,7 @@
   "42219d8d26148ddc": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 66,
+    "last_score": 67,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3019,7 +3051,7 @@
   "45ae20b677e1b28f": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 186,
+    "last_score": 187,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3344,7 +3376,7 @@
   "4cbcd95ee497859b": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 129,
+    "last_score": 134,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3672,7 +3704,7 @@
   "53e46f9938d2b269": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 163,
+    "last_score": 169,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3838,7 +3870,7 @@
   "576ded508c0bb401": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 346,
+    "last_score": 347,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3952,7 +3984,7 @@
   "59499c68644ca048": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 118,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3982,7 +4014,7 @@
   "59b5f2b30e7d8fe7": {
     "dismissed": null,
     "first_seen": "2026-10-10T19:47:33.070266+00:00",
-    "last_score": 301,
+    "last_score": 475,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4078,7 +4110,7 @@
   "5c1db9239c15fa63": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 306,
+    "last_score": 319,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-10T19:47:33.070266+00:00",
@@ -4302,7 +4334,7 @@
   "61c0da3a99e7cb28": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 61,
+    "last_score": 65,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4399,7 +4431,7 @@
   "63943982f089ed8b": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 139,
+    "last_score": 140,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4468,7 +4500,7 @@
   "64581bfda36978c6": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 418,
+    "last_score": 421,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4640,7 +4672,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
         "ranked_at": "2026-10-09T04:43:57.809400+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -4737,7 +4769,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
         "ranked_at": "2026-10-07T21:01:09.362592+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -5070,7 +5102,7 @@
   "70620861a7df5ed7": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 410,
+    "last_score": 411,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5093,7 +5125,7 @@
   "70e581165c8b345e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 505,
+    "last_score": 506,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5109,7 +5141,7 @@
   "72035a6bd1e24a1a": {
     "dismissed": null,
     "first_seen": "2026-10-10T23:15:33.901214+00:00",
-    "last_score": 217,
+    "last_score": 230,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5245,7 +5277,7 @@
   "749983b595aaf313": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 289,
+    "last_score": 293,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5307,7 +5339,7 @@
   "762ec36cca677e1a": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 206,
+    "last_score": 214,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5491,7 +5523,7 @@
   "7cd496121f201d47": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 70,
+    "last_score": 87,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5608,7 +5640,7 @@
   "7f2096f4faffa1e3": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 84,
+    "last_score": 71,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5883,7 +5915,7 @@
   "876449a0944e93d0": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 174,
+    "last_score": 176,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5906,7 +5938,7 @@
   "893d0d33ad1406e4": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 117,
+    "last_score": 119,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6069,7 +6101,7 @@
   "8cba259cd103107b": {
     "dismissed": null,
     "first_seen": "2026-10-10T19:47:33.070266+00:00",
-    "last_score": 89,
+    "last_score": 96,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-10T19:47:33.070266+00:00",
@@ -6172,6 +6204,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "8e962244c758a79d": {
+    "dismissed": null,
+    "first_seen": "2026-10-11T19:55:42.477843+00:00",
+    "last_score": 51,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 51,
+        "summary": "cross-harness is an open cross-harness protocol with terminal and local web interfaces, related to coding agents, CLI, and MCP."
+      }
+    },
+    "times_sent": 0
+  },
   "8ea18c332d43a872": {
     "dismissed": null,
     "first_seen": "2026-09-01T18:56:44.057525+00:00",
@@ -6242,7 +6290,7 @@
   "9139f009d0a21056": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 236,
+    "last_score": 238,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6289,7 +6337,7 @@
   "92764e5cb69e9660": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 35,
+    "last_score": 36,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6305,15 +6353,15 @@
   "9356b6751b5ecf7a": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 118,
+    "last_score": 123,
     "ranks": {
       "tooling": {
-        "queued_at": null,
-        "ranked_at": "2026-10-09T20:33:56.005527+00:00",
-        "relevance": 8,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 9,
         "rubric": "02189e2467e9",
-        "source_score": 60,
-        "summary": "A Claude Code mod that picks reasoning effort per prompt, shows prompt cache and context, and offers one-click handoff or compaction."
+        "source_score": 123,
+        "summary": "HeyCubit/effortless is a Claude Code mod that picks the reasoning effort for every prompt, shows prompt cache and context, and offers one-click handoff or compaction."
       }
     },
     "times_sent": 0
@@ -6360,6 +6408,22 @@
     "first_seen": "2026-08-30T15:38:09.980883+00:00",
     "last_score": 113,
     "ranks": {},
+    "times_sent": 0
+  },
+  "9486f90774f31476": {
+    "dismissed": null,
+    "first_seen": "2026-10-11T19:55:42.477843+00:00",
+    "last_score": 51,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 51,
+        "summary": "Awesome Claude Mods is an evidence-graded index of Claude Code mods, plugins, and hooks, rebuilt every two hours across 20 languages."
+      }
+    },
     "times_sent": 0
   },
   "94e89ccf4902b086": {
@@ -6503,7 +6567,7 @@
   "96eff79c1b7bf812": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 312,
+    "last_score": 314,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6614,7 +6678,7 @@
   "9912b86ad7452f24": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 60,
+    "last_score": 77,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6637,7 +6701,7 @@
   "994d69bf84065725": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 46,
+    "last_score": 47,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6722,7 +6786,7 @@
   "9bce984ffc5c19d3": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 78,
+    "last_score": 79,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6888,6 +6952,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "9fc4f9782508f693": {
+    "dismissed": null,
+    "first_seen": "2026-10-11T19:55:42.477843+00:00",
+    "last_score": 171,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 171,
+        "summary": "A McDonald's MCP-based skill for optimizing ordering costs, calculating the cheapest meal plan for the current store and warning about add-on traps."
+      }
+    },
     "times_sent": 0
   },
   "a061c44f7783dde2": {
@@ -7330,7 +7410,7 @@
   "aa78453a3cdbb830": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 591,
+    "last_score": 599,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7533,7 +7613,7 @@
   "ae7c9336500624c0": {
     "dismissed": null,
     "first_seen": "2026-10-10T19:47:33.070266+00:00",
-    "last_score": 99,
+    "last_score": 101,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -7556,7 +7636,7 @@
   "af0dc0f74bb4c40a": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 251,
+    "last_score": 255,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8044,7 +8124,7 @@
   "b856de0518197d6e": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 72,
+    "last_score": 73,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8123,6 +8203,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "ba37f20c750ee7b3": {
+    "dismissed": null,
+    "first_seen": "2026-10-11T19:55:42.477843+00:00",
+    "last_score": 81,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 81,
+        "summary": "claude-show-your-work is a Claude Code mod that shows images and plays videos in Ghostty or kitty terminals, including screenshots and Playwright recordings."
+      }
+    },
+    "times_sent": 0
+  },
   "ba5dd3c1f4c35db4": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -8163,7 +8259,7 @@
   "bb2de73f7c5cd437": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 64,
+    "last_score": 66,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8186,7 +8282,7 @@
   "bb80d48523c945ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 569,
+    "last_score": 571,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8295,7 +8391,7 @@
     "last_score": 92,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
         "ranked_at": "2026-10-08T15:14:12.896889+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -8338,7 +8434,7 @@
   "bf2149b8045ec7a8": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 612,
+    "last_score": 621,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8362,7 +8458,7 @@
   "bf79879b30894193": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 260,
+    "last_score": 264,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8577,7 +8673,7 @@
   "c44fc8610ac4f076": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 109,
+    "last_score": 152,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8600,7 +8696,7 @@
   "c4b3a5d12879206c": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 45,
+    "last_score": 47,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8626,7 +8722,7 @@
     "last_score": 251,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
         "ranked_at": "2026-10-11T04:12:07.356599+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
@@ -8669,7 +8765,7 @@
   "c52677dc02f6a886": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 110,
+    "last_score": 111,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9161,7 +9257,7 @@
   "d0da800340042252": {
     "dismissed": "expired",
     "first_seen": "2026-10-04T13:42:30.838785+00:00",
-    "last_score": 2870,
+    "last_score": 2892,
     "ranks": {},
     "times_sent": 0
   },
@@ -9182,10 +9278,26 @@
     "times_sent": 0
   },
   "d10824e962599878": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-04T04:28:57.570485+00:00",
     "last_score": 39,
     "ranks": {},
+    "times_sent": 0
+  },
+  "d14f602f29cd34fc": {
+    "dismissed": null,
+    "first_seen": "2026-10-11T19:55:42.477843+00:00",
+    "last_score": 47,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 47,
+        "summary": "The article covers open-source replications of Microsoft Excel, PowerPoint, and Word."
+      }
+    },
     "times_sent": 0
   },
   "d1baa948a9e2b03e": {
@@ -9207,7 +9319,7 @@
   "d1edfb1393e6c151": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 113,
+    "last_score": 114,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9230,7 +9342,7 @@
   "d210a03fc1915694": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 95,
+    "last_score": 97,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9246,7 +9358,7 @@
   "d2fc0d722b1f4562": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 229,
+    "last_score": 237,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9474,7 +9586,7 @@
   "d8006ec1144c99be": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 157,
+    "last_score": 161,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9704,15 +9816,15 @@
   "dbd1dfa7a53e80a5": {
     "dismissed": null,
     "first_seen": "2026-10-10T23:15:33.901214+00:00",
-    "last_score": 109,
+    "last_score": 125,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-10T23:15:33.901214+00:00",
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
         "relevance": 6,
         "rubric": "02189e2467e9",
-        "source_score": 59,
-        "summary": "A VS Code extension that turns a Claude Code session into a live, animated team call, with topics including claude-code, visualization, and vscode-extension."
+        "source_score": 125,
+        "summary": "agent-standup turns a Claude Code session into a live, animated team call via a VS Code extension or stand-alone node server."
       }
     },
     "times_sent": 0
@@ -9743,7 +9855,7 @@
   "dc50683096dec8f9": {
     "dismissed": null,
     "first_seen": "2026-10-08T04:40:37.892950+00:00",
-    "last_score": 115,
+    "last_score": 117,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9754,7 +9866,7 @@
         "summary": "A GitHub project that ports the TypeScript compiler, checker, and LSP to Rust, reportedly by LLM."
       },
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
         "ranked_at": "2026-10-08T15:14:12.896889+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -10089,7 +10201,7 @@
   "e2711c9ce5a221c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 157,
+    "last_score": 160,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10175,6 +10287,22 @@
     "last_score": 936,
     "ranks": {},
     "times_sent": 1
+  },
+  "e6753b8422696224": {
+    "dismissed": null,
+    "first_seen": "2026-10-11T19:55:42.477843+00:00",
+    "last_score": 107,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 107,
+        "summary": "BetterWispr is a free, open-source dictation app for Mac."
+      }
+    },
+    "times_sent": 0
   },
   "e6cf73249ea2136b": {
     "dismissed": "expired",
@@ -10293,7 +10421,7 @@
   "e9cddd1fb5fbfddf": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 61,
+    "last_score": 62,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10369,10 +10497,10 @@
   "eb7b4293d4abd6bf": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 1117,
+    "last_score": 1119,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
         "ranked_at": "2026-10-09T20:33:56.005527+00:00",
         "relevance": 7,
         "rubric": "3472af8a46e1",
@@ -10397,9 +10525,9 @@
     "times_sent": 0
   },
   "ec4b5e65913390d0": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
-    "last_score": 132,
+    "last_score": 134,
     "ranks": {},
     "times_sent": 0
   },
@@ -10904,10 +11032,10 @@
   "f97c0a1a038a13dd": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 100,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-11T19:55:42.477843+00:00",
         "ranked_at": "2026-10-11T14:40:21.388865+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
@@ -11022,7 +11150,7 @@
   "fbed806234063e73": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 32,
+    "last_score": 33,
     "ranks": {
       "tooling": {
         "queued_at": null,
