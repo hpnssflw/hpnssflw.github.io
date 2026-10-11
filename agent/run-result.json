@@ -312,9 +312,9 @@
     "by_topic": {
       "ai-engineering": 25,
       "tooling": 27,
-      "web-products": 18
+      "web-products": 19
     },
-    "count": 70,
+    "count": 71,
     "items": [
       {
         "decision": null,
@@ -1085,12 +1085,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://ndstudio.gov/posts/say-hello-to-rampart"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-11T04:12:07.356599+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "The post examines a few HTML elements that can serve as semantic containers instead of generic <div> and <span> tags.",
+        "title": "5 Good Choices for HTML Containers",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/5-good-choices-for-html-containers/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-10T23:15:33.901214+00:00",
-    "id": "2026-10-10T2315Z",
+    "at": "2026-10-11T04:12:07.356599+00:00",
+    "id": "2026-10-11T0412Z",
     "mode": "real",
     "offline": false
   },
@@ -1101,13 +1112,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 98,
+          "out": 98
         },
         "tooling": {
           "drops": {},
-          "in": 128,
-          "out": 128
+          "in": 124,
+          "out": 124
         },
         "web-products": {
           "drops": {},
@@ -1122,20 +1133,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 98,
+          "out": 98
         },
         "tooling": {
           "drops": {},
-          "in": 128,
-          "out": 128
+          "in": 124,
+          "out": 124
         },
         "web-products": {
           "drops": {
-            "outside_window": 131
+            "outside_window": 133
           },
           "in": 184,
-          "out": 53
+          "out": 51
         }
       },
       "stage": "window"
@@ -1146,25 +1157,25 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 1,
-            "seen": 30
+            "seen": 27
           },
-          "in": 97,
-          "out": 66
+          "in": 98,
+          "out": 70
         },
         "tooling": {
           "drops": {
             "dismissed": 4,
-            "seen": 20
+            "seen": 17
           },
-          "in": 128,
-          "out": 104
+          "in": 124,
+          "out": 103
         },
         "web-products": {
           "drops": {
             "seen": 18
           },
-          "in": 53,
-          "out": 35
+          "in": 51,
+          "out": 33
         }
       },
       "stage": "dedupe"
@@ -1176,22 +1187,22 @@
           "drops": {
             "already_ranked": 48
           },
-          "in": 66,
-          "out": 18
+          "in": 70,
+          "out": 22
         },
         "tooling": {
           "drops": {
-            "already_ranked": 71
+            "already_ranked": 69
           },
-          "in": 104,
-          "out": 33
+          "in": 103,
+          "out": 34
         },
         "web-products": {
           "drops": {
-            "already_ranked": 16
+            "already_ranked": 15
           },
-          "in": 35,
-          "out": 19
+          "in": 33,
+          "out": 18
         }
       },
       "stage": "cache"
@@ -1201,8 +1212,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 7,
+          "out": 7
         },
         "tooling": {
           "drops": {},
@@ -1211,8 +1222,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1221,19 +1232,25 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
-          "in": 18,
-          "out": 18
+          "drops": {
+            "below_relevance": 5
+          },
+          "in": 22,
+          "out": 17
         },
         "tooling": {
-          "drops": {},
-          "in": 33,
+          "drops": {
+            "below_relevance": 1
+          },
+          "in": 34,
           "out": 33
         },
         "web-products": {
-          "drops": {},
-          "in": 19,
-          "out": 19
+          "drops": {
+            "below_relevance": 1
+          },
+          "in": 18,
+          "out": 17
         }
       },
       "stage": "rank"
@@ -1243,9 +1260,9 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 18
+            "over_max_items": 17
           },
-          "in": 18,
+          "in": 17,
           "out": 0
         },
         "tooling": {
@@ -1257,10 +1274,10 @@
         },
         "web-products": {
           "drops": {
-            "over_max_items": 19
+            "over_max_items": 16
           },
-          "in": 19,
-          "out": 0
+          "in": 17,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1280,8 +1297,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 18
+          "in": 1,
+          "out": 19
         }
       },
       "stage": "queue"
@@ -1295,17 +1312,13 @@
           "out": 25
         },
         "tooling": {
-          "drops": {
-            "expired": 1
-          },
-          "in": 28,
+          "drops": {},
+          "in": 27,
           "out": 27
         },
         "web-products": {
-          "drops": {
-            "expired": 2
-          },
-          "in": 20,
+          "drops": {},
+          "in": 18,
           "out": 18
         }
       },
