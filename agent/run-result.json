@@ -310,67 +310,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 25,
-      "tooling": 27,
-      "web-products": 19
+      "ai-engineering": 24,
+      "tooling": 24,
+      "web-products": 18
     },
-    "count": 71,
+    "count": 66,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-04T04:28:57.570485+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "A GitHub project for a 3D AI agent office that hires Claude Code workers, shares terminals, and tracks GitHub issues/PRs, making it a strong developer tooling candidate.",
-        "title": "AgentSystemLabs/agent-office",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/AgentSystemLabs/agent-office"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-04T04:28:57.570485+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A Show HN release of Thoreau BASIC, a free x64 BASIC interpreter inspired by GW-BASIC and relevant as a programming tool.",
-        "title": "Show HN: Thoreau BASIC – What if BASIC hadn't gone out of fashion?",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://thoreaubasic.com/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-04T13:42:30.838785+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "Graphene is a data analysis toolkit for coding agents that adds a semantic layer for query correctness and artifact publishing, directly relevant to agent harnesses and LLM assistant tooling.",
-        "title": "Show HN: Graphene – Data analysis toolkit for your coding agent",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/graphene-data/graphene"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-04T13:42:30.838785+00:00",
-        "score": 6,
-        "source": "github",
-        "summary": "An agent skill that generates readable HTML answers, potentially useful for web development.",
-        "title": "QingYunA/answer-me-with-html",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/QingYunA/answer-me-with-html"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-04T13:42:30.838785+00:00",
-        "score": 6,
-        "source": "hn",
-        "summary": "A likely data visualization or world data project, directly relevant to the data visualization aspect of web products.",
-        "title": "September 2026: The world today, as seen by one Polish guy",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://tomwojcik.com/posts/2026-09-21/september-2026-the-world-today/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-04T19:12:38.830179+00:00",
@@ -1100,8 +1045,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-11T04:12:07.356599+00:00",
-    "id": "2026-10-11T0412Z",
+    "at": "2026-10-11T14:40:21.388865+00:00",
+    "id": "2026-10-11T1440Z",
     "mode": "real",
     "offline": false
   },
@@ -1112,13 +1057,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
-          "in": 124,
-          "out": 124
+          "in": 125,
+          "out": 125
         },
         "web-products": {
           "drops": {},
@@ -1133,20 +1078,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
-          "in": 124,
-          "out": 124
+          "in": 125,
+          "out": 125
         },
         "web-products": {
           "drops": {
-            "outside_window": 133
+            "outside_window": 135
           },
           "in": 184,
-          "out": 51
+          "out": 49
         }
       },
       "stage": "window"
@@ -1156,26 +1101,26 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 1,
-            "seen": 27
+            "dismissed": 3,
+            "seen": 25
           },
-          "in": 98,
-          "out": 70
+          "in": 101,
+          "out": 73
         },
         "tooling": {
           "drops": {
-            "dismissed": 4,
-            "seen": 17
+            "dismissed": 7,
+            "seen": 14
           },
-          "in": 124,
-          "out": 103
+          "in": 125,
+          "out": 104
         },
         "web-products": {
           "drops": {
-            "seen": 18
+            "seen": 19
           },
-          "in": 51,
-          "out": 33
+          "in": 49,
+          "out": 30
         }
       },
       "stage": "dedupe"
@@ -1185,24 +1130,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 48
+            "already_ranked": 49
           },
-          "in": 70,
-          "out": 22
+          "in": 73,
+          "out": 24
         },
         "tooling": {
           "drops": {
-            "already_ranked": 69
+            "already_ranked": 68
           },
-          "in": 103,
-          "out": 34
+          "in": 104,
+          "out": 36
         },
         "web-products": {
           "drops": {
             "already_ranked": 15
           },
-          "in": 33,
-          "out": 18
+          "in": 30,
+          "out": 15
         }
       },
       "stage": "cache"
@@ -1212,18 +1157,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 9,
+          "out": 9
         },
         "tooling": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 6,
+          "out": 6
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1233,24 +1178,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 5
+            "below_relevance": 7
           },
-          "in": 22,
+          "in": 24,
           "out": 17
         },
         "tooling": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 3
           },
-          "in": 34,
+          "in": 36,
           "out": 33
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 18,
-          "out": 17
+          "drops": {},
+          "in": 15,
+          "out": 15
         }
       },
       "stage": "rank"
@@ -1274,10 +1217,10 @@
         },
         "web-products": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 15
           },
-          "in": 17,
-          "out": 1
+          "in": 15,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1288,17 +1231,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 25
+          "out": 24
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 27
+          "out": 24
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 19
+          "in": 0,
+          "out": 18
         }
       },
       "stage": "queue"
@@ -1307,18 +1250,24 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 25,
-          "out": 25
+          "out": 24
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 27,
-          "out": 27
+          "out": 24
         },
         "web-products": {
-          "drops": {},
-          "in": 18,
+          "drops": {
+            "expired": 1
+          },
+          "in": 19,
           "out": 18
         }
       },

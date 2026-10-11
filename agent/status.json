@@ -4,176 +4,179 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 48,
-        "dismissed": 1,
-        "seen": 27
+        "already_ranked": 49,
+        "dismissed": 3,
+        "seen": 25
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 5,
+        "below_relevance": 7,
         "over_max_items": 17
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 69,
-        "dismissed": 4,
-        "seen": 17
+        "already_ranked": 68,
+        "dismissed": 7,
+        "seen": 14
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 1,
+        "below_relevance": 3,
         "over_max_items": 33
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 133
+        "outside_window": 135
       },
       "dedupe": {
         "already_ranked": 15,
-        "seen": 18
+        "seen": 19
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 16
+        "over_max_items": 15
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 98,
-      "in_window": 98,
+      "collected": 101,
+      "in_window": 101,
       "kept": 0,
-      "new": 22
+      "new": 24
     },
     "tooling": {
-      "collected": 124,
-      "in_window": 124,
+      "collected": 125,
+      "in_window": 125,
       "kept": 0,
-      "new": 34
+      "new": 36
     },
     "web-products": {
       "collected": 184,
-      "in_window": 51,
-      "kept": 1,
-      "new": 18
+      "in_window": 49,
+      "kept": 0,
+      "new": 15
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 71,
+  "pending_count": 66,
   "recent_events": [
-    {
-      "score": 7,
-      "source": "rss",
-      "title": "5 Good Choices for HTML Containers",
-      "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449987+00:00",
-      "verdict": "kept"
-    },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449970+00:00",
+      "ts": "2026-10-11T14:41:07.473498+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449962+00:00",
+      "ts": "2026-10-11T14:41:07.473491+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449953+00:00",
+      "ts": "2026-10-11T14:41:07.473484+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449945+00:00",
+      "ts": "2026-10-11T14:41:07.473477+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449936+00:00",
+      "ts": "2026-10-11T14:41:07.473470+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449928+00:00",
+      "ts": "2026-10-11T14:41:07.473463+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449918+00:00",
+      "ts": "2026-10-11T14:41:07.473456+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449909+00:00",
+      "ts": "2026-10-11T14:41:07.473449+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449900+00:00",
+      "ts": "2026-10-11T14:41:07.473441+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Overviews Currently Appear for 83% of Branded Searches",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449891+00:00",
+      "ts": "2026-10-11T14:41:07.473433+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449867+00:00",
+      "ts": "2026-10-11T14:41:07.473426+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449856+00:00",
+      "ts": "2026-10-11T14:41:07.473418+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "A Practical Guide To Naming Things",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449846+00:00",
+      "ts": "2026-10-11T14:41:07.473411+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
-      "title": "Front-End Checklist",
+      "title": "Testing an iframe\u2019s postMessage Handler",
       "topic": "web-products",
-      "ts": "2026-10-11T04:12:48.449834+00:00",
+      "ts": "2026-10-11T14:41:07.473403+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "How an accessibility designer adds keyboard shortcuts to a web app",
+      "topic": "web-products",
+      "ts": "2026-10-11T14:41:07.473390+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-05T16:49:37.554117+00:00"
-    },
     {
       "kept": 10,
       "ts": "2026-10-05T18:22:24.720121+00:00"
@@ -265,28 +268,32 @@
     {
       "kept": 1,
       "ts": "2026-10-11T04:12:07.356599+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-11T14:40:21.388865+00:00"
     }
   ],
-  "streak": 259,
+  "streak": 260,
   "topics": [
     {
-      "collected": 98,
+      "collected": 101,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 124,
+      "collected": 125,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 184,
-      "kept": 1,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-11T04:12:07.356599+00:00"
+  "updated_at": "2026-10-11T14:40:21.388865+00:00"
 }
