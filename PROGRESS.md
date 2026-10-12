@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then C (Telegram approval buttons, several delivery targets); the preset select on the control room shipped 2026-10-10.**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then C (Telegram approval buttons, several delivery targets); the preset select on the control room shipped 2026-10-12.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -837,7 +837,7 @@ infrastructure.
   approvals, run 2 deliver "05.10 · отправлено: 3 · сообщений: 1", no
   horizontal scroll. `/researcher/queue/` unchanged: 68 rows, titles
   lowercased, "j/k move · o open", collect shows #7's "rss: 11 feeds".
-- **Preset select (amends D): shipped 2026-10-10.** Spec:
+- **Preset select (amends D): shipped 2026-10-12.** Spec:
   `docs/superpowers/specs/2026-10-10-preset-select-design.md`. Plan:
   `docs/superpowers/plans/2026-10-10-preset-select.md`. A `<details>`
   dropdown of plain links (`components/PresetSwitch.tsx`, list from
@@ -1023,9 +1023,8 @@ Next, in order:
    targets. It still needs its own brainstorm → spec → plan (see
    `docs/tony-scraponi-roadmap.md`). C is built on branch
    `worktree-stories`, unpushed; rebase it onto `main` before its rollout —
-   `main` gained the preset select (2026-10-10) after it branched (expect
-   conflicts in `PROGRESS.md`, `components/ControlRoom.tsx`,
-   `lib/control-room-text.ts`).
+   `main` gained the preset select (2026-10-12) after it branched (expect
+   a conflict in `PROGRESS.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages

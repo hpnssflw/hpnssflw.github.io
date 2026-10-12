@@ -87,15 +87,15 @@ initiatives — see `PROGRESS.md` for status of each.
   `agro-demo`) is the control room in Russian over the engine's test demos:
   `lib/demo-presets.ts` reads each demo's
   `agent/tests/fixtures/<slug>/golden/run1.json` and `run2.json` at build
-  time (`components/DemoRoom.tsx`, `components/DigestPanel.tsx`). It is
-  has no index page; the preset switch (`components/PresetSwitch.tsx`,
-  fed by `lib/demo-presets.ts`'s `presetLinks`) on `/researcher/queue/` and
-  on each demo page links Tony and both demos, and the demo pages are
-  indexable (unlisted until 2026-10-10). The
-  build parses those goldens with `parseRunResult`: an agent change that
-  re-records them into something it rejects fails the site deploy, and any
-  re-record changes the live demo at the next deploy (the 6-hourly rebuild
-  included). `lib/digest.ts` mirrors `agent/digest.py` and `agent/pending.py`'s
+  time (`components/DemoRoom.tsx`, `components/DigestPanel.tsx`). It has
+  no index page; the preset switch (`components/PresetSwitch.tsx`, fed by
+  `lib/demo-presets.ts`'s `presetLinks`) on `/researcher/queue/` and on
+  each demo page links Tony and both demos, and the demo pages are
+  indexable (unlisted until 2026-10-12). The build parses those goldens
+  with `parseRunResult`: an agent change that re-records them into
+  something it rejects fails the site deploy, and any re-record changes
+  the live demo at the next deploy (the 6-hourly rebuild included).
+  `lib/digest.ts` mirrors `agent/digest.py` and `agent/pending.py`'s
   `group_by_topic`, pinned by `lib/digest.test.ts` to the demos'
   `outbox.html` — change them together, like the run-result schema. The
   demo's item URLs are synthetic (`example-*.ru`, unregistered), so the demo

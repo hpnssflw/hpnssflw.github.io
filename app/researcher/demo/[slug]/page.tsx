@@ -12,7 +12,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   // Reached from the preset switch on /researcher/queue/ and on each demo
-  // page, and indexable (unlisted until 2026-10-10).
+  // page, and indexable (unlisted until 2026-10-12).
   const demo = loadDemo(slug);
   const { name, language } = demo.run1.preset;
   const description = TEXT[language].demo.description;

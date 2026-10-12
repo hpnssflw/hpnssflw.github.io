@@ -8,8 +8,9 @@ import type { PresetLink } from "@/lib/demo-presets";
  * The preset switch on the control room and the demo pages: a <details>
  * dropdown of plain links, so it works without JS and crawlers follow the
  * links. JS only closes it — on Escape (focus back on the summary), on a
- * press outside it, and on a link click (a client-side move between demo
- * pages keeps this component mounted).
+ * press outside it, when keyboard focus leaves it, and on a link click
+ * (picking the page you're on remounts nothing, so nothing else would
+ * close the list).
  */
 export default function PresetSwitch({
   presets,
@@ -46,7 +47,14 @@ export default function PresetSwitch({
 
   return (
     <nav className="cr-preset" aria-label={text.label}>
-      <details ref={ref} onToggle={(event) => setOpen(event.currentTarget.open)}>
+      <details
+        ref={ref}
+        onToggle={(event) => setOpen(event.currentTarget.open)}
+        onBlur={(event) => {
+          const next = event.relatedTarget as Node | null;
+          if (next && !event.currentTarget.contains(next)) event.currentTarget.open = false;
+        }}
+      >
         <summary>
           <span className="tony-name">{name}</span>
         </summary>

@@ -2413,8 +2413,8 @@ body:has(.cr) footer {
 
 /* --- Demo presets (/researcher/demo/<slug>/) -------------------------
    The control room's shell over an engine preset's two recorded runs:
-   .cr-demo-head takes the pulse's place (name and tag, run toggle,
-   preset switcher); the digest, styled like the Telegram message it is,
+   .cr-demo-head takes the pulse's place (two columns: the preset switch,
+   whose name is the page's title, with the tag, and the run toggle); the digest, styled like the Telegram message it is,
    sits above the config in the right pane. */
 .cr-demo-head {
   grid-template-columns: auto minmax(0, 1fr);
@@ -2434,6 +2434,7 @@ body:has(.cr) footer {
    plain links; the summary reads as the preset's name with a caret. */
 .cr-preset {
   position: relative;
+  align-self: flex-start;
 }
 
 .cr-preset summary {
@@ -2447,6 +2448,7 @@ body:has(.cr) footer {
 
 .cr-preset summary::after {
   content: "▾";
+  content: "▾" / "";
   margin-left: 6px;
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
@@ -2484,6 +2486,10 @@ body:has(.cr) footer {
   display: block;
   padding: 2px 12px;
   color: var(--muted);
+}
+
+.cr-preset a:focus-visible {
+  outline-offset: -1px;
 }
 
 .cr-preset a:hover,

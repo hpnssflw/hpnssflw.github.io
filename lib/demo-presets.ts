@@ -5,8 +5,10 @@ import { RUN_RESULT_SCHEMA, type RunResult, parseRunResult } from "./run-result"
 // The demo section's presets (/researcher/demo/<slug>/), read at build
 // time from their committed goldens — run1.json and run2.json, recorded by
 // agent/tests/test_presets_offline.py — so a re-recorded golden updates
-// the demo. A golden that doesn't parse fails the build. Server-only
-// (node:fs): DemoRoom imports the types alone.
+// the demo. A golden that doesn't parse fails the build. It also feeds
+// the preset switch on /researcher/queue/ (via presetLinks). Server-only
+// (node:fs): the client components (ControlRoom, ControlPulse, DemoRoom,
+// PresetSwitch) import its types alone.
 
 export const DEMO_SLUGS = ["newsroom-demo", "agro-demo"];
 
