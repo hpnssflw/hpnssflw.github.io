@@ -311,22 +311,11 @@
   "queue": {
     "by_topic": {
       "ai-engineering": 28,
-      "tooling": 22,
+      "tooling": 21,
       "web-products": 21
     },
-    "count": 71,
+    "count": 70,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T16:49:37.554117+00:00",
-        "score": 6,
-        "source": "github",
-        "summary": "A Windows utility that precompiles game shaders to reduce stutter, relevant as a tooling GitHub repo but not web-focused.",
-        "title": "BlueHeisenberg/SCSKiller",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/BlueHeisenberg/SCSKiller"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-05T18:22:24.720121+00:00",
@@ -1100,8 +1089,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-12T04:30:08.802068+00:00",
-    "id": "2026-10-12T0430Z",
+    "at": "2026-10-12T17:24:55.118839+00:00",
+    "id": "2026-10-12T1724Z",
     "mode": "real",
     "offline": false
   },
@@ -1112,18 +1101,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 88,
-          "out": 88
+          "in": 95,
+          "out": 95
         },
         "tooling": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 122,
+          "out": 122
         },
         "web-products": {
           "drops": {},
-          "in": 180,
-          "out": 180
+          "in": 184,
+          "out": 184
         }
       },
       "stage": "collect"
@@ -1133,20 +1122,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 88,
-          "out": 88
+          "in": 95,
+          "out": 95
         },
         "tooling": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 122,
+          "out": 122
         },
         "web-products": {
           "drops": {
             "outside_window": 136
           },
-          "in": 180,
-          "out": 44
+          "in": 184,
+          "out": 48
         }
       },
       "stage": "window"
@@ -1156,25 +1145,25 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "seen": 23
+            "seen": 24
           },
-          "in": 88,
-          "out": 65
+          "in": 95,
+          "out": 71
         },
         "tooling": {
           "drops": {
-            "dismissed": 4,
+            "dismissed": 3,
             "seen": 12
           },
-          "in": 114,
-          "out": 98
+          "in": 122,
+          "out": 107
         },
         "web-products": {
           "drops": {
             "seen": 17
           },
-          "in": 44,
-          "out": 27
+          "in": 48,
+          "out": 31
         }
       },
       "stage": "dedupe"
@@ -1184,24 +1173,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 52
+            "already_ranked": 48
           },
-          "in": 65,
-          "out": 13
+          "in": 71,
+          "out": 23
         },
         "tooling": {
           "drops": {
-            "already_ranked": 67
+            "already_ranked": 66
           },
-          "in": 98,
-          "out": 31
+          "in": 107,
+          "out": 41
         },
         "web-products": {
           "drops": {
-            "already_ranked": 14
+            "already_ranked": 13
           },
-          "in": 27,
-          "out": 13
+          "in": 31,
+          "out": 18
         }
       },
       "stage": "cache"
@@ -1211,18 +1200,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 13,
+          "out": 13
         },
         "tooling": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 15,
+          "out": 15
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 9,
+          "out": 9
         }
       },
       "stage": "enrich"
@@ -1232,22 +1221,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 8
           },
-          "in": 13,
-          "out": 11
+          "in": 23,
+          "out": 15
         },
         "tooling": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 12
           },
-          "in": 31,
-          "out": 27
+          "in": 41,
+          "out": 29
         },
         "web-products": {
-          "drops": {},
-          "in": 13,
-          "out": 13
+          "drops": {
+            "below_relevance": 4
+          },
+          "in": 18,
+          "out": 14
         }
       },
       "stage": "rank"
@@ -1257,24 +1248,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 11
+            "over_max_items": 15
           },
-          "in": 11,
+          "in": 15,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 27
+            "over_max_items": 29
           },
-          "in": 27,
+          "in": 29,
           "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 14
           },
-          "in": 13,
-          "out": 1
+          "in": 14,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1290,11 +1281,11 @@
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 22
+          "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 0,
           "out": 21
         }
       },
@@ -1310,15 +1301,15 @@
         },
         "tooling": {
           "drops": {
-            "expired": 2
+            "expired": 1
           },
-          "in": 24,
-          "out": 22
+          "in": 22,
+          "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 20,
-          "out": 20
+          "in": 21,
+          "out": 21
         }
       },
       "stage": "review"

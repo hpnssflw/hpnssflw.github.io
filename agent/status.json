@@ -4,26 +4,26 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 52,
-        "seen": 23
+        "already_ranked": 48,
+        "seen": 24
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 11
+        "below_relevance": 8,
+        "over_max_items": 15
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 67,
-        "dismissed": 4,
+        "already_ranked": 66,
+        "dismissed": 3,
         "seen": 12
       },
       "inbox": {
-        "expired": 2
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 27
+        "below_relevance": 12,
+        "over_max_items": 29
       }
     },
     "web-products": {
@@ -31,150 +31,146 @@
         "outside_window": 136
       },
       "dedupe": {
-        "already_ranked": 14,
+        "already_ranked": 13,
         "seen": 17
       },
       "rank": {
-        "over_max_items": 12
+        "below_relevance": 4,
+        "over_max_items": 14
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 88,
-      "in_window": 88,
+      "collected": 95,
+      "in_window": 95,
       "kept": 0,
-      "new": 13
+      "new": 23
     },
     "tooling": {
-      "collected": 114,
-      "in_window": 114,
+      "collected": 122,
+      "in_window": 122,
       "kept": 0,
-      "new": 31
+      "new": 41
     },
     "web-products": {
-      "collected": 180,
-      "in_window": 44,
-      "kept": 1,
-      "new": 13
+      "collected": 184,
+      "in_window": 48,
+      "kept": 0,
+      "new": 18
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 71,
+  "pending_count": 70,
   "recent_events": [
     {
-      "score": 7,
-      "source": "rss",
-      "title": "A Practical Guide To Naming Things",
-      "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638144+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
-      "title": "Extract color palettes from images",
+      "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638126+00:00",
+      "ts": "2026-10-12T17:25:50.867893+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638116+00:00",
+      "ts": "2026-10-12T17:25:50.867878+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638104+00:00",
+      "ts": "2026-10-12T17:25:50.867866+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638093+00:00",
+      "ts": "2026-10-12T17:25:50.867855+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
+      "topic": "web-products",
+      "ts": "2026-10-12T17:25:50.867843+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638082+00:00",
+      "ts": "2026-10-12T17:25:50.867832+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
+      "topic": "web-products",
+      "ts": "2026-10-12T17:25:50.867821+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638071+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Color gradients that are accessible and perceptually steady",
-      "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638060+00:00",
+      "ts": "2026-10-12T17:25:50.867809+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638048+00:00",
+      "ts": "2026-10-12T17:25:50.867797+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638037+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "AI Overviews Currently Appear for 83% of Branded Searches",
-      "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638025+00:00",
+      "ts": "2026-10-12T17:25:50.867785+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.638009+00:00",
+      "ts": "2026-10-12T17:25:50.867772+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.637979+00:00",
+      "ts": "2026-10-12T17:25:50.867757+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "already_ranked",
-      "title": "When data shows that everything causes cancer",
+      "reason": "over_max_items",
+      "title": "Dark Background Is the Future of Dashboards",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.637822+00:00",
+      "ts": "2026-10-12T17:25:50.867739+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "already_ranked",
-      "title": "caniname: CLI tool to check project name availability across Netlify and NPM (and other sources)",
+      "reason": "over_max_items",
+      "title": "Tips and Tricks for Using TanStack Start with Cloudflare Durable Objects",
       "topic": "web-products",
-      "ts": "2026-10-12T04:31:27.637811+00:00",
+      "ts": "2026-10-12T17:25:50.867685+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "zhuyansen/new-term-radar",
+      "topic": "web-products",
+      "ts": "2026-10-12T17:25:50.867525+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-06T10:10:42.237399+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-06T11:01:43.604757+00:00"
@@ -266,28 +262,32 @@
     {
       "kept": 1,
       "ts": "2026-10-12T04:30:08.802068+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-12T17:24:55.118839+00:00"
     }
   ],
-  "streak": 263,
+  "streak": 264,
   "topics": [
     {
-      "collected": 88,
+      "collected": 95,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 114,
+      "collected": 122,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 180,
-      "kept": 1,
+      "collected": 184,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-12T04:30:08.802068+00:00"
+  "updated_at": "2026-10-12T17:24:55.118839+00:00"
 }
