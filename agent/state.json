@@ -299,7 +299,7 @@
   "058a183131d2f1ac": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 82,
+    "last_score": 85,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -458,7 +458,7 @@
   "09304fa0e0751d6f": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 185,
+    "last_score": 202,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -582,7 +582,7 @@
   "0bd395eb4c1e1020": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 109,
+    "last_score": 114,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -718,7 +718,7 @@
   "0df6080a7e0590da": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 571,
+    "last_score": 573,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -755,7 +755,7 @@
   "0ed82d6d4259c6df": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 298,
+    "last_score": 299,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1030,6 +1030,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "158c2e949d741243": {
+    "dismissed": null,
+    "first_seen": "2026-10-12T04:30:08.802068+00:00",
+    "last_score": 51,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-12T04:30:08.802068+00:00",
+        "relevance": 5,
+        "rubric": "02189e2467e9",
+        "source_score": 51,
+        "summary": "A post titled 'Safe SIMD in Rust, even on the inside' on shnatsel.github.io."
+      }
+    },
+    "times_sent": 0
+  },
   "15b8fdbcdf7931b1": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -1222,7 +1238,7 @@
   "1929017f5df96ae4": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 2210,
+    "last_score": 2358,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1472,7 +1488,7 @@
   "204e3d90b8978211": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 49,
+    "last_score": 75,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1548,7 +1564,7 @@
   "233e30c6f22de11e": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 558,
+    "last_score": 662,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2662,7 +2678,7 @@
   "3b904b47899eb2a6": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 1217,
+    "last_score": 1288,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -2678,7 +2694,7 @@
   "3c0a025fc282b32b": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 124,
+    "last_score": 125,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4000,7 +4016,7 @@
   "59499c68644ca048": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 134,
+    "last_score": 185,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4126,7 +4142,7 @@
   "5c1db9239c15fa63": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 321,
+    "last_score": 323,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-10T19:47:33.070266+00:00",
@@ -5293,7 +5309,7 @@
   "749983b595aaf313": {
     "dismissed": null,
     "first_seen": "2026-10-06T01:07:53.906880+00:00",
-    "last_score": 296,
+    "last_score": 301,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5539,7 +5555,7 @@
   "7cd496121f201d47": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 88,
+    "last_score": 89,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5656,7 +5672,7 @@
   "7f2096f4faffa1e3": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 71,
+    "last_score": 52,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5931,7 +5947,7 @@
   "876449a0944e93d0": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 177,
+    "last_score": 179,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5940,6 +5956,22 @@
         "rubric": "02189e2467e9",
         "source_score": 91,
         "summary": "A Show HN about a collection of rare tech books and documentation, not a tool for building software."
+      }
+    },
+    "times_sent": 0
+  },
+  "87718895ca43a777": {
+    "dismissed": null,
+    "first_seen": "2026-10-12T04:30:08.802068+00:00",
+    "last_score": 35,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-12T04:30:08.802068+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 35,
+        "summary": "Doory is described as an open-source Canva."
       }
     },
     "times_sent": 0
@@ -6117,7 +6149,7 @@
   "8cba259cd103107b": {
     "dismissed": null,
     "first_seen": "2026-10-10T19:47:33.070266+00:00",
-    "last_score": 96,
+    "last_score": 98,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-10T19:47:33.070266+00:00",
@@ -6223,7 +6255,7 @@
   "8e962244c758a79d": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 65,
+    "last_score": 56,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6293,7 +6325,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-12T04:30:08.802068+00:00",
         "ranked_at": "2026-10-07T04:58:06.518389+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -6369,7 +6401,7 @@
   "9356b6751b5ecf7a": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 126,
+    "last_score": 129,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -6429,7 +6461,7 @@
   "9486f90774f31476": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 52,
+    "last_score": 55,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6694,7 +6726,7 @@
   "9912b86ad7452f24": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 80,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6973,7 +7005,7 @@
   "9fc4f9782508f693": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 171,
+    "last_score": 173,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7095,6 +7127,22 @@
     "first_seen": "2026-08-20T00:33:12.176224+00:00",
     "last_score": 72,
     "ranks": {},
+    "times_sent": 0
+  },
+  "a3f0b7b889931007": {
+    "dismissed": null,
+    "first_seen": "2026-10-12T04:30:08.802068+00:00",
+    "last_score": 56,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-12T04:30:08.802068+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 56,
+        "summary": "HashiCorp has archived the Boundary open source repository."
+      }
+    },
     "times_sent": 0
   },
   "a3f87b429b1324d9": {
@@ -7652,7 +7700,7 @@
   "af0dc0f74bb4c40a": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 259,
+    "last_score": 264,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7797,7 +7845,7 @@
     "times_sent": 0
   },
   "b0ff7ff167326d54": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-05T04:14:19.891077+00:00",
     "last_score": 3772,
     "ranks": {},
@@ -8222,8 +8270,16 @@
   "ba37f20c750ee7b3": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 96,
+    "last_score": 104,
     "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-12T04:30:08.802068+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 104,
+        "summary": "A GitHub project called claude-show-your-work that lets Claude Code display images and play videos in the terminal, including screenshots, Playwright recordings, and before/after QA."
+      },
       "tooling": {
         "queued_at": null,
         "ranked_at": "2026-10-11T19:55:42.477843+00:00",
@@ -8404,7 +8460,7 @@
   "be1ae401637add81": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 94,
+    "last_score": 97,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -8450,7 +8506,7 @@
   "bf2149b8045ec7a8": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 625,
+    "last_score": 630,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8474,7 +8530,7 @@
   "bf79879b30894193": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 269,
+    "last_score": 271,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8689,7 +8745,7 @@
   "c44fc8610ac4f076": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 183,
+    "last_score": 198,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8735,7 +8791,7 @@
   "c4e129e4700158d0": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 251,
+    "last_score": 253,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -8882,6 +8938,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "c85cea0bf043bcab": {
+    "dismissed": null,
+    "first_seen": "2026-10-12T04:30:08.802068+00:00",
+    "last_score": 90,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-12T04:30:08.802068+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 90,
+        "summary": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust."
+      }
+    },
+    "times_sent": 0
+  },
   "c88b44953d34f898": {
     "dismissed": null,
     "first_seen": "2026-09-26T02:20:44.097646+00:00",
@@ -9003,7 +9075,7 @@
     "times_sent": 0
   },
   "cbceafd8fc0a50ae": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-04T04:28:57.570485+00:00",
     "last_score": 717,
     "ranks": {},
@@ -9185,7 +9257,7 @@
   "ceabd70d7baac0d1": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 102,
+    "last_score": 147,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9319,7 +9391,7 @@
   "d14f602f29cd34fc": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 58,
+    "last_score": 63,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9335,15 +9407,15 @@
   "d16bd93ff857d83d": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 153,
+    "last_score": 324,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-11T23:28:01.330478+00:00",
-        "relevance": 3,
+        "ranked_at": "2026-10-12T04:30:08.802068+00:00",
+        "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 153,
-        "summary": "A Hacker News link titled 'The gap in shared understanding of LLM capability is widening.'"
+        "source_score": 324,
+        "summary": "A Hacker News discussion titled 'The gap in shared understanding of LLM capability is widening,' with no clear engineering substance from the title alone."
       }
     },
     "times_sent": 0
@@ -9367,7 +9439,7 @@
   "d1edfb1393e6c151": {
     "dismissed": null,
     "first_seen": "2026-10-06T17:58:27.899830+00:00",
-    "last_score": 114,
+    "last_score": 120,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9406,7 +9478,7 @@
   "d2fc0d722b1f4562": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 242,
+    "last_score": 245,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9521,7 +9593,7 @@
   "d608eb71f802f71b": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 88,
+    "last_score": 89,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9705,7 +9777,7 @@
   "d8d38d395f9eac94": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 242,
+    "last_score": 243,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -9795,7 +9867,7 @@
   "dab27c54d8c92fb4": {
     "dismissed": null,
     "first_seen": "2026-10-03T22:41:56.516034+00:00",
-    "last_score": 710,
+    "last_score": 711,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -9864,7 +9936,7 @@
   "dbd1dfa7a53e80a5": {
     "dismissed": null,
     "first_seen": "2026-10-10T23:15:33.901214+00:00",
-    "last_score": 128,
+    "last_score": 131,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10249,7 +10321,7 @@
   "e2711c9ce5a221c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 160,
+    "last_score": 164,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10339,7 +10411,7 @@
   "e6753b8422696224": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 139,
+    "last_score": 176,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10545,7 +10617,7 @@
   "eb7b4293d4abd6bf": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 1119,
+    "last_score": 1122,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -11020,7 +11092,7 @@
   "f7c0d10c27cf67ab": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 70,
+    "last_score": 71,
     "ranks": {
       "tooling": {
         "queued_at": null,

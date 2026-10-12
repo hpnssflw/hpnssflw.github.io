@@ -4,23 +4,26 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 54,
-        "dismissed": 1,
-        "seen": 29
+        "already_ranked": 52,
+        "seen": 23
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 12
+        "below_relevance": 2,
+        "over_max_items": 11
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 71,
-        "dismissed": 6,
-        "seen": 15
+        "already_ranked": 67,
+        "dismissed": 4,
+        "seen": 12
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
-        "over_max_items": 31
+        "below_relevance": 4,
+        "over_max_items": 27
       }
     },
     "web-products": {
@@ -29,148 +32,145 @@
       },
       "dedupe": {
         "already_ranked": 14,
-        "seen": 18
+        "seen": 17
       },
       "rank": {
-        "over_max_items": 13
+        "over_max_items": 12
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 99,
-      "in_window": 99,
+      "collected": 88,
+      "in_window": 88,
       "kept": 0,
-      "new": 15
+      "new": 13
     },
     "tooling": {
-      "collected": 123,
-      "in_window": 123,
+      "collected": 114,
+      "in_window": 114,
       "kept": 0,
       "new": 31
     },
     "web-products": {
-      "collected": 181,
-      "in_window": 45,
-      "kept": 0,
+      "collected": 180,
+      "in_window": 44,
+      "kept": 1,
       "new": 13
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 72,
+  "pending_count": 71,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "A Practical Guide To Naming Things",
+      "topic": "web-products",
+      "ts": "2026-10-12T04:31:27.638144+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Extract color palettes from images",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265844+00:00",
+      "ts": "2026-10-12T04:31:27.638126+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265833+00:00",
+      "ts": "2026-10-12T04:31:27.638116+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265821+00:00",
+      "ts": "2026-10-12T04:31:27.638104+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265809+00:00",
+      "ts": "2026-10-12T04:31:27.638093+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265794+00:00",
+      "ts": "2026-10-12T04:31:27.638082+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265782+00:00",
+      "ts": "2026-10-12T04:31:27.638071+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Color gradients that are accessible and perceptually steady",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265771+00:00",
+      "ts": "2026-10-12T04:31:27.638060+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265759+00:00",
+      "ts": "2026-10-12T04:31:27.638048+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265748+00:00",
+      "ts": "2026-10-12T04:31:27.638037+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Overviews Currently Appear for 83% of Branded Searches",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265736+00:00",
+      "ts": "2026-10-12T04:31:27.638025+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265723+00:00",
+      "ts": "2026-10-12T04:31:27.638009+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265708+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "A Practical Guide To Naming Things",
-      "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265685+00:00",
+      "ts": "2026-10-12T04:31:27.637979+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "When data shows that everything causes cancer",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265532+00:00",
+      "ts": "2026-10-12T04:31:27.637822+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "caniname: CLI tool to check project name availability across Netlify and NPM (and other sources)",
       "topic": "web-products",
-      "ts": "2026-10-11T23:28:39.265520+00:00",
+      "ts": "2026-10-12T04:31:27.637811+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-06T09:35:27.068303+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-06T10:10:42.237399+00:00"
@@ -262,28 +262,32 @@
     {
       "kept": 0,
       "ts": "2026-10-11T23:28:01.330478+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-12T04:30:08.802068+00:00"
     }
   ],
-  "streak": 262,
+  "streak": 263,
   "topics": [
     {
-      "collected": 99,
+      "collected": 88,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 123,
+      "collected": 114,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 181,
-      "kept": 0,
+      "collected": 180,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-11T23:28:01.330478+00:00"
+  "updated_at": "2026-10-12T04:30:08.802068+00:00"
 }

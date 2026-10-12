@@ -1,26 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-05T04:14:19.891077+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "A one-command, reversible CLI tool to disable Apple Intelligence on macOS and reclaim disk space, a clear developer utility.",
-      "title": "omlahore/RemoveMacAI",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/omlahore/RemoveMacAI"
-    },
-    {
-      "pending_since": "2026-10-05T04:14:19.891077+00:00",
-      "score": 6,
-      "source": "github",
-      "summary": "An official PyTorch implementation of a visual backbone research project, relevant as an ML framework/dev artifact.",
-      "title": "PSRben/VisionHOPE",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/PSRben/VisionHOPE"
-    },
-    {
       "pending_since": "2026-10-05T16:49:37.554117+00:00",
       "score": 6,
       "source": "github",
@@ -719,6 +699,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://blog.master.dev/testing-an-iframes-postmessage-handler/"
+    },
+    {
+      "pending_since": "2026-10-12T04:30:08.802068+00:00",
+      "score": 7,
+      "source": "rss",
+      "summary": "A practical guide to choosing names for design tokens, HTML classes, and variables, covering how language shapes thinking and common naming pitfalls.",
+      "title": "A Practical Guide To Naming Things",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://smashingmagazine.com/2026/10/how-name-things/"
     }
   ],
   "last_email_at": "2026-09-30T04:08:45.319706+00:00"
