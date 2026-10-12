@@ -11,15 +11,14 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  // Unlisted: Artem sends the link to prospective clients; nothing links
-  // here and search engines are asked to stay out.
+  // Reached from the preset switch on /researcher/queue/ and on each demo
+  // page, and indexable (unlisted until 2026-10-10).
   const demo = loadDemo(slug);
   const { name, language } = demo.run1.preset;
   const description = TEXT[language].demo.description;
   return {
     title: name,
     description,
-    robots: { index: false, follow: false },
     openGraph: { title: name, description, type: "website", locale: language === "ru" ? "ru_RU" : "en_US" },
   };
 }

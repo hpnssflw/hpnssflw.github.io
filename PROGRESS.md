@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then C (Telegram approval buttons, several delivery targets).**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then C (Telegram approval buttons, several delivery targets); the preset select on the control room shipped 2026-10-10.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -837,6 +837,14 @@ infrastructure.
   approvals, run 2 deliver "05.10 · отправлено: 3 · сообщений: 1", no
   horizontal scroll. `/researcher/queue/` unchanged: 68 rows, titles
   lowercased, "j/k move · o open", collect shows #7's "rss: 11 feeds".
+- **Preset select (amends D): shipped 2026-10-10.** Spec:
+  `docs/superpowers/specs/2026-10-10-preset-select-design.md`. Plan:
+  `docs/superpowers/plans/2026-10-10-preset-select.md`. A `<details>`
+  dropdown of plain links (`components/PresetSwitch.tsx`, list from
+  `lib/demo-presets.ts`'s `presetLinks`: Tony, then both demos) in the
+  header of `/researcher/queue/` and of both demo pages; JS only closes it
+  (Escape, a press outside, a link click). The demo pages lost
+  `noindex, nofollow` and are no longer unlisted.
 - **#7, Web Products RSS: shipped and live 2026-10-07.** Eleven feeds
   under `web-products` → `sources` → `rss` in `agent/presets/tony.yaml`
   (`aacac4d`), picked from a live `--preview` over 21 candidates (feeds
@@ -1013,7 +1021,11 @@ Next, in order:
    regression.
 2. **Sub-project C** — Telegram approval buttons and several delivery
    targets. It still needs its own brainstorm → spec → plan (see
-   `docs/tony-scraponi-roadmap.md`).
+   `docs/tony-scraponi-roadmap.md`). C is built on branch
+   `worktree-stories`, unpushed; rebase it onto `main` before its rollout —
+   `main` gained the preset select (2026-10-10) after it branched (expect
+   conflicts in `PROGRESS.md`, `components/ControlRoom.tsx`,
+   `lib/control-room-text.ts`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
 `CLAUDE.md` was rewritten for the Next.js move (build step, Pages

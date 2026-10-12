@@ -83,12 +83,15 @@ initiatives — see `PROGRESS.md` for status of each.
   the agent's golden `real/status.json` with `parseAgentStatus`
   (`lib/agent-status.test.ts`), so a drift fails there — once the
   golden is re-recorded.
-- **The unlisted demo section `/researcher/demo/<slug>/`** (`newsroom-demo`,
+- **The demo section `/researcher/demo/<slug>/`** (`newsroom-demo`,
   `agro-demo`) is the control room in Russian over the engine's test demos:
   `lib/demo-presets.ts` reads each demo's
   `agent/tests/fixtures/<slug>/golden/run1.json` and `run2.json` at build
   time (`components/DemoRoom.tsx`, `components/DigestPanel.tsx`). It is
-  `noindex, nofollow`, has no index page, and nothing links to it. The
+  has no index page; the preset switch (`components/PresetSwitch.tsx`,
+  fed by `lib/demo-presets.ts`'s `presetLinks`) on `/researcher/queue/` and
+  on each demo page links Tony and both demos, and the demo pages are
+  indexable (unlisted until 2026-10-10). The
   build parses those goldens with `parseRunResult`: an agent change that
   re-records them into something it rejects fails the site deploy, and any
   re-record changes the live demo at the next deploy (the 6-hourly rebuild
