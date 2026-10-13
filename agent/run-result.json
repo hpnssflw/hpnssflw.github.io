@@ -312,120 +312,10 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 21
+      "web-products": 20
     },
-    "count": 70,
+    "count": 69,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "Google's blog announces Gemini 4 Argon, a major model release from a major platform.",
-        "title": "Gemini 4 Argon",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "OpenAI announces GPT 6.1 Sol, described as near-Astra intelligence at a fifth of the price, a major model release that changes what builders can use.",
-        "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "DeepSeek releases a desktop harness for macOS and Windows, an agent harness for running LLM systems locally.",
-        "title": "DeepSeek Harness Desktop for macOS and Windows",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://www.deepseek.com/en/harness/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "A post from the creator of Redis about running an LLM locally with ds4.",
-        "title": "From the creator of Redis; run LLM locally with ds4",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://dwarfstar.sh/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "A fast, native, keyboard-driven database client for macOS supporting 20 databases, with an AI assistant that shows its work.",
-        "title": "alpcanaydin/tusk",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/alpcanaydin/tusk"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "A guide to getting the most out of Opus 5.5 in Claude and Claude Code.",
-        "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "A coding agent that operates on a live Excalidraw canvas.",
-        "title": "Drawgent: Coding agent on a live Excalidraw canvas",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://tangled.org/yanndegat.tngl.sh/drawgent"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "A GitHub blog post on improving site performance by shipping more CSS.",
-        "title": "Improving site performance by shipping more CSS",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A collection of classless CSS themes meant as starting points for web development.",
-        "title": "CSS Bed: Classless CSS themes to use as starting points in web development",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://www.cssbed.com"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-05T18:22:24.720121+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A project generating a browser engine from specifications and tests.",
-        "title": "Bez: Generating a browser engine from specs and tests",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://tangled.org/burrito.space/bez"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-06T17:58:27.899830+00:00",
@@ -1085,12 +975,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://smashingmagazine.com/2026/10/how-name-things/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "A GitHub project, Janas, that runs LLMs larger than RAM by streaming experts from SSD.",
+        "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/prabanta-dev/janas"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A Launch HN post for Agent37, low-cost sandboxes for running AI agents at under 10% of most sandbox providers' cost.",
+        "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://news.ycombinator.com/item?id=50059096"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "A project that lets an AI model drive a real iPhone via a $7 ESP32 using AirPlay for vision and USB HID for input, with any OpenAI-compatible vision model.",
+        "title": "onehumanbeing/esp32-iphone-agent",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/onehumanbeing/esp32-iphone-agent"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "A GitHub project description for Mortiflix OSS, a motion design studio where Claude makes video step by step and you approve each stage, with topics ai-agents, claude, claude-code, harness.",
+        "title": "GTKottman/mortiflix-oss",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/GTKottman/mortiflix-oss"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "A report that the Codex CLI installs a persistent, self-updating background daemon by default.",
+        "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/openai/codex/issues/48195"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "claude-show-your-work is a Claude Code mod that shows images and plays videos in Ghostty or kitty terminals, including screenshots and Playwright recordings.",
+        "title": "iamumeransari/claude-show-your-work",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/iamumeransari/claude-show-your-work"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "APSW is another Python SQLite wrapper, a database library for building software.",
+        "title": "apsw: Another Python SQLite Wrapper",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/rogerbinns/apsw"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "Blog post with tips and tricks for using TanStack Start together with Cloudflare Durable Objects, covering middleware and tagged WebSocket connections.",
+        "title": "Tips and Tricks for Using TanStack Start with Cloudflare Durable Objects",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/tips-and-tricks-for-using-tanstack-start-with-cloudflare-durable-objects/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T01:49:57.202770+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Nightingale article arguing over whether dark-mode dashboards should become the standard, weighing the debate around white versus dark backgrounds for data visualization.",
+        "title": "Dark Background Is the Future of Dashboards",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://nightingaledvs.com/dark-background-is-the-future-of-dashboards/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-12T17:24:55.118839+00:00",
-    "id": "2026-10-12T1724Z",
+    "at": "2026-10-13T01:49:57.202770+00:00",
+    "id": "2026-10-13T0149Z",
     "mode": "real",
     "offline": false
   },
@@ -1101,8 +1090,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 95,
-          "out": 95
+          "in": 91,
+          "out": 91
         },
         "tooling": {
           "drops": {},
@@ -1122,8 +1111,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 95,
-          "out": 95
+          "in": 91,
+          "out": 91
         },
         "tooling": {
           "drops": {},
@@ -1145,18 +1134,19 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "seen": 24
+            "dismissed": 1,
+            "seen": 20
           },
-          "in": 95,
-          "out": 71
+          "in": 91,
+          "out": 70
         },
         "tooling": {
           "drops": {
             "dismissed": 3,
-            "seen": 12
+            "seen": 10
           },
           "in": 122,
-          "out": 107
+          "out": 109
         },
         "web-products": {
           "drops": {
@@ -1173,24 +1163,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 48
+            "already_ranked": 51
           },
-          "in": 71,
-          "out": 23
+          "in": 70,
+          "out": 19
         },
         "tooling": {
           "drops": {
-            "already_ranked": 66
+            "already_ranked": 76
           },
-          "in": 107,
-          "out": 41
+          "in": 109,
+          "out": 33
         },
         "web-products": {
           "drops": {
-            "already_ranked": 13
+            "already_ranked": 16
           },
           "in": 31,
-          "out": 18
+          "out": 15
         }
       },
       "stage": "cache"
@@ -1200,18 +1190,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 13,
-          "out": 13
+          "in": 8,
+          "out": 8
         },
         "tooling": {
           "drops": {},
-          "in": 15,
-          "out": 15
+          "in": 5,
+          "out": 5
         },
         "web-products": {
           "drops": {},
-          "in": 9,
-          "out": 9
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1221,24 +1211,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 8
+            "below_relevance": 5
           },
-          "in": 23,
-          "out": 15
+          "in": 19,
+          "out": 14
         },
         "tooling": {
           "drops": {
-            "below_relevance": 12
+            "below_relevance": 2
           },
-          "in": 41,
-          "out": 29
+          "in": 33,
+          "out": 31
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 4
-          },
-          "in": 18,
-          "out": 14
+          "drops": {},
+          "in": 15,
+          "out": 15
         }
       },
       "stage": "rank"
@@ -1248,24 +1236,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 15
+            "over_max_items": 10
           },
-          "in": 15,
-          "out": 0
+          "in": 14,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 29
+            "over_max_items": 28
           },
-          "in": 29,
-          "out": 0
+          "in": 31,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 14
+            "over_max_items": 13
           },
-          "in": 14,
-          "out": 0
+          "in": 15,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1275,18 +1263,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
+          "in": 4,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
+          "in": 3,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 21
+          "in": 2,
+          "out": 20
         }
       },
       "stage": "queue"
@@ -1295,21 +1283,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "out": 24
         },
         "tooling": {
           "drops": {
-            "expired": 1
+            "expired": 3
           },
-          "in": 22,
-          "out": 21
+          "in": 21,
+          "out": 18
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 21,
-          "out": 21
+          "out": 18
         }
       },
       "stage": "review"
