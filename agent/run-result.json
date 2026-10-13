@@ -312,9 +312,9 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 20
+      "web-products": 21
     },
-    "count": 69,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -1074,12 +1074,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://nightingaledvs.com/dark-background-is-the-future-of-dashboards/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-13T11:26:09.907272+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "Introduces css-typed-om, a WPT-tested polyfill for the CSS Typed OM, with a code example of reading and manipulating styles in JavaScript via the API.",
+        "title": "Introducing css-typed-om, a complete and WPT-tested polyfill for CSS Typed OM",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://www.bram.us/2026/10/13/introducing-css-typed-om-a-complete-and-wpt-tested-polyfill-for-css-typed-om/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-13T01:49:57.202770+00:00",
-    "id": "2026-10-13T0149Z",
+    "at": "2026-10-13T11:26:09.907272+00:00",
+    "id": "2026-10-13T1126Z",
     "mode": "real",
     "offline": false
   },
@@ -1090,13 +1101,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 91,
-          "out": 91
+          "in": 95,
+          "out": 95
         },
         "tooling": {
           "drops": {},
-          "in": 122,
-          "out": 122
+          "in": 127,
+          "out": 127
         },
         "web-products": {
           "drops": {},
@@ -1111,20 +1122,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 91,
-          "out": 91
+          "in": 95,
+          "out": 95
         },
         "tooling": {
           "drops": {},
-          "in": 122,
-          "out": 122
+          "in": 127,
+          "out": 127
         },
         "web-products": {
           "drops": {
-            "outside_window": 136
+            "outside_window": 134
           },
           "in": 184,
-          "out": 48
+          "out": 50
         }
       },
       "stage": "window"
@@ -1135,25 +1146,25 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 1,
-            "seen": 20
+            "seen": 23
           },
-          "in": 91,
-          "out": 70
+          "in": 95,
+          "out": 71
         },
         "tooling": {
           "drops": {
-            "dismissed": 3,
-            "seen": 10
+            "dismissed": 2,
+            "seen": 11
           },
-          "in": 122,
-          "out": 109
+          "in": 127,
+          "out": 114
         },
         "web-products": {
           "drops": {
-            "seen": 17
+            "seen": 18
           },
-          "in": 48,
-          "out": 31
+          "in": 50,
+          "out": 32
         }
       },
       "stage": "dedupe"
@@ -1163,24 +1174,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 51
+            "already_ranked": 54
           },
-          "in": 70,
-          "out": 19
+          "in": 71,
+          "out": 17
         },
         "tooling": {
           "drops": {
-            "already_ranked": 76
+            "already_ranked": 78
           },
-          "in": 109,
-          "out": 33
+          "in": 114,
+          "out": 36
         },
         "web-products": {
           "drops": {
-            "already_ranked": 16
+            "already_ranked": 15
           },
-          "in": 31,
-          "out": 15
+          "in": 32,
+          "out": 17
         }
       },
       "stage": "cache"
@@ -1190,18 +1201,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 10,
+          "out": 10
         },
         "tooling": {
           "drops": {},
-          "in": 5,
-          "out": 5
+          "in": 8,
+          "out": 8
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 5,
+          "out": 5
         }
       },
       "stage": "enrich"
@@ -1211,22 +1222,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 5
+            "below_relevance": 9
           },
-          "in": 19,
-          "out": 14
+          "in": 17,
+          "out": 8
         },
         "tooling": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 6
           },
-          "in": 33,
-          "out": 31
+          "in": 36,
+          "out": 30
         },
         "web-products": {
-          "drops": {},
-          "in": 15,
-          "out": 15
+          "drops": {
+            "below_relevance": 3
+          },
+          "in": 17,
+          "out": 14
         }
       },
       "stage": "rank"
@@ -1236,24 +1249,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 8
           },
-          "in": 14,
-          "out": 4
+          "in": 8,
+          "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 28
+            "over_max_items": 30
           },
-          "in": 31,
-          "out": 3
+          "in": 30,
+          "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 13
           },
-          "in": 15,
-          "out": 2
+          "in": 14,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1263,18 +1276,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
+          "in": 0,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 3,
+          "in": 0,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 20
+          "in": 1,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1283,25 +1296,19 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "expired": 4
-          },
+          "drops": {},
           "in": 28,
-          "out": 24
+          "out": 28
         },
         "tooling": {
-          "drops": {
-            "expired": 3
-          },
+          "drops": {},
           "in": 21,
-          "out": 18
+          "out": 21
         },
         "web-products": {
-          "drops": {
-            "expired": 3
-          },
-          "in": 21,
-          "out": 18
+          "drops": {},
+          "in": 20,
+          "out": 20
         }
       },
       "stage": "review"

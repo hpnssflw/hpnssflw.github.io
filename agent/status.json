@@ -4,44 +4,36 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 51,
+        "already_ranked": 54,
         "dismissed": 1,
-        "seen": 20
-      },
-      "inbox": {
-        "expired": 4
+        "seen": 23
       },
       "rank": {
-        "below_relevance": 5,
-        "over_max_items": 10
+        "below_relevance": 9,
+        "over_max_items": 8
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 76,
-        "dismissed": 3,
-        "seen": 10
-      },
-      "inbox": {
-        "expired": 3
+        "already_ranked": 78,
+        "dismissed": 2,
+        "seen": 11
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 28
+        "below_relevance": 6,
+        "over_max_items": 30
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 136
+        "outside_window": 134
       },
       "dedupe": {
-        "already_ranked": 16,
-        "seen": 17
-      },
-      "inbox": {
-        "expired": 3
+        "already_ranked": 15,
+        "seen": 18
       },
       "rank": {
+        "below_relevance": 3,
         "over_max_items": 13
       }
     }
@@ -49,140 +41,135 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 91,
-      "in_window": 91,
-      "kept": 4,
-      "new": 19
+      "collected": 95,
+      "in_window": 95,
+      "kept": 0,
+      "new": 17
     },
     "tooling": {
-      "collected": 122,
-      "in_window": 122,
-      "kept": 3,
-      "new": 33
+      "collected": 127,
+      "in_window": 127,
+      "kept": 0,
+      "new": 36
     },
     "web-products": {
       "collected": 184,
-      "in_window": 48,
-      "kept": 2,
-      "new": 15
+      "in_window": 50,
+      "kept": 1,
+      "new": 17
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 69,
+  "pending_count": 70,
   "recent_events": [
-    {
-      "score": 8,
-      "source": "rss",
-      "title": "Dark Background Is the Future of Dashboards",
-      "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179964+00:00",
-      "verdict": "kept"
-    },
     {
       "score": 9,
       "source": "rss",
-      "title": "Tips and Tricks for Using TanStack Start with Cloudflare Durable Objects",
+      "title": "Introducing css-typed-om, a complete and WPT-tested polyfill for CSS Typed OM",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179954+00:00",
+      "ts": "2026-10-13T11:27:18.227016+00:00",
       "verdict": "kept"
     },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179940+00:00",
+      "ts": "2026-10-13T11:27:18.227005+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179918+00:00",
+      "ts": "2026-10-13T11:27:18.226999+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179909+00:00",
+      "ts": "2026-10-13T11:27:18.226993+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179900+00:00",
+      "ts": "2026-10-13T11:27:18.226987+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179890+00:00",
+      "ts": "2026-10-13T11:27:18.226982+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179881+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Making big downloads resumable in Firefox",
-      "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179872+00:00",
+      "ts": "2026-10-13T11:27:18.226976+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179863+00:00",
+      "ts": "2026-10-13T11:27:18.226966+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179854+00:00",
+      "ts": "2026-10-13T11:27:18.226960+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179845+00:00",
+      "ts": "2026-10-13T11:27:18.226954+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179834+00:00",
+      "ts": "2026-10-13T11:27:18.226948+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179820+00:00",
+      "ts": "2026-10-13T11:27:18.226942+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-13T01:50:48.179767+00:00",
+      "ts": "2026-10-13T11:27:18.226935+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Making big downloads resumable in Firefox",
+      "topic": "web-products",
+      "ts": "2026-10-13T11:27:18.226927+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Learning is the thing",
+      "topic": "web-products",
+      "ts": "2026-10-13T11:27:18.226805+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-06T17:58:27.899830+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-06T23:34:58.463501+00:00"
@@ -274,28 +261,32 @@
     {
       "kept": 9,
       "ts": "2026-10-13T01:49:57.202770+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-13T11:26:09.907272+00:00"
     }
   ],
-  "streak": 265,
+  "streak": 266,
   "topics": [
     {
-      "collected": 91,
-      "kept": 4,
+      "collected": 95,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 122,
-      "kept": 3,
+      "collected": 127,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 184,
-      "kept": 2,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-13T01:49:57.202770+00:00"
+  "updated_at": "2026-10-13T11:26:09.907272+00:00"
 }
