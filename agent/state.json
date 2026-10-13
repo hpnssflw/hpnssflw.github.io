@@ -238,7 +238,7 @@
   "04a096ef95eb18a0": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 294,
+    "last_score": 304,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -474,7 +474,7 @@
   "09304fa0e0751d6f": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 276,
+    "last_score": 277,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -734,7 +734,7 @@
   "0df6080a7e0590da": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
-    "last_score": 607,
+    "last_score": 608,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -757,7 +757,7 @@
   "0e4eb789d3b30633": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 174,
+    "last_score": 176,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1001,7 +1001,7 @@
   "13a86554d2a39789": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 355,
+    "last_score": 359,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1105,7 +1105,7 @@
   "158c2e949d741243": {
     "dismissed": null,
     "first_seen": "2026-10-12T04:30:08.802068+00:00",
-    "last_score": 67,
+    "last_score": 68,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1310,7 +1310,7 @@
   "1929017f5df96ae4": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 3137,
+    "last_score": 3356,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1416,7 +1416,7 @@
   "1c6440c4fed57598": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 217,
+    "last_score": 218,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1562,7 +1562,7 @@
   "1fb6d0f3133c1f72": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 64,
+    "last_score": 65,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1645,7 +1645,7 @@
   "21acd00187a91087": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 100,
+    "last_score": 101,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1663,6 +1663,30 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "22dbce1dd938b87d": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 30,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 30,
+        "summary": "Parsimony is an open-source benchmark that measures how much excess code AI models add in their patches, rather than just solve rate and token cost."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 30,
+        "summary": "Parsimony is an open-source benchmark for how much code AI models add, based on patches from benchmarks."
+      }
+    },
     "times_sent": 0
   },
   "230850d05f205b60": {
@@ -1684,7 +1708,7 @@
   "233e30c6f22de11e": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 124,
+    "last_score": 133,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1899,7 +1923,7 @@
   "28e8a5a06ef91d24": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
-    "last_score": 150,
+    "last_score": 152,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2042,7 +2066,7 @@
   "2ca3d7a8b94cb0f0": {
     "dismissed": null,
     "first_seen": "2026-10-10T19:47:33.070266+00:00",
-    "last_score": 141,
+    "last_score": 142,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2212,7 +2236,7 @@
   "2fd328a478e282d9": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 64,
+    "last_score": 68,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2394,7 +2418,7 @@
   "327c0f18d34614c8": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 56,
+    "last_score": 57,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2426,7 +2450,7 @@
   "32881506b2adec69": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 93,
+    "last_score": 95,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2644,6 +2668,22 @@
         "rubric": "02189e2467e9",
         "source_score": 225,
         "summary": "Cloudflare says it wants you to build the next Git platform on Cloudflare."
+      }
+    },
+    "times_sent": 0
+  },
+  "37bcad0fc0d2acd5": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 32,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 32,
+        "summary": "The Dutch tax authorities cancel a Microsoft 365 cloud rollout and turn to open source."
       }
     },
     "times_sent": 0
@@ -2966,6 +3006,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "3df01ac57b7b137e": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 104,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 104,
+        "summary": "durable-pi is a playground and agent network for building persistent, multi-device durable agents with web and terminal clients."
+      }
+    },
+    "times_sent": 0
+  },
   "3e1fccb6ce25ce74": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
@@ -3066,7 +3122,7 @@
   "3efc405f549c7ca1": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 51,
+    "last_score": 59,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3300,7 +3356,7 @@
   "458c04cd04ca960b": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 94,
+    "last_score": 96,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3398,7 +3454,7 @@
   "46d4d209813615e2": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 1446,
+    "last_score": 1496,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -3844,7 +3900,7 @@
   "4ffceb7fd2dc562e": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 41,
+    "last_score": 42,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4017,7 +4073,7 @@
   "5394c51ed710a783": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 71,
+    "last_score": 74,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4298,7 +4354,7 @@
   "587281d93e4949fe": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 82,
+    "last_score": 83,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4352,7 +4408,7 @@
   "59499c68644ca048": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 214,
+    "last_score": 216,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4494,7 +4550,7 @@
   "5c1db9239c15fa63": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 328,
+    "last_score": 329,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-10T19:47:33.070266+00:00",
@@ -4639,6 +4695,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 41,
         "summary": "Aweb is described as communication for AI agents."
+      }
+    },
+    "times_sent": 0
+  },
+  "5f7af9b18c9e7060": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 66,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 66,
+        "summary": "A Show HN post titled 'How Random Are You?' with no further description of what it is."
       }
     },
     "times_sent": 0
@@ -4971,7 +5043,7 @@
   "6585583632f8eed4": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 235,
+    "last_score": 233,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5270,7 +5342,7 @@
   "6bc12f2b5da91214": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 144,
+    "last_score": 146,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5543,7 +5615,7 @@
   "702c3f24c909e329": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 113,
+    "last_score": 114,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5613,7 +5685,7 @@
   "72035a6bd1e24a1a": {
     "dismissed": null,
     "first_seen": "2026-10-10T23:15:33.901214+00:00",
-    "last_score": 239,
+    "last_score": 240,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5778,6 +5850,22 @@
     },
     "times_sent": 0
   },
+  "749f3646333c3ad1": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 125,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 125,
+        "summary": "A Blender add-on that lets you create and edit 3D models by chatting with AI, sending text or an image to get working bpy code."
+      }
+    },
+    "times_sent": 0
+  },
   "752c86a4d07c8551": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -5861,6 +5949,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "7666fb86c958158b": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 35,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 35,
+        "summary": "A Show HN post titled 'Opensidian' with no description of what it is."
+      }
+    },
+    "times_sent": 0
+  },
   "76b4f021366a08af": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -5906,15 +6010,15 @@
   "78a8ab0baa0cb9eb": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 74,
+    "last_score": 174,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-13T18:55:04.409772+00:00",
-        "relevance": 4,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 6,
         "rubric": "3472af8a46e1",
-        "source_score": 74,
-        "summary": "A developer blog post about applying Gemini 4 Argon to robotics."
+        "source_score": 174,
+        "summary": "A Hacker News post titled 'Gemini 4 Argon for Robotics' pointing to the main discussion thread."
       }
     },
     "times_sent": 0
@@ -5961,6 +6065,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "79a2551785bb9050": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 132,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 132,
+        "summary": "textfold is an open-source, local-first paper reader for arXiv research papers tagged with llm and research-papers."
+      }
+    },
+    "times_sent": 0
+  },
   "79a921d6eacb0325": {
     "dismissed": null,
     "first_seen": "2026-09-04T18:39:17.908022+00:00",
@@ -5978,7 +6098,7 @@
   "7a89d3ba2a72b6c4": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 545,
+    "last_score": 892,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6130,7 +6250,7 @@
   "7ed0d9888ce5e464": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 272,
+    "last_score": 277,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -6176,7 +6296,7 @@
   "7f2096f4faffa1e3": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 84,
+    "last_score": 88,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6377,7 +6497,7 @@
   "8460a7ddf90b376a": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 247,
+    "last_score": 250,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -6414,7 +6534,7 @@
   "85780e68129982e7": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 116,
+    "last_score": 117,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6507,7 +6627,7 @@
   "876449a0944e93d0": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 187,
+    "last_score": 189,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6523,7 +6643,7 @@
   "87718895ca43a777": {
     "dismissed": null,
     "first_seen": "2026-10-12T04:30:08.802068+00:00",
-    "last_score": 224,
+    "last_score": 226,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6546,7 +6666,7 @@
   "8854d78214dd6150": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 448,
+    "last_score": 605,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -6831,7 +6951,7 @@
   "8e962244c758a79d": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 55,
+    "last_score": 58,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6914,7 +7034,7 @@
   "9139f009d0a21056": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 240,
+    "last_score": 241,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6961,7 +7081,7 @@
   "919f775b86fd2ee8": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 149,
+    "last_score": 151,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6993,7 +7113,7 @@
   "93481ec2e3a9d5b0": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 152,
+    "last_score": 157,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -7009,7 +7129,7 @@
   "9356b6751b5ecf7a": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 164,
+    "last_score": 171,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -7142,6 +7262,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "956aacf867197415": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 39,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 39,
+        "summary": "Spotatui is a Spotify TUI/GUI client that avoids Spotify web API rate limits."
+      }
+    },
     "times_sent": 0
   },
   "9577abc3cff9b239": {
@@ -7355,15 +7491,15 @@
   "980e32e49af70cab": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 53,
+    "last_score": 163,
     "ranks": {
       "web-products": {
         "queued_at": null,
-        "ranked_at": "2026-10-13T18:55:04.409772+00:00",
-        "relevance": 5,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 4,
         "rubric": "080b24af813c",
-        "source_score": 53,
-        "summary": "Apple is running a 'Switch to Safari' campaign page explaining reasons to move away from Chrome, a browser-market and product-marketing item rather than a technical web-platform one."
+        "source_score": 163,
+        "summary": "Apple has launched a 'Switch to Safari' campaign that details reasons to ditch Chrome."
       }
     },
     "times_sent": 0
@@ -7422,7 +7558,7 @@
   "9912b86ad7452f24": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 90,
+    "last_score": 92,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7474,10 +7610,26 @@
     },
     "times_sent": 0
   },
+  "99b50cda3751ead4": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 43,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 43,
+        "summary": "An isomorphic music keyboard using base-12 notation with sheet music, noted as built using Codex."
+      }
+    },
+    "times_sent": 0
+  },
   "99e810c974b3b034": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 592,
+    "last_score": 598,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -7844,7 +7996,7 @@
   "a3f0b7b889931007": {
     "dismissed": null,
     "first_seen": "2026-10-12T04:30:08.802068+00:00",
-    "last_score": 85,
+    "last_score": 86,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7869,6 +8021,22 @@
         "rubric": "02189e2467e9",
         "source_score": 325,
         "summary": "The article advises not to couple your Go code to GitHub."
+      }
+    },
+    "times_sent": 0
+  },
+  "a4008f68ac6b6513": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 50,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": 50,
+        "summary": "A GitHub repository compiling 100+ free datasets useful for social science, applied microeconomics, data visualization, and related fields."
       }
     },
     "times_sent": 0
@@ -7943,6 +8111,22 @@
     },
     "times_sent": 0
   },
+  "a52daacfcae86727": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 195,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 195,
+        "summary": "Guitoro is a free browser guitar that uses recordings of real instruments and lets you strum with keyboard, mouse, or touchscreen."
+      }
+    },
+    "times_sent": 0
+  },
   "a533e0f8af8be0f9": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
@@ -7969,7 +8153,7 @@
   "a5629ff3a2ef38f9": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 140,
+    "last_score": 159,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8015,7 +8199,7 @@
   "a6f0cc316480792c": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 210,
+    "last_score": 213,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -8107,7 +8291,7 @@
   "a7916291f2ecf9f7": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 244,
+    "last_score": 251,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8485,7 +8669,7 @@
   "ae7c9336500624c0": {
     "dismissed": null,
     "first_seen": "2026-10-10T19:47:33.070266+00:00",
-    "last_score": 103,
+    "last_score": 104,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8508,7 +8692,7 @@
   "af0dc0f74bb4c40a": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 302,
+    "last_score": 303,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8817,7 +9001,7 @@
   "b5f241f765311731": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 145,
+    "last_score": 150,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9110,7 +9294,7 @@
   "ba37f20c750ee7b3": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 170,
+    "last_score": 175,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9164,7 +9348,7 @@
   "baffcb4d50a5b911": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 851,
+    "last_score": 859,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9195,7 +9379,7 @@
   "bb2de73f7c5cd437": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 80,
+    "last_score": 81,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9218,7 +9402,7 @@
   "bb80d48523c945ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 579,
+    "last_score": 582,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9324,7 +9508,7 @@
   "be1ae401637add81": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 113,
+    "last_score": 120,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -9370,7 +9554,7 @@
   "bf2149b8045ec7a8": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 689,
+    "last_score": 709,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9477,6 +9661,22 @@
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 1936,
     "ranks": {},
+    "times_sent": 0
+  },
+  "c0f3efa6baba2d65": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 32,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 5,
+        "rubric": "3472af8a46e1",
+        "source_score": 32,
+        "summary": "Consus is a YC-backed LLM gateway that routes all AI requests to ITAR-restricted and CUI-compliant infrastructure and has completed a FedRAMP equivalency audit."
+      }
+    },
     "times_sent": 0
   },
   "c149e010d20219ad": {
@@ -9609,7 +9809,7 @@
   "c44fc8610ac4f076": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 267,
+    "last_score": 269,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9655,7 +9855,7 @@
   "c4e129e4700158d0": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 266,
+    "last_score": 273,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -9805,7 +10005,7 @@
   "c85cea0bf043bcab": {
     "dismissed": null,
     "first_seen": "2026-10-12T04:30:08.802068+00:00",
-    "last_score": 100,
+    "last_score": 101,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10121,7 +10321,7 @@
   "ceabd70d7baac0d1": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 395,
+    "last_score": 418,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10271,7 +10471,7 @@
   "d16bd93ff857d83d": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 713,
+    "last_score": 715,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10342,7 +10542,7 @@
   "d2fc0d722b1f4562": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 302,
+    "last_score": 310,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10418,7 +10618,7 @@
   "d4819d8fc2ca5c0b": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 63,
+    "last_score": 64,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10459,6 +10659,30 @@
         "rubric": "080b24af813c",
         "source_score": null,
         "summary": "A list of 35 practical ways to use Claude Code for SEO, from content briefs and Search Console analysis to internal linking and technical fixes."
+      }
+    },
+    "times_sent": 0
+  },
+  "d57224c195e5a4eb": {
+    "dismissed": null,
+    "first_seen": "2026-10-13T23:36:41.456320+00:00",
+    "last_score": 31,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 31,
+        "summary": "Crest is an Arc-inspired open-source browser for Mac."
+      },
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": 31,
+        "summary": "An open-source, Arc-inspired browser for Mac called Crest."
       }
     },
     "times_sent": 0
@@ -10673,7 +10897,7 @@
   "d8d38d395f9eac94": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 249,
+    "last_score": 250,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -10832,7 +11056,7 @@
   "dbd1dfa7a53e80a5": {
     "dismissed": null,
     "first_seen": "2026-10-10T23:15:33.901214+00:00",
-    "last_score": 167,
+    "last_score": 174,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11030,7 +11254,7 @@
   "e011cc3858c1d4e2": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 580,
+    "last_score": 651,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11281,7 +11505,7 @@
   "e2711c9ce5a221c5": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
-    "last_score": 174,
+    "last_score": 175,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11371,7 +11595,7 @@
   "e6753b8422696224": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 212,
+    "last_score": 213,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11482,7 +11706,7 @@
   "e904c2a49576e4bc": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 143,
+    "last_score": 149,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11602,7 +11826,7 @@
   "eb192f29f9b0ad47": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 108,
+    "last_score": 111,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12386,7 +12610,7 @@
   "fe46d5e4893aa24c": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 95,
+    "last_score": 99,
     "ranks": {
       "tooling": {
         "queued_at": null,

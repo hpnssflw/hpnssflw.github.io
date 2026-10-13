@@ -4,30 +4,24 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 62,
+        "already_ranked": 61,
         "dismissed": 1,
         "seen": 21
       },
-      "inbox": {
-        "expired": 4
-      },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 10
+        "below_relevance": 3,
+        "over_max_items": 13
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 81,
+        "already_ranked": 84,
         "dismissed": 1,
         "seen": 11
       },
-      "inbox": {
-        "expired": 3
-      },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 30
+        "below_relevance": 8,
+        "over_max_items": 29
       }
     },
     "web-products": {
@@ -35,35 +29,32 @@
         "outside_window": 132
       },
       "dedupe": {
-        "already_ranked": 18,
+        "already_ranked": 20,
         "seen": 19
       },
-      "inbox": {
-        "expired": 2
-      },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 15
+        "below_relevance": 1,
+        "over_max_items": 17
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 95,
-      "in_window": 95,
+      "collected": 99,
+      "in_window": 99,
       "kept": 0,
-      "new": 11
+      "new": 16
     },
     "tooling": {
-      "collected": 126,
-      "in_window": 126,
+      "collected": 133,
+      "in_window": 133,
       "kept": 0,
-      "new": 33
+      "new": 37
     },
     "web-products": {
-      "collected": 187,
-      "in_window": 55,
+      "collected": 189,
+      "in_window": 57,
       "kept": 0,
       "new": 18
     }
@@ -75,113 +66,109 @@
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845734+00:00",
+      "ts": "2026-10-13T23:37:43.312211+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845726+00:00",
+      "ts": "2026-10-13T23:37:43.312205+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845717+00:00",
+      "ts": "2026-10-13T23:37:43.312199+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845709+00:00",
+      "ts": "2026-10-13T23:37:43.312193+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845701+00:00",
+      "ts": "2026-10-13T23:37:43.312186+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "toddrjones/datasets",
+      "topic": "web-products",
+      "ts": "2026-10-13T23:37:43.312164+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845679+00:00",
+      "ts": "2026-10-13T23:37:43.312158+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845671+00:00",
+      "ts": "2026-10-13T23:37:43.312152+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845662+00:00",
+      "ts": "2026-10-13T23:37:43.312146+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845654+00:00",
+      "ts": "2026-10-13T23:37:43.312139+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845646+00:00",
+      "ts": "2026-10-13T23:37:43.312133+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845637+00:00",
+      "ts": "2026-10-13T23:37:43.312126+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845629+00:00",
+      "ts": "2026-10-13T23:37:43.312120+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845619+00:00",
+      "ts": "2026-10-13T23:37:43.312112+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
-      "title": "Making big downloads resumable in Firefox",
+      "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
       "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845609+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "JeffLi1993/saas-seo-playbook",
-      "topic": "web-products",
-      "ts": "2026-10-13T18:55:50.845597+00:00",
+      "ts": "2026-10-13T23:37:43.312104+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-07T04:19:10.896068+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-07T04:29:34.247172+00:00"
@@ -273,28 +260,32 @@
     {
       "kept": 0,
       "ts": "2026-10-13T18:55:04.409772+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-13T23:36:41.456320+00:00"
     }
   ],
-  "streak": 267,
+  "streak": 268,
   "topics": [
     {
-      "collected": 95,
+      "collected": 99,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 126,
+      "collected": 133,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 187,
+      "collected": 189,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-13T18:55:04.409772+00:00"
+  "updated_at": "2026-10-13T23:36:41.456320+00:00"
 }
