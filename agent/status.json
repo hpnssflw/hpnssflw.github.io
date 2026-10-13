@@ -4,37 +4,46 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 54,
+        "already_ranked": 62,
         "dismissed": 1,
-        "seen": 23
+        "seen": 21
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 9,
-        "over_max_items": 8
+        "below_relevance": 1,
+        "over_max_items": 10
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 78,
-        "dismissed": 2,
+        "already_ranked": 81,
+        "dismissed": 1,
         "seen": 11
       },
+      "inbox": {
+        "expired": 3
+      },
       "rank": {
-        "below_relevance": 6,
+        "below_relevance": 3,
         "over_max_items": 30
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 134
+        "outside_window": 132
       },
       "dedupe": {
-        "already_ranked": 15,
-        "seen": 18
+        "already_ranked": 18,
+        "seen": 19
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
         "below_relevance": 3,
-        "over_max_items": 13
+        "over_max_items": 15
       }
     }
   },
@@ -44,136 +53,131 @@
       "collected": 95,
       "in_window": 95,
       "kept": 0,
-      "new": 17
+      "new": 11
     },
     "tooling": {
-      "collected": 127,
-      "in_window": 127,
+      "collected": 126,
+      "in_window": 126,
       "kept": 0,
-      "new": 36
+      "new": 33
     },
     "web-products": {
-      "collected": 184,
-      "in_window": 50,
-      "kept": 1,
-      "new": 17
+      "collected": 187,
+      "in_window": 55,
+      "kept": 0,
+      "new": 18
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 70,
+  "pending_count": 61,
   "recent_events": [
-    {
-      "score": 9,
-      "source": "rss",
-      "title": "Introducing css-typed-om, a complete and WPT-tested polyfill for CSS Typed OM",
-      "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.227016+00:00",
-      "verdict": "kept"
-    },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.227005+00:00",
+      "ts": "2026-10-13T18:55:50.845734+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226999+00:00",
+      "ts": "2026-10-13T18:55:50.845726+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226993+00:00",
+      "ts": "2026-10-13T18:55:50.845717+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226987+00:00",
+      "ts": "2026-10-13T18:55:50.845709+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226982+00:00",
+      "ts": "2026-10-13T18:55:50.845701+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226976+00:00",
+      "ts": "2026-10-13T18:55:50.845679+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "The \u201calien\u201d economics of AI monetization",
+      "topic": "web-products",
+      "ts": "2026-10-13T18:55:50.845671+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226966+00:00",
+      "ts": "2026-10-13T18:55:50.845662+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226960+00:00",
+      "ts": "2026-10-13T18:55:50.845654+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226954+00:00",
+      "ts": "2026-10-13T18:55:50.845646+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226948+00:00",
+      "ts": "2026-10-13T18:55:50.845637+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226942+00:00",
+      "ts": "2026-10-13T18:55:50.845629+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226935+00:00",
+      "ts": "2026-10-13T18:55:50.845619+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Making big downloads resumable in Firefox",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226927+00:00",
+      "ts": "2026-10-13T18:55:50.845609+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "Learning is the thing",
+      "reason": "over_max_items",
+      "title": "JeffLi1993/saas-seo-playbook",
       "topic": "web-products",
-      "ts": "2026-10-13T11:27:18.226805+00:00",
+      "ts": "2026-10-13T18:55:50.845597+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-06T23:34:58.463501+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-07T04:19:10.896068+00:00"
@@ -265,9 +269,13 @@
     {
       "kept": 1,
       "ts": "2026-10-13T11:26:09.907272+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-13T18:55:04.409772+00:00"
     }
   ],
-  "streak": 266,
+  "streak": 267,
   "topics": [
     {
       "collected": 95,
@@ -276,17 +284,17 @@
       "slug": "ai-engineering"
     },
     {
-      "collected": 127,
+      "collected": 126,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 184,
-      "kept": 1,
+      "collected": 187,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-13T11:26:09.907272+00:00"
+  "updated_at": "2026-10-13T18:55:04.409772+00:00"
 }
