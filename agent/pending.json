@@ -609,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://www.bram.us/2026/10/13/introducing-css-typed-om-a-complete-and-wpt-tested-polyfill-for-css-typed-om/"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "Project Maya is a GitHub project for running GLM-5.3-Flash, a 321B MoE model, privately on your own GPUs from one card to 16 across NVIDIA or AMD and Linux or Windows, with an engine, server, dashboard, OpenAI- and Anthropic-compatible API, and quant tools.",
+      "title": "mw00/project-maya",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/mw00/project-maya"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A Hacker News post announcing Gemini 4 Argon, a major model release from deepmind.google, with a linked companion item about Gemini 4 Argon for Robotics.",
+      "title": "Gemini 4 Argon",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://deepmind.google/models/gemini/"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "An open-source personal agent that runs on your own computer, giving each agent its own Linux desktop in Docker, supporting any model with your keys, an encrypted vault, and Telegram control.",
+      "title": "SouravBeraAkaSpeed/xiryn",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/SouravBeraAkaSpeed/xiryn"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "durable-pi is a playground and agent network for building persistent, multi-device durable agents with web and terminal clients.",
+      "title": "disler/durable-pi",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/disler/durable-pi"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "An open-source AI coding agent written in Rust, providing a CLI, TUI, and HTTP server for local AI agents without Docker.",
+      "title": "vakandi/opencode-rust",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/vakandi/opencode-rust"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "A read-only TUI that turns a git change into a guided tour, presented as walking through a diff the way a senior engineer reads it.",
+      "title": "init-co-jp/diff-tour",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/init-co-jp/diff-tour"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Diffle is a keyboard-centric diff viewer with LSP support.",
+      "title": "Show HN: Diffle, a keyboard-centric diff viewer with LSP support",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/moritzwilksch/diffle"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "A GitHub-published practical SEO playbook aimed at AI tool sites, SaaS landing pages and indie developers, covering AEO, AI SEO and GEO topics.",
+      "title": "JeffLi1993/saas-seo-playbook",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.com/JeffLi1993/saas-seo-playbook"
+    },
+    {
+      "pending_since": "2026-10-14T03:40:29.632688+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "An article on implementing resumable big downloads in Firefox, i.e. work on browser internals and download handling.",
+      "title": "Making big downloads resumable in Firefox",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html"
     }
   ],
   "last_email_at": "2026-09-30T04:08:45.319706+00:00"

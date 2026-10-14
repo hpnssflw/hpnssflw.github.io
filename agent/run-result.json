@@ -310,11 +310,11 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 24,
-      "tooling": 18,
-      "web-products": 19
+      "ai-engineering": 28,
+      "tooling": 21,
+      "web-products": 21
     },
-    "count": 61,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -986,12 +986,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://www.bram.us/2026/10/13/introducing-css-typed-om-a-complete-and-wpt-tested-polyfill-for-css-typed-om/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "Project Maya is a GitHub project for running GLM-5.3-Flash, a 321B MoE model, privately on your own GPUs from one card to 16 across NVIDIA or AMD and Linux or Windows, with an engine, server, dashboard, OpenAI- and Anthropic-compatible API, and quant tools.",
+        "title": "mw00/project-maya",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/mw00/project-maya"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A Hacker News post announcing Gemini 4 Argon, a major model release from deepmind.google, with a linked companion item about Gemini 4 Argon for Robotics.",
+        "title": "Gemini 4 Argon",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://deepmind.google/models/gemini/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "An open-source personal agent that runs on your own computer, giving each agent its own Linux desktop in Docker, supporting any model with your keys, an encrypted vault, and Telegram control.",
+        "title": "SouravBeraAkaSpeed/xiryn",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/SouravBeraAkaSpeed/xiryn"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "durable-pi is a playground and agent network for building persistent, multi-device durable agents with web and terminal clients.",
+        "title": "disler/durable-pi",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/disler/durable-pi"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "An open-source AI coding agent written in Rust, providing a CLI, TUI, and HTTP server for local AI agents without Docker.",
+        "title": "vakandi/opencode-rust",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/vakandi/opencode-rust"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "A read-only TUI that turns a git change into a guided tour, presented as walking through a diff the way a senior engineer reads it.",
+        "title": "init-co-jp/diff-tour",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/init-co-jp/diff-tour"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Diffle is a keyboard-centric diff viewer with LSP support.",
+        "title": "Show HN: Diffle, a keyboard-centric diff viewer with LSP support",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/moritzwilksch/diffle"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "A GitHub-published practical SEO playbook aimed at AI tool sites, SaaS landing pages and indie developers, covering AEO, AI SEO and GEO topics.",
+        "title": "JeffLi1993/saas-seo-playbook",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://github.com/JeffLi1993/saas-seo-playbook"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T03:40:29.632688+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "An article on implementing resumable big downloads in Firefox, i.e. work on browser internals and download handling.",
+        "title": "Making big downloads resumable in Firefox",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html"
       }
     ]
   },
   "run": {
-    "at": "2026-10-13T23:36:41.456320+00:00",
-    "id": "2026-10-13T2336Z",
+    "at": "2026-10-14T03:40:29.632688+00:00",
+    "id": "2026-10-14T0340Z",
     "mode": "real",
     "offline": false
   },
@@ -1002,18 +1101,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 96,
+          "out": 96
         },
         "tooling": {
           "drops": {},
-          "in": 133,
-          "out": 133
+          "in": 125,
+          "out": 125
         },
         "web-products": {
           "drops": {},
-          "in": 189,
-          "out": 189
+          "in": 190,
+          "out": 190
         }
       },
       "stage": "collect"
@@ -1023,20 +1122,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 96,
+          "out": 96
         },
         "tooling": {
           "drops": {},
-          "in": 133,
-          "out": 133
+          "in": 125,
+          "out": 125
         },
         "web-products": {
           "drops": {
             "outside_window": 132
           },
-          "in": 189,
-          "out": 57
+          "in": 190,
+          "out": 58
         }
       },
       "stage": "window"
@@ -1049,23 +1148,23 @@
             "dismissed": 1,
             "seen": 21
           },
-          "in": 99,
-          "out": 77
+          "in": 96,
+          "out": 74
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
             "seen": 11
           },
-          "in": 133,
-          "out": 121
+          "in": 125,
+          "out": 113
         },
         "web-products": {
           "drops": {
             "seen": 19
           },
-          "in": 57,
-          "out": 38
+          "in": 58,
+          "out": 39
         }
       },
       "stage": "dedupe"
@@ -1077,21 +1176,21 @@
           "drops": {
             "already_ranked": 61
           },
-          "in": 77,
-          "out": 16
+          "in": 74,
+          "out": 13
         },
         "tooling": {
           "drops": {
-            "already_ranked": 84
+            "already_ranked": 86
           },
-          "in": 121,
-          "out": 37
+          "in": 113,
+          "out": 27
         },
         "web-products": {
           "drops": {
-            "already_ranked": 20
+            "already_ranked": 21
           },
-          "in": 38,
+          "in": 39,
           "out": 18
         }
       },
@@ -1102,18 +1201,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 2,
+          "out": 2
         },
         "tooling": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 3,
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1122,18 +1221,16 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "below_relevance": 3
-          },
-          "in": 16,
+          "drops": {},
+          "in": 13,
           "out": 13
         },
         "tooling": {
           "drops": {
-            "below_relevance": 8
+            "below_relevance": 2
           },
-          "in": 37,
-          "out": 29
+          "in": 27,
+          "out": 25
         },
         "web-products": {
           "drops": {
@@ -1150,24 +1247,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 9
           },
           "in": 13,
-          "out": 0
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 29
+            "over_max_items": 22
           },
-          "in": 29,
-          "out": 0
+          "in": 25,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 17
+            "over_max_items": 15
           },
           "in": 17,
-          "out": 0
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1177,18 +1274,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 24
+          "in": 4,
+          "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 18
+          "in": 3,
+          "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 19
+          "in": 2,
+          "out": 21
         }
       },
       "stage": "queue"
