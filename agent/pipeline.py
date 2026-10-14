@@ -2,7 +2,8 @@
 
 - process_topic: one topic's query sources (HN, GitHub) and its own
   feeds -- collect, recency window, dedupe, verdict cache, full text,
-  rank against the topic, daily cap, queue;
+  rank against the topic, daily cap, summarize (presets with
+  ranking.summarize_queued), queue;
 - process_feeds: the preset's own feeds, once per run -- the same stages,
   but classification picks each item's topic.
 
@@ -12,7 +13,7 @@ whether to save them."""
 from __future__ import annotations
 
 from collections import Counter, defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 from agent import date_guard, dedupe, pending, rank_cache, stories, summarize
 from agent.context import RunContext
@@ -122,6 +123,47 @@ def _enrich(ctx: RunContext, scope: str, items: list[Item], full_text_feeds: set
     return enriched
 
 
+def _summarize(ctx: RunContext, scope: str, keep: list[RankedItem]) -> list[RankedItem]:
+    """The summarize stage (presets with ranking.summarize_queued): each
+    item the cap keeps gets a summary from its page text -- fetched, or the
+    item's own text for a full-text feed. Anything going wrong keeps the
+    ranker's summary: this never drops an item."""
+    tally = ctx.tally
+    tally.count("summarize", scope, len(keep), len(keep))
+    feeds = (*ctx.preset.feeds, *(feed for topic in ctx.preset.topics for feed in topic.feeds))
+    full_text_feeds = {feed.id for feed in feeds if feed.full_text}
+    texts: list[tuple[int, str]] = []
+    for index, ranked in enumerate(keep):
+        item = ranked.item
+        if item.source_id in full_text_feeds and item.text:
+            texts.append((index, item.text))
+            continue
+        text = fulltext.fetch_text(item.url, ctx.adapters.fetcher)
+        if text is None:
+            tally.note("summarize", scope, "fetch_failed")
+        else:
+            texts.append((index, text))
+    summaries: list[str | None] = [None] * len(texts)
+    if texts:
+        try:
+            summaries = ctx.adapters.ranker.summarize([(keep[index].item, text) for index, text in texts])
+        except Exception as exc:  # noqa: BLE001 — a summary is an improvement, never a reason to lose the queue
+            ctx.writer.emit("summarize", "failed", topic=scope, detail={"error": str(exc)})
+            tally.fail("summarize", scope, None, exc)
+            summaries = [None] * len(texts)
+    result = list(keep)
+    summarized = 0
+    for (index, _), summary in zip(texts, summaries):
+        if summary is not None:
+            result[index] = replace(keep[index], summary=summary)
+            summarized += 1
+    if summarized:
+        tally.note("summarize", scope, "summarized", summarized)
+    if len(keep) - summarized:
+        tally.note("summarize", scope, "kept_rank_summary", len(keep) - summarized)
+    return result
+
+
 def process_topic(topic: TopicConfig, ctx: RunContext) -> TopicResult:
     state, queue, now, writer, tally = ctx.state, ctx.queue, ctx.now, ctx.writer, ctx.tally
     scope = topic.slug
@@ -197,6 +239,8 @@ def _cap_and_queue(topic: TopicConfig, eligible: list[RankedItem], ctx: RunConte
     queued_before = rank_cache.queued_in_last_24h(state, topic.slug, now)
     remaining = max(0, topic.max_items_per_day - queued_before)
     keep, over_cap = rank_cache.select(eligible, remaining)
+    if ctx.preset.summarize_queued:
+        keep = _summarize(ctx, topic.slug, keep)
     over_drops = [
         Drop(
             url=ranked.item.url,

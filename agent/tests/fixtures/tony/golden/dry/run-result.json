@@ -33,6 +33,8 @@
       "model": "deepseek-v4-flash",
       "rank_prompt_version": 2,
       "reader": "Artem, a full-stack engineer who builds web products and LLM agents and writes about both. He wants items he can learn from or act on as a builder, not general tech news.",
+      "summarize_queued": true,
+      "summary_prompt_version": 1,
       "temperature": 0
     },
     "sources": {
@@ -461,6 +463,27 @@
         }
       },
       "stage": "cap"
+    },
+    {
+      "group": "processing",
+      "scopes": {
+        "ai-engineering": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "tooling": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        },
+        "web-products": {
+          "drops": {},
+          "in": 0,
+          "out": 0
+        }
+      },
+      "stage": "summarize"
     },
     {
       "group": "approval",

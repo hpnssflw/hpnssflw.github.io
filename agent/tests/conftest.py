@@ -282,11 +282,14 @@ def seed_tony_data(data: Path) -> None:
 
 
 class RefusingFetcher:
-    """The fetcher for runs with no feed fixtures: a fetch is a test bug,
-    not a request to the live web."""
+    """The fetcher for runs with no feed or page fixtures: every fetch
+    fails like an unreachable page. An unexpected RSS fetch shows in the
+    goldens as a collect failure; a page fetch as `fetch_failed`."""
 
     def get(self, url: str):
-        raise AssertionError(f"unexpected fetch {url}")
+        from agent.fetch import FetchError
+
+        raise FetchError(f"no fixture for {url}")
 
 
 class TonyHarness:
