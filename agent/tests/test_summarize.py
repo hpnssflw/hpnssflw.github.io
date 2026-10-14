@@ -73,11 +73,26 @@ def test_parse_summary_response_rejects_bad_answers():
         _summaries(good, {"id": True, "summary": "b"}),
         _summaries(good, {"id": 2, "summary": "  "}),
         _summaries(good, {"id": 2, "summary": 7}),
-        _summaries(good, {"id": 2, "summary": "x" * (summarize.SUMMARY_MAX_CHARS + 1)}),
         _summaries(good, {"id": 2}),
     ]
     for raw in bad_answers:
         assert summarize._parse_summary_response(raw, 2) is None, raw
+
+
+def test_parse_summary_response_nulls_only_the_over_long_entry():
+    exact = "x" * summarize.SUMMARY_MAX_CHARS
+    raw = _summaries(
+        {"id": 1, "summary": "A linker."},
+        {"id": 2, "summary": "x" * (summarize.SUMMARY_MAX_CHARS + 1)},
+        {"id": 3, "summary": exact},
+    )
+    parsed = summarize._parse_summary_response(raw, 3)
+    assert [e["summary"] for e in parsed] == ["A linker.", None, exact]
+
+
+def test_summary_prompt_states_the_target_length():
+    assert str(summarize.SUMMARY_TARGET_CHARS) in summarize.SUMMARY_SYSTEM_PROMPT
+    assert summarize.SUMMARY_TARGET_CHARS < summarize.SUMMARY_MAX_CHARS
 
 
 def test_summary_prompt_carries_reader_language_title_and_one_line_text():
@@ -112,6 +127,16 @@ def test_summarize_items_returns_text_or_none_in_order(monkeypatch):
     monkeypatch.setattr(summarize, "OpenAI", client)
     entries = [(make_item(url="https://a", title="A"), "text a"), (make_item(url="https://b", title="B"), "text b")]
     assert summarize.summarize_items(entries, LLM, "Reader.", "en") == ["A linker.", None]
+    assert len(client.prompts) == 1
+
+
+def test_summarize_items_drops_an_over_long_answer_without_retrying(monkeypatch):
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "k")
+    long = "x" * (summarize.SUMMARY_MAX_CHARS + 1)
+    client = _ScriptedClient([_summaries({"id": 1, "summary": long}, {"id": 2, "summary": "B."})])
+    monkeypatch.setattr(summarize, "OpenAI", client)
+    entries = [(make_item(url="https://a", title="A"), "a"), (make_item(url="https://b", title="B"), "b")]
+    assert summarize.summarize_items(entries, LLM, "Reader.", "en") == [None, "B."]
     assert len(client.prompts) == 1
 
 

@@ -35,12 +35,16 @@ queued under their topic, so they're covered too:
    the page text is its README.
 2. **Summarize.** One DeepSeek call per scope for the items with text. A
    new system prompt asks for one or two sentences in the preset's
-   language: what the thing is and what's new about it, stated only from
-   the given text. It returns `null` when the text doesn't say what the
+   language, under 300 characters: what the thing is and what's new about
+   it, stated only from the given text, starting with what the item is.
+   It returns `null` when the text doesn't say what the
    item is (a paywall, a captcha, a cookie wall). The response is
    validated like the ranking response: ids, a non-empty string or
-   `null`, at most `SUMMARY_MAX_CHARS = 400`. One retry, then one call
-   per item.
+   `null`. A summary over `SUMMARY_MAX_CHARS = 400` becomes `null` for
+   that item (it keeps the ranker's line) instead of rejecting the
+   batch. One retry, then one call per item, for any other bad answer.
+   (Added after the 2026-10-14 live preview, where DeepSeek's answers ran
+   372-632 characters and the old whole-batch rejection discarded most.)
 3. **Replace.** A valid summary replaces the ranker's in the
    `RankedItem` before `pending.add_kept`. If the fetch fails, the page
    has no text, the model says `null`, or the call fails, the item keeps
