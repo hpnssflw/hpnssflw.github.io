@@ -3,6 +3,11 @@
     "approval": {
       "decisions_url": "https://api.github.com/repos/hpnssflw/tony-inbox/contents/decisions.json",
       "expire_days": 7,
+      "telegram": {
+        "bot_token_env": "TELEGRAM_BOT_TOKEN",
+        "max_asks_per_run": 10,
+        "owner_chat_env": "TELEGRAM_OWNER_CHAT_ID"
+      },
       "token_env": "GITHUB_TOKEN",
       "type": "inbox"
     },
@@ -312,21 +317,10 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 21
+      "web-products": 20
     },
-    "count": 70,
+    "count": 69,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T04:58:06.518389+00:00",
-        "score": 9,
-        "source": "rss",
-        "summary": "A look at the annual Interop effort for 2027, listing proposed web platform features like gamut mapping, border-shape, and interest invokers, with a decision due February 4, 2027.",
-        "title": "Interop 2027",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/interop-2027/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-07T21:01:09.362592+00:00",
@@ -1089,8 +1083,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-14T03:40:29.632688+00:00",
-    "id": "2026-10-14T0340Z",
+    "at": "2026-10-14T05:08:55.463037+00:00",
+    "id": "2026-10-14T0508Z",
     "mode": "real",
     "offline": false
   },
@@ -1101,13 +1095,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 97,
+          "out": 97
         },
         "tooling": {
           "drops": {},
-          "in": 125,
-          "out": 125
+          "in": 126,
+          "out": 126
         },
         "web-products": {
           "drops": {},
@@ -1122,13 +1116,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 97,
+          "out": 97
         },
         "tooling": {
           "drops": {},
-          "in": 125,
-          "out": 125
+          "in": 126,
+          "out": 126
         },
         "web-products": {
           "drops": {
@@ -1146,25 +1140,26 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 1,
-            "seen": 21
+            "seen": 26
           },
-          "in": 96,
-          "out": 74
+          "in": 97,
+          "out": 70
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
-            "seen": 11
+            "seen": 14
           },
-          "in": 125,
-          "out": 113
+          "in": 126,
+          "out": 111
         },
         "web-products": {
           "drops": {
-            "seen": 19
+            "dismissed": 1,
+            "seen": 20
           },
           "in": 58,
-          "out": 39
+          "out": 37
         }
       },
       "stage": "dedupe"
@@ -1174,24 +1169,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 61
+            "already_ranked": 60
           },
-          "in": 74,
-          "out": 13
+          "in": 70,
+          "out": 10
         },
         "tooling": {
           "drops": {
-            "already_ranked": 86
+            "already_ranked": 88
           },
-          "in": 113,
-          "out": 27
+          "in": 111,
+          "out": 23
         },
         "web-products": {
           "drops": {
-            "already_ranked": 21
+            "already_ranked": 22
           },
-          "in": 39,
-          "out": 18
+          "in": 37,
+          "out": 15
         }
       },
       "stage": "cache"
@@ -1201,18 +1196,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 1,
+          "out": 1
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 1,
+          "out": 1
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1222,22 +1217,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 13,
-          "out": 13
+          "in": 10,
+          "out": 10
         },
         "tooling": {
-          "drops": {
-            "below_relevance": 2
-          },
-          "in": 27,
-          "out": 25
+          "drops": {},
+          "in": 23,
+          "out": 23
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 18,
-          "out": 17
+          "drops": {},
+          "in": 15,
+          "out": 15
         }
       },
       "stage": "rank"
@@ -1247,24 +1238,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 9
+            "over_max_items": 10
           },
-          "in": 13,
-          "out": 4
+          "in": 10,
+          "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 22
+            "over_max_items": 23
           },
-          "in": 25,
-          "out": 3
+          "in": 23,
+          "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 15
           },
-          "in": 17,
-          "out": 2
+          "in": 15,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1274,18 +1265,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
+          "in": 0,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 3,
+          "in": 0,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 21
+          "in": 0,
+          "out": 20
         }
       },
       "stage": "queue"
@@ -1295,18 +1286,29 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 24,
-          "out": 24
+          "in": 28,
+          "notes": {
+            "asked": 4
+          },
+          "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 18,
-          "out": 18
+          "in": 21,
+          "notes": {
+            "asked": 3
+          },
+          "out": 21
         },
         "web-products": {
-          "drops": {},
-          "in": 19,
-          "out": 19
+          "drops": {
+            "expired": 1
+          },
+          "in": 21,
+          "notes": {
+            "asked": 3
+          },
+          "out": 20
         }
       },
       "stage": "review"

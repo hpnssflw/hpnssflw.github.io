@@ -4,23 +4,22 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 61,
+        "already_ranked": 60,
         "dismissed": 1,
-        "seen": 21
+        "seen": 26
       },
       "rank": {
-        "over_max_items": 9
+        "over_max_items": 10
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 86,
+        "already_ranked": 88,
         "dismissed": 1,
-        "seen": 11
+        "seen": 14
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 22
+        "over_max_items": 23
       }
     },
     "web-products": {
@@ -28,11 +27,14 @@
         "outside_window": 132
       },
       "dedupe": {
-        "already_ranked": 21,
-        "seen": 19
+        "already_ranked": 22,
+        "dismissed": 1,
+        "seen": 20
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 1,
         "over_max_items": 15
       }
     }
@@ -40,140 +42,134 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 96,
-      "in_window": 96,
-      "kept": 4,
-      "new": 13
+      "collected": 97,
+      "in_window": 97,
+      "kept": 0,
+      "new": 10
     },
     "tooling": {
-      "collected": 125,
-      "in_window": 125,
-      "kept": 3,
-      "new": 27
+      "collected": 126,
+      "in_window": 126,
+      "kept": 0,
+      "new": 23
     },
     "web-products": {
       "collected": 190,
       "in_window": 58,
-      "kept": 2,
-      "new": 18
+      "kept": 0,
+      "new": 15
     }
   },
   "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 70,
+  "pending_count": 69,
   "recent_events": [
-    {
-      "score": 7,
-      "source": "hn",
-      "title": "Making big downloads resumable in Firefox",
-      "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579148+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 8,
-      "source": "github",
-      "title": "JeffLi1993/saas-seo-playbook",
-      "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579138+00:00",
-      "verdict": "kept"
-    },
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579121+00:00",
+      "ts": "2026-10-14T05:09:36.671431+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579113+00:00",
+      "ts": "2026-10-14T05:09:36.671425+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579104+00:00",
+      "ts": "2026-10-14T05:09:36.671419+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579096+00:00",
+      "ts": "2026-10-14T05:09:36.671413+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579087+00:00",
+      "ts": "2026-10-14T05:09:36.671407+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579079+00:00",
+      "ts": "2026-10-14T05:09:36.671401+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "toddrjones/datasets",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579070+00:00",
+      "ts": "2026-10-14T05:09:36.671395+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579062+00:00",
+      "ts": "2026-10-14T05:09:36.671387+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579053+00:00",
+      "ts": "2026-10-14T05:09:36.671381+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579044+00:00",
+      "ts": "2026-10-14T05:09:36.671375+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579035+00:00",
+      "ts": "2026-10-14T05:09:36.671369+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579026+00:00",
+      "ts": "2026-10-14T05:09:36.671363+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-14T03:41:30.579016+00:00",
+      "ts": "2026-10-14T05:09:36.671357+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
+      "topic": "web-products",
+      "ts": "2026-10-14T05:09:36.671351+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
+      "topic": "web-products",
+      "ts": "2026-10-14T05:09:36.671343+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-07T04:58:06.518389+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-07T21:01:09.362592+00:00"
@@ -265,28 +261,32 @@
     {
       "kept": 9,
       "ts": "2026-10-14T03:40:29.632688+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-14T05:08:55.463037+00:00"
     }
   ],
-  "streak": 269,
+  "streak": 270,
   "topics": [
     {
-      "collected": 96,
-      "kept": 4,
+      "collected": 97,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 125,
-      "kept": 3,
+      "collected": 126,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 190,
-      "kept": 2,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-14T03:40:29.632688+00:00"
+  "updated_at": "2026-10-14T05:08:55.463037+00:00"
 }
