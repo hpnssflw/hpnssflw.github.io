@@ -57,120 +57,116 @@
       "new": 15
     }
   },
-  "last_sent_at": "2026-09-30T04:08:45.319706+00:00",
-  "pending_count": 69,
+  "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
+  "pending_count": 49,
   "recent_events": [
     {
       "reason": "over_max_items",
       "title": "Sound smart about charts",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676782+00:00",
+      "ts": "2026-10-14T05:57:49.063425+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676771+00:00",
+      "ts": "2026-10-14T05:57:49.063415+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676760+00:00",
+      "ts": "2026-10-14T05:57:49.063405+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676749+00:00",
+      "ts": "2026-10-14T05:57:49.063395+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676738+00:00",
+      "ts": "2026-10-14T05:57:49.063386+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676726+00:00",
+      "ts": "2026-10-14T05:57:49.063376+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "toddrjones/datasets",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676711+00:00",
+      "ts": "2026-10-14T05:57:49.063364+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676700+00:00",
+      "ts": "2026-10-14T05:57:49.063355+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676690+00:00",
+      "ts": "2026-10-14T05:57:49.063345+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676679+00:00",
+      "ts": "2026-10-14T05:57:49.063335+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676668+00:00",
+      "ts": "2026-10-14T05:57:49.063326+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676657+00:00",
+      "ts": "2026-10-14T05:57:49.063316+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676645+00:00",
+      "ts": "2026-10-14T05:57:49.063306+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676630+00:00",
+      "ts": "2026-10-14T05:57:49.063295+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
       "topic": "web-products",
-      "ts": "2026-10-14T05:16:02.676607+00:00",
+      "ts": "2026-10-14T05:57:49.063280+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-08T04:40:37.892950+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-08T06:30:40.543876+00:00"
@@ -262,9 +258,13 @@
     {
       "kept": 0,
       "ts": "2026-10-14T05:15:33.642391+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-14T05:57:17.734583+00:00"
     }
   ],
-  "streak": 271,
+  "streak": 272,
   "topics": [
     {
       "collected": 97,
@@ -285,5 +285,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-14T05:15:33.642391+00:00"
+  "updated_at": "2026-10-14T05:57:17.734583+00:00"
 }
