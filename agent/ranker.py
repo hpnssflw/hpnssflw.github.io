@@ -28,6 +28,9 @@ class LiveRanker:
     def classify(self, items: list[Item], topics: list[TopicConfig]) -> list[RankedItem]:
         return summarize.classify(items, topics, self.llm, self.reader, self.language)
 
+    def summarize(self, entries: list[tuple[Item, str]]) -> list[str | None]:
+        return summarize.summarize_items(entries, self.llm, self.reader, self.language)
+
     def merge(self, known: list[Story], entries: list[list[Report]], tz) -> list[list[str]]:
         return summarize.merge(
             [summarize.MergeEntry(title=s.opener().title, text=s.opener().text) for s in known],
@@ -122,6 +125,10 @@ class FixtureRanker:
                 RankedItem(item=replace(item, topic=verdict["topic"]), summary=verdict["summary"], score=verdict["score"])
             )
         return ranked
+
+    def summarize(self, entries: list[tuple[Item, str]]) -> list[str | None]:
+        """Offline presets can't turn on summarize_queued (preset.require_offline)."""
+        raise FixtureError("offline presets have no summary fixtures")
 
     def _verdict(self, item: Item) -> dict:
         try:
