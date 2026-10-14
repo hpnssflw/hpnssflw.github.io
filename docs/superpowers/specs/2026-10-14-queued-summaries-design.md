@@ -24,8 +24,9 @@ a day for Tony.
 
 ## How it works
 
-A new step, **summarize**, between cap and queue. It runs for the items
-the cap keeps, in each topic and in the preset feeds' scope:
+A new step, **summarize**, between cap and queue. It runs per topic on
+the items the daily cap keeps. A preset feed's items are capped and
+queued under their topic, so they're covered too:
 
 1. **Fetch.** Get each item's page text with `fulltext.fetch_text(url,
    fetcher)` (trafilatura, through the engine's fetcher with its SSRF
@@ -67,6 +68,8 @@ ranking:
 - `--preview` runs it, so previews show the summaries a real run would
   queue. `--dry-run` has no LLM and skips it. `--offline` with the key on
   is a `PresetError`: the demos' fixtures have no summary call.
+- The key together with `stories:` is a `PresetError`. Story entries are
+  queued by the story cap, and their facts already go beyond the title.
 
 ## Records
 
@@ -74,10 +77,12 @@ ranking:
   and `queue`, for presets with the key on. Its in/out counts are equal
   (it never drops), and its notes are `summarized`, `kept_rank_summary`
   and `fetch_failed`. Its failures are `stage: "summarize"` with the
-  error type only. The site's `lib/run-result.ts` and
-  `lib/pipeline-stages.ts` learn the stage. It's a rail cell on
-  `/researcher/queue/` only when present (like B's `group` and `facts`),
-  so Tony's rail gains one cell.
+  error type only. `config.ranking` gains `summarize_queued: true` and
+  `summary_prompt_version`, but only when the key is on.
+- The control room folds the stage into the queue cell, as it folds
+  `enrich` into rank. When N > 0, the cell's line gains `N from page text`
+  (ru `по тексту страницы: N`). A summarize failure marks the queue cell.
+  The rail keeps its cells.
 - `status.json` is unchanged.
 - `pending.json` is unchanged in format. Only the `summary` text is
   better.
@@ -106,8 +111,10 @@ the new summaries.
 - `agent/run_result.py`: the stage in the stage order, and the key in
   `config`.
 - `agent/presets/tony.yaml`: `summarize_queued: true`.
-- Site: the stage label (en/ru) in `lib/control-room-text.ts`, and the
-  stage in `lib/pipeline-stages.ts`.
+- Site:
+  - `lib/control-room-text.ts`: `rail.fromPage` (en/ru).
+  - `lib/pipeline-stages.ts`: the queue line, and `summarize` →
+    `queue` in `RAIL_STAGE`.
 - Docs: `docs/agent-plan.md` and `/researcher/agent/` get a sentence
   each, and `PROGRESS.md` the usual update.
 
@@ -132,8 +139,8 @@ the new summaries.
   the ranker's. The expected diff is the new `summarize` stage and
   `config.ranking.summarize_queued` in `run-result.json`. Any other
   change is a regression. The demo goldens stay byte-identical.
-- Vitest: `lib/run-result.test.ts` and `lib/pipeline-stages.test.ts` for
-  the new stage, with and without it.
+- Vitest: `lib/pipeline-stages.test.ts`: the queue line with and without
+  summaries, and a summarize failure on the queue cell.
 
 ## Rollout
 
@@ -143,8 +150,8 @@ the new summaries.
 2. Push to `main` and dispatch `agent-run.yml`.
 3. Check: `run-result.json` has the `summarize` stage with no failures;
    new rows in `pending.json` and the new Telegram asks read like
-   summaries, not title restatements; `/researcher/queue/` shows the
-   cell.
+   summaries, not title restatements; `/researcher/queue/`'s queue cell
+   reads `N from page text`.
 
 ## Success criteria
 
