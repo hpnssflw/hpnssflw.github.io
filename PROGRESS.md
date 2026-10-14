@@ -1024,10 +1024,15 @@ infrastructure.
   all 10 pages and rewrote all 10 from page text (234-279 characters, one
   DeepSeek call per topic, no retries). The prompt asks for under 300
   characters, and an over-long answer keeps the ranker's line for that
-  item only. Live run check: pending the first run after the push. The
-  first dispatched run after the push may keep 0 items if the caps are
-  still full, so the live check may need the first run where a cap frees
-  up.
+  item only. Pushed 2026-10-14 (`7d751ee..35fba79`, deploy run
+  38541862163). Dispatched run 38541870240 (09:22Z): `run-result.json` has
+  the `summarize` stage right after `cap`, `config.ranking` shows
+  `summarize_queued: true` and `summary_prompt_version: 1`, `failures: []`;
+  every topic's cap was still full (cap out 0/0/0), so summarize saw 0 items
+  and nothing new was queued. **Still to check:** the first run where a cap
+  frees up — its new `pending.json` rows and Telegram asks should carry
+  page summaries, and `run-result.json`'s summarize notes should show
+  `summarized`.
 
 ### How to resume in a new session
 
