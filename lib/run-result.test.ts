@@ -32,7 +32,7 @@ describe("parseRunResult on the goldens", () => {
     });
     expect(result?.config.delivery).toEqual({ type: "telegram", title: "Research digest", cadence_hours: 24, chat: "@hypnosisflow" });
     expect(result?.config.sources).toEqual({ rss: [], telegram_public: null });
-    expect(result?.stages).toHaveLength(11);
+    expect(result?.stages).toHaveLength(12);
     expect(result?.failures).toEqual([]);
     expect(result?.queue.items).toHaveLength(9);
     expect(result?.delivery).toEqual({ sent_items: 1, messages: 1, last_sent_at: "2026-10-06T12:00:00+00:00" });

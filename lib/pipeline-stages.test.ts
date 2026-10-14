@@ -112,6 +112,38 @@ describe("buildStages on Tony's run", () => {
       deliver: ["—", ""],
     });
   });
+
+  it("adds page summaries to the queue line, only when there are some", () => {
+    // Tony's golden already has a summarize stage (no `summarized` note: its
+    // harness fails every page fetch); swap in one with summaries.
+    const withSummaries: RunResult = {
+      ...tony,
+      stages: [
+        ...tony.stages.filter((s) => s.stage !== "summarize"),
+        {
+          stage: "summarize",
+          group: "processing",
+          scopes: {
+            tooling: { in: 1, out: 1, drops: {}, notes: { summarized: 1 } },
+            "web-products": { in: 2, out: 2, drops: {}, notes: { kept_rank_summary: 2, fetch_failed: 2 } },
+          },
+        },
+      ],
+    };
+    expect(table(buildStages(withSummaries, NONE, "all", en)).queue).toEqual(["9", "+8 this run · 1 from page text"]);
+    expect(table(buildStages(withSummaries, NONE, "web-products", en)).queue[1]).not.toContain("from page text");
+    expect(table(buildStages(withSummaries, NONE, "all", TEXT.ru.rail)).queue[1]).toContain("по тексту страницы: 1");
+  });
+
+  it("shows a summarize failure on the queue cell", () => {
+    const failing: RunResult = {
+      ...tony,
+      failures: [{ stage: "summarize", scope: "tooling", source: null, error_type: "RuntimeError" }],
+    };
+    const cells = Object.fromEntries(buildStages(failing, NONE, "tooling", en).map((s) => [s.key, s.failed]));
+    expect(cells.queue).toBe("run");
+    expect(cells.cap).toBeNull();
+  });
 });
 
 describe("buildStages on a demo preset's shared feeds", () => {

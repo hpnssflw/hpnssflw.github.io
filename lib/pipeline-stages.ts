@@ -8,7 +8,7 @@ export type TopicFilter = "all" | (string & {});
 
 /** The rail, in reading order. "review" is where moderation sits
  * logically; the agent applies decisions at the start of its next run.
- * run-result.json's `enrich` folds into rank, `format` into deliver;
+ * run-result.json's `enrich` folds into rank, `summarize` into queue, `format` into deliver;
  * `group` and `facts` make "stories", which only runs that grouped
  * stories show (railKeys). */
 export const STAGE_KEYS = ["collect", "window", "dedupe", "cache", "rank", "stories", "cap", "queue", "review", "deliver"] as const;
@@ -56,6 +56,7 @@ const RAIL_STAGE: Record<string, StageKey> = {
   group: "stories",
   facts: "stories",
   cap: "cap",
+  summarize: "queue",
   queue: "queue",
   review: "review",
   format: "deliver",
@@ -149,6 +150,7 @@ export function buildStages(
   const rank = s("rank");
   const cap = s("cap");
   const queue = s("queue");
+  const summarized = s("summarize").notes.summarized ?? 0;
   const review = s("review");
 
   const slugs = topicSlugs(result.config.topics, topic);
@@ -177,7 +179,11 @@ export function buildStages(
     { key: "cache", value: String(cache.out), line: mark(cache, minus(cache.drops.already_ranked, text.drops.already_ranked)) },
     { key: "rank", value: String(rank.out), line: mark(rank, rankLine.join(" · ")) },
     { key: "cap", value: String(cap.out), line: minus(cap.drops.over_max_items, text.drops.over_max_items) },
-    { key: "queue", value: String(liveQueue ? liveQueue.length : queue.out), line: text.thisRun(queue.in) },
+    {
+      key: "queue",
+      value: String(liveQueue ? liveQueue.length : queue.out),
+      line: summarized ? `${text.thisRun(queue.in)} · ${text.fromPage(summarized)}` : text.thisRun(queue.in),
+    },
     {
       key: "review",
       value: String(approved ?? review.notes.approved ?? 0),
