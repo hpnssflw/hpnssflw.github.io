@@ -4,13 +4,16 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 61,
-        "dismissed": 1,
-        "seen": 25
+        "already_ranked": 65,
+        "dismissed": 3,
+        "seen": 22
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 5,
-        "over_max_items": 12
+        "below_relevance": 7,
+        "over_max_items": 14
       }
     },
     "tooling": {
@@ -19,162 +22,163 @@
         "dismissed": 1,
         "seen": 15
       },
+      "inbox": {
+        "expired": 3
+      },
       "rank": {
         "below_relevance": 6,
-        "over_max_items": 27
+        "over_max_items": 30
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 130
+        "outside_window": 129
       },
       "dedupe": {
-        "already_ranked": 22,
-        "dismissed": 1,
-        "seen": 20
+        "already_ranked": 24,
+        "dismissed": 3,
+        "seen": 19
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 14
+        "below_relevance": 2,
+        "over_max_items": 15
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 104,
-      "in_window": 104,
+      "collected": 111,
+      "in_window": 111,
       "kept": 0,
-      "new": 17
+      "new": 21
     },
     "tooling": {
-      "collected": 136,
-      "in_window": 136,
+      "collected": 139,
+      "in_window": 139,
       "kept": 0,
-      "new": 33
+      "new": 36
     },
     "web-products": {
       "collected": 192,
-      "in_window": 62,
-      "kept": 1,
-      "new": 19
+      "in_window": 63,
+      "kept": 0,
+      "new": 17
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 50,
+  "pending_count": 41,
   "recent_events": [
-    {
-      "score": 9,
-      "source": "rss",
-      "title": "Building a Fancy Scrollspy Using Modern CSS",
-      "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061427+00:00",
-      "verdict": "kept"
-    },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061402+00:00",
+      "ts": "2026-10-14T23:00:07.526882+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061385+00:00",
+      "ts": "2026-10-14T23:00:07.526876+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061371+00:00",
+      "ts": "2026-10-14T23:00:07.526869+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061356+00:00",
+      "ts": "2026-10-14T23:00:07.526863+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061342+00:00",
+      "ts": "2026-10-14T23:00:07.526857+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061327+00:00",
+      "ts": "2026-10-14T23:00:07.526851+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061312+00:00",
+      "ts": "2026-10-14T23:00:07.526845+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Beliefs in life after death",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061297+00:00",
+      "ts": "2026-10-14T23:00:07.526839+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061281+00:00",
+      "ts": "2026-10-14T23:00:07.526833+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061254+00:00",
+      "ts": "2026-10-14T23:00:07.526811+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061238+00:00",
+      "ts": "2026-10-14T23:00:07.526804+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061218+00:00",
+      "ts": "2026-10-14T23:00:07.526795+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061193+00:00",
+      "ts": "2026-10-14T23:00:07.526788+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u201cWebMCP is Agentic WebPerf\u201d",
       "topic": "web-products",
-      "ts": "2026-10-14T16:37:40.061105+00:00",
+      "ts": "2026-10-14T23:00:07.526779+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Scroll-Triggered Animations Debugger (DevTools Extension)",
+      "topic": "web-products",
+      "ts": "2026-10-14T23:00:07.526766+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-09T04:43:57.809400+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-09T14:59:29.651785+00:00"
@@ -266,28 +270,32 @@
     {
       "kept": 1,
       "ts": "2026-10-14T16:36:39.185213+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-14T22:59:05.256595+00:00"
     }
   ],
-  "streak": 275,
+  "streak": 276,
   "topics": [
     {
-      "collected": 104,
+      "collected": 111,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 136,
+      "collected": 139,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 192,
-      "kept": 1,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-14T16:36:39.185213+00:00"
+  "updated_at": "2026-10-14T22:59:05.256595+00:00"
 }

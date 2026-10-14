@@ -317,111 +317,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 20,
-      "tooling": 15,
-      "web-products": 15
+      "ai-engineering": 16,
+      "tooling": 12,
+      "web-products": 13
     },
-    "count": 50,
+    "count": 41,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 10,
-        "source": "hn",
-        "summary": "An OpenAI link titled 'GPT‑6 and Intelligent UI for everyone,' indicating a major model/platform release.",
-        "title": "GPT‑6 and Intelligent UI for everyone",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://openai.com/index/gpt-6-for-everyone/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "An Anthropic link titled 'Claude Haiku 5.5,' indicating a model release.",
-        "title": "Claude Haiku 5.5",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://www.anthropic.com/claude-haiku-5-5"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "A Google blog post titled 'EmbeddingGemma 2: An open, lightweight multimodal embedding model,' indicating an open embedding model release.",
-        "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Aleph Alpha announces Kolibri, a sovereign open-weight model, accompanied by a technical report and an additional paper.",
-        "title": "Kolibri: A Sovereign Open-Weight Model",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "agent-guard provides behavior-guardrail hooks for Claude Code, covering test-tampering and outbound-action guards.",
-        "title": "hahahahahahahahah6/agent-guard",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/hahahahahahahahah6/agent-guard"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "ThinkTerm is a Rust terminal with a built-in multiplexer that keeps sessions running after closing and runs shells and AI agents across machines with desktop, browser, and TUI interfaces.",
-        "title": "RoversX/ThinkTerm",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/RoversX/ThinkTerm"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "An AI coding desktop client with Aegis governance built into execution, offering baseline-aware changes and evidence-backed delivery with a choice of model.",
-        "title": "GanyuanRan/Autoloom",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/GanyuanRan/Autoloom"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "A post on shipping JPEG XL image support in Chrome.",
-        "title": "Shipping JPEG XL in Chrome",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-07T21:01:09.362592+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Explores how sibling-count() counts siblings rather than children and how the parent element can't access that count, with a children-count() proposal still in discussion.",
-        "title": "Transferring sibling-count() to a Parent Element",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/transferring-sibling-count-to-a-parent-element/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-08T04:40:37.892950+00:00",
@@ -876,8 +777,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-14T16:36:39.185213+00:00",
-    "id": "2026-10-14T1636Z",
+    "at": "2026-10-14T22:59:05.256595+00:00",
+    "id": "2026-10-14T2259Z",
     "mode": "real",
     "offline": false
   },
@@ -888,13 +789,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 111,
+          "out": 111
         },
         "tooling": {
           "drops": {},
-          "in": 136,
-          "out": 136
+          "in": 139,
+          "out": 139
         },
         "web-products": {
           "drops": {},
@@ -909,20 +810,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 111,
+          "out": 111
         },
         "tooling": {
           "drops": {},
-          "in": 136,
-          "out": 136
+          "in": 139,
+          "out": 139
         },
         "web-products": {
           "drops": {
-            "outside_window": 130
+            "outside_window": 129
           },
           "in": 192,
-          "out": 62
+          "out": 63
         }
       },
       "stage": "window"
@@ -932,26 +833,26 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 1,
-            "seen": 25
+            "dismissed": 3,
+            "seen": 22
           },
-          "in": 104,
-          "out": 78
+          "in": 111,
+          "out": 86
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
             "seen": 15
           },
-          "in": 136,
-          "out": 120
+          "in": 139,
+          "out": 123
         },
         "web-products": {
           "drops": {
-            "dismissed": 1,
-            "seen": 20
+            "dismissed": 3,
+            "seen": 19
           },
-          "in": 62,
+          "in": 63,
           "out": 41
         }
       },
@@ -962,24 +863,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 61
+            "already_ranked": 65
           },
-          "in": 78,
-          "out": 17
+          "in": 86,
+          "out": 21
         },
         "tooling": {
           "drops": {
             "already_ranked": 87
           },
-          "in": 120,
-          "out": 33
+          "in": 123,
+          "out": 36
         },
         "web-products": {
           "drops": {
-            "already_ranked": 22
+            "already_ranked": 24
           },
           "in": 41,
-          "out": 19
+          "out": 17
         }
       },
       "stage": "cache"
@@ -989,18 +890,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 8,
+          "out": 8
         },
         "tooling": {
           "drops": {},
-          "in": 10,
-          "out": 10
+          "in": 9,
+          "out": 9
         },
         "web-products": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 3,
+          "out": 3
         }
       },
       "stage": "enrich"
@@ -1010,23 +911,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 5
+            "below_relevance": 7
           },
-          "in": 17,
-          "out": 12
+          "in": 21,
+          "out": 14
         },
         "tooling": {
           "drops": {
             "below_relevance": 6
           },
-          "in": 33,
-          "out": 27
+          "in": 36,
+          "out": 30
         },
         "web-products": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 2
           },
-          "in": 19,
+          "in": 17,
           "out": 15
         }
       },
@@ -1037,24 +938,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 14
           },
-          "in": 12,
+          "in": 14,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 27
+            "over_max_items": 30
           },
-          "in": 27,
+          "in": 30,
           "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 14
+            "over_max_items": 15
           },
           "in": 15,
-          "out": 1
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1074,11 +975,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "notes": {
-            "summarized": 1
-          },
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1089,17 +987,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 20
+          "out": 16
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 15
+          "out": 12
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 15
+          "in": 0,
+          "out": 13
         }
       },
       "stage": "queue"
@@ -1108,28 +1006,28 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
-          "in": 20,
-          "notes": {
-            "asked": 4
+          "drops": {
+            "expired": 4
           },
-          "out": 20
+          "in": 20,
+          "out": 16
         },
         "tooling": {
-          "drops": {},
-          "in": 15,
-          "notes": {
-            "asked": 3
+          "drops": {
+            "expired": 3
           },
-          "out": 15
+          "in": 15,
+          "out": 12
         },
         "web-products": {
-          "drops": {},
-          "in": 14,
-          "notes": {
-            "asked": 3
+          "drops": {
+            "expired": 2
           },
-          "out": 14
+          "in": 15,
+          "notes": {
+            "asked": 1
+          },
+          "out": 13
         }
       },
       "stage": "review"
