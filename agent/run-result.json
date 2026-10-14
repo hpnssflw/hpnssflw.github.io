@@ -319,9 +319,9 @@
     "by_topic": {
       "ai-engineering": 20,
       "tooling": 15,
-      "web-products": 14
+      "web-products": 15
     },
-    "count": 49,
+    "count": 50,
     "items": [
       {
         "decision": null,
@@ -861,12 +861,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://blog.master.dev/testing-an-iframes-postmessage-handler/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-14T16:36:39.185213+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "A tutorial on building a fancy scrollspy using modern CSS and no JavaScript, replacing IntersectionObserver-based implementations with a CSS property and a few pseudo-classes.",
+        "title": "Building a Fancy Scrollspy Using Modern CSS",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/building-a-fancy-scrollspy-using-modern-css/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-14T09:22:45.075393+00:00",
-    "id": "2026-10-14T0922Z",
+    "at": "2026-10-14T16:36:39.185213+00:00",
+    "id": "2026-10-14T1636Z",
     "mode": "real",
     "offline": false
   },
@@ -877,18 +888,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 128,
-          "out": 128
+          "in": 136,
+          "out": 136
         },
         "web-products": {
           "drops": {},
-          "in": 191,
-          "out": 191
+          "in": 192,
+          "out": 192
         }
       },
       "stage": "collect"
@@ -898,20 +909,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 128,
-          "out": 128
+          "in": 136,
+          "out": 136
         },
         "web-products": {
           "drops": {
-            "outside_window": 132
+            "outside_window": 130
           },
-          "in": 191,
-          "out": 59
+          "in": 192,
+          "out": 62
         }
       },
       "stage": "window"
@@ -922,26 +933,26 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 1,
-            "seen": 26
+            "seen": 25
           },
-          "in": 98,
-          "out": 71
+          "in": 104,
+          "out": 78
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
             "seen": 15
           },
-          "in": 128,
-          "out": 112
+          "in": 136,
+          "out": 120
         },
         "web-products": {
           "drops": {
             "dismissed": 1,
             "seen": 20
           },
-          "in": 59,
-          "out": 38
+          "in": 62,
+          "out": 41
         }
       },
       "stage": "dedupe"
@@ -953,22 +964,22 @@
           "drops": {
             "already_ranked": 61
           },
-          "in": 71,
-          "out": 10
+          "in": 78,
+          "out": 17
         },
         "tooling": {
           "drops": {
-            "already_ranked": 89
+            "already_ranked": 87
           },
-          "in": 112,
-          "out": 23
+          "in": 120,
+          "out": 33
         },
         "web-products": {
           "drops": {
-            "already_ranked": 23
+            "already_ranked": 22
           },
-          "in": 38,
-          "out": 15
+          "in": 41,
+          "out": 19
         }
       },
       "stage": "cache"
@@ -978,18 +989,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 7,
+          "out": 7
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 10,
+          "out": 10
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 6,
+          "out": 6
         }
       },
       "stage": "enrich"
@@ -998,18 +1009,24 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
-          "in": 10,
-          "out": 10
+          "drops": {
+            "below_relevance": 5
+          },
+          "in": 17,
+          "out": 12
         },
         "tooling": {
-          "drops": {},
-          "in": 23,
-          "out": 23
+          "drops": {
+            "below_relevance": 6
+          },
+          "in": 33,
+          "out": 27
         },
         "web-products": {
-          "drops": {},
-          "in": 15,
+          "drops": {
+            "below_relevance": 4
+          },
+          "in": 19,
           "out": 15
         }
       },
@@ -1020,24 +1037,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 12
           },
-          "in": 10,
+          "in": 12,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 23
+            "over_max_items": 27
           },
-          "in": 23,
+          "in": 27,
           "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 15
+            "over_max_items": 14
           },
           "in": 15,
-          "out": 0
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1057,8 +1074,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1078,8 +1098,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 14
+          "in": 1,
+          "out": 15
         }
       },
       "stage": "queue"
