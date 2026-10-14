@@ -12,7 +12,7 @@ D's control room on `run-result.json`
 |---|---|---|
 | A | Engine core + presets | shipped 2026-10-06 |
 | B | Stories | shipped 2026-10-08 |
-| **C** | Telegram approval buttons (this spec) | built, not pushed |
+| **C** | Telegram approval buttons (this spec) | shipped 2026-10-14 |
 | D | Preset switcher + demo section | shipped 2026-10-07 |
 
 The roadmap's C also named "several delivery targets per preset". Artem
