@@ -33,7 +33,9 @@ queued under their topic, so they're covered too:
    guard and size cap). Skip the fetch for items from a feed marked
    `full_text: true`: they already carry that text. For a GitHub repo,
    the page text is its README.
-2. **Summarize.** One DeepSeek call per scope for the items with text. A
+2. **Summarize.** One DeepSeek call per scope for the items with text (a preset with both
+   preset feeds and topic sources runs the cap twice per topic, so up to two
+   calls per topic; Tony has no preset feeds, so one). A
    new system prompt asks for one or two sentences in the preset's
    language, under 300 characters: what the thing is and what's new about
    it, stated only from the given text, starting with what the item is.
@@ -160,8 +162,9 @@ the new summaries.
 ## Success criteria
 
 1. New queue items' summaries say what the item is, beyond its title.
-2. DeepSeek calls per run grow by at most one per scope, about 10 items
-   a day for Tony.
+2. DeepSeek calls per run grow by at most one per scope (up to two per topic
+   for a preset with both preset feeds and topic sources; one for Tony),
+   about 10 items a day for Tony.
 3. No run fails, and no item is lost because of this step.
 
 ## Out of scope

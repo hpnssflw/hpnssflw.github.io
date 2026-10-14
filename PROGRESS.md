@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); the preset select on the control room built 2026-10-12, pushed and live 2026-10-14; #6's watch passed (summary 2026-10-14); C (Telegram approval buttons) shipped and live-checked 2026-10-14. Several delivery targets split out of C as E.**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); the preset select on the control room built 2026-10-12, pushed and live 2026-10-14; #6's watch passed (summary 2026-10-14); C (Telegram approval buttons) shipped and live-checked 2026-10-14; summaries from the page text shipped 2026-10-14. Several delivery targets split out of C as E.**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -1018,11 +1018,16 @@ infrastructure.
   (`summarize` stage, `ranking.summarize_queued`, on for Tony); any failure
   keeps the ranker's line. Picked after Artem turned down writing
   summaries by hand. Live preview 2026-10-14 (before the push, after the
-  length fix): 10 kept items, 10 rewritten from page text, 0 kept the
-  ranker's line (all 10 pages fetched, answers 234-279 characters; the
-  prompt now asks for under 300 characters, and an over-long answer keeps
-  the ranker's line for that item only). Live run check: pending the
-  first run after the push.
+  length fix), on a scratch copy of agent-data's state/pending: with the
+  real state every topic's daily cap was already used (0 kept); a second
+  preview with only the cap check bypassed kept 10 items (4/3/3), fetched
+  all 10 pages and rewrote all 10 from page text (234-279 characters, one
+  DeepSeek call per topic, no retries). The prompt asks for under 300
+  characters, and an over-long answer keeps the ranker's line for that
+  item only. Live run check: pending the first run after the push. The
+  first dispatched run after the push may keep 0 items if the caps are
+  still full, so the live check may need the first run where a cap frees
+  up.
 
 ### How to resume in a new session
 
