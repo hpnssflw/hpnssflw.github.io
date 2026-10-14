@@ -38,14 +38,17 @@ STAGES = (
 )
 RUN_WIDE_STAGES = ("format", "deliver")  # one digest per run: scope "*" only
 STORY_STAGES = {"rank": ("group", "processing"), "cap": ("facts", "processing")}  # each comes right after its key
+SUMMARIZE_STAGE = ("summarize", "processing")  # after cap, for presets with ranking.summarize_queued (never with stories)
 
 
-def stage_order(stories: bool) -> tuple[tuple[str, str], ...]:
+def stage_order(stories: bool, summarize: bool = False) -> tuple[tuple[str, str], ...]:
     order: list[tuple[str, str]] = []
     for stage in STAGES:
         order.append(stage)
         if stories and stage[0] in STORY_STAGES:
             order.append(STORY_STAGES[stage[0]])
+        if summarize and stage[0] == "cap":
+            order.append(SUMMARIZE_STAGE)
     return tuple(order)
 
 
@@ -53,9 +56,9 @@ class Tally:
     """Counts per (stage, scope) where each stage runs: items in and out,
     drops by reason, notes. Failures carry the exception's class name only."""
 
-    def __init__(self, topic_slugs: list[str], has_feeds: bool, stories: bool = False) -> None:
+    def __init__(self, topic_slugs: list[str], has_feeds: bool, stories: bool = False, summarize: bool = False) -> None:
         topic_scopes = [*topic_slugs, *([FEED_SCOPE] if has_feeds else [])]
-        self._order = stage_order(stories)
+        self._order = stage_order(stories, summarize)
         self._stages: dict[str, dict[str, dict]] = {
             stage: {scope: _empty() for scope in ([FEED_SCOPE] if stage in RUN_WIDE_STAGES else topic_scopes)}
             for stage, _ in self._order
@@ -141,6 +144,9 @@ def preset_config(preset: Preset) -> dict:
         config["ranking"]["classify_rubric_hash"] = summarize.classify_rubric_hash(
             list(preset.topics), preset.reader, preset.language
         )
+    if preset.summarize_queued:
+        config["ranking"]["summarize_queued"] = True
+        config["ranking"]["summary_prompt_version"] = summarize.SUMMARY_PROMPT_VERSION
     if preset.stories is not None:
         config["stories"] = {
             "window_hours": preset.stories.window_hours,

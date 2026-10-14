@@ -263,3 +263,31 @@ def test_offline_refuses_telegram_approval(tmp_path):
     preset = load_preset(write_preset(tmp_path, dict(VALID, approval=dict(VALID["approval"], telegram=TELEGRAM_BLOCK))))
     with pytest.raises(PresetError, match="approval.telegram: --offline can't use Telegram"):
         require_offline(preset)
+
+
+def test_summarize_queued_defaults_to_false_and_loads_true(tmp_path):
+    assert load_preset(write_preset(tmp_path, VALID)).summarize_queued is False
+    raw = dict(VALID, ranking={"reader": "Редактор.", "summarize_queued": True})
+    assert load_preset(write_preset(tmp_path, raw)).summarize_queued is True
+
+
+def test_summarize_queued_must_be_a_boolean(tmp_path):
+    raw = dict(VALID, ranking={"reader": "Редактор.", "summarize_queued": "yes"})
+    with pytest.raises(PresetError, match="ranking.summarize_queued: expected true or false"):
+        load_preset(write_preset(tmp_path, raw))
+
+
+def test_summarize_queued_is_refused_offline(tmp_path):
+    raw = dict(VALID, ranking={"reader": "Редактор.", "summarize_queued": True})
+    with pytest.raises(PresetError, match="ranking.summarize_queued: --offline"):
+        require_offline(load_preset(write_preset(tmp_path, raw)))
+
+
+def test_summarize_queued_is_refused_with_stories(tmp_path):
+    text = STORIES_PRESET.replace("ranking: {reader: Редактор.}", "ranking: {reader: Редактор., summarize_queued: true}")
+    with pytest.raises(PresetError, match=re.escape("ranking.summarize_queued: not available with stories")):
+        load_preset(write_stories_preset(tmp_path, text=text))
+
+
+def test_tony_summarizes_queued_items():
+    assert load_preset(AGENT / "presets" / "tony.yaml").summarize_queued is True

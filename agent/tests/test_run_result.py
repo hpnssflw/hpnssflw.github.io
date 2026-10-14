@@ -163,3 +163,20 @@ def test_config_shows_telegram_approval_by_env_names_only(tmp_path, monkeypatch)
 
 def test_config_without_telegram_approval_has_no_telegram_key(tmp_path):
     assert "telegram" not in preset_config(load_preset(write_preset(tmp_path, VALID)))["approval"]
+
+
+def test_summarize_stage_comes_right_after_cap_only_when_on():
+    plain = [s["stage"] for s in Tally(["a"], has_feeds=False).stages()]
+    assert "summarize" not in plain
+    on = [s["stage"] for s in Tally(["a"], has_feeds=False, summarize=True).stages()]
+    assert on[on.index("cap") + 1] == "summarize"
+    assert {s["stage"]: s["group"] for s in Tally(["a"], has_feeds=False, summarize=True).stages()}["summarize"] == "processing"
+
+
+def test_config_shows_summarize_queued_only_when_on(tmp_path):
+    from agent import summarize
+
+    assert "summarize_queued" not in preset_config(load_preset(write_preset(tmp_path, VALID)))["ranking"]
+    raw = dict(VALID, ranking={"reader": "Редактор.", "summarize_queued": True})
+    ranking = preset_config(load_preset(write_preset(tmp_path, raw)))["ranking"]
+    assert (ranking["summarize_queued"], ranking["summary_prompt_version"]) == (True, summarize.SUMMARY_PROMPT_VERSION)

@@ -122,6 +122,7 @@ class Preset:
     status_json: bool  # data.status_json: also write status.json (Tony's site widgets)
     default_data_dir: Path | None  # data.default_dir, resolved; None: --data-dir is required
     stories: StoriesConfig | None = None  # None: every report is its own queue entry
+    summarize_queued: bool = False  # ranking.summarize_queued: summaries from the page text for items the cap keeps
 
 
 def load_preset(path: Path) -> Preset:
@@ -146,6 +147,8 @@ def require_offline(preset: Preset) -> None:
         raise PresetError("approval.type: --offline needs `file`")
     if preset.approval.telegram is not None:
         raise PresetError("approval.telegram: --offline can't use Telegram")
+    if preset.summarize_queued:
+        raise PresetError("ranking.summarize_queued: --offline has no page or summary fixtures")
     if preset.delivery.type != "file":
         raise PresetError("delivery.type: --offline needs `file`")
     if preset.stories is not None and preset.offline.stories is None:
@@ -167,7 +170,10 @@ def _load_self_contained(path: Path, raw: dict) -> Preset:
     topics = _topics(raw["topics"], defaults)
     _check_unique_feed_ids(feeds, topics)
     stories = _stories(raw["stories"], topics, feeds) if "stories" in raw else None
-    ranking = _fields(raw["ranking"], "ranking", ("reader",))
+    ranking = _fields(raw["ranking"], "ranking", ("reader",), ("summarize_queued",))
+    summarize_queued = _bool(ranking, "summarize_queued", "ranking") if "summarize_queued" in ranking else False
+    if summarize_queued and stories is not None:
+        raise PresetError("ranking.summarize_queued: not available with stories (story entries get facts)")
     llm = _fields(raw["llm"], "llm", ("base_url", "model", "api_key_env"))
     data = _data(raw.get("data", {}), path.parent)
     return Preset(
@@ -191,6 +197,7 @@ def _load_self_contained(path: Path, raw: dict) -> Preset:
         status_json=data["status_json"],
         default_data_dir=data["default_dir"],
         stories=stories,
+        summarize_queued=summarize_queued,
     )
 
 

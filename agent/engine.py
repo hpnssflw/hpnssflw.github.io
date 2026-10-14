@@ -68,7 +68,12 @@ def _context(
         adapters=adapters,
         now=now,
         writer=writer,
-        tally=Tally([t.slug for t in preset.topics], has_feeds=bool(preset.feeds), stories=preset.stories is not None),
+        tally=Tally(
+            [t.slug for t in preset.topics],
+            has_feeds=bool(preset.feeds),
+            stories=preset.stories is not None,
+            summarize=preset.summarize_queued,
+        ),
         stories=stories.load_store(paths.stories) if preset.stories is not None else None,
         preview=preview,
     )
