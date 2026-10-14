@@ -18,7 +18,7 @@ from agent.sources.rss import TEXT_MAX_CHARS
 
 def fetch_text(url: str, fetcher) -> str | None:
     try:
-        import trafilatura  # imported here: runs without full-text feeds (Tony's) never load it
+        import trafilatura  # imported lazily, only when a page is actually fetched
     except ImportError:
         print("trafilatura is not installed; keeping feed text (pip install -r agent/requirements.txt)")
         return None

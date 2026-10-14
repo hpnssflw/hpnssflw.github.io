@@ -138,7 +138,10 @@ def _summarize(ctx: RunContext, scope: str, keep: list[RankedItem]) -> list[Rank
         if item.source_id in full_text_feeds and item.text:
             texts.append((index, item.text))
             continue
-        text = fulltext.fetch_text(item.url, ctx.adapters.fetcher)
+        try:
+            text = fulltext.fetch_text(item.url, ctx.adapters.fetcher)
+        except Exception:  # noqa: BLE001 — an unexpected fetch error is just a page we couldn't read; no error text kept
+            text = None
         if text is None:
             tally.note("summarize", scope, "fetch_failed")
         else:

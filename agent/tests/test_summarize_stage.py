@@ -91,6 +91,21 @@ def test_any_failure_keeps_the_ranker_summary(tmp_path, pages):
     assert ctx.tally.failures == []
 
 
+def test_a_raising_page_fetch_keeps_the_ranker_summary(tmp_path, monkeypatch):
+    def fetch_text(url, fetcher):
+        if url == "https://a":
+            raise RuntimeError("https://a/?token=secret")
+        return "Page b."
+
+    monkeypatch.setattr(fulltext, "fetch_text", fetch_text)
+    ranker = FakeRanker({"https://b": "What b is."})
+    ctx = _ctx(tmp_path, ranker)
+    out = pipeline._summarize(ctx, "incidents", [_ranked("https://a"), _ranked("https://b")])
+    assert [r.summary for r in out] == ["Ranker line.", "What b is."]
+    assert _notes(ctx)["notes"] == {"fetch_failed": 1, "kept_rank_summary": 1, "summarized": 1}
+    assert ctx.tally.failures == []
+
+
 def test_a_raising_ranker_is_a_failure_not_a_lost_item(tmp_path, pages):
     texts, _ = pages
     texts["https://a"] = "Page a."
