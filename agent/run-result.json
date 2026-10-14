@@ -1083,8 +1083,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-14T05:08:55.463037+00:00",
-    "id": "2026-10-14T0508Z",
+    "at": "2026-10-14T05:15:33.642391+00:00",
+    "id": "2026-10-14T0515Z",
     "mode": "real",
     "offline": false
   },
@@ -1196,13 +1196,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
@@ -1301,10 +1301,8 @@
           "out": 21
         },
         "web-products": {
-          "drops": {
-            "expired": 1
-          },
-          "in": 21,
+          "drops": {},
+          "in": 20,
           "notes": {
             "asked": 3
           },
