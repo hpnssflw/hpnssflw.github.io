@@ -1017,10 +1017,11 @@ infrastructure.
   cap keeps get a one-or-two-sentence summary from their page text
   (`summarize` stage, `ranking.summarize_queued`, on for Tony); any failure
   keeps the ranker's line. Picked after Artem turned down writing
-  summaries by hand. Live preview 2026-10-14 (before the push): 10 kept
-  items, 3 rewritten from page text, 7 kept the ranker's line (all 10 pages
-  fetched; DeepSeek's summaries ran over the 400-character limit, and one
-  over-long entry rejects its whole batch). Live run check: pending the
+  summaries by hand. Live preview 2026-10-14 (before the push, after the
+  length fix): 10 kept items, 10 rewritten from page text, 0 kept the
+  ranker's line (all 10 pages fetched, answers 234-279 characters; the
+  prompt now asks for under 300 characters, and an over-long answer keeps
+  the ranker's line for that item only). Live run check: pending the
   first run after the push.
 
 ### How to resume in a new session
