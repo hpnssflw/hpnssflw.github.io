@@ -1011,6 +1011,17 @@ infrastructure.
   new a run`, no "unavailable". Not seen live: a reject tap applied
   (Artem approved all 20; the reject path is covered by tests) and an
   `approved · telegram` row (the approvals went out in the same run).
+- **Summaries from the page text: shipped 2026-10-14.** Spec:
+  `docs/superpowers/specs/2026-10-14-queued-summaries-design.md`. Plan:
+  `docs/superpowers/plans/2026-10-14-queued-summaries.md`. Items the daily
+  cap keeps get a one-or-two-sentence summary from their page text
+  (`summarize` stage, `ranking.summarize_queued`, on for Tony); any failure
+  keeps the ranker's line. Picked after Artem turned down writing
+  summaries by hand. Live preview 2026-10-14 (before the push): 10 kept
+  items, 3 rewritten from page text, 7 kept the ranker's line (all 10 pages
+  fetched; DeepSeek's summaries ran over the 400-character limit, and one
+  over-long entry rejects its whole batch). Live run check: pending the
+  first run after the push.
 
 ### How to resume in a new session
 
@@ -1055,7 +1066,7 @@ log; if the widget never shows `working`, look for `claude agents failed`.
 Next phase (backend: friends, Yandex ID login, pager) needs its own
 brainstorm, starting from the research report's decision points.
 
-**Content Direction & Tony Scraponi: sub-projects #1-#8 and content engine A, B, C and D shipped.** See
+**Content Direction & Tony Scraponi: sub-projects #1-#8 and content engine A, B, C and D shipped; summaries from the page text shipped 2026-10-14.** See
 this file's section above for what shipped in
 each and what the final reviews found and fixed. Sub-project #2's bot/
 channel now exist (`@hypnosisflow`) and live delivery is verified
@@ -1075,7 +1086,7 @@ passed (summary in its bullet above, 2026-10-14). #7
 bullet above). Sub-project #8 (control
 room) is shipped and live (2026-10-06), and so is its hardening (M1, M2,
 M4, home countdown); its "Later" list is in its bullet above. Later
-candidates: a market-data source for Web Products, summary editing (the
+candidates: a market-data source for Web Products (the
 Telegram prompt for items awaiting review is content engine C). Content engine sub-project A is shipped and
 live (2026-10-06, `bed2bb7`); sub-project D's push 1 (Tony on
 `run-result.json`, legacy files removed, `main`'s hardening merged in)
@@ -1091,7 +1102,7 @@ between runs.
 Next: no sub-project is chosen yet — pick with Artem. Candidates: E
 (several delivery targets, waits for a real second target), editing the
 config from the control room (#8's "Later"), a market-data source for Web
-Products, summary editing, and the ranker's few-shot examples from his
+Products, and the ranker's few-shot examples from his
 decisions (roadmap "Later", once there are 30–50 — Telegram taps should get
 there quickly).
 

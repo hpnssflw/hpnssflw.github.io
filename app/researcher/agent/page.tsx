@@ -114,6 +114,9 @@ export default function ResearchAgentPage() {
               description; a one-line summary and score come back per item,
               anything below the threshold gets dropped, and only a few items
               per topic a day go into the queue — the rest wait their turn.
+              Before an item joins the queue, the agent reads the page itself
+              and rewrites the summary from what it says, not just the
+              headline.
             </li>
             <li>
               Assemble — surviving items get grouped by topic into a digest,
