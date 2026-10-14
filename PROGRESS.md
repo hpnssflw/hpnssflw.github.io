@@ -378,7 +378,7 @@ infrastructure.
 
 ## Content Direction & Tony Scraponi
 
-**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); next is #6's watch result (the 3-day watch ends 2026-10-08 ~18:22Z), then C (Telegram approval buttons, several delivery targets); the preset select on the control room shipped 2026-10-12.**
+**Status: sub-projects #1-#6, #8 (control room, plus its hardening: M1, M2, M4, home countdown) and content engine A shipped; D (preset switcher, both pushes) and #7 (Web Products RSS) shipped 2026-10-07; B (stories) shipped 2026-10-08 (pushed and live-checked); the preset select on the control room built 2026-10-12, pushed and live 2026-10-14; #6's watch passed (summary 2026-10-14); next is C (Telegram approval buttons, several delivery targets).**
 
 - Background/full plan: `docs/tony-scraponi-roadmap.md` — a third
   initiative alongside the site and the agent: reworking the agent's
@@ -636,6 +636,7 @@ infrastructure.
   Spec: `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
   Plan: `docs/superpowers/plans/2026-09-30-topic-source-quality.md`.
   Pushed 2026-10-05 (24882c2); first live run 2026-10-05T18:22Z (workflow_dispatch 37355404165): 159 verdicts cached, queued per topic 4/3/3 (ai-engineering/tooling/web-products), no duplicate URLs in pending.json. Watch for 3 days (spec's success criteria 2–3): items sent to DeepSeek (the scored-per-day line of `python -m agent report`) should drop to single digits per run after the first day, at most 10 queued a day; then run python -m agent report against agent-data's state.json and decide on #7 (Web Products source).
+  **Watch summary (2026-10-14, `report --days 14` on agent-data's state.json):** criteria 2–3 pass. After 10-05's first-day load (68/78/12 scored for ai-engineering/tooling/web-products) DeepSeek scores 10–25 items a day per topic over 2–5 runs a day (GitHub skips cron slots) — single digits per run; web-products' 43 on 10-07 is #7's one-off feed load. Queued since 10-05: 36/27/26, about 4 a day per topic, under the cap of 10; AI Engineering contributes most days, and Tooling's pending rows are all developer tools (repos, a linker, a diff viewer, coding-agent add-ons). Criterion 4 (approval rate) has no signal: of 89 queued, 0 were approved or rejected — 19 expired and 70 are pending. `tony-inbox` has no real decisions since 2026-09-29 (its 10-06 commits are #8's reject → undo check), so nothing has reached the channel since `last_sent_at` 2026-09-30. That is the case for C (approve from Telegram), not a ranking fault.
   Tuned with Artem against two live previews: Tooling's keywords gained Claude Code / Codex / Cursor / Copilot / coding agent, and AI Engineering's exclude names coding agents and their add-ons. Final review (opus): 0 Critical, 3 Important — the same URL could be queued twice in one run (fixed: one copy per URL), `new` keeps counting cached over-cap items (watch criterion restated around `report`'s scored-per-day line), and the `lib/topics.ts` merge with main's `subtopics[]` (resolved) — plus a fix wave for a 23h cap window (cron jitter), per-keyword HN and per-topic ranking failure isolation, and doc drift. Parked: failed rankings pass the threshold as score 1 (latent, only if `min_relevance` 1); the local panel's `new` drill-down lists only `seen` drops; `state.json` grows with a `RankRecord` per topic (prune later); same story from several sources still takes several cap slots (story clustering); equal-score ties mix HN points and GitHub stars (break by recency instead). The main checkout's `agent/.env` has the `DEEPSEEK_API_KEY` line again (lost around 2026-09-18, re-added 2026-10-05); local previews read the worktree's `agent/.env`, which starts empty — copy that one line into it.
 - **Sub-project #8, Tony Scraponi control room: shipped.**
   `/researcher/queue/` is now a one-screen control room: pulse (live,
@@ -837,7 +838,11 @@ infrastructure.
   approvals, run 2 deliver "05.10 · отправлено: 3 · сообщений: 1", no
   horizontal scroll. `/researcher/queue/` unchanged: 68 rows, titles
   lowercased, "j/k move · o open", collect shows #7's "rss: 11 feeds".
-- **Preset select (amends D): shipped 2026-10-12.** Spec:
+- **Preset select (amends D): built 2026-10-12, pushed and live
+  2026-10-14** (fast-forward `91ac622..f2451d4` from branch
+  `worktree-preset-select`; Vitest 334 and the build passed first; deploy
+  run 38512275889 succeeded; the live `/researcher/queue/` links both
+  demos, and the live demo pages link back and carry no `noindex`). Spec:
   `docs/superpowers/specs/2026-10-10-preset-select-design.md`. Plan:
   `docs/superpowers/plans/2026-10-10-preset-select.md`. A `<details>`
   dropdown of plain links (`components/PresetSwitch.tsx`, list from
@@ -998,7 +1003,7 @@ ordered sub-projects #1-#4 are now complete. The LAB backlog posts
 follow-up (`docs/superpowers/plans/2026-09-28-lab-backlog-posts.md`) is
 done too: all four posts are published. Sub-project #5 (Inbox) is
 shipped. Sub-project #6 (topic & source quality) is shipped; its 3-day watch
-ends 2026-10-08 ~18:22Z (its summary is next step 1 below). #7
+passed (summary in its bullet above, 2026-10-14). #7
 (Web Products RSS) is shipped and live (2026-10-07, `aacac4d`; see its
 bullet above). Sub-project #8 (control
 room) is shipped and live (2026-10-06), and so is its hardening (M1, M2,
@@ -1012,18 +1017,12 @@ section, `/researcher/demo/<slug>/`). B (stories) is built on branch
 `worktree-stories` and regression-checked against Tony (see its bullet
 above); it goes to `main` only on Artem's word, then the agent is
 dispatched by hand and the live check is recorded in B's bullet.
-Next, in order:
-1. **#6's 3-day observation summary** — only after 2026-10-08 ~18:22Z:
-   run `python -m agent report` on `state.json` from `agent-data` against
-   criteria 2-3 of
-   `docs/superpowers/specs/2026-09-30-topic-source-quality-design.md`.
-   Web-products' 36 scored on 10-07 is #7's one-off feed load, not a
-   regression.
-2. **Sub-project C** — Telegram approval buttons and several delivery
+Next:
+1. **Sub-project C** — Telegram approval buttons and several delivery
    targets. It still needs its own brainstorm → spec → plan (see
    `docs/tony-scraponi-roadmap.md`). C is built on branch
    `worktree-stories`, unpushed; rebase it onto `main` before its rollout —
-   `main` gained the preset select (2026-10-12) after it branched (expect
+   `main` gained the preset select (pushed 2026-10-14) after it branched (expect
    a conflict in `PROGRESS.md`).
 
 **General:** see `CLAUDE.md` for this repo's actual conventions —
