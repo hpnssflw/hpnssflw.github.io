@@ -238,7 +238,7 @@
   "04a096ef95eb18a0": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 336,
+    "last_score": 341,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -428,7 +428,7 @@
   "089b1d39fa5e292b": {
     "dismissed": null,
     "first_seen": "2026-10-14T05:08:55.463037+00:00",
-    "last_score": 85,
+    "last_score": 86,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -487,10 +487,17 @@
     },
     "times_sent": 0
   },
+  "0926b6ce8328ded3": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T03:21:15.589144+00:00",
+    "last_score": 50,
+    "ranks": {},
+    "times_sent": 0
+  },
   "09304fa0e0751d6f": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 330,
+    "last_score": 351,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -630,7 +637,7 @@
   "0bd395eb4c1e1020": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 133,
+    "last_score": 135,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -819,7 +826,7 @@
   "0ec3cfedd4c21800": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 72,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -889,7 +896,7 @@
   "0f8708c632074645": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 141,
+    "last_score": 142,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -929,6 +936,13 @@
     "last_score": 1412,
     "ranks": {},
     "times_sent": 1
+  },
+  "0ff4f52f124c9146": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T03:21:15.589144+00:00",
+    "last_score": 53,
+    "ranks": {},
+    "times_sent": 0
   },
   "101caf814283203f": {
     "dismissed": "expired",
@@ -1344,7 +1358,7 @@
   "1882e55caad4e932": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 40,
+    "last_score": 42,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1549,7 +1563,7 @@
   "1da799f62e6e5145": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 57,
+    "last_score": 58,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -1634,7 +1648,7 @@
   "1fb6d0f3133c1f72": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 78,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2538,7 +2552,7 @@
   "32881506b2adec69": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 109,
+    "last_score": 111,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2709,6 +2723,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "364f5f1cad75fb5b": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T03:21:15.589144+00:00",
+    "last_score": 95,
+    "ranks": {},
+    "times_sent": 0
+  },
   "36bb2f029c3170ef": {
     "dismissed": null,
     "first_seen": "2026-09-25T22:54:50.790277+00:00",
@@ -2779,7 +2800,7 @@
   "37bcad0fc0d2acd5": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 101,
+    "last_score": 104,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3523,7 +3544,7 @@
   "45aef4db4270f18d": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 112,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3590,7 +3611,7 @@
   "46d4d209813615e2": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 2065,
+    "last_score": 2128,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -3650,7 +3671,7 @@
   "476d427e5f97d6df": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 198,
+    "last_score": 234,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4165,7 +4186,7 @@
   "51ade619e94e7b78": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 81,
+    "last_score": 84,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4257,7 +4278,7 @@
   "5394c51ed710a783": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 77,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4410,7 +4431,7 @@
   "56c0690ddc7dfaf4": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 115,
+    "last_score": 116,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4554,7 +4575,7 @@
   "587281d93e4949fe": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 83,
+    "last_score": 84,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4682,7 +4703,7 @@
   "5ae2fb6b695e0b41": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 69,
+    "last_score": 90,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5022,7 +5043,7 @@
   "61b1035a00b15cc0": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 149,
+    "last_score": 155,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5236,7 +5257,7 @@
   "650fbbf64a9b51fc": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 112,
+    "last_score": 114,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5291,7 +5312,7 @@
   "6585583632f8eed4": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 235,
+    "last_score": 240,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5622,7 +5643,7 @@
   "6be5c5d9dce7b7d9": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 31,
+    "last_score": 44,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -5782,7 +5803,7 @@
   "6df8ebd1d1d3b68d": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 62,
+    "last_score": 66,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6127,7 +6148,7 @@
   "7449ff5f13002a06": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 128,
+    "last_score": 141,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6173,7 +6194,7 @@
   "749f3646333c3ad1": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 212,
+    "last_score": 213,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6330,7 +6351,7 @@
   "78a8ab0baa0cb9eb": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 229,
+    "last_score": 231,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6418,7 +6439,7 @@
   "7a89d3ba2a72b6c4": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 1431,
+    "last_score": 1439,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -6586,7 +6607,7 @@
   "7ed5583fdd7a1205": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 100,
+    "last_score": 125,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6717,7 +6738,7 @@
   "8046c79956428cb1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 94,
+    "last_score": 127,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6812,7 +6833,7 @@
   "81dee08a57628290": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 100,
+    "last_score": 109,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6918,7 +6939,7 @@
   "85780e68129982e7": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 132,
+    "last_score": 134,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6997,7 +7018,7 @@
   "86f18ad36404b773": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 81,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7020,7 +7041,7 @@
   "8720072390c5992a": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 929,
+    "last_score": 933,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7098,7 +7119,7 @@
   "8854d78214dd6150": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 752,
+    "last_score": 758,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -7513,7 +7534,7 @@
   "919f775b86fd2ee8": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 205,
+    "last_score": 215,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7577,7 +7598,7 @@
   "9356b6751b5ecf7a": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 199,
+    "last_score": 201,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -7600,7 +7621,7 @@
   "941213c73f2808a1": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 687,
+    "last_score": 706,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7731,7 +7752,7 @@
   "956aacf867197415": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 85,
+    "last_score": 87,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7955,7 +7976,7 @@
   "980e32e49af70cab": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 287,
+    "last_score": 289,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8038,7 +8059,7 @@
   "99181570673f9109": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 37,
+    "last_score": 38,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8093,7 +8114,7 @@
   "99b50cda3751ead4": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 80,
+    "last_score": 81,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8171,7 +8192,7 @@
   "9b21fa9a4490c8d7": {
     "dismissed": null,
     "first_seen": "2026-10-14T03:40:29.632688+00:00",
-    "last_score": 112,
+    "last_score": 115,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8245,7 +8266,7 @@
   "9c8e0559bae90808": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 138,
+    "last_score": 142,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8397,7 +8418,7 @@
   "9fc4f9782508f693": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 303,
+    "last_score": 309,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8556,7 +8577,7 @@
   "a4008f68ac6b6513": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 146,
+    "last_score": 152,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8642,7 +8663,7 @@
   "a52daacfcae86727": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 549,
+    "last_score": 553,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8681,7 +8702,7 @@
   "a5629ff3a2ef38f9": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 169,
+    "last_score": 170,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8727,7 +8748,7 @@
   "a6a0b0ef1abfb1bc": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 110,
+    "last_score": 121,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8835,7 +8856,7 @@
   "a7916291f2ecf9f7": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 590,
+    "last_score": 692,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9074,6 +9095,13 @@
     },
     "times_sent": 0
   },
+  "ab9bb7195f7587c0": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T03:21:15.589144+00:00",
+    "last_score": 42,
+    "ranks": {},
+    "times_sent": 0
+  },
   "abd0a7583c198356": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
@@ -9236,7 +9264,7 @@
   "af0dc0f74bb4c40a": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 309,
+    "last_score": 312,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9247,6 +9275,13 @@
         "summary": "A team of AI bots called Bops that run business ops, each with its own computer, email, and phone number."
       }
     },
+    "times_sent": 0
+  },
+  "af5ba9cdb2916c29": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T03:21:15.589144+00:00",
+    "last_score": 104,
+    "ranks": {},
     "times_sent": 0
   },
   "af6fb58376a65c87": {
@@ -9545,7 +9580,7 @@
   "b5f241f765311731": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 174,
+    "last_score": 176,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -9717,7 +9752,7 @@
   "b76cfe09d96780dc": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 149,
+    "last_score": 157,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9838,7 +9873,7 @@
   "ba37f20c750ee7b3": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 191,
+    "last_score": 194,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9908,7 +9943,7 @@
   "baffcb4d50a5b911": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 949,
+    "last_score": 971,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10114,7 +10149,7 @@
   "bf2149b8045ec7a8": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 744,
+    "last_score": 745,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10279,7 +10314,7 @@
   "c20cb5cc14b853a2": {
     "dismissed": null,
     "first_seen": "2026-10-14T03:40:29.632688+00:00",
-    "last_score": 844,
+    "last_score": 856,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -10385,7 +10420,7 @@
   "c44fc8610ac4f076": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 278,
+    "last_score": 279,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10431,7 +10466,7 @@
   "c4e129e4700158d0": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 284,
+    "last_score": 283,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -10710,7 +10745,7 @@
   "cb0908fa52c79627": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 59,
+    "last_score": 93,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10772,7 +10807,7 @@
   "cc1b21cd822df9e1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 75,
+    "last_score": 123,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10945,7 +10980,7 @@
   "ceabd70d7baac0d1": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 503,
+    "last_score": 517,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11079,7 +11114,7 @@
   "d12e09342932b4be": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 57,
+    "last_score": 61,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11111,7 +11146,7 @@
   "d16bd93ff857d83d": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 721,
+    "last_score": 722,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11182,7 +11217,7 @@
   "d2fc0d722b1f4562": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 329,
+    "last_score": 330,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11599,7 +11634,7 @@
   "d9c1b561a21ebe35": {
     "dismissed": null,
     "first_seen": "2026-10-14T05:08:55.463037+00:00",
-    "last_score": 113,
+    "last_score": 116,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11712,7 +11747,7 @@
   "dbd1dfa7a53e80a5": {
     "dismissed": null,
     "first_seen": "2026-10-10T23:15:33.901214+00:00",
-    "last_score": 206,
+    "last_score": 209,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11848,7 +11883,7 @@
   "de6a3ba228af2814": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 642,
+    "last_score": 673,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11926,7 +11961,7 @@
   "e011cc3858c1d4e2": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 741,
+    "last_score": 742,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12246,7 +12281,7 @@
   "e402bd002c0d3604": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 477,
+    "last_score": 489,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12382,7 +12417,7 @@
   "e86502df4595e24b": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 110,
+    "last_score": 114,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12546,7 +12581,7 @@
   "eb192f29f9b0ad47": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 112,
+    "last_score": 113,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12569,7 +12604,7 @@
   "eb7b4293d4abd6bf": {
     "dismissed": null,
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
-    "last_score": 1135,
+    "last_score": 1136,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -12599,7 +12634,7 @@
   "ec4b5e65913390d0": {
     "dismissed": "expired",
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
-    "last_score": 142,
+    "last_score": 143,
     "ranks": {},
     "times_sent": 0
   },
@@ -12960,7 +12995,7 @@
   "f37d1028e044d2d9": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 31,
+    "last_score": 32,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13354,7 +13389,7 @@
   "fe46d5e4893aa24c": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 108,
+    "last_score": 112,
     "ranks": {
       "tooling": {
         "queued_at": null,

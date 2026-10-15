@@ -4,30 +4,16 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 65,
+        "already_ranked": 68,
         "dismissed": 3,
-        "seen": 22
-      },
-      "inbox": {
-        "expired": 4
-      },
-      "rank": {
-        "below_relevance": 7,
-        "over_max_items": 14
+        "seen": 19
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 87,
+        "already_ranked": 92,
         "dismissed": 1,
         "seen": 15
-      },
-      "inbox": {
-        "expired": 3
-      },
-      "rank": {
-        "below_relevance": 6,
-        "over_max_items": 30
       }
     },
     "web-products": {
@@ -35,154 +21,159 @@
         "outside_window": 129
       },
       "dedupe": {
-        "already_ranked": 24,
+        "already_ranked": 26,
         "dismissed": 3,
         "seen": 19
-      },
-      "inbox": {
-        "expired": 2
-      },
-      "rank": {
-        "below_relevance": 2,
-        "over_max_items": 15
       }
     }
   },
-  "failures": [],
+  "failures": [
+    {
+      "source": null,
+      "stage": "rank",
+      "topic": "ai-engineering"
+    },
+    {
+      "source": null,
+      "stage": "rank",
+      "topic": "tooling"
+    },
+    {
+      "source": null,
+      "stage": "rank",
+      "topic": "web-products"
+    }
+  ],
   "funnel": {
     "ai-engineering": {
-      "collected": 111,
-      "in_window": 111,
+      "collected": 108,
+      "in_window": 108,
       "kept": 0,
-      "new": 21
+      "new": 18
     },
     "tooling": {
-      "collected": 139,
-      "in_window": 139,
+      "collected": 138,
+      "in_window": 138,
       "kept": 0,
-      "new": 36
+      "new": 30
     },
     "web-products": {
-      "collected": 192,
-      "in_window": 63,
+      "collected": 193,
+      "in_window": 64,
       "kept": 0,
-      "new": 17
+      "new": 16
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 41,
   "recent_events": [
     {
-      "reason": "over_max_items",
-      "title": "Decline in American social activities",
+      "reason": "already_ranked",
+      "title": "When data shows that everything causes cancer",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526882+00:00",
+      "ts": "2026-10-15T03:51:47.794294+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
+      "reason": "already_ranked",
+      "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526876+00:00",
+      "ts": "2026-10-15T03:51:47.794283+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
+      "reason": "already_ranked",
+      "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526869+00:00",
+      "ts": "2026-10-15T03:51:47.794272+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
+      "reason": "already_ranked",
+      "title": "People holding up the internet",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526863+00:00",
+      "ts": "2026-10-15T03:51:47.794261+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Firefox version 157 is round (and how to make it less round)",
+      "reason": "already_ranked",
+      "title": "caniname: CLI tool to check project name availability across Netlify and NPM (and other sources)",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526857+00:00",
+      "ts": "2026-10-15T03:51:47.794250+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "The \u201calien\u201d economics of AI monetization",
+      "reason": "already_ranked",
+      "title": "zhuyansen/new-term-radar",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526851+00:00",
+      "ts": "2026-10-15T03:51:47.794239+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Tiny Charts: Data Viz as Postage Stamp Art",
+      "reason": "already_ranked",
+      "title": "juliobsz/skills",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526845+00:00",
+      "ts": "2026-10-15T03:51:47.794229+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Beliefs in life after death",
+      "reason": "already_ranked",
+      "title": "Garinmckayl/anima",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526839+00:00",
+      "ts": "2026-10-15T03:51:47.794218+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "\u271a Draw attention visually",
+      "reason": "already_ranked",
+      "title": "toddrjones/datasets",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526833+00:00",
+      "ts": "2026-10-15T03:51:47.794207+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "How to Measure AI Search Visibility When Attribution Falls Short",
+      "reason": "already_ranked",
+      "title": "Meadows \u2013 a small language for stock-and-flow diagrams that run",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526811+00:00",
+      "ts": "2026-10-15T03:51:47.794196+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
+      "reason": "already_ranked",
+      "title": "I hired an illustrator to draw my house. Now it's my Home Assistant dashboard",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526804+00:00",
+      "ts": "2026-10-15T03:51:47.794185+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
+      "reason": "already_ranked",
+      "title": "Marshall Islands Stick Chart",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526795+00:00",
+      "ts": "2026-10-15T03:51:47.794174+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
+      "reason": "already_ranked",
+      "title": "Open source 160 sound visualization experiments",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526788+00:00",
+      "ts": "2026-10-15T03:51:47.794164+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "\u201cWebMCP is Agentic WebPerf\u201d",
+      "reason": "already_ranked",
+      "title": "Type-safe HTML templating in Zig",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526779+00:00",
+      "ts": "2026-10-15T03:51:47.794153+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Scroll-Triggered Animations Debugger (DevTools Extension)",
+      "reason": "already_ranked",
+      "title": "Show HN: PS2 games statically recompiled to WebAssembly",
       "topic": "web-products",
-      "ts": "2026-10-14T23:00:07.526766+00:00",
+      "ts": "2026-10-15T03:51:47.794141+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-09T14:59:29.651785+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-09T20:33:56.005527+00:00"
@@ -274,28 +265,32 @@
     {
       "kept": 0,
       "ts": "2026-10-14T22:59:05.256595+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-15T03:21:15.589144+00:00"
     }
   ],
-  "streak": 276,
+  "streak": 277,
   "topics": [
     {
-      "collected": 111,
+      "collected": 108,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 139,
+      "collected": 138,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 192,
+      "collected": 193,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-14T22:59:05.256595+00:00"
+  "updated_at": "2026-10-15T03:21:15.589144+00:00"
 }
