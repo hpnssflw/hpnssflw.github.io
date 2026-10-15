@@ -317,111 +317,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 20,
-      "tooling": 15,
-      "web-products": 15
+      "ai-engineering": 16,
+      "tooling": 12,
+      "web-products": 13
     },
-    "count": 50,
+    "count": 41,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "A Rust sandbox for running AI agents that restricts what they can execute, read, write and reach on the network, using OS isolation, default-deny policies and credential injection.",
-        "title": "strands-agents/box",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/strands-agents/box"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "An item on compressing LLMs to sub-1-bit precision via latent factorization, which relates directly to inference and serving optimization.",
-        "title": "Sub-1-Bit LLM Compression via Latent Factorization",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/SamsungLabs/LittleBit"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Cloudflare announces Clef, open-weight decision models plus a new RL fine-tuning platform.",
-        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://blog.cloudflare.com/clef-decision-models/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Announces Beam, Reflection's 501B open-weight model, a major model release relevant to what builders can run or serve.",
-        "title": "Beam: Reflection's 501B open-weight model",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://reflection.ai/blog/introducing-beam"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "skill-cabinet is a tool to find the skills your coding agents load, see which agents can use each one, and count how often you use them.",
-        "title": "flaviocopes/skill-cabinet",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/flaviocopes/skill-cabinet"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "sno-station-skills offers 31 tested skills that turn Claude Code and Codex into one working team with cross-vendor peer review, automatic handoff, morning briefs, work orders with proof, and a nightly learning loop.",
-        "title": "sno-ai/sno-station-skills",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/sno-ai/sno-station-skills"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "shaders provides WebGPU components for React, Vue, Svelte, Solid, JS, and Framer.",
-        "title": "shader-effects-inc/shaders",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/shader-effects-inc/shaders"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 9,
-        "source": "rss",
-        "summary": "An Astro tutorial for building an interactive coffee blog using core concepts like file-based routing, content collections, and islands architecture, with Astro described as performance-friendly and zero-JavaScript by default.",
-        "title": "Astro Tutorial: Make a Static Site with Interactive Components",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://www.debugbear.com/blog/astro-tutorial"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-08T21:02:42.379376+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Ahrefs guide to eight SEO problems to watch for on static sites, where CMS plugins no longer handle canonicals, sitemaps, redirects, metadata, schema, and 404s.",
-        "title": "SEO for Static Sites: 8 Problems to Watch For",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://ahrefs.com/blog/seo-for-static-sites/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-09T04:43:57.809400+00:00",
@@ -876,8 +777,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-15T16:22:31.699257+00:00",
-    "id": "2026-10-15T1622Z",
+    "at": "2026-10-15T22:54:23.821843+00:00",
+    "id": "2026-10-15T2254Z",
     "mode": "real",
     "offline": false
   },
@@ -888,13 +789,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 115,
-          "out": 115
+          "in": 114,
+          "out": 114
         },
         "tooling": {
           "drops": {},
-          "in": 139,
-          "out": 139
+          "in": 140,
+          "out": 140
         },
         "web-products": {
           "drops": {},
@@ -909,13 +810,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 115,
-          "out": 115
+          "in": 114,
+          "out": 114
         },
         "tooling": {
           "drops": {},
-          "in": 139,
-          "out": 139
+          "in": 140,
+          "out": 140
         },
         "web-products": {
           "drops": {
@@ -932,27 +833,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
-            "seen": 23
+            "dismissed": 4,
+            "seen": 21
           },
-          "in": 115,
+          "in": 114,
           "out": 89
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
-            "seen": 18
+            "seen": 17
           },
-          "in": 139,
-          "out": 120
+          "in": 140,
+          "out": 122
         },
         "web-products": {
           "drops": {
-            "dismissed": 2,
-            "seen": 20
+            "dismissed": 4,
+            "seen": 19
           },
           "in": 62,
-          "out": 40
+          "out": 39
         }
       },
       "stage": "dedupe"
@@ -962,24 +863,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 70
+            "already_ranked": 67
           },
           "in": 89,
-          "out": 19
+          "out": 22
         },
         "tooling": {
           "drops": {
-            "already_ranked": 87
+            "already_ranked": 90
           },
-          "in": 120,
-          "out": 33
+          "in": 122,
+          "out": 32
         },
         "web-products": {
           "drops": {
-            "already_ranked": 24
+            "already_ranked": 25
           },
-          "in": 40,
-          "out": 16
+          "in": 39,
+          "out": 14
         }
       },
       "stage": "cache"
@@ -989,18 +890,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 6,
+          "out": 6
         },
         "tooling": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1010,23 +911,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 5
           },
-          "in": 19,
-          "out": 16
+          "in": 22,
+          "out": 17
         },
         "tooling": {
           "drops": {
-            "below_relevance": 5
-          },
-          "in": 33,
-          "out": 28
-        },
-        "web-products": {
-          "drops": {
             "below_relevance": 2
           },
-          "in": 16,
+          "in": 32,
+          "out": 30
+        },
+        "web-products": {
+          "drops": {},
+          "in": 14,
           "out": 14
         }
       },
@@ -1037,24 +936,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 17
           },
-          "in": 16,
+          "in": 17,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 28
+            "over_max_items": 30
           },
-          "in": 28,
+          "in": 30,
           "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 14
           },
           "in": 14,
-          "out": 1
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1074,11 +973,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "notes": {
-            "summarized": 1
-          },
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1089,17 +985,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 20
+          "out": 16
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 15
+          "out": 12
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 15
+          "in": 0,
+          "out": 13
         }
       },
       "stage": "queue"
@@ -1108,22 +1004,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 20,
-          "out": 20
+          "out": 16
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 15,
-          "out": 15
+          "out": 12
         },
         "web-products": {
-          "drops": {},
-          "in": 14,
-          "notes": {
-            "asked": 1
+          "drops": {
+            "expired": 2
           },
-          "out": 14
+          "in": 15,
+          "out": 13
         }
       },
       "stage": "review"
