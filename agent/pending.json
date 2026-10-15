@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-08T04:40:37.892950+00:00",
-      "score": 8,
-      "source": "rss",
-      "summary": "Explains the new CSS progress() function that returns a unitless 0-1 value between bounds, and how to manually replicate its normalization math with calc() while browser support grows.",
-      "title": "Fallbacks for CSS `progress()`",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://blog.master.dev/fallbacks-for-css-progress/"
-    },
-    {
       "pending_since": "2026-10-08T21:02:42.379376+00:00",
       "score": 9,
       "source": "github",
@@ -409,6 +399,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://blog.master.dev/building-a-fancy-scrollspy-using-modern-css/"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Liquid AI's LFM2.5-24B-A2B, an open-weight 24B reasoning model with 2B active parameters for on-device agents. New versus LFM2-24B-A2B: reasoning-only chain-of-thought output, 32K\u2192128K context, 65K\u2192128K vocabulary, 33T pretraining tokens, and faster decode.",
+      "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "ResiMind, an open-source neuro-symbolic agent architecture combining independent verification, residual-guided self-correction and reusable verified rule memory, so learned rules grow outside model weights. Includes MCP tools, a repair skill, and a bounded Lean planner as an experimental composition primitive.",
+      "title": "1105216375-alt/resimind",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/1105216375-alt/resimind"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "PolyStrata, free open-source software for running large AI models locally on a normal PC, covering seven models (Qwen3.8-Flash-Next, GLM 5.3 Flash, DeepSeek V4 Flash, Qwen3.6, Ornith 1.5, Gemma 4, Tiel Coder) across two engines, and able to swap installed models while running.",
+      "title": "VecSzn/PolyStrata",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/VecSzn/PolyStrata"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A book that teaches how LLMs work by building one from scratch in Node.js and TypeScript, going chapter by chapter through dataset, dataloader, attention, transformer block, GPT and the training loop, with runnable chapter entry points and live WebGPU demos.",
+      "title": "Show HN: Building an LLM from Scratch in TypeScript",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://book.humanexperiences.io/"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "npm package ai-deslop: an Oxlint plugin of opinionated rules that reject low-evidence, AI-slop TypeScript patterns, vendored from dmmulroy/anti-slop plus new deslop/* rules. Ships compiled JS for Bun, Deno or Node, with a recommended config.",
+      "title": "Show HN: Deslop \u2013 Oxlint rules for AI-generated TypeScript",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/maharshi365/deslop"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "k10s is a clickable Kubernetes TUI written in Go with Bubble Tea, offering mouse-driven panes, cluster-wide ctrl+p search, lazy informers for instant startup, and AI that gets the current context, namespace and selected object injected. Ships an offline demo cluster.",
+      "title": "Show HN: K10s \u2013 A Clickable Kubernetes TUI (Go, Bubble Tea)",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/p10node/k10s"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "A Claude Code session-handoff template whose /session-start script checks written notes against git, GitHub and machine facts, reporting where they disagree before proposing the day's task; commands cover handoff, board, autonomy, checks and trim.",
+      "title": "truongfelix/workflow",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/truongfelix/workflow"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 9,
+      "source": "rss",
+      "summary": "A new Chrome DevTools extension, Scroll-Triggered Animations Debugger, adds an Elements-panel minimap and live trigger-range editing to visualize and debug CSS Scroll-Triggered Animations using ScrollTimeline (scroll()) and ViewTimeline (view()), including position: sticky.",
+      "title": "Scroll-Triggered Animations Debugger (DevTools Extension)",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://www.bram.us/2026/10/14/scroll-triggered-animations-debugger-devtools-extension/"
+    },
+    {
+      "pending_since": "2026-10-15T08:53:31.348611+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "A blog post arguing WebMCP is \"agentic WebPerf\": not an alternative way to use a site, but a way to expose a site's capabilities as JavaScript tools agents can call directly, making agent interaction faster, better and cheaper than burning tokens to figure it out.",
+      "title": "\u201cWebMCP is Agentic WebPerf\u201d",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://blog.master.dev/webmcp-is-agentic-webperf/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"
