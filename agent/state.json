@@ -238,7 +238,7 @@
   "04a096ef95eb18a0": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 350,
+    "last_score": 357,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -397,6 +397,22 @@
     },
     "times_sent": 0
   },
+  "077535acc0a79903": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 4,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A FlowingData item highlighting a Wall Street Journal report with charts on how the wealthiest Americans' wealth grew, driven by stock-market gains."
+      }
+    },
+    "times_sent": 0
+  },
   "07b1b8e0159752e8": {
     "dismissed": null,
     "first_seen": "2026-08-20T16:20:33.961835+00:00",
@@ -490,7 +506,7 @@
   "0926b6ce8328ded3": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 55,
+    "last_score": 59,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -506,7 +522,7 @@
   "09304fa0e0751d6f": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 368,
+    "last_score": 378,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -646,7 +662,7 @@
   "0bd395eb4c1e1020": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 135,
+    "last_score": 137,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -835,7 +851,7 @@
   "0ec3cfedd4c21800": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 79,
+    "last_score": 82,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -905,7 +921,7 @@
   "0f8708c632074645": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 143,
+    "last_score": 146,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -949,10 +965,10 @@
   "0ff4f52f124c9146": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 66,
+    "last_score": 73,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-15T16:22:31.699257+00:00",
         "ranked_at": "2026-10-15T08:53:31.348611+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -1376,7 +1392,7 @@
   "1882e55caad4e932": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 45,
+    "last_score": 46,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1414,7 +1430,7 @@
   "1929017f5df96ae4": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 3372,
+    "last_score": 3384,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1666,7 +1682,7 @@
   "1fb6d0f3133c1f72": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 84,
+    "last_score": 85,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1921,6 +1937,22 @@
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
     "last_score": 151,
     "ranks": {},
+    "times_sent": 0
+  },
+  "263050875f85e6ce": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 51,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 51,
+        "summary": "A post on jackantico.io about creating a Garmin \"MCP\", i.e. an MCP server/tool integration for Garmin data."
+      }
+    },
     "times_sent": 0
   },
   "26b7816fc1e0ed0e": {
@@ -2356,7 +2388,7 @@
   "2fd328a478e282d9": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 75,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2570,7 +2602,7 @@
   "32881506b2adec69": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 112,
+    "last_score": 114,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2713,6 +2745,22 @@
     },
     "times_sent": 0
   },
+  "3515a465737d380c": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 181,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 181,
+        "summary": "open_scion is described as an open-source version of Scion, version control built for coding agents."
+      }
+    },
+    "times_sent": 0
+  },
   "35399abaec91ebda": {
     "dismissed": "expired",
     "first_seen": "2026-10-02T04:14:08.473534+00:00",
@@ -2744,7 +2792,7 @@
   "364f5f1cad75fb5b": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 201,
+    "last_score": 268,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-15T08:53:31.348611+00:00",
@@ -3571,7 +3619,7 @@
   "45aef4db4270f18d": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 141,
+    "last_score": 158,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3628,6 +3676,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "46a6f9cbbda5371e": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 61,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 61,
+        "summary": "Show HN project for building terminal UIs in Lua, created by Neovim users who wanted a harness they could customize like their terminals and editors."
+      }
+    },
+    "times_sent": 0
+  },
   "46b6a8516986c3e1": {
     "dismissed": null,
     "first_seen": "2026-08-21T20:12:34.878234+00:00",
@@ -3638,7 +3702,7 @@
   "46d4d209813615e2": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 2221,
+    "last_score": 2337,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -3698,7 +3762,7 @@
   "476d427e5f97d6df": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 257,
+    "last_score": 315,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4730,7 +4794,7 @@
   "5ae2fb6b695e0b41": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 114,
+    "last_score": 125,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4982,7 +5046,7 @@
   "5f7af9b18c9e7060": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 211,
+    "last_score": 213,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5070,7 +5134,7 @@
   "61b1035a00b15cc0": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 162,
+    "last_score": 163,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5098,6 +5162,22 @@
       }
     },
     "times_sent": 1
+  },
+  "61d98d12690dff19": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 158,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 158,
+        "summary": "AI-Cross-Border-Ecommerce-Agent-Toolkit splits cross-border e-commerce operations SOPs into 7 reusable AI Agent workflows with prompts, templates and real cases."
+      }
+    },
+    "times_sent": 0
   },
   "6256763adbf7df5f": {
     "dismissed": null,
@@ -5183,7 +5263,7 @@
   "63943982f089ed8b": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
-    "last_score": 141,
+    "last_score": 142,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5284,7 +5364,7 @@
   "650fbbf64a9b51fc": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 118,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-15T08:53:31.348611+00:00",
@@ -5339,7 +5419,7 @@
   "6585583632f8eed4": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 243,
+    "last_score": 244,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5616,6 +5696,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "6a9a2c4c2265c78f": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "Stripe introduces real-time sync to Postgres for Stripe Data Pipeline, letting developers keep databases current without custom integrations."
+      }
+    },
+    "times_sent": 0
+  },
   "6aab9ebe3f5136f7": {
     "dismissed": "expired",
     "first_seen": "2026-10-03T09:43:15.596705+00:00",
@@ -5670,7 +5766,7 @@
   "6be5c5d9dce7b7d9": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 48,
+    "last_score": 53,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -5830,7 +5926,7 @@
   "6df8ebd1d1d3b68d": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 69,
+    "last_score": 70,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5998,7 +6094,7 @@
   "70620861a7df5ed7": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 416,
+    "last_score": 417,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6014,7 +6110,7 @@
   "70c2480d2327e859": {
     "dismissed": null,
     "first_seen": "2026-10-15T08:53:31.348611+00:00",
-    "last_score": 33,
+    "last_score": 36,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6168,7 +6264,7 @@
   "7405d08cacac2305": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 58,
+    "last_score": 59,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-15T08:53:31.348611+00:00",
@@ -6191,7 +6287,7 @@
   "7449ff5f13002a06": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 146,
+    "last_score": 157,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6237,7 +6333,7 @@
   "749f3646333c3ad1": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 213,
+    "last_score": 214,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6394,7 +6490,7 @@
   "78a8ab0baa0cb9eb": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 231,
+    "last_score": 232,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6482,7 +6578,7 @@
   "7a89d3ba2a72b6c4": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 1447,
+    "last_score": 1454,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -6650,15 +6746,15 @@
   "7ed5583fdd7a1205": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 174,
+    "last_score": 217,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-14T22:59:05.256595+00:00",
-        "relevance": 3,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 2,
         "rubric": "3472af8a46e1",
-        "source_score": 100,
-        "summary": "A GitHub project offering system instructions and source-aware steering for GPT in Codex, tagged prompt-engineering and ai-agents."
+        "source_score": 217,
+        "summary": "gpt-with-taste provides system instructions and source-aware steering for GPT in Codex, framed as better judgment and taste with less ceremony."
       }
     },
     "times_sent": 0
@@ -6781,15 +6877,15 @@
   "8046c79956428cb1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 162,
+    "last_score": 203,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-14T22:59:05.256595+00:00",
-        "relevance": 6,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 7,
         "rubric": "02189e2467e9",
-        "source_score": 94,
-        "summary": "Show HN for Petal, a free and open-source pair programming tool built by former CoScreen team members after Datadog sunset CoScreen."
+        "source_score": 203,
+        "summary": "Show HN open-source pair programming tool built by four members of the original CoScreen team as a free alternative after Datadog sunset CoScreen."
       }
     },
     "times_sent": 0
@@ -6837,7 +6933,7 @@
   "80b17e5ba2acecb3": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 87,
+    "last_score": 89,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6876,7 +6972,7 @@
   "81dee08a57628290": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 113,
+    "last_score": 116,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6894,6 +6990,22 @@
     "first_seen": "2026-09-24T16:03:10.191448+00:00",
     "last_score": 40,
     "ranks": {},
+    "times_sent": 0
+  },
+  "831d18144108889b": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 120,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 120,
+        "summary": "GitHub repository for a Windows HWID spoofer configurator that resets hardware fingerprint identifiers from a local GUI."
+      }
+    },
     "times_sent": 0
   },
   "836a79b0f997f6d8": {
@@ -6982,7 +7094,7 @@
   "85780e68129982e7": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 139,
+    "last_score": 144,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7084,7 +7196,7 @@
   "8720072390c5992a": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 936,
+    "last_score": 972,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7162,7 +7274,7 @@
   "8854d78214dd6150": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 763,
+    "last_score": 768,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -7527,6 +7639,22 @@
     },
     "times_sent": 1
   },
+  "90d480b6c5d96252": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 93,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 93,
+        "summary": "Show HN project for finding native plants for your location, based on the founder's experience replacing parts of a yard."
+      }
+    },
+    "times_sent": 0
+  },
   "9139f009d0a21056": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
@@ -7577,7 +7705,7 @@
   "919f775b86fd2ee8": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 223,
+    "last_score": 236,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7622,6 +7750,22 @@
     },
     "times_sent": 0
   },
+  "929fc4b0fd97be26": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 381,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 381,
+        "summary": "open-intelligent-ui is an open-source take on ChatGPT's Intelligent UI in which answers stream as interactive UI such as maps, photos, charts, drawings and working tools, built with OpenUI."
+      }
+    },
+    "times_sent": 0
+  },
   "93481ec2e3a9d5b0": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
@@ -7641,7 +7785,7 @@
   "9356b6751b5ecf7a": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
-    "last_score": 202,
+    "last_score": 204,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -7664,7 +7808,7 @@
   "941213c73f2808a1": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 717,
+    "last_score": 731,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7795,15 +7939,15 @@
   "956aacf867197415": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 87,
+    "last_score": 90,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-13T23:36:41.456320+00:00",
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
         "relevance": 1,
         "rubric": "02189e2467e9",
-        "source_score": 39,
-        "summary": "Spotatui is a Spotify TUI/GUI client that avoids Spotify web API rate limits."
+        "source_score": 90,
+        "summary": "Show HN Spotify TUI/GUI client revived from spotify-tui, addressing Spotify web API rate limits."
       }
     },
     "times_sent": 0
@@ -8019,7 +8163,7 @@
   "980e32e49af70cab": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 290,
+    "last_score": 291,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8157,7 +8301,7 @@
   "99b50cda3751ead4": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 82,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8235,7 +8379,7 @@
   "9b21fa9a4490c8d7": {
     "dismissed": null,
     "first_seen": "2026-10-14T03:40:29.632688+00:00",
-    "last_score": 117,
+    "last_score": 119,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8309,7 +8453,7 @@
   "9c8e0559bae90808": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 146,
+    "last_score": 152,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8461,15 +8605,15 @@
   "9fc4f9782508f693": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 322,
+    "last_score": 342,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-11T19:55:42.477843+00:00",
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
         "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 171,
-        "summary": "A McDonald's MCP-based skill for optimizing ordering costs, calculating the cheapest meal plan for the current store and warning about add-on traps."
+        "source_score": 342,
+        "summary": "\u9ea6\u9ea6\u7701\u94b1\u52a9\u624b is a McDonald's MCP-based ordering cost-optimization Skill that computes the cheapest ordering plan for a store and flags add-on traps."
       }
     },
     "times_sent": 0
@@ -8620,7 +8764,7 @@
   "a4008f68ac6b6513": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 160,
+    "last_score": 169,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8706,7 +8850,7 @@
   "a52daacfcae86727": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 558,
+    "last_score": 564,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8745,7 +8889,7 @@
   "a5629ff3a2ef38f9": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 170,
+    "last_score": 171,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8791,7 +8935,7 @@
   "a6a0b0ef1abfb1bc": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 133,
+    "last_score": 147,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8899,7 +9043,7 @@
   "a7916291f2ecf9f7": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 854,
+    "last_score": 953,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8977,6 +9121,22 @@
     "first_seen": "2026-08-22T16:10:36.164469+00:00",
     "last_score": 120,
     "ranks": {},
+    "times_sent": 0
+  },
+  "a949e89b4b36cefd": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 33,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 33,
+        "summary": "An analysis of prompt injection carried in HTTP headers, based on what 217M web responses show, per signalscorps.com."
+      }
+    },
     "times_sent": 0
   },
   "a9505a199f3d9e63": {
@@ -9141,7 +9301,7 @@
   "ab9bb7195f7587c0": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 72,
+    "last_score": 112,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9306,6 +9466,22 @@
     },
     "times_sent": 0
   },
+  "ae8748f9a8f9c58c": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 110,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 110,
+        "summary": "foxprofile is a free, open-source anti-detect browser profile manager with per-profile fingerprint, cookies and proxy, Camoufox and Chrome engines, a desktop app, REST API and MCP server for AI agents, positioned as a self-hosted GoLogin/MoreLogin alternative."
+      }
+    },
+    "times_sent": 0
+  },
   "ae93fb765ce454ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -9316,7 +9492,7 @@
   "af0dc0f74bb4c40a": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 312,
+    "last_score": 315,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9332,7 +9508,7 @@
   "af5ba9cdb2916c29": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 194,
+    "last_score": 369,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9555,7 +9731,7 @@
   "b308c1f55b513d5e": {
     "dismissed": null,
     "first_seen": "2026-10-15T08:53:31.348611+00:00",
-    "last_score": 100,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9657,7 +9833,7 @@
   "b5f241f765311731": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 179,
+    "last_score": 178,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -9829,7 +10005,7 @@
   "b76cfe09d96780dc": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 165,
+    "last_score": 168,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9926,6 +10102,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "b996ab45573be092": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 79,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 79,
+        "summary": "Show HN project for persistent tunnels for filesharing, spun from frustrations with LocalSend and DashBeam and built with Slint."
+      }
+    },
+    "times_sent": 0
+  },
   "b9e247337066d47e": {
     "dismissed": null,
     "first_seen": "2026-09-23T22:31:50.850872+00:00",
@@ -9950,7 +10142,7 @@
   "ba37f20c750ee7b3": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 204,
+    "last_score": 210,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10020,7 +10212,7 @@
   "baffcb4d50a5b911": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 991,
+    "last_score": 1016,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10074,7 +10266,7 @@
   "bb80d48523c945ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:19:10.896068+00:00",
-    "last_score": 585,
+    "last_score": 586,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10180,7 +10372,7 @@
   "be1ae401637add81": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 162,
+    "last_score": 167,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -10226,7 +10418,7 @@
   "bf2149b8045ec7a8": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
-    "last_score": 747,
+    "last_score": 751,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10391,7 +10583,7 @@
   "c20cb5cc14b853a2": {
     "dismissed": null,
     "first_seen": "2026-10-14T03:40:29.632688+00:00",
-    "last_score": 870,
+    "last_score": 891,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -10497,7 +10689,7 @@
   "c44fc8610ac4f076": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 280,
+    "last_score": 285,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10543,7 +10735,7 @@
   "c4e129e4700158d0": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 284,
+    "last_score": 286,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -10822,7 +11014,7 @@
   "cb0908fa52c79627": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 100,
+    "last_score": 105,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10884,7 +11076,7 @@
   "cc1b21cd822df9e1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 161,
+    "last_score": 191,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11057,7 +11249,7 @@
   "ceabd70d7baac0d1": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 525,
+    "last_score": 546,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11191,7 +11383,7 @@
   "d12e09342932b4be": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 69,
+    "last_score": 73,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11294,7 +11486,7 @@
   "d2fc0d722b1f4562": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
-    "last_score": 334,
+    "last_score": 338,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11479,7 +11671,7 @@
   "d66b18709c4ba948": {
     "dismissed": "expired",
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
-    "last_score": 760,
+    "last_score": 761,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-07T21:01:09.362592+00:00",
@@ -11711,7 +11903,7 @@
   "d9c1b561a21ebe35": {
     "dismissed": null,
     "first_seen": "2026-10-14T05:08:55.463037+00:00",
-    "last_score": 119,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-15T08:53:31.348611+00:00",
@@ -11750,6 +11942,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "daae06dbc4e731b9": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A FlowingData process post where Nathan Yau walks through his thinking when starting with a new dataset."
+      }
+    },
     "times_sent": 0
   },
   "dab27c54d8c92fb4": {
@@ -11824,7 +12032,7 @@
   "dbd1dfa7a53e80a5": {
     "dismissed": null,
     "first_seen": "2026-10-10T23:15:33.901214+00:00",
-    "last_score": 212,
+    "last_score": 216,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11960,7 +12168,7 @@
   "de6a3ba228af2814": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 759,
+    "last_score": 809,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12038,7 +12246,7 @@
   "e011cc3858c1d4e2": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 743,
+    "last_score": 744,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12358,7 +12566,7 @@
   "e402bd002c0d3604": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 492,
+    "last_score": 496,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12411,7 +12619,7 @@
   "e6753b8422696224": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 218,
+    "last_score": 219,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12494,7 +12702,7 @@
   "e86502df4595e24b": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 116,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12658,7 +12866,7 @@
   "eb192f29f9b0ad47": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 113,
+    "last_score": 114,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12857,6 +13065,22 @@
     "last_score": 862,
     "ranks": {},
     "times_sent": 1
+  },
+  "f08784ca69eb615b": {
+    "dismissed": null,
+    "first_seen": "2026-10-15T16:22:31.699257+00:00",
+    "last_score": 149,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 149,
+        "summary": "Show HN site listing land for sale that borders public land."
+      }
+    },
+    "times_sent": 0
   },
   "f0af4d2fb01639f9": {
     "dismissed": null,
@@ -13466,7 +13690,7 @@
   "fe46d5e4893aa24c": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 117,
+    "last_score": 120,
     "ranks": {
       "tooling": {
         "queued_at": null,
