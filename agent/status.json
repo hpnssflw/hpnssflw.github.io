@@ -4,23 +4,28 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 70,
+        "already_ranked": 69,
         "dismissed": 3,
-        "seen": 24
+        "seen": 23
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 14
+        "below_relevance": 8,
+        "over_max_items": 16
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 82,
-        "dismissed": 1,
-        "seen": 22
+        "already_ranked": 79,
+        "seen": 20
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 4,
+        "below_relevance": 5,
         "over_max_items": 26
       }
     },
@@ -29,152 +34,150 @@
         "outside_window": 130
       },
       "dedupe": {
-        "already_ranked": 25,
-        "dismissed": 5,
-        "seen": 19
+        "already_ranked": 27,
+        "dismissed": 6,
+        "seen": 18
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 10
+        "below_relevance": 1,
+        "over_max_items": 12
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 113,
-      "in_window": 113,
+      "collected": 119,
+      "in_window": 119,
       "kept": 0,
-      "new": 16
+      "new": 24
     },
     "tooling": {
-      "collected": 135,
-      "in_window": 135,
+      "collected": 130,
+      "in_window": 130,
       "kept": 0,
-      "new": 30
+      "new": 31
     },
     "web-products": {
-      "collected": 193,
-      "in_window": 63,
-      "kept": 1,
-      "new": 14
+      "collected": 194,
+      "in_window": 64,
+      "kept": 0,
+      "new": 13
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 50,
+  "pending_count": 41,
   "recent_events": [
-    {
-      "score": 7,
-      "source": "rss",
-      "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
-      "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279710+00:00",
-      "verdict": "kept"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Warming Stripes as a screensaver",
-      "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279689+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Unlocking AI in Your Apps with TanStack AI",
-      "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279677+00:00",
-      "verdict": "drop"
-    },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279666+00:00",
+      "ts": "2026-10-16T22:34:17.349003+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279654+00:00",
+      "ts": "2026-10-16T22:34:17.348989+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Warming Stripes as a screensaver",
+      "topic": "web-products",
+      "ts": "2026-10-16T22:34:17.348971+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Unlocking AI in Your Apps with TanStack AI",
+      "topic": "web-products",
+      "ts": "2026-10-16T22:34:17.348962+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279643+00:00",
+      "ts": "2026-10-16T22:34:17.348953+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279630+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "How to Automate Content Creation: A Follow-Along Guide",
-      "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279617+00:00",
+      "ts": "2026-10-16T22:34:17.348945+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279601+00:00",
+      "ts": "2026-10-16T22:34:17.348936+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Scale of proposed billionaire wealth tax in California",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279568+00:00",
+      "ts": "2026-10-16T22:34:17.348927+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:35.279502+00:00",
+      "ts": "2026-10-16T22:34:17.348918+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "How to Automate Content Creation: A Follow-Along Guide",
+      "topic": "web-products",
+      "ts": "2026-10-16T22:34:17.348908+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Firefox 158 released with JPEG XL support by default",
+      "topic": "web-products",
+      "ts": "2026-10-16T22:34:17.348883+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "New ways for fintechs to move money and expand globally",
+      "topic": "web-products",
+      "ts": "2026-10-16T22:34:17.348863+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Is Your Organization Messing Up AI Adoption?",
+      "title": "toddrjones/datasets",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:32.700457+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "pathadvisorrafter/PokeMMO-Atlas-AIO-Soft",
-      "topic": "web-products",
-      "ts": "2026-10-16T16:09:32.700436+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "The insider trading you're allowed to do",
-      "topic": "web-products",
-      "ts": "2026-10-16T16:09:32.700378+00:00",
+      "ts": "2026-10-16T22:34:17.348607+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-16T16:09:07.045740+00:00",
+      "ts": "2026-10-16T22:34:12.778445+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Learning is the thing",
+      "topic": "web-products",
+      "ts": "2026-10-16T22:34:12.778437+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-11T14:40:21.388865+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-11T19:55:42.477843+00:00"
@@ -266,28 +269,32 @@
     {
       "kept": 1,
       "ts": "2026-10-16T16:08:13.564209+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-16T22:33:29.937985+00:00"
     }
   ],
-  "streak": 283,
+  "streak": 284,
   "topics": [
     {
-      "collected": 113,
+      "collected": 119,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 135,
+      "collected": 130,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 193,
-      "kept": 1,
+      "collected": 194,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-16T16:08:13.564209+00:00"
+  "updated_at": "2026-10-16T22:33:29.937985+00:00"
 }

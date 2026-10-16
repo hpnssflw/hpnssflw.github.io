@@ -317,111 +317,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 20,
-      "tooling": 15,
-      "web-products": 15
+      "ai-engineering": 16,
+      "tooling": 12,
+      "web-products": 13
     },
-    "count": 50,
+    "count": 41,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "agent-smith is a project offering adaptive model routing, a Codex usage monitor, and reproducible benchmarks, tagged ai-agents, benchmark, codex, cost-optimization, llm-routing and local-first.",
-        "title": "Chengjun023/agent-smith",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/Chengjun023/agent-smith"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A post arguing that agents don't need memory, they need documentation.",
-        "title": "Agents don't need memory, they need documentation",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://liao.gg/blog/agents-dont-need-memory"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "An Artificial Analysis piece analyzes Gemini 4 Argon (High) on intelligence, performance and price.",
-        "title": "Gemini 4 Argon (High): Intelligence, Performance and Price Analysis",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://artificialanalysis.ai/models/gemini-4-argon"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "An Artificial Analysis piece reports that GPT-6.1 Sol replaces GPT-6 Sol after just seven days, with near-Astra intelligence, covering model performance and price.",
-        "title": "GPT-6.1 Sol replaces GPT-6 Sol after just 7 days, with near-Astra intelligence",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Mold Linker version 3.0.0 has been released and rewritten in Rust.",
-        "title": "Mold Linker Version 3.0.0 Release – Rewritten in Rust",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/rui314/mold/releases/tag/v3.0.0"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A proposal for an OSC 7501 terminal protocol that reports program status in the terminal.",
-        "title": "A Terminal Protocol for Program Status (OSC 7501)",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://mitchellh.com/writing/program-status-osc7501"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "A collection of Claude Code mods including live lines above the prompt, guards, panes, and games.",
-        "title": "hamzafer/claude-code-mods",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/hamzafer/claude-code-mods"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 9,
-        "source": "rss",
-        "summary": "An interactive visualization of the Hebrew Bible by Danyel Fisher, with columns for books, lines for chapters, and squares for verses, allowing zoom and pan.",
-        "title": "Interactive map of the Hebrew Bible",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/10/09/interactive-map-of-the-hebrew-bible/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T20:33:56.005527+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Safari Technology Preview 254 is available for macOS, with WebKit changes including accessibility fixes such as VoiceOver behavior on date, time, and color inputs and on controls styled with pointer-events: none.",
-        "title": "Release Notes for Safari Technology Preview 254",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://webkit.org/blog/18420/release-notes-for-safari-technology-preview-254/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-10T04:29:22.971524+00:00",
@@ -876,8 +777,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-16T16:08:13.564209+00:00",
-    "id": "2026-10-16T1608Z",
+    "at": "2026-10-16T22:33:29.937985+00:00",
+    "id": "2026-10-16T2233Z",
     "mode": "real",
     "offline": false
   },
@@ -888,18 +789,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 113,
-          "out": 113
+          "in": 119,
+          "out": 119
         },
         "tooling": {
           "drops": {},
-          "in": 135,
-          "out": 135
+          "in": 130,
+          "out": 130
         },
         "web-products": {
           "drops": {},
-          "in": 193,
-          "out": 193
+          "in": 194,
+          "out": 194
         }
       },
       "stage": "collect"
@@ -909,20 +810,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 113,
-          "out": 113
+          "in": 119,
+          "out": 119
         },
         "tooling": {
           "drops": {},
-          "in": 135,
-          "out": 135
+          "in": 130,
+          "out": 130
         },
         "web-products": {
           "drops": {
             "outside_window": 130
           },
-          "in": 193,
-          "out": 63
+          "in": 194,
+          "out": 64
         }
       },
       "stage": "window"
@@ -933,26 +834,25 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 3,
-            "seen": 24
+            "seen": 23
           },
-          "in": 113,
-          "out": 86
+          "in": 119,
+          "out": 93
         },
         "tooling": {
           "drops": {
-            "dismissed": 1,
-            "seen": 22
+            "seen": 20
           },
-          "in": 135,
-          "out": 112
+          "in": 130,
+          "out": 110
         },
         "web-products": {
           "drops": {
-            "dismissed": 5,
-            "seen": 19
+            "dismissed": 6,
+            "seen": 18
           },
-          "in": 63,
-          "out": 39
+          "in": 64,
+          "out": 40
         }
       },
       "stage": "dedupe"
@@ -962,24 +862,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 70
+            "already_ranked": 69
           },
-          "in": 86,
-          "out": 16
+          "in": 93,
+          "out": 24
         },
         "tooling": {
           "drops": {
-            "already_ranked": 82
+            "already_ranked": 79
           },
-          "in": 112,
-          "out": 30
+          "in": 110,
+          "out": 31
         },
         "web-products": {
           "drops": {
-            "already_ranked": 25
+            "already_ranked": 27
           },
-          "in": 39,
-          "out": 14
+          "in": 40,
+          "out": 13
         }
       },
       "stage": "cache"
@@ -989,18 +889,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 12,
+          "out": 12
         },
         "tooling": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 7,
+          "out": 7
         },
         "web-products": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 3,
+          "out": 3
         }
       },
       "stage": "enrich"
@@ -1010,24 +910,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 8
           },
-          "in": 16,
-          "out": 14
+          "in": 24,
+          "out": 16
         },
         "tooling": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 5
           },
-          "in": 30,
+          "in": 31,
           "out": 26
         },
         "web-products": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 1
           },
-          "in": 14,
-          "out": 11
+          "in": 13,
+          "out": 12
         }
       },
       "stage": "rank"
@@ -1037,9 +937,9 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 14
+            "over_max_items": 16
           },
-          "in": 14,
+          "in": 16,
           "out": 0
         },
         "tooling": {
@@ -1051,10 +951,10 @@
         },
         "web-products": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 12
           },
-          "in": 11,
-          "out": 1
+          "in": 12,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1074,11 +974,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "notes": {
-            "summarized": 1
-          },
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1089,17 +986,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 20
+          "out": 16
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 15
+          "out": 12
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 15
+          "in": 0,
+          "out": 13
         }
       },
       "stage": "queue"
@@ -1108,22 +1005,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 20,
-          "out": 20
+          "out": 16
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 15,
-          "out": 15
+          "out": 12
         },
         "web-products": {
-          "drops": {},
-          "in": 14,
-          "notes": {
-            "asked": 1
+          "drops": {
+            "expired": 2
           },
-          "out": 14
+          "in": 15,
+          "out": 13
         }
       },
       "stage": "review"
