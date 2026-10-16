@@ -238,7 +238,7 @@
   "04a096ef95eb18a0": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 361,
+    "last_score": 364,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -506,7 +506,7 @@
   "0926b6ce8328ded3": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 62,
+    "last_score": 63,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -522,7 +522,7 @@
   "09304fa0e0751d6f": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 378,
+    "last_score": 389,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -921,7 +921,7 @@
   "0f8708c632074645": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 147,
+    "last_score": 146,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -965,7 +965,7 @@
   "0ff4f52f124c9146": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 73,
+    "last_score": 74,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-15T16:22:31.699257+00:00",
@@ -1905,7 +1905,7 @@
   "24d908521ed48a00": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 75,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1942,7 +1942,7 @@
   "263050875f85e6ce": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 55,
+    "last_score": 58,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2255,7 +2255,7 @@
   "2ce54ac39e37db24": {
     "dismissed": null,
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
-    "last_score": 36,
+    "last_score": 37,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2287,7 +2287,7 @@
   "2d268f9997a68e1f": {
     "dismissed": null,
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
-    "last_score": 46,
+    "last_score": 48,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2780,7 +2780,7 @@
   "3515a465737d380c": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 692,
+    "last_score": 725,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2824,7 +2824,7 @@
   "364f5f1cad75fb5b": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 282,
+    "last_score": 284,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-15T08:53:31.348611+00:00",
@@ -3441,6 +3441,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "411a6830a0545053": {
+    "dismissed": null,
+    "first_seen": "2026-10-16T03:17:04.831578+00:00",
+    "last_score": 33,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-16T03:17:04.831578+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 33,
+        "summary": "A web app for browsing terminal themes, based on a long-maintained repository of iTerm2 color schemes."
+      }
+    },
+    "times_sent": 0
+  },
   "41b4e5a6ca97dead": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -3711,7 +3727,7 @@
   "46a6f9cbbda5371e": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 69,
+    "last_score": 71,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3734,7 +3750,7 @@
   "46d4d209813615e2": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 2415,
+    "last_score": 2547,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -3794,7 +3810,7 @@
   "476d427e5f97d6df": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 352,
+    "last_score": 375,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4842,7 +4858,7 @@
   "5ae2fb6b695e0b41": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 128,
+    "last_score": 129,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5214,7 +5230,7 @@
   "61d98d12690dff19": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 187,
+    "last_score": 222,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5467,7 +5483,7 @@
   "6585583632f8eed4": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 244,
+    "last_score": 243,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5530,7 +5546,7 @@
   "66ce1636137bc229": {
     "dismissed": null,
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
-    "last_score": 76,
+    "last_score": 90,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5569,7 +5585,7 @@
   "679b7ff1ae2f5f7a": {
     "dismissed": null,
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
-    "last_score": 41,
+    "last_score": 50,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6190,7 +6206,7 @@
   "70c2480d2327e859": {
     "dismissed": null,
     "first_seen": "2026-10-15T08:53:31.348611+00:00",
-    "last_score": 38,
+    "last_score": 39,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6367,7 +6383,7 @@
   "7449ff5f13002a06": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 172,
+    "last_score": 184,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6658,7 +6674,7 @@
   "7a89d3ba2a72b6c4": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
-    "last_score": 1455,
+    "last_score": 1457,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -6826,7 +6842,7 @@
   "7ed5583fdd7a1205": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 225,
+    "last_score": 231,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6957,7 +6973,7 @@
   "8046c79956428cb1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 211,
+    "last_score": 213,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7174,7 +7190,7 @@
   "85780e68129982e7": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 154,
+    "last_score": 164,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7276,7 +7292,7 @@
   "8720072390c5992a": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 1043,
+    "last_score": 1061,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7738,7 +7754,7 @@
   "90d480b6c5d96252": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 106,
+    "last_score": 108,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7801,15 +7817,15 @@
   "919f775b86fd2ee8": {
     "dismissed": null,
     "first_seen": "2026-10-13T01:49:57.202770+00:00",
-    "last_score": 433,
+    "last_score": 456,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-15T08:53:31.348611+00:00",
-        "relevance": 2,
+        "ranked_at": "2026-10-16T03:17:04.831578+00:00",
+        "relevance": 3,
         "rubric": "3472af8a46e1",
-        "source_score": 223,
-        "summary": "An agent skill and McDonald's China MCP server that pulls the menu and available coupons to compute the cheapest meal combination."
+        "source_score": 456,
+        "summary": "A McDonald's China coupon-optimizer MCP server and agent skill that pulls the menu and all available coupons and computes the cheapest order combination, e.g. a \u00a547 combo priced at \u00a521.9."
       }
     },
     "times_sent": 0
@@ -7849,7 +7865,7 @@
   "929fc4b0fd97be26": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 391,
+    "last_score": 393,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7904,7 +7920,7 @@
   "941213c73f2808a1": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 738,
+    "last_score": 740,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8342,7 +8358,7 @@
   "99181570673f9109": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 39,
+    "last_score": 40,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8484,6 +8500,22 @@
         "rubric": "02189e2467e9",
         "source_score": 79,
         "summary": "A Mac budgeting app that answers questions about spending using AI models that run on the user's machine, with no account required in local mode."
+      }
+    },
+    "times_sent": 0
+  },
+  "9b2b63231fcea220": {
+    "dismissed": null,
+    "first_seen": "2026-10-16T03:17:04.831578+00:00",
+    "last_score": 50,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-16T03:17:04.831578+00:00",
+        "relevance": 5,
+        "rubric": "02189e2467e9",
+        "source_score": 50,
+        "summary": "A Liquid Glass-inspired theme for iTerm2 and Ghostty terminal emulators on macOS and Linux, with contrast checking and light/dark variants."
       }
     },
     "times_sent": 0
@@ -8701,7 +8733,7 @@
   "9fc4f9782508f693": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 342,
+    "last_score": 350,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8860,7 +8892,7 @@
   "a4008f68ac6b6513": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
-    "last_score": 185,
+    "last_score": 195,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -9031,7 +9063,7 @@
   "a6a0b0ef1abfb1bc": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 162,
+    "last_score": 163,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -9139,7 +9171,7 @@
   "a7916291f2ecf9f7": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 962,
+    "last_score": 1052,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9222,15 +9254,15 @@
   "a949e89b4b36cefd": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 78,
+    "last_score": 83,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-15T16:22:31.699257+00:00",
+        "ranked_at": "2026-10-16T03:17:04.831578+00:00",
         "relevance": 6,
         "rubric": "3472af8a46e1",
-        "source_score": 33,
-        "summary": "An analysis of prompt injection carried in HTTP headers, based on what 217M web responses show, per signalscorps.com."
+        "source_score": 83,
+        "summary": "A measurement study of prompt-injection payloads found across 217 million web responses, focusing on injection hidden in HTTP headers."
       }
     },
     "times_sent": 0
@@ -9397,7 +9429,7 @@
   "ab9bb7195f7587c0": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 117,
+    "last_score": 119,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9604,7 +9636,7 @@
   "af1f7c027bcd8d09": {
     "dismissed": null,
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
-    "last_score": 102,
+    "last_score": 103,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9620,7 +9652,7 @@
   "af5ba9cdb2916c29": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 438,
+    "last_score": 498,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9843,7 +9875,7 @@
   "b308c1f55b513d5e": {
     "dismissed": null,
     "first_seen": "2026-10-15T08:53:31.348611+00:00",
-    "last_score": 102,
+    "last_score": 103,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9889,6 +9921,22 @@
     "first_seen": "2026-08-16T04:24:16.550920+00:00",
     "last_score": 219,
     "ranks": {},
+    "times_sent": 0
+  },
+  "b45f699c1f189d8d": {
+    "dismissed": null,
+    "first_seen": "2026-10-16T03:17:04.831578+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-16T03:17:04.831578+00:00",
+        "relevance": 9,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A blog post about SVG styling tradeoffs for icon systems, covering inline SVG, SVG <use>, <img>/background-image, and icon fonts, and introducing SVG \u201clinked parameters.\u201d"
+      }
+    },
     "times_sent": 0
   },
   "b4a1803a79623440": {
@@ -9945,7 +9993,7 @@
   "b5f241f765311731": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 179,
+    "last_score": 180,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -10117,7 +10165,7 @@
   "b76cfe09d96780dc": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 171,
+    "last_score": 175,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10217,7 +10265,7 @@
   "b996ab45573be092": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 102,
+    "last_score": 115,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10254,7 +10302,7 @@
   "ba37f20c750ee7b3": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 214,
+    "last_score": 215,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10324,7 +10372,7 @@
   "baffcb4d50a5b911": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 1022,
+    "last_score": 1030,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10484,7 +10532,7 @@
   "be1ae401637add81": {
     "dismissed": null,
     "first_seen": "2026-10-08T15:14:12.896889+00:00",
-    "last_score": 179,
+    "last_score": 182,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-11T19:55:42.477843+00:00",
@@ -10801,7 +10849,7 @@
   "c44fc8610ac4f076": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 290,
+    "last_score": 294,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10824,7 +10872,7 @@
   "c4b3a5d12879206c": {
     "dismissed": null,
     "first_seen": "2026-10-11T04:12:07.356599+00:00",
-    "last_score": 49,
+    "last_score": 50,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11126,7 +11174,7 @@
   "cb0908fa52c79627": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 108,
+    "last_score": 110,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11188,7 +11236,7 @@
   "cc1b21cd822df9e1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 208,
+    "last_score": 213,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11361,7 +11409,7 @@
   "ceabd70d7baac0d1": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 561,
+    "last_score": 571,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11511,7 +11559,7 @@
   "d14f602f29cd34fc": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
-    "last_score": 77,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11527,7 +11575,7 @@
   "d16bd93ff857d83d": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 723,
+    "last_score": 725,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12015,7 +12063,7 @@
   "d9c1b561a21ebe35": {
     "dismissed": null,
     "first_seen": "2026-10-14T05:08:55.463037+00:00",
-    "last_score": 131,
+    "last_score": 132,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-15T08:53:31.348611+00:00",
@@ -12280,7 +12328,7 @@
   "de6a3ba228af2814": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 828,
+    "last_score": 838,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12678,7 +12726,7 @@
   "e402bd002c0d3604": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 500,
+    "last_score": 502,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12814,7 +12862,7 @@
   "e86502df4595e24b": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 119,
+    "last_score": 120,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12909,7 +12957,7 @@
   "e9cddd1fb5fbfddf": {
     "dismissed": null,
     "first_seen": "2026-10-09T04:43:57.809400+00:00",
-    "last_score": 65,
+    "last_score": 66,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13181,7 +13229,7 @@
   "f08784ca69eb615b": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 242,
+    "last_score": 270,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13802,7 +13850,7 @@
   "fe32ea3057eb389d": {
     "dismissed": null,
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
-    "last_score": 174,
+    "last_score": 176,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
