@@ -317,23 +317,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 16,
-      "tooling": 12,
-      "web-products": 13
+      "ai-engineering": 20,
+      "tooling": 15,
+      "web-products": 14
     },
-    "count": 41,
+    "count": 49,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-09T04:43:57.809400+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "A 3-D population pyramid visualization showing countries' age distributions from 1950 through a projected 2100.",
-        "title": "Population pyramid in 3-D and over time",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/10/08/population-pyramid-in-3-d-and-over-time/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-09T20:33:56.005527+00:00",
@@ -773,12 +762,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://github.com/yaojingang/profound-clone"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "Meta's release of Muse Spark Open, an open-weight natively multimodal model with 816B total (42B active) parameters and a 1M-token context window. Weights are downloadable and it is the first of its class to run on a desktop via two Apple M5 Ultra Mac Studios with MLX.",
+        "title": "Muse Spark Open, the Most Capable US Open‑Weight Model to Date",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://research.meta.ai/blog/muse-spark-open"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Scout, an open-source agent (npm @outcrawl/scout) that drives a real browser to complete tasks described in plain words, returning an answer or what's missing. Runs on Outcrawl's cloud with captcha solving and run replay, or locally, and works with any chat-completions-API model.",
+        "title": "outcrawlai/scout",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/outcrawlai/scout"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Parsimony, an open-source benchmark measuring how much code AI models add, counting syntax-level coding units (not lines) in existing benchmark patches as net units = added minus removed. Models are ranked lowest-first by mean net units on tasks solved, using published SWE-bench Verified results.",
+        "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://parsimony.lasu.dev/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A post on jackantico.io about creating a Garmin \"MCP\", i.e. an MCP server/tool integration for Garmin data.",
+        "title": "Creating a Garmin \"MCP\"",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://jackantico.io/garmin-mcp"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Graphicle indexes a repository into a code graph and remembers project docs, decisions and past agent sessions, feeding coding agents cited file-and-line excerpts. It runs locally with no API key, account or telemetry, works with Claude Code, Cursor, Codex and any MCP client, and its setup edits are listed, backed up and reversible.",
+        "title": "Graphicle-AI/graphicle",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Graphicle-AI/graphicle"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Proa is a batteries-included Rust web framework built around a new programming model for composable, multi-target rendering, where one typed component renders HTML, Markdown and other targets. It ships fast server rendering, selective interactivity, Shadcn-style UI components, and demos recreating GitHub, Sentry and Airbnb.",
+        "title": "Show HN: Proa – A Rust web framework with fast SSR and multi-target rendering",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://proa.so/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Ito is a Lua library for building terminal UIs, used here through a browser playground that runs the same terminal layout, drawing, state and input handling in WebAssembly and paints cells to Canvas. The playground owns the window, theme and event loop, while the user returns a function building one view.",
+        "title": "Show HN: Ito – Build Terminal UIs in Lua",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://uji.sh/ito/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "A blog post explaining how CSS env() inside an SVG lets icons loaded via <img> accept outside styling of individual fills and strokes, a technique Vadim Makeev demonstrated for icon systems, with graceful fallback for browsers lacking support.",
+        "title": "SVG “Linked Parameters” Will Change How We Do Icon Systems",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/svg-linked-parameters-will-change-how-we-do-icon-systems/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T08:46:21.084801+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Crest, an Arc-inspired open-source browser for Mac, iPad and iPhone in early access under MPL 2.0, offering Spaces, sidebar, Peek and Split View with iCloud sync, plus a feature-by-feature comparison against Arc.",
+        "title": "Crest – an Arc-inspired open-source browser for Mac",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://crestbrowser.com/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-16T03:17:04.831578+00:00",
-    "id": "2026-10-16T0317Z",
+    "at": "2026-10-16T08:46:21.084801+00:00",
+    "id": "2026-10-16T0846Z",
     "mode": "real",
     "offline": false
   },
@@ -789,13 +877,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 109,
-          "out": 109
+          "in": 112,
+          "out": 112
         },
         "tooling": {
           "drops": {},
-          "in": 139,
-          "out": 139
+          "in": 138,
+          "out": 138
         },
         "web-products": {
           "drops": {},
@@ -810,13 +898,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 109,
-          "out": 109
+          "in": 112,
+          "out": 112
         },
         "tooling": {
           "drops": {},
-          "in": 139,
-          "out": 139
+          "in": 138,
+          "out": 138
         },
         "web-products": {
           "drops": {
@@ -836,21 +924,21 @@
             "dismissed": 4,
             "seen": 19
           },
-          "in": 109,
-          "out": 86
+          "in": 112,
+          "out": 89
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
-            "seen": 16
+            "seen": 17
           },
-          "in": 139,
-          "out": 122
+          "in": 138,
+          "out": 120
         },
         "web-products": {
           "drops": {
-            "dismissed": 4,
-            "seen": 19
+            "dismissed": 5,
+            "seen": 18
           },
           "in": 62,
           "out": 39
@@ -863,17 +951,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 69
+            "already_ranked": 68
           },
-          "in": 86,
-          "out": 17
+          "in": 89,
+          "out": 21
         },
         "tooling": {
           "drops": {
             "already_ranked": 90
           },
-          "in": 122,
-          "out": 32
+          "in": 120,
+          "out": 30
         },
         "web-products": {
           "drops": {
@@ -890,18 +978,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 5,
+          "out": 5
         },
         "tooling": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -911,16 +999,14 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 5
           },
-          "in": 17,
+          "in": 21,
           "out": 16
         },
         "tooling": {
-          "drops": {
-            "below_relevance": 2
-          },
-          "in": 32,
+          "drops": {},
+          "in": 30,
           "out": 30
         },
         "web-products": {
@@ -936,24 +1022,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 12
           },
           "in": 16,
-          "out": 0
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 30
+            "over_max_items": 27
           },
           "in": 30,
-          "out": 0
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 14
+            "over_max_items": 12
           },
           "in": 14,
-          "out": 0
+          "out": 2
         }
       },
       "stage": "cap"
@@ -963,18 +1049,28 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "kept_rank_summary": 1,
+            "summarized": 3
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "summarized": 2
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -984,18 +1080,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 16
+          "in": 4,
+          "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 12
+          "in": 3,
+          "out": 15
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 13
+          "in": 2,
+          "out": 14
         }
       },
       "stage": "queue"
@@ -1006,17 +1102,28 @@
         "ai-engineering": {
           "drops": {},
           "in": 16,
+          "notes": {
+            "asked": 4
+          },
           "out": 16
         },
         "tooling": {
           "drops": {},
           "in": 12,
+          "notes": {
+            "asked": 3
+          },
           "out": 12
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 13,
-          "out": 13
+          "notes": {
+            "asked": 2
+          },
+          "out": 12
         }
       },
       "stage": "review"

@@ -4,24 +4,23 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 69,
+        "already_ranked": 68,
         "dismissed": 4,
         "seen": 19
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 16
+        "below_relevance": 5,
+        "over_max_items": 12
       }
     },
     "tooling": {
       "dedupe": {
         "already_ranked": 90,
         "dismissed": 1,
-        "seen": 16
+        "seen": 17
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 30
+        "over_max_items": 27
       }
     },
     "web-products": {
@@ -30,149 +29,150 @@
       },
       "dedupe": {
         "already_ranked": 25,
-        "dismissed": 4,
-        "seen": 19
+        "dismissed": 5,
+        "seen": 18
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
-        "over_max_items": 14
+        "over_max_items": 12
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 109,
-      "in_window": 109,
-      "kept": 0,
-      "new": 17
+      "collected": 112,
+      "in_window": 112,
+      "kept": 4,
+      "new": 21
     },
     "tooling": {
-      "collected": 139,
-      "in_window": 139,
-      "kept": 0,
-      "new": 32
+      "collected": 138,
+      "in_window": 138,
+      "kept": 3,
+      "new": 30
     },
     "web-products": {
       "collected": 191,
       "in_window": 62,
-      "kept": 0,
+      "kept": 2,
       "new": 14
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 41,
+  "pending_count": 49,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "hn",
+      "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
+      "topic": "web-products",
+      "ts": "2026-10-16T08:47:32.339187+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "rss",
+      "title": "SVG \u201cLinked Parameters\u201d Will Change How We Do Icon Systems",
+      "topic": "web-products",
+      "ts": "2026-10-16T08:47:32.339174+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399207+00:00",
+      "ts": "2026-10-16T08:47:32.339156+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399195+00:00",
+      "ts": "2026-10-16T08:47:32.339145+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399184+00:00",
+      "ts": "2026-10-16T08:47:32.339134+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399174+00:00",
+      "ts": "2026-10-16T08:47:32.339123+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399162+00:00",
+      "ts": "2026-10-16T08:47:32.339113+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399150+00:00",
+      "ts": "2026-10-16T08:47:32.339101+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tiny Charts: Data Viz as Postage Stamp Art",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399135+00:00",
+      "ts": "2026-10-16T08:47:32.339090+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Draw attention visually",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399094+00:00",
+      "ts": "2026-10-16T08:47:32.339063+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Scale of proposed billionaire wealth tax in California",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399082+00:00",
+      "ts": "2026-10-16T08:47:32.339051+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How to Measure AI Search Visibility When Attribution Falls Short",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399070+00:00",
+      "ts": "2026-10-16T08:47:32.339038+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399057+00:00",
+      "ts": "2026-10-16T08:47:32.339020+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399043+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
-      "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.399025+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "SVG \u201cLinked Parameters\u201d Will Change How We Do Icon Systems",
-      "topic": "web-products",
-      "ts": "2026-10-16T03:17:54.398966+00:00",
+      "ts": "2026-10-16T08:47:32.338949+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-16T03:17:51.144281+00:00",
+      "ts": "2026-10-16T08:47:28.660651+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-10T23:15:33.901214+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-10-11T04:12:07.356599+00:00"
@@ -264,28 +264,32 @@
     {
       "kept": 0,
       "ts": "2026-10-16T03:17:04.831578+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-16T08:46:21.084801+00:00"
     }
   ],
-  "streak": 281,
+  "streak": 282,
   "topics": [
     {
-      "collected": 109,
-      "kept": 0,
+      "collected": 112,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 139,
-      "kept": 0,
+      "collected": 138,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 191,
-      "kept": 0,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-16T03:17:04.831578+00:00"
+  "updated_at": "2026-10-16T08:46:21.084801+00:00"
 }
