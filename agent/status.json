@@ -4,179 +4,173 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 68,
-        "dismissed": 4,
-        "seen": 19
+        "already_ranked": 70,
+        "dismissed": 3,
+        "seen": 24
       },
       "rank": {
-        "below_relevance": 5,
-        "over_max_items": 12
+        "below_relevance": 2,
+        "over_max_items": 14
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 90,
+        "already_ranked": 82,
         "dismissed": 1,
-        "seen": 17
+        "seen": 22
       },
       "rank": {
-        "over_max_items": 27
+        "below_relevance": 4,
+        "over_max_items": 26
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 129
+        "outside_window": 130
       },
       "dedupe": {
         "already_ranked": 25,
         "dismissed": 5,
-        "seen": 18
-      },
-      "inbox": {
-        "expired": 1
+        "seen": 19
       },
       "rank": {
-        "over_max_items": 12
+        "below_relevance": 3,
+        "over_max_items": 10
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 112,
-      "in_window": 112,
-      "kept": 4,
-      "new": 21
+      "collected": 113,
+      "in_window": 113,
+      "kept": 0,
+      "new": 16
     },
     "tooling": {
-      "collected": 138,
-      "in_window": 138,
-      "kept": 3,
+      "collected": 135,
+      "in_window": 135,
+      "kept": 0,
       "new": 30
     },
     "web-products": {
-      "collected": 191,
-      "in_window": 62,
-      "kept": 2,
+      "collected": 193,
+      "in_window": 63,
+      "kept": 1,
       "new": 14
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 49,
+  "pending_count": 50,
   "recent_events": [
     {
       "score": 7,
-      "source": "hn",
-      "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
+      "source": "rss",
+      "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339187+00:00",
+      "ts": "2026-10-16T16:09:35.279710+00:00",
       "verdict": "kept"
     },
     {
-      "score": 9,
-      "source": "rss",
-      "title": "SVG \u201cLinked Parameters\u201d Will Change How We Do Icon Systems",
+      "reason": "over_max_items",
+      "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339174+00:00",
-      "verdict": "kept"
+      "ts": "2026-10-16T16:09:35.279689+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Unlocking AI in Your Apps with TanStack AI",
+      "topic": "web-products",
+      "ts": "2026-10-16T16:09:35.279677+00:00",
+      "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339156+00:00",
+      "ts": "2026-10-16T16:09:35.279666+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339145+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "AI Search ROI Is Messy. Here\u2019s How to Measure It Anyway",
-      "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339134+00:00",
+      "ts": "2026-10-16T16:09:35.279654+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339123+00:00",
+      "ts": "2026-10-16T16:09:35.279643+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Firefox version 157 is round (and how to make it less round)",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339113+00:00",
+      "ts": "2026-10-16T16:09:35.279630+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "How to Automate Content Creation: A Follow-Along Guide",
+      "topic": "web-products",
+      "ts": "2026-10-16T16:09:35.279617+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339101+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Tiny Charts: Data Viz as Postage Stamp Art",
-      "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339090+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "\u271a Draw attention visually",
-      "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339063+00:00",
+      "ts": "2026-10-16T16:09:35.279601+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Scale of proposed billionaire wealth tax in California",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339051+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "How to Measure AI Search Visibility When Attribution Falls Short",
-      "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339038+00:00",
+      "ts": "2026-10-16T16:09:35.279568+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.339020+00:00",
+      "ts": "2026-10-16T16:09:35.279502+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Bringing Microsoft Internet Explorer\u2019s proprietary \u201cInterpage Transitions\u201d back to Modern Browsers using the View Transition API",
+      "reason": "below_relevance",
+      "title": "Is Your Organization Messing Up AI Adoption?",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:32.338949+00:00",
+      "ts": "2026-10-16T16:09:32.700457+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "pathadvisorrafter/PokeMMO-Atlas-AIO-Soft",
+      "topic": "web-products",
+      "ts": "2026-10-16T16:09:32.700436+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "The insider trading you're allowed to do",
+      "topic": "web-products",
+      "ts": "2026-10-16T16:09:32.700378+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-16T08:47:28.660651+00:00",
+      "ts": "2026-10-16T16:09:07.045740+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-11T04:12:07.356599+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-11T14:40:21.388865+00:00"
@@ -268,28 +262,32 @@
     {
       "kept": 9,
       "ts": "2026-10-16T08:46:21.084801+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-16T16:08:13.564209+00:00"
     }
   ],
-  "streak": 282,
+  "streak": 283,
   "topics": [
     {
-      "collected": 112,
-      "kept": 4,
+      "collected": 113,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 138,
-      "kept": 3,
+      "collected": 135,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 191,
-      "kept": 2,
+      "collected": 193,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-16T08:46:21.084801+00:00"
+  "updated_at": "2026-10-16T16:08:13.564209+00:00"
 }

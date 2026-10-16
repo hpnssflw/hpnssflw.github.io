@@ -319,9 +319,9 @@
     "by_topic": {
       "ai-engineering": 20,
       "tooling": 15,
-      "web-products": 14
+      "web-products": 15
     },
-    "count": 49,
+    "count": 50,
     "items": [
       {
         "decision": null,
@@ -861,12 +861,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://crestbrowser.com/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-16T16:08:13.564209+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "A CSS + JS library, ie-page-transitions, that recreates Internet Explorer's proprietary Interpage Transitions in modern browsers using the View Transition API, reading the same <meta http-equiv=\"Page-Enter\"> syntax. All 23 classic effects are now finished and published at page-transitions.style.",
+        "title": "Bringing Microsoft Internet Explorer’s proprietary “Interpage Transitions” back to Modern Browsers using the View Transition API",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://www.bram.us/2026/10/07/ie-page-transitions/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-16T08:46:21.084801+00:00",
-    "id": "2026-10-16T0846Z",
+    "at": "2026-10-16T16:08:13.564209+00:00",
+    "id": "2026-10-16T1608Z",
     "mode": "real",
     "offline": false
   },
@@ -877,18 +888,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 112,
-          "out": 112
+          "in": 113,
+          "out": 113
         },
         "tooling": {
           "drops": {},
-          "in": 138,
-          "out": 138
+          "in": 135,
+          "out": 135
         },
         "web-products": {
           "drops": {},
-          "in": 191,
-          "out": 191
+          "in": 193,
+          "out": 193
         }
       },
       "stage": "collect"
@@ -898,20 +909,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 112,
-          "out": 112
+          "in": 113,
+          "out": 113
         },
         "tooling": {
           "drops": {},
-          "in": 138,
-          "out": 138
+          "in": 135,
+          "out": 135
         },
         "web-products": {
           "drops": {
-            "outside_window": 129
+            "outside_window": 130
           },
-          "in": 191,
-          "out": 62
+          "in": 193,
+          "out": 63
         }
       },
       "stage": "window"
@@ -921,26 +932,26 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 4,
-            "seen": 19
+            "dismissed": 3,
+            "seen": 24
           },
-          "in": 112,
-          "out": 89
+          "in": 113,
+          "out": 86
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
-            "seen": 17
+            "seen": 22
           },
-          "in": 138,
-          "out": 120
+          "in": 135,
+          "out": 112
         },
         "web-products": {
           "drops": {
             "dismissed": 5,
-            "seen": 18
+            "seen": 19
           },
-          "in": 62,
+          "in": 63,
           "out": 39
         }
       },
@@ -951,16 +962,16 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 68
+            "already_ranked": 70
           },
-          "in": 89,
-          "out": 21
+          "in": 86,
+          "out": 16
         },
         "tooling": {
           "drops": {
-            "already_ranked": 90
+            "already_ranked": 82
           },
-          "in": 120,
+          "in": 112,
           "out": 30
         },
         "web-products": {
@@ -978,18 +989,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 5,
-          "out": 5
+          "in": 4,
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 6,
+          "out": 6
         }
       },
       "stage": "enrich"
@@ -999,20 +1010,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 5
+            "below_relevance": 2
           },
-          "in": 21,
-          "out": 16
+          "in": 16,
+          "out": 14
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "below_relevance": 4
+          },
           "in": 30,
-          "out": 30
+          "out": 26
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "below_relevance": 3
+          },
           "in": 14,
-          "out": 14
+          "out": 11
         }
       },
       "stage": "rank"
@@ -1022,24 +1037,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 14
           },
-          "in": 16,
-          "out": 4
+          "in": 14,
+          "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 27
+            "over_max_items": 26
           },
-          "in": 30,
-          "out": 3
+          "in": 26,
+          "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 10
           },
-          "in": 14,
-          "out": 2
+          "in": 11,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1049,28 +1064,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "notes": {
-            "kept_rank_summary": 1,
-            "summarized": 3
-          },
-          "out": 4
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "notes": {
-            "summarized": 3
-          },
-          "out": 3
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
-          "in": 2,
+          "in": 1,
           "notes": {
-            "summarized": 2
+            "summarized": 1
           },
-          "out": 2
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1080,18 +1088,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
+          "in": 0,
           "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 3,
+          "in": 0,
           "out": 15
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 14
+          "in": 1,
+          "out": 15
         }
       },
       "stage": "queue"
@@ -1101,29 +1109,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 16,
-          "notes": {
-            "asked": 4
-          },
-          "out": 16
+          "in": 20,
+          "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 12,
-          "notes": {
-            "asked": 3
-          },
-          "out": 12
+          "in": 15,
+          "out": 15
         },
         "web-products": {
-          "drops": {
-            "expired": 1
-          },
-          "in": 13,
+          "drops": {},
+          "in": 14,
           "notes": {
-            "asked": 2
+            "asked": 1
           },
-          "out": 12
+          "out": 14
         }
       },
       "stage": "review"
