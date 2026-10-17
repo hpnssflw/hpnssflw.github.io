@@ -5,35 +5,43 @@
     "ai-engineering": {
       "dedupe": {
         "already_ranked": 74,
-        "dismissed": 1,
-        "seen": 26
+        "dismissed": 4,
+        "seen": 23
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 13
+        "over_max_items": 12
       }
     },
     "tooling": {
       "dedupe": {
         "already_ranked": 78,
-        "seen": 25
+        "dismissed": 2,
+        "seen": 23
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
         "below_relevance": 1,
-        "over_max_items": 21
+        "over_max_items": 22
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 131
+        "outside_window": 132
       },
       "dedupe": {
-        "already_ranked": 24,
-        "dismissed": 5,
-        "seen": 19
+        "already_ranked": 26,
+        "dismissed": 7,
+        "seen": 17
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 2,
         "over_max_items": 9
       }
     }
@@ -41,139 +49,134 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 115,
-      "in_window": 115,
+      "collected": 113,
+      "in_window": 113,
       "kept": 0,
-      "new": 14
+      "new": 12
     },
     "tooling": {
-      "collected": 125,
-      "in_window": 125,
+      "collected": 126,
+      "in_window": 126,
       "kept": 0,
-      "new": 22
+      "new": 23
     },
     "web-products": {
       "collected": 191,
-      "in_window": 60,
-      "kept": 1,
-      "new": 12
+      "in_window": 59,
+      "kept": 0,
+      "new": 9
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 50,
+  "pending_count": 41,
   "recent_events": [
-    {
-      "score": 7,
-      "source": "rss",
-      "title": "How to Automate Content Creation: A Follow-Along Guide",
-      "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391363+00:00",
-      "verdict": "kept"
-    },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391342+00:00",
+      "ts": "2026-10-17T21:58:56.724660+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391330+00:00",
+      "ts": "2026-10-17T21:58:56.724652+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391316+00:00",
+      "ts": "2026-10-17T21:58:56.724644+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391291+00:00",
+      "ts": "2026-10-17T21:58:56.724637+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391278+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Firefox version 157 is round (and how to make it less round)",
-      "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391265+00:00",
+      "ts": "2026-10-17T21:58:56.724629+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391250+00:00",
+      "ts": "2026-10-17T21:58:56.724620+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Scale of proposed billionaire wealth tax in California",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391230+00:00",
+      "ts": "2026-10-17T21:58:56.724611+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:04.391159+00:00",
+      "ts": "2026-10-17T21:58:56.724599+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "Yet another way to invoke functions in JavaScript without parentheses",
+      "reason": "over_max_items",
+      "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
       "topic": "web-products",
-      "ts": "2026-10-17T18:11:01.807302+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Esp32sim \u2013 Run ESP32 firmware in the browser",
-      "topic": "web-products",
-      "ts": "2026-10-17T18:11:01.807249+00:00",
+      "ts": "2026-10-17T21:58:56.724537+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-17T18:10:57.130744+00:00",
+      "ts": "2026-10-17T21:58:54.994388+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-17T18:10:57.130733+00:00",
+      "ts": "2026-10-17T21:58:54.994381+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-17T18:10:57.130722+00:00",
+      "ts": "2026-10-17T21:58:54.994374+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "People holding up the internet",
+      "topic": "web-products",
+      "ts": "2026-10-17T21:58:54.994368+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Richest getting richer",
+      "topic": "web-products",
+      "ts": "2026-10-17T21:58:54.994361+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "caniname: CLI tool to check project name availability across Netlify and NPM (and other sources)",
+      "topic": "web-products",
+      "ts": "2026-10-17T21:58:54.994354+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-13T01:49:57.202770+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-10-13T11:26:09.907272+00:00"
@@ -265,28 +268,32 @@
     {
       "kept": 1,
       "ts": "2026-10-17T18:10:14.117938+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-17T21:58:20.980695+00:00"
     }
   ],
-  "streak": 288,
+  "streak": 289,
   "topics": [
     {
-      "collected": 115,
+      "collected": 113,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 125,
+      "collected": 126,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 191,
-      "kept": 1,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-17T18:10:14.117938+00:00"
+  "updated_at": "2026-10-17T21:58:20.980695+00:00"
 }
