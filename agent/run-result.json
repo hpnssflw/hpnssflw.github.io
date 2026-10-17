@@ -319,9 +319,9 @@
     "by_topic": {
       "ai-engineering": 20,
       "tooling": 15,
-      "web-products": 14
+      "web-products": 15
     },
-    "count": 49,
+    "count": 50,
     "items": [
       {
         "decision": null,
@@ -861,12 +861,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://www.firefox.com/en-US/firefox/158.0/releasenotes/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T18:10:14.117938+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "A follow-along Ahrefs guide on automating content creation that explains how the author built a monthly Data Refresh Hub to automate repetitive updates to data-driven articles and how to apply the same process to other content tasks.",
+        "title": "How to Automate Content Creation: A Follow-Along Guide",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://ahrefs.com/blog/automated-content-creation/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-17T15:00:22.602783+00:00",
-    "id": "2026-10-17T1500Z",
+    "at": "2026-10-17T18:10:14.117938+00:00",
+    "id": "2026-10-17T1810Z",
     "mode": "real",
     "offline": false
   },
@@ -877,13 +888,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 120,
-          "out": 120
+          "in": 115,
+          "out": 115
         },
         "tooling": {
           "drops": {},
-          "in": 126,
-          "out": 126
+          "in": 125,
+          "out": 125
         },
         "web-products": {
           "drops": {},
@@ -898,20 +909,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 120,
-          "out": 120
+          "in": 115,
+          "out": 115
         },
         "tooling": {
           "drops": {},
-          "in": 126,
-          "out": 126
+          "in": 125,
+          "out": 125
         },
         "web-products": {
           "drops": {
-            "outside_window": 130
+            "outside_window": 131
           },
           "in": 191,
-          "out": 61
+          "out": 60
         }
       },
       "stage": "window"
@@ -921,25 +932,25 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
+            "dismissed": 1,
             "seen": 26
           },
-          "in": 120,
-          "out": 91
+          "in": 115,
+          "out": 88
         },
         "tooling": {
           "drops": {
             "seen": 25
           },
-          "in": 126,
-          "out": 101
+          "in": 125,
+          "out": 100
         },
         "web-products": {
           "drops": {
             "dismissed": 5,
-            "seen": 20
+            "seen": 19
           },
-          "in": 61,
+          "in": 60,
           "out": 36
         }
       },
@@ -950,24 +961,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 75
+            "already_ranked": 74
           },
-          "in": 91,
-          "out": 16
+          "in": 88,
+          "out": 14
         },
         "tooling": {
           "drops": {
             "already_ranked": 78
           },
-          "in": 101,
-          "out": 23
+          "in": 100,
+          "out": 22
         },
         "web-products": {
           "drops": {
-            "already_ranked": 26
+            "already_ranked": 24
           },
           "in": 36,
-          "out": 10
+          "out": 12
         }
       },
       "stage": "cache"
@@ -977,8 +988,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 2,
+          "out": 2
         },
         "tooling": {
           "drops": {},
@@ -987,8 +998,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "out": 2
         }
       },
       "stage": "enrich"
@@ -998,21 +1009,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 1
           },
-          "in": 16,
-          "out": 12
+          "in": 14,
+          "out": 13
         },
         "tooling": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 1
           },
-          "in": 23,
-          "out": 19
+          "in": 22,
+          "out": 21
         },
         "web-products": {
-          "drops": {},
-          "in": 10,
+          "drops": {
+            "below_relevance": 2
+          },
+          "in": 12,
           "out": 10
         }
       },
@@ -1023,24 +1036,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 13
           },
-          "in": 12,
+          "in": 13,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 19
+            "over_max_items": 21
           },
-          "in": 19,
+          "in": 21,
           "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 9
           },
           "in": 10,
-          "out": 0
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1060,8 +1073,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1081,8 +1097,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 14
+          "in": 1,
+          "out": 15
         }
       },
       "stage": "queue"
@@ -1103,6 +1119,9 @@
         "web-products": {
           "drops": {},
           "in": 14,
+          "notes": {
+            "asked": 1
+          },
           "out": 14
         }
       },
