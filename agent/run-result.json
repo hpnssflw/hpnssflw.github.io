@@ -317,23 +317,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 16,
-      "tooling": 12,
-      "web-products": 13
+      "ai-engineering": 20,
+      "tooling": 15,
+      "web-products": 14
     },
-    "count": 41,
+    "count": 49,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-10T04:29:22.971524+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Bram.us presents <calc-input>, a custom input element that accepts mathematical formulas like 2 + 3 and toggles between showing the formula on focus and the calculated result on blur.",
-        "title": "<​calc-input>, a custom input element that accepts mathematical formulas",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://www.bram.us/2026/10/08/calc-input-a-custom-input-element-that-accepts-mathematical-formulas/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-10T19:47:33.070266+00:00",
@@ -773,12 +762,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://www.bram.us/2026/10/07/ie-page-transitions/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "PS5LM is a homebrew app that runs llama.cpp's Vulkan backend on a jailbroken PS5's RDNA 2 GPU and serves GGUF models over OpenAI- and Anthropic-compatible APIs to the local network. It now also runs decision models answering TypeSafe's /v1/systemone API.",
+        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/cobanov/PS5LM"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "StarSkirmish Bench is a benchmark where each LLM gets one hour to write a StarCraft: Brood War Protoss bot in C++, then is scored by win rate against human-written and other LLM bots. v0.2 adds flagship models from OpenAI, Anthropic, Google and Meta run in their first-party CLI harnesses.",
+        "title": "Show HN: Gemini 4 Argon plays StarCraft",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://starskirmish.com/bench/v0-2/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "rStation is a shared research community where independent AI agents discuss research problems and publish reviewed papers, with humans welcome to observe. It organizes work around open problems such as the Riemann hypothesis and strongly regular graphs.",
+        "title": "Show HN: rStation – A shared research lab for your AI agents",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://rstation.ai/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Llmspeed is a tool that estimates how fast a local LLM will run on a given device before you buy hardware, using community benchmarks and projections derived from similar setups. It is open source on GitHub.",
+        "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://llmspeed.dev/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Once is a CLI tool that runs a command, prints stdout, and caches the result in a per-user background daemon, reusing it for the same command, directory, and tenant key until TTL expiry; a typical use is avoiding repeated 1Password fingerprint approvals.",
+        "title": "Once: Cache CLI commands",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/alex0ptr/once"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Diarea is a frontend leak scanner that finds exposed keys, source maps, API maps, debug globals, and private logic, then scores damage from Sealed to Gushing. It ships a CLI, Chrome extension, GitHub Action, and local read-only MCP server so coding agents can scan and fix leaks.",
+        "title": "kriszwart/diarea",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/kriszwart/diarea"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Eido is an AI workspace for understanding code, building with an agent, and reviewing changes, keeping conversation and code together. Its 0.0.1 stable macOS release bundles pi 1.3.0 and adds OpenRouter model-list refresh, saved sharing preferences, and better tool restoration.",
+        "title": "tony3liu/eido",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/tony3liu/eido"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Stripe's announcement of three updates for fintechs: Global Payouts expanded to instant stablecoin payouts in 160 markets and traditional currency payouts in 100+, stablecoin card issuing via Stripe Issuing now in 27 EU countries (65+ worldwide), and unified APIs for global financial products.",
+        "title": "New ways for fintechs to move money and expand globally",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://stripe.com/blog/new-ways-for-fintechs-to-move-money-and-expand-globally"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-17T08:16:47.855119+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Firefox 158 release notes, highlighting default JPEG XL image format support, Smart Window form filling suggestions, more accessible PDFs, a New Tab wallpaper library, and new translation languages.",
+        "title": "Firefox 158 released with JPEG XL support by default",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://www.firefox.com/en-US/firefox/158.0/releasenotes/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-17T03:07:44.985106+00:00",
-    "id": "2026-10-17T0307Z",
+    "at": "2026-10-17T08:16:47.855119+00:00",
+    "id": "2026-10-17T0816Z",
     "mode": "real",
     "offline": false
   },
@@ -789,18 +877,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 117,
+          "out": 117
         },
         "tooling": {
           "drops": {},
-          "in": 124,
-          "out": 124
+          "in": 126,
+          "out": 126
         },
         "web-products": {
           "drops": {},
-          "in": 194,
-          "out": 194
+          "in": 193,
+          "out": 193
         }
       },
       "stage": "collect"
@@ -810,20 +898,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 117,
+          "out": 117
         },
         "tooling": {
           "drops": {},
-          "in": 124,
-          "out": 124
+          "in": 126,
+          "out": 126
         },
         "web-products": {
           "drops": {
             "outside_window": 130
           },
-          "in": 194,
-          "out": 64
+          "in": 193,
+          "out": 63
         }
       },
       "stage": "window"
@@ -836,23 +924,23 @@
             "dismissed": 3,
             "seen": 22
           },
-          "in": 114,
-          "out": 89
+          "in": 117,
+          "out": 92
         },
         "tooling": {
           "drops": {
-            "seen": 19
+            "seen": 22
           },
-          "in": 124,
-          "out": 105
+          "in": 126,
+          "out": 104
         },
         "web-products": {
           "drops": {
             "dismissed": 6,
             "seen": 18
           },
-          "in": 64,
-          "out": 40
+          "in": 63,
+          "out": 39
         }
       },
       "stage": "dedupe"
@@ -864,22 +952,22 @@
           "drops": {
             "already_ranked": 73
           },
-          "in": 89,
-          "out": 16
+          "in": 92,
+          "out": 19
         },
         "tooling": {
           "drops": {
-            "already_ranked": 79
+            "already_ranked": 78
           },
-          "in": 105,
+          "in": 104,
           "out": 26
         },
         "web-products": {
           "drops": {
             "already_ranked": 27
           },
-          "in": 40,
-          "out": 13
+          "in": 39,
+          "out": 12
         }
       },
       "stage": "cache"
@@ -889,18 +977,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 7,
+          "out": 7
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -910,23 +998,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 5
           },
-          "in": 16,
-          "out": 15
+          "in": 19,
+          "out": 14
         },
         "tooling": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 3
           },
           "in": 26,
-          "out": 25
+          "out": 23
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 13,
+          "drops": {},
+          "in": 12,
           "out": 12
         }
       },
@@ -937,24 +1023,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 15
+            "over_max_items": 10
           },
-          "in": 15,
-          "out": 0
+          "in": 14,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 25
+            "over_max_items": 20
           },
-          "in": 25,
-          "out": 0
+          "in": 23,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 10
           },
           "in": 12,
-          "out": 0
+          "out": 2
         }
       },
       "stage": "cap"
@@ -964,18 +1050,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "summarized": 2
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -985,18 +1080,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 16
+          "in": 4,
+          "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 12
+          "in": 3,
+          "out": 15
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 13
+          "in": 2,
+          "out": 14
         }
       },
       "stage": "queue"
@@ -1007,17 +1102,28 @@
         "ai-engineering": {
           "drops": {},
           "in": 16,
+          "notes": {
+            "asked": 4
+          },
           "out": 16
         },
         "tooling": {
           "drops": {},
           "in": 12,
+          "notes": {
+            "asked": 3
+          },
           "out": 12
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 13,
-          "out": 13
+          "notes": {
+            "asked": 2
+          },
+          "out": 12
         }
       },
       "stage": "review"
