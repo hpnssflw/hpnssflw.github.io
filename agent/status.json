@@ -4,44 +4,37 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 74,
+        "already_ranked": 70,
         "dismissed": 4,
-        "seen": 23
-      },
-      "inbox": {
-        "expired": 4
+        "seen": 18
       },
       "rank": {
-        "over_max_items": 12
+        "below_relevance": 3,
+        "over_max_items": 11
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 78,
+        "already_ranked": 76,
         "dismissed": 2,
-        "seen": 23
-      },
-      "inbox": {
-        "expired": 3
+        "seen": 19
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 22
+        "below_relevance": 3,
+        "over_max_items": 20
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 132
+        "outside_window": 133
       },
       "dedupe": {
-        "already_ranked": 26,
-        "dismissed": 7,
-        "seen": 17
-      },
-      "inbox": {
-        "expired": 2
+        "already_ranked": 25,
+        "dismissed": 6,
+        "seen": 16
       },
       "rank": {
+        "below_relevance": 2,
         "over_max_items": 9
       }
     }
@@ -49,22 +42,22 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 113,
-      "in_window": 113,
+      "collected": 106,
+      "in_window": 106,
       "kept": 0,
-      "new": 12
+      "new": 14
     },
     "tooling": {
-      "collected": 126,
-      "in_window": 126,
+      "collected": 120,
+      "in_window": 120,
       "kept": 0,
       "new": 23
     },
     "web-products": {
       "collected": 191,
-      "in_window": 59,
+      "in_window": 58,
       "kept": 0,
-      "new": 9
+      "new": 11
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
@@ -74,113 +67,109 @@
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724660+00:00",
+      "ts": "2026-10-18T03:11:26.174720+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724652+00:00",
+      "ts": "2026-10-18T03:11:26.174707+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724644+00:00",
+      "ts": "2026-10-18T03:11:26.174694+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724637+00:00",
+      "ts": "2026-10-18T03:11:26.174680+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724629+00:00",
+      "ts": "2026-10-18T03:11:26.174665+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724620+00:00",
+      "ts": "2026-10-18T03:11:26.174639+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Scale of proposed billionaire wealth tax in California",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724611+00:00",
+      "ts": "2026-10-18T03:11:26.174625+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724599+00:00",
+      "ts": "2026-10-18T03:11:26.174610+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:56.724537+00:00",
+      "ts": "2026-10-18T03:11:26.174588+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Fangx-AI/geo-doctor",
+      "topic": "web-products",
+      "ts": "2026-10-18T03:11:26.174374+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Show HN: Esp32sim \u2013 Run ESP32 firmware in the browser",
+      "topic": "web-products",
+      "ts": "2026-10-18T03:11:26.174317+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:54.994388+00:00",
+      "ts": "2026-10-18T03:11:19.217148+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:54.994381+00:00",
+      "ts": "2026-10-18T03:11:19.217129+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:54.994374+00:00",
+      "ts": "2026-10-18T03:11:19.217105+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "People holding up the internet",
       "topic": "web-products",
-      "ts": "2026-10-17T21:58:54.994368+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Richest getting richer",
-      "topic": "web-products",
-      "ts": "2026-10-17T21:58:54.994361+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "caniname: CLI tool to check project name availability across Netlify and NPM (and other sources)",
-      "topic": "web-products",
-      "ts": "2026-10-17T21:58:54.994354+00:00",
+      "ts": "2026-10-18T03:11:19.217083+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-13T11:26:09.907272+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-13T18:55:04.409772+00:00"
@@ -272,18 +261,22 @@
     {
       "kept": 0,
       "ts": "2026-10-17T21:58:20.980695+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-18T03:10:34.980556+00:00"
     }
   ],
-  "streak": 289,
+  "streak": 290,
   "topics": [
     {
-      "collected": 113,
+      "collected": 106,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 126,
+      "collected": 120,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
@@ -295,5 +288,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-17T21:58:20.980695+00:00"
+  "updated_at": "2026-10-18T03:10:34.980556+00:00"
 }
