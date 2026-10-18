@@ -317,111 +317,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 20,
-      "tooling": 15,
-      "web-products": 15
+      "ai-engineering": 16,
+      "tooling": 12,
+      "web-products": 13
     },
-    "count": 50,
+    "count": 41,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "A GitHub project, agent-chrome-relay, that lets AI agents use your signed-in Chrome in background tabs via browser automation and CDP.",
-        "title": "aindeev/agent-chrome-relay",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/aindeev/agent-chrome-relay"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "Kyojin, a Yamz inference engine for AMD Strix Halo (ROCm, gfx1151) built on ExLlamaV3, said to run 300B-class MoE models on a single 128 GB mini PC.",
-        "title": "Yamz-Labs/kyojin",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/Yamz-Labs/kyojin"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "A Korean translation of ARTEX, an AI autonomous penetration testing framework, with topics including ai-agent, autonomous-agents, cybersecurity, and detection-engineering.",
-        "title": "jiwoochris/artex-ko",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/jiwoochris/artex-ko"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "The title asks why the industry isn't freaking out about DeepSeek 4.1 Flash.",
-        "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "HeyCubit/effortless is a Claude Code mod that picks the reasoning effort for every prompt, shows prompt cache and context, and offers one-click handoff or compaction.",
-        "title": "HeyCubit/effortless",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/HeyCubit/effortless"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A project porting the TypeScript compiler, checker, and LSP to Rust, reportedly built by an LLM.",
-        "title": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/pingdotgg/ts-rust"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "pullboard is a local-first work board for teams of coding agents where nothing ships until a second agent verifies it.",
-        "title": "pullboard-dev/pullboard",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/pullboard-dev/pullboard"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "Accessibility designer Eric Bailey explains the thinking, research, and testing that go into adding a few custom keyboard shortcuts to a web app.",
-        "title": "How an accessibility designer adds keyboard shortcuts to a web app",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/how-an-accessibility-designer-adds-keyboard-shortcuts-to-a-web-app/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-11T19:55:42.477843+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "A post on testing an iframe's postMessage handler, explaining how embedded widgets in a separate document communicate back and forth.",
-        "title": "Testing an iframe’s postMessage Handler",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/testing-an-iframes-postmessage-handler/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-14T16:36:39.185213+00:00",
@@ -876,8 +777,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-18T18:28:11.776184+00:00",
-    "id": "2026-10-18T1828Z",
+    "at": "2026-10-18T22:13:50.709746+00:00",
+    "id": "2026-10-18T2213Z",
     "mode": "real",
     "offline": false
   },
@@ -893,8 +794,8 @@
         },
         "tooling": {
           "drops": {},
-          "in": 118,
-          "out": 118
+          "in": 119,
+          "out": 119
         },
         "web-products": {
           "drops": {},
@@ -914,15 +815,15 @@
         },
         "tooling": {
           "drops": {},
-          "in": 118,
-          "out": 118
+          "in": 119,
+          "out": 119
         },
         "web-products": {
           "drops": {
-            "outside_window": 134
+            "outside_window": 136
           },
           "in": 191,
-          "out": 57
+          "out": 55
         }
       },
       "stage": "window"
@@ -932,8 +833,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
-            "seen": 22
+            "dismissed": 4,
+            "seen": 21
           },
           "in": 106,
           "out": 81
@@ -941,18 +842,18 @@
         "tooling": {
           "drops": {
             "dismissed": 2,
-            "seen": 21
+            "seen": 20
           },
-          "in": 118,
-          "out": 95
+          "in": 119,
+          "out": 97
         },
         "web-products": {
           "drops": {
             "dismissed": 6,
             "seen": 17
           },
-          "in": 57,
-          "out": 34
+          "in": 55,
+          "out": 32
         }
       },
       "stage": "dedupe"
@@ -969,17 +870,17 @@
         },
         "tooling": {
           "drops": {
-            "already_ranked": 74
+            "already_ranked": 77
           },
-          "in": 95,
-          "out": 21
+          "in": 97,
+          "out": 20
         },
         "web-products": {
           "drops": {
-            "already_ranked": 27
+            "already_ranked": 26
           },
-          "in": 34,
-          "out": 7
+          "in": 32,
+          "out": 6
         }
       },
       "stage": "cache"
@@ -989,13 +890,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 1,
+          "out": 1
         },
         "tooling": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 2,
+          "out": 2
         },
         "web-products": {
           "drops": {},
@@ -1009,23 +910,19 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "below_relevance": 1
-          },
+          "drops": {},
           "in": 11,
-          "out": 10
+          "out": 11
         },
         "tooling": {
-          "drops": {
-            "below_relevance": 3
-          },
-          "in": 21,
-          "out": 18
+          "drops": {},
+          "in": 20,
+          "out": 20
         },
         "web-products": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 6,
+          "out": 6
         }
       },
       "stage": "rank"
@@ -1035,24 +932,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 11
           },
-          "in": 10,
+          "in": 11,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 18
+            "over_max_items": 20
           },
-          "in": 18,
+          "in": 20,
           "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 6
           },
-          "in": 7,
-          "out": 1
+          "in": 6,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1072,11 +969,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "notes": {
-            "summarized": 1
-          },
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1087,17 +981,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 20
+          "out": 16
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 15
+          "out": 12
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 15
+          "in": 0,
+          "out": 13
         }
       },
       "stage": "queue"
@@ -1106,22 +1000,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 20,
-          "out": 20
+          "out": 16
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 15,
-          "out": 15
+          "out": 12
         },
         "web-products": {
-          "drops": {},
-          "in": 14,
-          "notes": {
-            "asked": 1
+          "drops": {
+            "expired": 2
           },
-          "out": 14
+          "in": 15,
+          "out": 13
         }
       },
       "stage": "review"
