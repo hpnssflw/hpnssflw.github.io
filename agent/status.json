@@ -9,8 +9,8 @@
         "seen": 22
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 9
+        "below_relevance": 1,
+        "over_max_items": 10
       }
     },
     "tooling": {
@@ -20,160 +20,156 @@
         "seen": 21
       },
       "rank": {
-        "below_relevance": 1,
+        "below_relevance": 3,
         "over_max_items": 18
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 133
+        "outside_window": 134
       },
       "dedupe": {
-        "already_ranked": 26,
-        "dismissed": 7,
+        "already_ranked": 27,
+        "dismissed": 6,
         "seen": 17
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 7
+        "over_max_items": 6
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 107,
-      "in_window": 107,
+      "collected": 106,
+      "in_window": 106,
       "kept": 0,
-      "new": 12
+      "new": 11
     },
     "tooling": {
-      "collected": 116,
-      "in_window": 116,
+      "collected": 118,
+      "in_window": 118,
       "kept": 0,
-      "new": 19
+      "new": 21
     },
     "web-products": {
       "collected": 191,
-      "in_window": 58,
-      "kept": 0,
-      "new": 8
+      "in_window": 57,
+      "kept": 1,
+      "new": 7
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 49,
+  "pending_count": 50,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "Scale of proposed billionaire wealth tax in California",
+      "topic": "web-products",
+      "ts": "2026-10-18T18:28:53.699850+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:33.381139+00:00",
+      "ts": "2026-10-18T18:28:53.699827+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:33.381126+00:00",
+      "ts": "2026-10-18T18:28:53.699812+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:33.381114+00:00",
+      "ts": "2026-10-18T18:28:53.699798+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:33.381101+00:00",
+      "ts": "2026-10-18T18:28:53.699783+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:33.381088+00:00",
+      "ts": "2026-10-18T18:28:53.699762+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:33.381071+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Scale of proposed billionaire wealth tax in California",
-      "topic": "web-products",
-      "ts": "2026-10-18T15:26:33.381048+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Interactive Linear Programming in the Browser",
-      "topic": "web-products",
-      "ts": "2026-10-18T15:26:33.380813+00:00",
+      "ts": "2026-10-18T18:28:53.699695+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:29.634535+00:00",
+      "ts": "2026-10-18T18:28:51.790051+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:29.634524+00:00",
+      "ts": "2026-10-18T18:28:51.790040+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:29.634513+00:00",
+      "ts": "2026-10-18T18:28:51.790029+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "People holding up the internet",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:29.634502+00:00",
+      "ts": "2026-10-18T18:28:51.790018+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Richest getting richer",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:29.634486+00:00",
+      "ts": "2026-10-18T18:28:51.790007+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "caniname: CLI tool to check project name availability across Netlify and NPM (and other sources)",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:29.634475+00:00",
+      "ts": "2026-10-18T18:28:51.789995+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Is Your Organization Messing Up AI Adoption?",
       "topic": "web-products",
-      "ts": "2026-10-18T15:26:29.634462+00:00",
+      "ts": "2026-10-18T18:28:51.789980+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Fangx-AI/geo-doctor",
+      "topic": "web-products",
+      "ts": "2026-10-18T18:28:51.789969+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-14T03:40:29.632688+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-14T05:08:55.463037+00:00"
@@ -265,28 +261,32 @@
     {
       "kept": 0,
       "ts": "2026-10-18T15:25:39.608183+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-18T18:28:11.776184+00:00"
     }
   ],
-  "streak": 292,
+  "streak": 293,
   "topics": [
     {
-      "collected": 107,
+      "collected": 106,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 116,
+      "collected": 118,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 191,
-      "kept": 0,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-18T15:25:39.608183+00:00"
+  "updated_at": "2026-10-18T18:28:11.776184+00:00"
 }
