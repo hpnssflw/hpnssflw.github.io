@@ -865,8 +865,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-18T08:34:06.870675+00:00",
-    "id": "2026-10-18T0834Z",
+    "at": "2026-10-18T15:25:39.608183+00:00",
+    "id": "2026-10-18T1525Z",
     "mode": "real",
     "offline": false
   },
@@ -882,8 +882,8 @@
         },
         "tooling": {
           "drops": {},
-          "in": 119,
-          "out": 119
+          "in": 116,
+          "out": 116
         },
         "web-products": {
           "drops": {},
@@ -903,8 +903,8 @@
         },
         "tooling": {
           "drops": {},
-          "in": 119,
-          "out": 119
+          "in": 116,
+          "out": 116
         },
         "web-products": {
           "drops": {
@@ -921,27 +921,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 4,
-            "seen": 18
+            "dismissed": 3,
+            "seen": 22
           },
           "in": 107,
-          "out": 85
+          "out": 82
         },
         "tooling": {
           "drops": {
-            "dismissed": 1,
-            "seen": 20
+            "dismissed": 2,
+            "seen": 21
           },
-          "in": 119,
-          "out": 98
+          "in": 116,
+          "out": 93
         },
         "web-products": {
           "drops": {
             "dismissed": 7,
-            "seen": 16
+            "seen": 17
           },
           "in": 58,
-          "out": 35
+          "out": 34
         }
       },
       "stage": "dedupe"
@@ -951,24 +951,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 71
+            "already_ranked": 70
           },
-          "in": 85,
-          "out": 14
+          "in": 82,
+          "out": 12
         },
         "tooling": {
           "drops": {
             "already_ranked": 74
           },
-          "in": 98,
-          "out": 24
+          "in": 93,
+          "out": 19
         },
         "web-products": {
           "drops": {
-            "already_ranked": 25
+            "already_ranked": 26
           },
-          "in": 35,
-          "out": 10
+          "in": 34,
+          "out": 8
         }
       },
       "stage": "cache"
@@ -978,13 +978,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 5,
+          "out": 5
         },
         "tooling": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 2,
+          "out": 2
         },
         "web-products": {
           "drops": {},
@@ -999,24 +999,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 3
           },
-          "in": 14,
-          "out": 13
+          "in": 12,
+          "out": 9
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 1
           },
-          "in": 24,
-          "out": 21
+          "in": 19,
+          "out": 18
         },
         "web-products": {
           "drops": {
             "below_relevance": 1
           },
-          "in": 10,
-          "out": 9
+          "in": 8,
+          "out": 7
         }
       },
       "stage": "rank"
@@ -1028,22 +1028,22 @@
           "drops": {
             "over_max_items": 9
           },
-          "in": 13,
-          "out": 4
+          "in": 9,
+          "out": 0
         },
         "tooling": {
           "drops": {
             "over_max_items": 18
           },
-          "in": 21,
-          "out": 3
+          "in": 18,
+          "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 7
           },
-          "in": 9,
-          "out": 2
+          "in": 7,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1053,29 +1053,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "notes": {
-            "summarized": 4
-          },
-          "out": 4
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "notes": {
-            "summarized": 3
-          },
-          "out": 3
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "notes": {
-            "fetch_failed": 1,
-            "kept_rank_summary": 1,
-            "summarized": 1
-          },
-          "out": 2
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1085,17 +1074,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
+          "in": 0,
           "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 3,
+          "in": 0,
           "out": 15
         },
         "web-products": {
           "drops": {},
-          "in": 2,
+          "in": 0,
           "out": 14
         }
       },
@@ -1106,29 +1095,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 16,
-          "notes": {
-            "asked": 4
-          },
-          "out": 16
+          "in": 20,
+          "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 12,
-          "notes": {
-            "asked": 3
-          },
-          "out": 12
+          "in": 15,
+          "out": 15
         },
         "web-products": {
-          "drops": {
-            "expired": 1
-          },
-          "in": 13,
-          "notes": {
-            "asked": 2
-          },
-          "out": 12
+          "drops": {},
+          "in": 14,
+          "out": 14
         }
       },
       "stage": "review"
