@@ -4,24 +4,24 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 70,
+        "already_ranked": 71,
         "dismissed": 4,
         "seen": 18
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 11
+        "below_relevance": 1,
+        "over_max_items": 9
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 76,
-        "dismissed": 2,
-        "seen": 19
+        "already_ranked": 74,
+        "dismissed": 1,
+        "seen": 20
       },
       "rank": {
         "below_relevance": 3,
-        "over_max_items": 20
+        "over_max_items": 18
       }
     },
     "web-products": {
@@ -30,150 +30,151 @@
       },
       "dedupe": {
         "already_ranked": 25,
-        "dismissed": 6,
+        "dismissed": 7,
         "seen": 16
       },
+      "inbox": {
+        "expired": 1
+      },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 9
+        "below_relevance": 1,
+        "over_max_items": 7
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 106,
-      "in_window": 106,
-      "kept": 0,
+      "collected": 107,
+      "in_window": 107,
+      "kept": 4,
       "new": 14
     },
     "tooling": {
-      "collected": 120,
-      "in_window": 120,
-      "kept": 0,
-      "new": 23
+      "collected": 119,
+      "in_window": 119,
+      "kept": 3,
+      "new": 24
     },
     "web-products": {
       "collected": 191,
       "in_window": 58,
-      "kept": 0,
-      "new": 11
+      "kept": 2,
+      "new": 10
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 41,
+  "pending_count": 49,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
+      "topic": "web-products",
+      "ts": "2026-10-18T08:35:09.356384+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "hn",
+      "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
+      "topic": "web-products",
+      "ts": "2026-10-18T08:35:09.356370+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174720+00:00",
+      "ts": "2026-10-18T08:35:09.356352+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174707+00:00",
+      "ts": "2026-10-18T08:35:09.356339+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174694+00:00",
+      "ts": "2026-10-18T08:35:09.356308+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174680+00:00",
+      "ts": "2026-10-18T08:35:09.356294+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174665+00:00",
+      "ts": "2026-10-18T08:35:09.356278+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174639+00:00",
+      "ts": "2026-10-18T08:35:09.356251+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Scale of proposed billionaire wealth tax in California",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174625+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
-      "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174610+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
-      "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174588+00:00",
+      "ts": "2026-10-18T08:35:09.356153+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Fangx-AI/geo-doctor",
+      "title": "Show HN: 500 clocks in one 6.3 MB HTML file by Opus 5.5",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174374+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Esp32sim \u2013 Run ESP32 firmware in the browser",
-      "topic": "web-products",
-      "ts": "2026-10-18T03:11:26.174317+00:00",
+      "ts": "2026-10-18T08:35:06.724937+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:19.217148+00:00",
+      "ts": "2026-10-18T08:35:03.557318+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:19.217129+00:00",
+      "ts": "2026-10-18T08:35:03.557307+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:19.217105+00:00",
+      "ts": "2026-10-18T08:35:03.557297+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "People holding up the internet",
       "topic": "web-products",
-      "ts": "2026-10-18T03:11:19.217083+00:00",
+      "ts": "2026-10-18T08:35:03.557286+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Richest getting richer",
+      "topic": "web-products",
+      "ts": "2026-10-18T08:35:03.557275+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-13T18:55:04.409772+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-13T23:36:41.456320+00:00"
@@ -265,28 +266,32 @@
     {
       "kept": 0,
       "ts": "2026-10-18T03:10:34.980556+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-18T08:34:06.870675+00:00"
     }
   ],
-  "streak": 290,
+  "streak": 291,
   "topics": [
     {
-      "collected": 106,
-      "kept": 0,
+      "collected": 107,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 120,
-      "kept": 0,
+      "collected": 119,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 191,
-      "kept": 0,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-18T03:10:34.980556+00:00"
+  "updated_at": "2026-10-18T08:34:06.870675+00:00"
 }

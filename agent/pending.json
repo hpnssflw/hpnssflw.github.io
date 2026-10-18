@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-11T04:12:07.356599+00:00",
-      "score": 7,
-      "source": "rss",
-      "summary": "The post examines a few HTML elements that can serve as semantic containers instead of generic <div> and <span> tags.",
-      "title": "5 Good Choices for HTML Containers",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://blog.master.dev/5-good-choices-for-html-containers/"
-    },
-    {
       "pending_since": "2026-10-11T19:55:42.477843+00:00",
       "score": 9,
       "source": "github",
@@ -409,6 +399,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://ahrefs.com/blog/automated-content-creation/"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "Tracely-ai is trace-native CI/CD for AI agents: it grades production traces, clusters failures into issues, freezes bad runs into hermetic replayable regression cases and blocks the PR that would reship them. Tests come from real failing traces instead of hand-authored datasets.",
+      "title": "jwuthri-cloud/Tracely-ai",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/jwuthri-cloud/Tracely-ai"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Hugging Face model page for deepseek-ai/DeepSeek-V4.1-Flash-1017, with setup snippets for Transformers, vLLM, SGLang and Docker serving. Only usage instructions are given; no capability details are stated.",
+      "title": "DeepSeek-v4.1-Flash-1017",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "OpenRouter listing for DeepSeek V4.1 Flash 1017, the Oct 17 2026 snapshot. It is described as a sparse MoE on DeepSeek's new Causal Encoder-Decoder architecture, activating 8B input/16B output from a 552B backbone, with native image understanding and compressed KV caching.",
+      "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "rsi_eval is a lightweight Python SDK and CLI for evaluating recursive self-improvement methods across agent benchmarks: you keep your own improvement loop and call evaluate(), reusing pinned tasks, graders and a common result format across 24 bundled configurations.",
+      "title": "Danielxu0208/rsi_eval",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/Danielxu0208/rsi_eval"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "ESP32sim is an MIT browser-based ESP32 firmware emulator that instruction-level emulates four ESP32 SoCs and boots the real mask ROM, bootloader, and unmodified application images via WebAssembly, with board support, GPIO/UART/timers, and virtual networking.",
+      "title": "Show HN: Esp32sim \u2013 Run ESP32 firmware in the browser",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/mikroverk/esp32sim"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Sphinx is a free FOSS Git hook for agent-assisted development that pauses protected pushes and quizzes the developer on what the AI-written diff does when things go wrong, continuing only after a correct answer.",
+      "title": "Show HN: Sphinx \u2013 A hook that quizzes you on your AI's code before shipping",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://sphinx-six-theta.vercel.app/"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "tsc-ts is an experimental TypeScript port of the TypeScript 7.0.2 compiler (tsgo), written in idiomatic TypeScript and compiled to native executables with scriptc; it ships npm packages and compares scanner/parser/binder output against tsgo.",
+      "title": "Tsc-ts: TypeScript written in TypeScript",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/vercel-labs/tsc-ts"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "An article explaining the removal of XSLT support in Chrome and Edge, and what will break versus what won't.",
+      "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://doctor-seo.net/en/blog/news/chrome-edge-removing-xslt/"
+    },
+    {
+      "pending_since": "2026-10-18T08:34:06.870675+00:00",
+      "score": 7,
+      "source": "rss",
+      "summary": "Ahrefs analysis of 66.6M free ChatGPT responses and 15M fan-out queries finds only 14.4% triggered web search, averaging about 1.6 queries when they did; 6.8% used site: and top searches skewed toward brand sites.",
+      "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://ahrefs.com/blog/query-fan-out-chatgpt/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"
