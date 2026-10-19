@@ -4,24 +4,24 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 60,
+        "already_ranked": 63,
         "dismissed": 3,
         "seen": 21
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 13
+        "below_relevance": 2,
+        "over_max_items": 10
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 72,
+        "already_ranked": 70,
         "dismissed": 1,
         "seen": 20
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 18
+        "below_relevance": 1,
+        "over_max_items": 14
       }
     },
     "web-products": {
@@ -29,150 +29,148 @@
         "outside_window": 138
       },
       "dedupe": {
-        "already_ranked": 25,
+        "already_ranked": 24,
         "dismissed": 3,
         "seen": 17
       },
       "rank": {
-        "over_max_items": 6
+        "over_max_items": 5
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 101,
-      "in_window": 101,
-      "kept": 0,
-      "new": 17
+      "collected": 103,
+      "in_window": 103,
+      "kept": 4,
+      "new": 16
     },
     "tooling": {
-      "collected": 114,
-      "in_window": 114,
-      "kept": 0,
-      "new": 21
+      "collected": 109,
+      "in_window": 109,
+      "kept": 3,
+      "new": 18
     },
     "web-products": {
       "collected": 189,
       "in_window": 51,
-      "kept": 0,
-      "new": 6
+      "kept": 2,
+      "new": 7
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 41,
+  "pending_count": 50,
   "recent_events": [
+    {
+      "score": 6,
+      "source": "github",
+      "title": "aidenleads/css-animation-snippets",
+      "topic": "web-products",
+      "ts": "2026-10-19T09:38:24.755098+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "The \u201calien\u201d economics of AI monetization",
+      "topic": "web-products",
+      "ts": "2026-10-19T09:38:24.755084+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551742+00:00",
+      "ts": "2026-10-19T09:38:24.755063+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551731+00:00",
+      "ts": "2026-10-19T09:38:24.755049+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551719+00:00",
+      "ts": "2026-10-19T09:38:24.755020+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551707+00:00",
+      "ts": "2026-10-19T09:38:24.754998+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551694+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "The \u201calien\u201d economics of AI monetization",
-      "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551676+00:00",
+      "ts": "2026-10-19T09:38:24.754929+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551521+00:00",
+      "ts": "2026-10-19T09:38:19.355711+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551510+00:00",
+      "ts": "2026-10-19T09:38:19.355700+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551499+00:00",
+      "ts": "2026-10-19T09:38:19.355690+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "People holding up the internet",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551488+00:00",
+      "ts": "2026-10-19T09:38:19.355679+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Richest getting richer",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551474+00:00",
+      "ts": "2026-10-19T09:38:19.355669+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Is Your Organization Messing Up AI Adoption?",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551463+00:00",
+      "ts": "2026-10-19T09:38:19.355658+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Fangx-AI/geo-doctor",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551453+00:00",
+      "ts": "2026-10-19T09:38:19.355647+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "zhuyansen/new-term-radar",
       "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551442+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "juliobsz/skills",
-      "topic": "web-products",
-      "ts": "2026-10-19T03:24:58.551431+00:00",
+      "ts": "2026-10-19T09:38:19.355637+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-14T05:57:17.734583+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-14T09:18:29.016558+00:00"
@@ -264,28 +262,32 @@
     {
       "kept": 0,
       "ts": "2026-10-19T03:24:15.462211+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-19T09:37:11.229871+00:00"
     }
   ],
-  "streak": 295,
+  "streak": 296,
   "topics": [
     {
-      "collected": 101,
-      "kept": 0,
+      "collected": 103,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 114,
-      "kept": 0,
+      "collected": 109,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 189,
-      "kept": 0,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-19T03:24:15.462211+00:00"
+  "updated_at": "2026-10-19T09:37:11.229871+00:00"
 }

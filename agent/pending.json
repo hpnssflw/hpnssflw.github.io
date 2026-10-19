@@ -409,6 +409,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://flowingdata.com/2026/10/15/california-billionaire-tax/"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "Russian-language GitHub guide for installing and running DeepSeek models locally on PC, Mac and server \u2014 covering Ollama, llama.cpp, API, RAG and agents. It is updated for October 2026, including DeepSeek-V4.1-Flash-1017 and the 284B V4-Flash-0731 that fits in ~110 GB with llama.cpp.",
+      "title": "justxor/deepseek-local-guide-ru",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/justxor/deepseek-local-guide-ru"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "DeepSeek API docs for the new Search and Fetch tools, which give agents and RAG apps live web content: Search returns structured results from DeepSeek's in-house engine, Fetch returns a page as Markdown. Both are raw JSON endpoints using the same bearer auth as the DeepSeek API.",
+      "title": "DeepSeek search and fetch \u2013 $0.75 per 1000 successful requests",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://api-docs.deepseek.com/guides/search/"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "arXiv paper presenting Hybrid Reasoning Agents, which switch between latent reasoning and text-based interaction in one generation process via a HybridLink module, with HybridSFT and HybridRL post-training. Reported gains: 10.4% better performance, 35.5\u201354.7% fewer tokens and 1.8\u20132.6x faster inference across 11 benchmarks.",
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://arxiv.org/abs/2610.18861"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "An item asking how you'd know what's going on without running your own LLM proxy, pointing at proxy/observability setup for LLM traffic.",
+      "title": "If you don't run your own LLM proxy, how do you know whats going on?",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "Agent Standup is a free, MIT-licensed tool that reads local session files from Claude Code, Codex, Mistral Vibe and Cowork to show agent status in a live team call and session board at zero token cost; it runs as a VS Code extension, terminal command or desktop app.",
+      "title": "Atoll92/agent-standup",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/Atoll92/agent-standup"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "Petal is an open-source low-latency, high-resolution screen-sharing and remote-control app where shared windows appear as movable, resizable windows with labeled cursors and instant mouse/keyboard input; it supports rooms and LiveKit, including self-hosted infrastructure.",
+      "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://petal.live/"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "Free Pascal and Lazarus now have a first full release of dynamic package support, allowing components, controls and IDE extensions to be installed without rebuilding the IDE and enabling native Pascal plugin libraries with new RTL metadata and runtime handling.",
+      "title": "Free Pascal compiler now supports dynamic packages",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://www.getlazarus.org/dynamic/"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 7,
+      "source": "rss",
+      "summary": "Conference recap on AI monetization economics, reporting that two-thirds of Forbes AI 50 companies use usage-based pricing and that leaders are adopting hybrid subscriptions with credits and multiple outcome-based billable metrics.",
+      "title": "The \u201calien\u201d economics of AI monetization",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://stripe.com/blog/economics-of-ai-monetization"
+    },
+    {
+      "pending_since": "2026-10-19T09:37:11.229871+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "A free MIT-licensed CSS animation snippet library with 25+ copy-paste effects, an optional 2 KB scroll-reveal script, CSS-variable rebranding, and built-in reduced-motion and keyboard-focus accessibility.",
+      "title": "aidenleads/css-animation-snippets",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.com/aidenleads/css-animation-snippets"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

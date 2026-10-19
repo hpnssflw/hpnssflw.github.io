@@ -317,11 +317,11 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 16,
-      "tooling": 12,
-      "web-products": 13
+      "ai-engineering": 20,
+      "tooling": 15,
+      "web-products": 15
     },
-    "count": 41,
+    "count": 50,
     "items": [
       {
         "decision": null,
@@ -773,12 +773,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/10/15/california-billionaire-tax/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "Russian-language GitHub guide for installing and running DeepSeek models locally on PC, Mac and server — covering Ollama, llama.cpp, API, RAG and agents. It is updated for October 2026, including DeepSeek-V4.1-Flash-1017 and the 284B V4-Flash-0731 that fits in ~110 GB with llama.cpp.",
+        "title": "justxor/deepseek-local-guide-ru",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/justxor/deepseek-local-guide-ru"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "DeepSeek API docs for the new Search and Fetch tools, which give agents and RAG apps live web content: Search returns structured results from DeepSeek's in-house engine, Fetch returns a page as Markdown. Both are raw JSON endpoints using the same bearer auth as the DeepSeek API.",
+        "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://api-docs.deepseek.com/guides/search/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "arXiv paper presenting Hybrid Reasoning Agents, which switch between latent reasoning and text-based interaction in one generation process via a HybridLink module, with HybridSFT and HybridRL post-training. Reported gains: 10.4% better performance, 35.5–54.7% fewer tokens and 1.8–2.6x faster inference across 11 benchmarks.",
+        "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://arxiv.org/abs/2610.18861"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "An item asking how you'd know what's going on without running your own LLM proxy, pointing at proxy/observability setup for LLM traffic.",
+        "title": "If you don't run your own LLM proxy, how do you know whats going on?",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "Agent Standup is a free, MIT-licensed tool that reads local session files from Claude Code, Codex, Mistral Vibe and Cowork to show agent status in a live team call and session board at zero token cost; it runs as a VS Code extension, terminal command or desktop app.",
+        "title": "Atoll92/agent-standup",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Atoll92/agent-standup"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Petal is an open-source low-latency, high-resolution screen-sharing and remote-control app where shared windows appear as movable, resizable windows with labeled cursors and instant mouse/keyboard input; it supports rooms and LiveKit, including self-hosted infrastructure.",
+        "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://petal.live/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Free Pascal and Lazarus now have a first full release of dynamic package support, allowing components, controls and IDE extensions to be installed without rebuilding the IDE and enabling native Pascal plugin libraries with new RTL metadata and runtime handling.",
+        "title": "Free Pascal compiler now supports dynamic packages",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://www.getlazarus.org/dynamic/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "Conference recap on AI monetization economics, reporting that two-thirds of Forbes AI 50 companies use usage-based pricing and that leaders are adopting hybrid subscriptions with credits and multiple outcome-based billable metrics.",
+        "title": "The “alien” economics of AI monetization",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://stripe.com/blog/economics-of-ai-monetization"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T09:37:11.229871+00:00",
+        "score": 6,
+        "source": "github",
+        "summary": "A free MIT-licensed CSS animation snippet library with 25+ copy-paste effects, an optional 2 KB scroll-reveal script, CSS-variable rebranding, and built-in reduced-motion and keyboard-focus accessibility.",
+        "title": "aidenleads/css-animation-snippets",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://github.com/aidenleads/css-animation-snippets"
       }
     ]
   },
   "run": {
-    "at": "2026-10-19T03:24:15.462211+00:00",
-    "id": "2026-10-19T0324Z",
+    "at": "2026-10-19T09:37:11.229871+00:00",
+    "id": "2026-10-19T0937Z",
     "mode": "real",
     "offline": false
   },
@@ -789,13 +888,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 101,
-          "out": 101
+          "in": 103,
+          "out": 103
         },
         "tooling": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 109,
+          "out": 109
         },
         "web-products": {
           "drops": {},
@@ -810,13 +909,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 101,
-          "out": 101
+          "in": 103,
+          "out": 103
         },
         "tooling": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 109,
+          "out": 109
         },
         "web-products": {
           "drops": {
@@ -836,16 +935,16 @@
             "dismissed": 3,
             "seen": 21
           },
-          "in": 101,
-          "out": 77
+          "in": 103,
+          "out": 79
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
             "seen": 20
           },
-          "in": 114,
-          "out": 93
+          "in": 109,
+          "out": 88
         },
         "web-products": {
           "drops": {
@@ -863,24 +962,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 60
+            "already_ranked": 63
           },
-          "in": 77,
-          "out": 17
+          "in": 79,
+          "out": 16
         },
         "tooling": {
           "drops": {
-            "already_ranked": 72
+            "already_ranked": 70
           },
-          "in": 93,
-          "out": 21
+          "in": 88,
+          "out": 18
         },
         "web-products": {
           "drops": {
-            "already_ranked": 25
+            "already_ranked": 24
           },
           "in": 31,
-          "out": 6
+          "out": 7
         }
       },
       "stage": "cache"
@@ -890,18 +989,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 5,
+          "out": 5
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 2,
+          "out": 2
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -911,22 +1010,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 2
           },
-          "in": 17,
-          "out": 13
+          "in": 16,
+          "out": 14
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 1
           },
-          "in": 21,
-          "out": 18
+          "in": 18,
+          "out": 17
         },
         "web-products": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 7,
+          "out": 7
         }
       },
       "stage": "rank"
@@ -936,24 +1035,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 10
           },
-          "in": 13,
-          "out": 0
+          "in": 14,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 18
+            "over_max_items": 14
           },
-          "in": 18,
-          "out": 0
+          "in": 17,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 6
+            "over_max_items": 5
           },
-          "in": 6,
-          "out": 0
+          "in": 7,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -963,18 +1062,29 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "fetch_failed": 1,
+            "kept_rank_summary": 1,
+            "summarized": 3
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "summarized": 2
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -984,18 +1094,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 16
+          "in": 4,
+          "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 12
+          "in": 3,
+          "out": 15
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 13
+          "in": 2,
+          "out": 15
         }
       },
       "stage": "queue"
@@ -1006,16 +1116,25 @@
         "ai-engineering": {
           "drops": {},
           "in": 16,
+          "notes": {
+            "asked": 4
+          },
           "out": 16
         },
         "tooling": {
           "drops": {},
           "in": 12,
+          "notes": {
+            "asked": 3
+          },
           "out": 12
         },
         "web-products": {
           "drops": {},
           "in": 13,
+          "notes": {
+            "asked": 2
+          },
           "out": 13
         }
       },
