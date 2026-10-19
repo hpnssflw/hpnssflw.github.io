@@ -4,41 +4,34 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 70,
-        "dismissed": 4,
+        "already_ranked": 60,
+        "dismissed": 3,
         "seen": 21
       },
-      "inbox": {
-        "expired": 4
-      },
       "rank": {
-        "over_max_items": 11
+        "below_relevance": 4,
+        "over_max_items": 13
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 77,
-        "dismissed": 2,
+        "already_ranked": 72,
+        "dismissed": 1,
         "seen": 20
       },
-      "inbox": {
-        "expired": 3
-      },
       "rank": {
-        "over_max_items": 20
+        "below_relevance": 3,
+        "over_max_items": 18
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 136
+        "outside_window": 138
       },
       "dedupe": {
-        "already_ranked": 26,
-        "dismissed": 6,
+        "already_ranked": 25,
+        "dismissed": 3,
         "seen": 17
-      },
-      "inbox": {
-        "expired": 2
       },
       "rank": {
         "over_max_items": 6
@@ -48,20 +41,20 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 106,
-      "in_window": 106,
+      "collected": 101,
+      "in_window": 101,
       "kept": 0,
-      "new": 11
+      "new": 17
     },
     "tooling": {
-      "collected": 119,
-      "in_window": 119,
+      "collected": 114,
+      "in_window": 114,
       "kept": 0,
-      "new": 20
+      "new": 21
     },
     "web-products": {
-      "collected": 191,
-      "in_window": 55,
+      "collected": 189,
+      "in_window": 51,
       "kept": 0,
       "new": 6
     }
@@ -73,113 +66,109 @@
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431932+00:00",
+      "ts": "2026-10-19T03:24:58.551742+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431921+00:00",
+      "ts": "2026-10-19T03:24:58.551731+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431910+00:00",
+      "ts": "2026-10-19T03:24:58.551719+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431898+00:00",
+      "ts": "2026-10-19T03:24:58.551707+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431885+00:00",
+      "ts": "2026-10-19T03:24:58.551694+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431867+00:00",
+      "ts": "2026-10-19T03:24:58.551676+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431700+00:00",
+      "ts": "2026-10-19T03:24:58.551521+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431690+00:00",
+      "ts": "2026-10-19T03:24:58.551510+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431679+00:00",
+      "ts": "2026-10-19T03:24:58.551499+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "People holding up the internet",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431667+00:00",
+      "ts": "2026-10-19T03:24:58.551488+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Richest getting richer",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431653+00:00",
+      "ts": "2026-10-19T03:24:58.551474+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Is Your Organization Messing Up AI Adoption?",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431643+00:00",
+      "ts": "2026-10-19T03:24:58.551463+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Fangx-AI/geo-doctor",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431633+00:00",
+      "ts": "2026-10-19T03:24:58.551453+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "zhuyansen/new-term-radar",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431622+00:00",
+      "ts": "2026-10-19T03:24:58.551442+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "juliobsz/skills",
       "topic": "web-products",
-      "ts": "2026-10-18T22:14:28.431611+00:00",
+      "ts": "2026-10-19T03:24:58.551431+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-14T05:15:33.642391+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-14T05:57:17.734583+00:00"
@@ -271,28 +260,32 @@
     {
       "kept": 0,
       "ts": "2026-10-18T22:13:50.709746+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-19T03:24:15.462211+00:00"
     }
   ],
-  "streak": 294,
+  "streak": 295,
   "topics": [
     {
-      "collected": 106,
+      "collected": 101,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 119,
+      "collected": 114,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 191,
+      "collected": 189,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-18T22:13:50.709746+00:00"
+  "updated_at": "2026-10-19T03:24:15.462211+00:00"
 }
