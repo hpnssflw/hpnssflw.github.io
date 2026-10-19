@@ -319,9 +319,9 @@
     "by_topic": {
       "ai-engineering": 20,
       "tooling": 15,
-      "web-products": 15
+      "web-products": 16
     },
-    "count": 50,
+    "count": 51,
     "items": [
       {
         "decision": null,
@@ -872,12 +872,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://github.com/aidenleads/css-animation-snippets"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-19T18:22:46.005442+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "A WebKit post explaining identity resolution, a post-cookie tracking scheme that links opaque IDs to email addresses for cross-site and cross-device profiling, alongside WebKit’s tracking-prevention policy and privacy protections.",
+        "title": "Blocking Identity Resolution Infrastructure",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://webkit.org/blog/18438/blocking-identity-resolution-infrastructure/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-19T09:37:11.229871+00:00",
-    "id": "2026-10-19T0937Z",
+    "at": "2026-10-19T18:22:46.005442+00:00",
+    "id": "2026-10-19T1822Z",
     "mode": "real",
     "offline": false
   },
@@ -888,18 +899,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 103,
-          "out": 103
+          "in": 108,
+          "out": 108
         },
         "tooling": {
           "drops": {},
-          "in": 109,
-          "out": 109
+          "in": 107,
+          "out": 107
         },
         "web-products": {
           "drops": {},
-          "in": 189,
-          "out": 189
+          "in": 187,
+          "out": 187
         }
       },
       "stage": "collect"
@@ -909,19 +920,19 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 103,
-          "out": 103
+          "in": 108,
+          "out": 108
         },
         "tooling": {
           "drops": {},
-          "in": 109,
-          "out": 109
+          "in": 107,
+          "out": 107
         },
         "web-products": {
           "drops": {
-            "outside_window": 138
+            "outside_window": 136
           },
-          "in": 189,
+          "in": 187,
           "out": 51
         }
       },
@@ -933,26 +944,25 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 3,
-            "seen": 21
+            "seen": 26
           },
-          "in": 103,
+          "in": 108,
           "out": 79
         },
         "tooling": {
           "drops": {
             "dismissed": 1,
-            "seen": 20
+            "seen": 22
           },
-          "in": 109,
-          "out": 88
+          "in": 107,
+          "out": 84
         },
         "web-products": {
           "drops": {
-            "dismissed": 3,
-            "seen": 17
+            "seen": 19
           },
           "in": 51,
-          "out": 31
+          "out": 32
         }
       },
       "stage": "dedupe"
@@ -962,24 +972,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 63
+            "already_ranked": 57
           },
           "in": 79,
-          "out": 16
+          "out": 22
         },
         "tooling": {
           "drops": {
-            "already_ranked": 70
+            "already_ranked": 66
           },
-          "in": 88,
+          "in": 84,
           "out": 18
         },
         "web-products": {
           "drops": {
-            "already_ranked": 24
+            "already_ranked": 22
           },
-          "in": 31,
-          "out": 7
+          "in": 32,
+          "out": 10
         }
       },
       "stage": "cache"
@@ -989,18 +999,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 5,
-          "out": 5
+          "in": 13,
+          "out": 13
         },
         "tooling": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 6,
+          "out": 6
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 5,
+          "out": 5
         }
       },
       "stage": "enrich"
@@ -1010,21 +1020,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 9
           },
-          "in": 16,
-          "out": 14
+          "in": 22,
+          "out": 13
         },
         "tooling": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 4
           },
           "in": 18,
-          "out": 17
+          "out": 14
         },
         "web-products": {
-          "drops": {},
-          "in": 7,
+          "drops": {
+            "below_relevance": 3
+          },
+          "in": 10,
           "out": 7
         }
       },
@@ -1035,24 +1047,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 13
           },
-          "in": 14,
-          "out": 4
+          "in": 13,
+          "out": 0
         },
         "tooling": {
           "drops": {
             "over_max_items": 14
           },
-          "in": 17,
-          "out": 3
+          "in": 14,
+          "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 5
+            "over_max_items": 6
           },
           "in": 7,
-          "out": 2
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1062,29 +1074,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "notes": {
-            "fetch_failed": 1,
-            "kept_rank_summary": 1,
-            "summarized": 3
-          },
-          "out": 4
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "notes": {
-            "summarized": 3
-          },
-          "out": 3
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
-          "in": 2,
+          "in": 1,
           "notes": {
-            "summarized": 2
+            "summarized": 1
           },
-          "out": 2
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1094,18 +1098,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
+          "in": 0,
           "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 3,
+          "in": 0,
           "out": 15
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 15
+          "in": 1,
+          "out": 16
         }
       },
       "stage": "queue"
@@ -1115,27 +1119,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 16,
-          "notes": {
-            "asked": 4
-          },
-          "out": 16
+          "in": 20,
+          "out": 20
         },
         "tooling": {
           "drops": {},
-          "in": 12,
-          "notes": {
-            "asked": 3
-          },
-          "out": 12
+          "in": 15,
+          "out": 15
         },
         "web-products": {
           "drops": {},
-          "in": 13,
+          "in": 15,
           "notes": {
-            "asked": 2
+            "asked": 1
           },
-          "out": 13
+          "out": 15
         }
       },
       "stage": "review"
