@@ -309,7 +309,14 @@
     "sent_items": 0,
     "target": "telegram"
   },
-  "failures": [],
+  "failures": [
+    {
+      "error_type": "FetchError",
+      "scope": "web-products",
+      "source": "bram-us",
+      "stage": "collect"
+    }
+  ],
   "preset": {
     "language": "en",
     "name": "Tony Scraponi",
@@ -319,9 +326,9 @@
     "by_topic": {
       "ai-engineering": 24,
       "tooling": 18,
-      "web-products": 18
+      "web-products": 19
     },
-    "count": 60,
+    "count": 61,
     "items": [
       {
         "decision": null,
@@ -982,12 +989,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://github.com/swimmingbrain/brainotes"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T22:56:37.928833+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "A Smashing Magazine exploration of the native CSS random() function, now shipped in Safari and rolling out in Chrome 156, with CodePen demos for organic typography, bouncing letters, splayed cards, and a punk fanzine.",
+        "title": "Embracing Playful Imperfection With The CSS `random()` Function",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-20T16:24:02.234579+00:00",
-    "id": "2026-10-20T1624Z",
+    "at": "2026-10-20T22:56:37.928833+00:00",
+    "id": "2026-10-20T2256Z",
     "mode": "real",
     "offline": false
   },
@@ -998,18 +1016,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 106,
-          "out": 106
+          "in": 110,
+          "out": 110
         },
         "tooling": {
           "drops": {},
-          "in": 111,
-          "out": 111
+          "in": 115,
+          "out": 115
         },
         "web-products": {
           "drops": {},
-          "in": 187,
-          "out": 187
+          "in": 179,
+          "out": 179
         }
       },
       "stage": "collect"
@@ -1019,19 +1037,19 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 106,
-          "out": 106
+          "in": 110,
+          "out": 110
         },
         "tooling": {
           "drops": {},
-          "in": 111,
-          "out": 111
+          "in": 115,
+          "out": 115
         },
         "web-products": {
           "drops": {
-            "outside_window": 132
+            "outside_window": 124
           },
-          "in": 187,
+          "in": 179,
           "out": 55
         }
       },
@@ -1044,22 +1062,22 @@
           "drops": {
             "seen": 30
           },
-          "in": 106,
-          "out": 76
+          "in": 110,
+          "out": 80
         },
         "tooling": {
           "drops": {
             "seen": 24
           },
-          "in": 111,
-          "out": 87
+          "in": 115,
+          "out": 91
         },
         "web-products": {
           "drops": {
-            "seen": 22
+            "seen": 20
           },
           "in": 55,
-          "out": 33
+          "out": 35
         }
       },
       "stage": "dedupe"
@@ -1071,22 +1089,22 @@
           "drops": {
             "already_ranked": 61
           },
-          "in": 76,
-          "out": 15
+          "in": 80,
+          "out": 19
         },
         "tooling": {
           "drops": {
-            "already_ranked": 66
+            "already_ranked": 69
           },
-          "in": 87,
-          "out": 21
+          "in": 91,
+          "out": 22
         },
         "web-products": {
           "drops": {
             "already_ranked": 25
           },
-          "in": 33,
-          "out": 8
+          "in": 35,
+          "out": 10
         }
       },
       "stage": "cache"
@@ -1096,18 +1114,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 7,
+          "out": 7
         },
         "tooling": {
           "drops": {},
-          "in": 9,
-          "out": 9
+          "in": 8,
+          "out": 8
         },
         "web-products": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 3,
+          "out": 3
         }
       },
       "stage": "enrich"
@@ -1117,24 +1135,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 4
           },
-          "in": 15,
-          "out": 13
+          "in": 19,
+          "out": 15
         },
         "tooling": {
           "drops": {
-            "below_relevance": 5
+            "below_relevance": 6
           },
-          "in": 21,
+          "in": 22,
           "out": 16
         },
         "web-products": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 2
           },
-          "in": 8,
-          "out": 7
+          "in": 10,
+          "out": 8
         }
       },
       "stage": "rank"
@@ -1144,9 +1162,9 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 15
           },
-          "in": 13,
+          "in": 15,
           "out": 0
         },
         "tooling": {
@@ -1160,8 +1178,8 @@
           "drops": {
             "over_max_items": 7
           },
-          "in": 7,
-          "out": 0
+          "in": 8,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1181,8 +1199,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1202,8 +1223,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 18
+          "in": 1,
+          "out": 19
         }
       },
       "stage": "queue"
@@ -1224,6 +1245,9 @@
         "web-products": {
           "drops": {},
           "in": 18,
+          "notes": {
+            "asked": 1
+          },
           "out": 18
         }
       },
