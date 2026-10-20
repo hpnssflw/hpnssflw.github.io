@@ -509,6 +509,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://webkit.org/blog/18438/blocking-identity-resolution-infrastructure/"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 10,
+      "source": "hn",
+      "summary": "A vLLM blog post describes agent-assisted optimization of Kimi K3, including a unified CuTe DSL decode path on NVIDIA GB300 and reported 1.5\u20132\u00d7 higher decode throughput plus a proposed fast-track RFC to reduce review burden.",
+      "title": "Hyper Optimizing Kimi K3 in vLLM",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A book/blog series on building AI agents from first principles, growing a ~300-line toy Python agent across 16 chapters; each chapter presents a failure, a minimal harness patch, and its cost.",
+      "title": "Harness Engineering 101: The LLM is the brain, the harness is the body",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/IsuruMaduranga/harness-engineering-101"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A Google Research GitHub framework for recursive agent harnessing that keeps model weights fixed, refining task execution and a persistent improvement harness; it reports benchmark gains and supports OpenCode and Codex executors.",
+      "title": "Harness2 by Google Research \u2013 Recursive Agent Harnessing",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/google-research/harness2"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Laminar's Launch HN introduces flow-1, an RL-trained model for finding errors in agent traces; it reportedly matches GPT-6-sol detection quality at 23x lower cost, making unsampled trace analysis affordable.",
+      "title": "Launch HN: Laminar (YC S24) \u2013 RL-trained model that finds errors in agent traces",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://news.ycombinator.com/item?id=50154029"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A guide to running Claude Code and other AI coding agents in tmux: session-per-project naming, pane layouts, send-keys to script an agent, capture-pane to read it back, a status-line monitor, and the limits hit at four agents. It starts with Claude Code's built-in --worktree --tmux flags.",
+      "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://crystl.dev/guides/tmux-for-ai-agents/"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "Scrawl, a macOS (Apple silicon, macOS 26+) and Windows preview app that records screen, voice and on-screen drawing, then bundles them into a contact sheet, keyframes, transcript timeline and manifest so a coding agent can see a problem instead of reading a description. Ships an installable agent skill and CLI.",
+      "title": "kitlangton/scrawl",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/kitlangton/scrawl"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "KiviDB, a Rust multi-threaded Redis/Valkey alternative speaking RESP2/RESP3, with sharded in-memory design, snapshots plus optional AOF, and built-in FT.* full-text and vector (FLAT/HNSW) search. Claims 21M pipelined GETs/sec on 32 cores, about 9\u00d7 Redis 8 and 2.3\u00d7 Dragonfly.",
+      "title": "Show HN: KiviDB, a faster Redis-compatible memory database and vector cache",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/kividbio/kividb"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 7,
+      "source": "rss",
+      "summary": "A Stripe survey of 200 platform leaders identifying four ways SaaS platforms adapt to AI: internal/product AI, usage/outcome pricing, revenue mix, and embedded finance; it notes 180% YoY growth in new platform businesses and 57% fear AI-driven customer loss.",
+      "title": "Stripe survey: Four trends reshaping how SaaS platforms compete in the AI era",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://stripe.com/blog/saas-platform-trends-in-AI-era"
+    },
+    {
+      "pending_since": "2026-10-20T09:09:08.857228+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "braiNOTES is an open-source browser app for handwritten notes over lecture PDFs, with pen tools, whiteboards, offline saving, PDF/PNG export, and an optional local bridge letting a coding agent read and write pages.",
+      "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.com/swimmingbrain/brainotes"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

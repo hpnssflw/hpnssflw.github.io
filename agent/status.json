@@ -4,13 +4,13 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 62,
+        "already_ranked": 61,
         "dismissed": 1,
         "seen": 24
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 13
+        "below_relevance": 4,
+        "over_max_items": 12
       }
     },
     "tooling": {
@@ -19,7 +19,8 @@
         "seen": 20
       },
       "rank": {
-        "over_max_items": 14
+        "below_relevance": 2,
+        "over_max_items": 12
       }
     },
     "web-products": {
@@ -27,149 +28,148 @@
         "outside_window": 136
       },
       "dedupe": {
-        "already_ranked": 25,
+        "already_ranked": 24,
         "seen": 20
       },
       "rank": {
-        "over_max_items": 6
+        "below_relevance": 1,
+        "over_max_items": 4
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 103,
-      "in_window": 103,
-      "kept": 0,
-      "new": 16
+      "collected": 106,
+      "in_window": 106,
+      "kept": 4,
+      "new": 20
     },
     "tooling": {
-      "collected": 102,
-      "in_window": 102,
-      "kept": 0,
-      "new": 14
+      "collected": 105,
+      "in_window": 105,
+      "kept": 3,
+      "new": 17
     },
     "web-products": {
       "collected": 187,
       "in_window": 51,
-      "kept": 0,
-      "new": 6
+      "kept": 2,
+      "new": 7
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 51,
+  "pending_count": 60,
   "recent_events": [
+    {
+      "score": 6,
+      "source": "hn",
+      "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
+      "topic": "web-products",
+      "ts": "2026-10-20T09:10:29.167072+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "Stripe survey: Four trends reshaping how SaaS platforms compete in the AI era",
+      "topic": "web-products",
+      "ts": "2026-10-20T09:10:29.167044+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360721+00:00",
+      "ts": "2026-10-20T09:10:29.167023+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360709+00:00",
+      "ts": "2026-10-20T09:10:29.167007+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360698+00:00",
+      "ts": "2026-10-20T09:10:29.166985+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360686+00:00",
+      "ts": "2026-10-20T09:10:29.166919+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
+      "reason": "below_relevance",
+      "title": "Garinmckayl/anima",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360667+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Stripe survey: Four trends reshaping how SaaS platforms compete in the AI era",
-      "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360613+00:00",
+      "ts": "2026-10-20T09:10:25.451096+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360444+00:00",
+      "ts": "2026-10-20T09:10:18.429875+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360433+00:00",
+      "ts": "2026-10-20T09:10:18.429864+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360422+00:00",
+      "ts": "2026-10-20T09:10:18.429854+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "People holding up the internet",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360411+00:00",
+      "ts": "2026-10-20T09:10:18.429843+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Richest getting richer",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360400+00:00",
+      "ts": "2026-10-20T09:10:18.429833+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Calculation volumes for AI training",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360389+00:00",
+      "ts": "2026-10-20T09:10:18.429822+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Is Your Organization Messing Up AI Adoption?",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360378+00:00",
+      "ts": "2026-10-20T09:10:18.429812+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Structured Output with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360367+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Fangx-AI/geo-doctor",
-      "topic": "web-products",
-      "ts": "2026-10-20T03:34:09.360356+00:00",
+      "ts": "2026-10-20T09:10:18.429800+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-14T22:59:05.256595+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-15T03:21:15.589144+00:00"
@@ -261,28 +261,32 @@
     {
       "kept": 0,
       "ts": "2026-10-20T03:33:36.677497+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-20T09:09:08.857228+00:00"
     }
   ],
-  "streak": 299,
+  "streak": 300,
   "topics": [
     {
-      "collected": 103,
-      "kept": 0,
+      "collected": 106,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 102,
-      "kept": 0,
+      "collected": 105,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 187,
-      "kept": 0,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-20T03:33:36.677497+00:00"
+  "updated_at": "2026-10-20T09:09:08.857228+00:00"
 }

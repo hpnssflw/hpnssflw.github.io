@@ -317,11 +317,11 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 20,
-      "tooling": 15,
-      "web-products": 16
+      "ai-engineering": 24,
+      "tooling": 18,
+      "web-products": 18
     },
-    "count": 51,
+    "count": 60,
     "items": [
       {
         "decision": null,
@@ -883,12 +883,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://webkit.org/blog/18438/blocking-identity-resolution-infrastructure/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 10,
+        "source": "hn",
+        "summary": "A vLLM blog post describes agent-assisted optimization of Kimi K3, including a unified CuTe DSL decode path on NVIDIA GB300 and reported 1.5–2× higher decode throughput plus a proposed fast-track RFC to reduce review burden.",
+        "title": "Hyper Optimizing Kimi K3 in vLLM",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "A book/blog series on building AI agents from first principles, growing a ~300-line toy Python agent across 16 chapters; each chapter presents a failure, a minimal harness patch, and its cost.",
+        "title": "Harness Engineering 101: The LLM is the brain, the harness is the body",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/IsuruMaduranga/harness-engineering-101"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "A Google Research GitHub framework for recursive agent harnessing that keeps model weights fixed, refining task execution and a persistent improvement harness; it reports benchmark gains and supports OpenCode and Codex executors.",
+        "title": "Harness2 by Google Research – Recursive Agent Harnessing",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/google-research/harness2"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "Laminar's Launch HN introduces flow-1, an RL-trained model for finding errors in agent traces; it reportedly matches GPT-6-sol detection quality at 23x lower cost, making unsampled trace analysis affordable.",
+        "title": "Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://news.ycombinator.com/item?id=50154029"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "A guide to running Claude Code and other AI coding agents in tmux: session-per-project naming, pane layouts, send-keys to script an agent, capture-pane to read it back, a status-line monitor, and the limits hit at four agents. It starts with Claude Code's built-in --worktree --tmux flags.",
+        "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://crystl.dev/guides/tmux-for-ai-agents/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Scrawl, a macOS (Apple silicon, macOS 26+) and Windows preview app that records screen, voice and on-screen drawing, then bundles them into a contact sheet, keyframes, transcript timeline and manifest so a coding agent can see a problem instead of reading a description. Ships an installable agent skill and CLI.",
+        "title": "kitlangton/scrawl",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/kitlangton/scrawl"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "KiviDB, a Rust multi-threaded Redis/Valkey alternative speaking RESP2/RESP3, with sharded in-memory design, snapshots plus optional AOF, and built-in FT.* full-text and vector (FLAT/HNSW) search. Claims 21M pipelined GETs/sec on 32 cores, about 9× Redis 8 and 2.3× Dragonfly.",
+        "title": "Show HN: KiviDB, a faster Redis-compatible memory database and vector cache",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/kividbio/kividb"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "A Stripe survey of 200 platform leaders identifying four ways SaaS platforms adapt to AI: internal/product AI, usage/outcome pricing, revenue mix, and embedded finance; it notes 180% YoY growth in new platform businesses and 57% fear AI-driven customer loss.",
+        "title": "Stripe survey: Four trends reshaping how SaaS platforms compete in the AI era",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://stripe.com/blog/saas-platform-trends-in-AI-era"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-20T09:09:08.857228+00:00",
+        "score": 6,
+        "source": "hn",
+        "summary": "braiNOTES is an open-source browser app for handwritten notes over lecture PDFs, with pen tools, whiteboards, offline saving, PDF/PNG export, and an optional local bridge letting a coding agent read and write pages.",
+        "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://github.com/swimmingbrain/brainotes"
       }
     ]
   },
   "run": {
-    "at": "2026-10-20T03:33:36.677497+00:00",
-    "id": "2026-10-20T0333Z",
+    "at": "2026-10-20T09:09:08.857228+00:00",
+    "id": "2026-10-20T0909Z",
     "mode": "real",
     "offline": false
   },
@@ -899,13 +998,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 103,
-          "out": 103
+          "in": 106,
+          "out": 106
         },
         "tooling": {
           "drops": {},
-          "in": 102,
-          "out": 102
+          "in": 105,
+          "out": 105
         },
         "web-products": {
           "drops": {},
@@ -920,13 +1019,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 103,
-          "out": 103
+          "in": 106,
+          "out": 106
         },
         "tooling": {
           "drops": {},
-          "in": 102,
-          "out": 102
+          "in": 105,
+          "out": 105
         },
         "web-products": {
           "drops": {
@@ -946,15 +1045,15 @@
             "dismissed": 1,
             "seen": 24
           },
-          "in": 103,
-          "out": 78
+          "in": 106,
+          "out": 81
         },
         "tooling": {
           "drops": {
             "seen": 20
           },
-          "in": 102,
-          "out": 82
+          "in": 105,
+          "out": 85
         },
         "web-products": {
           "drops": {
@@ -971,24 +1070,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 62
+            "already_ranked": 61
           },
-          "in": 78,
-          "out": 16
+          "in": 81,
+          "out": 20
         },
         "tooling": {
           "drops": {
             "already_ranked": 68
           },
-          "in": 82,
-          "out": 14
+          "in": 85,
+          "out": 17
         },
         "web-products": {
           "drops": {
-            "already_ranked": 25
+            "already_ranked": 24
           },
           "in": 31,
-          "out": 6
+          "out": 7
         }
       },
       "stage": "cache"
@@ -998,18 +1097,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 7,
+          "out": 7
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1019,19 +1118,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 4
           },
-          "in": 16,
-          "out": 13
+          "in": 20,
+          "out": 16
         },
         "tooling": {
-          "drops": {},
-          "in": 14,
-          "out": 14
+          "drops": {
+            "below_relevance": 2
+          },
+          "in": 17,
+          "out": 15
         },
         "web-products": {
-          "drops": {},
-          "in": 6,
+          "drops": {
+            "below_relevance": 1
+          },
+          "in": 7,
           "out": 6
         }
       },
@@ -1042,24 +1145,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 12
           },
-          "in": 13,
-          "out": 0
+          "in": 16,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 14
+            "over_max_items": 12
           },
-          "in": 14,
-          "out": 0
+          "in": 15,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 6
+            "over_max_items": 4
           },
           "in": 6,
-          "out": 0
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1069,18 +1172,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "summarized": 2
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1090,18 +1202,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 20
+          "in": 4,
+          "out": 24
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 15
+          "in": 3,
+          "out": 18
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 16
+          "in": 2,
+          "out": 18
         }
       },
       "stage": "queue"
@@ -1112,16 +1224,25 @@
         "ai-engineering": {
           "drops": {},
           "in": 20,
+          "notes": {
+            "asked": 4
+          },
           "out": 20
         },
         "tooling": {
           "drops": {},
           "in": 15,
+          "notes": {
+            "asked": 3
+          },
           "out": 15
         },
         "web-products": {
           "drops": {},
           "in": 16,
+          "notes": {
+            "asked": 2
+          },
           "out": 16
         }
       },
