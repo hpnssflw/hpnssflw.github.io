@@ -215,6 +215,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "02b82d367685ef5a": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 92,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 92,
+        "summary": "A Show HN post for VoidAccess, an open-source dark web OSINT tool that turns queries into a graph."
+      }
+    },
+    "times_sent": 0
+  },
   "02d05d50ed5e32b6": {
     "dismissed": null,
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
@@ -294,7 +310,7 @@
   "04a096ef95eb18a0": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 730,
+    "last_score": 775,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -511,7 +527,7 @@
   "07c69181754e1953": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 96,
+    "last_score": 101,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -667,6 +683,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 157,
         "summary": "A blog post about a single-function Jev-like wrapper for LLMs, including vision models."
+      }
+    },
+    "times_sent": 0
+  },
+  "0994d19689bb7802": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 3,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A blog post about a video that presents an unofficial redesign of VLC and praises the human effort required to design something well."
       }
     },
     "times_sent": 0
@@ -1489,7 +1521,7 @@
   "170851101c2fcec5": {
     "dismissed": null,
     "first_seen": "2026-10-17T21:58:20.980695+00:00",
-    "last_score": 175,
+    "last_score": 176,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1633,6 +1665,22 @@
     "last_score": 1209,
     "ranks": {},
     "times_sent": 1
+  },
+  "1a1edc3721552e2e": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 157,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 157,
+        "summary": "A post about publishing fake statistics in order to get cited by LLMs, framed around citation manipulation rather than building or evaluating an LLM system."
+      }
+    },
+    "times_sent": 0
   },
   "1a400703ecdf7ec7": {
     "dismissed": null,
@@ -1859,7 +1907,7 @@
   "1f1f087b2b664b27": {
     "dismissed": null,
     "first_seen": "2026-10-19T09:37:11.229871+00:00",
-    "last_score": 120,
+    "last_score": 123,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -2028,7 +2076,7 @@
   "233e30c6f22de11e": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 144,
+    "last_score": 145,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2335,7 +2383,7 @@
   "2a6ac23eb50f0535": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 148,
+    "last_score": 152,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2612,7 +2660,7 @@
   "2f02c05ab0a4ce56": {
     "dismissed": null,
     "first_seen": "2026-10-20T03:33:36.677497+00:00",
-    "last_score": 111,
+    "last_score": 114,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2938,7 +2986,7 @@
   "32b567ec448cd836": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
-    "last_score": 98,
+    "last_score": 105,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -3014,7 +3062,7 @@
   "337549f33a482927": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 67,
+    "last_score": 68,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-20T09:09:08.857228+00:00",
@@ -3320,6 +3368,22 @@
     },
     "times_sent": 0
   },
+  "37d13315cf78340e": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 124,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 124,
+        "summary": "A GitHub project for a Rust compiler daemon on rust-analyzer that provides fast incremental cargo builds and live edits to running programs."
+      }
+    },
+    "times_sent": 0
+  },
   "37e2a73866ffaef5": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -3330,7 +3394,7 @@
   "37e5fd01acd13829": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 639,
+    "last_score": 645,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3475,7 +3539,7 @@
   "3a7946cd06e1a37a": {
     "dismissed": null,
     "first_seen": "2026-10-16T16:08:13.564209+00:00",
-    "last_score": 252,
+    "last_score": 254,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-17T08:16:47.855119+00:00",
@@ -3499,7 +3563,7 @@
   "3ab9b1ef391db233": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
-    "last_score": 159,
+    "last_score": 164,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3567,6 +3631,22 @@
         "rubric": "02189e2467e9",
         "source_score": 132,
         "summary": "Dental Scope is an interactive 3D dental anatomy tool."
+      }
+    },
+    "times_sent": 0
+  },
+  "3b5dc9da776c2e18": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 30,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 30,
+        "summary": "An article explaining how Postgres DELETE can scale."
       }
     },
     "times_sent": 0
@@ -3745,7 +3825,7 @@
   "3e224bc9c6687669": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 115,
+    "last_score": 114,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4058,7 +4138,7 @@
   "432268236ae7fe16": {
     "dismissed": null,
     "first_seen": "2026-10-18T22:13:50.709746+00:00",
-    "last_score": 198,
+    "last_score": 200,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -4270,7 +4350,7 @@
   "46ccbfc5e65bd167": {
     "dismissed": null,
     "first_seen": "2026-10-16T08:46:21.084801+00:00",
-    "last_score": 1690,
+    "last_score": 1853,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4286,7 +4366,7 @@
   "46d4d209813615e2": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 3350,
+    "last_score": 3378,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-13T01:49:57.202770+00:00",
@@ -4346,7 +4426,7 @@
   "476d427e5f97d6df": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 515,
+    "last_score": 517,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4719,7 +4799,7 @@
   "4ded188d56461870": {
     "dismissed": null,
     "first_seen": "2026-10-18T15:25:39.608183+00:00",
-    "last_score": 929,
+    "last_score": 936,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4920,7 +5000,7 @@
   "50f75b68ac5537b6": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 148,
+    "last_score": 154,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5135,7 +5215,7 @@
   "548bfc13ddee88c1": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 145,
+    "last_score": 112,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5188,7 +5268,7 @@
   "55c3c0be518a12ff": {
     "dismissed": null,
     "first_seen": "2026-10-20T03:33:36.677497+00:00",
-    "last_score": 407,
+    "last_score": 664,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5654,7 +5734,7 @@
   "5c178992b8dda5ca": {
     "dismissed": null,
     "first_seen": "2026-10-17T03:07:44.985106+00:00",
-    "last_score": 112,
+    "last_score": 113,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5822,7 +5902,7 @@
   "5e2de02c616d9812": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 101,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5928,7 +6008,7 @@
   "60b327d6ad835cd9": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 290,
+    "last_score": 335,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6006,7 +6086,7 @@
   "61d98d12690dff19": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 449,
+    "last_score": 460,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6414,7 +6494,7 @@
   "67efb58968307ed9": {
     "dismissed": null,
     "first_seen": "2026-10-17T15:00:22.602783+00:00",
-    "last_score": 235,
+    "last_score": 236,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6506,7 +6586,7 @@
   "69450150efd0cc61": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 75,
+    "last_score": 77,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-20T09:09:08.857228+00:00",
@@ -6672,7 +6752,7 @@
   "6b10edb38f7953be": {
     "dismissed": null,
     "first_seen": "2026-10-16T22:33:29.937985+00:00",
-    "last_score": 625,
+    "last_score": 626,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6718,7 +6798,7 @@
   "6bcbd1b996df15e7": {
     "dismissed": null,
     "first_seen": "2026-10-19T23:19:39.204837+00:00",
-    "last_score": 55,
+    "last_score": 56,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7130,10 +7210,26 @@
     },
     "times_sent": 0
   },
+  "711e11db15dd7c88": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A Pudding.cool piece demystifying the six degrees of Kevin Bacon as the past, present, and future center of Hollywood."
+      }
+    },
+    "times_sent": 0
+  },
   "711ff4437e8bd178": {
     "dismissed": null,
     "first_seen": "2026-10-16T22:33:29.937985+00:00",
-    "last_score": 224,
+    "last_score": 225,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7448,7 +7544,7 @@
   "765a9894d2fa75a2": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 143,
+    "last_score": 186,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7674,15 +7770,15 @@
   "7aa2f5992ec29c5c": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 54,
+    "last_score": 125,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-20T09:09:08.857228+00:00",
-        "relevance": 3,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 54,
-        "summary": "A CLI browsable via npx that provides 634 animated ASCII art pieces for web pages, READMEs, wallpapers, and terminals and lets users add one to a project in one prompt."
+        "source_score": 125,
+        "summary": "A GitHub project offering 634 animated ASCII art pieces for web pages, READMEs, wallpapers, and terminals, browsable via npx."
       }
     },
     "times_sent": 0
@@ -7704,7 +7800,7 @@
   "7b7b800d55fc8f25": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 273,
+    "last_score": 278,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7858,7 +7954,7 @@
   "7ed5583fdd7a1205": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 407,
+    "last_score": 411,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8871,6 +8967,22 @@
     },
     "times_sent": 0
   },
+  "91355a3207a1bcfd": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 51,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 51,
+        "summary": "A GitHub project for Strata Files, a native keyboard-first macOS file manager and Finder alternative with instant search, live folder sizes, disk usage map, and dual pane."
+      }
+    },
+    "times_sent": 0
+  },
   "9139f009d0a21056": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
@@ -8898,7 +9010,7 @@
   "914b3fedd5958504": {
     "dismissed": null,
     "first_seen": "2026-10-16T16:08:13.564209+00:00",
-    "last_score": 2486,
+    "last_score": 2580,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8930,7 +9042,7 @@
   "918cdd953ecffda0": {
     "dismissed": null,
     "first_seen": "2026-10-16T22:33:29.937985+00:00",
-    "last_score": 1061,
+    "last_score": 1063,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9017,7 +9129,7 @@
   "92a589a2f92b397b": {
     "dismissed": null,
     "first_seen": "2026-10-18T08:34:06.870675+00:00",
-    "last_score": 73,
+    "last_score": 75,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9243,7 +9355,7 @@
   "956d462d69506633": {
     "dismissed": null,
     "first_seen": "2026-10-18T18:28:11.776184+00:00",
-    "last_score": 217,
+    "last_score": 219,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9637,7 +9749,7 @@
   "99d537d830d481c4": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 112,
+    "last_score": 135,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9685,7 +9797,7 @@
   "9a49de55e7061de1": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 195,
+    "last_score": 229,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9853,7 +9965,7 @@
   "9d4b9e1fe5ab5819": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 129,
+    "last_score": 132,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-20T09:09:08.857228+00:00",
@@ -10076,7 +10188,7 @@
   "a116dd251f4d6617": {
     "dismissed": null,
     "first_seen": "2026-10-18T08:34:06.870675+00:00",
-    "last_score": 130,
+    "last_score": 134,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-18T08:34:06.870675+00:00",
@@ -10392,7 +10504,7 @@
   "a64bc604748a94c2": {
     "dismissed": null,
     "first_seen": "2026-10-20T03:33:36.677497+00:00",
-    "last_score": 99,
+    "last_score": 112,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10431,7 +10543,7 @@
   "a6a0b0ef1abfb1bc": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 220,
+    "last_score": 222,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -10447,7 +10559,7 @@
   "a6ac0a482468d742": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 154,
+    "last_score": 157,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10555,7 +10667,7 @@
   "a7916291f2ecf9f7": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 2384,
+    "last_score": 2405,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10813,7 +10925,7 @@
   "ab9bb7195f7587c0": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 127,
+    "last_score": 128,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10997,7 +11109,7 @@
   "ae6e49210029e41a": {
     "dismissed": null,
     "first_seen": "2026-10-18T22:13:50.709746+00:00",
-    "last_score": 506,
+    "last_score": 511,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -11100,7 +11212,7 @@
   "af5ba9cdb2916c29": {
     "dismissed": null,
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
-    "last_score": 803,
+    "last_score": 809,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11339,7 +11451,7 @@
   "b308c1f55b513d5e": {
     "dismissed": null,
     "first_seen": "2026-10-15T08:53:31.348611+00:00",
-    "last_score": 133,
+    "last_score": 134,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11355,7 +11467,7 @@
   "b31543fcd7d1501b": {
     "dismissed": null,
     "first_seen": "2026-10-18T18:28:11.776184+00:00",
-    "last_score": 154,
+    "last_score": 155,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11473,7 +11585,7 @@
   "b5f241f765311731": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
-    "last_score": 191,
+    "last_score": 192,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-14T03:40:29.632688+00:00",
@@ -11724,7 +11836,7 @@
   "b868c0a4c342680f": {
     "dismissed": null,
     "first_seen": "2026-10-17T08:16:47.855119+00:00",
-    "last_score": 521,
+    "last_score": 564,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11747,7 +11859,7 @@
   "b89314bc132c8f07": {
     "dismissed": null,
     "first_seen": "2026-10-16T16:08:13.564209+00:00",
-    "last_score": 82,
+    "last_score": 85,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11900,7 +12012,7 @@
   "baffcb4d50a5b911": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 1185,
+    "last_score": 1349,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12022,6 +12134,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "bc34cbec3dd5a0fb": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 124,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 124,
+        "summary": "An article about Tsrs, a port of TypeScript to Rust."
+      }
+    },
+    "times_sent": 0
+  },
   "bc571d12f546f3f3": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -12119,6 +12247,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "be38b11f937cd76c": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 1651,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 9,
+        "rubric": "3472af8a46e1",
+        "source_score": 1651,
+        "summary": "DeepSeek has open-sourced its inference engine, per the title, which points directly at self-hosted serving and inference work."
+      }
+    },
+    "times_sent": 0
+  },
   "bef31792e452dc24": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -12138,7 +12282,7 @@
   "bf08c7b0ac6a75f7": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 297,
+    "last_score": 298,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -12178,7 +12322,7 @@
   "bf38551c221deb6f": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 54,
+    "last_score": 62,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12194,7 +12338,7 @@
   "bf79879b30894193": {
     "dismissed": null,
     "first_seen": "2026-10-11T14:40:21.388865+00:00",
-    "last_score": 287,
+    "last_score": 288,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12300,6 +12444,22 @@
     "first_seen": "2026-08-31T02:03:09.257484+00:00",
     "last_score": 50,
     "ranks": {},
+    "times_sent": 0
+  },
+  "c15c1be0aad75fb4": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 9,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A Smashing Magazine article about the native CSS random() function landing in Safari and rolling out in Chrome 156, with CodePen demos exploring randomness in web design."
+      }
+    },
     "times_sent": 0
   },
   "c161d6bab52698d1": {
@@ -12519,7 +12679,7 @@
   "c4f0c7a2833f4edd": {
     "dismissed": null,
     "first_seen": "2026-10-17T03:07:44.985106+00:00",
-    "last_score": 113,
+    "last_score": 115,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12621,6 +12781,22 @@
     "last_score": 204,
     "ranks": {},
     "times_sent": 1
+  },
+  "c66bbf103cb4c6ba": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 47,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 47,
+        "summary": "A post about the Rust compiler and the author's outlook for 2026."
+      }
+    },
+    "times_sent": 0
   },
   "c6ab1f25135f39c7": {
     "dismissed": "expired",
@@ -12847,7 +13023,7 @@
   "cac24968e5aa0d5b": {
     "dismissed": null,
     "first_seen": "2026-10-17T15:00:22.602783+00:00",
-    "last_score": 955,
+    "last_score": 957,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-18T08:34:06.870675+00:00",
@@ -12932,7 +13108,7 @@
   "cc1b21cd822df9e1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 266,
+    "last_score": 271,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12969,7 +13145,7 @@
   "cc6a2ea16efd87ef": {
     "dismissed": null,
     "first_seen": "2026-10-17T15:00:22.602783+00:00",
-    "last_score": 183,
+    "last_score": 185,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13327,7 +13503,7 @@
   "d16bd93ff857d83d": {
     "dismissed": null,
     "first_seen": "2026-10-11T23:28:01.330478+00:00",
-    "last_score": 728,
+    "last_score": 729,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14080,7 +14256,7 @@
   "de6a3ba228af2814": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 955,
+    "last_score": 956,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-16T08:46:21.084801+00:00",
@@ -14116,6 +14292,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "defa012d74a41b74": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A FlowingData post on Stephen Follows\u2019 count of shots in movies from 1920 through 2025, using TransNet V2 for transition detection and shot count."
+      }
+    },
+    "times_sent": 0
+  },
   "df08a10f1c0579ed": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
@@ -14135,7 +14327,7 @@
   "df6707ce9c81e4cd": {
     "dismissed": null,
     "first_seen": "2026-10-18T15:25:39.608183+00:00",
-    "last_score": 108,
+    "last_score": 109,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14341,7 +14533,7 @@
   "e198550b259714ed": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 156,
+    "last_score": 161,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14520,15 +14712,15 @@
   "e323d71e5034dd0b": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 231,
+    "last_score": 480,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-20T09:09:08.857228+00:00",
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
         "relevance": 1,
         "rubric": "3472af8a46e1",
-        "source_score": 231,
-        "summary": "A Reuters item reports that DeepSeek is banned from U.S. federal civilian agencies under a new DHS order."
+        "source_score": 480,
+        "summary": "A Reuters report that DeepSeek is banned from U.S. federal civilian agencies under a new DHS order, which is regulation and policy news."
       }
     },
     "times_sent": 0
@@ -14550,7 +14742,7 @@
   "e402bd002c0d3604": {
     "dismissed": null,
     "first_seen": "2026-10-14T09:18:29.016558+00:00",
-    "last_score": 509,
+    "last_score": 510,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14566,7 +14758,7 @@
   "e40e78a1cf1d1854": {
     "dismissed": null,
     "first_seen": "2026-10-19T23:19:39.204837+00:00",
-    "last_score": 515,
+    "last_score": 553,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14945,7 +15137,7 @@
   "ebbeffe90ed5bf1f": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
-    "last_score": 1121,
+    "last_score": 1146,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-18T08:34:06.870675+00:00",
@@ -15123,6 +15315,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "f036721486abf8a9": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 50,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 50,
+        "summary": "A GitHub project for a C++23 runtime patching framework for Windows memory analysis."
+      }
+    },
+    "times_sent": 0
+  },
   "f03b8aa461cf7497": {
     "dismissed": null,
     "first_seen": "2026-09-24T22:48:04.749226+00:00",
@@ -15130,10 +15338,26 @@
     "ranks": {},
     "times_sent": 1
   },
+  "f0411941f774b69d": {
+    "dismissed": null,
+    "first_seen": "2026-10-20T16:24:02.234579+00:00",
+    "last_score": 84,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 84,
+        "summary": "A post stating that there is no official XScreenSaver GitHub repository."
+      }
+    },
+    "times_sent": 0
+  },
   "f08784ca69eb615b": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 318,
+    "last_score": 319,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15262,7 +15486,7 @@
   "f1cb07a73c67cf63": {
     "dismissed": null,
     "first_seen": "2026-10-19T09:37:11.229871+00:00",
-    "last_score": 187,
+    "last_score": 188,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15467,7 +15691,7 @@
   "f5650bacb7dba05a": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 63,
+    "last_score": 82,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15527,7 +15751,7 @@
   "f6b62732236c571e": {
     "dismissed": null,
     "first_seen": "2026-10-18T15:25:39.608183+00:00",
-    "last_score": 302,
+    "last_score": 316,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15850,7 +16074,7 @@
   "fe32ea3057eb389d": {
     "dismissed": null,
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
-    "last_score": 325,
+    "last_score": 330,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
