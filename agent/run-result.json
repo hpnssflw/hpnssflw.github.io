@@ -309,14 +309,7 @@
     "sent_items": 0,
     "target": "telegram"
   },
-  "failures": [
-    {
-      "error_type": "FetchError",
-      "scope": "web-products",
-      "source": "bram-us",
-      "stage": "collect"
-    }
-  ],
+  "failures": [],
   "preset": {
     "language": "en",
     "name": "Tony Scraponi",
@@ -1004,8 +997,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-20T22:56:37.928833+00:00",
-    "id": "2026-10-20T2256Z",
+    "at": "2026-10-21T03:26:55.076420+00:00",
+    "id": "2026-10-21T0326Z",
     "mode": "real",
     "offline": false
   },
@@ -1016,18 +1009,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 110,
-          "out": 110
+          "in": 102,
+          "out": 102
         },
         "tooling": {
           "drops": {},
-          "in": 115,
-          "out": 115
+          "in": 112,
+          "out": 112
         },
         "web-products": {
           "drops": {},
-          "in": 179,
-          "out": 179
+          "in": 189,
+          "out": 189
         }
       },
       "stage": "collect"
@@ -1037,20 +1030,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 110,
-          "out": 110
+          "in": 102,
+          "out": 102
         },
         "tooling": {
           "drops": {},
-          "in": 115,
-          "out": 115
+          "in": 112,
+          "out": 112
         },
         "web-products": {
           "drops": {
-            "outside_window": 124
+            "outside_window": 132
           },
-          "in": 179,
-          "out": 55
+          "in": 189,
+          "out": 57
         }
       },
       "stage": "window"
@@ -1060,24 +1053,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "seen": 30
+            "seen": 27
           },
-          "in": 110,
-          "out": 80
+          "in": 102,
+          "out": 75
         },
         "tooling": {
           "drops": {
-            "seen": 24
+            "seen": 23
           },
-          "in": 115,
-          "out": 91
+          "in": 112,
+          "out": 89
         },
         "web-products": {
           "drops": {
-            "seen": 20
+            "seen": 23
           },
-          "in": 55,
-          "out": 35
+          "in": 57,
+          "out": 34
         }
       },
       "stage": "dedupe"
@@ -1087,24 +1080,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 61
+            "already_ranked": 59
           },
-          "in": 80,
-          "out": 19
+          "in": 75,
+          "out": 16
         },
         "tooling": {
           "drops": {
-            "already_ranked": 69
+            "already_ranked": 72
           },
-          "in": 91,
-          "out": 22
+          "in": 89,
+          "out": 17
         },
         "web-products": {
           "drops": {
-            "already_ranked": 25
+            "already_ranked": 26
           },
-          "in": 35,
-          "out": 10
+          "in": 34,
+          "out": 8
         }
       },
       "stage": "cache"
@@ -1114,18 +1107,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 3,
+          "out": 3
         },
         "tooling": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 2,
+          "out": 2
         },
         "web-products": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1135,23 +1128,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 2
           },
-          "in": 19,
-          "out": 15
+          "in": 16,
+          "out": 14
         },
         "tooling": {
           "drops": {
-            "below_relevance": 6
-          },
-          "in": 22,
-          "out": 16
-        },
-        "web-products": {
-          "drops": {
             "below_relevance": 2
           },
-          "in": 10,
+          "in": 17,
+          "out": 15
+        },
+        "web-products": {
+          "drops": {},
+          "in": 8,
           "out": 8
         }
       },
@@ -1162,24 +1153,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
+            "over_max_items": 14
+          },
+          "in": 14,
+          "out": 0
+        },
+        "tooling": {
+          "drops": {
             "over_max_items": 15
           },
           "in": 15,
           "out": 0
         },
-        "tooling": {
-          "drops": {
-            "over_max_items": 16
-          },
-          "in": 16,
-          "out": 0
-        },
         "web-products": {
           "drops": {
-            "over_max_items": 7
+            "over_max_items": 8
           },
           "in": 8,
-          "out": 1
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1199,11 +1190,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "notes": {
-            "summarized": 1
-          },
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1223,7 +1211,7 @@
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 0,
           "out": 19
         }
       },
@@ -1244,11 +1232,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 18,
-          "notes": {
-            "asked": 1
-          },
-          "out": 18
+          "in": 19,
+          "out": 19
         }
       },
       "stage": "review"

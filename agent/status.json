@@ -4,180 +4,168 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 61,
-        "seen": 30
+        "already_ranked": 59,
+        "seen": 27
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 15
+        "below_relevance": 2,
+        "over_max_items": 14
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 69,
-        "seen": 24
+        "already_ranked": 72,
+        "seen": 23
       },
       "rank": {
-        "below_relevance": 6,
-        "over_max_items": 16
+        "below_relevance": 2,
+        "over_max_items": 15
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 124
+        "outside_window": 132
       },
       "dedupe": {
-        "already_ranked": 25,
-        "seen": 20
+        "already_ranked": 26,
+        "seen": 23
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 7
+        "over_max_items": 8
       }
     }
   },
-  "failures": [
-    {
-      "source": "bram-us",
-      "stage": "collect",
-      "topic": "web-products"
-    }
-  ],
+  "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 110,
-      "in_window": 110,
+      "collected": 102,
+      "in_window": 102,
       "kept": 0,
-      "new": 19
+      "new": 16
     },
     "tooling": {
-      "collected": 115,
-      "in_window": 115,
+      "collected": 112,
+      "in_window": 112,
       "kept": 0,
-      "new": 22
+      "new": 17
     },
     "web-products": {
-      "collected": 179,
-      "in_window": 55,
-      "kept": 1,
-      "new": 10
+      "collected": 189,
+      "in_window": 57,
+      "kept": 0,
+      "new": 8
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 61,
   "recent_events": [
     {
-      "score": 9,
-      "source": "rss",
-      "title": "Embracing Playful Imperfection With The CSS `random()` Function",
-      "topic": "web-products",
-      "ts": "2026-10-20T22:57:53.630716+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
       "title": "Decline in American social activities",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:53.630692+00:00",
+      "ts": "2026-10-21T03:27:36.044293+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:53.630677+00:00",
+      "ts": "2026-10-21T03:27:36.044285+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:53.630662+00:00",
+      "ts": "2026-10-21T03:27:36.044276+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:53.630646+00:00",
+      "ts": "2026-10-21T03:27:36.044267+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "abdiraimov-otabek/dashboard-design-skill",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:53.630628+00:00",
+      "ts": "2026-10-21T03:27:36.044258+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The Real Kevin Bacon",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:53.630603+00:00",
+      "ts": "2026-10-21T03:27:36.044248+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Increasing number of shots in movies",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:53.630515+00:00",
+      "ts": "2026-10-21T03:27:36.044234+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "Data center stocks slide as Korea IPO plunges 30%, pressuring tech sentiment",
+      "reason": "over_max_items",
+      "title": "The Future of CSS",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:51.135781+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: RoadRash ported to Three.js to run in the browser",
-      "topic": "web-products",
-      "ts": "2026-10-20T22:57:51.135726+00:00",
+      "ts": "2026-10-21T03:27:36.044181+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:41.419257+00:00",
+      "ts": "2026-10-21T03:27:33.695348+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Learning is the thing",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:41.419246+00:00",
+      "ts": "2026-10-21T03:27:33.695340+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Searchable database of the enslaved in former British colonies",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:41.419235+00:00",
+      "ts": "2026-10-21T03:27:33.695331+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "People holding up the internet",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:41.419225+00:00",
+      "ts": "2026-10-21T03:27:33.695321+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Richest getting richer",
       "topic": "web-products",
-      "ts": "2026-10-20T22:57:41.419214+00:00",
+      "ts": "2026-10-21T03:27:33.695313+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Calculation volumes for AI training",
+      "topic": "web-products",
+      "ts": "2026-10-21T03:27:33.695304+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Is Your Organization Messing Up AI Adoption?",
+      "topic": "web-products",
+      "ts": "2026-10-21T03:27:33.695296+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-15T16:22:31.699257+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-15T22:54:23.821843+00:00"
@@ -269,28 +257,32 @@
     {
       "kept": 1,
       "ts": "2026-10-20T22:56:37.928833+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-21T03:26:55.076420+00:00"
     }
   ],
-  "streak": 302,
+  "streak": 303,
   "topics": [
     {
-      "collected": 110,
+      "collected": 102,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 115,
+      "collected": 112,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 179,
-      "kept": 1,
+      "collected": 189,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-20T22:56:37.928833+00:00"
+  "updated_at": "2026-10-21T03:26:55.076420+00:00"
 }
