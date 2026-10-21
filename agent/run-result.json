@@ -319,9 +319,9 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 20
+      "web-products": 21
     },
-    "count": 69,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -1081,12 +1081,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/10/21/higher-net-worth/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T23:02:00.520245+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Sumi.css, a minimalist classless-first CSS framework: one 6.7 KB file, no build step, no JS or dependencies. Styles headings, forms, tables, cards, accordions, modals and nav from plain semantic HTML, with light/dark mode, custom-property theming, zero-specificity overrides and ARIA-driven states.",
+        "title": "Show HN: Sumi.css – CSS Framework",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://github.com/vladocar/Sumi.css"
       }
     ]
   },
   "run": {
-    "at": "2026-10-21T16:40:24.239815+00:00",
-    "id": "2026-10-21T1640Z",
+    "at": "2026-10-21T23:02:00.520245+00:00",
+    "id": "2026-10-21T2302Z",
     "mode": "real",
     "offline": false
   },
@@ -1097,18 +1108,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 111,
-          "out": 111
-        },
-        "tooling": {
-          "drops": {},
           "in": 115,
           "out": 115
         },
+        "tooling": {
+          "drops": {},
+          "in": 117,
+          "out": 117
+        },
         "web-products": {
           "drops": {},
-          "in": 193,
-          "out": 193
+          "in": 194,
+          "out": 194
         }
       },
       "stage": "collect"
@@ -1118,20 +1129,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 111,
-          "out": 111
-        },
-        "tooling": {
-          "drops": {},
           "in": 115,
           "out": 115
         },
+        "tooling": {
+          "drops": {},
+          "in": 117,
+          "out": 117
+        },
         "web-products": {
           "drops": {
-            "outside_window": 132
+            "outside_window": 131
           },
-          "in": 193,
-          "out": 61
+          "in": 194,
+          "out": 63
         }
       },
       "stage": "window"
@@ -1143,23 +1154,23 @@
           "drops": {
             "seen": 31
           },
-          "in": 111,
-          "out": 80
+          "in": 115,
+          "out": 84
         },
         "tooling": {
           "drops": {
-            "seen": 28
+            "seen": 26
           },
-          "in": 115,
-          "out": 87
+          "in": 117,
+          "out": 91
         },
         "web-products": {
           "drops": {
             "dismissed": 1,
             "seen": 24
           },
-          "in": 61,
-          "out": 36
+          "in": 63,
+          "out": 38
         }
       },
       "stage": "dedupe"
@@ -1169,24 +1180,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 60
+            "already_ranked": 67
           },
-          "in": 80,
-          "out": 20
+          "in": 84,
+          "out": 17
         },
         "tooling": {
           "drops": {
-            "already_ranked": 67
+            "already_ranked": 68
           },
-          "in": 87,
-          "out": 20
+          "in": 91,
+          "out": 23
         },
         "web-products": {
           "drops": {
             "already_ranked": 26
           },
-          "in": 36,
-          "out": 10
+          "in": 38,
+          "out": 12
         }
       },
       "stage": "cache"
@@ -1196,8 +1207,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 10,
-          "out": 10
+          "in": 6,
+          "out": 6
         },
         "tooling": {
           "drops": {},
@@ -1217,24 +1228,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 9
+            "below_relevance": 5
           },
-          "in": 20,
-          "out": 11
+          "in": 17,
+          "out": 12
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 4
           },
-          "in": 20,
-          "out": 17
+          "in": 23,
+          "out": 19
         },
         "web-products": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 2
           },
-          "in": 10,
-          "out": 9
+          "in": 12,
+          "out": 10
         }
       },
       "stage": "rank"
@@ -1244,24 +1255,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 11
+            "over_max_items": 12
           },
-          "in": 11,
+          "in": 12,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 17
+            "over_max_items": 19
           },
-          "in": 17,
+          "in": 19,
           "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 9
           },
-          "in": 9,
-          "out": 0
+          "in": 10,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1281,8 +1292,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1302,8 +1316,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 20
+          "in": 1,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1322,10 +1336,11 @@
           "out": 21
         },
         "web-products": {
-          "drops": {
-            "expired": 1
+          "drops": {},
+          "in": 20,
+          "notes": {
+            "asked": 1
           },
-          "in": 21,
           "out": 20
         }
       },
