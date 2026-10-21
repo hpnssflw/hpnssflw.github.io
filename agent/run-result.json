@@ -317,11 +317,11 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 24,
-      "tooling": 18,
-      "web-products": 19
+      "ai-engineering": 28,
+      "tooling": 21,
+      "web-products": 21
     },
-    "count": 61,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -993,12 +993,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 10,
+        "source": "github",
+        "summary": "axuse is an accessibility-first browser and computer-use MCP server for agent harnesses (Codex, Claude Code, OpenCode). It instruments the DOM, accessibility tree and CDP instead of using a screenshot loop, has zero npm dependencies and needs Node 22+.",
+        "title": "ctoldigital/axuse",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/ctoldigital/axuse"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "DeepInfer is an open-source high-performance inference framework for DeepSeek models, used in DeepSeek's production services. It offers offline inference with optimized kernels, MoE parallelism, speculative decoding, batch-invariant inference, deterministic sampling and structured outputs.",
+        "title": "DeepInfer: High-performance inference framework for DeepSeek models",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/deepseek-ai/DeepInfer"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "EAGLE-4 is a speculative decoding drafter for accelerating LLM inference that adapts its strategy to batch size, hardware and workload. The eagle-harness pip package serves EAGLE-4 drafts on SGLang, vLLM and TokenSpeed via engine hooks.",
+        "title": "eagle-hq/EAGLE-4",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/eagle-hq/EAGLE-4"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A WhatsApp MCP server that runs in your own Cloudflare account lets an AI agent search and read your WhatsApp chats. It links once as a device, stores messages in a SQLite Durable Object and cannot send messages.",
+        "title": "Show HN: WhatsApp MCP running free on Cloudflare",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/finereli/whatsapp-mcp"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "ra-jit is a Rust JIT toolchain that applies live code edits to an already-running program in about a millisecond while preserving state, plus faster incremental builds via `cargo ra-jit build|run|test|check`. Benchmarks on ripgrep, nushell and others show builds 3–20x faster than incremental cargo.",
+        "title": "indexable-inc/ra-jit",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/indexable-inc/ra-jit"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "tsrs is a Rust port of the TypeScript compiler, built by Cloudflare and VoidZero with Owner.com's Max Schwenk inside the Oxc toolchain rather than as a fork. Early benchmarks claim up to 8x speedups and ~70% less memory than TypeScript 7.0, with some optimizations upstreamed.",
+        "title": "Tsrs: A Port of TypeScript to Rust",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://blog.cloudflare.com/typescript-rust-port/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Stackyard is a free open-source Windows/macOS app that inventories every SDK, toolchain and framework version on a machine, shows which projects use each, flags what is safe to remove, and fixes problems in one click. It also offers a marketplace of publisher-sourced SDK installs with hash verification.",
+        "title": "AqibJavedZeepalm/stackyard",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/AqibJavedZeepalm/stackyard"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "Josh Comeau's blog post on upcoming CSS features, walking through his top 10 votes for Interop 2027, starting with the proposed @function rule for defining reusable CSS functions. Includes tips usable today.",
+        "title": "The Future of CSS",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://www.joshwcomeau.com/css/interop-2027/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-21T09:08:25.960201+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "A FlowingData chart post on 2025 Survey of Consumer Finances data showing net worth percentiles by age group, with a table of median, 90th and 99th percentile figures per age bracket.",
+        "title": "Rising to higher net worth, by age",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/10/21/higher-net-worth/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-21T03:26:55.076420+00:00",
-    "id": "2026-10-21T0326Z",
+    "at": "2026-10-21T09:08:25.960201+00:00",
+    "id": "2026-10-21T0908Z",
     "mode": "real",
     "offline": false
   },
@@ -1014,13 +1113,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 112,
-          "out": 112
+          "in": 116,
+          "out": 116
         },
         "web-products": {
           "drops": {},
-          "in": 189,
-          "out": 189
+          "in": 190,
+          "out": 190
         }
       },
       "stage": "collect"
@@ -1035,15 +1134,15 @@
         },
         "tooling": {
           "drops": {},
-          "in": 112,
-          "out": 112
+          "in": 116,
+          "out": 116
         },
         "web-products": {
           "drops": {
             "outside_window": 132
           },
-          "in": 189,
-          "out": 57
+          "in": 190,
+          "out": 58
         }
       },
       "stage": "window"
@@ -1060,17 +1159,17 @@
         },
         "tooling": {
           "drops": {
-            "seen": 23
+            "seen": 25
           },
-          "in": 112,
-          "out": 89
+          "in": 116,
+          "out": 91
         },
         "web-products": {
           "drops": {
             "seen": 23
           },
-          "in": 57,
-          "out": 34
+          "in": 58,
+          "out": 35
         }
       },
       "stage": "dedupe"
@@ -1087,17 +1186,17 @@
         },
         "tooling": {
           "drops": {
-            "already_ranked": 72
+            "already_ranked": 71
           },
-          "in": 89,
-          "out": 17
+          "in": 91,
+          "out": 20
         },
         "web-products": {
           "drops": {
-            "already_ranked": 26
+            "already_ranked": 25
           },
-          "in": 34,
-          "out": 8
+          "in": 35,
+          "out": 10
         }
       },
       "stage": "cache"
@@ -1112,13 +1211,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 5,
+          "out": 5
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 4,
+          "out": 4
         }
       },
       "stage": "enrich"
@@ -1137,13 +1236,15 @@
           "drops": {
             "below_relevance": 2
           },
-          "in": 17,
-          "out": 15
+          "in": 20,
+          "out": 18
         },
         "web-products": {
-          "drops": {},
-          "in": 8,
-          "out": 8
+          "drops": {
+            "below_relevance": 1
+          },
+          "in": 10,
+          "out": 9
         }
       },
       "stage": "rank"
@@ -1153,24 +1254,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 14
+            "over_max_items": 10
           },
           "in": 14,
-          "out": 0
+          "out": 4
         },
         "tooling": {
           "drops": {
             "over_max_items": 15
           },
-          "in": 15,
-          "out": 0
+          "in": 18,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 8
+            "over_max_items": 7
           },
-          "in": 8,
-          "out": 0
+          "in": 9,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1180,18 +1281,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "summarized": 2
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1201,18 +1311,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 24
+          "in": 4,
+          "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 18
+          "in": 3,
+          "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 19
+          "in": 2,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1223,16 +1333,25 @@
         "ai-engineering": {
           "drops": {},
           "in": 24,
+          "notes": {
+            "asked": 4
+          },
           "out": 24
         },
         "tooling": {
           "drops": {},
           "in": 18,
+          "notes": {
+            "asked": 3
+          },
           "out": 18
         },
         "web-products": {
           "drops": {},
           "in": 19,
+          "notes": {
+            "asked": 2
+          },
           "out": 19
         }
       },

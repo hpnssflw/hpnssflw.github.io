@@ -218,15 +218,15 @@
   "02b82d367685ef5a": {
     "dismissed": null,
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
-    "last_score": 127,
+    "last_score": 185,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-20T16:24:02.234579+00:00",
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
         "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 92,
-        "summary": "A Show HN post for VoidAccess, an open-source dark web OSINT tool that turns queries into a graph."
+        "source_score": 185,
+        "summary": "Show HN for VoidAccess, an open-source dark web OSINT tool that turns a query into a graph, described by its author as next-generation security tooling."
       }
     },
     "times_sent": 0
@@ -310,7 +310,7 @@
   "04a096ef95eb18a0": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 793,
+    "last_score": 807,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -467,7 +467,7 @@
   "0673400c8d8a50c1": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 80,
+    "last_score": 89,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -543,7 +543,7 @@
   "07c69181754e1953": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 101,
+    "last_score": 102,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -566,10 +566,10 @@
   "07f42743b68cc1cc": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 126,
+    "last_score": 151,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
         "ranked_at": "2026-10-20T22:56:37.928833+00:00",
         "relevance": 10,
         "rubric": "3472af8a46e1",
@@ -596,7 +596,7 @@
   "089b1d39fa5e292b": {
     "dismissed": null,
     "first_seen": "2026-10-14T05:08:55.463037+00:00",
-    "last_score": 90,
+    "last_score": 91,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1313,7 +1313,7 @@
   "134305fd3790c234": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 58,
+    "last_score": 61,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1384,7 +1384,7 @@
   "14242a0d03562ba4": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 57,
+    "last_score": 61,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1741,7 +1741,7 @@
   "1a1edc3721552e2e": {
     "dismissed": null,
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
-    "last_score": 325,
+    "last_score": 340,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1833,7 +1833,7 @@
   "1bd8b9068d5621d2": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 108,
+    "last_score": 110,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1995,7 +1995,7 @@
   "1f1f087b2b664b27": {
     "dismissed": null,
     "first_seen": "2026-10-19T09:37:11.229871+00:00",
-    "last_score": 125,
+    "last_score": 128,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -2073,6 +2073,22 @@
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 674,
     "ranks": {},
+    "times_sent": 0
+  },
+  "215c3b43d9b71bef": {
+    "dismissed": null,
+    "first_seen": "2026-10-21T09:08:25.960201+00:00",
+    "last_score": 53,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 53,
+        "summary": "Stalemap tells your coding agent which dependencies changed after its training cutoff, diffing types and changelogs and writing a short block into AGENTS.md / CLAUDE.md."
+      }
+    },
     "times_sent": 0
   },
   "21670c0288b3c528": {
@@ -2450,7 +2466,7 @@
   "2935c1e549ba41a6": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 33,
+    "last_score": 45,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2490,7 +2506,7 @@
     "last_score": 155,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
         "ranked_at": "2026-10-19T09:37:11.229871+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -2594,7 +2610,7 @@
   "2c56be350818f1b6": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 32,
+    "last_score": 33,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -2780,7 +2796,7 @@
   "2f02c05ab0a4ce56": {
     "dismissed": null,
     "first_seen": "2026-10-20T03:33:36.677497+00:00",
-    "last_score": 121,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3106,15 +3122,15 @@
   "32b567ec448cd836": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
-    "last_score": 105,
+    "last_score": 130,
     "ranks": {
       "web-products": {
         "queued_at": null,
-        "ranked_at": "2026-10-18T03:10:34.980556+00:00",
-        "relevance": 3,
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 4,
         "rubric": "080b24af813c",
-        "source_score": 53,
-        "summary": "An open-source bilingual GEO (Generative Engine Optimization) skill for AI assistants to diagnose and improve recommendations across Doubao, DeepSeek, ChatGPT, and Claude."
+        "source_score": 130,
+        "summary": "An open-source bilingual GEO (Generative Engine Optimization) skill that checks why AI assistants like Doubao, DeepSeek, ChatGPT, and Claude don't recommend you, then helps revise materials and re-check."
       }
     },
     "times_sent": 0
@@ -3491,10 +3507,10 @@
   "37d13315cf78340e": {
     "dismissed": null,
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
-    "last_score": 164,
+    "last_score": 171,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
         "ranked_at": "2026-10-20T16:24:02.234579+00:00",
         "relevance": 9,
         "rubric": "02189e2467e9",
@@ -3683,7 +3699,7 @@
   "3ab9b1ef391db233": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
-    "last_score": 166,
+    "last_score": 170,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3945,7 +3961,7 @@
   "3e224bc9c6687669": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 117,
+    "last_score": 125,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4470,7 +4486,7 @@
   "46ccbfc5e65bd167": {
     "dismissed": null,
     "first_seen": "2026-10-16T08:46:21.084801+00:00",
-    "last_score": 1972,
+    "last_score": 2015,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4546,7 +4562,7 @@
   "476d427e5f97d6df": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 526,
+    "last_score": 529,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4654,6 +4670,30 @@
     "first_seen": "2026-09-23T22:31:50.850872+00:00",
     "last_score": 256,
     "ranks": {},
+    "times_sent": 0
+  },
+  "483ab5238e88e578": {
+    "dismissed": null,
+    "first_seen": "2026-10-21T09:08:25.960201+00:00",
+    "last_score": 40,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 40,
+        "summary": "Anthropic article titled 'Using Claude to reduce the attack surface of code'."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 40,
+        "summary": "An Anthropic post about using Claude to reduce the attack surface of code."
+      }
+    },
     "times_sent": 0
   },
   "48cdcc62a159260f": {
@@ -4887,7 +4927,7 @@
   "4dc309c2f9cfbf22": {
     "dismissed": null,
     "first_seen": "2026-10-18T08:34:06.870675+00:00",
-    "last_score": 601,
+    "last_score": 602,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -4919,7 +4959,7 @@
   "4ded188d56461870": {
     "dismissed": null,
     "first_seen": "2026-10-18T15:25:39.608183+00:00",
-    "last_score": 937,
+    "last_score": 953,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5120,7 +5160,7 @@
   "50f75b68ac5537b6": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 154,
+    "last_score": 155,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5388,7 +5428,7 @@
   "55c3c0be518a12ff": {
     "dismissed": null,
     "first_seen": "2026-10-20T03:33:36.677497+00:00",
-    "last_score": 716,
+    "last_score": 727,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6022,7 +6062,7 @@
   "5e2de02c616d9812": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 149,
+    "last_score": 151,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6054,7 +6094,7 @@
   "5ed7b4468bde462d": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 279,
+    "last_score": 335,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6144,7 +6184,7 @@
   "60b327d6ad835cd9": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 364,
+    "last_score": 386,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6222,7 +6262,7 @@
   "61d98d12690dff19": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
-    "last_score": 468,
+    "last_score": 474,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6646,15 +6686,15 @@
   "67f9ceba560d7193": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 45,
+    "last_score": 348,
     "ranks": {
       "web-products": {
-        "queued_at": null,
-        "ranked_at": "2026-10-21T03:26:55.076420+00:00",
-        "relevance": 8,
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 9,
         "rubric": "080b24af813c",
-        "source_score": 45,
-        "summary": "A Hacker News discussion titled \"The Future of CSS\" from joshwcomeau.com."
+        "source_score": 348,
+        "summary": "An article about the future of CSS."
       }
     },
     "times_sent": 0
@@ -6950,7 +6990,7 @@
   "6bcbd1b996df15e7": {
     "dismissed": null,
     "first_seen": "2026-10-19T23:19:39.204837+00:00",
-    "last_score": 59,
+    "last_score": 60,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7142,7 +7182,7 @@
   "6df8ebd1d1d3b68d": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 72,
+    "last_score": 73,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7696,7 +7736,7 @@
   "765a9894d2fa75a2": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 219,
+    "last_score": 240,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7922,7 +7962,7 @@
   "7aa2f5992ec29c5c": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 200,
+    "last_score": 231,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7942,6 +7982,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "7aaa3ac0731fbe02": {
+    "dismissed": null,
+    "first_seen": "2026-10-21T09:08:25.960201+00:00",
+    "last_score": 38,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 6,
+        "rubric": "080b24af813c",
+        "source_score": 38,
+        "summary": "Reports that Chrome can send copied content to Google's servers for scanning for unsafe material."
+      }
+    },
+    "times_sent": 0
+  },
   "7b49e0861d761070": {
     "dismissed": null,
     "first_seen": "2026-09-26T18:47:40.661012+00:00",
@@ -7952,7 +8008,7 @@
   "7b7b800d55fc8f25": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 279,
+    "last_score": 280,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8106,7 +8162,7 @@
   "7ed5583fdd7a1205": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 412,
+    "last_score": 418,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8237,7 +8293,7 @@
   "8046c79956428cb1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 227,
+    "last_score": 228,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -8286,6 +8342,22 @@
         "rubric": "02189e2467e9",
         "source_score": 50,
         "summary": "A Show HN post about the author paying for a rural Tanzanian's education for ten years."
+      }
+    },
+    "times_sent": 0
+  },
+  "809759df6b9c7ee9": {
+    "dismissed": null,
+    "first_seen": "2026-10-21T09:08:25.960201+00:00",
+    "last_score": 49,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 49,
+        "summary": "A GitHub-linked post titled 'C# now beats Rust on WASM size', whose text gives no indication of what the item actually is beyond that comparison."
       }
     },
     "times_sent": 0
@@ -9162,7 +9234,7 @@
   "914b3fedd5958504": {
     "dismissed": null,
     "first_seen": "2026-10-16T16:08:13.564209+00:00",
-    "last_score": 1281,
+    "last_score": 1308,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9901,7 +9973,7 @@
   "99d537d830d481c4": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 145,
+    "last_score": 149,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9949,7 +10021,7 @@
   "9a49de55e7061de1": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 241,
+    "last_score": 243,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10101,7 +10173,7 @@
   "9ce1d661b5d81c14": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
-    "last_score": 175,
+    "last_score": 176,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10110,6 +10182,22 @@
         "rubric": "02189e2467e9",
         "source_score": 89,
         "summary": "A report that Codex Desktop continuously generates Crashpad pending dumps."
+      }
+    },
+    "times_sent": 0
+  },
+  "9d14a18191d0b86e": {
+    "dismissed": null,
+    "first_seen": "2026-10-21T09:08:25.960201+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A data visualization showing net worth by age based on the 2025 Survey of Consumer Finances."
       }
     },
     "times_sent": 0
@@ -10340,7 +10428,7 @@
   "a116dd251f4d6617": {
     "dismissed": null,
     "first_seen": "2026-10-18T08:34:06.870675+00:00",
-    "last_score": 137,
+    "last_score": 139,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-18T08:34:06.870675+00:00",
@@ -10439,15 +10527,15 @@
   "a28d8c43766abec8": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 256,
+    "last_score": 515,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
-        "ranked_at": "2026-10-21T03:26:55.076420+00:00",
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
-        "source_score": 256,
-        "summary": "Official inference code for EAGLE-4, with topics including eagle, gpu, llm-inference, sglang, speculative-decoding, and tokenspeed."
+        "source_score": 515,
+        "summary": "Official inference code for EAGLE-4, with topics including GPU, LLM inference, SGLang, speculative decoding and tokenspeed."
       }
     },
     "times_sent": 0
@@ -10672,7 +10760,7 @@
   "a64bc604748a94c2": {
     "dismissed": null,
     "first_seen": "2026-10-20T03:33:36.677497+00:00",
-    "last_score": 117,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10727,7 +10815,7 @@
   "a6ac0a482468d742": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 157,
+    "last_score": 158,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10835,7 +10923,7 @@
   "a7916291f2ecf9f7": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 2084,
+    "last_score": 2090,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10858,7 +10946,7 @@
   "a7e710fc6c8e9540": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 112,
+    "last_score": 125,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10973,7 +11061,7 @@
   "a9549b9f4036d839": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 31,
+    "last_score": 32,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -11187,7 +11275,7 @@
   "ac67a5f12ec971da": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 98,
+    "last_score": 106,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11699,7 +11787,7 @@
   "b31543fcd7d1501b": {
     "dismissed": null,
     "first_seen": "2026-10-18T18:28:11.776184+00:00",
-    "last_score": 156,
+    "last_score": 157,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12068,7 +12156,7 @@
   "b868c0a4c342680f": {
     "dismissed": null,
     "first_seen": "2026-10-17T08:16:47.855119+00:00",
-    "last_score": 726,
+    "last_score": 804,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12091,7 +12179,7 @@
   "b89314bc132c8f07": {
     "dismissed": null,
     "first_seen": "2026-10-16T16:08:13.564209+00:00",
-    "last_score": 90,
+    "last_score": 96,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12244,15 +12332,15 @@
   "baffcb4d50a5b911": {
     "dismissed": null,
     "first_seen": "2026-10-12T17:24:55.118839+00:00",
-    "last_score": 1492,
+    "last_score": 1566,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-13T11:26:09.907272+00:00",
-        "relevance": 2,
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 779,
-        "summary": "A daily radar for new AI terms, catching names of new models, products, and repos on X, Hugging Face, GitHub, and sitemaps before keyword tools list them."
+        "source_score": 1566,
+        "summary": "A daily radar that catches names of new AI models, products and repos on X, Hugging Face, GitHub and sitemaps before keyword tools list them."
       },
       "web-products": {
         "queued_at": null,
@@ -12369,10 +12457,10 @@
   "bc34cbec3dd5a0fb": {
     "dismissed": null,
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
-    "last_score": 359,
+    "last_score": 406,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
         "ranked_at": "2026-10-20T22:56:37.928833+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -12482,10 +12570,10 @@
   "be38b11f937cd76c": {
     "dismissed": null,
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
-    "last_score": 2161,
+    "last_score": 2244,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
         "ranked_at": "2026-10-20T16:24:02.234579+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
@@ -12522,7 +12610,7 @@
   "bf08c7b0ac6a75f7": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 300,
+    "last_score": 301,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -12751,7 +12839,7 @@
   "c1e7afb972e1d402": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 46,
+    "last_score": 49,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12935,7 +13023,7 @@
   "c4f0c7a2833f4edd": {
     "dismissed": null,
     "first_seen": "2026-10-17T03:07:44.985106+00:00",
-    "last_score": 121,
+    "last_score": 126,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13041,7 +13129,7 @@
   "c66bbf103cb4c6ba": {
     "dismissed": null,
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
-    "last_score": 174,
+    "last_score": 180,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13103,7 +13191,7 @@
   "c7dfeeeb6dfb1916": {
     "dismissed": null,
     "first_seen": "2026-10-16T22:33:29.937985+00:00",
-    "last_score": 483,
+    "last_score": 484,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13364,7 +13452,7 @@
   "cc1b21cd822df9e1": {
     "dismissed": null,
     "first_seen": "2026-10-14T22:59:05.256595+00:00",
-    "last_score": 276,
+    "last_score": 277,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14512,7 +14600,7 @@
   "de6a3ba228af2814": {
     "dismissed": null,
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
-    "last_score": 958,
+    "last_score": 961,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-16T08:46:21.084801+00:00",
@@ -14968,7 +15056,7 @@
   "e323d71e5034dd0b": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 557,
+    "last_score": 565,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15014,7 +15102,7 @@
   "e40e78a1cf1d1854": {
     "dismissed": null,
     "first_seen": "2026-10-19T23:19:39.204837+00:00",
-    "last_score": 581,
+    "last_score": 597,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15374,6 +15462,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "eb4e53838bb692dd": {
+    "dismissed": null,
+    "first_seen": "2026-10-21T09:08:25.960201+00:00",
+    "last_score": 57,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-21T09:08:25.960201+00:00",
+        "ranked_at": "2026-10-21T09:08:25.960201+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 57,
+        "summary": "Stackyard is a free open-source Windows/macOS app that locates every SDK and toolchain on a machine (Flutter, Node.js, Android SDK, Xcode simulators, Java, Python, .NET, Gradle), shows which projects use each version, fixes broken setups in one click, and frees disk space."
+      }
+    },
+    "times_sent": 0
+  },
   "eb7b4293d4abd6bf": {
     "dismissed": "expired",
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
@@ -15597,7 +15701,7 @@
   "f0411941f774b69d": {
     "dismissed": null,
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
-    "last_score": 89,
+    "last_score": 92,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15963,7 +16067,7 @@
   "f5650bacb7dba05a": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 93,
+    "last_score": 98,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -16023,7 +16127,7 @@
   "f6b62732236c571e": {
     "dismissed": null,
     "first_seen": "2026-10-18T15:25:39.608183+00:00",
-    "last_score": 324,
+    "last_score": 330,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16129,7 +16233,7 @@
   "f933f1f1a760390e": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 624,
+    "last_score": 783,
     "ranks": {
       "tooling": {
         "queued_at": null,

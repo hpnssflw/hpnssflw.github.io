@@ -609,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 10,
+      "source": "github",
+      "summary": "axuse is an accessibility-first browser and computer-use MCP server for agent harnesses (Codex, Claude Code, OpenCode). It instruments the DOM, accessibility tree and CDP instead of using a screenshot loop, has zero npm dependencies and needs Node 22+.",
+      "title": "ctoldigital/axuse",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/ctoldigital/axuse"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "DeepInfer is an open-source high-performance inference framework for DeepSeek models, used in DeepSeek's production services. It offers offline inference with optimized kernels, MoE parallelism, speculative decoding, batch-invariant inference, deterministic sampling and structured outputs.",
+      "title": "DeepInfer: High-performance inference framework for DeepSeek models",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/deepseek-ai/DeepInfer"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "EAGLE-4 is a speculative decoding drafter for accelerating LLM inference that adapts its strategy to batch size, hardware and workload. The eagle-harness pip package serves EAGLE-4 drafts on SGLang, vLLM and TokenSpeed via engine hooks.",
+      "title": "eagle-hq/EAGLE-4",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/eagle-hq/EAGLE-4"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A WhatsApp MCP server that runs in your own Cloudflare account lets an AI agent search and read your WhatsApp chats. It links once as a device, stores messages in a SQLite Durable Object and cannot send messages.",
+      "title": "Show HN: WhatsApp MCP running free on Cloudflare",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/finereli/whatsapp-mcp"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "ra-jit is a Rust JIT toolchain that applies live code edits to an already-running program in about a millisecond while preserving state, plus faster incremental builds via `cargo ra-jit build|run|test|check`. Benchmarks on ripgrep, nushell and others show builds 3\u201320x faster than incremental cargo.",
+      "title": "indexable-inc/ra-jit",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/indexable-inc/ra-jit"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "tsrs is a Rust port of the TypeScript compiler, built by Cloudflare and VoidZero with Owner.com's Max Schwenk inside the Oxc toolchain rather than as a fork. Early benchmarks claim up to 8x speedups and ~70% less memory than TypeScript 7.0, with some optimizations upstreamed.",
+      "title": "Tsrs: A Port of TypeScript to Rust",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://blog.cloudflare.com/typescript-rust-port/"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "Stackyard is a free open-source Windows/macOS app that inventories every SDK, toolchain and framework version on a machine, shows which projects use each, flags what is safe to remove, and fixes problems in one click. It also offers a marketplace of publisher-sourced SDK installs with hash verification.",
+      "title": "AqibJavedZeepalm/stackyard",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/AqibJavedZeepalm/stackyard"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Josh Comeau's blog post on upcoming CSS features, walking through his top 10 votes for Interop 2027, starting with the proposed @function rule for defining reusable CSS functions. Includes tips usable today.",
+      "title": "The Future of CSS",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://www.joshwcomeau.com/css/interop-2027/"
+    },
+    {
+      "pending_since": "2026-10-21T09:08:25.960201+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "A FlowingData chart post on 2025 Survey of Consumer Finances data showing net worth percentiles by age group, with a table of median, 90th and 99th percentile figures per age bracket.",
+      "title": "Rising to higher net worth, by age",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://flowingdata.com/2026/10/21/higher-net-worth/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"
