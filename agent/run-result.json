@@ -319,21 +319,10 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 21
+      "web-products": 20
     },
-    "count": 70,
+    "count": 69,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T16:22:31.699257+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "A GitHub repository offering an unofficial 1:1 educational local replica of Profound's AI Search visualization platform, with marketing site, product workbench, admin backend, SQLite data layer, and an interactive Agent simulation engine built on Next.js 16.4, React 19, Tailwind v4.",
-        "title": "yaojingang/profound-clone",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://github.com/yaojingang/profound-clone"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-16T08:46:21.084801+00:00",
@@ -1096,8 +1085,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-22T09:10:34.677769+00:00",
-    "id": "2026-10-22T0910Z",
+    "at": "2026-10-22T16:41:13.530082+00:00",
+    "id": "2026-10-22T1641Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,18 +1097,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 111,
-          "out": 111
+          "in": 110,
+          "out": 110
         },
         "tooling": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 113,
+          "out": 113
         },
         "web-products": {
           "drops": {},
-          "in": 188,
-          "out": 188
+          "in": 185,
+          "out": 185
         }
       },
       "stage": "collect"
@@ -1129,20 +1118,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 111,
-          "out": 111
+          "in": 110,
+          "out": 110
         },
         "tooling": {
           "drops": {},
-          "in": 114,
-          "out": 114
+          "in": 113,
+          "out": 113
         },
         "web-products": {
           "drops": {
-            "outside_window": 132
+            "outside_window": 131
           },
-          "in": 188,
-          "out": 56
+          "in": 185,
+          "out": 54
         }
       },
       "stage": "window"
@@ -1153,26 +1142,26 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 2,
-            "seen": 28
+            "seen": 33
           },
-          "in": 111,
-          "out": 81
+          "in": 110,
+          "out": 75
         },
         "tooling": {
           "drops": {
             "dismissed": 2,
-            "seen": 25
+            "seen": 27
           },
-          "in": 114,
-          "out": 87
+          "in": 113,
+          "out": 84
         },
         "web-products": {
           "drops": {
-            "dismissed": 3,
-            "seen": 20
+            "dismissed": 4,
+            "seen": 19
           },
-          "in": 56,
-          "out": 33
+          "in": 54,
+          "out": 31
         }
       },
       "stage": "dedupe"
@@ -1182,24 +1171,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 67
+            "already_ranked": 63
           },
-          "in": 81,
-          "out": 14
+          "in": 75,
+          "out": 12
         },
         "tooling": {
           "drops": {
-            "already_ranked": 65
+            "already_ranked": 64
           },
-          "in": 87,
-          "out": 22
+          "in": 84,
+          "out": 20
         },
         "web-products": {
           "drops": {
-            "already_ranked": 24
+            "already_ranked": 21
           },
-          "in": 33,
-          "out": 9
+          "in": 31,
+          "out": 10
         }
       },
       "stage": "cache"
@@ -1209,18 +1198,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 6,
+          "out": 6
         },
         "tooling": {
           "drops": {},
-          "in": 5,
-          "out": 5
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 5,
+          "out": 5
         }
       },
       "stage": "enrich"
@@ -1230,22 +1219,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 4
           },
-          "in": 14,
-          "out": 13
+          "in": 12,
+          "out": 8
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 4
           },
-          "in": 22,
-          "out": 19
+          "in": 20,
+          "out": 16
         },
         "web-products": {
-          "drops": {},
-          "in": 9,
-          "out": 9
+          "drops": {
+            "below_relevance": 3
+          },
+          "in": 10,
+          "out": 7
         }
       },
       "stage": "rank"
@@ -1255,24 +1246,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 9
+            "over_max_items": 8
           },
-          "in": 13,
-          "out": 4
+          "in": 8,
+          "out": 0
         },
         "tooling": {
           "drops": {
             "over_max_items": 16
           },
-          "in": 19,
-          "out": 3
+          "in": 16,
+          "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 7
           },
-          "in": 9,
-          "out": 2
+          "in": 7,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1282,27 +1273,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "notes": {
-            "summarized": 4
-          },
-          "out": 4
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "notes": {
-            "summarized": 3
-          },
-          "out": 3
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "notes": {
-            "summarized": 2
-          },
-          "out": 2
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1312,18 +1294,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
+          "in": 0,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 3,
+          "in": 0,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 21
+          "in": 0,
+          "out": 20
         }
       },
       "stage": "queue"
@@ -1332,34 +1314,21 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "expired": 4
-          },
+          "drops": {},
           "in": 28,
-          "notes": {
-            "asked": 4
-          },
-          "out": 24
+          "out": 28
         },
         "tooling": {
-          "drops": {
-            "expired": 3
-          },
+          "drops": {},
           "in": 21,
-          "notes": {
-            "asked": 3
-          },
-          "out": 18
+          "out": 21
         },
         "web-products": {
           "drops": {
-            "expired": 2
+            "expired": 1
           },
           "in": 21,
-          "notes": {
-            "asked": 2
-          },
-          "out": 19
+          "out": 20
         }
       },
       "stage": "review"
