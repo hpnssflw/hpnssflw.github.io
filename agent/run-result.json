@@ -325,105 +325,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "Liquid AI's LFM2.5-24B-A2B, an open-weight 24B reasoning model with 2B active parameters for on-device agents. New versus LFM2-24B-A2B: reasoning-only chain-of-thought output, 32K→128K context, 65K→128K vocabulary, 33T pretraining tokens, and faster decode.",
-        "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "ResiMind, an open-source neuro-symbolic agent architecture combining independent verification, residual-guided self-correction and reusable verified rule memory, so learned rules grow outside model weights. Includes MCP tools, a repair skill, and a bounded Lean planner as an experimental composition primitive.",
-        "title": "1105216375-alt/resimind",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/1105216375-alt/resimind"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "PolyStrata, free open-source software for running large AI models locally on a normal PC, covering seven models (Qwen3.8-Flash-Next, GLM 5.3 Flash, DeepSeek V4 Flash, Qwen3.6, Ornith 1.5, Gemma 4, Tiel Coder) across two engines, and able to swap installed models while running.",
-        "title": "VecSzn/PolyStrata",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/VecSzn/PolyStrata"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "A book that teaches how LLMs work by building one from scratch in Node.js and TypeScript, going chapter by chapter through dataset, dataloader, attention, transformer block, GPT and the training loop, with runnable chapter entry points and live WebGPU demos.",
-        "title": "Show HN: Building an LLM from Scratch in TypeScript",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://book.humanexperiences.io/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "npm package ai-deslop: an Oxlint plugin of opinionated rules that reject low-evidence, AI-slop TypeScript patterns, vendored from dmmulroy/anti-slop plus new deslop/* rules. Ships compiled JS for Bun, Deno or Node, with a recommended config.",
-        "title": "Show HN: Deslop – Oxlint rules for AI-generated TypeScript",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/maharshi365/deslop"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "k10s is a clickable Kubernetes TUI written in Go with Bubble Tea, offering mouse-driven panes, cluster-wide ctrl+p search, lazy informers for instant startup, and AI that gets the current context, namespace and selected object injected. Ships an offline demo cluster.",
-        "title": "Show HN: K10s – A Clickable Kubernetes TUI (Go, Bubble Tea)",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/p10node/k10s"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "A Claude Code session-handoff template whose /session-start script checks written notes against git, GitHub and machine facts, reporting where they disagree before proposing the day's task; commands cover handoff, board, autonomy, checks and trim.",
-        "title": "truongfelix/workflow",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/truongfelix/workflow"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 9,
-        "source": "rss",
-        "summary": "A new Chrome DevTools extension, Scroll-Triggered Animations Debugger, adds an Elements-panel minimap and live trigger-range editing to visualize and debug CSS Scroll-Triggered Animations using ScrollTimeline (scroll()) and ViewTimeline (view()), including position: sticky.",
-        "title": "Scroll-Triggered Animations Debugger (DevTools Extension)",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://www.bram.us/2026/10/14/scroll-triggered-animations-debugger-devtools-extension/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-15T08:53:31.348611+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "A blog post arguing WebMCP is \"agentic WebPerf\": not an alternative way to use a site, but a way to expose a site's capabilities as JavaScript tools agents can call directly, making agent interaction faster, better and cheaper than burning tokens to figure it out.",
-        "title": "“WebMCP is Agentic WebPerf”",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/webmcp-is-agentic-webperf/"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-15T16:22:31.699257+00:00",
         "score": 7,
         "source": "github",
@@ -1092,12 +993,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://github.com/vladocar/Sumi.css"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "MyAgent is a Python general-purpose Agent Runtime repo built around a harness that handles permissions, tool execution, context compression, long-term memory, SKILL.md-based skills with self-evolution, an MCP stdio client, and sub-agents, supporting both OpenAI- and Anthropic-compatible APIs.",
+        "title": "ztt0216/MyAgent",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/ztt0216/MyAgent"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "Omnara is an open-source, self-hostable managed agent platform (Apache 2.0) positioned as an alternative to Claude Managed Agents and OpenAI's Agents API, running agents on any model and machine with tools, secrets, permissions and streaming; agents are launched via agent.yaml, a Node CLI, or a TypeScript SDK.",
+        "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/omnara-ai/omnara"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Antirion is an open-source AI gateway shipped as a single Rust binary with a built-in admin console, routing requests across many model providers with fallback chains, cost budgets, guardrails, caching and MCP/agent gateways, claiming lower overhead and higher throughput than Bifrost and LiteLLM.",
+        "title": "eliasbiondo/antirion",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/eliasbiondo/antirion"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "MemT-1.0 is a family of memory foundation models (Nano and Flash) that make persistent, dynamically evolving memory part of model computation via local and hyper memory blocks with Mixture-of-Storage, cutting storage roughly 66x versus full-context KV cache at 128K history and ranking first and second on 11 memory benchmarks.",
+        "title": "MemTensor/MemT-1.0",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/MemTensor/MemT-1.0"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "Claude Super Sidebar is a plugin giving a native Claude Code pane plus a read-only local Codex session dashboard that shows main agent/subagent relationships, execution status and task steps in one panel, with no frontend build. Its docs flag that current native engine validation and latest isolation regressions remain unverified.",
+        "title": "Zafer-Liu/claude-super-sidebar",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Zafer-Liu/claude-super-sidebar"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "stalemap is an npm tool that finds dependencies whose APIs changed after a coding model's training cutoff and informs the agent via AGENTS.md/CLAUDE.md notes, a type-check guard after each edit, and a search_changes MCP tool. In a pre-registered blind benchmark of 66 tasks, agents passed 89% of sessions versus 68% with no help.",
+        "title": "Umair/stalemap",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Umair/stalemap"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "LayerFS is a filesystem for AI coding agents where each tool call is a commit on a branch, forks are zero-cost metadata copies, same-file clashes are refused, and every line records the step that wrote it. It also keeps ignored files and claims ~0.05s mounts versus ~5 min reinstall.",
+        "title": "LayerFS: The filesystem for AI coding agents",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://layerfs.ai/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "A data analysis of movie shot counts from 1920 through 2025, showing a long-term increase and recent plateau, based on TransNet V2 transition detection and shot counting.",
+        "title": "Increasing number of shots in movies",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/10/20/increasing-number-of-shots-in-movies/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-22T09:10:34.677769+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "An interactive data story on the “Six Degrees of Kevin Bacon” that calculates actor remoteness and finds Samuel L. Jackson, not Kevin Bacon, is Hollywood’s most central actor, with women underrepresented in the top 100.",
+        "title": "The Real Kevin Bacon",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://pudding.cool/2026/10/kevin-bacon"
       }
     ]
   },
   "run": {
-    "at": "2026-10-22T03:26:12.400451+00:00",
-    "id": "2026-10-22T0326Z",
+    "at": "2026-10-22T09:10:34.677769+00:00",
+    "id": "2026-10-22T0910Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,8 +1108,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 109,
-          "out": 109
+          "in": 111,
+          "out": 111
         },
         "tooling": {
           "drops": {},
@@ -1118,8 +1118,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 191,
-          "out": 191
+          "in": 188,
+          "out": 188
         }
       },
       "stage": "collect"
@@ -1129,8 +1129,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 109,
-          "out": 109
+          "in": 111,
+          "out": 111
         },
         "tooling": {
           "drops": {},
@@ -1139,10 +1139,10 @@
         },
         "web-products": {
           "drops": {
-            "outside_window": 131
+            "outside_window": 132
           },
-          "in": 191,
-          "out": 60
+          "in": 188,
+          "out": 56
         }
       },
       "stage": "window"
@@ -1152,25 +1152,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "seen": 30
+            "dismissed": 2,
+            "seen": 28
           },
-          "in": 109,
-          "out": 79
+          "in": 111,
+          "out": 81
         },
         "tooling": {
           "drops": {
-            "seen": 27
+            "dismissed": 2,
+            "seen": 25
           },
           "in": 114,
           "out": 87
         },
         "web-products": {
           "drops": {
-            "dismissed": 1,
-            "seen": 24
+            "dismissed": 3,
+            "seen": 20
           },
-          "in": 60,
-          "out": 35
+          "in": 56,
+          "out": 33
         }
       },
       "stage": "dedupe"
@@ -1180,23 +1182,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 65
+            "already_ranked": 67
           },
-          "in": 79,
+          "in": 81,
           "out": 14
         },
         "tooling": {
           "drops": {
-            "already_ranked": 66
+            "already_ranked": 65
           },
           "in": 87,
-          "out": 21
+          "out": 22
         },
         "web-products": {
           "drops": {
-            "already_ranked": 26
+            "already_ranked": 24
           },
-          "in": 35,
+          "in": 33,
           "out": 9
         }
       },
@@ -1207,13 +1209,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 2,
+          "out": 2
         },
         "tooling": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 5,
+          "out": 5
         },
         "web-products": {
           "drops": {},
@@ -1228,17 +1230,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 1
           },
           "in": 14,
-          "out": 12
+          "out": 13
         },
         "tooling": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 3
           },
-          "in": 21,
-          "out": 17
+          "in": 22,
+          "out": 19
         },
         "web-products": {
           "drops": {},
@@ -1253,24 +1255,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 9
           },
-          "in": 12,
-          "out": 0
+          "in": 13,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 17
+            "over_max_items": 16
           },
-          "in": 17,
-          "out": 0
+          "in": 19,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 9
+            "over_max_items": 7
           },
           "in": 9,
-          "out": 0
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1280,18 +1282,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "summarized": 2
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1301,17 +1312,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
+          "in": 4,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
+          "in": 3,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 2,
           "out": 21
         }
       },
@@ -1321,19 +1332,34 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "notes": {
+            "asked": 4
+          },
+          "out": 24
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 3
+          },
+          "out": 18
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 2
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 2
+          },
+          "out": 19
         }
       },
       "stage": "review"
