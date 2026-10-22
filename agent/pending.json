@@ -689,6 +689,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://pudding.cool/2026/10/kevin-bacon"
+    },
+    {
+      "pending_since": "2026-10-22T22:58:13.400991+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "A blog article on building an isolated preview for AI-generated HTML, starting from the naive iframe srcdoc approach, breaking it three ways, then rebuilding it to show tested protections and their limits.",
+      "title": "Building an Isolated Preview for AI-Generated HTML",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://blog.master.dev/building-an-isolated-preview-for-ai-generated-html/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

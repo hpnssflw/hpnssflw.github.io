@@ -4,20 +4,20 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 63,
+        "already_ranked": 62,
         "dismissed": 2,
-        "seen": 33
+        "seen": 31
       },
       "rank": {
         "below_relevance": 4,
-        "over_max_items": 8
+        "over_max_items": 11
       }
     },
     "tooling": {
       "dedupe": {
         "already_ranked": 64,
         "dismissed": 2,
-        "seen": 27
+        "seen": 26
       },
       "rank": {
         "below_relevance": 4,
@@ -26,19 +26,16 @@
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 131
+        "outside_window": 127
       },
       "dedupe": {
-        "already_ranked": 21,
+        "already_ranked": 22,
         "dismissed": 4,
-        "seen": 19
-      },
-      "inbox": {
-        "expired": 1
+        "seen": 18
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 7
+        "below_relevance": 4,
+        "over_max_items": 11
       }
     }
   },
@@ -48,135 +45,132 @@
       "collected": 110,
       "in_window": 110,
       "kept": 0,
-      "new": 12
+      "new": 15
     },
     "tooling": {
-      "collected": 113,
-      "in_window": 113,
+      "collected": 112,
+      "in_window": 112,
       "kept": 0,
       "new": 20
     },
     "web-products": {
-      "collected": 185,
-      "in_window": 54,
-      "kept": 0,
-      "new": 10
+      "collected": 187,
+      "in_window": 60,
+      "kept": 1,
+      "new": 16
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 69,
+  "pending_count": 70,
   "recent_events": [
+    {
+      "score": 8,
+      "source": "rss",
+      "title": "Building an Isolated Preview for AI-Generated HTML",
+      "topic": "web-products",
+      "ts": "2026-10-22T22:59:05.123607+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633605+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Headless Content Marketing: A New (Old) Strategy for Search",
-      "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633594+00:00",
+      "ts": "2026-10-22T22:59:05.123589+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633582+00:00",
+      "ts": "2026-10-22T22:59:05.123581+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633569+00:00",
+      "ts": "2026-10-22T22:59:05.123571+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633556+00:00",
+      "ts": "2026-10-22T22:59:05.123549+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Headless Content Marketing: A New (Old) Strategy for Search",
+      "topic": "web-products",
+      "ts": "2026-10-22T22:59:05.123541+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633541+00:00",
+      "ts": "2026-10-22T22:59:05.123532+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Google's servers can scan what you copy in Chrome for unsafe content",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633513+00:00",
+      "ts": "2026-10-22T22:59:05.123523+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Kirito14IT/prompt-spider-ui",
+      "topic": "web-products",
+      "ts": "2026-10-22T22:59:05.123514+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "abdiraimov-otabek/dashboard-design-skill",
+      "topic": "web-products",
+      "ts": "2026-10-22T22:59:05.123504+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "A farewell to Arc browser",
+      "topic": "web-products",
+      "ts": "2026-10-22T22:59:05.123489+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Release Notes for Safari Technology Preview 255",
+      "topic": "web-products",
+      "ts": "2026-10-22T22:59:05.123425+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Cost of electricity from investor-owned vs. public",
+      "title": "\u271a Avoiding charts by default",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633271+00:00",
+      "ts": "2026-10-22T22:59:02.776683+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "AI Share of Voice: What It Is, How to Measure It, and What It Actually Tells You",
+      "title": "When AI comes for purpose",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633252+00:00",
+      "ts": "2026-10-22T22:59:02.776673+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: AI-built browser games, collected in one place",
+      "title": "Affiliate Marketing: What It Is & How to Start in 2026",
       "topic": "web-products",
-      "ts": "2026-10-22T16:42:03.633198+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
-      "topic": "web-products",
-      "ts": "2026-10-22T16:41:59.174187+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Searchable database of the enslaved in former British colonies",
-      "topic": "web-products",
-      "ts": "2026-10-22T16:41:59.174176+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "People holding up the internet",
-      "topic": "web-products",
-      "ts": "2026-10-22T16:41:59.174166+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Richest getting richer",
-      "topic": "web-products",
-      "ts": "2026-10-22T16:41:59.174155+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Calculation volumes for AI training",
-      "topic": "web-products",
-      "ts": "2026-10-22T16:41:59.174145+00:00",
+      "ts": "2026-10-22T22:59:02.776659+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-17T08:16:47.855119+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-17T15:00:22.602783+00:00"
@@ -268,9 +262,13 @@
     {
       "kept": 0,
       "ts": "2026-10-22T16:41:13.530082+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-22T22:58:13.400991+00:00"
     }
   ],
-  "streak": 309,
+  "streak": 310,
   "topics": [
     {
       "collected": 110,
@@ -279,17 +277,17 @@
       "slug": "ai-engineering"
     },
     {
-      "collected": 113,
+      "collected": 112,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 185,
-      "kept": 0,
+      "collected": 187,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-22T16:41:13.530082+00:00"
+  "updated_at": "2026-10-22T22:58:13.400991+00:00"
 }
