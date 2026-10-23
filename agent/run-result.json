@@ -319,9 +319,9 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 20
+      "web-products": 21
     },
-    "count": 69,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -1081,12 +1081,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://webkit.org/blog/18482/release-notes-for-safari-technology-preview-255/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-23T22:54:40.182785+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A blog post recounts a side project that hosted HTML files in an afternoon and, eight months later, drew as many weekly users as the company’s $150k Looker licence, with Looker usage down a third.",
+        "title": "Can we replace a $150k Looker with a bucket of HTML files?",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://david.lequin.dev/blog/bi-software-is-dead/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-23T16:31:03.950643+00:00",
-    "id": "2026-10-23T1631Z",
+    "at": "2026-10-23T22:54:40.182785+00:00",
+    "id": "2026-10-23T2254Z",
     "mode": "real",
     "offline": false
   },
@@ -1097,18 +1108,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 109,
-          "out": 109
+          "in": 107,
+          "out": 107
         },
         "tooling": {
           "drops": {},
-          "in": 110,
-          "out": 110
+          "in": 108,
+          "out": 108
         },
         "web-products": {
           "drops": {},
-          "in": 187,
-          "out": 187
+          "in": 185,
+          "out": 185
         }
       },
       "stage": "collect"
@@ -1118,19 +1129,19 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 109,
-          "out": 109
+          "in": 107,
+          "out": 107
         },
         "tooling": {
           "drops": {},
-          "in": 110,
-          "out": 110
+          "in": 108,
+          "out": 108
         },
         "web-products": {
           "drops": {
-            "outside_window": 127
+            "outside_window": 125
           },
-          "in": 187,
+          "in": 185,
           "out": 60
         }
       },
@@ -1141,18 +1152,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 6,
+            "dismissed": 5,
             "seen": 30
           },
-          "in": 109,
-          "out": 73
+          "in": 107,
+          "out": 72
         },
         "tooling": {
           "drops": {
-            "dismissed": 6,
+            "dismissed": 4,
             "seen": 24
           },
-          "in": 110,
+          "in": 108,
           "out": 80
         },
         "web-products": {
@@ -1171,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 57
+            "already_ranked": 64
           },
-          "in": 73,
-          "out": 16
+          "in": 72,
+          "out": 8
         },
         "tooling": {
           "drops": {
-            "already_ranked": 61
+            "already_ranked": 60
           },
           "in": 80,
-          "out": 19
+          "out": 20
         },
         "web-products": {
           "drops": {
-            "already_ranked": 25
+            "already_ranked": 23
           },
           "in": 37,
-          "out": 12
+          "out": 14
         }
       },
       "stage": "cache"
@@ -1198,18 +1209,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 9,
-          "out": 9
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 5,
-          "out": 5
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 4,
+          "out": 4
         }
       },
       "stage": "enrich"
@@ -1218,25 +1229,23 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "below_relevance": 7
-          },
-          "in": 16,
-          "out": 9
+          "drops": {},
+          "in": 8,
+          "out": 8
         },
         "tooling": {
           "drops": {
             "below_relevance": 3
           },
-          "in": 19,
-          "out": 16
+          "in": 20,
+          "out": 17
         },
         "web-products": {
           "drops": {
             "below_relevance": 1
           },
-          "in": 12,
-          "out": 11
+          "in": 14,
+          "out": 13
         }
       },
       "stage": "rank"
@@ -1246,24 +1255,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 9
+            "over_max_items": 8
           },
-          "in": 9,
+          "in": 8,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 17
           },
-          "in": 16,
+          "in": 17,
           "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 11
+            "over_max_items": 12
           },
-          "in": 11,
-          "out": 0
+          "in": 13,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1283,8 +1292,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1304,8 +1316,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 20
+          "in": 1,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1324,10 +1336,11 @@
           "out": 21
         },
         "web-products": {
-          "drops": {
-            "expired": 1
+          "drops": {},
+          "in": 20,
+          "notes": {
+            "asked": 1
           },
-          "in": 21,
           "out": 20
         }
       },
