@@ -1,96 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "Meta's release of Muse Spark Open, an open-weight natively multimodal model with 816B total (42B active) parameters and a 1M-token context window. Weights are downloadable and it is the first of its class to run on a desktop via two Apple M5 Ultra Mac Studios with MLX.",
-      "title": "Muse Spark Open, the Most Capable US Open\u2011Weight Model to Date",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://research.meta.ai/blog/muse-spark-open"
-    },
-    {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "Scout, an open-source agent (npm @outcrawl/scout) that drives a real browser to complete tasks described in plain words, returning an answer or what's missing. Runs on Outcrawl's cloud with captcha solving and run replay, or locally, and works with any chat-completions-API model.",
-      "title": "outcrawlai/scout",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/outcrawlai/scout"
-    },
-    {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "Parsimony, an open-source benchmark measuring how much code AI models add, counting syntax-level coding units (not lines) in existing benchmark patches as net units = added minus removed. Models are ranked lowest-first by mean net units on tasks solved, using published SWE-bench Verified results.",
-      "title": "Show HN: Parsimony \u2013 an open-source benchmark for how much code AI models add",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://parsimony.lasu.dev/"
-    },
-    {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "A post on jackantico.io about creating a Garmin \"MCP\", i.e. an MCP server/tool integration for Garmin data.",
-      "title": "Creating a Garmin \"MCP\"",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://jackantico.io/garmin-mcp"
-    },
-    {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "Graphicle indexes a repository into a code graph and remembers project docs, decisions and past agent sessions, feeding coding agents cited file-and-line excerpts. It runs locally with no API key, account or telemetry, works with Claude Code, Cursor, Codex and any MCP client, and its setup edits are listed, backed up and reversible.",
-      "title": "Graphicle-AI/graphicle",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/Graphicle-AI/graphicle"
-    },
-    {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "Proa is a batteries-included Rust web framework built around a new programming model for composable, multi-target rendering, where one typed component renders HTML, Markdown and other targets. It ships fast server rendering, selective interactivity, Shadcn-style UI components, and demos recreating GitHub, Sentry and Airbnb.",
-      "title": "Show HN: Proa \u2013 A Rust web framework with fast SSR and multi-target rendering",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://proa.so/"
-    },
-    {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "Ito is a Lua library for building terminal UIs, used here through a browser playground that runs the same terminal layout, drawing, state and input handling in WebAssembly and paints cells to Canvas. The playground owns the window, theme and event loop, while the user returns a function building one view.",
-      "title": "Show HN: Ito \u2013 Build Terminal UIs in Lua",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://uji.sh/ito/"
-    },
-    {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 9,
-      "source": "rss",
-      "summary": "A blog post explaining how CSS env() inside an SVG lets icons loaded via <img> accept outside styling of individual fills and strokes, a technique Vadim Makeev demonstrated for icon systems, with graceful fallback for browsers lacking support.",
-      "title": "SVG \u201cLinked Parameters\u201d Will Change How We Do Icon Systems",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://blog.master.dev/svg-linked-parameters-will-change-how-we-do-icon-systems/"
-    },
-    {
-      "pending_since": "2026-10-16T08:46:21.084801+00:00",
-      "score": 7,
-      "source": "hn",
-      "summary": "Crest, an Arc-inspired open-source browser for Mac, iPad and iPhone in early access under MPL 2.0, offering Spaces, sidebar, Peek and Split View with iCloud sync, plus a feature-by-feature comparison against Arc.",
-      "title": "Crest \u2013 an Arc-inspired open-source browser for Mac",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://crestbrowser.com/"
-    },
-    {
       "pending_since": "2026-10-16T16:08:13.564209+00:00",
       "score": 7,
       "source": "rss",
@@ -699,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://blog.master.dev/building-an-isolated-preview-for-ai-generated-html/"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "OpenShell, a runtime that sandboxes fleets of autonomous AI agents, enforcing per-agent policy on file access, syscalls and network via kernel instrumentation and formally verifying policy changes before approval. 0.1.x adds a stable release cadence, new isolation primitives, an expanded extension surface and new APIs.",
+      "title": "OpenShell \u2013 A safe, private runtime for fleets of autonomous AI agents",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/NVIDIA/OpenShell"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A blog post arguing that asking an LLM for a confidence score or probability produces a number with no good reason to be trusted, illustrated by comparing machine confidence to a weather forecaster's, whose certainty is a calculation over information, not an opinion.",
+      "title": "Using LLM for confidence scoring is a bad idea",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "Lampline, a local-first platform that imports Dialogflow CX and CX Agent Studio agents and runs them on your own hardware, with a drag-and-drop builder mixing LLM and scripted steps, test console, HTTP/MCP tools and phone calls via Twilio, Telnyx or SIP, at roughly $0.02\u20130.17 a call.",
+      "title": "C4rohan/Lampline",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/C4rohan/Lampline"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "DecisionPivot (formerly DecideBench), a benchmark and code repo for evaluating decision models that output option probabilities at LLM system control points, measuring correctness, robustness to one decisive detail changing, and how much work a model handles at a fixed error rate.",
+      "title": "StartLuxLabs/DecisionPivot",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/StartLuxLabs/DecisionPivot"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A dbos.dev blog post on making Postgres DELETE scale, explaining MVCC delete costs and tuning cache/index performance in a Postgres-backed durable workflows and queues workload to apply retention policies at tens of thousands of workflows and steps per second.",
+      "title": "How Postgres DELETE can actually scale",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://www.dbos.dev/blog/scaling-deletions-in-postgres"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A GitHub-hosted OpenAI CLI for calling the OpenAI REST API from a terminal or shell scripts, with commands to generate images, upload/download files, submit and wait on batches, list models, and format output as JSON/JSONL; it also distinguishes itself from Codex CLI.",
+      "title": "OpenAI CLI",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/openai/openai-cli"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A yoyo-code.com blog post on why 2026 is an exciting year for the Rust compiler, covering the next-generation trait solver, the Polonius borrow checker, and compiler-performance work as long-term initiatives reach final steps.",
+      "title": "2026 is an exciting year for the Rust compiler (and me)",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://yoyo-code.com/2026-is-exciting-year-for-rust-compiler-and-me/"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Chrome's experimental HTML-in-Canvas API, now in origin trial, lets developers draw DOM content into a 2D canvas or WebGL/WebGPU texture while keeping the UI interactive and accessible, avoiding the usual DOM-versus-canvas tradeoff.",
+      "title": "The HTML-in-Canvas API origin trial",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://developer.chrome.com/blog/html-in-canvas-origin-trial"
+    },
+    {
+      "pending_since": "2026-10-23T09:07:24.966414+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "Safari Technology Preview 255 release notes list WebKit fixes across accessibility, animations, and CSS, including corrected getComputedStyle() pseudo-element animation checks, view transition update callback flushing, and font-family: initial resolution.",
+      "title": "Release Notes for Safari Technology Preview 255",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://webkit.org/blog/18482/release-notes-for-safari-technology-preview-255/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

@@ -4,59 +4,68 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 55,
-        "dismissed": 2,
-        "seen": 30
+        "already_ranked": 54,
+        "dismissed": 6,
+        "seen": 26
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 11
+        "below_relevance": 6,
+        "over_max_items": 7
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 64,
-        "dismissed": 2,
-        "seen": 25
+        "already_ranked": 65,
+        "dismissed": 6,
+        "seen": 21
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
         "below_relevance": 1,
-        "over_max_items": 17
+        "over_max_items": 15
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 128
+        "outside_window": 129
       },
       "dedupe": {
-        "already_ranked": 26,
-        "dismissed": 4,
-        "seen": 18
+        "already_ranked": 27,
+        "dismissed": 5,
+        "seen": 16
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 10
+        "below_relevance": 1,
+        "over_max_items": 9
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 100,
-      "in_window": 100,
-      "kept": 0,
-      "new": 13
+      "collected": 103,
+      "in_window": 103,
+      "kept": 4,
+      "new": 17
     },
     "tooling": {
-      "collected": 109,
-      "in_window": 109,
-      "kept": 0,
-      "new": 18
+      "collected": 111,
+      "in_window": 111,
+      "kept": 3,
+      "new": 19
     },
     "web-products": {
-      "collected": 188,
+      "collected": 189,
       "in_window": 60,
-      "kept": 0,
+      "kept": 2,
       "new": 12
     }
   },
@@ -64,116 +73,114 @@
   "pending_count": 70,
   "recent_events": [
     {
+      "score": 8,
+      "source": "rss",
+      "title": "Release Notes for Safari Technology Preview 255",
+      "topic": "web-products",
+      "ts": "2026-10-23T09:08:30.383009+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "hn",
+      "title": "The HTML-in-Canvas API origin trial",
+      "topic": "web-products",
+      "ts": "2026-10-23T09:08:30.382984+00:00",
+      "verdict": "kept"
+    },
+    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129290+00:00",
+      "ts": "2026-10-23T09:08:30.382965+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129272+00:00",
+      "ts": "2026-10-23T09:08:30.382952+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Getting to know a dataset",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129232+00:00",
+      "ts": "2026-10-23T09:08:30.382940+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129219+00:00",
+      "ts": "2026-10-23T09:08:30.382927+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129206+00:00",
+      "ts": "2026-10-23T09:08:30.382915+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129192+00:00",
+      "ts": "2026-10-23T09:08:30.382902+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Google's servers can scan what you copy in Chrome for unsafe content",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129178+00:00",
+      "ts": "2026-10-23T09:08:30.382886+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "abdiraimov-otabek/dashboard-design-skill",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129163+00:00",
+      "ts": "2026-10-23T09:08:30.382866+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "A farewell to Arc browser",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129148+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Release Notes for Safari Technology Preview 255",
-      "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.129126+00:00",
+      "ts": "2026-10-23T09:08:30.382806+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
       "title": "The Secret Life of Circuits is now in stock everywhere",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.128894+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: Turn regular JavaScript into a neural net",
-      "topic": "web-products",
-      "ts": "2026-10-23T03:32:04.128817+00:00",
+      "ts": "2026-10-23T09:08:27.156982+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:00.927603+00:00",
+      "ts": "2026-10-23T09:08:22.528852+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Richest getting richer",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:00.927593+00:00",
+      "ts": "2026-10-23T09:08:22.528841+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Calculation volumes for AI training",
       "topic": "web-products",
-      "ts": "2026-10-23T03:32:00.927582+00:00",
+      "ts": "2026-10-23T09:08:22.528828+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-17T18:10:14.117938+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-17T21:58:20.980695+00:00"
@@ -265,28 +272,32 @@
     {
       "kept": 0,
       "ts": "2026-10-23T03:31:14.836900+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-23T09:07:24.966414+00:00"
     }
   ],
-  "streak": 311,
+  "streak": 312,
   "topics": [
     {
-      "collected": 100,
-      "kept": 0,
+      "collected": 103,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 109,
-      "kept": 0,
+      "collected": 111,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 188,
-      "kept": 0,
+      "collected": 189,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-23T03:31:14.836900+00:00"
+  "updated_at": "2026-10-23T09:07:24.966414+00:00"
 }
