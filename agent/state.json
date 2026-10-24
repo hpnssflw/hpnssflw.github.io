@@ -395,7 +395,7 @@
   "05516fa6d2dd5210": {
     "dismissed": null,
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
-    "last_score": 79,
+    "last_score": 80,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -539,7 +539,7 @@
   "0673400c8d8a50c1": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 112,
+    "last_score": 113,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -661,7 +661,7 @@
   "0833f4edefaddf5e": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 115,
+    "last_score": 154,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -930,7 +930,7 @@
     "last_score": 282,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-24T22:15:11.175692+00:00",
         "ranked_at": "2026-10-22T22:58:13.400991+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -989,7 +989,7 @@
   "0c52706d1cc52b2e": {
     "dismissed": null,
     "first_seen": "2026-10-24T03:25:47.470221+00:00",
-    "last_score": 120,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1537,7 +1537,7 @@
   "13f4a873d9cc47db": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 144,
+    "last_score": 160,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1626,7 +1626,7 @@
   "153b7aa18d6a1f9a": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 38,
+    "last_score": 49,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2041,7 +2041,7 @@
   "1bd8b9068d5621d2": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 330,
+    "last_score": 346,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2219,7 +2219,7 @@
   "1f1f087b2b664b27": {
     "dismissed": null,
     "first_seen": "2026-10-19T09:37:11.229871+00:00",
-    "last_score": 136,
+    "last_score": 137,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -2228,6 +2228,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 101,
         "summary": "A Russian-language guide to installing and running DeepSeek (V4, R1) locally on PC, Mac and server using Ollama, llama.cpp, LM Studio, vLLM, Open WebUI, plus API, RAG, agents and fine-tuning."
+      }
+    },
+    "times_sent": 0
+  },
+  "1f21a11f54e05b7b": {
+    "dismissed": null,
+    "first_seen": "2026-10-24T22:15:11.175692+00:00",
+    "last_score": 190,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-24T22:15:11.175692+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 190,
+        "summary": "A Show HN post presenting 'Steal My Bitcoin,' a challenge related to a PHP RCE."
       }
     },
     "times_sent": 0
@@ -2930,7 +2946,7 @@
   "2c56be350818f1b6": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 36,
+    "last_score": 37,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3660,7 +3676,7 @@
   "3513b9999983f116": {
     "dismissed": null,
     "first_seen": "2026-10-24T03:25:47.470221+00:00",
-    "last_score": 179,
+    "last_score": 182,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3816,7 +3832,7 @@
   "3694f21f83138702": {
     "dismissed": null,
     "first_seen": "2026-10-21T16:40:24.239815+00:00",
-    "last_score": 369,
+    "last_score": 370,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3947,7 +3963,7 @@
   "37d13315cf78340e": {
     "dismissed": null,
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
-    "last_score": 203,
+    "last_score": 228,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-21T09:08:25.960201+00:00",
@@ -3986,7 +4002,7 @@
   "3832a17c7c1c1646": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 50,
+    "last_score": 60,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4171,7 +4187,7 @@
   "3ab9b1ef391db233": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
-    "last_score": 187,
+    "last_score": 188,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4610,6 +4626,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "402510afde2d9adf": {
+    "dismissed": null,
+    "first_seen": "2026-10-24T22:15:11.175692+00:00",
+    "last_score": 45,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-24T22:15:11.175692+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 45,
+        "summary": "A GitHub item titled 'Symbolic Learning in Python and Julia' with no further excerpt."
+      }
+    },
+    "times_sent": 0
+  },
   "402f92c33c556ff4": {
     "dismissed": null,
     "first_seen": "2026-09-03T18:57:53.147814+00:00",
@@ -4990,7 +5022,7 @@
   "46ccbfc5e65bd167": {
     "dismissed": null,
     "first_seen": "2026-10-16T08:46:21.084801+00:00",
-    "last_score": 2600,
+    "last_score": 2619,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5217,7 +5249,7 @@
   "49596df11068049b": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 110,
+    "last_score": 117,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5628,7 +5660,7 @@
   "4fb051deb6783029": {
     "dismissed": null,
     "first_seen": "2026-10-24T03:25:47.470221+00:00",
-    "last_score": 58,
+    "last_score": 59,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5944,7 +5976,7 @@
   "53ee9eaa31547f0e": {
     "dismissed": null,
     "first_seen": "2026-10-23T03:31:14.836900+00:00",
-    "last_score": 132,
+    "last_score": 135,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6582,7 +6614,7 @@
   "5c25b4db80090e92": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 167,
+    "last_score": 196,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6734,7 +6766,7 @@
   "5e2de02c616d9812": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 203,
+    "last_score": 205,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6750,7 +6782,7 @@
   "5e721ff09243763a": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 117,
+    "last_score": 119,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -6920,7 +6952,7 @@
   "615fb34e1bcf981e": {
     "dismissed": null,
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
-    "last_score": 60,
+    "last_score": 62,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7406,7 +7438,7 @@
   "67f9ceba560d7193": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 627,
+    "last_score": 628,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-21T09:08:25.960201+00:00",
@@ -7553,7 +7585,7 @@
   "6961cf70fece2ae2": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 321,
+    "last_score": 322,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7622,7 +7654,7 @@
   "6a45251399c8de3b": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 213,
+    "last_score": 235,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7804,7 +7836,7 @@
   "6c6bee7f14c39272": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 330,
+    "last_score": 350,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8501,7 +8533,7 @@
   "7502ffe393ce17ad": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 226,
+    "last_score": 227,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8517,7 +8549,7 @@
   "75125cf5ab0826b2": {
     "dismissed": null,
     "first_seen": "2026-10-21T16:40:24.239815+00:00",
-    "last_score": 159,
+    "last_score": 160,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8632,7 +8664,7 @@
   "765a9894d2fa75a2": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 388,
+    "last_score": 390,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-22T09:10:34.677769+00:00",
@@ -8858,7 +8890,7 @@
   "7aa2f5992ec29c5c": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 297,
+    "last_score": 299,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9301,7 +9333,7 @@
   "80ab8ecc8f188894": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 86,
+    "last_score": 89,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -9745,7 +9777,7 @@
   "89aae3fb35c1bbe2": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 56,
+    "last_score": 58,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -10250,7 +10282,7 @@
   "914b3fedd5958504": {
     "dismissed": null,
     "first_seen": "2026-10-16T16:08:13.564209+00:00",
-    "last_score": 988,
+    "last_score": 990,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11005,7 +11037,7 @@
   "99d537d830d481c4": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 217,
+    "last_score": 228,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-22T09:10:34.677769+00:00",
@@ -11285,7 +11317,7 @@
   "9de5a8b293158c1b": {
     "dismissed": null,
     "first_seen": "2026-10-22T03:26:12.400451+00:00",
-    "last_score": 160,
+    "last_score": 164,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11623,7 +11655,7 @@
   "a274a475efbd40d3": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 84,
+    "last_score": 91,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11639,7 +11671,7 @@
   "a28d8c43766abec8": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 964,
+    "last_score": 965,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-21T09:08:25.960201+00:00",
@@ -11842,7 +11874,7 @@
   "a50a68be733da006": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 1599,
+    "last_score": 1671,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12122,7 +12154,7 @@
   "a7e710fc6c8e9540": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 309,
+    "last_score": 319,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12615,7 +12647,7 @@
   "ae48d7a79b6314af": {
     "dismissed": null,
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
-    "last_score": 103,
+    "last_score": 104,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -13444,7 +13476,7 @@
   "b868c0a4c342680f": {
     "dismissed": null,
     "first_seen": "2026-10-17T08:16:47.855119+00:00",
-    "last_score": 1185,
+    "last_score": 1191,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13467,7 +13499,7 @@
   "b89314bc132c8f07": {
     "dismissed": null,
     "first_seen": "2026-10-16T16:08:13.564209+00:00",
-    "last_score": 112,
+    "last_score": 113,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14605,7 +14637,7 @@
   "c852cf262baca51d": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 142,
+    "last_score": 220,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14713,7 +14745,7 @@
   "c9bb5685ce3d1c93": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 177,
+    "last_score": 182,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15018,7 +15050,7 @@
   "cd7638416c981a46": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
-    "last_score": 152,
+    "last_score": 154,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -15113,7 +15145,7 @@
   "cdf86179f9a2ec80": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 72,
+    "last_score": 73,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15161,7 +15193,7 @@
   "ce7705b5a8806fc4": {
     "dismissed": null,
     "first_seen": "2026-10-22T09:10:34.677769+00:00",
-    "last_score": 633,
+    "last_score": 638,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15856,7 +15888,7 @@
   "d9879929c8083b6a": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 152,
+    "last_score": 158,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16874,7 +16906,7 @@
   "e6de8a9f7e83cc64": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 60,
+    "last_score": 71,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -16938,6 +16970,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "e7a3c5f27983ee85": {
+    "dismissed": null,
+    "first_seen": "2026-10-24T22:15:11.175692+00:00",
+    "last_score": 30,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-24T22:15:11.175692+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 30,
+        "summary": "An announcement that HumanLayer is now open source."
+      }
+    },
     "times_sent": 0
   },
   "e7be7c03ac755c4d": {
@@ -17130,7 +17178,7 @@
   "eaeb4841c281d36f": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 105,
+    "last_score": 106,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17185,7 +17233,7 @@
   "eb4e53838bb692dd": {
     "dismissed": null,
     "first_seen": "2026-10-21T09:08:25.960201+00:00",
-    "last_score": 71,
+    "last_score": 72,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-21T09:08:25.960201+00:00",
@@ -17262,7 +17310,7 @@
   "ecc0f8854c8010e9": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 68,
+    "last_score": 69,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -17278,7 +17326,7 @@
   "ecf15ae39e41e40c": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 130,
+    "last_score": 131,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-23T22:54:40.182785+00:00",
@@ -17895,7 +17943,7 @@
   "f6a301346a05e615": {
     "dismissed": null,
     "first_seen": "2026-10-23T03:31:14.836900+00:00",
-    "last_score": 455,
+    "last_score": 456,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18001,7 +18049,7 @@
   "f8474f3f0bfa06aa": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 35,
+    "last_score": 36,
     "ranks": {
       "tooling": {
         "queued_at": null,

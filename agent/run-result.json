@@ -319,9 +319,9 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 20
+      "web-products": 21
     },
-    "count": 69,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -1081,12 +1081,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T22:15:11.175692+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "The Browser Company's farewell to Arc: new accounts stop Oct 22, mobile AI features end Nov 23, and Arc on macOS/Windows shuts down Dec 22, with data importing into successor browser Dia, which the team now focuses on for security.",
+        "title": "A farewell to Arc browser",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://arc.net/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-24T18:35:49.184654+00:00",
-    "id": "2026-10-24T1835Z",
+    "at": "2026-10-24T22:15:11.175692+00:00",
+    "id": "2026-10-24T2215Z",
     "mode": "real",
     "offline": false
   },
@@ -1102,8 +1113,8 @@
         },
         "tooling": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 100,
+          "out": 100
         },
         "web-products": {
           "drops": {},
@@ -1123,8 +1134,8 @@
         },
         "tooling": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 100,
+          "out": 100
         },
         "web-products": {
           "drops": {
@@ -1152,8 +1163,8 @@
             "dismissed": 5,
             "seen": 22
           },
-          "in": 97,
-          "out": 70
+          "in": 100,
+          "out": 73
         },
         "web-products": {
           "drops": {
@@ -1171,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 54
+            "already_ranked": 56
           },
           "in": 61,
-          "out": 7
+          "out": 5
         },
         "tooling": {
           "drops": {
-            "already_ranked": 55
+            "already_ranked": 57
           },
-          "in": 70,
-          "out": 15
+          "in": 73,
+          "out": 16
         },
         "web-products": {
           "drops": {
-            "already_ranked": 23
+            "already_ranked": 24
           },
           "in": 35,
-          "out": 12
+          "out": 11
         }
       },
       "stage": "cache"
@@ -1198,8 +1209,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
@@ -1208,8 +1219,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1218,24 +1229,20 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "below_relevance": 2
-          },
-          "in": 7,
+          "drops": {},
+          "in": 5,
           "out": 5
         },
         "tooling": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 3
           },
-          "in": 15,
+          "in": 16,
           "out": 13
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 12,
+          "drops": {},
+          "in": 11,
           "out": 11
         }
       },
@@ -1260,10 +1267,10 @@
         },
         "web-products": {
           "drops": {
-            "over_max_items": 11
+            "over_max_items": 10
           },
           "in": 11,
-          "out": 0
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1283,8 +1290,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1304,8 +1314,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 20
+          "in": 1,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1324,10 +1334,11 @@
           "out": 21
         },
         "web-products": {
-          "drops": {
-            "expired": 1
+          "drops": {},
+          "in": 20,
+          "notes": {
+            "asked": 1
           },
-          "in": 21,
           "out": 20
         }
       },
