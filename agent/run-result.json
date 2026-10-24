@@ -319,21 +319,10 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 21
+      "web-products": 20
     },
-    "count": 70,
+    "count": 69,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T18:10:14.117938+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "A follow-along Ahrefs guide on automating content creation that explains how the author built a monthly Data Refresh Hub to automate repetitive updates to data-driven articles and how to apply the same process to other content tasks.",
-        "title": "How to Automate Content Creation: A Follow-Along Guide",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://ahrefs.com/blog/automated-content-creation/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-18T08:34:06.870675+00:00",
@@ -1096,8 +1085,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-24T15:25:48.617126+00:00",
-    "id": "2026-10-24T1525Z",
+    "at": "2026-10-24T18:35:49.184654+00:00",
+    "id": "2026-10-24T1835Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,18 +1097,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 95,
+          "out": 95
         },
         "tooling": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 97,
+          "out": 97
         },
         "web-products": {
           "drops": {},
-          "in": 184,
-          "out": 184
+          "in": 185,
+          "out": 185
         }
       },
       "stage": "collect"
@@ -1129,19 +1118,19 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 95,
+          "out": 95
         },
         "tooling": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 97,
+          "out": 97
         },
         "web-products": {
           "drops": {
-            "outside_window": 127
+            "outside_window": 128
           },
-          "in": 184,
+          "in": 185,
           "out": 57
         }
       },
@@ -1155,24 +1144,24 @@
             "dismissed": 6,
             "seen": 28
           },
-          "in": 98,
-          "out": 64
+          "in": 95,
+          "out": 61
         },
         "tooling": {
           "drops": {
             "dismissed": 5,
-            "seen": 23
+            "seen": 22
           },
-          "in": 96,
-          "out": 68
+          "in": 97,
+          "out": 70
         },
         "web-products": {
           "drops": {
             "dismissed": 4,
-            "seen": 19
+            "seen": 18
           },
           "in": 57,
-          "out": 34
+          "out": 35
         }
       },
       "stage": "dedupe"
@@ -1182,24 +1171,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 56
+            "already_ranked": 54
           },
-          "in": 64,
-          "out": 8
+          "in": 61,
+          "out": 7
         },
         "tooling": {
           "drops": {
-            "already_ranked": 54
+            "already_ranked": 55
           },
-          "in": 68,
-          "out": 14
+          "in": 70,
+          "out": 15
         },
         "web-products": {
           "drops": {
             "already_ranked": 23
           },
-          "in": 34,
-          "out": 11
+          "in": 35,
+          "out": 12
         }
       },
       "stage": "cache"
@@ -1209,13 +1198,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 2,
+          "out": 2
         },
         "tooling": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 3,
+          "out": 3
         },
         "web-products": {
           "drops": {},
@@ -1230,21 +1219,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 2
           },
-          "in": 8,
+          "in": 7,
           "out": 5
         },
         "tooling": {
           "drops": {
             "below_relevance": 2
           },
-          "in": 14,
-          "out": 12
+          "in": 15,
+          "out": 13
         },
         "web-products": {
-          "drops": {},
-          "in": 11,
+          "drops": {
+            "below_relevance": 1
+          },
+          "in": 12,
           "out": 11
         }
       },
@@ -1262,9 +1253,9 @@
         },
         "tooling": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 13
           },
-          "in": 12,
+          "in": 13,
           "out": 0
         },
         "web-products": {
@@ -1314,7 +1305,7 @@
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 21
+          "out": 20
         }
       },
       "stage": "queue"
@@ -1333,9 +1324,11 @@
           "out": 21
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 21,
-          "out": 21
+          "out": 20
         }
       },
       "stage": "review"
