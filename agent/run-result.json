@@ -325,105 +325,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "PS5LM is a homebrew app that runs llama.cpp's Vulkan backend on a jailbroken PS5's RDNA 2 GPU and serves GGUF models over OpenAI- and Anthropic-compatible APIs to the local network. It now also runs decision models answering TypeSafe's /v1/systemone API.",
-        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/cobanov/PS5LM"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "StarSkirmish Bench is a benchmark where each LLM gets one hour to write a StarCraft: Brood War Protoss bot in C++, then is scored by win rate against human-written and other LLM bots. v0.2 adds flagship models from OpenAI, Anthropic, Google and Meta run in their first-party CLI harnesses.",
-        "title": "Show HN: Gemini 4 Argon plays StarCraft",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://starskirmish.com/bench/v0-2/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "rStation is a shared research community where independent AI agents discuss research problems and publish reviewed papers, with humans welcome to observe. It organizes work around open problems such as the Riemann hypothesis and strongly regular graphs.",
-        "title": "Show HN: rStation – A shared research lab for your AI agents",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://rstation.ai/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "Llmspeed is a tool that estimates how fast a local LLM will run on a given device before you buy hardware, using community benchmarks and projections derived from similar setups. It is open source on GitHub.",
-        "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://llmspeed.dev/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Once is a CLI tool that runs a command, prints stdout, and caches the result in a per-user background daemon, reusing it for the same command, directory, and tenant key until TTL expiry; a typical use is avoiding repeated 1Password fingerprint approvals.",
-        "title": "Once: Cache CLI commands",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/alex0ptr/once"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "Diarea is a frontend leak scanner that finds exposed keys, source maps, API maps, debug globals, and private logic, then scores damage from Sealed to Gushing. It ships a CLI, Chrome extension, GitHub Action, and local read-only MCP server so coding agents can scan and fix leaks.",
-        "title": "kriszwart/diarea",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/kriszwart/diarea"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "Eido is an AI workspace for understanding code, building with an agent, and reviewing changes, keeping conversation and code together. Its 0.0.1 stable macOS release bundles pi 1.3.0 and adds OpenRouter model-list refresh, saved sharing preferences, and better tool restoration.",
-        "title": "tony3liu/eido",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/tony3liu/eido"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Stripe's announcement of three updates for fintechs: Global Payouts expanded to instant stablecoin payouts in 160 markets and traditional currency payouts in 100+, stablecoin card issuing via Stripe Issuing now in 27 EU countries (65+ worldwide), and unified APIs for global financial products.",
-        "title": "New ways for fintechs to move money and expand globally",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://stripe.com/blog/new-ways-for-fintechs-to-move-money-and-expand-globally"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-17T08:16:47.855119+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "Firefox 158 release notes, highlighting default JPEG XL image format support, Smart Window form filling suggestions, more accessible PDFs, a New Tab wallpaper library, and new translation languages.",
-        "title": "Firefox 158 released with JPEG XL support by default",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://www.firefox.com/en-US/firefox/158.0/releasenotes/"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-17T18:10:14.117938+00:00",
         "score": 7,
         "source": "rss",
@@ -1092,12 +993,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://david.lequin.dev/blog/bi-software-is-dead/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "Five-layer 2026 AI engineering roadmap built around RAG, agents and evals, each layer ending in a showable mini-project, plus a 12-week sample plan (~25 weeks at 10 hrs/week); it argues evaluation engineering is the skill to learn first.",
+        "title": "h9-tec/ai-roadmap-2026",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/h9-tec/ai-roadmap-2026"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "Source-backed catalog of papers, models, datasets, benchmarks and tools for computer-use agents, with an English survey manuscript, topic browsing, a coverage ledger and scheduled discovery scans three times daily.",
+        "title": "reacher-z/Awesome-CUA",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/reacher-z/Awesome-CUA"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "Community plugin adding blackboard blocks to PTC mode in DeepSeek Harness so the model decides what to compact, closing a block with a handover summary; v0.4.0 uses block_compact({ids, content}) and drops block_summary.",
+        "title": "mengwEX/dsh-block-ptc",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/mengwEX/dsh-block-ptc"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "OpenAI-compatible proxy for the Gemini web app that authenticates with Google session cookies instead of an API key, adding account pooling, quota-aware failover, image/video generation, Search grounding and a built-in MCP server.",
+        "title": "azrinaldi/gemini-stealth-bridge",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/azrinaldi/gemini-stealth-bridge"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "Corgi is a terminal multiplexer for humans and agents that shows each agent's status, token activity and file changes, keeps processes running in the background like tmux, and adds agent-aware tabs, worktrees, resource usage and image paste.",
+        "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://corgi.computer/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "Vesalius gives Claude Code a locally built map of a repository so it can answer code questions with exact file and line references in fewer calls; its benchmark cut token use roughly in half and it also ships as a Mac app and VS Code extension.",
+        "title": "haplollc/Vesalius",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/haplollc/Vesalius"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "OpenIDEA is an IntelliJ IDEA-style IDE rebuilt in Rust, offering editor, code insight, debugger, Git, terminal, database and HTTP clients for 60+ languages on macOS, Windows and Linux, with benchmarks showing faster startup and lower memory than IntelliJ IDEA.",
+        "title": "l0ng-ai/openidea",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/l0ng-ai/openidea"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Dominik’s “Vertical Codebase” architecture idea proposes co-locating hooks, types, queries, and other related files by conceptual site areas such as the dashboard, extending component-level co-location instead of spreading them out.",
+        "title": "The Vertical Codebase",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/the-vertical-codebase/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-24T08:40:36.292566+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "An article on accordion icon UX research finding the caret is the safest icon choice, split menus and split buttons are harmful, and icon/text labels should not link to different actions; no icon implies a direct page link.",
+        "title": "Accordion Icons: Which Work Best?",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-24T03:25:47.470221+00:00",
-    "id": "2026-10-24T0325Z",
+    "at": "2026-10-24T08:40:36.292566+00:00",
+    "id": "2026-10-24T0840Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,8 +1108,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
@@ -1129,8 +1129,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
@@ -1152,24 +1152,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
-            "seen": 27
+            "dismissed": 7,
+            "seen": 23
           },
-          "in": 99,
-          "out": 69
+          "in": 101,
+          "out": 71
         },
         "tooling": {
           "drops": {
-            "dismissed": 3,
-            "seen": 23
+            "dismissed": 6,
+            "seen": 20
           },
           "in": 104,
           "out": 78
         },
         "web-products": {
           "drops": {
-            "dismissed": 4,
-            "seen": 19
+            "dismissed": 6,
+            "seen": 17
           },
           "in": 59,
           "out": 36
@@ -1182,17 +1182,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 61
+            "already_ranked": 62
           },
-          "in": 69,
-          "out": 8
+          "in": 71,
+          "out": 9
         },
         "tooling": {
           "drops": {
-            "already_ranked": 58
+            "already_ranked": 59
           },
           "in": 78,
-          "out": 20
+          "out": 19
         },
         "web-products": {
           "drops": {
@@ -1209,13 +1209,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 2,
+          "out": 2
         },
         "tooling": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 3,
+          "out": 3
         },
         "web-products": {
           "drops": {},
@@ -1232,15 +1232,15 @@
           "drops": {
             "below_relevance": 1
           },
-          "in": 8,
-          "out": 7
+          "in": 9,
+          "out": 8
         },
         "tooling": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 1
           },
-          "in": 20,
-          "out": 16
+          "in": 19,
+          "out": 18
         },
         "web-products": {
           "drops": {},
@@ -1255,24 +1255,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 7
+            "over_max_items": 4
           },
-          "in": 7,
-          "out": 0
+          "in": 8,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 15
           },
-          "in": 16,
-          "out": 0
+          "in": 18,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 10
           },
           "in": 12,
-          "out": 0
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1282,18 +1282,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "summarized": 2
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1303,17 +1312,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
+          "in": 4,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
+          "in": 3,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 2,
           "out": 21
         }
       },
@@ -1323,19 +1332,34 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "notes": {
+            "asked": 4
+          },
+          "out": 24
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 3
+          },
+          "out": 18
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 2
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 2
+          },
+          "out": 19
         }
       },
       "stage": "review"

@@ -4,24 +4,30 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 61,
-        "dismissed": 3,
-        "seen": 27
+        "already_ranked": 62,
+        "dismissed": 7,
+        "seen": 23
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
         "below_relevance": 1,
-        "over_max_items": 7
+        "over_max_items": 4
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 58,
-        "dismissed": 3,
-        "seen": 23
+        "already_ranked": 59,
+        "dismissed": 6,
+        "seen": 20
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 16
+        "below_relevance": 1,
+        "over_max_items": 15
       }
     },
     "web-products": {
@@ -30,32 +36,35 @@
       },
       "dedupe": {
         "already_ranked": 24,
-        "dismissed": 4,
-        "seen": 19
+        "dismissed": 6,
+        "seen": 17
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
-        "over_max_items": 12
+        "over_max_items": 10
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 99,
-      "in_window": 99,
-      "kept": 0,
-      "new": 8
+      "collected": 101,
+      "in_window": 101,
+      "kept": 4,
+      "new": 9
     },
     "tooling": {
       "collected": 104,
       "in_window": 104,
-      "kept": 0,
-      "new": 20
+      "kept": 3,
+      "new": 19
     },
     "web-products": {
       "collected": 184,
       "in_window": 59,
-      "kept": 0,
+      "kept": 2,
       "new": 12
     }
   },
@@ -63,116 +72,114 @@
   "pending_count": 70,
   "recent_events": [
     {
+      "score": 8,
+      "source": "rss",
+      "title": "Accordion Icons: Which Work Best?",
+      "topic": "web-products",
+      "ts": "2026-10-24T08:41:38.554515+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 8,
+      "source": "rss",
+      "title": "The Vertical Codebase",
+      "topic": "web-products",
+      "ts": "2026-10-24T08:41:38.554499+00:00",
+      "verdict": "kept"
+    },
+    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969153+00:00",
+      "ts": "2026-10-24T08:41:38.554436+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969142+00:00",
+      "ts": "2026-10-24T08:41:38.554424+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969131+00:00",
+      "ts": "2026-10-24T08:41:38.554401+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969119+00:00",
+      "ts": "2026-10-24T08:41:38.554389+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969108+00:00",
+      "ts": "2026-10-24T08:41:38.554377+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969091+00:00",
+      "ts": "2026-10-24T08:41:38.554365+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969057+00:00",
+      "ts": "2026-10-24T08:41:38.554352+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Google's servers can scan what you copy in Chrome for unsafe content",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969033+00:00",
+      "ts": "2026-10-24T08:41:38.554336+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "abdiraimov-otabek/dashboard-design-skill",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.969013+00:00",
+      "ts": "2026-10-24T08:41:38.554317+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "A farewell to Arc browser",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.968991+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Accordion Icons: Which Work Best?",
-      "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.968959+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "The Vertical Codebase",
-      "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.968908+00:00",
+      "ts": "2026-10-24T08:41:38.554253+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.968692+00:00",
+      "ts": "2026-10-24T08:41:33.542481+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Calculation volumes for AI training",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.968681+00:00",
+      "ts": "2026-10-24T08:41:33.542467+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cost of electricity from investor-owned vs. public",
       "topic": "web-products",
-      "ts": "2026-10-24T03:26:40.968670+00:00",
+      "ts": "2026-10-24T08:41:33.542434+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-18T15:25:39.608183+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-10-18T18:28:11.776184+00:00"
@@ -264,28 +271,32 @@
     {
       "kept": 0,
       "ts": "2026-10-24T03:25:47.470221+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-24T08:40:36.292566+00:00"
     }
   ],
-  "streak": 315,
+  "streak": 316,
   "topics": [
     {
-      "collected": 99,
-      "kept": 0,
+      "collected": 101,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 104,
-      "kept": 0,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 184,
-      "kept": 0,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-24T03:25:47.470221+00:00"
+  "updated_at": "2026-10-24T08:40:36.292566+00:00"
 }
