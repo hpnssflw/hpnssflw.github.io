@@ -319,21 +319,10 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 21
+      "web-products": 20
     },
-    "count": 70,
+    "count": 69,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T18:28:11.776184+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "A New York Times Magazine illustration by Nicholas Konrad visualizes a California ballot measure imposing a one-time 5% tax on billionaires’ net worth for 250 individuals, comparing the tax with their wealth, usual taxes, and opposition spending; transitioning circles convey the scale.",
-        "title": "Scale of proposed billionaire wealth tax in California",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/10/15/california-billionaire-tax/"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-19T09:37:11.229871+00:00",
@@ -1096,8 +1085,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-25T15:36:22.052233+00:00",
-    "id": "2026-10-25T1536Z",
+    "at": "2026-10-25T18:44:23.385972+00:00",
+    "id": "2026-10-25T1844Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,13 +1097,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 99,
+          "out": 99
         },
         "tooling": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 96,
+          "out": 96
         },
         "web-products": {
           "drops": {},
@@ -1129,20 +1118,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 97,
-          "out": 97
-        },
-        "tooling": {
-          "drops": {},
           "in": 99,
           "out": 99
         },
+        "tooling": {
+          "drops": {},
+          "in": 96,
+          "out": 96
+        },
         "web-products": {
           "drops": {
-            "outside_window": 129
+            "outside_window": 130
           },
           "in": 186,
-          "out": 57
+          "out": 56
         }
       },
       "stage": "window"
@@ -1152,26 +1141,26 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 7,
+            "dismissed": 6,
             "seen": 29
           },
-          "in": 97,
-          "out": 61
+          "in": 99,
+          "out": 64
         },
         "tooling": {
           "drops": {
-            "dismissed": 7,
-            "seen": 22
+            "dismissed": 6,
+            "seen": 21
           },
-          "in": 99,
-          "out": 70
+          "in": 96,
+          "out": 69
         },
         "web-products": {
           "drops": {
             "dismissed": 6,
-            "seen": 19
+            "seen": 18
           },
-          "in": 57,
+          "in": 56,
           "out": 32
         }
       },
@@ -1182,17 +1171,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 51
+            "already_ranked": 59
           },
-          "in": 61,
-          "out": 10
+          "in": 64,
+          "out": 5
         },
         "tooling": {
           "drops": {
             "already_ranked": 54
           },
-          "in": 70,
-          "out": 16
+          "in": 69,
+          "out": 15
         },
         "web-products": {
           "drops": {
@@ -1209,18 +1198,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 9,
-          "out": 9
+          "in": 3,
+          "out": 3
         },
         "tooling": {
           "drops": {},
-          "in": 5,
-          "out": 5
+          "in": 2,
+          "out": 2
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1230,16 +1219,16 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 8
+            "below_relevance": 3
           },
-          "in": 10,
+          "in": 5,
           "out": 2
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 2
           },
-          "in": 16,
+          "in": 15,
           "out": 13
         },
         "web-products": {
@@ -1314,7 +1303,7 @@
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 21
+          "out": 20
         }
       },
       "stage": "queue"
@@ -1333,9 +1322,11 @@
           "out": 21
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 21,
-          "out": 21
+          "out": 20
         }
       },
       "stage": "review"
