@@ -325,105 +325,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "Tracely-ai is trace-native CI/CD for AI agents: it grades production traces, clusters failures into issues, freezes bad runs into hermetic replayable regression cases and blocks the PR that would reship them. Tests come from real failing traces instead of hand-authored datasets.",
-        "title": "jwuthri-cloud/Tracely-ai",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/jwuthri-cloud/Tracely-ai"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "Hugging Face model page for deepseek-ai/DeepSeek-V4.1-Flash-1017, with setup snippets for Transformers, vLLM, SGLang and Docker serving. Only usage instructions are given; no capability details are stated.",
-        "title": "DeepSeek-v4.1-Flash-1017",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "OpenRouter listing for DeepSeek V4.1 Flash 1017, the Oct 17 2026 snapshot. It is described as a sparse MoE on DeepSeek's new Causal Encoder-Decoder architecture, activating 8B input/16B output from a 552B backbone, with native image understanding and compressed KV caching.",
-        "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "rsi_eval is a lightweight Python SDK and CLI for evaluating recursive self-improvement methods across agent benchmarks: you keep your own improvement loop and call evaluate(), reusing pinned tasks, graders and a common result format across 24 bundled configurations.",
-        "title": "Danielxu0208/rsi_eval",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/Danielxu0208/rsi_eval"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "ESP32sim is an MIT browser-based ESP32 firmware emulator that instruction-level emulates four ESP32 SoCs and boots the real mask ROM, bootloader, and unmodified application images via WebAssembly, with board support, GPIO/UART/timers, and virtual networking.",
-        "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/mikroverk/esp32sim"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Sphinx is a free FOSS Git hook for agent-assisted development that pauses protected pushes and quizzes the developer on what the AI-written diff does when things go wrong, continuing only after a correct answer.",
-        "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://sphinx-six-theta.vercel.app/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "tsc-ts is an experimental TypeScript port of the TypeScript 7.0.2 compiler (tsgo), written in idiomatic TypeScript and compiled to native executables with scriptc; it ships npm packages and compares scanner/parser/binder output against tsgo.",
-        "title": "Tsc-ts: TypeScript written in TypeScript",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/vercel-labs/tsc-ts"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "An article explaining the removal of XSLT support in Chrome and Edge, and what will break versus what won't.",
-        "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://doctor-seo.net/en/blog/news/chrome-edge-removing-xslt/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-18T08:34:06.870675+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "Ahrefs analysis of 66.6M free ChatGPT responses and 15M fan-out queries finds only 14.4% triggered web search, averaging about 1.6 queries when they did; 6.8% used site: and top searches skewed toward brand sites.",
-        "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://ahrefs.com/blog/query-fan-out-chatgpt/"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-18T18:28:11.776184+00:00",
         "score": 7,
         "source": "rss",
@@ -1092,12 +993,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://arc.net/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "A fork of llama.cpp that steers any of 131 supported architectures away from refusals at inference time by reading comply/refuse directions from the prompt itself, leaving weights untouched. Reports refusal on Qwen3-8B dropping from 96.3% to 7.9% on held-out harmful prompts and 82% to 0% on JailbreakBench, with no training or extra files.",
+        "title": "heterodoxin/AbliteratedOutTheBox",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/heterodoxin/AbliteratedOutTheBox"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Alter (YC S25) is a privileged access management layer for AI agents: per-agent identities and scoped grants, a vault that injects credentials per request, default-deny and human-approval policy, and a tamper-evident audit trail. One SDK call handles storage, refresh, policy and audit across 140 providers, with LangChain, MCP and AWS integrations.",
+        "title": "Launch HN: Alter (YC S25) – Access control for multi-user agents",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://alterauth.com/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 6,
+        "source": "hn",
+        "summary": "A video titled “RuneScape Bench: MMOs for Agents,” with a related link to the LostCityRS Server repository.",
+        "title": "RuneScape Bench: MMOs for Agents [video]",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 6,
+        "source": "github",
+        "summary": "bili-cli (PyPI package bili-agent) is a CLI giving AI agents 80+ commands and 17 MCP tools to run a Bilibili account as a creator: replying to comments and DMs, watching videos with transcripts and frame overviews, and posting videos and dynamics. It auto-installs its skills into 18 agents and ships default safety guardrails.",
+        "title": "kukemc/bili-cli",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/kukemc/bili-cli"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "blaze is a Rust build engine that runs alongside Cargo and recompiles only changed functions into an already-built program, claiming 10–24× faster edit rebuilds on real projects; opt-in programs can take new code while running.",
+        "title": "indexable-inc/blaze",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/indexable-inc/blaze"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "HatchZip is a free open-source archive extractor with desktop and CLI apps that extracts ZIP, 7z, RAR, tar and split archives in place, consuming the archive as it goes so only output space is needed; it checks fit, keeps a margin, and resumes after interruption.",
+        "title": "xevrion/hatchzip",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/xevrion/hatchzip"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "A first-person history of rqlite and the distributed-SQLite category from 2014 onward, arguing rqlite was the first open-source system to combine Raft and SQLite and tracing its design choices and later projects.",
+        "title": "Twelve years of distributed SQLite",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "An Agent Skills kit for converting WordPress sites to static Astro with a coding agent, preserving URLs, content, SEO metadata, media paths, redirects and responsive design via exact Node scripts and gates, ending in a pull request and staging deploy.",
+        "title": "ethanplusai/astro-conversion-kit",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://github.com/ethanplusai/astro-conversion-kit"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T08:57:53.493589+00:00",
+        "score": 6,
+        "source": "github",
+        "summary": "A skill that teaches coding agents senior product-designer taste for analytics, revenue and metrics dashboards on web or SwiftUI, covering KPI tiles, charts, filters, empty states and layouts, with screenshot QA; distilled from 127 shipped screens and a real redesign.",
+        "title": "abdiraimov-otabek/dashboard-design-skill",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://github.com/abdiraimov-otabek/dashboard-design-skill"
       }
     ]
   },
   "run": {
-    "at": "2026-10-25T03:21:21.045532+00:00",
-    "id": "2026-10-25T0321Z",
+    "at": "2026-10-25T08:57:53.493589+00:00",
+    "id": "2026-10-25T0857Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,8 +1108,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 86,
-          "out": 86
+          "in": 90,
+          "out": 90
         },
         "tooling": {
           "drops": {},
@@ -1129,8 +1129,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 86,
-          "out": 86
+          "in": 90,
+          "out": 90
         },
         "tooling": {
           "drops": {},
@@ -1152,24 +1152,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 5,
-            "seen": 27
+            "dismissed": 7,
+            "seen": 25
           },
-          "in": 86,
-          "out": 54
+          "in": 90,
+          "out": 58
         },
         "tooling": {
           "drops": {
-            "dismissed": 4,
-            "seen": 21
+            "dismissed": 7,
+            "seen": 18
           },
           "in": 95,
           "out": 70
         },
         "web-products": {
           "drops": {
-            "dismissed": 4,
-            "seen": 19
+            "dismissed": 6,
+            "seen": 17
           },
           "in": 56,
           "out": 33
@@ -1184,22 +1184,22 @@
           "drops": {
             "already_ranked": 49
           },
-          "in": 54,
-          "out": 5
+          "in": 58,
+          "out": 9
         },
         "tooling": {
           "drops": {
-            "already_ranked": 56
+            "already_ranked": 54
           },
           "in": 70,
-          "out": 14
+          "out": 16
         },
         "web-products": {
           "drops": {
-            "already_ranked": 23
+            "already_ranked": 22
           },
           "in": 33,
-          "out": 10
+          "out": 11
         }
       },
       "stage": "cache"
@@ -1209,18 +1209,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1229,20 +1229,24 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
-          "in": 5,
-          "out": 5
+          "drops": {
+            "below_relevance": 3
+          },
+          "in": 9,
+          "out": 6
         },
         "tooling": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 2
           },
-          "in": 14,
-          "out": 13
+          "in": 16,
+          "out": 14
         },
         "web-products": {
-          "drops": {},
-          "in": 10,
+          "drops": {
+            "below_relevance": 1
+          },
+          "in": 11,
           "out": 10
         }
       },
@@ -1253,24 +1257,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 5
+            "over_max_items": 2
           },
-          "in": 5,
-          "out": 0
+          "in": 6,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 11
           },
-          "in": 13,
-          "out": 0
+          "in": 14,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 8
           },
           "in": 10,
-          "out": 0
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1280,18 +1284,28 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "kept_rank_summary": 1,
+            "summarized": 3
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "summarized": 2
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1301,17 +1315,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
+          "in": 4,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
+          "in": 3,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 2,
           "out": 21
         }
       },
@@ -1321,19 +1335,34 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "notes": {
+            "asked": 4
+          },
+          "out": 24
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 3
+          },
+          "out": 18
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 2
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 2
+          },
+          "out": 19
         }
       },
       "stage": "review"

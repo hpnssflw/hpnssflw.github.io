@@ -1,96 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "Tracely-ai is trace-native CI/CD for AI agents: it grades production traces, clusters failures into issues, freezes bad runs into hermetic replayable regression cases and blocks the PR that would reship them. Tests come from real failing traces instead of hand-authored datasets.",
-      "title": "jwuthri-cloud/Tracely-ai",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/jwuthri-cloud/Tracely-ai"
-    },
-    {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "Hugging Face model page for deepseek-ai/DeepSeek-V4.1-Flash-1017, with setup snippets for Transformers, vLLM, SGLang and Docker serving. Only usage instructions are given; no capability details are stated.",
-      "title": "DeepSeek-v4.1-Flash-1017",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
-    },
-    {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "OpenRouter listing for DeepSeek V4.1 Flash 1017, the Oct 17 2026 snapshot. It is described as a sparse MoE on DeepSeek's new Causal Encoder-Decoder architecture, activating 8B input/16B output from a 552B backbone, with native image understanding and compressed KV caching.",
-      "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017"
-    },
-    {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "rsi_eval is a lightweight Python SDK and CLI for evaluating recursive self-improvement methods across agent benchmarks: you keep your own improvement loop and call evaluate(), reusing pinned tasks, graders and a common result format across 24 bundled configurations.",
-      "title": "Danielxu0208/rsi_eval",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/Danielxu0208/rsi_eval"
-    },
-    {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "ESP32sim is an MIT browser-based ESP32 firmware emulator that instruction-level emulates four ESP32 SoCs and boots the real mask ROM, bootloader, and unmodified application images via WebAssembly, with board support, GPIO/UART/timers, and virtual networking.",
-      "title": "Show HN: Esp32sim \u2013 Run ESP32 firmware in the browser",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/mikroverk/esp32sim"
-    },
-    {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "Sphinx is a free FOSS Git hook for agent-assisted development that pauses protected pushes and quizzes the developer on what the AI-written diff does when things go wrong, continuing only after a correct answer.",
-      "title": "Show HN: Sphinx \u2013 A hook that quizzes you on your AI's code before shipping",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://sphinx-six-theta.vercel.app/"
-    },
-    {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "tsc-ts is an experimental TypeScript port of the TypeScript 7.0.2 compiler (tsgo), written in idiomatic TypeScript and compiled to native executables with scriptc; it ships npm packages and compares scanner/parser/binder output against tsgo.",
-      "title": "Tsc-ts: TypeScript written in TypeScript",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/vercel-labs/tsc-ts"
-    },
-    {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "An article explaining the removal of XSLT support in Chrome and Edge, and what will break versus what won't.",
-      "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://doctor-seo.net/en/blog/news/chrome-edge-removing-xslt/"
-    },
-    {
-      "pending_since": "2026-10-18T08:34:06.870675+00:00",
-      "score": 7,
-      "source": "rss",
-      "summary": "Ahrefs analysis of 66.6M free ChatGPT responses and 15M fan-out queries finds only 14.4% triggered web search, averaging about 1.6 queries when they did; 6.8% used site: and top searches skewed toward brand sites.",
-      "title": "How ChatGPT Does Query Fan-Out (15 Million Queries Studied)",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://ahrefs.com/blog/query-fan-out-chatgpt/"
-    },
-    {
       "pending_since": "2026-10-18T18:28:11.776184+00:00",
       "score": 7,
       "source": "rss",
@@ -699,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://arc.net/"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "A fork of llama.cpp that steers any of 131 supported architectures away from refusals at inference time by reading comply/refuse directions from the prompt itself, leaving weights untouched. Reports refusal on Qwen3-8B dropping from 96.3% to 7.9% on held-out harmful prompts and 82% to 0% on JailbreakBench, with no training or extra files.",
+      "title": "heterodoxin/AbliteratedOutTheBox",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/heterodoxin/AbliteratedOutTheBox"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "Alter (YC S25) is a privileged access management layer for AI agents: per-agent identities and scoped grants, a vault that injects credentials per request, default-deny and human-approval policy, and a tamper-evident audit trail. One SDK call handles storage, refresh, policy and audit across 140 providers, with LangChain, MCP and AWS integrations.",
+      "title": "Launch HN: Alter (YC S25) \u2013 Access control for multi-user agents",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://alterauth.com/"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "A video titled \u201cRuneScape Bench: MMOs for Agents,\u201d with a related link to the LostCityRS Server repository.",
+      "title": "RuneScape Bench: MMOs for Agents [video]",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "bili-cli (PyPI package bili-agent) is a CLI giving AI agents 80+ commands and 17 MCP tools to run a Bilibili account as a creator: replying to comments and DMs, watching videos with transcripts and frame overviews, and posting videos and dynamics. It auto-installs its skills into 18 agents and ships default safety guardrails.",
+      "title": "kukemc/bili-cli",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/kukemc/bili-cli"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "blaze is a Rust build engine that runs alongside Cargo and recompiles only changed functions into an already-built program, claiming 10\u201324\u00d7 faster edit rebuilds on real projects; opt-in programs can take new code while running.",
+      "title": "indexable-inc/blaze",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/indexable-inc/blaze"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "HatchZip is a free open-source archive extractor with desktop and CLI apps that extracts ZIP, 7z, RAR, tar and split archives in place, consuming the archive as it goes so only output space is needed; it checks fit, keeps a margin, and resumes after interruption.",
+      "title": "xevrion/hatchzip",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/xevrion/hatchzip"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A first-person history of rqlite and the distributed-SQLite category from 2014 onward, arguing rqlite was the first open-source system to combine Raft and SQLite and tracing its design choices and later projects.",
+      "title": "Twelve years of distributed SQLite",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "An Agent Skills kit for converting WordPress sites to static Astro with a coding agent, preserving URLs, content, SEO metadata, media paths, redirects and responsive design via exact Node scripts and gates, ending in a pull request and staging deploy.",
+      "title": "ethanplusai/astro-conversion-kit",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.com/ethanplusai/astro-conversion-kit"
+    },
+    {
+      "pending_since": "2026-10-25T08:57:53.493589+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "A skill that teaches coding agents senior product-designer taste for analytics, revenue and metrics dashboards on web or SwiftUI, covering KPI tiles, charts, filters, empty states and layouts, with screenshot QA; distilled from 127 shipped screens and a real redesign.",
+      "title": "abdiraimov-otabek/dashboard-design-skill",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.com/abdiraimov-otabek/dashboard-design-skill"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"
