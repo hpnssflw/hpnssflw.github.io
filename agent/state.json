@@ -257,7 +257,7 @@
   "0336c2290ec14333": {
     "dismissed": null,
     "first_seen": "2026-10-21T23:02:00.520245+00:00",
-    "last_score": 565,
+    "last_score": 566,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -539,7 +539,7 @@
   "0673400c8d8a50c1": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 114,
+    "last_score": 116,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -661,7 +661,7 @@
   "0833f4edefaddf5e": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 169,
+    "last_score": 225,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -989,7 +989,7 @@
   "0c52706d1cc52b2e": {
     "dismissed": null,
     "first_seen": "2026-10-24T03:25:47.470221+00:00",
-    "last_score": 131,
+    "last_score": 134,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1537,7 +1537,7 @@
   "13f4a873d9cc47db": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 199,
+    "last_score": 211,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1626,7 +1626,7 @@
   "153b7aa18d6a1f9a": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 55,
+    "last_score": 56,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2004,7 +2004,7 @@
   "1b56c634ba1577d7": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
-    "last_score": 119,
+    "last_score": 118,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2088,7 +2088,7 @@
   "1c97403183adfd3e": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 139,
+    "last_score": 131,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2200,6 +2200,22 @@
     },
     "times_sent": 0
   },
+  "1eb501005d155f41": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 100,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 100,
+        "summary": "An accessibility-focused McDonald's MCP ordering prototype where students express choices with pictures and parents verify."
+      }
+    },
+    "times_sent": 0
+  },
   "1ef1b38c39d01608": {
     "dismissed": null,
     "first_seen": "2026-10-03T19:00:43.940612+00:00",
@@ -2219,7 +2235,7 @@
   "1f1f087b2b664b27": {
     "dismissed": null,
     "first_seen": "2026-10-19T09:37:11.229871+00:00",
-    "last_score": 138,
+    "last_score": 141,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -2235,7 +2251,7 @@
   "1f21a11f54e05b7b": {
     "dismissed": null,
     "first_seen": "2026-10-24T22:15:11.175692+00:00",
-    "last_score": 471,
+    "last_score": 547,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2629,7 +2645,7 @@
   "27b6db28aa1dfb50": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 80,
+    "last_score": 81,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3120,6 +3136,30 @@
     "last_score": 84,
     "ranks": {},
     "times_sent": 1
+  },
+  "2ee6ebbf1abb5555": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 56,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 56,
+        "summary": "A Reddit post discusses an open-source community banning solo projects and projects that use LLMs."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 56,
+        "summary": "A Reddit post discusses an open-source community banning solo projects and projects using LLMs."
+      }
+    },
+    "times_sent": 0
   },
   "2eef62a07fd9a3a6": {
     "dismissed": null,
@@ -3676,7 +3716,7 @@
   "3513b9999983f116": {
     "dismissed": null,
     "first_seen": "2026-10-24T03:25:47.470221+00:00",
-    "last_score": 182,
+    "last_score": 184,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3832,7 +3872,7 @@
   "3694f21f83138702": {
     "dismissed": null,
     "first_seen": "2026-10-21T16:40:24.239815+00:00",
-    "last_score": 374,
+    "last_score": 376,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4187,7 +4227,7 @@
   "3ab9b1ef391db233": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
-    "last_score": 188,
+    "last_score": 191,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4449,7 +4489,7 @@
   "3e224bc9c6687669": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 203,
+    "last_score": 209,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4629,7 +4669,7 @@
   "402510afde2d9adf": {
     "dismissed": null,
     "first_seen": "2026-10-24T22:15:11.175692+00:00",
-    "last_score": 67,
+    "last_score": 73,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5249,7 +5289,7 @@
   "49596df11068049b": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 139,
+    "last_score": 145,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5660,7 +5700,7 @@
   "4fb051deb6783029": {
     "dismissed": null,
     "first_seen": "2026-10-24T03:25:47.470221+00:00",
-    "last_score": 62,
+    "last_score": 63,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5976,7 +6016,7 @@
   "53ee9eaa31547f0e": {
     "dismissed": null,
     "first_seen": "2026-10-23T03:31:14.836900+00:00",
-    "last_score": 138,
+    "last_score": 140,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5999,7 +6039,7 @@
   "548bfc13ddee88c1": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 219,
+    "last_score": 286,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-23T09:07:24.966414+00:00",
@@ -6614,7 +6654,7 @@
   "5c25b4db80090e92": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 207,
+    "last_score": 206,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6782,7 +6822,7 @@
   "5e721ff09243763a": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 134,
+    "last_score": 143,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -6890,7 +6930,7 @@
   "5fe8f12a458ea578": {
     "dismissed": null,
     "first_seen": "2026-10-21T23:02:00.520245+00:00",
-    "last_score": 389,
+    "last_score": 390,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6920,7 +6960,7 @@
   "60b327d6ad835cd9": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 483,
+    "last_score": 488,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6952,7 +6992,7 @@
   "615fb34e1bcf981e": {
     "dismissed": null,
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
-    "last_score": 62,
+    "last_score": 63,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7228,7 +7268,7 @@
   "652d23f0d9ebc15c": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 107,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -7546,7 +7586,7 @@
   "69450150efd0cc61": {
     "dismissed": null,
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
-    "last_score": 80,
+    "last_score": 81,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-20T09:09:08.857228+00:00",
@@ -7670,7 +7710,7 @@
   "6a45251399c8de3b": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 267,
+    "last_score": 280,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7852,7 +7892,7 @@
   "6c6bee7f14c39272": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 372,
+    "last_score": 377,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -8077,7 +8117,7 @@
   "6eb73169f84ce43f": {
     "dismissed": null,
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
-    "last_score": 499,
+    "last_score": 500,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-23T09:07:24.966414+00:00",
@@ -8549,7 +8589,7 @@
   "7502ffe393ce17ad": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 229,
+    "last_score": 231,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8680,7 +8720,7 @@
   "765a9894d2fa75a2": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 392,
+    "last_score": 397,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-22T09:10:34.677769+00:00",
@@ -8751,7 +8791,7 @@
   "770d945c177c2730": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 307,
+    "last_score": 362,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -8760,6 +8800,22 @@
         "rubric": "02189e2467e9",
         "source_score": 307,
         "summary": "Blaze is an incremental Rust build tool that claims builds up to 92x faster than cargo/rustc."
+      }
+    },
+    "times_sent": 0
+  },
+  "77c2ca05ccdeef34": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 31,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 31,
+        "summary": "A Show HN project places employees inside S&P 500 market-cap bubbles."
       }
     },
     "times_sent": 0
@@ -9130,7 +9186,7 @@
   "7e3724462be60248": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 108,
+    "last_score": 123,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9226,6 +9282,22 @@
     "first_seen": "2026-08-26T12:25:48.416967+00:00",
     "last_score": 35,
     "ranks": {},
+    "times_sent": 0
+  },
+  "7f3a1e240b93e0e6": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 110,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 110,
+        "summary": "A McDonald's MCP-based personality-test project that issues a diagnosis certificate and prescription after 12 questions."
+      }
+    },
     "times_sent": 0
   },
   "7f5f98ab289d1df9": {
@@ -9381,7 +9453,7 @@
   "80ab8ecc8f188894": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 112,
+    "last_score": 130,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -9799,6 +9871,22 @@
     },
     "times_sent": 0
   },
+  "88e18c2935819a0d": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 107,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 107,
+        "summary": "An autonomous desktop intelligence project with an MCU Ultron persona, workspace orchestration, security sentry, and full PC control."
+      }
+    },
+    "times_sent": 0
+  },
   "893d0d33ad1406e4": {
     "dismissed": null,
     "first_seen": "2026-10-10T04:29:22.971524+00:00",
@@ -9825,7 +9913,7 @@
   "89aae3fb35c1bbe2": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 64,
+    "last_score": 70,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -10235,7 +10323,7 @@
   "8fd782ed6a25d885": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 78,
+    "last_score": 93,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10396,6 +10484,22 @@
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 1192,
     "ranks": {},
+    "times_sent": 0
+  },
+  "919cef5f2a70dbc9": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 105,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 5,
+        "rubric": "3472af8a46e1",
+        "source_score": 105,
+        "summary": "A McDonald's MCP nutrition and ordering expert that integrates official MCP tools and REST APIs for meal selection."
+      }
+    },
     "times_sent": 0
   },
   "919f775b86fd2ee8": {
@@ -10842,6 +10946,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "9738c85c5733ec46": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 59,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 34,
+        "summary": "Farol is a Show HN tool that creates a risk map of a pull request for the person approving it."
+      }
+    },
+    "times_sent": 0
+  },
   "97989139d209c0ba": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
@@ -11101,7 +11221,7 @@
   "99d537d830d481c4": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 257,
+    "last_score": 274,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-22T09:10:34.677769+00:00",
@@ -11229,6 +11349,22 @@
     "first_seen": "2026-10-01T04:20:51.005866+00:00",
     "last_score": 122,
     "ranks": {},
+    "times_sent": 0
+  },
+  "9b8eeff88e227ff9": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 128,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 128,
+        "summary": "A McDonald's MCP-based meal-planning skill that uses real-time menu and nutrition data, with React and meal-planner topics."
+      }
+    },
     "times_sent": 0
   },
   "9bce984ffc5c19d3": {
@@ -11381,7 +11517,7 @@
   "9de5a8b293158c1b": {
     "dismissed": null,
     "first_seen": "2026-10-22T03:26:12.400451+00:00",
-    "last_score": 199,
+    "last_score": 219,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -11735,7 +11871,7 @@
   "a28d8c43766abec8": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 977,
+    "last_score": 983,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-21T09:08:25.960201+00:00",
@@ -11938,7 +12074,7 @@
   "a50a68be733da006": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 1807,
+    "last_score": 1889,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -12009,7 +12145,7 @@
   "a5dd39b1abc89416": {
     "dismissed": null,
     "first_seen": "2026-10-21T23:02:00.520245+00:00",
-    "last_score": 160,
+    "last_score": 161,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12218,7 +12354,7 @@
   "a7e710fc6c8e9540": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 350,
+    "last_score": 371,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12305,6 +12441,22 @@
     "first_seen": "2026-08-22T16:10:36.164469+00:00",
     "last_score": 120,
     "ranks": {},
+    "times_sent": 0
+  },
+  "a939b544ca8a23bf": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 122,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 122,
+        "summary": "A McDonald's official MCP-driven pixel-art slot machine with a nutrition ledger and order optimization."
+      }
+    },
     "times_sent": 0
   },
   "a949e89b4b36cefd": {
@@ -13085,7 +13237,7 @@
   "b1cb12e60c8c4ff7": {
     "dismissed": null,
     "first_seen": "2026-10-21T16:40:24.239815+00:00",
-    "last_score": 103,
+    "last_score": 104,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13540,7 +13692,7 @@
   "b868c0a4c342680f": {
     "dismissed": null,
     "first_seen": "2026-10-17T08:16:47.855119+00:00",
-    "last_score": 1207,
+    "last_score": 1220,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13934,7 +14086,7 @@
   "bd7f381ecc335c78": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 66,
+    "last_score": 70,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14074,7 +14226,7 @@
   "bf38551c221deb6f": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 77,
+    "last_score": 85,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14210,7 +14362,7 @@
   "c1192c0df46c055b": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 61,
+    "last_score": 64,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14454,6 +14606,22 @@
     },
     "times_sent": 0
   },
+  "c47bdd592bf785b2": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 50,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 50,
+        "summary": "Contextcraft is an AST-aware, Personalized-PageRank-ranked, token-budgeted codebase compressor for LLMs, tagged for coding agents and developer tools."
+      }
+    },
+    "times_sent": 0
+  },
   "c4a0bb14aa5005b6": {
     "dismissed": null,
     "first_seen": "2026-09-23T08:53:43.403564+00:00",
@@ -14625,7 +14793,7 @@
   "c6a547529f2675f2": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 112,
+    "last_score": 130,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14741,7 +14909,7 @@
   "c852cf262baca51d": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 286,
+    "last_score": 298,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14846,10 +15014,26 @@
     "ranks": {},
     "times_sent": 0
   },
+  "c98c8e60298cbfeb": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 115,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 115,
+        "summary": "A McDonald's MCP project for building meal combos and designing 3D burgers with publishing and voting."
+      }
+    },
+    "times_sent": 0
+  },
   "c9bb5685ce3d1c93": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 183,
+    "last_score": 185,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15101,7 +15285,7 @@
   "cd0668a7e57b3181": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 125,
+    "last_score": 133,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15124,7 +15308,7 @@
   "cd588696c906353c": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 101,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15154,7 +15338,7 @@
   "cd7638416c981a46": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
-    "last_score": 158,
+    "last_score": 161,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -15249,7 +15433,7 @@
   "cdf86179f9a2ec80": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 74,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15297,7 +15481,7 @@
   "ce7705b5a8806fc4": {
     "dismissed": null,
     "first_seen": "2026-10-22T09:10:34.677769+00:00",
-    "last_score": 641,
+    "last_score": 645,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15992,7 +16176,7 @@
   "d9879929c8083b6a": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 164,
+    "last_score": 171,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16808,7 +16992,7 @@
   "e31b704014b392fd": {
     "dismissed": null,
     "first_seen": "2026-10-23T03:31:14.836900+00:00",
-    "last_score": 74,
+    "last_score": 75,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17010,8 +17194,16 @@
   "e6de8a9f7e83cc64": {
     "dismissed": null,
     "first_seen": "2026-10-24T18:35:49.184654+00:00",
-    "last_score": 80,
+    "last_score": 118,
     "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 118,
+        "summary": "A conversational AI skill built on McDonald's official MCP for meal recommendations, price comparison, coupons, nutrition calculation, and voxel-style share images."
+      },
       "web-products": {
         "queued_at": null,
         "ranked_at": "2026-10-24T18:35:49.184654+00:00",
@@ -17282,7 +17474,7 @@
   "eaeb4841c281d36f": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 107,
+    "last_score": 108,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17430,7 +17622,7 @@
   "ecf15ae39e41e40c": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 131,
+    "last_score": 132,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-23T22:54:40.182785+00:00",
@@ -17924,6 +18116,30 @@
     "ranks": {},
     "times_sent": 0
   },
+  "f3cc35f9475b86c1": {
+    "dismissed": null,
+    "first_seen": "2026-10-25T15:36:22.052233+00:00",
+    "last_score": 30,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 30,
+        "summary": "A Show HN post presents a Markdown and raw HTML blog platform that scores 99 on PageSpeed."
+      },
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-25T15:36:22.052233+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": 30,
+        "summary": "A Show HN post about a Markdown and raw HTML blogging platform built over two years that reportedly scores 99 on PageSpeed."
+      }
+    },
+    "times_sent": 0
+  },
   "f3d759ed6d8c8025": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -17957,7 +18173,7 @@
   "f5220dab8f55b741": {
     "dismissed": null,
     "first_seen": "2026-10-21T23:02:00.520245+00:00",
-    "last_score": 92,
+    "last_score": 93,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18047,7 +18263,7 @@
   "f6a301346a05e615": {
     "dismissed": null,
     "first_seen": "2026-10-23T03:31:14.836900+00:00",
-    "last_score": 457,
+    "last_score": 458,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18185,7 +18401,7 @@
   "f933f1f1a760390e": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 937,
+    "last_score": 938,
     "ranks": {
       "tooling": {
         "queued_at": null,

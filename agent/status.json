@@ -4,15 +4,12 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 49,
+        "already_ranked": 51,
         "dismissed": 7,
-        "seen": 25
-      },
-      "inbox": {
-        "expired": 4
+        "seen": 29
       },
       "rank": {
-        "below_relevance": 3,
+        "below_relevance": 8,
         "over_max_items": 2
       }
     },
@@ -20,14 +17,11 @@
       "dedupe": {
         "already_ranked": 54,
         "dismissed": 7,
-        "seen": 18
-      },
-      "inbox": {
-        "expired": 3
+        "seen": 22
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 11
+        "below_relevance": 3,
+        "over_max_items": 13
       }
     },
     "web-products": {
@@ -35,156 +29,146 @@
         "outside_window": 129
       },
       "dedupe": {
-        "already_ranked": 22,
+        "already_ranked": 23,
         "dismissed": 6,
-        "seen": 17
-      },
-      "inbox": {
-        "expired": 2
+        "seen": 19
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 8
+        "over_max_items": 9
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 90,
-      "in_window": 90,
-      "kept": 4,
-      "new": 9
+      "collected": 97,
+      "in_window": 97,
+      "kept": 0,
+      "new": 10
     },
     "tooling": {
-      "collected": 95,
-      "in_window": 95,
-      "kept": 3,
+      "collected": 99,
+      "in_window": 99,
+      "kept": 0,
       "new": 16
     },
     "web-products": {
-      "collected": 185,
-      "in_window": 56,
-      "kept": 2,
-      "new": 11
+      "collected": 186,
+      "in_window": 57,
+      "kept": 0,
+      "new": 9
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 6,
-      "source": "github",
-      "title": "abdiraimov-otabek/dashboard-design-skill",
-      "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882899+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 7,
-      "source": "github",
-      "title": "ethanplusai/astro-conversion-kit",
-      "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882886+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882867+00:00",
+      "ts": "2026-10-25T15:37:20.188147+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882856+00:00",
+      "ts": "2026-10-25T15:37:20.188141+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882839+00:00",
+      "ts": "2026-10-25T15:37:20.188134+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Warming Stripes as a screensaver",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882824+00:00",
+      "ts": "2026-10-25T15:37:20.188128+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882812+00:00",
+      "ts": "2026-10-25T15:37:20.188122+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882796+00:00",
+      "ts": "2026-10-25T15:37:20.188115+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Unlocking AI in Your Apps with TanStack AI",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882764+00:00",
+      "ts": "2026-10-25T15:37:20.188090+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Google's servers can scan what you copy in Chrome for unsafe content",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:09.882698+00:00",
+      "ts": "2026-10-25T15:37:20.188079+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "ayingQAQ/McCosmos",
+      "reason": "over_max_items",
+      "title": "Show HN: I built a Markdown and raw HTML blog platform scoring 99 on PageSpeed",
       "topic": "web-products",
-      "ts": "2026-10-25T08:59:05.398278+00:00",
+      "ts": "2026-10-25T15:37:20.188020+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Calculation volumes for AI training",
       "topic": "web-products",
-      "ts": "2026-10-25T08:58:56.603859+00:00",
+      "ts": "2026-10-25T15:37:17.978907+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cost of electricity from investor-owned vs. public",
       "topic": "web-products",
-      "ts": "2026-10-25T08:58:56.603848+00:00",
+      "ts": "2026-10-25T15:37:17.978901+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "\u271a Avoiding charts by default",
       "topic": "web-products",
-      "ts": "2026-10-25T08:58:56.603838+00:00",
+      "ts": "2026-10-25T15:37:17.978895+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "When AI comes for purpose",
       "topic": "web-products",
-      "ts": "2026-10-25T08:58:56.603827+00:00",
+      "ts": "2026-10-25T15:37:17.978890+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "What happens to math going forward",
+      "topic": "web-products",
+      "ts": "2026-10-25T15:37:17.978884+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Primer for geospatial embeddings",
+      "topic": "web-products",
+      "ts": "2026-10-25T15:37:17.978878+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-19T23:19:39.204837+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-20T03:33:36.677497+00:00"
@@ -276,28 +260,32 @@
     {
       "kept": 9,
       "ts": "2026-10-25T08:57:53.493589+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-25T15:36:22.052233+00:00"
     }
   ],
-  "streak": 321,
+  "streak": 322,
   "topics": [
     {
-      "collected": 90,
-      "kept": 4,
+      "collected": 97,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 95,
-      "kept": 3,
+      "collected": 99,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 185,
-      "kept": 2,
+      "collected": 186,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-25T08:57:53.493589+00:00"
+  "updated_at": "2026-10-25T15:36:22.052233+00:00"
 }
