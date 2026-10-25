@@ -319,9 +319,9 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 20
+      "web-products": 21
     },
-    "count": 69,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -1081,12 +1081,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://github.com/abdiraimov-otabek/dashboard-design-skill"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-25T22:18:41.702774+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Bloffy is a privacy-first blogging platform for Markdown and raw HTML that adds only a 3.2KB script, offers split-view editing, custom domains, CSS themes, multilingual posts, IndexNow, and team members; its Show HN claim is a 99 PageSpeed score and near-100 PSI targets.",
+        "title": "Show HN: I built a Markdown and raw HTML blog platform scoring 99 on PageSpeed",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://bloffy.co/en"
       }
     ]
   },
   "run": {
-    "at": "2026-10-25T18:44:23.385972+00:00",
-    "id": "2026-10-25T1844Z",
+    "at": "2026-10-25T22:18:41.702774+00:00",
+    "id": "2026-10-25T2218Z",
     "mode": "real",
     "offline": false
   },
@@ -1097,13 +1108,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 100,
+          "out": 100
         },
         "web-products": {
           "drops": {},
@@ -1118,13 +1129,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 100,
+          "out": 100
         },
         "web-products": {
           "drops": {
@@ -1144,16 +1155,16 @@
             "dismissed": 6,
             "seen": 29
           },
-          "in": 99,
-          "out": 64
+          "in": 101,
+          "out": 66
         },
         "tooling": {
           "drops": {
             "dismissed": 6,
             "seen": 21
           },
-          "in": 96,
-          "out": 69
+          "in": 100,
+          "out": 73
         },
         "web-products": {
           "drops": {
@@ -1173,15 +1184,15 @@
           "drops": {
             "already_ranked": 59
           },
-          "in": 64,
-          "out": 5
+          "in": 66,
+          "out": 7
         },
         "tooling": {
           "drops": {
-            "already_ranked": 54
+            "already_ranked": 56
           },
-          "in": 69,
-          "out": 15
+          "in": 73,
+          "out": 17
         },
         "web-products": {
           "drops": {
@@ -1198,13 +1209,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 5,
+          "out": 5
         },
         "tooling": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
@@ -1219,16 +1230,16 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 4
           },
-          "in": 5,
-          "out": 2
+          "in": 7,
+          "out": 3
         },
         "tooling": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 4
           },
-          "in": 15,
+          "in": 17,
           "out": 13
         },
         "web-products": {
@@ -1244,9 +1255,9 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 2
+            "over_max_items": 3
           },
-          "in": 2,
+          "in": 3,
           "out": 0
         },
         "tooling": {
@@ -1258,10 +1269,10 @@
         },
         "web-products": {
           "drops": {
-            "over_max_items": 9
+            "over_max_items": 8
           },
           "in": 9,
-          "out": 0
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1281,8 +1292,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1302,8 +1316,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 20
+          "in": 1,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1322,10 +1336,11 @@
           "out": 21
         },
         "web-products": {
-          "drops": {
-            "expired": 1
+          "drops": {},
+          "in": 20,
+          "notes": {
+            "asked": 1
           },
-          "in": 21,
           "out": 20
         }
       },
