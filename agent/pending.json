@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-19T18:22:46.005442+00:00",
-      "score": 8,
-      "source": "rss",
-      "summary": "A WebKit post explaining identity resolution, a post-cookie tracking scheme that links opaque IDs to email addresses for cross-site and cross-device profiling, alongside WebKit\u2019s tracking-prevention policy and privacy protections.",
-      "title": "Blocking Identity Resolution Infrastructure",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://webkit.org/blog/18438/blocking-identity-resolution-infrastructure/"
-    },
-    {
       "pending_since": "2026-10-20T09:09:08.857228+00:00",
       "score": 10,
       "source": "hn",
@@ -699,6 +689,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://blog.master.dev/unlocking-ai-in-your-apps-with-tanstack-ai/"
+    },
+    {
+      "pending_since": "2026-10-26T23:35:19.926556+00:00",
+      "score": 9,
+      "source": "rss",
+      "summary": "WebKit's Safari 27.2 feature update refines Customizable Select with a new ::field-content pseudo-element, adjusted UA styles and safe alignment so the picker stays in view, renames a Grid Lanes property, and includes 20 bug fixes.",
+      "title": "WebKit Features for Safari 27.2",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://webkit.org/blog/18515/webkit-features-for-safari-27-2/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

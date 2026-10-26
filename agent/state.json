@@ -32,7 +32,7 @@
   "00f9a35730188d0a": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 62,
+    "last_score": 64,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -229,6 +229,22 @@
     "first_seen": "2026-08-25T00:34:19.760575+00:00",
     "last_score": 50,
     "ranks": {},
+    "times_sent": 0
+  },
+  "02941faf3e7dee38": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": 36,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 9,
+        "rubric": "3472af8a46e1",
+        "source_score": 36,
+        "summary": "A developer-site OpenAI item titled 'GPT 6.1 Terra' posted to Hacker News."
+      }
+    },
     "times_sent": 0
   },
   "02b82d367685ef5a": {
@@ -571,7 +587,7 @@
   "0673400c8d8a50c1": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 123,
+    "last_score": 124,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -959,7 +975,7 @@
   "0b851f7076b12092": {
     "dismissed": null,
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
-    "last_score": 285,
+    "last_score": 286,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-24T22:15:11.175692+00:00",
@@ -1021,7 +1037,7 @@
   "0c52706d1cc52b2e": {
     "dismissed": null,
     "first_seen": "2026-10-24T03:25:47.470221+00:00",
-    "last_score": 139,
+    "last_score": 140,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1489,7 +1505,7 @@
   "12bb42da449f6fd6": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 62,
+    "last_score": 64,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1585,7 +1601,7 @@
   "13f4a873d9cc47db": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 248,
+    "last_score": 249,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1939,6 +1955,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "18dbfa69b5819d7c": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A FlowingData post notes that per-token LLM costs from Anthropic and OpenAI decreased sharply over a few months, citing Max Woolf's timeline."
+      }
+    },
+    "times_sent": 0
+  },
   "1929017f5df96ae4": {
     "dismissed": null,
     "first_seen": "2026-10-09T14:59:29.651785+00:00",
@@ -2029,7 +2061,7 @@
   "1a7e953f36796cb0": {
     "dismissed": null,
     "first_seen": "2026-10-26T03:23:13.420938+00:00",
-    "last_score": 398,
+    "last_score": 412,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2291,7 +2323,7 @@
   "1e78eb133dbbef2d": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 120,
+    "last_score": 143,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2339,7 +2371,7 @@
   "1f1f087b2b664b27": {
     "dismissed": "expired",
     "first_seen": "2026-10-19T09:37:11.229871+00:00",
-    "last_score": 148,
+    "last_score": 149,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-19T09:37:11.229871+00:00",
@@ -2355,7 +2387,7 @@
   "1f21a11f54e05b7b": {
     "dismissed": null,
     "first_seen": "2026-10-24T22:15:11.175692+00:00",
-    "last_score": 612,
+    "last_score": 614,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2741,15 +2773,15 @@
   "27779e2e3a96ff05": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 72,
+    "last_score": 245,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-26T18:17:48.004661+00:00",
-        "relevance": 4,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 3,
         "rubric": "3472af8a46e1",
-        "source_score": 72,
-        "summary": "A Cohere post about 'concerning behavior' observed from a popular open-weight AI model."
+        "source_score": 245,
+        "summary": "A Cohere item titled 'Concerning behavior from a popular open-weight AI model' posted to Hacker News."
       }
     },
     "times_sent": 0
@@ -4040,7 +4072,7 @@
   "3694f21f83138702": {
     "dismissed": null,
     "first_seen": "2026-10-21T16:40:24.239815+00:00",
-    "last_score": 386,
+    "last_score": 387,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4219,6 +4251,22 @@
         "rubric": "02189e2467e9",
         "source_score": 50,
         "summary": "An opinionated, curated list of tools for enforcing software development standards, recommending one tool per job along with limits, tagged with git-hooks, linters, and developer-tools."
+      }
+    },
+    "times_sent": 0
+  },
+  "384d7752f4efe687": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": 100,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 100,
+        "summary": "A GitHub project describing pagesift, a high-performance memory-efficient Rust web crawler and content extraction engine for AI agents and RAG, with adaptive crawling, clean Markdown, structured data, PDF/RSS parsing, browser rendering, Firecrawl-compatible APIs, and Python/Node.js SDKs."
       }
     },
     "times_sent": 0
@@ -5466,7 +5514,7 @@
   "48cf39a28bcf54aa": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 34,
+    "last_score": 53,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5490,7 +5538,7 @@
   "49270cf8389d73cc": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 352,
+    "last_score": 376,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5513,7 +5561,7 @@
   "49596df11068049b": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 179,
+    "last_score": 184,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6256,7 +6304,7 @@
   "53ee9eaa31547f0e": {
     "dismissed": null,
     "first_seen": "2026-10-23T03:31:14.836900+00:00",
-    "last_score": 142,
+    "last_score": 143,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6276,10 +6324,26 @@
     "ranks": {},
     "times_sent": 1
   },
+  "543c1f702361e549": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": 116,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 116,
+        "summary": "A GitHub project titled 'Nietzschian Debugger' with no description in the provided excerpt."
+      }
+    },
+    "times_sent": 0
+  },
   "548bfc13ddee88c1": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 267,
+    "last_score": 293,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-23T09:07:24.966414+00:00",
@@ -6529,6 +6593,22 @@
     "last_score": 904,
     "ranks": {},
     "times_sent": 1
+  },
+  "57d51f7e57a4626e": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-26T23:35:19.926556+00:00",
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 9,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "WebKit Features for Safari 27.2 refines Customizable Select, renames a Grid Lanes property, and includes 20 bug fixes across accessibility, media, CSS, and more."
+      }
+    },
+    "times_sent": 0
   },
   "5801d504628ca24c": {
     "dismissed": null,
@@ -7216,7 +7296,7 @@
   "60b327d6ad835cd9": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
-    "last_score": 502,
+    "last_score": 503,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7248,7 +7328,7 @@
   "615fb34e1bcf981e": {
     "dismissed": null,
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
-    "last_score": 65,
+    "last_score": 69,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7524,7 +7604,7 @@
   "652d23f0d9ebc15c": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 143,
+    "last_score": 148,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -7681,7 +7761,7 @@
   "67264e063a667900": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 366,
+    "last_score": 386,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8164,7 +8244,7 @@
   "6c6bee7f14c39272": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 389,
+    "last_score": 390,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -8350,7 +8430,7 @@
   "6e4940cf2b3074e4": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 106,
+    "last_score": 107,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9008,7 +9088,7 @@
   "765a9894d2fa75a2": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 415,
+    "last_score": 417,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-22T09:10:34.677769+00:00",
@@ -9079,7 +9159,7 @@
   "770d945c177c2730": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 524,
+    "last_score": 598,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -9490,7 +9570,7 @@
   "7deb5d8cc44140e5": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 117,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9789,7 +9869,7 @@
   "80ab8ecc8f188894": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 156,
+    "last_score": 157,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -10226,7 +10306,7 @@
   "88e18c2935819a0d": {
     "dismissed": null,
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
-    "last_score": 120,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10265,7 +10345,7 @@
   "89aae3fb35c1bbe2": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 82,
+    "last_score": 84,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -10675,7 +10755,7 @@
   "8f995eb5cabec9cd": {
     "dismissed": null,
     "first_seen": "2026-10-25T18:44:23.385972+00:00",
-    "last_score": 399,
+    "last_score": 400,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10707,7 +10787,7 @@
   "8fd782ed6a25d885": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 122,
+    "last_score": 123,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11341,7 +11421,7 @@
   "9738c85c5733ec46": {
     "dismissed": null,
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
-    "last_score": 133,
+    "last_score": 136,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-26T09:44:58.304763+00:00",
@@ -11613,7 +11693,7 @@
   "99d537d830d481c4": {
     "dismissed": null,
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
-    "last_score": 325,
+    "last_score": 328,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-22T09:10:34.677769+00:00",
@@ -12287,7 +12367,7 @@
   "a28d8c43766abec8": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 1005,
+    "last_score": 1007,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-21T09:08:25.960201+00:00",
@@ -12490,7 +12570,7 @@
   "a50a68be733da006": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 2032,
+    "last_score": 2055,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -13752,6 +13832,22 @@
     },
     "times_sent": 0
   },
+  "b32fb058c2255182": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": 462,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 10,
+        "rubric": "3472af8a46e1",
+        "source_score": 462,
+        "summary": "An OpenAI item titled 'GPT-6.1 Terra' posted to Hacker News."
+      }
+    },
+    "times_sent": 0
+  },
   "b34ca6dfe4254569": {
     "dismissed": null,
     "first_seen": "2026-08-28T03:53:55.150344+00:00",
@@ -14100,7 +14196,7 @@
   "b83204b7e9c12d9e": {
     "dismissed": null,
     "first_seen": "2026-10-25T18:44:23.385972+00:00",
-    "last_score": 646,
+    "last_score": 651,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14340,7 +14436,7 @@
   "bad592b35845315e": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 104,
+    "last_score": 136,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14543,6 +14639,22 @@
         "rubric": "02189e2467e9",
         "source_score": 113,
         "summary": "A TUI for browsing Hacker News, built with opentui and effect as a learning experiment."
+      }
+    },
+    "times_sent": 0
+  },
+  "bd66ab1a28180e43": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": 36,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 36,
+        "summary": "An unofficial web edition port of the Mac game Glider 4.0."
       }
     },
     "times_sent": 0
@@ -15810,6 +15922,22 @@
     },
     "times_sent": 0
   },
+  "cd289ebd6dc580cd": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": 100,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 100,
+        "summary": "A GitHub project describing kinetograph as a blazingly fast programmatic video engine made for agents, tagged with agents, AI agents, ffmpeg, GPU, and MCP."
+      }
+    },
+    "times_sent": 0
+  },
   "cd4a7ca8b86a6bf2": {
     "dismissed": null,
     "first_seen": "2026-09-26T02:20:44.097646+00:00",
@@ -15921,7 +16049,7 @@
   "cdf18f1ab6e7993f": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 257,
+    "last_score": 272,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -16009,7 +16137,7 @@
   "ce7705b5a8806fc4": {
     "dismissed": null,
     "first_seen": "2026-10-22T09:10:34.677769+00:00",
-    "last_score": 651,
+    "last_score": 652,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -16704,7 +16832,7 @@
   "d9879929c8083b6a": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 187,
+    "last_score": 189,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16764,15 +16892,15 @@
   "da89bc3e4c08aab8": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 173,
+    "last_score": 356,
     "ranks": {
       "web-products": {
         "queued_at": null,
-        "ranked_at": "2026-10-26T18:17:48.004661+00:00",
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
         "relevance": 4,
         "rubric": "080b24af813c",
-        "source_score": 173,
-        "summary": "The title reports that CSS-Tricks, a site about CSS and frontend development, has a new owner."
+        "source_score": 356,
+        "summary": "CSS-Tricks has a new owner, according to this Hacker News item."
       }
     },
     "times_sent": 0
@@ -17080,7 +17208,7 @@
   "de8f10da3ca73d67": {
     "dismissed": null,
     "first_seen": "2026-10-21T23:02:00.520245+00:00",
-    "last_score": 68,
+    "last_score": 69,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -17620,7 +17748,7 @@
     "times_sent": 0
   },
   "e4c1659dd10b63c1": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-19T18:22:46.005442+00:00",
     "last_score": null,
     "ranks": {
@@ -17854,7 +17982,7 @@
   "e7f7d4275c4adeb7": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 661,
+    "last_score": 672,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -18182,7 +18310,7 @@
   "ecc0f8854c8010e9": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 73,
+    "last_score": 77,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -18221,7 +18349,7 @@
   "ed18f8ab0f26929a": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 220,
+    "last_score": 226,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-26T09:44:58.304763+00:00",
@@ -18595,7 +18723,7 @@
   "f2a1d614a2bbfbb8": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 124,
+    "last_score": 135,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -18871,7 +18999,7 @@
   "f6a301346a05e615": {
     "dismissed": null,
     "first_seen": "2026-10-23T03:31:14.836900+00:00",
-    "last_score": 461,
+    "last_score": 462,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -19009,7 +19137,7 @@
   "f91680b3d171ca61": {
     "dismissed": null,
     "first_seen": "2026-10-26T03:23:13.420938+00:00",
-    "last_score": 402,
+    "last_score": 412,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -19043,6 +19171,30 @@
     "first_seen": "2026-09-24T22:48:04.749226+00:00",
     "last_score": 407,
     "ranks": {},
+    "times_sent": 0
+  },
+  "f93d4d5cf699810a": {
+    "dismissed": null,
+    "first_seen": "2026-10-26T23:35:19.926556+00:00",
+    "last_score": 85,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 85,
+        "summary": "A Show HN post for Hob, an MIT-licensed open-source desktop app for Mac, Windows, and Linux that works on files like the Claude and ChatGPT desktop apps while running the model on-device."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-26T23:35:19.926556+00:00",
+        "relevance": 5,
+        "rubric": "02189e2467e9",
+        "source_score": 85,
+        "summary": "Hob is an MIT-licensed desktop app for Mac, Windows, and Linux that works on files like Claude and ChatGPT desktop apps but runs the model on-device."
+      }
+    },
     "times_sent": 0
   },
   "f97c0a1a038a13dd": {
