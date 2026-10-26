@@ -325,105 +325,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "Russian-language GitHub guide for installing and running DeepSeek models locally on PC, Mac and server — covering Ollama, llama.cpp, API, RAG and agents. It is updated for October 2026, including DeepSeek-V4.1-Flash-1017 and the 284B V4-Flash-0731 that fits in ~110 GB with llama.cpp.",
-        "title": "justxor/deepseek-local-guide-ru",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/justxor/deepseek-local-guide-ru"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "DeepSeek API docs for the new Search and Fetch tools, which give agents and RAG apps live web content: Search returns structured results from DeepSeek's in-house engine, Fetch returns a page as Markdown. Both are raw JSON endpoints using the same bearer auth as the DeepSeek API.",
-        "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://api-docs.deepseek.com/guides/search/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "arXiv paper presenting Hybrid Reasoning Agents, which switch between latent reasoning and text-based interaction in one generation process via a HybridLink module, with HybridSFT and HybridRL post-training. Reported gains: 10.4% better performance, 35.5–54.7% fewer tokens and 1.8–2.6x faster inference across 11 benchmarks.",
-        "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://arxiv.org/abs/2610.18861"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "An item asking how you'd know what's going on without running your own LLM proxy, pointing at proxy/observability setup for LLM traffic.",
-        "title": "If you don't run your own LLM proxy, how do you know whats going on?",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "Agent Standup is a free, MIT-licensed tool that reads local session files from Claude Code, Codex, Mistral Vibe and Cowork to show agent status in a live team call and session board at zero token cost; it runs as a VS Code extension, terminal command or desktop app.",
-        "title": "Atoll92/agent-standup",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/Atoll92/agent-standup"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "Petal is an open-source low-latency, high-resolution screen-sharing and remote-control app where shared windows appear as movable, resizable windows with labeled cursors and instant mouse/keyboard input; it supports rooms and LiveKit, including self-hosted infrastructure.",
-        "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://petal.live/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "Free Pascal and Lazarus now have a first full release of dynamic package support, allowing components, controls and IDE extensions to be installed without rebuilding the IDE and enabling native Pascal plugin libraries with new RTL metadata and runtime handling.",
-        "title": "Free Pascal compiler now supports dynamic packages",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://www.getlazarus.org/dynamic/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "Conference recap on AI monetization economics, reporting that two-thirds of Forbes AI 50 companies use usage-based pricing and that leaders are adopting hybrid subscriptions with credits and multiple outcome-based billable metrics.",
-        "title": "The “alien” economics of AI monetization",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://stripe.com/blog/economics-of-ai-monetization"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-19T09:37:11.229871+00:00",
-        "score": 6,
-        "source": "github",
-        "summary": "A free MIT-licensed CSS animation snippet library with 25+ copy-paste effects, an optional 2 KB scroll-reveal script, CSS-variable rebranding, and built-in reduced-motion and keyboard-focus accessibility.",
-        "title": "aidenleads/css-animation-snippets",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://github.com/aidenleads/css-animation-snippets"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-19T18:22:46.005442+00:00",
         "score": 8,
         "source": "rss",
@@ -1092,12 +993,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://bloffy.co/en"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Chaos is a function-based programming language that treats agents as callable values, so precise computation lives in functions while understanding and generation go to agents. It ships with a web IDE, runtime graph, and page/report artifacts, and demos run without model keys.",
+        "title": "Cattmonkey/ChaosIntelligence",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/Cattmonkey/ChaosIntelligence"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "PaperPilot is a Rust PDF toolkit available as an MCP server, CLI, WASM browser tool, Tauri desktop app, and local REST API, so files are processed locally with no cloud calls. Features include merge, split, rotate, OCR, compress, PII scan, and sanitize.",
+        "title": "PaperPilot – Zero-Cloud, Pure-Rust PDF Engine with WASM and MCP",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/KrushnaVardhanReddy/PaperPilot"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Microsoft-Decision-1, built on Alibaba's Qwen3.5-9B, scores a fixed list of answer options in a single forward pass and returns a calibrated probability for each instead of generating text. It targets routing, classification, prioritization, and verification, via Microsoft Foundry and OpenRouter.",
+        "title": "Microsoft Decision-1: 9B Qwen Model Launch Explained",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 6,
+        "source": "hn",
+        "summary": "An essay on agentic monitoring, citing Anthropic's use of \"superfan\" Claudes—one per system component, with telemetry and log access—to catch subtle, novel issues that traditional alerts miss as systems grow too large for humans to watch closely.",
+        "title": "Agentic Monitoring",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://benjamincongdon.me/blog/2026/10/19/Agentic-Monitoring/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Farol, a free open-source CLI and GitHub Action, tells the person approving a pull request how risky the merge is and which files carry the risk, using static analysis after AI review.",
+        "title": "Show HN: Farol – A risk map of a pull request for the person who approves it",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/winnin/farol"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "openide is a free, open-source IDE built on Material Design 3 and Monaco Editor that generates HCT tonal palettes and matching syntax themes from any seed color, with hot-reloaded configs, plugins, and themes plus an integrated code runner.",
+        "title": "AbdulSamad350z/openide",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/AbdulSamad350z/openide"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Pilot is a Python tool that turns labeled tickets from GitHub, Linear, Jira, or Asana into reviewed pull requests by planning, coding, testing, linting, and opening a PR linked to the issue, with configurable autopilot modes.",
+        "title": "peterhoang1103991-cmd/pilot-ai-ticket-shipper",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/peterhoang1103991-cmd/pilot-ai-ticket-shipper"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 6,
+        "source": "hn",
+        "summary": "Reports that Chrome can send copied content to Google's servers for scanning for unsafe material.",
+        "title": "Google's servers can scan what you copy in Chrome for unsafe content",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://www.neowin.net/news/google-can-now-monitor-your-clipboard-in-chrome-to-check-if-you-copied-safe-content/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-26T09:44:58.304763+00:00",
+        "score": 6,
+        "source": "rss",
+        "summary": "First part of a two-part post introducing TanStack AI, a strongly typed ecosystem of AI libraries for adding AI features to apps, covering setup, AI requests, streaming, persistence and resumability, with code samples in a repo.",
+        "title": "Unlocking AI in Your Apps with TanStack AI",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/unlocking-ai-in-your-apps-with-tanstack-ai/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-26T03:23:13.420938+00:00",
-    "id": "2026-10-26T0323Z",
+    "at": "2026-10-26T09:44:58.304763+00:00",
+    "id": "2026-10-26T0944Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,18 +1108,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
-          "in": 102,
-          "out": 102
+          "in": 111,
+          "out": 111
         },
         "web-products": {
           "drops": {},
-          "in": 186,
-          "out": 186
+          "in": 185,
+          "out": 185
         }
       },
       "stage": "collect"
@@ -1129,20 +1129,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
-          "in": 102,
-          "out": 102
+          "in": 111,
+          "out": 111
         },
         "web-products": {
           "drops": {
-            "outside_window": 132
+            "outside_window": 134
           },
-          "in": 186,
-          "out": 54
+          "in": 185,
+          "out": 51
         }
       },
       "stage": "window"
@@ -1152,27 +1152,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 6,
-            "seen": 27
+            "dismissed": 10,
+            "seen": 23
           },
-          "in": 96,
-          "out": 63
+          "in": 101,
+          "out": 68
         },
         "tooling": {
           "drops": {
-            "dismissed": 6,
-            "seen": 22
+            "dismissed": 7,
+            "seen": 23
           },
-          "in": 102,
-          "out": 74
+          "in": 111,
+          "out": 81
         },
         "web-products": {
           "drops": {
             "dismissed": 4,
-            "seen": 19
+            "seen": 18
           },
-          "in": 54,
-          "out": 31
+          "in": 51,
+          "out": 29
         }
       },
       "stage": "dedupe"
@@ -1182,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 58
+            "already_ranked": 57
           },
-          "in": 63,
-          "out": 5
+          "in": 68,
+          "out": 11
         },
         "tooling": {
           "drops": {
-            "already_ranked": 56
+            "already_ranked": 57
           },
-          "in": 74,
-          "out": 18
+          "in": 81,
+          "out": 24
         },
         "web-products": {
           "drops": {
             "already_ranked": 22
           },
-          "in": 31,
-          "out": 9
+          "in": 29,
+          "out": 7
         }
       },
       "stage": "cache"
@@ -1209,18 +1209,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 9,
+          "out": 9
         },
         "tooling": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 9,
+          "out": 9
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1230,24 +1230,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 6
           },
-          "in": 5,
-          "out": 4
+          "in": 11,
+          "out": 5
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 8
           },
-          "in": 18,
-          "out": 15
+          "in": 24,
+          "out": 16
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 9,
-          "out": 8
+          "drops": {},
+          "in": 7,
+          "out": 7
         }
       },
       "stage": "rank"
@@ -1257,24 +1255,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 4
+            "over_max_items": 1
           },
-          "in": 4,
-          "out": 0
+          "in": 5,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 15
+            "over_max_items": 13
           },
-          "in": 15,
-          "out": 0
+          "in": 16,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 8
+            "over_max_items": 5
           },
-          "in": 8,
-          "out": 0
+          "in": 7,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1284,18 +1282,29 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 2,
+          "notes": {
+            "fetch_failed": 1,
+            "kept_rank_summary": 1,
+            "summarized": 1
+          },
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1305,17 +1314,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
+          "in": 4,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
+          "in": 3,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 2,
           "out": 21
         }
       },
@@ -1325,19 +1334,34 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "notes": {
+            "asked": 4
+          },
+          "out": 24
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 3
+          },
+          "out": 18
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 2
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 2
+          },
+          "out": 19
         }
       },
       "stage": "review"

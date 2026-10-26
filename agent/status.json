@@ -4,176 +4,182 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 58,
-        "dismissed": 6,
-        "seen": 27
+        "already_ranked": 57,
+        "dismissed": 10,
+        "seen": 23
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 4
+        "below_relevance": 6,
+        "over_max_items": 1
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 56,
-        "dismissed": 6,
-        "seen": 22
+        "already_ranked": 57,
+        "dismissed": 7,
+        "seen": 23
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 15
+        "below_relevance": 8,
+        "over_max_items": 13
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 132
+        "outside_window": 134
       },
       "dedupe": {
         "already_ranked": 22,
         "dismissed": 4,
-        "seen": 19
+        "seen": 18
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 8
+        "over_max_items": 5
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 96,
-      "in_window": 96,
-      "kept": 0,
-      "new": 5
+      "collected": 101,
+      "in_window": 101,
+      "kept": 4,
+      "new": 11
     },
     "tooling": {
-      "collected": 102,
-      "in_window": 102,
-      "kept": 0,
-      "new": 18
+      "collected": 111,
+      "in_window": 111,
+      "kept": 3,
+      "new": 24
     },
     "web-products": {
-      "collected": 186,
-      "in_window": 54,
-      "kept": 0,
-      "new": 9
+      "collected": 185,
+      "in_window": 51,
+      "kept": 2,
+      "new": 7
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
+      "score": 6,
+      "source": "rss",
+      "title": "Unlocking AI in Your Apps with TanStack AI",
+      "topic": "web-products",
+      "ts": "2026-10-26T09:46:14.461783+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 6,
+      "source": "hn",
+      "title": "Google's servers can scan what you copy in Chrome for unsafe content",
+      "topic": "web-products",
+      "ts": "2026-10-26T09:46:14.461775+00:00",
+      "verdict": "kept"
+    },
+    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.651049+00:00",
+      "ts": "2026-10-26T09:46:14.461746+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.651038+00:00",
+      "ts": "2026-10-26T09:46:14.461739+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.651026+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Warming Stripes as a screensaver",
-      "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.651014+00:00",
+      "ts": "2026-10-26T09:46:14.461731+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.651001+00:00",
+      "ts": "2026-10-26T09:46:14.461720+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.650988+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Unlocking AI in Your Apps with TanStack AI",
-      "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.650972+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Google's servers can scan what you copy in Chrome for unsafe content",
-      "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.650948+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "xiaozhangup/Oh-My-McDonald",
-      "topic": "web-products",
-      "ts": "2026-10-26T03:24:01.650701+00:00",
+      "ts": "2026-10-26T09:46:14.461655+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Calculation volumes for AI training",
       "topic": "web-products",
-      "ts": "2026-10-26T03:23:57.845140+00:00",
+      "ts": "2026-10-26T09:46:12.448880+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cost of electricity from investor-owned vs. public",
       "topic": "web-products",
-      "ts": "2026-10-26T03:23:57.845128+00:00",
+      "ts": "2026-10-26T09:46:12.448875+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "\u271a Avoiding charts by default",
       "topic": "web-products",
-      "ts": "2026-10-26T03:23:57.845117+00:00",
+      "ts": "2026-10-26T09:46:12.448869+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "When AI comes for purpose",
       "topic": "web-products",
-      "ts": "2026-10-26T03:23:57.845105+00:00",
+      "ts": "2026-10-26T09:46:12.448863+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "What happens to math going forward",
       "topic": "web-products",
-      "ts": "2026-10-26T03:23:57.845086+00:00",
+      "ts": "2026-10-26T09:46:12.448857+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Primer for geospatial embeddings",
       "topic": "web-products",
-      "ts": "2026-10-26T03:23:57.845054+00:00",
+      "ts": "2026-10-26T09:46:12.448852+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "AI Share of Voice: What It Is, How to Measure It, and What It Actually Tells You",
+      "topic": "web-products",
+      "ts": "2026-10-26T09:46:12.448846+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Affiliate Marketing: What It Is & How to Start in 2026",
+      "topic": "web-products",
+      "ts": "2026-10-26T09:46:12.448840+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-20T22:56:37.928833+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-21T03:26:55.076420+00:00"
@@ -265,28 +271,32 @@
     {
       "kept": 0,
       "ts": "2026-10-26T03:23:13.420938+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-26T09:44:58.304763+00:00"
     }
   ],
-  "streak": 325,
+  "streak": 326,
   "topics": [
     {
-      "collected": 96,
-      "kept": 0,
+      "collected": 101,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 102,
-      "kept": 0,
+      "collected": 111,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 186,
-      "kept": 0,
+      "collected": 185,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-26T03:23:13.420938+00:00"
+  "updated_at": "2026-10-26T09:44:58.304763+00:00"
 }
