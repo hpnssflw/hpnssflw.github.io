@@ -325,17 +325,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-20T22:56:37.928833+00:00",
-        "score": 9,
-        "source": "rss",
-        "summary": "A Smashing Magazine exploration of the native CSS random() function, now shipped in Safari and rolling out in Chrome 156, with CodePen demos for organic typography, bouncing letters, splayed cards, and a punk fanzine.",
-        "title": "Embracing Playful Imperfection With The CSS `random()` Function",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-21T09:08:25.960201+00:00",
         "score": 10,
         "source": "github",
@@ -1092,12 +1081,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://qwac.com/blog/who-killed-the-ev-cert"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-27T23:30:15.987292+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "A FlowingData post highlighting a New York Times interactive that uses mazes to show how AI models are trained and how agents complete tasks in unexpected ways, including commentary on the tension between AI safety and usefulness.",
+        "title": "Why agents take unexpected routes",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/10/27/why-agents-take-unexpected-routes/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-27T17:30:27.716018+00:00",
-    "id": "2026-10-27T1730Z",
+    "at": "2026-10-27T23:30:15.987292+00:00",
+    "id": "2026-10-27T2330Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,13 +1108,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 101,
-          "out": 101
+          "in": 102,
+          "out": 102
         },
         "tooling": {
           "drops": {},
-          "in": 108,
-          "out": 108
+          "in": 114,
+          "out": 114
         },
         "web-products": {
           "drops": {},
@@ -1129,13 +1129,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 101,
-          "out": 101
+          "in": 102,
+          "out": 102
         },
         "tooling": {
           "drops": {},
-          "in": 108,
-          "out": 108
+          "in": 114,
+          "out": 114
         },
         "web-products": {
           "drops": {
@@ -1153,26 +1153,26 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 8,
-            "seen": 26
+            "seen": 25
           },
-          "in": 101,
-          "out": 67
+          "in": 102,
+          "out": 69
         },
         "tooling": {
           "drops": {
             "dismissed": 4,
-            "seen": 26
+            "seen": 28
           },
-          "in": 108,
-          "out": 78
+          "in": 114,
+          "out": 82
         },
         "web-products": {
           "drops": {
             "dismissed": 4,
-            "seen": 20
+            "seen": 18
           },
           "in": 54,
-          "out": 30
+          "out": 32
         }
       },
       "stage": "dedupe"
@@ -1182,23 +1182,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 57
+            "already_ranked": 58
           },
-          "in": 67,
-          "out": 10
+          "in": 69,
+          "out": 11
         },
         "tooling": {
           "drops": {
-            "already_ranked": 62
+            "already_ranked": 66
           },
-          "in": 78,
+          "in": 82,
           "out": 16
         },
         "web-products": {
           "drops": {
-            "already_ranked": 23
+            "already_ranked": 25
           },
-          "in": 30,
+          "in": 32,
           "out": 7
         }
       },
@@ -1214,8 +1214,8 @@
         },
         "tooling": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 3,
+          "out": 3
         },
         "web-products": {
           "drops": {},
@@ -1232,22 +1232,22 @@
           "drops": {
             "below_relevance": 3
           },
-          "in": 10,
-          "out": 7
+          "in": 11,
+          "out": 8
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 1
           },
           "in": 16,
-          "out": 13
+          "out": 15
         },
         "web-products": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 1
           },
           "in": 7,
-          "out": 5
+          "out": 6
         }
       },
       "stage": "rank"
@@ -1257,24 +1257,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 7
+            "over_max_items": 8
           },
-          "in": 7,
+          "in": 8,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 15
           },
-          "in": 13,
+          "in": 15,
           "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 5
           },
-          "in": 5,
-          "out": 0
+          "in": 6,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1294,8 +1294,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1315,7 +1318,7 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 1,
           "out": 21
         }
       },
@@ -1335,9 +1338,14 @@
           "out": 21
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 1
+          },
+          "out": 20
         }
       },
       "stage": "review"
