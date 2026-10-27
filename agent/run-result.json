@@ -1096,8 +1096,8 @@
     ]
   },
   "run": {
-    "at": "2026-10-27T09:37:29.404663+00:00",
-    "id": "2026-10-27T0937Z",
+    "at": "2026-10-27T17:30:27.716018+00:00",
+    "id": "2026-10-27T1730Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,18 +1108,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
-          "in": 111,
-          "out": 111
+          "in": 108,
+          "out": 108
         },
         "web-products": {
           "drops": {},
-          "in": 186,
-          "out": 186
+          "in": 185,
+          "out": 185
         }
       },
       "stage": "collect"
@@ -1129,19 +1129,19 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 98,
-          "out": 98
+          "in": 101,
+          "out": 101
         },
         "tooling": {
           "drops": {},
-          "in": 111,
-          "out": 111
+          "in": 108,
+          "out": 108
         },
         "web-products": {
           "drops": {
-            "outside_window": 132
+            "outside_window": 131
           },
-          "in": 186,
+          "in": 185,
           "out": 54
         }
       },
@@ -1153,26 +1153,26 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 8,
-            "seen": 21
+            "seen": 26
           },
-          "in": 98,
-          "out": 69
+          "in": 101,
+          "out": 67
         },
         "tooling": {
           "drops": {
-            "dismissed": 6,
-            "seen": 25
+            "dismissed": 4,
+            "seen": 26
           },
-          "in": 111,
-          "out": 80
+          "in": 108,
+          "out": 78
         },
         "web-products": {
           "drops": {
-            "dismissed": 5,
-            "seen": 18
+            "dismissed": 4,
+            "seen": 20
           },
           "in": 54,
-          "out": 31
+          "out": 30
         }
       },
       "stage": "dedupe"
@@ -1182,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 58
+            "already_ranked": 57
           },
-          "in": 69,
-          "out": 11
+          "in": 67,
+          "out": 10
         },
         "tooling": {
           "drops": {
-            "already_ranked": 63
+            "already_ranked": 62
           },
-          "in": 80,
-          "out": 17
+          "in": 78,
+          "out": 16
         },
         "web-products": {
           "drops": {
             "already_ranked": 23
           },
-          "in": 31,
-          "out": 8
+          "in": 30,
+          "out": 7
         }
       },
       "stage": "cache"
@@ -1209,18 +1209,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 4,
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 2,
+          "out": 2
         }
       },
       "stage": "enrich"
@@ -1230,24 +1230,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 3
           },
-          "in": 11,
-          "out": 10
+          "in": 10,
+          "out": 7
         },
         "tooling": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 3
           },
-          "in": 17,
-          "out": 15
+          "in": 16,
+          "out": 13
         },
         "web-products": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 2
           },
-          "in": 8,
-          "out": 7
+          "in": 7,
+          "out": 5
         }
       },
       "stage": "rank"
@@ -1257,24 +1257,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 6
+            "over_max_items": 7
           },
-          "in": 10,
-          "out": 4
+          "in": 7,
+          "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 13
           },
-          "in": 15,
-          "out": 3
+          "in": 13,
+          "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 5
           },
-          "in": 7,
-          "out": 2
+          "in": 5,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1284,27 +1284,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "notes": {
-            "summarized": 4
-          },
-          "out": 4
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "notes": {
-            "summarized": 3
-          },
-          "out": 3
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "notes": {
-            "summarized": 2
-          },
-          "out": 2
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1314,17 +1305,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
+          "in": 0,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 3,
+          "in": 0,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 2,
+          "in": 0,
           "out": 21
         }
       },
@@ -1334,34 +1325,19 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "expired": 4
-          },
+          "drops": {},
           "in": 28,
-          "notes": {
-            "asked": 4
-          },
-          "out": 24
+          "out": 28
         },
         "tooling": {
-          "drops": {
-            "expired": 3
-          },
+          "drops": {},
           "in": 21,
-          "notes": {
-            "asked": 3
-          },
-          "out": 18
+          "out": 21
         },
         "web-products": {
-          "drops": {
-            "expired": 2
-          },
+          "drops": {},
           "in": 21,
-          "notes": {
-            "asked": 2
-          },
-          "out": 19
+          "out": 21
         }
       },
       "stage": "review"
