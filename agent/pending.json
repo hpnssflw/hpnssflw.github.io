@@ -1,96 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 10,
-      "source": "github",
-      "summary": "axuse is an accessibility-first browser and computer-use MCP server for agent harnesses (Codex, Claude Code, OpenCode). It instruments the DOM, accessibility tree and CDP instead of using a screenshot loop, has zero npm dependencies and needs Node 22+.",
-      "title": "ctoldigital/axuse",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/ctoldigital/axuse"
-    },
-    {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "DeepInfer is an open-source high-performance inference framework for DeepSeek models, used in DeepSeek's production services. It offers offline inference with optimized kernels, MoE parallelism, speculative decoding, batch-invariant inference, deterministic sampling and structured outputs.",
-      "title": "DeepInfer: High-performance inference framework for DeepSeek models",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/deepseek-ai/DeepInfer"
-    },
-    {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "EAGLE-4 is a speculative decoding drafter for accelerating LLM inference that adapts its strategy to batch size, hardware and workload. The eagle-harness pip package serves EAGLE-4 drafts on SGLang, vLLM and TokenSpeed via engine hooks.",
-      "title": "eagle-hq/EAGLE-4",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/eagle-hq/EAGLE-4"
-    },
-    {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "A WhatsApp MCP server that runs in your own Cloudflare account lets an AI agent search and read your WhatsApp chats. It links once as a device, stores messages in a SQLite Durable Object and cannot send messages.",
-      "title": "Show HN: WhatsApp MCP running free on Cloudflare",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/finereli/whatsapp-mcp"
-    },
-    {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "ra-jit is a Rust JIT toolchain that applies live code edits to an already-running program in about a millisecond while preserving state, plus faster incremental builds via `cargo ra-jit build|run|test|check`. Benchmarks on ripgrep, nushell and others show builds 3\u201320x faster than incremental cargo.",
-      "title": "indexable-inc/ra-jit",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/indexable-inc/ra-jit"
-    },
-    {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "tsrs is a Rust port of the TypeScript compiler, built by Cloudflare and VoidZero with Owner.com's Max Schwenk inside the Oxc toolchain rather than as a fork. Early benchmarks claim up to 8x speedups and ~70% less memory than TypeScript 7.0, with some optimizations upstreamed.",
-      "title": "Tsrs: A Port of TypeScript to Rust",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://blog.cloudflare.com/typescript-rust-port/"
-    },
-    {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "Stackyard is a free open-source Windows/macOS app that inventories every SDK, toolchain and framework version on a machine, shows which projects use each, flags what is safe to remove, and fixes problems in one click. It also offers a marketplace of publisher-sourced SDK installs with hash verification.",
-      "title": "AqibJavedZeepalm/stackyard",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/AqibJavedZeepalm/stackyard"
-    },
-    {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "Josh Comeau's blog post on upcoming CSS features, walking through his top 10 votes for Interop 2027, starting with the proposed @function rule for defining reusable CSS functions. Includes tips usable today.",
-      "title": "The Future of CSS",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://www.joshwcomeau.com/css/interop-2027/"
-    },
-    {
-      "pending_since": "2026-10-21T09:08:25.960201+00:00",
-      "score": 8,
-      "source": "rss",
-      "summary": "A FlowingData chart post on 2025 Survey of Consumer Finances data showing net worth percentiles by age group, with a table of median, 90th and 99th percentile figures per age bracket.",
-      "title": "Rising to higher net worth, by age",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://flowingdata.com/2026/10/21/higher-net-worth/"
-    },
-    {
       "pending_since": "2026-10-21T23:02:00.520245+00:00",
       "score": 7,
       "source": "hn",
@@ -699,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://flowingdata.com/2026/10/27/why-agents-take-unexpected-routes/"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "PageSift: a memory-bounded web scraping and extraction engine in one Rust binary for AI agents and LLM pipelines, turning sites, PDFs and archives into Markdown and structured data. Ships native SDKs plus Firecrawl v1/v2 and Jina Reader-compatible APIs, with benchmarks claiming large speed-ups over PDF, Office and layout-model tools.",
+      "title": "YOLOW92/pagesift",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/YOLOW92/pagesift"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "AllModels' abliterated model router: one OpenAI-compatible endpoint (chat completions and responses) federating abliterated models like DeepSeek and GLM 5.3 across multiple inference providers, now 5 for abliterated DeepSeek. Keeps text routes in a fallback pool, sends image requests only to providers that can read them, and hosts web search itself.",
+      "title": "There are now 5 inference providers for abliterated DeepSeek",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://allmodels.io/llm/abliterated"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "Survival LLM: a free, open-source offline AI assistant and emergency library that runs entirely on your own computer, answering from medical, FEMA/CDC, survival and repair references plus ~930,000 Wikipedia articles and citing the exact passage. It auto-selects a local model based on your machine's memory and needs no internet after setup.",
+      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://www.brangus.io/survival-llm"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "DeepScient: a research workbench running on the DeepSeek Harness runtime that structures work into 12 visible stages and 55 checkable gates, with 36 science tools, 98 skills and an auditable evidence chain, reproducible experiment records, and self-contained Windows and Apple Silicon desktop installers.",
+      "title": "yzlin286-wq/Deepscient",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/yzlin286-wq/Deepscient"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "JetBrains IDEs' built-in terminal now runs on libghostty, the emulation library behind Ghostty, replacing JediTerm from 2026.3. This adds modern protocols like Kitty keyboard and modifyOtherKeys so CLI AI agents, Neovim, tmux and fish get correct multi-line prompts and keybindings.",
+      "title": "JetBrains IDEs are now powered by libghostty",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://blog.jetbrains.com/platform/2026/10/jetbrains-terminal-now-uses-ghostty/"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "sill is a drop-in bash.exe for coding agents on native Windows: a fork of brush plus a Windows adapter needing no Git, MSYS2 or WSL. It fixes argument mangling, path mixing, encoding mojibake, console flashes and missing tools, passing 85/85 conformance cases versus 64 for Git Bash.",
+      "title": "lemonadesaltbagel/sill",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/lemonadesaltbagel/sill"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "Floorplan has Claude read your codebase and draw an interactive, plain-English map of every part, file and web request and how they connect, across repos. You can zoom from whole app to file, ask questions of the map, and see which parts Claude touched after each change.",
+      "title": "haydenschmitty/floorplan",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/haydenschmitty/floorplan"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 9,
+      "source": "rss",
+      "summary": "Ahrefs guide to Google AI Mode, Google's conversational search experience, covering its launch and global expansion, 1 billion monthly users, default Gemini models, and new capabilities like Generative UI and background agents for SEOs and content marketers.",
+      "title": "Google AI Mode: All You Need to Know",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://ahrefs.com/blog/google-ai-mode/"
+    },
+    {
+      "pending_since": "2026-10-28T14:52:13.974994+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "FlowingData write-up on a Pudding visual essay by Owen Lacey that analyzes the Hollywood actor co-appearance network and uses average distance (remoteness) to identify the most connected actor, showing Kevin Bacon isn't the real center.",
+      "title": "Finding the real center actor of Hollywood",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://flowingdata.com/2026/10/28/finding-the-real-center-actor-of-hollywood/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

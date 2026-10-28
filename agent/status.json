@@ -4,176 +4,183 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 56,
-        "dismissed": 8,
-        "seen": 25
+        "already_ranked": 59,
+        "dismissed": 9,
+        "seen": 22
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 6
+        "below_relevance": 6,
+        "over_max_items": 2
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 66,
-        "dismissed": 4,
-        "seen": 28
+        "already_ranked": 62,
+        "dismissed": 6,
+        "seen": 26
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 12
+        "below_relevance": 5,
+        "over_max_items": 15
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 130
+        "outside_window": 127
       },
       "dedupe": {
         "already_ranked": 25,
-        "dismissed": 4,
-        "seen": 19
+        "dismissed": 5,
+        "seen": 17
+      },
+      "inbox": {
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 5
+        "below_relevance": 4,
+        "over_max_items": 7
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 99,
-      "in_window": 99,
-      "kept": 0,
-      "new": 10
+      "collected": 102,
+      "in_window": 102,
+      "kept": 4,
+      "new": 12
     },
     "tooling": {
-      "collected": 111,
-      "in_window": 111,
-      "kept": 0,
-      "new": 13
+      "collected": 117,
+      "in_window": 117,
+      "kept": 3,
+      "new": 23
     },
     "web-products": {
-      "collected": 184,
-      "in_window": 54,
-      "kept": 0,
-      "new": 6
+      "collected": 187,
+      "in_window": 60,
+      "kept": 2,
+      "new": 13
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
+      "score": 8,
+      "source": "rss",
+      "title": "Finding the real center actor of Hollywood",
+      "topic": "web-products",
+      "ts": "2026-10-28T14:53:54.749255+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "rss",
+      "title": "Google AI Mode: All You Need to Know",
+      "topic": "web-products",
+      "ts": "2026-10-28T14:53:54.749226+00:00",
+      "verdict": "kept"
+    },
+    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-28T04:10:23.383552+00:00",
+      "ts": "2026-10-28T14:53:54.749204+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-28T04:10:23.383546+00:00",
+      "ts": "2026-10-28T14:53:54.749188+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-28T04:10:23.383524+00:00",
+      "ts": "2026-10-28T14:53:54.749172+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-28T04:10:23.383515+00:00",
+      "ts": "2026-10-28T14:53:54.749156+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-28T04:10:23.383503+00:00",
+      "ts": "2026-10-28T14:53:54.749138+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "zhtyyx/codex-seo",
+      "topic": "web-products",
+      "ts": "2026-10-28T14:53:54.749116+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "AI Discoverability, Page types, and more (September 2026)",
+      "topic": "web-products",
+      "ts": "2026-10-28T14:53:54.749043+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "How I Used Claude Code to Speed Up My Shell Startup by 95%",
+      "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-10-28T04:10:23.383284+00:00",
+      "ts": "2026-10-28T14:53:51.095631+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "sirioberati/YouTube-AI-Motion-Graphics",
+      "topic": "web-products",
+      "ts": "2026-10-28T14:53:51.095615+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "jianxinss/iching-64-motion",
+      "topic": "web-products",
+      "ts": "2026-10-28T14:53:51.095595+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Play Cyberpunk 2077 in the Browser",
+      "topic": "web-products",
+      "ts": "2026-10-28T14:53:51.095537+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918903+00:00",
+      "ts": "2026-10-28T14:53:35.691396+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cost of electricity from investor-owned vs. public",
       "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918897+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "\u271a Avoiding charts by default",
-      "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918891+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "When AI comes for purpose",
-      "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918886+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "What happens to math going forward",
-      "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918880+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Primer for geospatial embeddings",
-      "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918874+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Full 3-D scan and live body metrics for Neal\u2019s about page",
-      "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918869+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Cutting the cost of tokens",
-      "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918863+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Localized Wikipedia to your geographic area",
-      "topic": "web-products",
-      "ts": "2026-10-28T04:10:21.918858+00:00",
+      "ts": "2026-10-28T14:53:35.691382+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-22T22:58:13.400991+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-23T03:31:14.836900+00:00"
@@ -265,28 +272,32 @@
     {
       "kept": 0,
       "ts": "2026-10-28T04:09:34.924867+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-28T14:52:13.974994+00:00"
     }
   ],
-  "streak": 333,
+  "streak": 334,
   "topics": [
     {
-      "collected": 99,
-      "kept": 0,
+      "collected": 102,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 111,
-      "kept": 0,
+      "collected": 117,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 184,
-      "kept": 0,
+      "collected": 187,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-28T04:09:34.924867+00:00"
+  "updated_at": "2026-10-28T14:52:13.974994+00:00"
 }
