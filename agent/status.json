@@ -4,29 +4,23 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 59,
+        "already_ranked": 63,
         "dismissed": 9,
-        "seen": 22
-      },
-      "inbox": {
-        "expired": 4
+        "seen": 26
       },
       "rank": {
-        "below_relevance": 6,
-        "over_max_items": 2
+        "below_relevance": 4,
+        "over_max_items": 5
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 62,
-        "dismissed": 6,
-        "seen": 26
-      },
-      "inbox": {
-        "expired": 3
+        "already_ranked": 67,
+        "dismissed": 5,
+        "seen": 29
       },
       "rank": {
-        "below_relevance": 5,
+        "below_relevance": 4,
         "over_max_items": 15
       }
     },
@@ -35,156 +29,146 @@
         "outside_window": 127
       },
       "dedupe": {
-        "already_ranked": 25,
+        "already_ranked": 29,
         "dismissed": 5,
-        "seen": 17
-      },
-      "inbox": {
-        "expired": 2
+        "seen": 19
       },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 7
+        "over_max_items": 8
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 102,
-      "in_window": 102,
-      "kept": 4,
-      "new": 12
+      "collected": 107,
+      "in_window": 107,
+      "kept": 0,
+      "new": 9
     },
     "tooling": {
-      "collected": 117,
-      "in_window": 117,
-      "kept": 3,
-      "new": 23
+      "collected": 120,
+      "in_window": 120,
+      "kept": 0,
+      "new": 19
     },
     "web-products": {
-      "collected": 187,
-      "in_window": 60,
-      "kept": 2,
-      "new": 13
+      "collected": 188,
+      "in_window": 61,
+      "kept": 0,
+      "new": 8
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 8,
-      "source": "rss",
-      "title": "Finding the real center actor of Hollywood",
-      "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749255+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 9,
-      "source": "rss",
-      "title": "Google AI Mode: All You Need to Know",
-      "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749226+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749204+00:00",
+      "ts": "2026-10-28T20:48:09.419670+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749188+00:00",
+      "ts": "2026-10-28T20:48:09.419658+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749172+00:00",
+      "ts": "2026-10-28T20:48:09.419646+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749156+00:00",
+      "ts": "2026-10-28T20:48:09.419634+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749138+00:00",
+      "ts": "2026-10-28T20:48:09.419620+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749116+00:00",
+      "ts": "2026-10-28T20:48:09.419606+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:54.749043+00:00",
+      "ts": "2026-10-28T20:48:09.419585+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
+      "reason": "over_max_items",
+      "title": "shipwords-dev/shipwords",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:51.095631+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "sirioberati/YouTube-AI-Motion-Graphics",
-      "topic": "web-products",
-      "ts": "2026-10-28T14:53:51.095615+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "jianxinss/iching-64-motion",
-      "topic": "web-products",
-      "ts": "2026-10-28T14:53:51.095595+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Play Cyberpunk 2077 in the Browser",
-      "topic": "web-products",
-      "ts": "2026-10-28T14:53:51.095537+00:00",
+      "ts": "2026-10-28T20:48:09.419531+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:35.691396+00:00",
+      "ts": "2026-10-28T20:48:05.746629+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
+      "topic": "web-products",
+      "ts": "2026-10-28T20:48:05.746619+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cost of electricity from investor-owned vs. public",
       "topic": "web-products",
-      "ts": "2026-10-28T14:53:35.691382+00:00",
+      "ts": "2026-10-28T20:48:05.746608+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "\u271a Avoiding charts by default",
+      "topic": "web-products",
+      "ts": "2026-10-28T20:48:05.746596+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "When AI comes for purpose",
+      "topic": "web-products",
+      "ts": "2026-10-28T20:48:05.746585+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "What happens to math going forward",
+      "topic": "web-products",
+      "ts": "2026-10-28T20:48:05.746574+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Primer for geospatial embeddings",
+      "topic": "web-products",
+      "ts": "2026-10-28T20:48:05.746564+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-23T03:31:14.836900+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-23T09:07:24.966414+00:00"
@@ -276,28 +260,32 @@
     {
       "kept": 9,
       "ts": "2026-10-28T14:52:13.974994+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-28T20:47:22.461187+00:00"
     }
   ],
-  "streak": 334,
+  "streak": 335,
   "topics": [
     {
-      "collected": 102,
-      "kept": 4,
+      "collected": 107,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 117,
-      "kept": 3,
+      "collected": 120,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 187,
-      "kept": 2,
+      "collected": 188,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-28T14:52:13.974994+00:00"
+  "updated_at": "2026-10-28T20:47:22.461187+00:00"
 }
