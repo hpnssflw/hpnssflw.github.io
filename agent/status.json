@@ -4,24 +4,30 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 64,
+        "already_ranked": 63,
         "dismissed": 6,
-        "seen": 22
+        "seen": 19
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 5,
+        "below_relevance": 10,
         "over_max_items": 6
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 68,
-        "dismissed": 5,
-        "seen": 25
+        "already_ranked": 69,
+        "dismissed": 6,
+        "seen": 22
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
         "below_relevance": 3,
-        "over_max_items": 17
+        "over_max_items": 18
       }
     },
     "web-products": {
@@ -29,154 +35,152 @@
         "outside_window": 127
       },
       "dedupe": {
-        "already_ranked": 29,
-        "dismissed": 4,
+        "already_ranked": 26,
+        "dismissed": 5,
         "seen": 18
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       },
       "rank": {
-        "over_max_items": 8
+        "below_relevance": 1,
+        "over_max_items": 10
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 103,
-      "in_window": 103,
-      "kept": 0,
-      "new": 11
-    },
-    "tooling": {
-      "collected": 118,
-      "in_window": 118,
-      "kept": 0,
+      "collected": 108,
+      "in_window": 108,
+      "kept": 4,
       "new": 20
     },
+    "tooling": {
+      "collected": 121,
+      "in_window": 121,
+      "kept": 3,
+      "new": 24
+    },
     "web-products": {
-      "collected": 187,
-      "in_window": 60,
-      "kept": 1,
-      "new": 9
+      "collected": 189,
+      "in_window": 62,
+      "kept": 2,
+      "new": 13
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 9,
+      "score": 8,
       "source": "rss",
-      "title": "Useful @custom-media Presets",
+      "title": "\u271a Visualization tools and learning resources, October 2026 roundup",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.296104+00:00",
+      "ts": "2026-10-29T14:59:06.406814+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 8,
+      "source": "rss",
+      "title": "How Stable Are AI Citations? 10 Things We Learned Tracking 37,500 Citations",
+      "topic": "web-products",
+      "ts": "2026-10-29T14:59:06.406806+00:00",
       "verdict": "kept"
     },
     {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.296074+00:00",
+      "ts": "2026-10-29T14:59:06.406795+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.296065+00:00",
+      "ts": "2026-10-29T14:59:06.406789+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.296055+00:00",
+      "ts": "2026-10-29T14:59:06.406783+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.296047+00:00",
+      "ts": "2026-10-29T14:59:06.406777+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.296036+00:00",
+      "ts": "2026-10-29T14:59:06.406770+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
+      "topic": "web-products",
+      "ts": "2026-10-29T14:59:06.406764+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.296025+00:00",
+      "ts": "2026-10-29T14:59:06.406757+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Cost of college versus the return on investement",
+      "topic": "web-products",
+      "ts": "2026-10-29T14:59:06.406732+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.296011+00:00",
+      "ts": "2026-10-29T14:59:06.406721+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "shipwords-dev/shipwords",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:52.295949+00:00",
+      "ts": "2026-10-29T14:59:06.406658+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "AtEpic9014/PokeMMO-Atlas-AIO-Soft",
+      "topic": "web-products",
+      "ts": "2026-10-29T14:59:04.518504+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:44.317546+00:00",
+      "ts": "2026-10-29T14:58:57.072333+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-10-29T04:32:44.317538+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Cost of electricity from investor-owned vs. public",
-      "topic": "web-products",
-      "ts": "2026-10-29T04:32:44.317530+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "\u271a Avoiding charts by default",
-      "topic": "web-products",
-      "ts": "2026-10-29T04:32:44.317522+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "When AI comes for purpose",
-      "topic": "web-products",
-      "ts": "2026-10-29T04:32:44.317514+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "What happens to math going forward",
-      "topic": "web-products",
-      "ts": "2026-10-29T04:32:44.317503+00:00",
+      "ts": "2026-10-29T14:58:57.072327+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-23T16:31:03.950643+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-10-23T22:54:40.182785+00:00"
@@ -268,28 +272,32 @@
     {
       "kept": 1,
       "ts": "2026-10-29T04:31:55.013043+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-29T14:57:39.758738+00:00"
     }
   ],
-  "streak": 336,
+  "streak": 337,
   "topics": [
     {
-      "collected": 103,
-      "kept": 0,
+      "collected": 108,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 118,
-      "kept": 0,
+      "collected": 121,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 187,
-      "kept": 1,
+      "collected": 189,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-29T04:31:55.013043+00:00"
+  "updated_at": "2026-10-29T14:57:39.758738+00:00"
 }
