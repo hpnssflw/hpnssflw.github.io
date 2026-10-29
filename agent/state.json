@@ -2,7 +2,7 @@
   "001b60c8250b041f": {
     "dismissed": null,
     "first_seen": "2026-10-28T04:09:34.924867+00:00",
-    "last_score": 444,
+    "last_score": 446,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -491,7 +491,7 @@
   "054295e06252e0ad": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 74,
+    "last_score": 84,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -651,7 +651,7 @@
   "0673400c8d8a50c1": {
     "dismissed": null,
     "first_seen": "2026-10-20T22:56:37.928833+00:00",
-    "last_score": 177,
+    "last_score": 178,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -1534,7 +1534,7 @@
   "11bc87decd601d46": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 166,
+    "last_score": 204,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1697,7 +1697,7 @@
   "13f4a873d9cc47db": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 284,
+    "last_score": 286,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2048,7 +2048,7 @@
   "17a75de37df03bf6": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 248,
+    "last_score": 250,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -2134,7 +2134,7 @@
   "191d3f2c27a4b96b": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 64,
+    "last_score": 66,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2292,7 +2292,7 @@
   "1b56c634ba1577d7": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
-    "last_score": 121,
+    "last_score": 122,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2446,7 +2446,7 @@
   "1d958b517a161f4a": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 120,
+    "last_score": 121,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2673,6 +2673,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 238,
         "summary": "Patch the Planet is described as global response coordination as agents uncover vulnerabilities, posted from openai.com."
+      }
+    },
+    "times_sent": 0
+  },
+  "2042a6cfc3018512": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 88,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 3,
+        "rubric": "080b24af813c",
+        "source_score": 88,
+        "summary": "An article titled 'Nixpkgs for the frontend impaired' about using Nixpkgs, framed for people who struggle with the frontend side of it."
       }
     },
     "times_sent": 0
@@ -2961,7 +2977,7 @@
   "24fc8a773efd358f": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 61,
+    "last_score": 65,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -3011,6 +3027,22 @@
     },
     "times_sent": 0
   },
+  "2678647c2a52c706": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a Windows Optimizer installer with system tweaks and game-booster tags."
+      }
+    },
+    "times_sent": 0
+  },
   "26b7816fc1e0ed0e": {
     "dismissed": null,
     "first_seen": "2026-09-18T18:43:05.806895+00:00",
@@ -3053,7 +3085,7 @@
   "27779e2e3a96ff05": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 330,
+    "last_score": 331,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3305,7 +3337,7 @@
   "29d66e3e4b7f94fd": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 121,
+    "last_score": 125,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3405,7 +3437,7 @@
   "2b46813cd2083b4d": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 79,
+    "last_score": 95,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3453,7 +3485,7 @@
   "2c10954cc99447f4": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 75,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3631,7 +3663,7 @@
   "2d7458168c2cc9a9": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 294,
+    "last_score": 352,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4260,7 +4292,7 @@
   "34755f8225792455": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 258,
+    "last_score": 269,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -4643,15 +4675,15 @@
   "37d646f6268ddbb7": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 251,
+    "last_score": 257,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-27T09:37:29.404663+00:00",
-        "relevance": 6,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 5,
         "rubric": "3472af8a46e1",
-        "source_score": 127,
-        "summary": "Presents an Android app for locally deploying and managing AstrBot and NapCat with a built-in PRoot Ubuntu environment, native management UI, WebUI, logs, backup/restore, and independent updates without root."
+        "source_score": 257,
+        "summary": "A GitHub repo for locally deploying and managing AstrBot and NapCat on Android via a PRoot Ubuntu environment, with native management UI, WebUI, logs, backup/restore, and independent updates."
       }
     },
     "times_sent": 0
@@ -4698,7 +4730,7 @@
   "384d7752f4efe687": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 134,
+    "last_score": 157,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -4788,7 +4820,7 @@
   "39973e9d451dfefe": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 571,
+    "last_score": 575,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5207,7 +5239,7 @@
   "3e421a94dacd9a08": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 62,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6010,7 +6042,7 @@
   "49270cf8389d73cc": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 454,
+    "last_score": 472,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6634,6 +6666,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "519a776207ed3493": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 42,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 42,
+        "summary": "A small Swift app that automatically closes the macOS local-network permission popup that interrupts typing."
+      }
+    },
+    "times_sent": 0
+  },
   "51a16d922cf4ef1f": {
     "dismissed": null,
     "first_seen": "2026-10-10T14:15:10.018893+00:00",
@@ -6777,7 +6825,7 @@
   "5385485570aa2630": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 193,
+    "last_score": 321,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6849,6 +6897,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 108,
         "summary": "SuperGhidra is a Python suite of reverse-engineering tools including a P-Code IR lifter, Z3 SMT prover, binary loader, CFG deflattener and a Ghidra cache daemon."
+      }
+    },
+    "times_sent": 0
+  },
+  "540b1c17cdd19889": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 80,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 80,
+        "summary": "A Martin Fowler site article asking why good developers are wary of agentic development."
       }
     },
     "times_sent": 0
@@ -7021,6 +7085,30 @@
         "rubric": "02189e2467e9",
         "source_score": 34,
         "summary": "A Show HN post about Photoc, command-line tools for photographers."
+      }
+    },
+    "times_sent": 0
+  },
+  "564bb1e699e31179": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 43,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 43,
+        "summary": "A browser-based tool for editing an SQLite database, posted to Hacker News with 43 points."
+      },
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 4,
+        "rubric": "080b24af813c",
+        "source_score": 43,
+        "summary": "A Show HN link to a site called EditSQLite that, per the title, lets you edit an SQLite database in the browser."
       }
     },
     "times_sent": 0
@@ -7426,7 +7514,7 @@
   "5b47538c53d7ddb1": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 136,
+    "last_score": 158,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7444,6 +7532,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "5b61ecd627ec3998": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 9,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "An interactive FlowingData piece built on the very tall chart from the Wealth Inequality in America video, updated after thirteen years, letting you scroll (and reset the scale) to grasp the scale of wealth of the top 0.1%, with an 'I quit!' button."
+      }
+    },
     "times_sent": 0
   },
   "5b88557199a26697": {
@@ -8024,12 +8128,44 @@
     "ranks": {},
     "times_sent": 0
   },
+  "6326d27c86d13313": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a Winutils 2026 installer of system utilities, tagged with automation and python."
+      }
+    },
+    "times_sent": 0
+  },
   "632ae8b12f80975e": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 763,
     "ranks": {},
     "times_sent": 1
+  },
+  "635436e7357a9bc4": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a pre-activated Wondshare Recoverit 2026 data-recovery desktop setup."
+      }
+    },
+    "times_sent": 0
   },
   "63559afb79b13da5": {
     "dismissed": null,
@@ -8345,7 +8481,7 @@
   "67264e063a667900": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 404,
+    "last_score": 405,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8361,7 +8497,7 @@
   "673434d2f24e1eab": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 70,
+    "last_score": 76,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8386,6 +8522,22 @@
         "rubric": "02189e2467e9",
         "source_score": 102,
         "summary": "Pyxel is a free, MIT-licensed retro game engine for Python with built-in pixel art, tilemap, sound, and music editors."
+      }
+    },
+    "times_sent": 0
+  },
+  "679805fe6087e19f": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising an Acronis Backup & Recovery 2026 installer, tagged with crack-related topics."
       }
     },
     "times_sent": 0
@@ -8485,7 +8637,7 @@
   "6825ae5281ac7c3f": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 978,
+    "last_score": 997,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -8524,7 +8676,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 115,
+    "last_score": 144,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8540,7 +8692,7 @@
   "68d63728ca70cfdd": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 716,
+    "last_score": 750,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8710,7 +8862,7 @@
   "6a3ccd1ab0126cfc": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 34,
+    "last_score": 41,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9094,7 +9246,7 @@
   "6e4940cf2b3074e4": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 121,
+    "last_score": 122,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9219,6 +9371,22 @@
     "last_score": 73,
     "ranks": {},
     "times_sent": 1
+  },
+  "700f3e4bbfb43c82": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 35,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 35,
+        "summary": "A Launch HN post for Simantic, a YC startup building a simulation layer that lets engineers and AI agents test and validate firmware without hardware."
+      }
+    },
+    "times_sent": 0
   },
   "7029ca9ac97ae7b6": {
     "dismissed": null,
@@ -9373,7 +9541,7 @@
   "71f6ace31bb2b54b": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 76,
+    "last_score": 146,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9868,6 +10036,22 @@
     },
     "times_sent": 0
   },
+  "7759c120ecbe7e1f": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a Cinema 4D 2026 standalone setup tagged with c4d-plugin topics."
+      }
+    },
+    "times_sent": 0
+  },
   "77b95ed0649c6f22": {
     "dismissed": null,
     "first_seen": "2026-10-26T03:23:13.420938+00:00",
@@ -10028,7 +10212,7 @@
   "7985eaa4d4b49f55": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 126,
+    "last_score": 132,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10113,7 +10297,7 @@
   "7aaa3ac0731fbe02": {
     "dismissed": null,
     "first_seen": "2026-10-21T09:08:25.960201+00:00",
-    "last_score": 49,
+    "last_score": 50,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-26T09:44:58.304763+00:00",
@@ -10183,7 +10367,7 @@
   "7bba052852d5265f": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 135,
+    "last_score": 144,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10541,7 +10725,7 @@
   "804b51847cb0588e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 151,
+    "last_score": 152,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -10613,7 +10797,7 @@
   "80ab8ecc8f188894": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 1002,
+    "last_score": 1025,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -10648,6 +10832,22 @@
     "last_score": 140,
     "ranks": {},
     "times_sent": 1
+  },
+  "815e9f76383a9012": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 248,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 248,
+        "summary": "A Martin Fowler site article titled 'LLM Voice' with no excerpt provided."
+      }
+    },
+    "times_sent": 0
   },
   "8184df2e21520d58": {
     "dismissed": null,
@@ -11066,7 +11266,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 71,
+    "last_score": 75,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11137,7 +11337,7 @@
   "8983c455406ae9ac": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 217,
+    "last_score": 221,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11153,7 +11353,7 @@
   "89aae3fb35c1bbe2": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 101,
+    "last_score": 105,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -11611,7 +11811,7 @@
   "8fd782ed6a25d885": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 143,
+    "last_score": 146,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11992,7 +12192,7 @@
   "94430ceaa839cbc6": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 505,
+    "last_score": 553,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12069,7 +12269,7 @@
   "94dc6bcd1df95440": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 162,
+    "last_score": 372,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12222,6 +12422,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "96576f5ee9f59984": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a Canva Pro 2026 setup with features unlocked."
+      }
+    },
+    "times_sent": 0
+  },
   "966c961f67e46c0d": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -12232,7 +12448,7 @@
   "966fdf17ff62cf28": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 111,
+    "last_score": 189,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13209,7 +13425,7 @@
   "a1c698460610773a": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 587,
+    "last_score": 595,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13295,7 +13511,7 @@
   "a28d8c43766abec8": {
     "dismissed": "expired",
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 1034,
+    "last_score": 1035,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-21T09:08:25.960201+00:00",
@@ -13331,6 +13547,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "a3246d843fb483cc": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a VoiceChanger 2026 installer with all features activated."
+      }
+    },
+    "times_sent": 0
+  },
   "a324c4c3c3e617a5": {
     "dismissed": null,
     "first_seen": "2026-09-26T15:16:41.108559+00:00",
@@ -13341,7 +13573,7 @@
   "a330a8194716c61c": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 205,
+    "last_score": 208,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13475,7 +13707,7 @@
   "a47fefdfcbeeae76": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 1163,
+    "last_score": 1179,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13530,7 +13762,7 @@
   "a50a68be733da006": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 2298,
+    "last_score": 2309,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -13594,6 +13826,22 @@
         "rubric": "02189e2467e9",
         "source_score": 140,
         "summary": "A Show HN post about using your OpenAI subscription to create audiobooks."
+      }
+    },
+    "times_sent": 0
+  },
+  "a578fe2480917aa7": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising an EaseUS Partition Master 2026 installer for disk management."
       }
     },
     "times_sent": 0
@@ -13856,7 +14104,7 @@
   "a826b29b8d795d6c": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 340,
+    "last_score": 373,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -14286,6 +14534,22 @@
     },
     "times_sent": 0
   },
+  "ad20f77da757ddf9": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A repo advertising a pre-activated standalone installer for Microsoft 365 desktop, tagged with automation and Excel topics."
+      }
+    },
+    "times_sent": 0
+  },
   "ad4678f94bc0725a": {
     "dismissed": "expired",
     "first_seen": "2026-10-03T03:56:08.946753+00:00",
@@ -14484,7 +14748,7 @@
   "af3c1a712c246521": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 90,
+    "last_score": 93,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -14686,7 +14950,7 @@
   "b130dbfc8d0ff00e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 155,
+    "last_score": 176,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14851,7 +15115,7 @@
   "b32fb058c2255182": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 633,
+    "last_score": 635,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-27T09:37:29.404663+00:00",
@@ -14881,7 +15145,7 @@
   "b3750d20a868602d": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 69,
+    "last_score": 72,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -14934,7 +15198,7 @@
   "b49ec3bd8394c6fb": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 68,
+    "last_score": 73,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14981,7 +15245,7 @@
   "b50c89b4a0e7ebef": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 327,
+    "last_score": 653,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15206,7 +15470,7 @@
   "b7175d1f4a415528": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 76,
+    "last_score": 77,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -15265,6 +15529,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "b80e0e508e1b0b9f": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a standalone installer for BorisFX 2026 with all features activated."
+      }
+    },
+    "times_sent": 0
+  },
   "b81e08ba382d49f6": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -15284,7 +15564,7 @@
   "b83204b7e9c12d9e": {
     "dismissed": null,
     "first_seen": "2026-10-25T18:44:23.385972+00:00",
-    "last_score": 669,
+    "last_score": 670,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15433,7 +15713,7 @@
   "b99861952fe72624": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 108,
+    "last_score": 112,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15449,7 +15729,7 @@
   "b9b5de18e9156d54": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 531,
+    "last_score": 536,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -15564,7 +15844,7 @@
   "bad592b35845315e": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 284,
+    "last_score": 321,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -16145,7 +16425,7 @@
   "c14d1aee7a8cab5e": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 79,
+    "last_score": 86,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -16623,7 +16903,7 @@
   "c74913fb1896debd": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 231,
+    "last_score": 235,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -16817,7 +17097,7 @@
   "c99ede2d1aa61d73": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 349,
+    "last_score": 390,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16950,7 +17230,7 @@
   "cb44241adbceef18": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 105,
+    "last_score": 109,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16988,7 +17268,7 @@
   "cbd5fbf2a27d4b80": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 50,
+    "last_score": 65,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17141,7 +17421,7 @@
   "cd289ebd6dc580cd": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 327,
+    "last_score": 335,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17214,6 +17494,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "cd8b6080f1c732e3": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a pre-activated Filmora 15 desktop edition with features unlocked."
+      }
+    },
+    "times_sent": 0
+  },
   "cdb1d51fae043110": {
     "dismissed": "expired",
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
@@ -17265,7 +17561,7 @@
   "cdf18f1ab6e7993f": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 317,
+    "last_score": 318,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17892,7 +18188,7 @@
   "d776f38f2814ef3f": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 103,
+    "last_score": 105,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17922,7 +18218,7 @@
   "d7f1e98252a76066": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 64,
+    "last_score": 66,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -18156,7 +18452,7 @@
   "da89bc3e4c08aab8": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 551,
+    "last_score": 552,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -18367,7 +18663,7 @@
   "dcad83d827337ce8": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 326,
+    "last_score": 328,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18423,6 +18719,22 @@
     "first_seen": "2026-10-04T04:28:57.570485+00:00",
     "last_score": 601,
     "ranks": {},
+    "times_sent": 0
+  },
+  "dcf89639b7865d8a": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a Camtasia 2023 installer for video editing and screen recording."
+      }
+    },
     "times_sent": 0
   },
   "dcfdc0856c42fc98": {
@@ -18529,6 +18841,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 75,
         "summary": "An item on compressing LLMs to sub-1-bit precision via latent factorization, which relates directly to inference and serving optimization."
+      }
+    },
+    "times_sent": 0
+  },
+  "deea08fa2c3edd03": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 58,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 58,
+        "summary": "A Go tooling and library project for enforcing zero heap allocations, hosted on GitHub."
       }
     },
     "times_sent": 0
@@ -19078,7 +19406,7 @@
   "e47f3b80ee47fb42": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 133,
+    "last_score": 150,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -19094,7 +19422,7 @@
   "e48a0af16254a97e": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 52,
+    "last_score": 64,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -19524,7 +19852,7 @@
   "ea41a986fe715307": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 135,
+    "last_score": 139,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -19563,6 +19891,22 @@
         "rubric": "02189e2467e9",
         "source_score": 106,
         "summary": "A Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia hardware."
+      }
+    },
+    "times_sent": 0
+  },
+  "eacda3e93973e979": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a KMS Pico activation tool setup, tagged with key-management and Office-related topics."
       }
     },
     "times_sent": 0
@@ -19674,6 +20018,22 @@
         "rubric": "02189e2467e9",
         "source_score": 936,
         "summary": "A trace-native CI/CD tool for AI agents that grades production traces, clusters failures, freezes them into replayable regression tests, and blocks PRs that regress."
+      }
+    },
+    "times_sent": 0
+  },
+  "ebce976dca651755": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T20:52:50.908704+00:00",
+    "last_score": 97,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 97,
+        "summary": "A repo advertising a pre-activated Whale Tracker desktop app tagged with blockchain-intelligence topics."
       }
     },
     "times_sent": 0
@@ -20163,7 +20523,7 @@
   "f2a1d614a2bbfbb8": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 338,
+    "last_score": 341,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20432,7 +20792,7 @@
   "f663307c1e53d047": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 61,
+    "last_score": 62,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20540,7 +20900,7 @@
   "f7d9aacdb2853b55": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 35,
+    "last_score": 37,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20617,7 +20977,7 @@
   "f91680b3d171ca61": {
     "dismissed": null,
     "first_seen": "2026-10-26T03:23:13.420938+00:00",
-    "last_score": 426,
+    "last_score": 427,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20633,7 +20993,7 @@
   "f933f1f1a760390e": {
     "dismissed": null,
     "first_seen": "2026-10-21T03:26:55.076420+00:00",
-    "last_score": 939,
+    "last_score": 940,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20656,7 +21016,7 @@
   "f93d4d5cf699810a": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 173,
+    "last_score": 175,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-27T09:37:29.404663+00:00",
@@ -20846,7 +21206,7 @@
   "fc49847811ece3e9": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 43,
+    "last_score": 47,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -21038,7 +21398,7 @@
   "ff4eb6e553b62afe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 52,
+    "last_score": 63,
     "ranks": {
       "tooling": {
         "queued_at": null,
