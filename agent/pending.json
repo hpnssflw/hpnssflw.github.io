@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-21T23:02:00.520245+00:00",
-      "score": 7,
-      "source": "hn",
-      "summary": "Sumi.css, a minimalist classless-first CSS framework: one 6.7 KB file, no build step, no JS or dependencies. Styles headings, forms, tables, cards, accordions, modals and nav from plain semantic HTML, with light/dark mode, custom-property theming, zero-specificity overrides and ARIA-driven states.",
-      "title": "Show HN: Sumi.css \u2013 CSS Framework",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://github.com/vladocar/Sumi.css"
-    },
-    {
       "pending_since": "2026-10-22T09:10:34.677769+00:00",
       "score": 9,
       "source": "github",
@@ -699,6 +689,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://flowingdata.com/2026/10/28/finding-the-real-center-actor-of-hollywood/"
+    },
+    {
+      "pending_since": "2026-10-29T04:31:55.013043+00:00",
+      "score": 9,
+      "source": "rss",
+      "summary": "A collection of reusable @custom-media presets for CSS media queries, noting Firefox 148 shipped the at-rule behind a flag while Chrome and Safari lack support, and offering alternate container-style syntax plus a PostCSS option.",
+      "title": "Useful @custom-media Presets",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://blog.master.dev/useful-custom-media-presets/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

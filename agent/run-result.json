@@ -325,17 +325,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-21T23:02:00.520245+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "Sumi.css, a minimalist classless-first CSS framework: one 6.7 KB file, no build step, no JS or dependencies. Styles headings, forms, tables, cards, accordions, modals and nav from plain semantic HTML, with light/dark mode, custom-property theming, zero-specificity overrides and ARIA-driven states.",
-        "title": "Show HN: Sumi.css – CSS Framework",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://github.com/vladocar/Sumi.css"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-22T09:10:34.677769+00:00",
         "score": 9,
         "source": "github",
@@ -1092,12 +1081,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/10/28/finding-the-real-center-actor-of-hollywood/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-29T04:31:55.013043+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "A collection of reusable @custom-media presets for CSS media queries, noting Firefox 148 shipped the at-rule behind a flag while Chrome and Safari lack support, and offering alternate container-style syntax plus a PostCSS option.",
+        "title": "Useful @custom-media Presets",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/useful-custom-media-presets/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-28T20:47:22.461187+00:00",
-    "id": "2026-10-28T2047Z",
+    "at": "2026-10-29T04:31:55.013043+00:00",
+    "id": "2026-10-29T0431Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,18 +1108,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 107,
-          "out": 107
+          "in": 103,
+          "out": 103
         },
         "tooling": {
           "drops": {},
-          "in": 120,
-          "out": 120
+          "in": 118,
+          "out": 118
         },
         "web-products": {
           "drops": {},
-          "in": 188,
-          "out": 188
+          "in": 187,
+          "out": 187
         }
       },
       "stage": "collect"
@@ -1129,20 +1129,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 107,
-          "out": 107
+          "in": 103,
+          "out": 103
         },
         "tooling": {
           "drops": {},
-          "in": 120,
-          "out": 120
+          "in": 118,
+          "out": 118
         },
         "web-products": {
           "drops": {
             "outside_window": 127
           },
-          "in": 188,
-          "out": 61
+          "in": 187,
+          "out": 60
         }
       },
       "stage": "window"
@@ -1152,27 +1152,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 9,
-            "seen": 26
+            "dismissed": 6,
+            "seen": 22
           },
-          "in": 107,
-          "out": 72
+          "in": 103,
+          "out": 75
         },
         "tooling": {
           "drops": {
             "dismissed": 5,
-            "seen": 29
+            "seen": 25
           },
-          "in": 120,
-          "out": 86
+          "in": 118,
+          "out": 88
         },
         "web-products": {
           "drops": {
-            "dismissed": 5,
-            "seen": 19
+            "dismissed": 4,
+            "seen": 18
           },
-          "in": 61,
-          "out": 37
+          "in": 60,
+          "out": 38
         }
       },
       "stage": "dedupe"
@@ -1182,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 63
+            "already_ranked": 64
           },
-          "in": 72,
-          "out": 9
+          "in": 75,
+          "out": 11
         },
         "tooling": {
           "drops": {
-            "already_ranked": 67
+            "already_ranked": 68
           },
-          "in": 86,
-          "out": 19
+          "in": 88,
+          "out": 20
         },
         "web-products": {
           "drops": {
             "already_ranked": 29
           },
-          "in": 37,
-          "out": 8
+          "in": 38,
+          "out": 9
         }
       },
       "stage": "cache"
@@ -1209,18 +1209,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 8,
-          "out": 8
-        },
-        "tooling": {
-          "drops": {},
           "in": 6,
           "out": 6
         },
+        "tooling": {
+          "drops": {},
+          "in": 5,
+          "out": 5
+        },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 2,
+          "out": 2
         }
       },
       "stage": "enrich"
@@ -1230,22 +1230,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 5
           },
-          "in": 9,
-          "out": 5
+          "in": 11,
+          "out": 6
         },
         "tooling": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 3
           },
-          "in": 19,
-          "out": 15
+          "in": 20,
+          "out": 17
         },
         "web-products": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 9,
+          "out": 9
         }
       },
       "stage": "rank"
@@ -1255,24 +1255,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 5
+            "over_max_items": 6
           },
-          "in": 5,
+          "in": 6,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 15
+            "over_max_items": 17
           },
-          "in": 15,
+          "in": 17,
           "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 8
           },
-          "in": 8,
-          "out": 0
+          "in": 9,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1292,8 +1292,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1313,7 +1316,7 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 1,
           "out": 21
         }
       },
@@ -1333,9 +1336,14 @@
           "out": 21
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 1
+          },
+          "out": 20
         }
       },
       "stage": "review"
