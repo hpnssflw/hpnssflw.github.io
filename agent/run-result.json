@@ -332,105 +332,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "OpenShell, a runtime that sandboxes fleets of autonomous AI agents, enforcing per-agent policy on file access, syscalls and network via kernel instrumentation and formally verifying policy changes before approval. 0.1.x adds a stable release cadence, new isolation primitives, an expanded extension surface and new APIs.",
-        "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/NVIDIA/OpenShell"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A blog post arguing that asking an LLM for a confidence score or probability produces a number with no good reason to be trusted, illustrated by comparing machine confidence to a weather forecaster's, whose certainty is a calculation over information, not an opinion.",
-        "title": "Using LLM for confidence scoring is a bad idea",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "Lampline, a local-first platform that imports Dialogflow CX and CX Agent Studio agents and runs them on your own hardware, with a drag-and-drop builder mixing LLM and scripted steps, test console, HTTP/MCP tools and phone calls via Twilio, Telnyx or SIP, at roughly $0.02–0.17 a call.",
-        "title": "C4rohan/Lampline",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/C4rohan/Lampline"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "DecisionPivot (formerly DecideBench), a benchmark and code repo for evaluating decision models that output option probabilities at LLM system control points, measuring correctness, robustness to one decisive detail changing, and how much work a model handles at a fixed error rate.",
-        "title": "StartLuxLabs/DecisionPivot",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/StartLuxLabs/DecisionPivot"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A dbos.dev blog post on making Postgres DELETE scale, explaining MVCC delete costs and tuning cache/index performance in a Postgres-backed durable workflows and queues workload to apply retention policies at tens of thousands of workflows and steps per second.",
-        "title": "How Postgres DELETE can actually scale",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://www.dbos.dev/blog/scaling-deletions-in-postgres"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A GitHub-hosted OpenAI CLI for calling the OpenAI REST API from a terminal or shell scripts, with commands to generate images, upload/download files, submit and wait on batches, list models, and format output as JSON/JSONL; it also distinguishes itself from Codex CLI.",
-        "title": "OpenAI CLI",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/openai/openai-cli"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A yoyo-code.com blog post on why 2026 is an exciting year for the Rust compiler, covering the next-generation trait solver, the Polonius borrow checker, and compiler-performance work as long-term initiatives reach final steps.",
-        "title": "2026 is an exciting year for the Rust compiler (and me)",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://yoyo-code.com/2026-is-exciting-year-for-rust-compiler-and-me/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "Chrome's experimental HTML-in-Canvas API, now in origin trial, lets developers draw DOM content into a 2D canvas or WebGL/WebGPU texture while keeping the UI interactive and accessible, avoiding the usual DOM-versus-canvas tradeoff.",
-        "title": "The HTML-in-Canvas API origin trial",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://developer.chrome.com/blog/html-in-canvas-origin-trial"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-23T09:07:24.966414+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Safari Technology Preview 255 release notes list WebKit fixes across accessibility, animations, and CSS, including corrected getComputedStyle() pseudo-element animation checks, view transition update callback flushing, and font-family: initial resolution.",
-        "title": "Release Notes for Safari Technology Preview 255",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://webkit.org/blog/18482/release-notes-for-safari-technology-preview-255/"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-23T22:54:40.182785+00:00",
         "score": 8,
         "source": "hn",
@@ -1099,12 +1000,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/10/29/cost-of-greed-as-unbearably-tall-chart/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A blog post on fine-tuning Qwen3-1.7B on a 16 GB GPU to answer everyday prompts without the letter 'e'; it covers task definition, why tokenization makes this hard, and using SFT then RL to improve results.",
+        "title": "Fine-tuned Qwen on my 16gb GPU to respond without the letter e",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://kevin-wu.ca/blog/qwn/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "A news article reporting that OpenAI trains frontier models offline and that isolated AI agents found covert communication channels, including exploiting CPU cache timing, during security tests.",
+        "title": "OpenAI's agents talked to each other through the CPU Cache",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "A YC Labs post on multi-agent swarm experiments in Minecraft and Mindustry, describing a custom open-sourced Minecraft agent harness and a run with 50 GPT-6.1 Sol agents building a civilization.",
+        "title": "We ran AI agent swarms in Minecraft and Mindustry",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://labs.ycombinator.com/projects/games/index.html"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 6,
+        "source": "github",
+        "summary": "A GitHub repo for DSH Go, an unofficial Android client for DeepSeek Harness that can run DSH locally in a built-in Linux environment without root or connect to a remote host, with chat, tools, plugins, and screen-control features.",
+        "title": "ccch1mneyyy/dsh-Go",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/ccch1mneyyy/dsh-Go"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "CLI that routes each coding task to a chosen AI agent, model and effort, merges multi-vendor review into one pass/block gate, and pins skills and MCP servers with a CI-failing lockfile; also reports local token, cache and cost usage. In preview.",
+        "title": "Sheernox/cedr",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Sheernox/cedr"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Experimental Go tooling that lets you mark functions with //noalloc:root and have the CLI check the whole call tree for heap allocations, list allocating lines, and use fixed-size zero-alloc data structures including a JSON encoder/decoder. AI-written, in production use.",
+        "title": "noalloc: Tooling and libraries to enforce zero heap allocations in Golang",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/theconsensuslabs/noalloc"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Browser-based Compose Preview tool that redraws a screen about a second after each save without Android Studio or Gradle, letting an agent see renders, compare against a design, and iterate; supports interactive touch mode for stateful screens.",
+        "title": "kakao/prevue",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/kakao/prevue"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "A CSS tutorial on combining anchor positioning with the new border-shape feature to draw curved and distorted connectors between two draggable circles, extending a previous two-circle arrow demo; current support is limited to Chrome and Edge.",
+        "title": "Two Circles, One Connection, and border-shape",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/two-circles-one-connection-and-border-shape/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-30T14:51:05.460015+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "shipwords is an MIT-licensed open-source framework for running a fleet of new-keyword AI image and video sites on Cloudflare, sharing accounts, payments, credits and AI generation while each site keeps its own pages, look, domain, database and payment account.",
+        "title": "shipwords-dev/shipwords",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://github.com/shipwords-dev/shipwords"
       }
     ]
   },
   "run": {
-    "at": "2026-10-30T04:32:17.655149+00:00",
-    "id": "2026-10-30T0432Z",
+    "at": "2026-10-30T14:51:05.460015+00:00",
+    "id": "2026-10-30T1451Z",
     "mode": "real",
     "offline": false
   },
@@ -1115,18 +1115,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 109,
+          "out": 109
         },
         "tooling": {
           "drops": {},
-          "in": 134,
-          "out": 134
+          "in": 144,
+          "out": 144
         },
         "web-products": {
           "drops": {},
-          "in": 171,
-          "out": 171
+          "in": 169,
+          "out": 169
         }
       },
       "stage": "collect"
@@ -1136,20 +1136,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 109,
+          "out": 109
         },
         "tooling": {
           "drops": {},
-          "in": 134,
-          "out": 134
+          "in": 144,
+          "out": 144
         },
         "web-products": {
           "drops": {
-            "outside_window": 108
+            "outside_window": 109
           },
-          "in": 171,
-          "out": 63
+          "in": 169,
+          "out": 60
         }
       },
       "stage": "window"
@@ -1159,27 +1159,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
-            "seen": 21
+            "dismissed": 4,
+            "seen": 19
           },
-          "in": 104,
-          "out": 80
+          "in": 109,
+          "out": 86
         },
         "tooling": {
           "drops": {
-            "dismissed": 5,
-            "seen": 25
+            "dismissed": 4,
+            "seen": 20
           },
-          "in": 134,
-          "out": 104
+          "in": 144,
+          "out": 120
         },
         "web-products": {
           "drops": {
             "dismissed": 5,
-            "seen": 18
+            "seen": 17
           },
-          "in": 63,
-          "out": 40
+          "in": 60,
+          "out": 38
         }
       },
       "stage": "dedupe"
@@ -1191,22 +1191,22 @@
           "drops": {
             "already_ranked": 68
           },
-          "in": 80,
-          "out": 12
+          "in": 86,
+          "out": 18
         },
         "tooling": {
           "drops": {
-            "already_ranked": 71
+            "already_ranked": 65
           },
-          "in": 104,
-          "out": 33
+          "in": 120,
+          "out": 55
         },
         "web-products": {
           "drops": {
-            "already_ranked": 27
+            "already_ranked": 24
           },
-          "in": 40,
-          "out": 13
+          "in": 38,
+          "out": 14
         }
       },
       "stage": "cache"
@@ -1216,18 +1216,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 12,
+          "out": 12
         },
         "tooling": {
           "drops": {},
-          "in": 14,
-          "out": 14
+          "in": 38,
+          "out": 38
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 3,
+          "out": 3
         }
       },
       "stage": "enrich"
@@ -1237,21 +1237,23 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 5
+            "below_relevance": 10
           },
-          "in": 12,
-          "out": 7
+          "in": 18,
+          "out": 8
         },
         "tooling": {
           "drops": {
-            "below_relevance": 13
+            "below_relevance": 29
           },
-          "in": 33,
-          "out": 20
+          "in": 55,
+          "out": 26
         },
         "web-products": {
-          "drops": {},
-          "in": 13,
+          "drops": {
+            "below_relevance": 1
+          },
+          "in": 14,
           "out": 13
         }
       },
@@ -1262,24 +1264,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 7
+            "over_max_items": 4
           },
-          "in": 7,
-          "out": 0
+          "in": 8,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 20
+            "over_max_items": 23
           },
-          "in": 20,
-          "out": 0
+          "in": 26,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 12
+            "over_max_items": 11
           },
           "in": 13,
-          "out": 1
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1289,21 +1291,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 2,
           "notes": {
-            "summarized": 1
+            "summarized": 2
           },
-          "out": 1
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1313,17 +1321,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
+          "in": 4,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
+          "in": 3,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 2,
           "out": 21
         }
       },
@@ -1333,24 +1341,34 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "notes": {
+            "asked": 4
+          },
+          "out": 24
         },
         "tooling": {
-          "drops": {},
-          "in": 21,
-          "out": 21
-        },
-        "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 3
           },
           "in": 21,
           "notes": {
-            "asked": 1
+            "asked": 3
           },
-          "out": 20
+          "out": 18
+        },
+        "web-products": {
+          "drops": {
+            "expired": 2
+          },
+          "in": 21,
+          "notes": {
+            "asked": 2
+          },
+          "out": 19
         }
       },
       "stage": "review"

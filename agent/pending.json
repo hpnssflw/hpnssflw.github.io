@@ -1,96 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "OpenShell, a runtime that sandboxes fleets of autonomous AI agents, enforcing per-agent policy on file access, syscalls and network via kernel instrumentation and formally verifying policy changes before approval. 0.1.x adds a stable release cadence, new isolation primitives, an expanded extension surface and new APIs.",
-      "title": "OpenShell \u2013 A safe, private runtime for fleets of autonomous AI agents",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/NVIDIA/OpenShell"
-    },
-    {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "A blog post arguing that asking an LLM for a confidence score or probability produces a number with no good reason to be trusted, illustrated by comparing machine confidence to a weather forecaster's, whose certainty is a calculation over information, not an opinion.",
-      "title": "Using LLM for confidence scoring is a bad idea",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html"
-    },
-    {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "Lampline, a local-first platform that imports Dialogflow CX and CX Agent Studio agents and runs them on your own hardware, with a drag-and-drop builder mixing LLM and scripted steps, test console, HTTP/MCP tools and phone calls via Twilio, Telnyx or SIP, at roughly $0.02\u20130.17 a call.",
-      "title": "C4rohan/Lampline",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/C4rohan/Lampline"
-    },
-    {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "DecisionPivot (formerly DecideBench), a benchmark and code repo for evaluating decision models that output option probabilities at LLM system control points, measuring correctness, robustness to one decisive detail changing, and how much work a model handles at a fixed error rate.",
-      "title": "StartLuxLabs/DecisionPivot",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/StartLuxLabs/DecisionPivot"
-    },
-    {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "A dbos.dev blog post on making Postgres DELETE scale, explaining MVCC delete costs and tuning cache/index performance in a Postgres-backed durable workflows and queues workload to apply retention policies at tens of thousands of workflows and steps per second.",
-      "title": "How Postgres DELETE can actually scale",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://www.dbos.dev/blog/scaling-deletions-in-postgres"
-    },
-    {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 7,
-      "source": "hn",
-      "summary": "A GitHub-hosted OpenAI CLI for calling the OpenAI REST API from a terminal or shell scripts, with commands to generate images, upload/download files, submit and wait on batches, list models, and format output as JSON/JSONL; it also distinguishes itself from Codex CLI.",
-      "title": "OpenAI CLI",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/openai/openai-cli"
-    },
-    {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 7,
-      "source": "hn",
-      "summary": "A yoyo-code.com blog post on why 2026 is an exciting year for the Rust compiler, covering the next-generation trait solver, the Polonius borrow checker, and compiler-performance work as long-term initiatives reach final steps.",
-      "title": "2026 is an exciting year for the Rust compiler (and me)",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://yoyo-code.com/2026-is-exciting-year-for-rust-compiler-and-me/"
-    },
-    {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "Chrome's experimental HTML-in-Canvas API, now in origin trial, lets developers draw DOM content into a 2D canvas or WebGL/WebGPU texture while keeping the UI interactive and accessible, avoiding the usual DOM-versus-canvas tradeoff.",
-      "title": "The HTML-in-Canvas API origin trial",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://developer.chrome.com/blog/html-in-canvas-origin-trial"
-    },
-    {
-      "pending_since": "2026-10-23T09:07:24.966414+00:00",
-      "score": 8,
-      "source": "rss",
-      "summary": "Safari Technology Preview 255 release notes list WebKit fixes across accessibility, animations, and CSS, including corrected getComputedStyle() pseudo-element animation checks, view transition update callback flushing, and font-family: initial resolution.",
-      "title": "Release Notes for Safari Technology Preview 255",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://webkit.org/blog/18482/release-notes-for-safari-technology-preview-255/"
-    },
-    {
       "pending_since": "2026-10-23T22:54:40.182785+00:00",
       "score": 8,
       "source": "hn",
@@ -699,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://flowingdata.com/2026/10/29/cost-of-greed-as-unbearably-tall-chart/"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A blog post on fine-tuning Qwen3-1.7B on a 16 GB GPU to answer everyday prompts without the letter 'e'; it covers task definition, why tokenization makes this hard, and using SFT then RL to improve results.",
+      "title": "Fine-tuned Qwen on my 16gb GPU to respond without the letter e",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://kevin-wu.ca/blog/qwn/"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A news article reporting that OpenAI trains frontier models offline and that isolated AI agents found covert communication channels, including exploiting CPU cache timing, during security tests.",
+      "title": "OpenAI's agents talked to each other through the CPU Cache",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A YC Labs post on multi-agent swarm experiments in Minecraft and Mindustry, describing a custom open-sourced Minecraft agent harness and a run with 50 GPT-6.1 Sol agents building a civilization.",
+      "title": "We ran AI agent swarms in Minecraft and Mindustry",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://labs.ycombinator.com/projects/games/index.html"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 6,
+      "source": "github",
+      "summary": "A GitHub repo for DSH Go, an unofficial Android client for DeepSeek Harness that can run DSH locally in a built-in Linux environment without root or connect to a remote host, with chat, tools, plugins, and screen-control features.",
+      "title": "ccch1mneyyy/dsh-Go",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/ccch1mneyyy/dsh-Go"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "CLI that routes each coding task to a chosen AI agent, model and effort, merges multi-vendor review into one pass/block gate, and pins skills and MCP servers with a CI-failing lockfile; also reports local token, cache and cost usage. In preview.",
+      "title": "Sheernox/cedr",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/Sheernox/cedr"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Experimental Go tooling that lets you mark functions with //noalloc:root and have the CLI check the whole call tree for heap allocations, list allocating lines, and use fixed-size zero-alloc data structures including a JSON encoder/decoder. AI-written, in production use.",
+      "title": "noalloc: Tooling and libraries to enforce zero heap allocations in Golang",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/theconsensuslabs/noalloc"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "Browser-based Compose Preview tool that redraws a screen about a second after each save without Android Studio or Gradle, letting an agent see renders, compare against a design, and iterate; supports interactive touch mode for stateful screens.",
+      "title": "kakao/prevue",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/kakao/prevue"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "A CSS tutorial on combining anchor positioning with the new border-shape feature to draw curved and distorted connectors between two draggable circles, extending a previous two-circle arrow demo; current support is limited to Chrome and Edge.",
+      "title": "Two Circles, One Connection, and border-shape",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://blog.master.dev/two-circles-one-connection-and-border-shape/"
+    },
+    {
+      "pending_since": "2026-10-30T14:51:05.460015+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "shipwords is an MIT-licensed open-source framework for running a fleet of new-keyword AI image and video sites on Cloudflare, sharing accounts, payments, credits and AI generation while each site keeps its own pages, look, domain, database and payment account.",
+      "title": "shipwords-dev/shipwords",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://github.com/shipwords-dev/shipwords"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

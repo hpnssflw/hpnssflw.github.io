@@ -5,39 +5,46 @@
     "ai-engineering": {
       "dedupe": {
         "already_ranked": 68,
-        "dismissed": 3,
-        "seen": 21
+        "dismissed": 4,
+        "seen": 19
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 5,
-        "over_max_items": 7
+        "below_relevance": 10,
+        "over_max_items": 4
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 71,
-        "dismissed": 5,
-        "seen": 25
+        "already_ranked": 65,
+        "dismissed": 4,
+        "seen": 20
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 13,
-        "over_max_items": 20
+        "below_relevance": 29,
+        "over_max_items": 23
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 108
+        "outside_window": 109
       },
       "dedupe": {
-        "already_ranked": 27,
+        "already_ranked": 24,
         "dismissed": 5,
-        "seen": 18
+        "seen": 17
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       },
       "rank": {
-        "over_max_items": 12
+        "below_relevance": 1,
+        "over_max_items": 11
       }
     }
   },
@@ -50,139 +57,136 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 104,
-      "in_window": 104,
-      "kept": 0,
-      "new": 12
+      "collected": 109,
+      "in_window": 109,
+      "kept": 4,
+      "new": 18
     },
     "tooling": {
-      "collected": 134,
-      "in_window": 134,
-      "kept": 0,
-      "new": 33
+      "collected": 144,
+      "in_window": 144,
+      "kept": 3,
+      "new": 55
     },
     "web-products": {
-      "collected": 171,
-      "in_window": 63,
-      "kept": 1,
-      "new": 13
+      "collected": 169,
+      "in_window": 60,
+      "kept": 2,
+      "new": 14
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 9,
-      "source": "rss",
-      "title": "Cost of greed, as unbearably tall chart",
+      "score": 7,
+      "source": "github",
+      "title": "shipwords-dev/shipwords",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.074078+00:00",
+      "ts": "2026-10-30T14:52:16.359602+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 8,
+      "source": "rss",
+      "title": "Two Circles, One Connection, and border-shape",
+      "topic": "web-products",
+      "ts": "2026-10-30T14:52:16.359591+00:00",
       "verdict": "kept"
     },
     {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.074061+00:00",
+      "ts": "2026-10-30T14:52:16.359576+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.074053+00:00",
+      "ts": "2026-10-30T14:52:16.359568+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.074044+00:00",
+      "ts": "2026-10-30T14:52:16.359558+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.074036+00:00",
+      "ts": "2026-10-30T14:52:16.359550+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.074027+00:00",
+      "ts": "2026-10-30T14:52:16.359541+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.074019+00:00",
+      "ts": "2026-10-30T14:52:16.359532+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.074010+00:00",
+      "ts": "2026-10-30T14:52:16.359522+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Cost of college versus the return on investement",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.073986+00:00",
+      "ts": "2026-10-30T14:52:16.359512+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.073977+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Pico CSS is no longer maintained",
-      "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.073966+00:00",
+      "ts": "2026-10-30T14:52:16.359501+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "ElementaryUI \u2013 Swift, in the Browser",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.073952+00:00",
+      "ts": "2026-10-30T14:52:16.359471+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
-      "title": "shipwords-dev/shipwords",
+      "title": "Pico CSS is no longer maintained",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:21.073887+00:00",
+      "ts": "2026-10-30T14:52:16.359401+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Policing protests in India",
+      "topic": "web-products",
+      "ts": "2026-10-30T14:52:11.984704+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-10-30T04:33:10.224243+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
-      "topic": "web-products",
-      "ts": "2026-10-30T04:33:10.224234+00:00",
+      "ts": "2026-10-30T14:52:08.386380+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-24T08:40:36.292566+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-24T15:25:48.617126+00:00"
@@ -274,28 +278,32 @@
     {
       "kept": 1,
       "ts": "2026-10-30T04:32:17.655149+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-30T14:51:05.460015+00:00"
     }
   ],
-  "streak": 339,
+  "streak": 340,
   "topics": [
     {
-      "collected": 104,
-      "kept": 0,
+      "collected": 109,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 134,
-      "kept": 0,
+      "collected": 144,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 171,
-      "kept": 1,
+      "collected": 169,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-30T04:32:17.655149+00:00"
+  "updated_at": "2026-10-30T14:51:05.460015+00:00"
 }

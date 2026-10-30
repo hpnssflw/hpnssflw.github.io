@@ -2,7 +2,7 @@
   "001b60c8250b041f": {
     "dismissed": null,
     "first_seen": "2026-10-28T04:09:34.924867+00:00",
-    "last_score": 448,
+    "last_score": 450,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -671,6 +671,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "06ad16d2ad8d8bef": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A standalone AnyDesk remote access setup."
+      }
+    },
+    "times_sent": 0
+  },
   "06b0fec48136d96d": {
     "dismissed": null,
     "first_seen": "2026-09-23T08:53:43.403564+00:00",
@@ -837,6 +853,22 @@
     "first_seen": "2026-09-11T15:25:13.710288+00:00",
     "last_score": 340,
     "ranks": {},
+    "times_sent": 0
+  },
+  "08cbaf6420bb1f7b": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 498,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 498,
+        "summary": "vvv offers open-source editable wedding video templates and an Agent Skill for 25+ agents such as Claude Code and Codex, so a video template is built once and reused."
+      }
+    },
     "times_sent": 0
   },
   "08fcf37c0fa6bf91": {
@@ -1071,6 +1103,30 @@
         "rubric": "3472af8a46e1",
         "source_score": 107,
         "summary": "A TypeScript bot that connects WeChat to a personal AI agent (Grok, Muse, Claude, etc.) via official iLink."
+      }
+    },
+    "times_sent": 0
+  },
+  "0bf1d8e5336b46c7": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 60,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 60,
+        "summary": "Show HN for Arsaze, described as a \"Cursor for video editing\" with tab-complete and agent edits."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 60,
+        "summary": "Arsaze is described as a Cursor-style video editing tool with tab-complete and agent edits."
       }
     },
     "times_sent": 0
@@ -1390,6 +1446,22 @@
     },
     "times_sent": 0
   },
+  "0fb9d0c4b9bd4fca": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated standalone Microsoft Office installer."
+      }
+    },
+    "times_sent": 0
+  },
   "0fc024f4e5a6a81b": {
     "dismissed": null,
     "first_seen": "2026-08-18T00:33:14.442095+00:00",
@@ -1444,7 +1516,7 @@
   "102bcd83ea1ad695": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 68,
+    "last_score": 80,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1550,7 +1622,7 @@
   "11bc87decd601d46": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 227,
+    "last_score": 264,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1568,6 +1640,22 @@
     "first_seen": "2026-09-10T22:01:49.684171+00:00",
     "last_score": 400,
     "ranks": {},
+    "times_sent": 0
+  },
+  "11ef776cd1eb8a28": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 68,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 5,
+        "rubric": "02189e2467e9",
+        "source_score": 68,
+        "summary": "Inkstone is a theme based on traditional Chinese colors for IDEs, terminals and agents, shipped as a VS Code extension."
+      }
+    },
     "times_sent": 0
   },
   "121453230d1b3fc0": {
@@ -1713,7 +1801,7 @@
   "13f4a873d9cc47db": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 289,
+    "last_score": 300,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2044,7 +2132,7 @@
     "last_score": 31,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
         "ranked_at": "2026-10-28T20:47:22.461187+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -2064,7 +2152,7 @@
   "17a75de37df03bf6": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 254,
+    "last_score": 260,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -2182,7 +2270,7 @@
   "191f6e5b3de03be4": {
     "dismissed": null,
     "first_seen": "2026-10-27T03:50:43.963159+00:00",
-    "last_score": 52,
+    "last_score": 53,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2368,6 +2456,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "1b620bb56bab4d3e": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 101,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 101,
+        "summary": "A pre-activated standalone Autodesk Inventor installer."
+      }
+    },
+    "times_sent": 0
+  },
   "1b8e35a5a0147eea": {
     "dismissed": null,
     "first_seen": "2026-09-17T08:58:39.700444+00:00",
@@ -2494,7 +2598,7 @@
   "1d958b517a161f4a": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 121,
+    "last_score": 127,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2549,15 +2653,15 @@
   "1e03415a592fab86": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 127,
+    "last_score": 426,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
-        "relevance": 5,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 6,
         "rubric": "3472af8a46e1",
-        "source_score": 127,
-        "summary": "Mika is an on-device AI agent for Android that operates apps and the web to get things done."
+        "source_score": 426,
+        "summary": "Mika is described as an on-device AI agent for Android that operates apps and the web to get things done for the user."
       }
     },
     "times_sent": 0
@@ -2675,7 +2779,7 @@
   "1f21a11f54e05b7b": {
     "dismissed": null,
     "first_seen": "2026-10-24T22:15:11.175692+00:00",
-    "last_score": 623,
+    "last_score": 624,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2744,7 +2848,7 @@
   "2042a6cfc3018512": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 89,
+    "last_score": 90,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -2800,7 +2904,7 @@
   "2086ec1524565866": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 44,
+    "last_score": 50,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2809,6 +2913,38 @@
         "rubric": "3472af8a46e1",
         "source_score": 44,
         "summary": "A PDF describing use of Claude-enabled antibody design to develop an IgE disruptor for food allergy."
+      }
+    },
+    "times_sent": 0
+  },
+  "20e2d85db47dc825": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 51,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 51,
+        "summary": "cinetty plays cinematic architecture animations in the terminal, with a coding agent filling in one YAML file."
+      }
+    },
+    "times_sent": 0
+  },
+  "213579d8520fe4bf": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 102,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 102,
+        "summary": "A pre-activated standalone Cubase installer."
       }
     },
     "times_sent": 0
@@ -2844,7 +2980,7 @@
     "times_sent": 0
   },
   "215e0936c2a271ae": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-22T09:10:34.677769+00:00",
     "last_score": 227,
     "ranks": {
@@ -2983,6 +3119,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "2388603d542f04fc": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 65,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 65,
+        "summary": "speedrun is a cross-platform CLI-based E2E automation tool for mobile apps."
+      }
+    },
+    "times_sent": 0
+  },
   "2461276fa3db9b49": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -3057,7 +3209,7 @@
   "24fc8a773efd358f": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 67,
+    "last_score": 69,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -3165,7 +3317,7 @@
   "27779e2e3a96ff05": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 331,
+    "last_score": 333,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3362,7 +3514,7 @@
   "2966112544284cbc": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 204,
+    "last_score": 205,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-26T09:44:58.304763+00:00",
@@ -3517,15 +3669,23 @@
   "2b46813cd2083b4d": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 98,
+    "last_score": 107,
     "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 107,
+        "summary": "Anubis-Security-Tool is a terminal, SSH/SFTP and remote-session client for Windows, macOS and Linux."
+      },
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-28T14:52:13.974994+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
         "relevance": 7,
         "rubric": "02189e2467e9",
-        "source_score": 52,
-        "summary": "The repo describes Anubis, a terminal, SSH/SFTP, and remote-session client for Windows, macOS, and Linux."
+        "source_score": 107,
+        "summary": "Anubis is a terminal, SSH/SFTP and remote-session client for Windows, macOS and Linux."
       }
     },
     "times_sent": 0
@@ -3565,7 +3725,7 @@
   "2c10954cc99447f4": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 80,
+    "last_score": 81,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3711,10 +3871,10 @@
   "2cf1fb795ba0396c": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 219,
+    "last_score": 344,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
         "ranked_at": "2026-10-30T04:32:17.655149+00:00",
         "relevance": 7,
         "rubric": "3472af8a46e1",
@@ -3759,10 +3919,10 @@
   "2d7458168c2cc9a9": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 356,
+    "last_score": 359,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
         "ranked_at": "2026-10-29T14:57:39.758738+00:00",
         "relevance": 7,
         "rubric": "3472af8a46e1",
@@ -3824,6 +3984,30 @@
     "last_score": 84,
     "ranks": {},
     "times_sent": 1
+  },
+  "2ed80828502bb32e": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 31,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 31,
+        "summary": "A Tell HN post claiming Claude Code adds the user's email to the prompt and that the LLM sends it to websites, linking to a GitHub issue and a Reddit thread."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 5,
+        "rubric": "02189e2467e9",
+        "source_score": 31,
+        "summary": "A Tell HN post claiming Claude Code adds the user's email to the prompt and that the LLM sends it to websites."
+      }
+    },
+    "times_sent": 0
   },
   "2ee6ebbf1abb5555": {
     "dismissed": null,
@@ -4031,7 +4215,7 @@
   "30bbbfd21a734e09": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 120,
+    "last_score": 123,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4203,6 +4387,22 @@
         "rubric": "080b24af813c",
         "source_score": 33,
         "summary": "Firefox 158 released with JPEG XL support by default."
+      }
+    },
+    "times_sent": 0
+  },
+  "32904a7e5306df4f": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 102,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 102,
+        "summary": "A pre-activated standalone Recoverit data-recovery installer."
       }
     },
     "times_sent": 0
@@ -4388,10 +4588,10 @@
   "34755f8225792455": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 282,
+    "last_score": 290,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
         "ranked_at": "2026-10-29T04:31:55.013043+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -4621,6 +4821,22 @@
     },
     "times_sent": 0
   },
+  "369ec5105cc9e952": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A standalone Honeypot Detector desktop installation build."
+      }
+    },
+    "times_sent": 0
+  },
   "36bb2f029c3170ef": {
     "dismissed": null,
     "first_seen": "2026-09-25T22:54:50.790277+00:00",
@@ -4720,6 +4936,22 @@
     },
     "times_sent": 0
   },
+  "37b02f2d2f4f0adc": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated standalone Soundpad installer."
+      }
+    },
+    "times_sent": 0
+  },
   "37bcad0fc0d2acd5": {
     "dismissed": null,
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
@@ -4771,7 +5003,7 @@
   "37d646f6268ddbb7": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 261,
+    "last_score": 272,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4916,7 +5148,7 @@
   "39973e9d451dfefe": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 576,
+    "last_score": 577,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5100,7 +5332,7 @@
     "times_sent": 0
   },
   "3b5dc9da776c2e18": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
     "last_score": 30,
     "ranks": {
@@ -5150,7 +5382,7 @@
   "3bcca0b7c96250e0": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 117,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5335,7 +5567,7 @@
   "3e421a94dacd9a08": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 83,
+    "last_score": 86,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5487,6 +5719,22 @@
         "rubric": "080b24af813c",
         "source_score": null,
         "summary": "An interactive visualization of the Hebrew Bible by Danyel Fisher, with columns for books, lines for chapters, and squares for verses, allowing zoom and pan."
+      }
+    },
+    "times_sent": 0
+  },
+  "400b9d55de590a49": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 101,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 101,
+        "summary": "A pre-activated CCleaner Pro desktop edition."
       }
     },
     "times_sent": 0
@@ -6138,15 +6386,15 @@
   "49270cf8389d73cc": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 498,
+    "last_score": 529,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-26T09:44:58.304763+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
         "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 254,
-        "summary": "An AI-first external attack surface assessment tool with continuous discovery, evidence-based vulnerability validation, and developer-agent MCP integration."
+        "source_score": 529,
+        "summary": "CVEngine is an AI-first external attack surface assessment tool with continuous discovery, evidence-based vulnerability validation and developer-agent MCP integration."
       }
     },
     "times_sent": 0
@@ -6339,6 +6587,22 @@
     "first_seen": "2026-09-16T22:27:22.999977+00:00",
     "last_score": 495,
     "ranks": {},
+    "times_sent": 0
+  },
+  "4c3943521b9b58db": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 101,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 101,
+        "summary": "A pre-activated standalone Directory Opus installer."
+      }
+    },
     "times_sent": 0
   },
   "4cbcd95ee497859b": {
@@ -6765,7 +7029,7 @@
   "519a776207ed3493": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 114,
+    "last_score": 146,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6888,6 +7152,22 @@
     },
     "times_sent": 0
   },
+  "52ed5fcd54e4c7b1": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 1969,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 1969,
+        "summary": "dsh-Go packages the DeepSeek Harness onto a phone to run locally and also to remotely control a computer, tagged ai-agent, android, coding-agent and deepseek-harness."
+      }
+    },
+    "times_sent": 0
+  },
   "52f077ec166a5f7c": {
     "dismissed": null,
     "first_seen": "2026-09-25T22:54:50.790277+00:00",
@@ -6921,7 +7201,7 @@
   "5385485570aa2630": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 329,
+    "last_score": 336,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7000,7 +7280,7 @@
   "540b1c17cdd19889": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 86,
+    "last_score": 101,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7023,7 +7303,7 @@
   "543c1f702361e549": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 217,
+    "last_score": 218,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7037,7 +7317,7 @@
     "times_sent": 0
   },
   "548bfc13ddee88c1": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-20T09:09:08.857228+00:00",
     "last_score": 389,
     "ranks": {
@@ -7114,6 +7394,22 @@
     },
     "times_sent": 0
   },
+  "558eedf46d474892": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 101,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 101,
+        "summary": "A pre-activated standalone DxO PhotoLab installer."
+      }
+    },
+    "times_sent": 0
+  },
   "559e9934763d17f8": {
     "dismissed": "expired",
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
@@ -7185,10 +7481,26 @@
     },
     "times_sent": 0
   },
+  "56489c1a42c806ef": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 101,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 101,
+        "summary": "A pre-activated Microsoft 365 desktop utilities installer."
+      }
+    },
+    "times_sent": 0
+  },
   "564bb1e699e31179": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 66,
+    "last_score": 68,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7258,7 +7570,7 @@
   "56f0750699d50935": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 37,
+    "last_score": 41,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7626,7 +7938,7 @@
   "5b47538c53d7ddb1": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 171,
+    "last_score": 190,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7919,15 +8231,15 @@
   "5df0a66419d938a3": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 35,
+    "last_score": 192,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
         "relevance": 3,
         "rubric": "02189e2467e9",
-        "source_score": 35,
-        "summary": "Astroterm is a planetarium/star-map viewer that runs inside a terminal."
+        "source_score": 192,
+        "summary": "Astroterm is a terminal-based planetarium app for viewing star charts in the terminal."
       }
     },
     "times_sent": 0
@@ -8125,6 +8437,22 @@
     },
     "times_sent": 0
   },
+  "60d22bd166261a3e": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 113,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 113,
+        "summary": "agent-office-3d is a low-poly 3D office showing the live status of AI coding agents, where idle agents play Minecraft without using tokens."
+      }
+    },
+    "times_sent": 0
+  },
   "60db4cc2a1322c17": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -8222,15 +8550,15 @@
   "620df3f62834c522": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 69,
+    "last_score": 173,
     "ranks": {
       "web-products": {
         "queued_at": null,
-        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
-        "source_score": 69,
-        "summary": "The item states that Pico CSS is no longer maintained."
+        "source_score": 173,
+        "summary": "A Hacker News post noting that the Pico CSS framework is no longer maintained, relevant to frontend engineers choosing CSS tooling."
       }
     },
     "times_sent": 0
@@ -8263,6 +8591,30 @@
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 44,
     "ranks": {},
+    "times_sent": 0
+  },
+  "6300099f83ab9ce2": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 389,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 389,
+        "summary": "A post about a Claude Code VS Code extension with a backdoor released on the Cursor marketplace."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 389,
+        "summary": "A post reporting that a Claude Code VS Code extension with a backdoor was released on the Cursor marketplace."
+      }
+    },
     "times_sent": 0
   },
   "6312cc4142cecc96": {
@@ -8468,7 +8820,7 @@
   "652d23f0d9ebc15c": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 157,
+    "last_score": 158,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -8625,7 +8977,7 @@
   "67264e063a667900": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 405,
+    "last_score": 408,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8641,7 +8993,7 @@
   "673434d2f24e1eab": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 81,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8781,7 +9133,7 @@
   "6825ae5281ac7c3f": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 1003,
+    "last_score": 1008,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -8820,7 +9172,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 172,
+    "last_score": 223,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8836,7 +9188,7 @@
   "68d63728ca70cfdd": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 811,
+    "last_score": 868,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9096,7 +9448,7 @@
   "6af525c1604adec7": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 55,
+    "last_score": 95,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9220,7 +9572,7 @@
   "6c6bee7f14c39272": {
     "dismissed": null,
     "first_seen": "2026-10-24T08:40:36.292566+00:00",
-    "last_score": 392,
+    "last_score": 393,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -9406,7 +9758,7 @@
   "6e4940cf2b3074e4": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 122,
+    "last_score": 123,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9459,7 +9811,7 @@
     "times_sent": 0
   },
   "6eb73169f84ce43f": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
     "last_score": 508,
     "ranks": {
@@ -9535,7 +9887,7 @@
   "700f3e4bbfb43c82": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 56,
+    "last_score": 75,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9701,7 +10053,7 @@
   "71f6ace31bb2b54b": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 168,
+    "last_score": 184,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9978,10 +10330,26 @@
     },
     "times_sent": 0
   },
+  "74d92a9254a44b5f": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 52,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 52,
+        "summary": "cedr is a set of developer tools for humans and agents that routes work to an AI coding agent, merges multi-vendor reviews into one gate, and pins the skills and MCP servers agents load."
+      }
+    },
+    "times_sent": 0
+  },
   "7502ffe393ce17ad": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 236,
+    "last_score": 237,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10050,7 +10418,7 @@
     "times_sent": 0
   },
   "75ad2fd9754844be": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
     "last_score": 123,
     "ranks": {
@@ -10231,7 +10599,7 @@
   "77c2ca05ccdeef34": {
     "dismissed": null,
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
-    "last_score": 177,
+    "last_score": 178,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10372,7 +10740,7 @@
   "7985eaa4d4b49f55": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 135,
+    "last_score": 137,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10527,7 +10895,7 @@
   "7bba052852d5265f": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 151,
+    "last_score": 160,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10639,10 +11007,26 @@
     },
     "times_sent": 0
   },
+  "7de02fa3e5cc2f9e": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 101,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 101,
+        "summary": "A pre-activated standalone Power Director installer."
+      }
+    },
+    "times_sent": 0
+  },
   "7deb5d8cc44140e5": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 129,
+    "last_score": 137,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10775,7 +11159,7 @@
   "7f3a1e240b93e0e6": {
     "dismissed": null,
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
-    "last_score": 128,
+    "last_score": 127,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10851,7 +11235,7 @@
     "times_sent": 0
   },
   "8042c4cdf6b93d2c": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-22T09:10:34.677769+00:00",
     "last_score": 244,
     "ranks": {
@@ -10885,7 +11269,7 @@
   "804b51847cb0588e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 153,
+    "last_score": 154,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -10957,7 +11341,7 @@
   "80ab8ecc8f188894": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 1241,
+    "last_score": 1546,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -10996,15 +11380,15 @@
   "815e9f76383a9012": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 385,
+    "last_score": 539,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
-        "relevance": 7,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 248,
-        "summary": "A Martin Fowler site article titled 'LLM Voice' with no excerpt provided."
+        "source_score": 539,
+        "summary": "A martinfowler.com post titled \"LLM Voice\" whose title and excerpt give no indication of whether it covers building LLM systems or something else."
       }
     },
     "times_sent": 0
@@ -11426,7 +11810,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 80,
+    "last_score": 95,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11474,7 +11858,7 @@
   "89663db9c3dc6e52": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 149,
+    "last_score": 151,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11497,7 +11881,7 @@
   "8983c455406ae9ac": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 233,
+    "last_score": 280,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11513,7 +11897,7 @@
   "89aae3fb35c1bbe2": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 105,
+    "last_score": 108,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -11971,7 +12355,7 @@
   "8fd782ed6a25d885": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 146,
+    "last_score": 148,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12352,7 +12736,7 @@
   "94430ceaa839cbc6": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 562,
+    "last_score": 571,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12585,7 +12969,7 @@
   "96576f5ee9f59984": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 297,
+    "last_score": 194,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12608,7 +12992,7 @@
   "966fdf17ff62cf28": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 291,
+    "last_score": 457,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12693,7 +13077,7 @@
   "9738c85c5733ec46": {
     "dismissed": null,
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
-    "last_score": 164,
+    "last_score": 167,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-26T09:44:58.304763+00:00",
@@ -12997,7 +13381,7 @@
   "9a1ced1064846caa": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 38,
+    "last_score": 39,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13575,6 +13959,30 @@
     },
     "times_sent": 0
   },
+  "a13f736d98945685": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 92,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 91,
+        "summary": "A post reporting a backdoor in the Claude Code for VS Code extension on the Cursor Marketplace, linking to Cursor's security notice."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 92,
+        "summary": "A post reporting a backdoor in the Claude Code for VS Code extension on the Cursor Marketplace."
+      }
+    },
+    "times_sent": 0
+  },
   "a14dc90036f4ae6e": {
     "dismissed": null,
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
@@ -13585,7 +13993,7 @@
   "a1c698460610773a": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 597,
+    "last_score": 599,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13867,7 +14275,7 @@
   "a47fefdfcbeeae76": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 1190,
+    "last_score": 1191,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13919,10 +14327,26 @@
     },
     "times_sent": 0
   },
+  "a4bad8db279bfebc": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated standalone Filmora 15 installer."
+      }
+    },
+    "times_sent": 0
+  },
   "a50a68be733da006": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 2323,
+    "last_score": 2343,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -14264,7 +14688,7 @@
   "a826b29b8d795d6c": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 397,
+    "last_score": 438,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -14860,7 +15284,7 @@
   "aef342337ed8ac4e": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 112,
+    "last_score": 122,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14924,7 +15348,7 @@
   "af3c1a712c246521": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 104,
+    "last_score": 108,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -15126,7 +15550,7 @@
   "b130dbfc8d0ff00e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 186,
+    "last_score": 194,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15334,6 +15758,22 @@
     },
     "times_sent": 0
   },
+  "b3823965d338521b": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 103,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 103,
+        "summary": "A pre-activated standalone torrent client installer."
+      }
+    },
+    "times_sent": 0
+  },
   "b39584fdea8352ff": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -15421,7 +15861,7 @@
   "b50c89b4a0e7ebef": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 923,
+    "last_score": 1234,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15439,6 +15879,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "b5636e2775ac4bb7": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 33,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 33,
+        "summary": "Lasm is a tool for writing formally verified web apps in Lean targeting Node, serverless and edge runtimes."
+      }
+    },
     "times_sent": 0
   },
   "b567c2889e99b32a": {
@@ -15848,7 +16304,7 @@
     "times_sent": 0
   },
   "b8f0793fc835a98a": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
     "last_score": null,
     "ranks": {
@@ -15889,7 +16345,7 @@
   "b99861952fe72624": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 115,
+    "last_score": 116,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15905,7 +16361,7 @@
   "b9b5de18e9156d54": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 538,
+    "last_score": 539,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -16020,7 +16476,7 @@
   "bad592b35845315e": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 343,
+    "last_score": 402,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -16246,7 +16702,7 @@
   "bd66ab1a28180e43": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 45,
+    "last_score": 46,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -16355,6 +16811,22 @@
         "rubric": "02189e2467e9",
         "source_score": 2073,
         "summary": "DeepInfer is a high-performance inference framework for DeepSeek models."
+      }
+    },
+    "times_sent": 0
+  },
+  "be4969f4864e5a26": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated standalone Camtasia installer."
       }
     },
     "times_sent": 0
@@ -16508,7 +16980,7 @@
   "c0e3e86aceb957de": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 77,
+    "last_score": 113,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -16617,7 +17089,7 @@
   "c14d1aee7a8cab5e": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 92,
+    "last_score": 95,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -16750,15 +17222,15 @@
   "c2bfd9cfee1195c9": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 31,
+    "last_score": 86,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
         "relevance": 1,
         "rubric": "02189e2467e9",
-        "source_score": 31,
-        "summary": "A page about Cormac McCarthy's personal library collection."
+        "source_score": 86,
+        "summary": "A page about Cormac McCarthy's personal library."
       }
     },
     "times_sent": 0
@@ -17009,6 +17481,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "c57d2faa4f7c476c": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated standalone Adobe InDesign installer."
+      }
+    },
+    "times_sent": 0
+  },
   "c5d31b731e2b133d": {
     "dismissed": null,
     "first_seen": "2026-08-31T23:28:58.582859+00:00",
@@ -17031,7 +17519,7 @@
     "times_sent": 1
   },
   "c66bbf103cb4c6ba": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-20T16:24:02.234579+00:00",
     "last_score": 196,
     "ranks": {
@@ -17305,7 +17793,7 @@
   "c99ede2d1aa61d73": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 417,
+    "last_score": 437,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17438,7 +17926,7 @@
   "cb44241adbceef18": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 109,
+    "last_score": 110,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17466,6 +17954,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "cbcc6715e68b0af7": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 73,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 73,
+        "summary": "A project about running Python on a wristwatch."
+      }
+    },
+    "times_sent": 0
+  },
   "cbceafd8fc0a50ae": {
     "dismissed": "expired",
     "first_seen": "2026-10-04T04:28:57.570485+00:00",
@@ -17476,15 +17980,15 @@
   "cbd5fbf2a27d4b80": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 70,
+    "last_score": 127,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T14:57:39.758738+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
         "relevance": 7,
         "rubric": "02189e2467e9",
-        "source_score": 50,
-        "summary": "readme-visual-kit turns source-backed project descriptions into three README diagrams\u2014feature flow, simplified architecture, and quick start\u2014using a local SVG renderer and Agent Skill with no API key."
+        "source_score": 127,
+        "summary": "readme-visual-kit is a local SVG renderer plus Agent Skill that turns source-based project descriptions into three README diagrams."
       }
     },
     "times_sent": 0
@@ -17629,7 +18133,7 @@
   "cd289ebd6dc580cd": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 340,
+    "last_score": 352,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17682,7 +18186,7 @@
   "cd7638416c981a46": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
-    "last_score": 179,
+    "last_score": 180,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -17769,7 +18273,7 @@
   "cdf18f1ab6e7993f": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 318,
+    "last_score": 320,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17809,7 +18313,7 @@
   "cdf86179f9a2ec80": {
     "dismissed": null,
     "first_seen": "2026-10-23T22:54:40.182785+00:00",
-    "last_score": 77,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17933,15 +18437,15 @@
   "cfee38c25797a9a1": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 58,
+    "last_score": 118,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
         "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 58,
-        "summary": "A project that uses DOOM game mechanics and voodoo dolls to build a transformer model."
+        "source_score": 118,
+        "summary": "A project that uses DOOM game mechanics and voodoo dolls to construct a transformer."
       }
     },
     "times_sent": 0
@@ -18412,7 +18916,7 @@
   "d776f38f2814ef3f": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 105,
+    "last_score": 110,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18442,7 +18946,7 @@
   "d7f1e98252a76066": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 67,
+    "last_score": 73,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -18676,7 +19180,7 @@
   "da89bc3e4c08aab8": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 552,
+    "last_score": 553,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -19072,10 +19576,10 @@
   "deea08fa2c3edd03": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 75,
+    "last_score": 81,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
         "ranked_at": "2026-10-29T20:52:50.908704+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -19307,6 +19811,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "e11c4902785924a7": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 38,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 38,
+        "summary": "An article on solving Postgres count performance problems, from ParadeDB."
+      }
+    },
     "times_sent": 0
   },
   "e126386923ffcd8b": {
@@ -19646,7 +20166,7 @@
   "e48a0af16254a97e": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 64,
+    "last_score": 56,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -19706,7 +20226,7 @@
     "times_sent": 0
   },
   "e5cce6db000b90a0": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-23T03:31:14.836900+00:00",
     "last_score": 144,
     "ranks": {
@@ -19751,6 +20271,38 @@
     "last_score": 936,
     "ranks": {},
     "times_sent": 1
+  },
+  "e62d78463b3e79e2": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated standalone BorisFX installer."
+      }
+    },
+    "times_sent": 0
+  },
+  "e652a737a376e5b5": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated Fortnite Skin Swapper desktop setup."
+      }
+    },
+    "times_sent": 0
   },
   "e6753b8422696224": {
     "dismissed": null,
@@ -19910,7 +20462,7 @@
   "e7f7d4275c4adeb7": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 683,
+    "last_score": 684,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20076,7 +20628,7 @@
   "ea41a986fe715307": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 141,
+    "last_score": 142,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20338,6 +20890,22 @@
     },
     "times_sent": 0
   },
+  "ed624f8c76b15acf": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 5,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A FlowingData entry pointing to Reuters charts and illustrations about police tactics against protests in India, drawing on a report by lawyer Vrinda Grover for ICNL."
+      }
+    },
+    "times_sent": 0
+  },
   "ed68526f7a15f49a": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -20357,7 +20925,7 @@
   "ee00c162645c4160": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 126,
+    "last_score": 131,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20390,6 +20958,22 @@
         "rubric": "02189e2467e9",
         "source_score": 54,
         "summary": "NanoMuse is an open-source AI agent for your phone and computer."
+      }
+    },
+    "times_sent": 0
+  },
+  "ee542838435a63bb": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 101,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 101,
+        "summary": "A pre-activated standalone CorelDraw installer."
       }
     },
     "times_sent": 0
@@ -20479,7 +21063,7 @@
   "ef9d5fd64ced6622": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 56,
+    "last_score": 57,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20608,7 +21192,7 @@
   "f14a0c529bd7cba6": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 111,
+    "last_score": 112,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20747,7 +21331,7 @@
   "f2a1d614a2bbfbb8": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 351,
+    "last_score": 382,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -21013,13 +21597,53 @@
     "ranks": {},
     "times_sent": 1
   },
-  "f663307c1e53d047": {
+  "f61d3e32ca006400": {
     "dismissed": null,
-    "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 68,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 640,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 640,
+        "summary": "A post about backdoors found in official Claude Code extensions."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 640,
+        "summary": "A discussion reporting backdoors in official Claude Code extensions."
+      }
+    },
+    "times_sent": 0
+  },
+  "f657d7108e9ff914": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
     "ranks": {
       "tooling": {
         "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated KMS Pico installer for desktop software activation."
+      }
+    },
+    "times_sent": 0
+  },
+  "f663307c1e53d047": {
+    "dismissed": null,
+    "first_seen": "2026-10-29T14:57:39.758738+00:00",
+    "last_score": 72,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
         "ranked_at": "2026-10-29T14:57:39.758738+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -21141,6 +21765,22 @@
         "rubric": "080b24af813c",
         "source_score": 35,
         "summary": "Show HN post about Yavashark, a JavaScript engine built over 950 days, inviting feedback and discussion."
+      }
+    },
+    "times_sent": 0
+  },
+  "f7e149c8b04e8777": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-10-30T14:51:05.460015+00:00",
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A CSS article using anchor positioning and the border-shape feature to connect two draggable circles with an arrow whose shape changes with distance, noting full support currently only in Chrome and Edge."
       }
     },
     "times_sent": 0
@@ -21423,6 +22063,22 @@
         "rubric": "02189e2467e9",
         "source_score": 30,
         "summary": "A collection of open-source Rust alternatives to Adobe applications."
+      }
+    },
+    "times_sent": 0
+  },
+  "fc03e7a82496f092": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T14:51:05.460015+00:00",
+    "last_score": 100,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T14:51:05.460015+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 100,
+        "summary": "A pre-activated SystemCare Pro installer."
       }
     },
     "times_sent": 0
