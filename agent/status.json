@@ -4,24 +4,24 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 71,
-        "dismissed": 5,
-        "seen": 22
+        "already_ranked": 68,
+        "dismissed": 3,
+        "seen": 21
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 6
+        "below_relevance": 5,
+        "over_max_items": 7
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 67,
-        "dismissed": 6,
-        "seen": 24
+        "already_ranked": 71,
+        "dismissed": 5,
+        "seen": 25
       },
       "rank": {
-        "below_relevance": 15,
-        "over_max_items": 19
+        "below_relevance": 13,
+        "over_max_items": 20
       }
     },
     "web-products": {
@@ -29,13 +29,15 @@
         "outside_window": 108
       },
       "dedupe": {
-        "already_ranked": 26,
-        "dismissed": 4,
-        "seen": 20
+        "already_ranked": 27,
+        "dismissed": 5,
+        "seen": 18
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 11
+        "over_max_items": 12
       }
     }
   },
@@ -48,21 +50,21 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 107,
-      "in_window": 107,
+      "collected": 104,
+      "in_window": 104,
       "kept": 0,
-      "new": 9
+      "new": 12
     },
     "tooling": {
-      "collected": 131,
-      "in_window": 131,
+      "collected": 134,
+      "in_window": 134,
       "kept": 0,
-      "new": 34
+      "new": 33
     },
     "web-products": {
       "collected": 171,
       "in_window": 63,
-      "kept": 0,
+      "kept": 1,
       "new": 13
     }
   },
@@ -70,116 +72,113 @@
   "pending_count": 70,
   "recent_events": [
     {
+      "score": 9,
+      "source": "rss",
+      "title": "Cost of greed, as unbearably tall chart",
+      "topic": "web-products",
+      "ts": "2026-10-30T04:33:21.074078+00:00",
+      "verdict": "kept"
+    },
+    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818777+00:00",
+      "ts": "2026-10-30T04:33:21.074061+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818768+00:00",
+      "ts": "2026-10-30T04:33:21.074053+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818759+00:00",
+      "ts": "2026-10-30T04:33:21.074044+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818750+00:00",
+      "ts": "2026-10-30T04:33:21.074036+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818740+00:00",
+      "ts": "2026-10-30T04:33:21.074027+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818710+00:00",
+      "ts": "2026-10-30T04:33:21.074019+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818701+00:00",
+      "ts": "2026-10-30T04:33:21.074010+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Cost of college versus the return on investement",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818675+00:00",
+      "ts": "2026-10-30T04:33:21.073986+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818665+00:00",
+      "ts": "2026-10-30T04:33:21.073977+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Pico CSS is no longer maintained",
+      "topic": "web-products",
+      "ts": "2026-10-30T04:33:21.073966+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "ElementaryUI \u2013 Swift, in the Browser",
+      "topic": "web-products",
+      "ts": "2026-10-30T04:33:21.073952+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "shipwords-dev/shipwords",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818654+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Cost of greed, as unbearably tall chart",
-      "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818639+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Nixpkgs for the frontend impaired",
-      "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818424+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Edit an SQLite database in your browser",
-      "topic": "web-products",
-      "ts": "2026-10-29T20:53:38.818367+00:00",
+      "ts": "2026-10-30T04:33:21.073887+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:34.226024+00:00",
+      "ts": "2026-10-30T04:33:10.224243+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-10-29T20:53:34.226016+00:00",
+      "ts": "2026-10-30T04:33:10.224234+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-24T03:25:47.470221+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-24T08:40:36.292566+00:00"
@@ -271,28 +270,32 @@
     {
       "kept": 0,
       "ts": "2026-10-29T20:52:50.908704+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-10-30T04:32:17.655149+00:00"
     }
   ],
-  "streak": 338,
+  "streak": 339,
   "topics": [
     {
-      "collected": 107,
+      "collected": 104,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 131,
+      "collected": 134,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 171,
-      "kept": 0,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-29T20:52:50.908704+00:00"
+  "updated_at": "2026-10-30T04:32:17.655149+00:00"
 }

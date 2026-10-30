@@ -2,7 +2,7 @@
   "001b60c8250b041f": {
     "dismissed": null,
     "first_seen": "2026-10-28T04:09:34.924867+00:00",
-    "last_score": 446,
+    "last_score": 448,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -337,7 +337,7 @@
   "0336c2290ec14333": {
     "dismissed": null,
     "first_seen": "2026-10-21T23:02:00.520245+00:00",
-    "last_score": 567,
+    "last_score": 568,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1441,6 +1441,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "102bcd83ea1ad695": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 68,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 68,
+        "summary": "A vibe-coded proof-of-concept repo that formalizes IRS federal tax forms in code."
+      }
+    },
+    "times_sent": 0
+  },
   "1068961fe33b39f8": {
     "dismissed": null,
     "first_seen": "2026-09-17T22:30:45.116044+00:00",
@@ -1534,7 +1550,7 @@
   "11bc87decd601d46": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 204,
+    "last_score": 227,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1697,7 +1713,7 @@
   "13f4a873d9cc47db": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 286,
+    "last_score": 289,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2048,7 +2064,7 @@
   "17a75de37df03bf6": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 250,
+    "last_score": 254,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -2073,6 +2089,22 @@
         "rubric": "02189e2467e9",
         "source_score": 31,
         "summary": "A crawler that compiles what 482 hospitals charge versus what insurers pay from their own published files."
+      }
+    },
+    "times_sent": 0
+  },
+  "18176b7dcdacfe81": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 126,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 126,
+        "summary": "A repository advertised as a complete standalone Microsoft Office setup with features activated."
       }
     },
     "times_sent": 0
@@ -2253,7 +2285,7 @@
   "1a7e953f36796cb0": {
     "dismissed": null,
     "first_seen": "2026-10-26T03:23:13.420938+00:00",
-    "last_score": 441,
+    "last_score": 442,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2292,7 +2324,7 @@
   "1b56c634ba1577d7": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
-    "last_score": 122,
+    "last_score": 123,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2429,6 +2461,22 @@
     },
     "times_sent": 0
   },
+  "1ca61ed6eeb1d61a": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 99,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 99,
+        "summary": "A repository advertised as a standalone installer for a Wise registry cleaner product."
+      }
+    },
+    "times_sent": 0
+  },
   "1cc89033493f153f": {
     "dismissed": null,
     "first_seen": "2026-09-24T08:49:08.300484+00:00",
@@ -2497,6 +2545,22 @@
       }
     },
     "times_sent": 1
+  },
+  "1e03415a592fab86": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 127,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 5,
+        "rubric": "3472af8a46e1",
+        "source_score": 127,
+        "summary": "Mika is an on-device AI agent for Android that operates apps and the web to get things done."
+      }
+    },
+    "times_sent": 0
   },
   "1e093ca6c99ebecc": {
     "dismissed": null,
@@ -2680,7 +2744,7 @@
   "2042a6cfc3018512": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 88,
+    "last_score": 89,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -2729,6 +2793,22 @@
         "rubric": "02189e2467e9",
         "source_score": 33,
         "summary": "The Show HN describes a specification-first agentic development plugin and claims over 1,000 specifications led to about 500k lines of code."
+      }
+    },
+    "times_sent": 0
+  },
+  "2086ec1524565866": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 44,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 44,
+        "summary": "A PDF describing use of Claude-enabled antibody design to develop an IgE disruptor for food allergy."
       }
     },
     "times_sent": 0
@@ -2945,7 +3025,7 @@
   "24c54fe8408cb979": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 89,
+    "last_score": 92,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2977,7 +3057,7 @@
   "24fc8a773efd358f": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 65,
+    "last_score": 67,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -3030,15 +3110,15 @@
   "2678647c2a52c706": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 97,
+    "last_score": 197,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
         "relevance": 1,
         "rubric": "02189e2467e9",
-        "source_score": 97,
-        "summary": "A repo advertising a Windows Optimizer installer with system tweaks and game-booster tags."
+        "source_score": 197,
+        "summary": "A repository advertised as a Windows optimizer installer with system tweaks and game boosters."
       }
     },
     "times_sent": 0
@@ -3437,7 +3517,7 @@
   "2b46813cd2083b4d": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 95,
+    "last_score": 98,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3485,7 +3565,7 @@
   "2c10954cc99447f4": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 76,
+    "last_score": 80,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3628,6 +3708,22 @@
     },
     "times_sent": 0
   },
+  "2cf1fb795ba0396c": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 219,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 219,
+        "summary": "A Hacker News post about running swarms of AI agents in Minecraft and Mindustry."
+      }
+    },
+    "times_sent": 0
+  },
   "2d268f9997a68e1f": {
     "dismissed": null,
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
@@ -3663,7 +3759,7 @@
   "2d7458168c2cc9a9": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 352,
+    "last_score": 356,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4292,7 +4388,7 @@
   "34755f8225792455": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 269,
+    "last_score": 282,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -4675,7 +4771,7 @@
   "37d646f6268ddbb7": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 257,
+    "last_score": 261,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4820,7 +4916,7 @@
   "39973e9d451dfefe": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 575,
+    "last_score": 576,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5239,7 +5335,7 @@
   "3e421a94dacd9a08": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 76,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6042,7 +6138,7 @@
   "49270cf8389d73cc": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 472,
+    "last_score": 498,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6669,15 +6765,15 @@
   "519a776207ed3493": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 42,
+    "last_score": 114,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
         "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 42,
-        "summary": "A small Swift app that automatically closes the macOS local-network permission popup that interrupts typing."
+        "source_score": 114,
+        "summary": "A tiny Swift app that auto-closes the macOS local-network permission popup."
       }
     },
     "times_sent": 0
@@ -6825,7 +6921,7 @@
   "5385485570aa2630": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 321,
+    "last_score": 329,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6904,7 +7000,7 @@
   "540b1c17cdd19889": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 80,
+    "last_score": 86,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6927,7 +7023,7 @@
   "543c1f702361e549": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 216,
+    "last_score": 217,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7005,7 +7101,7 @@
   "550f4d88633d4245": {
     "dismissed": null,
     "first_seen": "2026-10-28T04:09:34.924867+00:00",
-    "last_score": 50,
+    "last_score": 51,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7019,7 +7115,7 @@
     "times_sent": 0
   },
   "559e9934763d17f8": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
     "last_score": null,
     "ranks": {
@@ -7092,7 +7188,7 @@
   "564bb1e699e31179": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 43,
+    "last_score": 66,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7155,6 +7251,22 @@
         "rubric": "02189e2467e9",
         "source_score": 98,
         "summary": "A tool that tracks what AI leaders say and how their views change."
+      }
+    },
+    "times_sent": 0
+  },
+  "56f0750699d50935": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 37,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 37,
+        "summary": "Overtone is a tool that transcribes, corrects and cuts video captions to fit any screen shape."
       }
     },
     "times_sent": 0
@@ -7461,7 +7573,7 @@
   "5a24e14dcd271d5b": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 97,
+    "last_score": 98,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -7514,7 +7626,7 @@
   "5b47538c53d7ddb1": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 158,
+    "last_score": 171,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7540,7 +7652,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-10-30T04:32:17.655149+00:00",
         "ranked_at": "2026-10-29T20:52:50.908704+00:00",
         "relevance": 9,
         "rubric": "080b24af813c",
@@ -7800,6 +7912,22 @@
         "rubric": "02189e2467e9",
         "source_score": 50,
         "summary": "A macOS app that shows Claude Code usage and rate limits in the MacBook notch and tracks multiple accounts."
+      }
+    },
+    "times_sent": 0
+  },
+  "5df0a66419d938a3": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 35,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 35,
+        "summary": "Astroterm is a planetarium/star-map viewer that runs inside a terminal."
       }
     },
     "times_sent": 0
@@ -8087,6 +8215,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 323,
         "summary": "A GitHub toolkit for cross-border e-commerce operations that splits SOPs into seven reusable AI agent workflows, with prompts, templates, and real cases."
+      }
+    },
+    "times_sent": 0
+  },
+  "620df3f62834c522": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 69,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": 69,
+        "summary": "The item states that Pico CSS is no longer maintained."
       }
     },
     "times_sent": 0
@@ -8497,7 +8641,7 @@
   "673434d2f24e1eab": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 76,
+    "last_score": 81,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8637,7 +8781,7 @@
   "6825ae5281ac7c3f": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 997,
+    "last_score": 1003,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -8676,7 +8820,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 144,
+    "last_score": 172,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8692,7 +8836,7 @@
   "68d63728ca70cfdd": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 750,
+    "last_score": 811,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8862,7 +9006,7 @@
   "6a3ccd1ab0126cfc": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 41,
+    "last_score": 42,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8947,6 +9091,22 @@
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 486,
     "ranks": {},
+    "times_sent": 0
+  },
+  "6af525c1604adec7": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 55,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 5,
+        "rubric": "02189e2467e9",
+        "source_score": 55,
+        "summary": "krd shows a macOS desktop inside a terminal pane over SSH using ScreenCaptureKit capture and kitty graphics, without VNC or an extra port."
+      }
+    },
     "times_sent": 0
   },
   "6b10edb38f7953be": {
@@ -9375,7 +9535,7 @@
   "700f3e4bbfb43c82": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 35,
+    "last_score": 56,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9525,7 +9685,7 @@
   "71e2d0087741ad7d": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 59,
+    "last_score": 60,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9541,15 +9701,15 @@
   "71f6ace31bb2b54b": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 146,
+    "last_score": 168,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T14:57:39.758738+00:00",
-        "relevance": 7,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 6,
         "rubric": "02189e2467e9",
-        "source_score": 76,
-        "summary": "NetBSD has added a new beginner-friendly text editor called atto."
+        "source_score": 168,
+        "summary": "NetBSD has added a new text editor called atto."
       }
     },
     "times_sent": 0
@@ -10212,7 +10372,7 @@
   "7985eaa4d4b49f55": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 132,
+    "last_score": 135,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10367,7 +10527,7 @@
   "7bba052852d5265f": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 144,
+    "last_score": 151,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10482,7 +10642,7 @@
   "7deb5d8cc44140e5": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 127,
+    "last_score": 129,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10725,7 +10885,7 @@
   "804b51847cb0588e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 152,
+    "last_score": 153,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -10797,7 +10957,7 @@
   "80ab8ecc8f188894": {
     "dismissed": null,
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 1025,
+    "last_score": 1241,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -10836,7 +10996,7 @@
   "815e9f76383a9012": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 248,
+    "last_score": 385,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11266,7 +11426,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 75,
+    "last_score": 80,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11337,7 +11497,7 @@
   "8983c455406ae9ac": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 221,
+    "last_score": 233,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12192,7 +12352,7 @@
   "94430ceaa839cbc6": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 553,
+    "last_score": 562,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12269,7 +12429,7 @@
   "94dc6bcd1df95440": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 372,
+    "last_score": 431,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12425,15 +12585,15 @@
   "96576f5ee9f59984": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 97,
+    "last_score": 297,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
         "relevance": 1,
         "rubric": "02189e2467e9",
-        "source_score": 97,
-        "summary": "A repo advertising a Canva Pro 2026 setup with features unlocked."
+        "source_score": 297,
+        "summary": "A repository advertised as a complete standalone Canva Pro setup with features unlocked."
       }
     },
     "times_sent": 0
@@ -12448,15 +12608,15 @@
   "966fdf17ff62cf28": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 189,
+    "last_score": 291,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T14:57:39.758738+00:00",
-        "relevance": 6,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 111,
-        "summary": "A no-root, no-Termux Android APK that runs DeepSeek Harness with the engine embedded in the app process for screen-reading, system-setting changes, and scheduled automation."
+        "source_score": 291,
+        "summary": "An Android APK that runs the DeepSeek Harness on a phone without root or Termux, with screen-reading app operation, system-setting changes, scheduled automation and optional Shizuku."
       }
     },
     "times_sent": 0
@@ -12533,7 +12693,7 @@
   "9738c85c5733ec46": {
     "dismissed": null,
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
-    "last_score": 163,
+    "last_score": 164,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-26T09:44:58.304763+00:00",
@@ -13425,7 +13585,7 @@
   "a1c698460610773a": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 595,
+    "last_score": 597,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13573,7 +13733,7 @@
   "a330a8194716c61c": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 208,
+    "last_score": 209,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13707,7 +13867,7 @@
   "a47fefdfcbeeae76": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 1179,
+    "last_score": 1190,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13762,7 +13922,7 @@
   "a50a68be733da006": {
     "dismissed": null,
     "first_seen": "2026-10-23T09:07:24.966414+00:00",
-    "last_score": 2309,
+    "last_score": 2323,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -14104,7 +14264,7 @@
   "a826b29b8d795d6c": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 373,
+    "last_score": 397,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -14697,6 +14857,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "aef342337ed8ac4e": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 112,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 112,
+        "summary": "A Hacker News post describing Claude Duet as a personal-assistant-type harness that feels useful."
+      }
+    },
+    "times_sent": 0
+  },
   "af076c9f4b161e62": {
     "dismissed": null,
     "first_seen": "2026-10-17T18:10:14.117938+00:00",
@@ -14748,7 +14924,7 @@
   "af3c1a712c246521": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 93,
+    "last_score": 104,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -14950,7 +15126,7 @@
   "b130dbfc8d0ff00e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 176,
+    "last_score": 186,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15115,7 +15291,7 @@
   "b32fb058c2255182": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 635,
+    "last_score": 636,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-27T09:37:29.404663+00:00",
@@ -15145,7 +15321,7 @@
   "b3750d20a868602d": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 72,
+    "last_score": 74,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -15198,7 +15374,7 @@
   "b49ec3bd8394c6fb": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 73,
+    "last_score": 78,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15245,15 +15421,15 @@
   "b50c89b4a0e7ebef": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 653,
+    "last_score": 923,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T14:57:39.758738+00:00",
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
         "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 327,
-        "summary": "An adversarial defense shield that protects binaries, Electron apps, JS bundles, Python, and WebAssembly against AI reverse-engineering agents."
+        "source_score": 923,
+        "summary": "BLA is an adversarial defense shield that protects binaries, Electron apps, JS bundles, Python and WebAssembly against AI reverse-engineering agents."
       }
     },
     "times_sent": 0
@@ -15713,7 +15889,7 @@
   "b99861952fe72624": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 112,
+    "last_score": 115,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15729,7 +15905,7 @@
   "b9b5de18e9156d54": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 536,
+    "last_score": 538,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -15844,7 +16020,7 @@
   "bad592b35845315e": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 321,
+    "last_score": 343,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -16329,6 +16505,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "c0e3e86aceb957de": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 77,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": 77,
+        "summary": "The item is titled 'ElementaryUI \u2013 Swift, in the Browser,' indicating a UI-related project involving Swift running in the browser."
+      }
+    },
+    "times_sent": 0
+  },
   "c0e5caaa69359811": {
     "dismissed": null,
     "first_seen": "2026-09-24T08:49:08.300484+00:00",
@@ -16425,7 +16617,7 @@
   "c14d1aee7a8cab5e": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 86,
+    "last_score": 92,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -16555,6 +16747,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "c2bfd9cfee1195c9": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 31,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 31,
+        "summary": "A page about Cormac McCarthy's personal library collection."
+      }
+    },
+    "times_sent": 0
+  },
   "c2c68cef0b593e23": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
@@ -16657,7 +16865,7 @@
   "c47bdd592bf785b2": {
     "dismissed": null,
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
-    "last_score": 59,
+    "last_score": 61,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17097,7 +17305,7 @@
   "c99ede2d1aa61d73": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 390,
+    "last_score": 417,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17268,7 +17476,7 @@
   "cbd5fbf2a27d4b80": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 65,
+    "last_score": 70,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17421,7 +17629,7 @@
   "cd289ebd6dc580cd": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 335,
+    "last_score": 340,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17474,7 +17682,7 @@
   "cd7638416c981a46": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
-    "last_score": 178,
+    "last_score": 179,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -17721,6 +17929,22 @@
     "last_score": 997,
     "ranks": {},
     "times_sent": 1
+  },
+  "cfee38c25797a9a1": {
+    "dismissed": null,
+    "first_seen": "2026-10-30T04:32:17.655149+00:00",
+    "last_score": 58,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 58,
+        "summary": "A project that uses DOOM game mechanics and voodoo dolls to build a transformer model."
+      }
+    },
+    "times_sent": 0
   },
   "d07b51d730b18e3a": {
     "dismissed": null,
@@ -18218,7 +18442,7 @@
   "d7f1e98252a76066": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 66,
+    "last_score": 67,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -18848,7 +19072,7 @@
   "deea08fa2c3edd03": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 58,
+    "last_score": 75,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -19406,15 +19630,15 @@
   "e47f3b80ee47fb42": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 150,
+    "last_score": 453,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-28T14:52:13.974994+00:00",
-        "relevance": 5,
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
+        "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 112,
-        "summary": "dsh-go is described as a DeepSeek Harness for running locally on a phone and remotely controlling your computer, as an unofficial Android app."
+        "source_score": 453,
+        "summary": "An Android app that runs the DeepSeek Harness locally on a phone and can also remotely control a computer."
       }
     },
     "times_sent": 0
@@ -19852,7 +20076,7 @@
   "ea41a986fe715307": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 139,
+    "last_score": 141,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -19898,15 +20122,15 @@
   "eacda3e93973e979": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 97,
+    "last_score": 197,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
         "relevance": 1,
         "rubric": "02189e2467e9",
-        "source_score": 97,
-        "summary": "A repo advertising a KMS Pico activation tool setup, tagged with key-management and Office-related topics."
+        "source_score": 197,
+        "summary": "A repository advertised as a pre-activated standalone KMS Pico activation setup."
       }
     },
     "times_sent": 0
@@ -20025,15 +20249,15 @@
   "ebce976dca651755": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 97,
+    "last_score": 197,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-29T20:52:50.908704+00:00",
+        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
         "relevance": 1,
         "rubric": "02189e2467e9",
-        "source_score": 97,
-        "summary": "A repo advertising a pre-activated Whale Tracker desktop app tagged with blockchain-intelligence topics."
+        "source_score": 197,
+        "summary": "A repository advertised as a pre-activated desktop whale/crypto transaction tracker."
       }
     },
     "times_sent": 0
@@ -20133,7 +20357,7 @@
   "ee00c162645c4160": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 115,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20255,7 +20479,7 @@
   "ef9d5fd64ced6622": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 55,
+    "last_score": 56,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20523,7 +20747,7 @@
   "f2a1d614a2bbfbb8": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 341,
+    "last_score": 351,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20792,7 +21016,7 @@
   "f663307c1e53d047": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 62,
+    "last_score": 68,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20900,7 +21124,7 @@
   "f7d9aacdb2853b55": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 37,
+    "last_score": 38,
     "ranks": {
       "tooling": {
         "queued_at": null,
