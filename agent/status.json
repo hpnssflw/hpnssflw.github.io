@@ -4,47 +4,38 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 68,
+        "already_ranked": 72,
         "dismissed": 4,
-        "seen": 19
-      },
-      "inbox": {
-        "expired": 4
+        "seen": 23
       },
       "rank": {
-        "below_relevance": 10,
-        "over_max_items": 4
+        "below_relevance": 3,
+        "over_max_items": 5
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 65,
+        "already_ranked": 70,
         "dismissed": 4,
-        "seen": 20
-      },
-      "inbox": {
-        "expired": 3
+        "seen": 23
       },
       "rank": {
-        "below_relevance": 29,
+        "below_relevance": 19,
         "over_max_items": 23
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 109
+        "outside_window": 107
       },
       "dedupe": {
-        "already_ranked": 24,
+        "already_ranked": 23,
         "dismissed": 5,
-        "seen": 17
-      },
-      "inbox": {
-        "expired": 2
+        "seen": 19
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 11
+        "below_relevance": 4,
+        "over_max_items": 13
       }
     }
   },
@@ -57,140 +48,134 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 109,
-      "in_window": 109,
-      "kept": 4,
-      "new": 18
+      "collected": 107,
+      "in_window": 107,
+      "kept": 0,
+      "new": 8
     },
     "tooling": {
-      "collected": 144,
-      "in_window": 144,
-      "kept": 3,
-      "new": 55
+      "collected": 139,
+      "in_window": 139,
+      "kept": 0,
+      "new": 42
     },
     "web-products": {
-      "collected": 169,
-      "in_window": 60,
-      "kept": 2,
-      "new": 14
+      "collected": 171,
+      "in_window": 64,
+      "kept": 0,
+      "new": 17
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 7,
-      "source": "github",
-      "title": "shipwords-dev/shipwords",
-      "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359602+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 8,
-      "source": "rss",
-      "title": "Two Circles, One Connection, and border-shape",
-      "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359591+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359576+00:00",
+      "ts": "2026-10-30T20:26:26.992087+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359568+00:00",
+      "ts": "2026-10-30T20:26:26.992079+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359558+00:00",
+      "ts": "2026-10-30T20:26:26.992071+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359550+00:00",
+      "ts": "2026-10-30T20:26:26.992062+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359541+00:00",
+      "ts": "2026-10-30T20:26:26.992054+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359532+00:00",
+      "ts": "2026-10-30T20:26:26.992045+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359522+00:00",
+      "ts": "2026-10-30T20:26:26.992036+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
+      "topic": "web-products",
+      "ts": "2026-10-30T20:26:26.992010+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Cost of college versus the return on investement",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359512+00:00",
+      "ts": "2026-10-30T20:26:26.992001+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359501+00:00",
+      "ts": "2026-10-30T20:26:26.991992+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "ElementaryUI \u2013 Swift, in the Browser",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359471+00:00",
+      "ts": "2026-10-30T20:26:26.991982+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Pico CSS is no longer maintained",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:16.359401+00:00",
+      "ts": "2026-10-30T20:26:26.991972+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Supporting a shared AI training control for websites",
+      "topic": "web-products",
+      "ts": "2026-10-30T20:26:26.991958+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Policing protests in India",
+      "title": "What Is BLUF? How to Write Bottom Line Up Front (+ Free Rewriter Tool)",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:11.984704+00:00",
+      "ts": "2026-10-30T20:26:26.991714+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "already_ranked",
-      "title": "How the fastest-growing enterprises on Stripe scale globally",
+      "reason": "below_relevance",
+      "title": "NiazMorshed2007/reanimate",
       "topic": "web-products",
-      "ts": "2026-10-30T14:52:08.386380+00:00",
+      "ts": "2026-10-30T20:26:26.991702+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-24T15:25:48.617126+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-24T18:35:49.184654+00:00"
@@ -282,28 +267,32 @@
     {
       "kept": 9,
       "ts": "2026-10-30T14:51:05.460015+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-30T20:25:26.609499+00:00"
     }
   ],
-  "streak": 340,
+  "streak": 341,
   "topics": [
     {
-      "collected": 109,
-      "kept": 4,
+      "collected": 107,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 144,
-      "kept": 3,
+      "collected": 139,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 169,
-      "kept": 2,
+      "collected": 171,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-30T14:51:05.460015+00:00"
+  "updated_at": "2026-10-30T20:25:26.609499+00:00"
 }
