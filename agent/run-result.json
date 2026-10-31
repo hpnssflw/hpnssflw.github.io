@@ -332,105 +332,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "Five-layer 2026 AI engineering roadmap built around RAG, agents and evals, each layer ending in a showable mini-project, plus a 12-week sample plan (~25 weeks at 10 hrs/week); it argues evaluation engineering is the skill to learn first.",
-        "title": "h9-tec/ai-roadmap-2026",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/h9-tec/ai-roadmap-2026"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "Source-backed catalog of papers, models, datasets, benchmarks and tools for computer-use agents, with an English survey manuscript, topic browsing, a coverage ledger and scheduled discovery scans three times daily.",
-        "title": "reacher-z/Awesome-CUA",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/reacher-z/Awesome-CUA"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "Community plugin adding blackboard blocks to PTC mode in DeepSeek Harness so the model decides what to compact, closing a block with a handover summary; v0.4.0 uses block_compact({ids, content}) and drops block_summary.",
-        "title": "mengwEX/dsh-block-ptc",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/mengwEX/dsh-block-ptc"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "OpenAI-compatible proxy for the Gemini web app that authenticates with Google session cookies instead of an API key, adding account pooling, quota-aware failover, image/video generation, Search grounding and a built-in MCP server.",
-        "title": "azrinaldi/gemini-stealth-bridge",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/azrinaldi/gemini-stealth-bridge"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "Corgi is a terminal multiplexer for humans and agents that shows each agent's status, token activity and file changes, keeps processes running in the background like tmux, and adds agent-aware tabs, worktrees, resource usage and image paste.",
-        "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://corgi.computer/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "Vesalius gives Claude Code a locally built map of a repository so it can answer code questions with exact file and line references in fewer calls; its benchmark cut token use roughly in half and it also ships as a Mac app and VS Code extension.",
-        "title": "haplollc/Vesalius",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/haplollc/Vesalius"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "OpenIDEA is an IntelliJ IDEA-style IDE rebuilt in Rust, offering editor, code insight, debugger, Git, terminal, database and HTTP clients for 60+ languages on macOS, Windows and Linux, with benchmarks showing faster startup and lower memory than IntelliJ IDEA.",
-        "title": "l0ng-ai/openidea",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/l0ng-ai/openidea"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Dominik’s “Vertical Codebase” architecture idea proposes co-locating hooks, types, queries, and other related files by conceptual site areas such as the dashboard, extending component-level co-location instead of spreading them out.",
-        "title": "The Vertical Codebase",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/the-vertical-codebase/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-24T08:40:36.292566+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "An article on accordion icon UX research finding the caret is the safest icon choice, split menus and split buttons are harmful, and icon/text labels should not link to different actions; no icon implies a direct page link.",
-        "title": "Accordion Icons: Which Work Best?",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-24T22:15:11.175692+00:00",
         "score": 7,
         "source": "hn",
@@ -1099,12 +1000,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://developers.google.com/search/blog/2026/10/ai-training-control"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "InferSSD is an Apache-2.0 project built on llama.cpp that runs large mixture-of-experts GGUF models from SSD when they exceed RAM/VRAM, with browser chat and an OpenAI-compatible API. Its benchmarks claim up to 4.85× prefill and 3.29× decode speedups over llama.cpp on the same hardware.",
+        "title": "wici-ai/inferssd",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/wici-ai/inferssd"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "DSH-Android runs the DeepSeek Harness (dsh) agent natively on an Android phone without root or Termux: Node 24 is compiled into the app and driven via dsh's SDK protocol, with Kotlin device tools for screen reading, taps and system settings, optional Shizuku, and scheduling triggers.",
+        "title": "jackwener/DSH-Android",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/jackwener/DSH-Android"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "A Chinese-language self-study course for Python developers on building AI agents, based on Stanford CS329Z public materials: 19 lessons plus 4 hands-on exercises covering LLMs, RAG, tool calling, memory, multi-agent collaboration and safety, shipped as Markdown sources with an offline HTML reader.",
+        "title": "wanghao-SunSky/cs329z-chinese",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/wanghao-SunSky/cs329z-chinese"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "Mika is an Apache-2.0 Android agent app (public beta) that executes one-sentence requests on a private background screen while you keep using the phone, with a built-in browser and local Linux sandbox. An adb-forwarded MCP endpoint lets desktop AI tools dispatch tasks to it; you supply your own model API key.",
+        "title": "wangzan101/Mika",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/wangzan101/Mika"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "hnoss, an immediate-mode TUI library for Odin, written in pure Odin with no C or ncurses bindings, shipping widgets, braille graphs, truecolor 60 fps double-buffered diffing and layout tools. Installable only as a git submodule or clone since Odin has no package manager.",
+        "title": "Huseynteymurzade28/hnoss",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Huseynteymurzade28/hnoss"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Lasm, a toolchain that compiles ordinary Lean 4 programs ahead of time to WebAssembly, so one codebase can target Node, serverless/edge functions, WASI or the browser with proved properties; it ships on npm and bundles Lean 4.35.0, needing only Node/Bun/Deno.",
+        "title": "Show HN: Lasm – Write formally verified webapps in Lean for Node/serverless/edge",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/Millillion/lasm"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Phorion's write-up on a backdoored official Claude Code for VS Code extension bundle on the Cursor Marketplace (versions 2.1.312 and 2.1.313) that drops a persistent SSH backdoor on macOS, Linux and Windows. Cursor has removed the affected versions.",
+        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Pico CSS, a minimal CSS framework for semantic HTML, has ended maintenance: v2.1.1 is the final release and repositories are archived, while npm, jsDelivr, and the site remain online. The author cites AI-generated lightweight HTML and says a modern-CSS rewrite would be a different project.",
+        "title": "Pico CSS is no longer maintained",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://github.com/picocss/pico/discussions/754"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T14:19:13.393090+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "ElementaryUI lets builders run declarative Swift applications natively in the browser via WebAssembly, using SwiftUI-like @View and @State syntax for UI and event handling.",
+        "title": "ElementaryUI – Swift, in the Browser",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://elementary.codes"
       }
     ]
   },
   "run": {
-    "at": "2026-10-31T04:14:17.628370+00:00",
-    "id": "2026-10-31T0414Z",
+    "at": "2026-10-31T14:19:13.393090+00:00",
+    "id": "2026-10-31T1419Z",
     "mode": "real",
     "offline": false
   },
@@ -1115,18 +1115,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 105,
-          "out": 105
+          "in": 102,
+          "out": 102
         },
         "tooling": {
           "drops": {},
-          "in": 139,
-          "out": 139
+          "in": 144,
+          "out": 144
         },
         "web-products": {
           "drops": {},
-          "in": 168,
-          "out": 168
+          "in": 166,
+          "out": 166
         }
       },
       "stage": "collect"
@@ -1136,20 +1136,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 105,
-          "out": 105
+          "in": 102,
+          "out": 102
         },
         "tooling": {
           "drops": {},
-          "in": 139,
-          "out": 139
+          "in": 144,
+          "out": 144
         },
         "web-products": {
           "drops": {
-            "outside_window": 107
+            "outside_window": 106
           },
-          "in": 168,
-          "out": 61
+          "in": 166,
+          "out": 60
         }
       },
       "stage": "window"
@@ -1159,27 +1159,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 4,
-            "seen": 20
+            "dismissed": 3,
+            "seen": 18
           },
-          "in": 105,
+          "in": 102,
           "out": 81
         },
         "tooling": {
           "drops": {
             "dismissed": 4,
-            "seen": 20
+            "seen": 17
           },
-          "in": 139,
-          "out": 115
+          "in": 144,
+          "out": 123
         },
         "web-products": {
           "drops": {
-            "dismissed": 5,
-            "seen": 17
+            "dismissed": 6,
+            "seen": 16
           },
-          "in": 61,
-          "out": 39
+          "in": 60,
+          "out": 38
         }
       },
       "stage": "dedupe"
@@ -1189,24 +1189,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 69
+            "already_ranked": 70
           },
           "in": 81,
-          "out": 12
+          "out": 11
         },
         "tooling": {
           "drops": {
-            "already_ranked": 81
+            "already_ranked": 63
           },
-          "in": 115,
-          "out": 34
+          "in": 123,
+          "out": 60
         },
         "web-products": {
           "drops": {
-            "already_ranked": 23
+            "already_ranked": 21
           },
-          "in": 39,
-          "out": 16
+          "in": 38,
+          "out": 17
         }
       },
       "stage": "cache"
@@ -1216,18 +1216,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 6,
+          "out": 6
         },
         "tooling": {
           "drops": {},
-          "in": 12,
-          "out": 12
+          "in": 39,
+          "out": 39
         },
         "web-products": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 4,
+          "out": 4
         }
       },
       "stage": "enrich"
@@ -1237,24 +1237,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 5
+            "below_relevance": 3
           },
-          "in": 12,
-          "out": 7
+          "in": 11,
+          "out": 8
         },
         "tooling": {
           "drops": {
-            "below_relevance": 10
+            "below_relevance": 37
           },
-          "in": 34,
-          "out": 24
+          "in": 60,
+          "out": 23
         },
         "web-products": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 4
           },
-          "in": 16,
-          "out": 14
+          "in": 17,
+          "out": 13
         }
       },
       "stage": "rank"
@@ -1264,24 +1264,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 7
+            "over_max_items": 4
           },
-          "in": 7,
-          "out": 0
+          "in": 8,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 24
+            "over_max_items": 20
           },
-          "in": 24,
-          "out": 0
+          "in": 23,
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 11
           },
-          "in": 14,
-          "out": 1
+          "in": 13,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1291,21 +1291,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 2,
           "notes": {
-            "summarized": 1
+            "summarized": 2
           },
-          "out": 1
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1315,17 +1321,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
+          "in": 4,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
+          "in": 3,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 2,
           "out": 21
         }
       },
@@ -1335,24 +1341,34 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "notes": {
+            "asked": 4
+          },
+          "out": 24
         },
         "tooling": {
-          "drops": {},
-          "in": 21,
-          "out": 21
-        },
-        "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 3
           },
           "in": 21,
           "notes": {
-            "asked": 1
+            "asked": 3
           },
-          "out": 20
+          "out": 18
+        },
+        "web-products": {
+          "drops": {
+            "expired": 2
+          },
+          "in": 21,
+          "notes": {
+            "asked": 2
+          },
+          "out": 19
         }
       },
       "stage": "review"

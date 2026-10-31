@@ -4,41 +4,47 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 69,
-        "dismissed": 4,
-        "seen": 20
+        "already_ranked": 70,
+        "dismissed": 3,
+        "seen": 18
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 5,
-        "over_max_items": 7
+        "below_relevance": 3,
+        "over_max_items": 4
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 81,
+        "already_ranked": 63,
         "dismissed": 4,
-        "seen": 20
+        "seen": 17
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 10,
-        "over_max_items": 24
+        "below_relevance": 37,
+        "over_max_items": 20
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 107
+        "outside_window": 106
       },
       "dedupe": {
-        "already_ranked": 23,
-        "dismissed": 5,
-        "seen": 17
+        "already_ranked": 21,
+        "dismissed": 6,
+        "seen": 16
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 13
+        "below_relevance": 4,
+        "over_max_items": 11
       }
     }
   },
@@ -51,139 +57,136 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 105,
-      "in_window": 105,
-      "kept": 0,
-      "new": 12
+      "collected": 102,
+      "in_window": 102,
+      "kept": 4,
+      "new": 11
     },
     "tooling": {
-      "collected": 139,
-      "in_window": 139,
-      "kept": 0,
-      "new": 34
+      "collected": 144,
+      "in_window": 144,
+      "kept": 3,
+      "new": 60
     },
     "web-products": {
-      "collected": 168,
-      "in_window": 61,
-      "kept": 1,
-      "new": 16
+      "collected": 166,
+      "in_window": 60,
+      "kept": 2,
+      "new": 17
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 8,
-      "source": "rss",
-      "title": "Supporting a shared AI training control for websites",
+      "score": 7,
+      "source": "hn",
+      "title": "ElementaryUI \u2013 Swift, in the Browser",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466549+00:00",
+      "ts": "2026-10-31T14:20:22.795207+00:00",
       "verdict": "kept"
     },
     {
-      "reason": "over_max_items",
-      "title": "Worst Halloween candies, according to the data",
+      "score": 7,
+      "source": "hn",
+      "title": "Pico CSS is no longer maintained",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466529+00:00",
-      "verdict": "drop"
+      "ts": "2026-10-31T14:20:22.795194+00:00",
+      "verdict": "kept"
     },
     {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466501+00:00",
+      "ts": "2026-10-31T14:20:22.795174+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466495+00:00",
+      "ts": "2026-10-31T14:20:22.795163+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466489+00:00",
+      "ts": "2026-10-31T14:20:22.795152+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Worst Halloween candies, according to the data",
+      "topic": "web-products",
+      "ts": "2026-10-31T14:20:22.795139+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466483+00:00",
+      "ts": "2026-10-31T14:20:22.795126+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466477+00:00",
+      "ts": "2026-10-31T14:20:22.795101+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466471+00:00",
+      "ts": "2026-10-31T14:20:22.795088+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466464+00:00",
+      "ts": "2026-10-31T14:20:22.795075+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466457+00:00",
+      "ts": "2026-10-31T14:20:22.795058+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Cost of college versus the return on investement",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466450+00:00",
+      "ts": "2026-10-31T14:20:22.795032+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466443+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "ElementaryUI \u2013 Swift, in the Browser",
-      "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466431+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Pico CSS is no longer maintained",
-      "topic": "web-products",
-      "ts": "2026-10-31T04:15:18.466381+00:00",
+      "ts": "2026-10-31T14:20:22.794967+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "sirioberati/YouTube-AI-Motion-Graphics",
+      "title": "A Spark Of Color In November\u2019s Gray (2026 Wallpapers Edition)",
       "topic": "web-products",
-      "ts": "2026-10-31T04:15:16.285821+00:00",
+      "ts": "2026-10-31T14:20:19.608197+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "NiazMorshed2007/reanimate",
+      "topic": "web-products",
+      "ts": "2026-10-31T14:20:19.608183+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-24T22:15:11.175692+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-25T03:21:21.045532+00:00"
@@ -275,28 +278,32 @@
     {
       "kept": 1,
       "ts": "2026-10-31T04:14:17.628370+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-10-31T14:19:13.393090+00:00"
     }
   ],
-  "streak": 342,
+  "streak": 343,
   "topics": [
     {
-      "collected": 105,
-      "kept": 0,
+      "collected": 102,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 139,
-      "kept": 0,
+      "collected": 144,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 168,
-      "kept": 1,
+      "collected": 166,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-31T04:14:17.628370+00:00"
+  "updated_at": "2026-10-31T14:19:13.393090+00:00"
 }
