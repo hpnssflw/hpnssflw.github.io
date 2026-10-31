@@ -4,29 +4,23 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 70,
-        "dismissed": 3,
-        "seen": 18
-      },
-      "inbox": {
-        "expired": 4
+        "already_ranked": 68,
+        "dismissed": 2,
+        "seen": 23
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 4
+        "below_relevance": 5,
+        "over_max_items": 5
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 63,
-        "dismissed": 4,
-        "seen": 17
-      },
-      "inbox": {
-        "expired": 3
+        "already_ranked": 93,
+        "dismissed": 3,
+        "seen": 20
       },
       "rank": {
-        "below_relevance": 37,
+        "below_relevance": 6,
         "over_max_items": 20
       }
     },
@@ -35,15 +29,12 @@
         "outside_window": 106
       },
       "dedupe": {
-        "already_ranked": 21,
+        "already_ranked": 26,
         "dismissed": 6,
-        "seen": 16
-      },
-      "inbox": {
-        "expired": 2
+        "seen": 18
       },
       "rank": {
-        "below_relevance": 4,
+        "below_relevance": 8,
         "over_max_items": 11
       }
     }
@@ -57,140 +48,134 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 102,
-      "in_window": 102,
-      "kept": 4,
-      "new": 11
+      "collected": 103,
+      "in_window": 103,
+      "kept": 0,
+      "new": 10
     },
     "tooling": {
-      "collected": 144,
-      "in_window": 144,
-      "kept": 3,
-      "new": 60
+      "collected": 142,
+      "in_window": 142,
+      "kept": 0,
+      "new": 26
     },
     "web-products": {
-      "collected": 166,
-      "in_window": 60,
-      "kept": 2,
-      "new": 17
+      "collected": 175,
+      "in_window": 69,
+      "kept": 0,
+      "new": 19
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 7,
-      "source": "hn",
-      "title": "ElementaryUI \u2013 Swift, in the Browser",
-      "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795207+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 7,
-      "source": "hn",
-      "title": "Pico CSS is no longer maintained",
-      "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795194+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795174+00:00",
+      "ts": "2026-10-31T19:44:54.953466+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "It Took a Village to Redesign the DVS Website",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795163+00:00",
+      "ts": "2026-10-31T19:44:54.953449+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795152+00:00",
+      "ts": "2026-10-31T19:44:54.953437+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795139+00:00",
+      "ts": "2026-10-31T19:44:54.953425+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795126+00:00",
+      "ts": "2026-10-31T19:44:54.953413+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795101+00:00",
+      "ts": "2026-10-31T19:44:54.953401+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795088+00:00",
+      "ts": "2026-10-31T19:44:54.953388+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795075+00:00",
+      "ts": "2026-10-31T19:44:54.953376+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795058+00:00",
+      "ts": "2026-10-31T19:44:54.953363+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Cost of college versus the return on investement",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.795032+00:00",
+      "ts": "2026-10-31T19:44:54.953348+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:22.794967+00:00",
+      "ts": "2026-10-31T19:44:54.953329+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "A Spark Of Color In November\u2019s Gray (2026 Wallpapers Edition)",
+      "title": "JotunheimCount/rpocket-team-eyeproof",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:19.608197+00:00",
+      "ts": "2026-10-31T19:44:54.953034+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "NiazMorshed2007/reanimate",
+      "title": "Tyrantwa70342ve/garage-resp",
       "topic": "web-products",
-      "ts": "2026-10-31T14:20:19.608183+00:00",
+      "ts": "2026-10-31T19:44:54.953019+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "TitanByDark/resp-codex-image-context-runtime",
+      "topic": "web-products",
+      "ts": "2026-10-31T19:44:54.953004+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "OverFaun/nexcanvas-drawio-resp",
+      "topic": "web-products",
+      "ts": "2026-10-31T19:44:54.952975+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-25T03:21:21.045532+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-25T08:57:53.493589+00:00"
@@ -282,28 +267,32 @@
     {
       "kept": 9,
       "ts": "2026-10-31T14:19:13.393090+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-31T19:43:58.511876+00:00"
     }
   ],
-  "streak": 343,
+  "streak": 344,
   "topics": [
     {
-      "collected": 102,
-      "kept": 4,
+      "collected": 103,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 144,
-      "kept": 3,
+      "collected": 142,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 166,
-      "kept": 2,
+      "collected": 175,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-31T14:19:13.393090+00:00"
+  "updated_at": "2026-10-31T19:43:58.511876+00:00"
 }
