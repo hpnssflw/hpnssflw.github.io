@@ -4,38 +4,41 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 68,
+        "already_ranked": 71,
         "dismissed": 2,
         "seen": 23
       },
       "rank": {
-        "below_relevance": 5,
+        "below_relevance": 3,
         "over_max_items": 5
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 93,
+        "already_ranked": 95,
         "dismissed": 3,
-        "seen": 20
+        "seen": 21
       },
       "rank": {
-        "below_relevance": 6,
+        "below_relevance": 8,
         "over_max_items": 20
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 106
+        "outside_window": 107
       },
       "dedupe": {
-        "already_ranked": 26,
-        "dismissed": 6,
-        "seen": 18
+        "already_ranked": 34,
+        "dismissed": 7,
+        "seen": 17
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 8,
-        "over_max_items": 11
+        "below_relevance": 1,
+        "over_max_items": 10
       }
     }
   },
@@ -48,138 +51,134 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 103,
-      "in_window": 103,
+      "collected": 104,
+      "in_window": 104,
       "kept": 0,
-      "new": 10
+      "new": 8
     },
     "tooling": {
-      "collected": 142,
-      "in_window": 142,
+      "collected": 147,
+      "in_window": 147,
       "kept": 0,
-      "new": 26
+      "new": 28
     },
     "web-products": {
-      "collected": 175,
+      "collected": 176,
       "in_window": 69,
       "kept": 0,
-      "new": 19
+      "new": 11
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 70,
+  "pending_count": 69,
   "recent_events": [
     {
       "reason": "over_max_items",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953466+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "It Took a Village to Redesign the DVS Website",
-      "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953449+00:00",
+      "ts": "2026-10-31T23:06:58.892564+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953437+00:00",
+      "ts": "2026-10-31T23:06:58.892553+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953425+00:00",
+      "ts": "2026-10-31T23:06:58.892541+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953413+00:00",
+      "ts": "2026-10-31T23:06:58.892529+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953401+00:00",
+      "ts": "2026-10-31T23:06:58.892518+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953388+00:00",
+      "ts": "2026-10-31T23:06:58.892506+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953376+00:00",
+      "ts": "2026-10-31T23:06:58.892493+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953363+00:00",
+      "ts": "2026-10-31T23:06:58.892479+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Cost of college versus the return on investement",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953348+00:00",
+      "ts": "2026-10-31T23:06:58.892464+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953329+00:00",
+      "ts": "2026-10-31T23:06:58.892440+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "JotunheimCount/rpocket-team-eyeproof",
+      "title": "Show HN: NES Contra (1987) port (ASM \u2013> C and then C \u2013> WebAssembly)",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953034+00:00",
+      "ts": "2026-10-31T23:06:58.892150+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "Tyrantwa70342ve/garage-resp",
+      "reason": "already_ranked",
+      "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953019+00:00",
+      "ts": "2026-10-31T23:06:56.855488+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "TitanByDark/resp-codex-image-context-runtime",
+      "reason": "already_ranked",
+      "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.953004+00:00",
+      "ts": "2026-10-31T23:06:56.855476+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "below_relevance",
-      "title": "OverFaun/nexcanvas-drawio-resp",
+      "reason": "already_ranked",
+      "title": "Full 3-D scan and live body metrics for Neal\u2019s about page",
       "topic": "web-products",
-      "ts": "2026-10-31T19:44:54.952975+00:00",
+      "ts": "2026-10-31T23:06:56.855462+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Cutting the cost of tokens",
+      "topic": "web-products",
+      "ts": "2026-10-31T23:06:56.855452+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-25T08:57:53.493589+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-25T15:36:22.052233+00:00"
@@ -271,28 +270,32 @@
     {
       "kept": 0,
       "ts": "2026-10-31T19:43:58.511876+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-10-31T23:06:14.387243+00:00"
     }
   ],
-  "streak": 344,
+  "streak": 345,
   "topics": [
     {
-      "collected": 103,
+      "collected": 104,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 142,
+      "collected": 147,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 175,
+      "collected": 176,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-31T19:43:58.511876+00:00"
+  "updated_at": "2026-10-31T23:06:14.387243+00:00"
 }

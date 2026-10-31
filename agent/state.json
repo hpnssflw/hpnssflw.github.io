@@ -1117,7 +1117,7 @@
     "times_sent": 0
   },
   "0b851f7076b12092": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-22T22:58:13.400991+00:00",
     "last_score": 287,
     "ranks": {
@@ -1702,7 +1702,7 @@
   "11bc87decd601d46": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 346,
+    "last_score": 352,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2126,6 +2126,22 @@
     "first_seen": "2026-08-15T16:10:52.886374+00:00",
     "last_score": 199,
     "ranks": {},
+    "times_sent": 0
+  },
+  "16c0cbd7ec35c5d2": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A Microsoft Visio 2026 installer described as a ready-to-run desktop edition with all features activated."
+      }
+    },
     "times_sent": 0
   },
   "1700cf97ad63cf71": {
@@ -2765,7 +2781,7 @@
   "1e03415a592fab86": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 2613,
+    "last_score": 2674,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -3250,7 +3266,7 @@
   "2388603d542f04fc": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 76,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3430,7 +3446,7 @@
   "2632413716a4ff8d": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 55,
+    "last_score": 56,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3589,7 +3605,7 @@
   "281f179371eea4b4": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 127,
+    "last_score": 138,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3901,7 +3917,7 @@
   "2b46813cd2083b4d": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 147,
+    "last_score": 156,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4103,7 +4119,7 @@
   "2cf1fb795ba0396c": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 411,
+    "last_score": 412,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -5283,7 +5299,7 @@
   "37d646f6268ddbb7": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 286,
+    "last_score": 287,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5483,7 +5499,7 @@
   "3a256c4f2ddfd09c": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 50,
+    "last_score": 52,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6343,7 +6359,7 @@
   "44da56d320b41406": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 280,
+    "last_score": 282,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6850,7 +6866,7 @@
   "49270cf8389d73cc": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 546,
+    "last_score": 548,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7088,7 +7104,7 @@
   "4cfe2221766f430d": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 117,
+    "last_score": 119,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7428,7 +7444,7 @@
   "4ff51e4e30dd0b36": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 335,
+    "last_score": 336,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7731,7 +7747,7 @@
   "52ed5fcd54e4c7b1": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 3538,
+    "last_score": 3570,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -7950,7 +7966,7 @@
   "54e2bdb4495011dc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 198,
+    "last_score": 209,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -8493,7 +8509,7 @@
   "5a24e14dcd271d5b": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 98,
+    "last_score": 99,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -8839,7 +8855,7 @@
   "5df0a66419d938a3": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 237,
+    "last_score": 238,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9197,7 +9213,7 @@
   "62bd6f0dc0ed1ddc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 175,
+    "last_score": 180,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9575,6 +9591,22 @@
     },
     "times_sent": 0
   },
+  "66b1d8c95b1508c5": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 37,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 37,
+        "summary": "A Show HN for a USB-C LTE modem that gives a computer a phone line."
+      }
+    },
+    "times_sent": 0
+  },
   "66ce1636137bc229": {
     "dismissed": "expired",
     "first_seen": "2026-10-15T22:54:23.821843+00:00",
@@ -9617,7 +9649,7 @@
   "673434d2f24e1eab": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 92,
+    "last_score": 93,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9796,7 +9828,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 302,
+    "last_score": 308,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9812,7 +9844,7 @@
   "68d63728ca70cfdd": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 1054,
+    "last_score": 1080,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10104,7 +10136,7 @@
   "6af525c1604adec7": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 106,
+    "last_score": 108,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11037,7 +11069,7 @@
   "74d92a9254a44b5f": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 61,
+    "last_score": 62,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -11300,6 +11332,22 @@
     },
     "times_sent": 0
   },
+  "778916995661ca3b": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 42,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 42,
+        "summary": "A Show HN about a language model implemented in a boot sector, inspired by 512-byte boot-sector demos and generating boot logs for nonexistent hardware."
+      }
+    },
+    "times_sent": 0
+  },
   "77b95ed0649c6f22": {
     "dismissed": null,
     "first_seen": "2026-10-26T03:23:13.420938+00:00",
@@ -11342,7 +11390,7 @@
   "77da46b84293ae0c": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 621,
+    "last_score": 627,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -11608,7 +11656,7 @@
   "7b74093c111f9979": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 219,
+    "last_score": 225,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11647,7 +11695,7 @@
   "7bba052852d5265f": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 180,
+    "last_score": 181,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12219,7 +12267,7 @@
   "833b856438416e75": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 400,
+    "last_score": 448,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -12458,6 +12506,22 @@
     },
     "times_sent": 0
   },
+  "86a00e34a45ab11c": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 33,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 33,
+        "summary": "An article titled 'Much Ado About None: Sentinel Values in Python.'"
+      }
+    },
+    "times_sent": 0
+  },
   "86bf5cd3a2e65085": {
     "dismissed": "expired",
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
@@ -12626,7 +12690,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 154,
+    "last_score": 157,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12713,7 +12777,7 @@
   "89aae3fb35c1bbe2": {
     "dismissed": null,
     "first_seen": "2026-10-24T15:25:48.617126+00:00",
-    "last_score": 113,
+    "last_score": 114,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-25T08:57:53.493589+00:00",
@@ -13060,7 +13124,7 @@
   "8d821849286ada42": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 154,
+    "last_score": 157,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13235,7 +13299,7 @@
   "8fd782ed6a25d885": {
     "dismissed": null,
     "first_seen": "2026-10-25T08:57:53.493589+00:00",
-    "last_score": 164,
+    "last_score": 166,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14435,15 +14499,15 @@
   "9b602871ebeb87d5": {
     "dismissed": null,
     "first_seen": "2026-10-31T19:43:58.511876+00:00",
-    "last_score": 40,
+    "last_score": 145,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-31T19:43:58.511876+00:00",
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
         "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 40,
-        "summary": "A blog post says GPT-5.6 Sol can beat Factorio on peaceful mode."
+        "source_score": 145,
+        "summary": "A post claiming that GPT-5.6 Sol can beat the game Factorio on peaceful mode."
       }
     },
     "times_sent": 0
@@ -14892,7 +14956,7 @@
   "a105d7ef246bdc52": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 154,
+    "last_score": 161,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -14970,7 +15034,7 @@
   "a13f736d98945685": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 959,
+    "last_score": 966,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15744,7 +15808,7 @@
   "a826b29b8d795d6c": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 627,
+    "last_score": 780,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -16654,7 +16718,7 @@
   "b130dbfc8d0ff00e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 206,
+    "last_score": 212,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16865,7 +16929,7 @@
   "b380127f8f95794c": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 177,
+    "last_score": 192,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -16890,6 +16954,22 @@
         "rubric": "02189e2467e9",
         "source_score": 103,
         "summary": "A pre-activated standalone torrent client installer."
+      }
+    },
+    "times_sent": 0
+  },
+  "b38e8b1f84738296": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 75,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 75,
+        "summary": "A report that Anthropic is taking steps to block Claude from being used to reverse-engineer video games."
       }
     },
     "times_sent": 0
@@ -16934,7 +17014,7 @@
   "b49ec3bd8394c6fb": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 247,
+    "last_score": 250,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17005,7 +17085,7 @@
   "b50c89b4a0e7ebef": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 1690,
+    "last_score": 1704,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17028,7 +17108,7 @@
   "b5636e2775ac4bb7": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 36,
+    "last_score": 37,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -17333,7 +17413,7 @@
   "b808d0a2879133da": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 130,
+    "last_score": 144,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17553,7 +17633,7 @@
   "b99861952fe72624": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 119,
+    "last_score": 120,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17569,7 +17649,7 @@
   "b9b5de18e9156d54": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
-    "last_score": 542,
+    "last_score": 543,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -17802,15 +17882,15 @@
   "bba0da0d1585467e": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 228,
+    "last_score": 233,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-31T04:14:17.628370+00:00",
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
         "relevance": 1,
         "rubric": "02189e2467e9",
-        "source_score": 116,
-        "summary": "A Show HN browser game where you guess TNG episodes."
+        "source_score": 233,
+        "summary": "A Show HN for a Star Trek: The Next Generation episode guessing game honoring Sir Patrick Stewart."
       }
     },
     "times_sent": 0
@@ -18187,6 +18267,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "c064a886f86027c7": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A Voicemod 2026 installer described as a ready-to-run desktop edition with enhanced audio processing and UI improvements."
+      }
+    },
+    "times_sent": 0
+  },
   "c0a0a5f5affd2692": {
     "dismissed": "expired",
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -18220,7 +18316,7 @@
   "c0e3e86aceb957de": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 127,
+    "last_score": 128,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -18329,7 +18425,7 @@
   "c14d1aee7a8cab5e": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 111,
+    "last_score": 113,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18847,7 +18943,7 @@
   "c74913fb1896debd": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 235,
+    "last_score": 236,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -19413,7 +19509,7 @@
   "cd289ebd6dc580cd": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 397,
+    "last_score": 400,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20258,7 +20354,7 @@
   "d7f1e98252a76066": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 79,
+    "last_score": 81,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -20374,6 +20470,22 @@
     },
     "times_sent": 0
   },
+  "d90e1031b9e75e95": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 59,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 49,
+        "summary": "A Show HN for Ghostman, described as a fast, keyboard-driven TUI API client and webhook inspector."
+      }
+    },
+    "times_sent": 0
+  },
   "d911ff91163f6c4c": {
     "dismissed": "expired",
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -20471,7 +20583,7 @@
   "d9b54a915c19f75e": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 168,
+    "last_score": 180,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20647,6 +20759,22 @@
     },
     "times_sent": 0
   },
+  "db2fe0bc67839b49": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A Serato DJ Pro 2026 standalone installation build described as a ready-to-run, fully functional desktop utility."
+      }
+    },
+    "times_sent": 0
+  },
   "dbaf7f3960580783": {
     "dismissed": null,
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
@@ -20727,7 +20855,7 @@
   "dc4cca89ce0bf93f": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 294,
+    "last_score": 301,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -21072,6 +21200,22 @@
         "rubric": "02189e2467e9",
         "source_score": 67,
         "summary": "A tool to distill Jev into a local model with a disagreement bound."
+      }
+    },
+    "times_sent": 0
+  },
+  "df8ca25721250f37": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 191,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 191,
+        "summary": "A GitHub SDK providing default personas, durable character memory, and Bedrock/OpenAI adapters in one package for building LLM persona assistants."
       }
     },
     "times_sent": 0
@@ -22257,7 +22401,7 @@
   "eb5b416ace686049": {
     "dismissed": null,
     "first_seen": "2026-10-31T19:43:58.511876+00:00",
-    "last_score": 48,
+    "last_score": 59,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -22593,7 +22737,7 @@
   "ef006b6d1900eae3": {
     "dismissed": null,
     "first_seen": "2026-10-31T19:43:58.511876+00:00",
-    "last_score": 196,
+    "last_score": 225,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -22642,6 +22786,30 @@
     "last_score": 628,
     "ranks": {},
     "times_sent": 1
+  },
+  "f00b165a7cee2cfd": {
+    "dismissed": null,
+    "first_seen": "2026-10-31T23:06:14.387243+00:00",
+    "last_score": 31,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 31,
+        "summary": "A Show HN for a port of the 1987 NES game Contra from assembly to C and then to WebAssembly."
+      },
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": 31,
+        "summary": "A Show HN project porting NES Contra from assembly to C and then to WebAssembly for the web."
+      }
+    },
+    "times_sent": 0
   },
   "f036721486abf8a9": {
     "dismissed": null,
@@ -22768,7 +22936,7 @@
   "f14a0c529bd7cba6": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 120,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -23134,15 +23302,15 @@
   "f43d14ba636e5fcc": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 287,
+    "last_score": 516,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-31T04:14:17.628370+00:00",
+        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
         "relevance": 3,
         "rubric": "3472af8a46e1",
-        "source_score": 196,
-        "summary": "A Windows-installer AI agent that works with files, projects, and code through Claude Code, Codex, or Antigravity."
+        "source_score": 516,
+        "summary": "A fan-made cyberpunk Windows AI agent that acts on your files, projects and code through Claude Code, Codex or Antigravity, with a no-terminal installer."
       }
     },
     "times_sent": 0
@@ -23280,7 +23448,7 @@
   "f663307c1e53d047": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 73,
+    "last_score": 74,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
