@@ -332,17 +332,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-23T22:54:40.182785+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A blog post recounts a side project that hosted HTML files in an afternoon and, eight months later, drew as many weekly users as the company’s $150k Looker licence, with Looker usage down a third.",
-        "title": "Can we replace a $150k Looker with a bucket of HTML files?",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://david.lequin.dev/blog/bi-software-is-dead/"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-24T08:40:36.292566+00:00",
         "score": 7,
         "source": "github",
@@ -1099,12 +1088,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://github.com/shipwords-dev/shipwords"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-10-31T04:14:17.628370+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "Google plans to support a shared AI training control in robots.txt: a single 'policy token' letting sites opt out across participating AI providers, based on IETF AIPREF work and running alongside Google-Extended.",
+        "title": "Supporting a shared AI training control for websites",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://developers.google.com/search/blog/2026/10/ai-training-control"
       }
     ]
   },
   "run": {
-    "at": "2026-10-30T20:25:26.609499+00:00",
-    "id": "2026-10-30T2025Z",
+    "at": "2026-10-31T04:14:17.628370+00:00",
+    "id": "2026-10-31T0414Z",
     "mode": "real",
     "offline": false
   },
@@ -1115,8 +1115,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 107,
-          "out": 107
+          "in": 105,
+          "out": 105
         },
         "tooling": {
           "drops": {},
@@ -1125,8 +1125,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 171,
-          "out": 171
+          "in": 168,
+          "out": 168
         }
       },
       "stage": "collect"
@@ -1136,8 +1136,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 107,
-          "out": 107
+          "in": 105,
+          "out": 105
         },
         "tooling": {
           "drops": {},
@@ -1148,8 +1148,8 @@
           "drops": {
             "outside_window": 107
           },
-          "in": 171,
-          "out": 64
+          "in": 168,
+          "out": 61
         }
       },
       "stage": "window"
@@ -1160,26 +1160,26 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 4,
-            "seen": 23
+            "seen": 20
           },
-          "in": 107,
-          "out": 80
+          "in": 105,
+          "out": 81
         },
         "tooling": {
           "drops": {
             "dismissed": 4,
-            "seen": 23
+            "seen": 20
           },
           "in": 139,
-          "out": 112
+          "out": 115
         },
         "web-products": {
           "drops": {
             "dismissed": 5,
-            "seen": 19
+            "seen": 17
           },
-          "in": 64,
-          "out": 40
+          "in": 61,
+          "out": 39
         }
       },
       "stage": "dedupe"
@@ -1189,24 +1189,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 72
+            "already_ranked": 69
           },
-          "in": 80,
-          "out": 8
+          "in": 81,
+          "out": 12
         },
         "tooling": {
           "drops": {
-            "already_ranked": 70
+            "already_ranked": 81
           },
-          "in": 112,
-          "out": 42
+          "in": 115,
+          "out": 34
         },
         "web-products": {
           "drops": {
             "already_ranked": 23
           },
-          "in": 40,
-          "out": 17
+          "in": 39,
+          "out": 16
         }
       },
       "stage": "cache"
@@ -1216,18 +1216,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 7,
+          "out": 7
         },
         "tooling": {
           "drops": {},
-          "in": 21,
-          "out": 21
+          "in": 12,
+          "out": 12
         },
         "web-products": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 3,
+          "out": 3
         }
       },
       "stage": "enrich"
@@ -1237,24 +1237,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 5
           },
-          "in": 8,
-          "out": 5
+          "in": 12,
+          "out": 7
         },
         "tooling": {
           "drops": {
-            "below_relevance": 19
+            "below_relevance": 10
           },
-          "in": 42,
-          "out": 23
+          "in": 34,
+          "out": 24
         },
         "web-products": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 2
           },
-          "in": 17,
-          "out": 13
+          "in": 16,
+          "out": 14
         }
       },
       "stage": "rank"
@@ -1264,24 +1264,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 5
+            "over_max_items": 7
           },
-          "in": 5,
+          "in": 7,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 23
+            "over_max_items": 24
           },
-          "in": 23,
+          "in": 24,
           "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 13
           },
-          "in": 13,
-          "out": 0
+          "in": 14,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1301,8 +1301,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1322,7 +1325,7 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 1,
           "out": 21
         }
       },
@@ -1342,9 +1345,14 @@
           "out": 21
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 1
+          },
+          "out": 20
         }
       },
       "stage": "review"

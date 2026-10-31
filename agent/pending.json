@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-23T22:54:40.182785+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "A blog post recounts a side project that hosted HTML files in an afternoon and, eight months later, drew as many weekly users as the company\u2019s $150k Looker licence, with Looker usage down a third.",
-      "title": "Can we replace a $150k Looker with a bucket of HTML files?",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://david.lequin.dev/blog/bi-software-is-dead/"
-    },
-    {
       "pending_since": "2026-10-24T08:40:36.292566+00:00",
       "score": 7,
       "source": "github",
@@ -699,6 +689,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://github.com/shipwords-dev/shipwords"
+    },
+    {
+      "pending_since": "2026-10-31T04:14:17.628370+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "Google plans to support a shared AI training control in robots.txt: a single 'policy token' letting sites opt out across participating AI providers, based on IETF AIPREF work and running alongside Google-Extended.",
+      "title": "Supporting a shared AI training control for websites",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://developers.google.com/search/blog/2026/10/ai-training-control"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"
