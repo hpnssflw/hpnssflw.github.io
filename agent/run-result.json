@@ -326,9 +326,9 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 20
+      "web-products": 21
     },
-    "count": 69,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -1088,12 +1088,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://elementary.codes"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-01T04:34:29.717478+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "Ahrefs' September 2026 product update roundup covers five changes, including a new Site Audit AI Discoverability issue category, an Organic pages by type widget in Site Explorer, and semantic filters in Keywords Explorer.",
+        "title": "AI Discoverability, Page types, and more (September 2026)",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://ahrefs.com/blog/new-features-september-2026/"
       }
     ]
   },
   "run": {
-    "at": "2026-10-31T23:06:14.387243+00:00",
-    "id": "2026-10-31T2306Z",
+    "at": "2026-11-01T04:34:29.717478+00:00",
+    "id": "2026-11-01T0434Z",
     "mode": "real",
     "offline": false
   },
@@ -1104,18 +1115,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 96,
+          "out": 96
         },
         "tooling": {
           "drops": {},
-          "in": 147,
-          "out": 147
+          "in": 136,
+          "out": 136
         },
         "web-products": {
           "drops": {},
-          "in": 176,
-          "out": 176
+          "in": 174,
+          "out": 174
         }
       },
       "stage": "collect"
@@ -1125,20 +1136,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 96,
+          "out": 96
         },
         "tooling": {
           "drops": {},
-          "in": 147,
-          "out": 147
+          "in": 136,
+          "out": 136
         },
         "web-products": {
           "drops": {
-            "outside_window": 107
+            "outside_window": 108
           },
-          "in": 176,
-          "out": 69
+          "in": 174,
+          "out": 66
         }
       },
       "stage": "window"
@@ -1149,26 +1160,26 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 2,
-            "seen": 23
+            "seen": 22
           },
-          "in": 104,
-          "out": 79
+          "in": 96,
+          "out": 72
         },
         "tooling": {
           "drops": {
-            "dismissed": 3,
-            "seen": 21
+            "dismissed": 2,
+            "seen": 17
           },
-          "in": 147,
-          "out": 123
+          "in": 136,
+          "out": 117
         },
         "web-products": {
           "drops": {
             "dismissed": 7,
-            "seen": 17
+            "seen": 15
           },
-          "in": 69,
-          "out": 45
+          "in": 66,
+          "out": 44
         }
       },
       "stage": "dedupe"
@@ -1178,24 +1189,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 71
+            "already_ranked": 65
           },
-          "in": 79,
-          "out": 8
+          "in": 72,
+          "out": 7
         },
         "tooling": {
           "drops": {
-            "already_ranked": 95
+            "already_ranked": 97
           },
-          "in": 123,
-          "out": 28
+          "in": 117,
+          "out": 20
         },
         "web-products": {
           "drops": {
-            "already_ranked": 34
+            "already_ranked": 35
           },
-          "in": 45,
-          "out": 11
+          "in": 44,
+          "out": 9
         }
       },
       "stage": "cache"
@@ -1210,13 +1221,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 9,
-          "out": 9
+          "in": 4,
+          "out": 4
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1226,24 +1237,22 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 2
           },
-          "in": 8,
+          "in": 7,
           "out": 5
         },
         "tooling": {
           "drops": {
-            "below_relevance": 8
+            "below_relevance": 3
           },
-          "in": 28,
-          "out": 20
+          "in": 20,
+          "out": 17
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 11,
-          "out": 10
+          "drops": {},
+          "in": 9,
+          "out": 9
         }
       },
       "stage": "rank"
@@ -1260,17 +1269,17 @@
         },
         "tooling": {
           "drops": {
-            "over_max_items": 20
+            "over_max_items": 17
           },
-          "in": 20,
+          "in": 17,
           "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 8
           },
-          "in": 10,
-          "out": 0
+          "in": 9,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1290,8 +1299,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1311,8 +1323,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 20
+          "in": 1,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1331,10 +1343,11 @@
           "out": 21
         },
         "web-products": {
-          "drops": {
-            "expired": 1
+          "drops": {},
+          "in": 20,
+          "notes": {
+            "asked": 1
           },
-          "in": 21,
           "out": 20
         }
       },

@@ -4,41 +4,37 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 71,
+        "already_ranked": 65,
         "dismissed": 2,
-        "seen": 23
+        "seen": 22
       },
       "rank": {
-        "below_relevance": 3,
+        "below_relevance": 2,
         "over_max_items": 5
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 95,
-        "dismissed": 3,
-        "seen": 21
+        "already_ranked": 97,
+        "dismissed": 2,
+        "seen": 17
       },
       "rank": {
-        "below_relevance": 8,
-        "over_max_items": 20
+        "below_relevance": 3,
+        "over_max_items": 17
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 107
+        "outside_window": 108
       },
       "dedupe": {
-        "already_ranked": 34,
+        "already_ranked": 35,
         "dismissed": 7,
-        "seen": 17
-      },
-      "inbox": {
-        "expired": 1
+        "seen": 15
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 10
+        "over_max_items": 8
       }
     }
   },
@@ -51,138 +47,135 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 104,
-      "in_window": 104,
+      "collected": 96,
+      "in_window": 96,
       "kept": 0,
-      "new": 8
+      "new": 7
     },
     "tooling": {
-      "collected": 147,
-      "in_window": 147,
+      "collected": 136,
+      "in_window": 136,
       "kept": 0,
-      "new": 28
+      "new": 20
     },
     "web-products": {
-      "collected": 176,
-      "in_window": 69,
-      "kept": 0,
-      "new": 11
+      "collected": 174,
+      "in_window": 66,
+      "kept": 1,
+      "new": 9
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 69,
+  "pending_count": 70,
   "recent_events": [
     {
-      "reason": "over_max_items",
-      "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
+      "score": 7,
+      "source": "rss",
+      "title": "AI Discoverability, Page types, and more (September 2026)",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892564+00:00",
-      "verdict": "drop"
+      "ts": "2026-11-01T04:35:15.777446+00:00",
+      "verdict": "kept"
     },
     {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892553+00:00",
+      "ts": "2026-11-01T04:35:15.777430+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892541+00:00",
+      "ts": "2026-11-01T04:35:15.777421+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Headless Content Marketing: A New (Old) Strategy for Search",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892529+00:00",
+      "ts": "2026-11-01T04:35:15.777412+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892518+00:00",
+      "ts": "2026-11-01T04:35:15.777403+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892506+00:00",
+      "ts": "2026-11-01T04:35:15.777377+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892493+00:00",
+      "ts": "2026-11-01T04:35:15.777367+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892479+00:00",
+      "ts": "2026-11-01T04:35:15.777350+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Cost of college versus the return on investement",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892464+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "AI Discoverability, Page types, and more (September 2026)",
-      "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892440+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: NES Contra (1987) port (ASM \u2013> C and then C \u2013> WebAssembly)",
-      "topic": "web-products",
-      "ts": "2026-10-31T23:06:58.892150+00:00",
+      "ts": "2026-11-01T04:35:15.777282+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:56.855488+00:00",
+      "ts": "2026-11-01T04:35:13.870627+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:56.855476+00:00",
+      "ts": "2026-11-01T04:35:13.870619+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Full 3-D scan and live body metrics for Neal\u2019s about page",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:56.855462+00:00",
+      "ts": "2026-11-01T04:35:13.870610+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cutting the cost of tokens",
       "topic": "web-products",
-      "ts": "2026-10-31T23:06:56.855452+00:00",
+      "ts": "2026-11-01T04:35:13.870603+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Localized Wikipedia to your geographic area",
+      "topic": "web-products",
+      "ts": "2026-11-01T04:35:13.870595+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Policing protests in India",
+      "topic": "web-products",
+      "ts": "2026-11-01T04:35:13.870587+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-25T15:36:22.052233+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-25T18:44:23.385972+00:00"
@@ -274,28 +267,32 @@
     {
       "kept": 0,
       "ts": "2026-10-31T23:06:14.387243+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-11-01T04:34:29.717478+00:00"
     }
   ],
-  "streak": 345,
+  "streak": 346,
   "topics": [
     {
-      "collected": 104,
+      "collected": 96,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 147,
+      "collected": 136,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 176,
-      "kept": 0,
+      "collected": 174,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-10-31T23:06:14.387243+00:00"
+  "updated_at": "2026-11-01T04:34:29.717478+00:00"
 }
