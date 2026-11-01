@@ -1,96 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "A fork of llama.cpp that steers any of 131 supported architectures away from refusals at inference time by reading comply/refuse directions from the prompt itself, leaving weights untouched. Reports refusal on Qwen3-8B dropping from 96.3% to 7.9% on held-out harmful prompts and 82% to 0% on JailbreakBench, with no training or extra files.",
-      "title": "heterodoxin/AbliteratedOutTheBox",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/heterodoxin/AbliteratedOutTheBox"
-    },
-    {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 7,
-      "source": "hn",
-      "summary": "Alter (YC S25) is a privileged access management layer for AI agents: per-agent identities and scoped grants, a vault that injects credentials per request, default-deny and human-approval policy, and a tamper-evident audit trail. One SDK call handles storage, refresh, policy and audit across 140 providers, with LangChain, MCP and AWS integrations.",
-      "title": "Launch HN: Alter (YC S25) \u2013 Access control for multi-user agents",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://alterauth.com/"
-    },
-    {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 6,
-      "source": "hn",
-      "summary": "A video titled \u201cRuneScape Bench: MMOs for Agents,\u201d with a related link to the LostCityRS Server repository.",
-      "title": "RuneScape Bench: MMOs for Agents [video]",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0"
-    },
-    {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 6,
-      "source": "github",
-      "summary": "bili-cli (PyPI package bili-agent) is a CLI giving AI agents 80+ commands and 17 MCP tools to run a Bilibili account as a creator: replying to comments and DMs, watching videos with transcripts and frame overviews, and posting videos and dynamics. It auto-installs its skills into 18 agents and ships default safety guardrails.",
-      "title": "kukemc/bili-cli",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/kukemc/bili-cli"
-    },
-    {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "blaze is a Rust build engine that runs alongside Cargo and recompiles only changed functions into an already-built program, claiming 10\u201324\u00d7 faster edit rebuilds on real projects; opt-in programs can take new code while running.",
-      "title": "indexable-inc/blaze",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/indexable-inc/blaze"
-    },
-    {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 7,
-      "source": "github",
-      "summary": "HatchZip is a free open-source archive extractor with desktop and CLI apps that extracts ZIP, 7z, RAR, tar and split archives in place, consuming the archive as it goes so only output space is needed; it checks fit, keeps a margin, and resumes after interruption.",
-      "title": "xevrion/hatchzip",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/xevrion/hatchzip"
-    },
-    {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 7,
-      "source": "hn",
-      "summary": "A first-person history of rqlite and the distributed-SQLite category from 2014 onward, arguing rqlite was the first open-source system to combine Raft and SQLite and tracing its design choices and later projects.",
-      "title": "Twelve years of distributed SQLite",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/"
-    },
-    {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 7,
-      "source": "github",
-      "summary": "An Agent Skills kit for converting WordPress sites to static Astro with a coding agent, preserving URLs, content, SEO metadata, media paths, redirects and responsive design via exact Node scripts and gates, ending in a pull request and staging deploy.",
-      "title": "ethanplusai/astro-conversion-kit",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://github.com/ethanplusai/astro-conversion-kit"
-    },
-    {
-      "pending_since": "2026-10-25T08:57:53.493589+00:00",
-      "score": 6,
-      "source": "github",
-      "summary": "A skill that teaches coding agents senior product-designer taste for analytics, revenue and metrics dashboards on web or SwiftUI, covering KPI tiles, charts, filters, empty states and layouts, with screenshot QA; distilled from 127 shipped screens and a real redesign.",
-      "title": "abdiraimov-otabek/dashboard-design-skill",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://github.com/abdiraimov-otabek/dashboard-design-skill"
-    },
-    {
       "pending_since": "2026-10-25T22:18:41.702774+00:00",
       "score": 8,
       "source": "hn",
@@ -699,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://ahrefs.com/blog/new-features-september-2026/"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "NamiAgent is a Chinese-language tutorial and runnable local AI agent that builds an agent from a minimal while loop through tools, permissions, context, skills, MCP, subagents, planning and memory, with a web UI and per-lesson code snapshots.",
+      "title": "aa1143/NamiAgent",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/aa1143/NamiAgent"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "graphmemory is a bitemporal memory service for AI agents with valid-time and record-time axes, six-variable decay, TTL expiry, deduplication and competitive retrieval, built on Graphiti, PostgreSQL/pgvector and Redis, and exposed via MCP tools and a web GUI.",
+      "title": "gh9ko8y/graphmemory",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/gh9ko8y/graphmemory"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "sapper-v2 is a legion-style multi-agent AI system for authorized penetration testing that won the 3rd Tencent Cloud Intelligent Attack-Defense Challenge qualifier, using a commander, parallel generals/soldiers and a layered fact graph, framed by the N\u00fcwa Test.",
+      "title": "N1nEmAn/sapper-v2",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/N1nEmAn/sapper-v2"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "persona-ai-sdk is a TypeScript SDK for AI characters that combines a persona catalog with a provider-neutral memory and response runtime, separating personas, memory, model, persistence and interface, and published on npm.",
+      "title": "tavern-labs-ai/persona-ai-sdk",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/tavern-labs-ai/persona-ai-sdk"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "GitHub repo for pursr, a Node.js package bundling browser visual QA: one CLI for capture, diff, sweep and audit, an MCP stdio server built on the official SDK with persistent tabs and actions, and a library API with 25 subpath modules. The page also fronts an admin-rights, password-protected loader.",
+      "title": "Venomsphinx/pursr-rpocket",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/Venomsphinx/pursr-rpocket"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Ghostman, a keyboard-driven terminal API client and webhook inspector pitched as a local-first Postman alternative: ~30MB RAM, ~150ms cold boot, collections saved as plain JSON/YAML in ~/.ghostman/, and a built-in webhook listener on port 9090.",
+      "title": "Show HN: Ghostman \u2013 A fast, keyboard-driven TUI API client and webhook inspector",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/4yk5/Ghostman"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A Bun --preload script (no-agent-summary.js) that stops Claude Code from re-sending each background agent's full transcript to its model roughly every 30 seconds just to fill status lines, without modifying the binary; the author's telemetry put agent_summary at 16.4% of spend.",
+      "title": "Claude Code regularly sends each background agent\u2019s transcript to its model",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "A benchmark of the AI cost of JavaScript frameworks has agents build a small Pok\u00e9mon app with frameworks such as Next.js, Nuxt, and SvelteKit, then tests outputs against a spec conformance suite and evaluates development time, tokens spent, and lines.",
+      "title": "The AI cost of JavaScript frameworks",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/"
+    },
+    {
+      "pending_since": "2026-11-01T14:45:27.144193+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "An MIT Press Reader article arguing, via a 1580 map, that data visualization is never neutral.",
+      "title": "A 1580 Map Shows Why Data Visualization Is Never Neutral",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://thereader.mitpress.mit.edu/a-1580-map-shows-why-data-visualization-is-never-neutral/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"
