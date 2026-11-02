@@ -4,40 +4,47 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 53,
-        "dismissed": 1,
-        "seen": 26
+        "already_ranked": 58,
+        "dismissed": 3,
+        "seen": 25
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
         "below_relevance": 6,
-        "over_max_items": 4
+        "over_max_items": 5
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 95,
-        "dismissed": 3,
-        "seen": 18
+        "already_ranked": 65,
+        "dismissed": 5,
+        "seen": 16
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 6,
-        "over_max_items": 18
+        "below_relevance": 35,
+        "over_max_items": 16
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 114
+        "outside_window": 115
       },
       "dedupe": {
-        "already_ranked": 25,
-        "dismissed": 3,
+        "already_ranked": 21,
+        "dismissed": 1,
         "seen": 18
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       },
       "rank": {
-        "over_max_items": 7
+        "below_relevance": 5,
+        "over_max_items": 4
       }
     }
   },
@@ -50,22 +57,22 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 90,
-      "in_window": 90,
-      "kept": 0,
-      "new": 10
+      "collected": 101,
+      "in_window": 101,
+      "kept": 4,
+      "new": 15
     },
     "tooling": {
       "collected": 140,
       "in_window": 140,
-      "kept": 0,
-      "new": 24
+      "kept": 3,
+      "new": 54
     },
     "web-products": {
-      "collected": 168,
-      "in_window": 54,
-      "kept": 1,
-      "new": 8
+      "collected": 166,
+      "in_window": 51,
+      "kept": 2,
+      "new": 11
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
@@ -74,115 +81,112 @@
     {
       "score": 7,
       "source": "rss",
-      "title": "Cost of college versus the return on investement",
+      "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:14.073087+00:00",
+      "ts": "2026-11-02T17:52:00.543034+00:00",
+      "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "rss",
+      "title": "Overriding Heading Levels With the headingoffset HTML Attribute",
+      "topic": "web-products",
+      "ts": "2026-11-02T17:52:00.543016+00:00",
       "verdict": "kept"
     },
     {
       "reason": "over_max_items",
-      "title": "An Ikat Narrative of Railway Workforce Mobility",
+      "title": "Where the Musk money flows",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:14.073073+00:00",
+      "ts": "2026-11-02T17:52:00.542992+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:14.073066+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "WebKit Features for Safari 27.1",
-      "topic": "web-products",
-      "ts": "2026-11-02T04:38:14.073058+00:00",
+      "ts": "2026-11-02T17:52:00.542973+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:14.073051+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "zhtyyx/codex-seo",
-      "topic": "web-products",
-      "ts": "2026-11-02T04:38:14.073043+00:00",
+      "ts": "2026-11-02T17:52:00.542948+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Running a bootstrapped SaaS for 20 years with my brother",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:14.073032+00:00",
+      "ts": "2026-11-02T17:52:00.542875+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
+      "reason": "below_relevance",
+      "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:14.072962+00:00",
+      "ts": "2026-11-02T17:51:57.482005+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Increasing Trump comments on body appearance",
+      "topic": "web-products",
+      "ts": "2026-11-02T17:51:57.481989+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "zhtyyx/codex-seo",
+      "topic": "web-products",
+      "ts": "2026-11-02T17:51:57.481973+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "ngocanhnckh/renderlint",
+      "topic": "web-products",
+      "ts": "2026-11-02T17:51:57.481953+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Moh4696/open-3d-skills",
+      "topic": "web-products",
+      "ts": "2026-11-02T17:51:57.481896+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:11.454970+00:00",
+      "ts": "2026-11-02T17:51:45.074547+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:11.454963+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Full 3-D scan and live body metrics for Neal\u2019s about page",
-      "topic": "web-products",
-      "ts": "2026-11-02T04:38:11.454957+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Cutting the cost of tokens",
-      "topic": "web-products",
-      "ts": "2026-11-02T04:38:11.454951+00:00",
+      "ts": "2026-11-02T17:51:45.074536+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Localized Wikipedia to your geographic area",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:11.454946+00:00",
+      "ts": "2026-11-02T17:51:45.074526+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Policing protests in India",
       "topic": "web-products",
-      "ts": "2026-11-02T04:38:11.454940+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "What Is BLUF? How to Write Bottom Line Up Front (+ Free Rewriter Tool)",
-      "topic": "web-products",
-      "ts": "2026-11-02T04:38:11.454935+00:00",
+      "ts": "2026-11-02T17:51:45.074515+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-26T09:44:58.304763+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-26T18:17:48.004661+00:00"
@@ -274,28 +278,32 @@
     {
       "kept": 1,
       "ts": "2026-11-02T04:37:08.045127+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-11-02T17:50:39.938442+00:00"
     }
   ],
-  "streak": 349,
+  "streak": 350,
   "topics": [
     {
-      "collected": 90,
-      "kept": 0,
+      "collected": 101,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 140,
-      "kept": 0,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 168,
-      "kept": 1,
+      "collected": 166,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-02T04:37:08.045127+00:00"
+  "updated_at": "2026-11-02T17:50:39.938442+00:00"
 }
