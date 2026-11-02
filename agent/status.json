@@ -4,38 +4,40 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 63,
+        "already_ranked": 53,
         "dismissed": 1,
-        "seen": 27
+        "seen": 26
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 3
+        "below_relevance": 6,
+        "over_max_items": 4
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 97,
+        "already_ranked": 95,
         "dismissed": 3,
-        "seen": 19
+        "seen": 18
       },
       "rank": {
-        "below_relevance": 4,
+        "below_relevance": 6,
         "over_max_items": 18
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 113
+        "outside_window": 114
       },
       "dedupe": {
-        "already_ranked": 24,
-        "dismissed": 4,
+        "already_ranked": 25,
+        "dismissed": 3,
         "seen": 18
       },
+      "inbox": {
+        "expired": 1
+      },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 8
+        "over_max_items": 7
       }
     }
   },
@@ -48,138 +50,135 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 97,
-      "in_window": 97,
+      "collected": 90,
+      "in_window": 90,
       "kept": 0,
-      "new": 6
+      "new": 10
     },
     "tooling": {
-      "collected": 141,
-      "in_window": 141,
+      "collected": 140,
+      "in_window": 140,
       "kept": 0,
-      "new": 22
+      "new": 24
     },
     "web-products": {
       "collected": 168,
-      "in_window": 55,
-      "kept": 0,
-      "new": 9
+      "in_window": 54,
+      "kept": 1,
+      "new": 8
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
+      "score": 7,
+      "source": "rss",
+      "title": "Cost of college versus the return on investement",
+      "topic": "web-products",
+      "ts": "2026-11-02T04:38:14.073087+00:00",
+      "verdict": "kept"
+    },
+    {
       "reason": "over_max_items",
       "title": "An Ikat Narrative of Railway Workforce Mobility",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191641+00:00",
+      "ts": "2026-11-02T04:38:14.073073+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191632+00:00",
+      "ts": "2026-11-02T04:38:14.073066+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "WebKit Features for Safari 27.1",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191622+00:00",
+      "ts": "2026-11-02T04:38:14.073058+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191614+00:00",
+      "ts": "2026-11-02T04:38:14.073051+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "zhtyyx/codex-seo",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191605+00:00",
+      "ts": "2026-11-02T04:38:14.073043+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Running a bootstrapped SaaS for 20 years with my brother",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191595+00:00",
+      "ts": "2026-11-02T04:38:14.073032+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191582+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Cost of college versus the return on investement",
-      "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191543+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "NiazMorshed2007/reanimate",
-      "topic": "web-products",
-      "ts": "2026-11-01T20:13:32.191226+00:00",
+      "ts": "2026-11-02T04:38:14.072962+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:27.565017+00:00",
+      "ts": "2026-11-02T04:38:11.454970+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:27.565009+00:00",
+      "ts": "2026-11-02T04:38:11.454963+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Full 3-D scan and live body metrics for Neal\u2019s about page",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:27.565001+00:00",
+      "ts": "2026-11-02T04:38:11.454957+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Cutting the cost of tokens",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:27.564993+00:00",
+      "ts": "2026-11-02T04:38:11.454951+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Localized Wikipedia to your geographic area",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:27.564985+00:00",
+      "ts": "2026-11-02T04:38:11.454946+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Policing protests in India",
       "topic": "web-products",
-      "ts": "2026-11-01T20:13:27.564977+00:00",
+      "ts": "2026-11-02T04:38:11.454940+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "What Is BLUF? How to Write Bottom Line Up Front (+ Free Rewriter Tool)",
+      "topic": "web-products",
+      "ts": "2026-11-02T04:38:11.454935+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-26T03:23:13.420938+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-26T09:44:58.304763+00:00"
@@ -271,28 +270,32 @@
     {
       "kept": 0,
       "ts": "2026-11-01T20:12:39.431989+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-11-02T04:37:08.045127+00:00"
     }
   ],
-  "streak": 348,
+  "streak": 349,
   "topics": [
     {
-      "collected": 97,
+      "collected": 90,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 141,
+      "collected": 140,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 168,
-      "kept": 0,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-01T20:12:39.431989+00:00"
+  "updated_at": "2026-11-02T04:37:08.045127+00:00"
 }

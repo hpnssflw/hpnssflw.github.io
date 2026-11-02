@@ -619,7 +619,7 @@
   "05cff87ec6ed50b1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 107,
+    "last_score": 143,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -1422,7 +1422,7 @@
   "0e356c09eb849e6e": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 277,
+    "last_score": 319,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1561,7 +1561,7 @@
   "0f92c524b4d0c0b9": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 73,
+    "last_score": 77,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -1750,7 +1750,7 @@
   "11bc87decd601d46": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 471,
+    "last_score": 492,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1810,15 +1810,15 @@
   "12844ee7f8055ffe": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 495,
+    "last_score": 1081,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-01T20:12:39.431989+00:00",
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
         "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 495,
-        "summary": "HackerBooks is a site listing ~16.5k books mentioned in HN comments, built with Claude."
+        "source_score": 1081,
+        "summary": "Show HN: HackerBooks, a site listing ~16.5k books mentioned in HN comments with links back to those comments and downloadable data, built with Claude."
       }
     },
     "times_sent": 0
@@ -1905,7 +1905,7 @@
   "13c6835917281a31": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 192,
+    "last_score": 204,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2008,7 +2008,7 @@
   "144a293a50f0da60": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 123,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -2224,6 +2224,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "16c023aa7c0c7794": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 66,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 66,
+        "summary": "A Hacker News discussion titled 'So I guess everyone uses LLMs to think now' with no further description of its engineering content."
+      }
+    },
+    "times_sent": 0
+  },
   "16c0cbd7ec35c5d2": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
@@ -2344,7 +2360,7 @@
   "17a75de37df03bf6": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 265,
+    "last_score": 266,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -2462,7 +2478,7 @@
   "191d3f2c27a4b96b": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 68,
+    "last_score": 69,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2752,15 +2768,15 @@
   "1c2c00360e1569ed": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 69,
+    "last_score": 186,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-01T20:12:39.431989+00:00",
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
         "relevance": 9,
         "rubric": "02189e2467e9",
-        "source_score": 69,
-        "summary": "OmniDiff is an open-source Git difftool written in Rust that diffs code in 25 languages plus config, images, PDFs, archives, cursors and fonts."
+        "source_score": 186,
+        "summary": "Show HN: OmniDiff, an open-source content-aware Git difftool in Rust that diffs code in 25 languages plus configs, images, PDFs, archives, cursors and fonts."
       }
     },
     "times_sent": 0
@@ -2893,7 +2909,7 @@
   "1e03415a592fab86": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 3737,
+    "last_score": 4211,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -3104,23 +3120,23 @@
   "202b9d690f3a74b6": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 132,
+    "last_score": 336,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-01T20:12:39.431989+00:00",
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
         "relevance": 2,
         "rubric": "3472af8a46e1",
-        "source_score": 132,
-        "summary": "A 7 MB lossless coding-agent harness for shell, CI, and local models, with no TUI and no silent context cuts."
+        "source_score": 336,
+        "summary": "A headless coding-agent harness distributed as a 7 MB static binary with four tools and plain stdin/stdout."
       },
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-01T20:12:39.431989+00:00",
-        "relevance": 7,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 8,
         "rubric": "02189e2467e9",
-        "source_score": 132,
-        "summary": "uncut is a 7 MB lossless coding-agent harness for shell, CI and local models, with no TUI and no silent context cuts."
+        "source_score": 336,
+        "summary": "A GitHub project describing uncut as a lossless headless coding agent harness shipped as a 7 MB static binary with four tools over plain stdin/stdout."
       }
     },
     "times_sent": 0
@@ -3418,7 +3434,7 @@
   "2388603d542f04fc": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 82,
+    "last_score": 86,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3572,6 +3588,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "25b3a9247021d8b5": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A GitHub repo advertised as a pre-activated standalone installer for Quicken Deluxe 2026."
+      }
+    },
+    "times_sent": 0
+  },
   "2628bd8584c453be": {
     "dismissed": null,
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
@@ -3598,7 +3630,7 @@
   "2632413716a4ff8d": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 60,
+    "last_score": 61,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3669,7 +3701,7 @@
   "270a3881dc5cbe05": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 114,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3773,7 +3805,7 @@
   "281f179371eea4b4": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 151,
+    "last_score": 152,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4287,7 +4319,7 @@
   "2cf1fb795ba0396c": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 416,
+    "last_score": 418,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -4545,6 +4577,22 @@
     },
     "times_sent": 0
   },
+  "2fc5152fc1ef6b4a": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 42,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 42,
+        "summary": "A Hacker News post claiming Muse AI agent is a commercial surveillance network disguised as an AI assistant."
+      }
+    },
+    "times_sent": 0
+  },
   "2fd328a478e282d9": {
     "dismissed": null,
     "first_seen": "2026-10-13T11:26:09.907272+00:00",
@@ -4580,6 +4628,22 @@
     "first_seen": "2026-09-01T18:56:44.057525+00:00",
     "last_score": 96,
     "ranks": {},
+    "times_sent": 0
+  },
+  "304e5b146bea6af4": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 109,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 109,
+        "summary": "A tool for per-request or always-on model re-alignment that can be used directly or with Hermes, OpenClaw and custom harnesses."
+      }
+    },
     "times_sent": 0
   },
   "304f26bda5030406": {
@@ -4978,6 +5042,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "341ff68ad312c9e2": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 101,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 101,
+        "summary": "A project that says an AI agent can build a hologram, 3D model and its parts from a description."
+      }
+    },
+    "times_sent": 0
+  },
   "3437f44176a06d34": {
     "dismissed": null,
     "first_seen": "2026-10-19T03:24:15.462211+00:00",
@@ -5020,7 +5100,7 @@
   "34755f8225792455": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 327,
+    "last_score": 333,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -5100,7 +5180,7 @@
   "3511f750c53db873": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 67,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-27T09:37:29.404663+00:00",
@@ -5467,7 +5547,7 @@
   "37d646f6268ddbb7": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 302,
+    "last_score": 305,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5531,6 +5611,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 100,
         "summary": "A GitHub project describing pagesift, a high-performance memory-efficient Rust web crawler and content extraction engine for AI agents and RAG, with adaptive crawling, clean Markdown, structured data, PDF/RSS parsing, browser rendering, Firecrawl-compatible APIs, and Python/Node.js SDKs."
+      }
+    },
+    "times_sent": 0
+  },
+  "38937f7fd47a931a": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 171,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 171,
+        "summary": "A blog post arguing that Postgres 19 is late because so many more bugs are being found now."
       }
     },
     "times_sent": 0
@@ -6079,7 +6175,7 @@
   "3e421a94dacd9a08": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 89,
+    "last_score": 91,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6499,7 +6595,7 @@
   "4290700ebfe688c1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 105,
+    "last_score": 111,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -6780,6 +6876,22 @@
         "rubric": "02189e2467e9",
         "source_score": 200,
         "summary": "A GitHub-listed 'WinUtilities 2026' standalone desktop setup with all tools pre-activated."
+      }
+    },
+    "times_sent": 0
+  },
+  "45e8e2b022a7ae8a": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 31,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 31,
+        "summary": "A news item saying Anthropic ordered its Claude AI tool to stop remaking video games."
       }
     },
     "times_sent": 0
@@ -7098,7 +7210,7 @@
   "49270cf8389d73cc": {
     "dismissed": null,
     "first_seen": "2026-10-25T22:18:41.702774+00:00",
-    "last_score": 558,
+    "last_score": 562,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7371,7 +7483,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-11-02T04:37:08.045127+00:00",
         "ranked_at": "2026-10-29T14:57:39.758738+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -7552,7 +7664,7 @@
   "4ea2bbfbe1de5d96": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 208,
+    "last_score": 221,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7692,7 +7804,7 @@
   "4ff51e4e30dd0b36": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 432,
+    "last_score": 514,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -8011,7 +8123,7 @@
   "52ed5fcd54e4c7b1": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 4564,
+    "last_score": 4939,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -8230,7 +8342,7 @@
   "54e2bdb4495011dc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 379,
+    "last_score": 407,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -8805,7 +8917,7 @@
   "5a24e14dcd271d5b": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 99,
+    "last_score": 100,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -9151,7 +9263,7 @@
   "5df0a66419d938a3": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 245,
+    "last_score": 246,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9470,7 +9582,7 @@
   "620df3f62834c522": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 197,
+    "last_score": 198,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -9509,7 +9621,7 @@
   "62bd6f0dc0ed1ddc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 189,
+    "last_score": 191,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10085,7 +10197,7 @@
   "6825ae5281ac7c3f": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 1016,
+    "last_score": 1017,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -10124,7 +10236,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 331,
+    "last_score": 336,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10140,7 +10252,7 @@
   "68d63728ca70cfdd": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 1267,
+    "last_score": 1337,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10448,7 +10560,7 @@
   "6af525c1604adec7": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 121,
+    "last_score": 122,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10681,7 +10793,7 @@
   "6d1f79546fa5a2ec": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 46,
+    "last_score": 49,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10711,15 +10823,15 @@
   "6d5dda0620d9e0bc": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 227,
+    "last_score": 682,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-01T20:12:39.431989+00:00",
-        "relevance": 6,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 7,
         "rubric": "3472af8a46e1",
-        "source_score": 227,
-        "summary": "An open-source, local-first bot platform that runs AI assistants on 70+ models through one Modelflare key and connects them to apps such as WeChat and Feishu."
+        "source_score": 682,
+        "summary": "An open-source local-first AI bot project that connects to many models through one Modelflare key and can be reached in apps including WeChat and Feishu."
       }
     },
     "times_sent": 0
@@ -10822,7 +10934,7 @@
   "6e57dee758dbd144": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 125,
+    "last_score": 160,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10983,7 +11095,7 @@
   "700f3e4bbfb43c82": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 77,
+    "last_score": 78,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11149,7 +11261,7 @@
   "71f6ace31bb2b54b": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 197,
+    "last_score": 198,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11727,15 +11839,15 @@
   "778916995661ca3b": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 90,
+    "last_score": 97,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-10-31T23:06:14.387243+00:00",
-        "relevance": 3,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 42,
-        "summary": "A Show HN about a language model implemented in a boot sector, inspired by 512-byte boot-sector demos and generating boot logs for nonexistent hardware."
+        "source_score": 97,
+        "summary": "Show HN: a demo of a language model living in a 512-byte boot sector, generating boot logs for non-existent hardware."
       }
     },
     "times_sent": 0
@@ -11782,7 +11894,7 @@
   "77da46b84293ae0c": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 691,
+    "last_score": 714,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -12064,7 +12176,7 @@
   "7b74093c111f9979": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 257,
+    "last_score": 263,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12103,7 +12215,7 @@
   "7bba052852d5265f": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 189,
+    "last_score": 191,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12140,7 +12252,7 @@
   "7cc697fb67ca8ce3": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 74,
+    "last_score": 77,
     "ranks": {
       "web-products": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -12298,7 +12410,7 @@
   "7e9f318174ec7dbc": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 248,
+    "last_score": 329,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12517,7 +12629,7 @@
   "804b51847cb0588e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 161,
+    "last_score": 163,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -12589,7 +12701,7 @@
   "80ab8ecc8f188894": {
     "dismissed": "expired",
     "first_seen": "2026-10-23T16:31:03.950643+00:00",
-    "last_score": 37,
+    "last_score": 38,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-24T08:40:36.292566+00:00",
@@ -12628,7 +12740,7 @@
   "80e95c849406f883": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 128,
+    "last_score": 139,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12731,7 +12843,7 @@
   "833b856438416e75": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 708,
+    "last_score": 751,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -12973,7 +13085,7 @@
   "86a00e34a45ab11c": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 71,
+    "last_score": 73,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13170,7 +13282,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 200,
+    "last_score": 226,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14208,7 +14320,7 @@
   "94430ceaa839cbc6": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 585,
+    "last_score": 586,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15514,7 +15626,7 @@
   "a13302c36360f8b6": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 114,
+    "last_score": 170,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15562,7 +15674,7 @@
   "a13f736d98945685": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 987,
+    "last_score": 994,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15875,7 +15987,7 @@
   "a47fefdfcbeeae76": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 1200,
+    "last_score": 1202,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -16352,7 +16464,7 @@
   "a826b29b8d795d6c": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 1502,
+    "last_score": 1871,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -16980,7 +17092,7 @@
   "aef342337ed8ac4e": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 125,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17060,7 +17172,7 @@
   "af3c1a712c246521": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 109,
+    "last_score": 138,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -17262,7 +17374,7 @@
   "b130dbfc8d0ff00e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 522,
+    "last_score": 652,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17473,7 +17585,7 @@
   "b380127f8f95794c": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 206,
+    "last_score": 207,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -17505,7 +17617,7 @@
   "b38e8b1f84738296": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 176,
+    "last_score": 182,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17558,7 +17670,7 @@
   "b49ec3bd8394c6fb": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 262,
+    "last_score": 266,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17598,7 +17710,7 @@
   "b4b5d4708ea8c5f7": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 35,
+    "last_score": 37,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17629,15 +17741,15 @@
   "b50c89b4a0e7ebef": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 1812,
+    "last_score": 1867,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-10-30T04:32:17.655149+00:00",
-        "relevance": 4,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 3,
         "rubric": "3472af8a46e1",
-        "source_score": 923,
-        "summary": "BLA is an adversarial defense shield that protects binaries, Electron apps, JS bundles, Python and WebAssembly against AI reverse-engineering agents."
+        "source_score": 1867,
+        "summary": "An adversarial defense shield intended to protect binaries, Electron apps, JS bundles, Python and WebAssembly against AI reverse-engineering agents."
       }
     },
     "times_sent": 0
@@ -17957,7 +18069,7 @@
   "b808d0a2879133da": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 155,
+    "last_score": 159,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -18235,6 +18347,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "ba04ff4c5d96fad4": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 66,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 66,
+        "summary": "A zero-dependency Python CLI plus MCP server for Synology DSM 7 that audits and fixes a ransomware campaign and can be handed to an AI agent."
+      }
+    },
+    "times_sent": 0
+  },
   "ba37f20c750ee7b3": {
     "dismissed": null,
     "first_seen": "2026-10-11T19:55:42.477843+00:00",
@@ -18426,7 +18554,7 @@
   "bba0da0d1585467e": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 240,
+    "last_score": 243,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -18969,7 +19097,7 @@
   "c14d1aee7a8cab5e": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 119,
+    "last_score": 125,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -19126,7 +19254,7 @@
   "c2bfd9cfee1195c9": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 113,
+    "last_score": 114,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -19218,7 +19346,7 @@
   "c3c7495f96ff2145": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 33,
+    "last_score": 38,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -19227,6 +19355,22 @@
         "rubric": "02189e2467e9",
         "source_score": 33,
         "summary": "Introduces Kwi, a new terminal emulator from KDE."
+      }
+    },
+    "times_sent": 0
+  },
+  "c42b88e52dd1586a": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 118,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 6,
+        "rubric": "3472af8a46e1",
+        "source_score": 118,
+        "summary": "An open-source framework for next-generation Transformers with compute-matched benchmarking and a platform for autonomous architecture research."
       }
     },
     "times_sent": 0
@@ -19273,7 +19417,7 @@
   "c48f2af7e5b6da76": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 220,
+    "last_score": 264,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -19450,7 +19594,7 @@
   "c5f8a030d1d766b6": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 215,
+    "last_score": 228,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -19761,7 +19905,7 @@
   "c99ede2d1aa61d73": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 464,
+    "last_score": 465,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20978,7 +21122,7 @@
   "d7f1e98252a76066": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 97,
+    "last_score": 107,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -21097,7 +21241,7 @@
   "d90e1031b9e75e95": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 89,
+    "last_score": 92,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -21276,7 +21420,7 @@
   "da89bc3e4c08aab8": {
     "dismissed": null,
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
-    "last_score": 555,
+    "last_score": 556,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -21661,6 +21805,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "de0bca8e4ef3bf84": {
+    "dismissed": null,
+    "first_seen": "2026-11-02T04:37:08.045127+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-02T04:37:08.045127+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A GitHub repo advertised as a full working installer of Glary Utilities Pro 2026 system optimization tools."
+      }
+    },
+    "times_sent": 0
+  },
   "de6a3ba228af2814": {
     "dismissed": "expired",
     "first_seen": "2026-10-14T16:36:39.185213+00:00",
@@ -21847,7 +22007,7 @@
   "df8ca25721250f37": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 192,
+    "last_score": 194,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -22476,7 +22636,7 @@
   "e5bc44dd26a81c3c": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 55,
+    "last_score": 80,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23089,7 +23249,7 @@
   "eb5b416ace686049": {
     "dismissed": null,
     "first_seen": "2026-10-31T19:43:58.511876+00:00",
-    "last_score": 72,
+    "last_score": 73,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -23425,7 +23585,7 @@
   "ef006b6d1900eae3": {
     "dismissed": null,
     "first_seen": "2026-10-31T19:43:58.511876+00:00",
-    "last_score": 253,
+    "last_score": 259,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -23478,7 +23638,7 @@
   "f00b165a7cee2cfd": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 87,
+    "last_score": 89,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23811,7 +23971,7 @@
   "f2a1d614a2bbfbb8": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 415,
+    "last_score": 418,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23957,7 +24117,7 @@
     "times_sent": 0
   },
   "f3cc35f9475b86c1": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
     "last_score": 30,
     "ranks": {
@@ -24112,7 +24272,7 @@
   "f61d3e32ca006400": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 660,
+    "last_score": 661,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24260,7 +24420,7 @@
   "f7d9aacdb2853b55": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 38,
+    "last_score": 39,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -24561,7 +24721,7 @@
   "fad4660612e7a0c9": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 67,
+    "last_score": 72,
     "ranks": {
       "tooling": {
         "queued_at": null,

@@ -332,17 +332,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-25T22:18:41.702774+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Bloffy is a privacy-first blogging platform for Markdown and raw HTML that adds only a 3.2KB script, offers split-view editing, custom domains, CSS themes, multilingual posts, IndexNow, and team members; its Show HN claim is a 99 PageSpeed score and near-100 PSI targets.",
-        "title": "Show HN: I built a Markdown and raw HTML blog platform scoring 99 on PageSpeed",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://bloffy.co/en"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-26T09:44:58.304763+00:00",
         "score": 8,
         "source": "github",
@@ -1099,12 +1088,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://thereader.mitpress.mit.edu/a-1580-map-shows-why-data-visualization-is-never-neutral/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-02T04:37:08.045127+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "Charts of median graduate income by college and major, based on Department of Education data and an HEA Group analysis, show how school and major affect earnings. The article includes a searchable college-and-major comparison and links to downloadable data.",
+        "title": "Cost of college versus the return on investement",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/10/29/cost-of-college-versus-the-return-on-investement/"
       }
     ]
   },
   "run": {
-    "at": "2026-11-01T20:12:39.431989+00:00",
-    "id": "2026-11-01T2012Z",
+    "at": "2026-11-02T04:37:08.045127+00:00",
+    "id": "2026-11-02T0437Z",
     "mode": "real",
     "offline": false
   },
@@ -1115,13 +1115,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 90,
+          "out": 90
         },
         "tooling": {
           "drops": {},
-          "in": 141,
-          "out": 141
+          "in": 140,
+          "out": 140
         },
         "web-products": {
           "drops": {},
@@ -1136,20 +1136,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 90,
+          "out": 90
         },
         "tooling": {
           "drops": {},
-          "in": 141,
-          "out": 141
+          "in": 140,
+          "out": 140
         },
         "web-products": {
           "drops": {
-            "outside_window": 113
+            "outside_window": 114
           },
           "in": 168,
-          "out": 55
+          "out": 54
         }
       },
       "stage": "window"
@@ -1160,25 +1160,25 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 1,
-            "seen": 27
+            "seen": 26
           },
-          "in": 97,
-          "out": 69
+          "in": 90,
+          "out": 63
         },
         "tooling": {
           "drops": {
             "dismissed": 3,
-            "seen": 19
+            "seen": 18
           },
-          "in": 141,
+          "in": 140,
           "out": 119
         },
         "web-products": {
           "drops": {
-            "dismissed": 4,
+            "dismissed": 3,
             "seen": 18
           },
-          "in": 55,
+          "in": 54,
           "out": 33
         }
       },
@@ -1189,24 +1189,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 63
+            "already_ranked": 53
           },
-          "in": 69,
-          "out": 6
+          "in": 63,
+          "out": 10
         },
         "tooling": {
           "drops": {
-            "already_ranked": 97
+            "already_ranked": 95
           },
           "in": 119,
-          "out": 22
+          "out": 24
         },
         "web-products": {
           "drops": {
-            "already_ranked": 24
+            "already_ranked": 25
           },
           "in": 33,
-          "out": 9
+          "out": 8
         }
       },
       "stage": "cache"
@@ -1216,8 +1216,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 9,
+          "out": 9
         },
         "tooling": {
           "drops": {},
@@ -1226,8 +1226,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1237,23 +1237,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 6
           },
-          "in": 6,
-          "out": 3
+          "in": 10,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 6
           },
-          "in": 22,
+          "in": 24,
           "out": 18
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 9,
+          "drops": {},
+          "in": 8,
           "out": 8
         }
       },
@@ -1264,9 +1262,9 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 3
+            "over_max_items": 4
           },
-          "in": 3,
+          "in": 4,
           "out": 0
         },
         "tooling": {
@@ -1278,10 +1276,10 @@
         },
         "web-products": {
           "drops": {
-            "over_max_items": 8
+            "over_max_items": 7
           },
           "in": 8,
-          "out": 0
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1301,8 +1299,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1322,7 +1323,7 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 1,
           "out": 21
         }
       },
@@ -1342,9 +1343,14 @@
           "out": 21
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 1
+          },
+          "out": 20
         }
       },
       "stage": "review"
