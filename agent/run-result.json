@@ -309,14 +309,7 @@
     "sent_items": 0,
     "target": "telegram"
   },
-  "failures": [
-    {
-      "error_type": "FetchError",
-      "scope": "web-products",
-      "source": "debugbear",
-      "stage": "collect"
-    }
-  ],
+  "failures": [],
   "preset": {
     "language": "en",
     "name": "Tony Scraponi",
@@ -324,11 +317,11 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 24,
-      "tooling": 18,
-      "web-products": 19
+      "ai-engineering": 28,
+      "tooling": 21,
+      "web-products": 21
     },
-    "count": 61,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -1000,12 +993,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://blog.zamzar.com/2026/10/30/20-years-766-million-files-two-chameleons/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Blog post reporting that GPT-6 Astra can natively read and write neural network weights, a capability the authors call Weight-Space Programming. Without gradient training it edited 0.016% of Qwen3.5-0.8B's weights, lifting MATH-500 from 7.9% to 48.1% and tripling IFEval.",
+        "title": "Astra can read and write weights to improve Qwen",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://rikiyat.github.io/blog/weight-space-programming/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Skein, an open-source execution control plane for local agent swarms that runs explicit task graphs with bounded concurrency and a persistent epoch fence, so an emergency stop invalidates queued work and rejects late completions. Version 0.2.0 is an early release installed as a static Go binary.",
+        "title": "Balanov/skein",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/Balanov/skein"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Ask HN thread asking what hardware people use to run local LLMs day to day, with 42 comments sharing setups such as a single RTX 5090, clustered ASUS GX10 systems running DeepSeek, and Qwen models around 30B.",
+        "title": "Ask HN: What hardware are you using to run local LLMs?",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://news.ycombinator.com/item?id=50337431"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Interactive notes covering RLHF, attention, LoRA, and LLM evals.",
+        "title": "Show HN: Interactive notes on RLHF, attention, LoRA and LLM evals",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://concepts.laxmena.com/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "OpenAI's post on Pando, a new horizontally scalable backend for its monorepo's Git repositories that keeps Git protocol and client compatibility. It cut median push latency nearly 5x and now serves nearly a petabyte of Git data daily.",
+        "title": "Scaling Git at OpenAI",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://openai.com/index/scaling-git-at-openai/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 7,
+        "source": "github",
+        "summary": "readme-visual-kit, a local SVG renderer plus portable Agent Skill that turns source-cited project descriptions into three README diagrams (flow, architecture, quickstart) with no API key or third-party runtime dependencies. v0.1.0 is an offline MVP.",
+        "title": "tianfuzhibuyuci/readme-visual-kit",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/tianfuzhibuyuci/readme-visual-kit"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "Firezone introduces sanstun, a sans-IO Rust implementation of the WireGuard state machine with a parallel-friendly, idiomatic API aimed at ease of use, security and performance. It recounts moving off a heavily patched boringtun fork.",
+        "title": "Sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://www.firezone.dev/blog/introducing-sanstun"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 9,
+        "source": "rss",
+        "summary": "A Smashing Magazine article argues modern CSS can trade local simplicity for system complexity: smaller diffs may introduce bugs through interactions with JavaScript, layout, the cascade, and rendering, and it examines debugging split CSS/JS logic.",
+        "title": "Modern CSS Might Make Your Front-End More Complex",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-03T19:06:44.712669+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "A FlowingData item highlights Christine Zhang’s New York Times piece on election-night “mirages,” explaining why percentage shifts can seem to favor a candidate artificially without context.",
+        "title": "Election night mirages",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/11/03/election-night-mirages/"
       }
     ]
   },
   "run": {
-    "at": "2026-11-03T11:38:31.517209+00:00",
-    "id": "2026-11-03T1138Z",
+    "at": "2026-11-03T19:06:44.712669+00:00",
+    "id": "2026-11-03T1906Z",
     "mode": "real",
     "offline": false
   },
@@ -1016,18 +1108,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 100,
-          "out": 100
+          "in": 105,
+          "out": 105
         },
         "tooling": {
           "drops": {},
-          "in": 133,
-          "out": 133
+          "in": 139,
+          "out": 139
         },
         "web-products": {
           "drops": {},
-          "in": 169,
-          "out": 169
+          "in": 190,
+          "out": 190
         }
       },
       "stage": "collect"
@@ -1037,20 +1129,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 100,
-          "out": 100
+          "in": 105,
+          "out": 105
         },
         "tooling": {
           "drops": {},
-          "in": 133,
-          "out": 133
+          "in": 139,
+          "out": 139
         },
         "web-products": {
           "drops": {
-            "outside_window": 116
+            "outside_window": 131
           },
-          "in": 169,
-          "out": 53
+          "in": 190,
+          "out": 59
         }
       },
       "stage": "window"
@@ -1063,24 +1155,24 @@
             "dismissed": 7,
             "seen": 25
           },
-          "in": 100,
-          "out": 68
+          "in": 105,
+          "out": 73
         },
         "tooling": {
           "drops": {
             "dismissed": 5,
-            "seen": 16
+            "seen": 17
           },
-          "in": 133,
-          "out": 112
+          "in": 139,
+          "out": 117
         },
         "web-products": {
           "drops": {
             "dismissed": 2,
             "seen": 17
           },
-          "in": 53,
-          "out": 34
+          "in": 59,
+          "out": 40
         }
       },
       "stage": "dedupe"
@@ -1090,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 56
+            "already_ranked": 58
           },
-          "in": 68,
-          "out": 12
+          "in": 73,
+          "out": 15
         },
         "tooling": {
           "drops": {
-            "already_ranked": 74
+            "already_ranked": 80
           },
-          "in": 112,
-          "out": 38
+          "in": 117,
+          "out": 37
         },
         "web-products": {
           "drops": {
-            "already_ranked": 24
+            "already_ranked": 28
           },
-          "in": 34,
-          "out": 10
+          "in": 40,
+          "out": 12
         }
       },
       "stage": "cache"
@@ -1117,18 +1209,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 6,
-          "out": 6
+          "in": 5,
+          "out": 5
         },
         "tooling": {
           "drops": {},
-          "in": 23,
-          "out": 23
+          "in": 21,
+          "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 7,
+          "out": 7
         }
       },
       "stage": "enrich"
@@ -1140,22 +1232,22 @@
           "drops": {
             "below_relevance": 2
           },
-          "in": 12,
-          "out": 10
+          "in": 15,
+          "out": 13
         },
         "tooling": {
           "drops": {
-            "below_relevance": 22
+            "below_relevance": 21
           },
-          "in": 38,
+          "in": 37,
           "out": 16
         },
         "web-products": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 2
           },
-          "in": 10,
-          "out": 6
+          "in": 12,
+          "out": 10
         }
       },
       "stage": "rank"
@@ -1165,24 +1257,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 10
+            "over_max_items": 9
           },
-          "in": 10,
-          "out": 0
+          "in": 13,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 13
           },
           "in": 16,
-          "out": 0
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 5
+            "over_max_items": 8
           },
-          "in": 6,
-          "out": 1
+          "in": 10,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1192,21 +1284,28 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "kept_rank_summary": 1,
+            "summarized": 3
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 2,
           "notes": {
-            "summarized": 1
+            "summarized": 2
           },
-          "out": 1
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1216,18 +1315,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 24
+          "in": 4,
+          "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 18
+          "in": 3,
+          "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 19
+          "in": 2,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1236,28 +1335,28 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "expired": 4
+          "drops": {},
+          "in": 24,
+          "notes": {
+            "asked": 4
           },
-          "in": 28,
           "out": 24
         },
         "tooling": {
-          "drops": {
-            "expired": 3
+          "drops": {},
+          "in": 18,
+          "notes": {
+            "asked": 3
           },
-          "in": 21,
           "out": 18
         },
         "web-products": {
-          "drops": {
-            "expired": 2
-          },
-          "in": 20,
+          "drops": {},
+          "in": 19,
           "notes": {
-            "asked": 1
+            "asked": 2
           },
-          "out": 18
+          "out": 19
         }
       },
       "stage": "review"

@@ -4,192 +4,174 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 56,
+        "already_ranked": 58,
         "dismissed": 7,
         "seen": 25
       },
-      "inbox": {
-        "expired": 4
-      },
       "rank": {
         "below_relevance": 2,
-        "over_max_items": 10
+        "over_max_items": 9
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 74,
+        "already_ranked": 80,
         "dismissed": 5,
-        "seen": 16
-      },
-      "inbox": {
-        "expired": 3
+        "seen": 17
       },
       "rank": {
-        "below_relevance": 22,
-        "over_max_items": 16
+        "below_relevance": 21,
+        "over_max_items": 13
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 116
+        "outside_window": 131
       },
       "dedupe": {
-        "already_ranked": 24,
+        "already_ranked": 28,
         "dismissed": 2,
         "seen": 17
       },
-      "inbox": {
-        "expired": 2
-      },
       "rank": {
-        "below_relevance": 4,
-        "over_max_items": 5
+        "below_relevance": 2,
+        "over_max_items": 8
       }
     }
   },
-  "failures": [
-    {
-      "source": "debugbear",
-      "stage": "collect",
-      "topic": "web-products"
-    }
-  ],
+  "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 100,
-      "in_window": 100,
-      "kept": 0,
-      "new": 12
+      "collected": 105,
+      "in_window": 105,
+      "kept": 4,
+      "new": 15
     },
     "tooling": {
-      "collected": 133,
-      "in_window": 133,
-      "kept": 0,
-      "new": 38
+      "collected": 139,
+      "in_window": 139,
+      "kept": 3,
+      "new": 37
     },
     "web-products": {
-      "collected": 169,
-      "in_window": 53,
-      "kept": 1,
-      "new": 10
+      "collected": 190,
+      "in_window": 59,
+      "kept": 2,
+      "new": 12
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 61,
+  "pending_count": 70,
   "recent_events": [
     {
-      "score": 6,
-      "source": "hn",
-      "title": "Running a bootstrapped SaaS for 20 years with my brother",
+      "score": 8,
+      "source": "rss",
+      "title": "Election night mirages",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:35.996117+00:00",
+      "ts": "2026-11-03T19:07:58.747124+00:00",
       "verdict": "kept"
+    },
+    {
+      "score": 9,
+      "source": "rss",
+      "title": "Modern CSS Might Make Your Front-End More Complex",
+      "topic": "web-products",
+      "ts": "2026-11-03T19:07:58.747115+00:00",
+      "verdict": "kept"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
+      "topic": "web-products",
+      "ts": "2026-11-03T19:07:58.747102+00:00",
+      "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:35.996102+00:00",
+      "ts": "2026-11-03T19:07:58.747094+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Where the Musk money flows",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:35.996094+00:00",
+      "ts": "2026-11-03T19:07:58.747086+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Early voting jumps",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:35.996086+00:00",
+      "ts": "2026-11-03T19:07:58.747079+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:35.996075+00:00",
+      "ts": "2026-11-03T19:07:58.747070+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:35.996010+00:00",
+      "ts": "2026-11-03T19:07:58.747061+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Which Types of Mentions Correlate the Strongest With AI Visibility? (260M AI Prompts Analyzed)",
+      "topic": "web-products",
+      "ts": "2026-11-03T19:07:58.747034+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Every OpenAI Publisher Partnership, and How Often ChatGPT Cites Them",
+      "topic": "web-products",
+      "ts": "2026-11-03T19:07:58.746983+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Google cherrypicks small data for Gemini ad",
+      "title": "10 Clearscope Alternatives (Compared on Price, API, and MCP Access)",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:33.207190+00:00",
+      "ts": "2026-11-03T19:07:55.295353+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "ngocanhnckh/renderlint",
+      "title": "Show HN: HackerChurn \u2013 which SaaS tools HN wants to cancel",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:33.207183+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
-      "topic": "web-products",
-      "ts": "2026-11-03T11:39:33.207172+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Show HN: I built a little browser game to practice Vim commands",
-      "topic": "web-products",
-      "ts": "2026-11-03T11:39:33.207113+00:00",
+      "ts": "2026-11-03T19:07:55.295308+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:25.248411+00:00",
+      "ts": "2026-11-03T19:07:44.922692+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:25.248405+00:00",
+      "ts": "2026-11-03T19:07:44.922684+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-03T11:39:25.248397+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Policing protests in India",
-      "topic": "web-products",
-      "ts": "2026-11-03T11:39:25.248391+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Increasing Trump comments on body appearance",
-      "topic": "web-products",
-      "ts": "2026-11-03T11:39:25.248385+00:00",
+      "ts": "2026-11-03T19:07:44.922670+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-27T03:50:43.963159+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-27T09:37:29.404663+00:00"
@@ -281,28 +263,32 @@
     {
       "kept": 1,
       "ts": "2026-11-03T11:38:31.517209+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-11-03T19:06:44.712669+00:00"
     }
   ],
-  "streak": 352,
+  "streak": 353,
   "topics": [
     {
-      "collected": 100,
-      "kept": 0,
+      "collected": 105,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 133,
-      "kept": 0,
+      "collected": 139,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 169,
-      "kept": 1,
+      "collected": 190,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-03T11:38:31.517209+00:00"
+  "updated_at": "2026-11-03T19:06:44.712669+00:00"
 }
