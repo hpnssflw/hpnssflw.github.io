@@ -4,47 +4,41 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 58,
-        "dismissed": 3,
+        "already_ranked": 34,
+        "dismissed": 1,
         "seen": 25
       },
-      "inbox": {
-        "expired": 4
-      },
       "rank": {
-        "below_relevance": 6,
-        "over_max_items": 5
+        "below_relevance": 3,
+        "over_max_items": 6
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 65,
-        "dismissed": 5,
-        "seen": 16
-      },
-      "inbox": {
-        "expired": 3
+        "already_ranked": 94,
+        "dismissed": 3,
+        "seen": 18
       },
       "rank": {
-        "below_relevance": 35,
-        "over_max_items": 16
+        "below_relevance": 2,
+        "over_max_items": 15
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 115
+        "outside_window": 116
       },
       "dedupe": {
-        "already_ranked": 21,
+        "already_ranked": 24,
         "dismissed": 1,
-        "seen": 18
+        "seen": 19
       },
       "inbox": {
-        "expired": 2
+        "expired": 1
       },
       "rank": {
-        "below_relevance": 5,
-        "over_max_items": 4
+        "below_relevance": 2,
+        "over_max_items": 6
       }
     }
   },
@@ -57,140 +51,134 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 101,
-      "in_window": 101,
-      "kept": 4,
-      "new": 15
+      "collected": 69,
+      "in_window": 69,
+      "kept": 0,
+      "new": 9
     },
     "tooling": {
-      "collected": 140,
-      "in_window": 140,
-      "kept": 3,
-      "new": 54
+      "collected": 132,
+      "in_window": 132,
+      "kept": 0,
+      "new": 17
     },
     "web-products": {
-      "collected": 166,
-      "in_window": 51,
-      "kept": 2,
-      "new": 11
+      "collected": 168,
+      "in_window": 52,
+      "kept": 0,
+      "new": 8
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 70,
+  "pending_count": 69,
   "recent_events": [
     {
-      "score": 7,
-      "source": "rss",
-      "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
-      "topic": "web-products",
-      "ts": "2026-11-02T17:52:00.543034+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 9,
-      "source": "rss",
-      "title": "Overriding Heading Levels With the headingoffset HTML Attribute",
-      "topic": "web-products",
-      "ts": "2026-11-02T17:52:00.543016+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
-      "title": "Where the Musk money flows",
+      "title": "Early voting jumps",
       "topic": "web-products",
-      "ts": "2026-11-02T17:52:00.542992+00:00",
+      "ts": "2026-11-03T02:03:21.932158+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-11-02T17:52:00.542973+00:00",
+      "ts": "2026-11-03T02:03:21.932146+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Where the Musk money flows",
+      "topic": "web-products",
+      "ts": "2026-11-03T02:03:21.932133+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Tor Browser 16.0",
+      "topic": "web-products",
+      "ts": "2026-11-03T02:03:21.932120+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-02T17:52:00.542948+00:00",
+      "ts": "2026-11-03T02:03:21.932105+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Running a bootstrapped SaaS for 20 years with my brother",
       "topic": "web-products",
-      "ts": "2026-11-02T17:52:00.542875+00:00",
+      "ts": "2026-11-03T02:03:21.932085+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Baking Brilliance: My DVS Mentee Experience",
+      "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
       "topic": "web-products",
-      "ts": "2026-11-02T17:51:57.482005+00:00",
+      "ts": "2026-11-03T02:03:21.931835+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Increasing Trump comments on body appearance",
+      "title": "Oracle files to sell $20B in new stock, bonds to finance AI buildout",
       "topic": "web-products",
-      "ts": "2026-11-02T17:51:57.481989+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "zhtyyx/codex-seo",
-      "topic": "web-products",
-      "ts": "2026-11-02T17:51:57.481973+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "ngocanhnckh/renderlint",
-      "topic": "web-products",
-      "ts": "2026-11-02T17:51:57.481953+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Moh4696/open-3d-skills",
-      "topic": "web-products",
-      "ts": "2026-11-02T17:51:57.481896+00:00",
+      "ts": "2026-11-03T02:03:21.931779+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-11-02T17:51:45.074547+00:00",
+      "ts": "2026-11-03T02:03:17.173129+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-11-02T17:51:45.074536+00:00",
+      "ts": "2026-11-03T02:03:17.173119+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
-      "title": "Localized Wikipedia to your geographic area",
+      "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-02T17:51:45.074526+00:00",
+      "ts": "2026-11-03T02:03:17.173108+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Policing protests in India",
       "topic": "web-products",
-      "ts": "2026-11-02T17:51:45.074515+00:00",
+      "ts": "2026-11-03T02:03:17.173097+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Increasing Trump comments on body appearance",
+      "topic": "web-products",
+      "ts": "2026-11-03T02:03:17.173087+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "What Is BLUF? How to Write Bottom Line Up Front (+ Free Rewriter Tool)",
+      "topic": "web-products",
+      "ts": "2026-11-03T02:03:17.173076+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "A Spark Of Color In November\u2019s Gray (2026 Wallpapers Edition)",
+      "topic": "web-products",
+      "ts": "2026-11-03T02:03:17.173066+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-26T18:17:48.004661+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-10-26T23:35:19.926556+00:00"
@@ -282,28 +270,32 @@
     {
       "kept": 9,
       "ts": "2026-11-02T17:50:39.938442+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-03T02:00:31.757025+00:00"
     }
   ],
-  "streak": 350,
+  "streak": 351,
   "topics": [
     {
-      "collected": 101,
-      "kept": 4,
+      "collected": 69,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 140,
-      "kept": 3,
+      "collected": 132,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 166,
-      "kept": 2,
+      "collected": 168,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-02T17:50:39.938442+00:00"
+  "updated_at": "2026-11-03T02:00:31.757025+00:00"
 }
