@@ -1,96 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 10,
-      "source": "hn",
-      "summary": "OpenAI's GPT-6.1 Terra is a fast, low-cost model for visual reasoning and precise computer use. Its standard API prices are 50% below GPT-5.6 Terra and GPT-6.1 Sol, and it completes agentic tasks over three times faster than GPT-6 Astra and Sol.",
-      "title": "GPT-6.1 Terra",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
-    },
-    {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "A blog post on fixing tool-call schema accuracy when serving open-weight models like Kimi K2.6 with vLLM, which produced valid tool-call schemas only 92% of the time. It explains how constrained decoding, released as a server-side flag in vLLM 0.31, restores 100% schema accuracy.",
-      "title": "Fixing Tool-Call Accuracy in vLLM",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm"
-    },
-    {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "OpenAI's developer model page for GPT-6.1 Terra, a fast, efficient model for visual reasoning, precise computer use, and natural writing, priced at $1 input/$5 output per 1M tokens with a 1,050,000-token context window; tool calling requires the Responses API.",
-      "title": "GPT 6.1 Terra",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
-    },
-    {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "Hob (FrigadeHQ/hob) is a free, open-source, offline desktop app that runs open-weight models like Gemma and gpt-oss locally on Mac, Windows and Linux, positioned as an alternative to Claude and ChatGPT. It auto-selects the best frontier open-weight model that fits your computer and sets it up.",
-      "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/FrigadeHQ/hob"
-    },
-    {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "globalmpc/nomore is a GitHub repo offering 20 ready-made CLAUDE.md rules distilled from nearly 10,000 Claude Code issues, plus an npx tool that finds instructions you keep repeating. Each rule links to the issue and reactions behind it.",
-      "title": "globalmpc/nomore",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/globalmpc/nomore"
-    },
-    {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "Entire is a new Git forge built for agent-human collaboration, with three primitives: Trails (agent-scored automated evals on every push instead of diff-based PR review), distributed Git hosting claimed up to 89x faster than GitHub, and Continuous Memory syncing sessions and prompts into the repo.",
-      "title": "The Git Forge for Agent-Human Collaboration",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://entire.com/blog/the-git-forge-for-agent-human-collaboration"
-    },
-    {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "Pragtical v3.14.0 is a release of the Lua-based text editor adding application menus and a movable toolbar, command prompts that can float or sit top/center, workspace session management, a refreshed Plugin Manager, and lower idle CPU use.",
-      "title": "Pragtical v3.14 Lua-based text editor adds menus, floating views, and sessions",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://pragtical.dev/blog/pragtical-v3140-release"
-    },
-    {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 8,
-      "source": "rss",
-      "summary": "A guide to dynamic social media card images for user-generated or e-commerce pages, covering how to generate them from dynamic data and expose them via Open Graph and Twitter meta tags, with GitHub as an example.",
-      "title": "What should you put on a dynamic custom social media card image?",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://blog.master.dev/what-should-you-put-on-a-dynamic-custom-social-media-card-image/"
-    },
-    {
-      "pending_since": "2026-10-27T09:37:29.404663+00:00",
-      "score": 6,
-      "source": "hn",
-      "summary": "A Halloween whodunit-style article tracing why Extended Validation certificates lost their green address-bar prominence, naming browsers, humans, a nonprofit, and Stripe as suspects, and noting a possible revival via an EU standard and AI agents.",
-      "title": "Who killed the EV cert? A browser whodunit for Halloween",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://qwac.com/blog/who-killed-the-ev-cert"
-    },
-    {
       "pending_since": "2026-10-27T23:30:15.987292+00:00",
       "score": 7,
       "source": "rss",
@@ -689,6 +599,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts"
+    },
+    {
+      "pending_since": "2026-11-03T11:38:31.517209+00:00",
+      "score": 6,
+      "source": "hn",
+      "summary": "A 20-year retrospective on Zamzar, a bootstrapped file-conversion SaaS run by two brothers, recounting milestones such as 766M files converted, 2,128 conversion types, and over 1M API requests per day.",
+      "title": "Running a bootstrapped SaaS for 20 years with my brother",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://blog.zamzar.com/2026/10/30/20-years-766-million-files-two-chameleons/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

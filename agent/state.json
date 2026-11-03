@@ -234,7 +234,7 @@
     "times_sent": 1
   },
   "02375df8417df1b0": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-27T03:50:43.963159+00:00",
     "last_score": 32,
     "ranks": {
@@ -312,7 +312,7 @@
     "times_sent": 0
   },
   "02941faf3e7dee38": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
     "last_score": 37,
     "ranks": {
@@ -536,6 +536,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "0504cb6dc0b8cf0b": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 236,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 236,
+        "summary": "A post about how OpenAI scales Git, the version control system builders use daily."
+      }
+    },
+    "times_sent": 0
+  },
   "05086b42d764422c": {
     "dismissed": "expired",
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
@@ -651,7 +667,7 @@
   "05cff87ec6ed50b1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 190,
+    "last_score": 203,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -1307,11 +1323,43 @@
     },
     "times_sent": 0
   },
+  "0c0af4bf6abff44f": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a full installer for Musicmakerunlimited 2026 beat-making software."
+      }
+    },
+    "times_sent": 0
+  },
   "0c2f8d4edc9f2ef8": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 890,
     "ranks": {},
+    "times_sent": 0
+  },
+  "0c479d4346045326": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 46,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 46,
+        "summary": "An Ask HN thread asking what hardware people use to run local LLMs."
+      }
+    },
     "times_sent": 0
   },
   "0c52706d1cc52b2e": {
@@ -1502,7 +1550,7 @@
   "0e356c09eb849e6e": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 339,
+    "last_score": 341,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1625,7 +1673,7 @@
   "0f63a2a5a5620b74": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 181,
+    "last_score": 182,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1657,7 +1705,7 @@
   "0f92c524b4d0c0b9": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 86,
+    "last_score": 88,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -1931,7 +1979,7 @@
   "1263ce4e09302da8": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 158,
+    "last_score": 189,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -1954,7 +2002,7 @@
   "12844ee7f8055ffe": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 1809,
+    "last_score": 1826,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2049,7 +2097,7 @@
   "13c6835917281a31": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 231,
+    "last_score": 241,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2160,7 +2208,7 @@
   "144a293a50f0da60": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 221,
+    "last_score": 267,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -2266,6 +2314,22 @@
         "rubric": "02189e2467e9",
         "source_score": 51,
         "summary": "A post titled 'Safe SIMD in Rust, even on the inside' on shnatsel.github.io."
+      }
+    },
+    "times_sent": 0
+  },
+  "15b07f7e71af672e": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 66,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 66,
+        "summary": "A blog post arguing that LLMs are not superhuman at reading and writing neural network weights."
       }
     },
     "times_sent": 0
@@ -2379,7 +2443,7 @@
   "16c023aa7c0c7794": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 76,
+    "last_score": 78,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2804,7 +2868,7 @@
   "1b25c70569238f70": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 79,
+    "last_score": 84,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -2936,7 +3000,7 @@
   "1c2c00360e1569ed": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 311,
+    "last_score": 314,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -3077,7 +3141,7 @@
   "1e03415a592fab86": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 5365,
+    "last_score": 5832,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -3137,7 +3201,7 @@
     "times_sent": 0
   },
   "1e78eb133dbbef2d": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
     "last_score": 172,
     "ranks": {
@@ -3288,7 +3352,7 @@
   "202b9d690f3a74b6": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 572,
+    "last_score": 579,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3480,6 +3544,22 @@
     "first_seen": "2026-09-25T22:54:50.790277+00:00",
     "last_score": 56,
     "ranks": {},
+    "times_sent": 0
+  },
+  "219e647307eed58e": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a full working installer for a 'Chimera 2026' utility bundle with no clear description of its purpose."
+      }
+    },
     "times_sent": 0
   },
   "21a58c9dd1189df7": {
@@ -3814,7 +3894,7 @@
   "2632413716a4ff8d": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 74,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3885,7 +3965,7 @@
   "270a3881dc5cbe05": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 139,
+    "last_score": 142,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3989,7 +4069,7 @@
   "281f179371eea4b4": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 162,
+    "last_score": 163,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4354,6 +4434,22 @@
     },
     "times_sent": 0
   },
+  "2b5c134867c3f19f": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a pre-activated standalone installer for Autodesk CFD 2023 simulation software."
+      }
+    },
+    "times_sent": 0
+  },
   "2bb517d901795da9": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -4519,7 +4615,7 @@
   "2cf1fb795ba0396c": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 420,
+    "last_score": 421,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -4748,7 +4844,7 @@
   "2f4fedc992eca9fc": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 106,
+    "last_score": 113,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4812,7 +4908,7 @@
   "2fc5152fc1ef6b4a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 56,
+    "last_score": 60,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4927,7 +5023,7 @@
   "30bbbfd21a734e09": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 125,
+    "last_score": 126,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4987,7 +5083,7 @@
   "322ef97c5b623537": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 605,
+    "last_score": 668,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5184,7 +5280,7 @@
   "333bc37d954c1d78": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 100,
+    "last_score": 113,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5364,7 +5460,7 @@
   "34755f8225792455": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 346,
+    "last_score": 348,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -5442,7 +5538,7 @@
     "times_sent": 0
   },
   "3511f750c53db873": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
     "last_score": 91,
     "ranks": {
@@ -5827,7 +5923,7 @@
   "37d646f6268ddbb7": {
     "dismissed": null,
     "first_seen": "2026-10-27T09:37:29.404663+00:00",
-    "last_score": 311,
+    "last_score": 314,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5898,7 +5994,7 @@
   "38937f7fd47a931a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 807,
+    "last_score": 828,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6840,6 +6936,22 @@
     },
     "times_sent": 0
   },
+  "41ddbe0d426e7328": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a pre-activated standalone setup of Display Fusion 2026 display management software."
+      }
+    },
+    "times_sent": 0
+  },
   "42219d8d26148ddc": {
     "dismissed": null,
     "first_seen": "2026-10-09T20:33:56.005527+00:00",
@@ -6891,7 +7003,7 @@
   "4290700ebfe688c1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 151,
+    "last_score": 166,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -6930,7 +7042,7 @@
   "42f2d8ff481dfb0a": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 104,
+    "last_score": 105,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6999,7 +7111,7 @@
   "44da56d320b41406": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 294,
+    "last_score": 296,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7488,6 +7600,22 @@
     },
     "times_sent": 0
   },
+  "487ed3e9fe8608d8": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a standalone installer for a DVD Creator 2026 utility."
+      }
+    },
+    "times_sent": 0
+  },
   "48cdcc62a159260f": {
     "dismissed": null,
     "first_seen": "2026-09-08T01:49:25.283881+00:00",
@@ -7496,7 +7624,7 @@
     "times_sent": 0
   },
   "48cf39a28bcf54aa": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-26T18:17:48.004661+00:00",
     "last_score": 57,
     "ranks": {
@@ -8015,7 +8143,7 @@
   "4ed584eb2c672010": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 173,
+    "last_score": 224,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -8148,7 +8276,7 @@
   "4ff51e4e30dd0b36": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 609,
+    "last_score": 652,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -8173,6 +8301,22 @@
         "rubric": "02189e2467e9",
         "source_score": 34,
         "summary": "A project that renders a flock of birds in the terminal."
+      }
+    },
+    "times_sent": 0
+  },
+  "5009c314f8926076": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 39,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 39,
+        "summary": "An arXiv paper surveying open-source 5G radio access network platforms with a performance and capability analysis."
       }
     },
     "times_sent": 0
@@ -8309,7 +8453,7 @@
   "5192656040346573": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 66,
+    "last_score": 67,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8483,7 +8627,7 @@
   "52ed5fcd54e4c7b1": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 5955,
+    "last_score": 6617,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -8631,7 +8775,7 @@
   "543c1f702361e549": {
     "dismissed": null,
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 219,
+    "last_score": 220,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8702,7 +8846,7 @@
   "54e2bdb4495011dc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 448,
+    "last_score": 476,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -8962,7 +9106,7 @@
   "56d4ce6f2e9ac89a": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 219,
+    "last_score": 284,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9026,15 +9170,15 @@
   "570f5e1efb5964ca": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 36,
+    "last_score": 146,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-02T17:50:39.938442+00:00",
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
         "relevance": 6,
         "rubric": "3472af8a46e1",
-        "source_score": 36,
-        "summary": "Launch HN for Momentic, QA agents that autonomously plan, explore and bug-bash user flows and controls in web, iOS, Android and soon desktop apps."
+        "source_score": 146,
+        "summary": "Momentic launches QA agents that autonomously plan, explore, and bug-bash controls and user flows in web, iOS, Android, and soon desktop apps."
       }
     },
     "times_sent": 0
@@ -9334,6 +9478,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 70,
         "summary": "Notes that five inference providers now offer the abliterated variant of DeepSeek."
+      }
+    },
+    "times_sent": 0
+  },
+  "5a4abbe0df74ae18": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a pre-activated standalone installer for AIDA64 Extreme 2026 system information software."
       }
     },
     "times_sent": 0
@@ -9653,7 +9813,7 @@
     "times_sent": 0
   },
   "5dd2de047e57150c": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
     "last_score": 31,
     "ranks": {
@@ -9912,7 +10072,7 @@
   "60d22bd166261a3e": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 127,
+    "last_score": 128,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10676,7 +10836,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 349,
+    "last_score": 350,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11246,6 +11406,22 @@
     },
     "times_sent": 0
   },
+  "6ce3035ae4151033": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 256,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 256,
+        "summary": "A GitHub project for fail-closed swarm orchestration with epoch-fenced work and late-completion rejection."
+      }
+    },
+    "times_sent": 0
+  },
   "6d1f79546fa5a2ec": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
@@ -11279,7 +11455,7 @@
   "6d5dda0620d9e0bc": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 1426,
+    "last_score": 2094,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -11390,7 +11566,7 @@
   "6e57dee758dbd144": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 175,
+    "last_score": 177,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12295,7 +12471,7 @@
   "778916995661ca3b": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 105,
+    "last_score": 106,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12350,7 +12526,7 @@
   "77da46b84293ae0c": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 756,
+    "last_score": 766,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -12373,7 +12549,7 @@
   "780b70023987f312": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 121,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -12382,6 +12558,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 112,
         "summary": "A harness for running language-model agents in Minecraft with Mineflayer tools, persistent sessions and shell sandboxes."
+      }
+    },
+    "times_sent": 0
+  },
+  "780c8e844b23df95": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A repo advertising a pre-activated standalone Adobe Audition audio workbench setup."
       }
     },
     "times_sent": 0
@@ -12516,7 +12708,7 @@
   "7985eaa4d4b49f55": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 171,
+    "last_score": 176,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12740,7 +12932,7 @@
   "7cc697fb67ca8ce3": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 79,
+    "last_score": 80,
     "ranks": {
       "web-products": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -12898,7 +13090,7 @@
   "7e9f318174ec7dbc": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 468,
+    "last_score": 470,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13117,7 +13309,7 @@
   "804b51847cb0588e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 164,
+    "last_score": 165,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -13228,7 +13420,7 @@
   "80e95c849406f883": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 155,
+    "last_score": 160,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13244,7 +13436,7 @@
   "815e9f76383a9012": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
-    "last_score": 606,
+    "last_score": 609,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13331,7 +13523,7 @@
   "833b856438416e75": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 962,
+    "last_score": 1020,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -13340,6 +13532,22 @@
         "rubric": "080b24af813c",
         "source_score": 708,
         "summary": "A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same."
+      }
+    },
+    "times_sent": 0
+  },
+  "834f867a45207691": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 92,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 92,
+        "summary": "A GitHub link titled 'Nvidia \u2013 open-source auto-ontology' whose title gives no clear indication of what the software is."
       }
     },
     "times_sent": 0
@@ -13715,7 +13923,7 @@
   "87906e26ddaac568": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 84,
+    "last_score": 98,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13786,7 +13994,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 269,
+    "last_score": 277,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -14194,6 +14402,22 @@
     },
     "times_sent": 0
   },
+  "8d03fa8d0a82fc06": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a standalone setup of Cubase Studio 2026 music production software."
+      }
+    },
+    "times_sent": 0
+  },
   "8d2f66e98d35134b": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
@@ -14236,7 +14460,7 @@
   "8d821849286ada42": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 160,
+    "last_score": 161,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14840,7 +15064,7 @@
   "94430ceaa839cbc6": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 588,
+    "last_score": 589,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14930,6 +15154,22 @@
     },
     "times_sent": 0
   },
+  "94a7825fb6eaf31f": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising an unlocked standalone setup of the Touch Copy 2026 desktop utility."
+      }
+    },
+    "times_sent": 0
+  },
   "94dc6bcd1df95440": {
     "dismissed": null,
     "first_seen": "2026-10-27T23:30:15.987292+00:00",
@@ -15011,7 +15251,7 @@
   "955eebf5f91d3448": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 247,
+    "last_score": 250,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15683,7 +15923,7 @@
   "9b602871ebeb87d5": {
     "dismissed": null,
     "first_seen": "2026-10-31T19:43:58.511876+00:00",
-    "last_score": 176,
+    "last_score": 177,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15916,7 +16156,7 @@
   "9e2b0c96b94622b6": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 113,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15962,7 +16202,7 @@
   "9e8a6cc08fde12e1": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 85,
+    "last_score": 135,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16133,7 +16373,7 @@
   "a05f23a2b97b717a": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 109,
+    "last_score": 112,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16234,7 +16474,7 @@
   "a13302c36360f8b6": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 256,
+    "last_score": 258,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -16282,7 +16522,7 @@
   "a13f736d98945685": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 1007,
+    "last_score": 1008,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16461,7 +16701,7 @@
   "a330a8194716c61c": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 212,
+    "last_score": 213,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17072,7 +17312,7 @@
   "a826b29b8d795d6c": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 2257,
+    "last_score": 2366,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-28T14:52:13.974994+00:00",
@@ -17147,6 +17387,22 @@
     },
     "times_sent": 0
   },
+  "a940ae62834cdd05": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 299,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 299,
+        "summary": "A repo advertising a pre-activated full installer for Autodesk Inventor 2026 desktop software."
+      }
+    },
+    "times_sent": 0
+  },
   "a949e89b4b36cefd": {
     "dismissed": null,
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
@@ -17198,6 +17454,22 @@
         "rubric": "080b24af813c",
         "source_score": 31,
         "summary": "A CNBC item about data center stocks sliding as a Korea IPO plunges 30% and pressures tech sentiment."
+      }
+    },
+    "times_sent": 0
+  },
+  "a954b7c9d916991f": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a ready-to-run installer build of Adobe After Effects 2026."
       }
     },
     "times_sent": 0
@@ -17796,7 +18068,7 @@
   "af3c1a712c246521": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 145,
+    "last_score": 146,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -17945,7 +18217,7 @@
   "b00f3c61979d2dea": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 557,
+    "last_score": 714,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -18030,7 +18302,7 @@
   "b130dbfc8d0ff00e": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 885,
+    "last_score": 943,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18193,7 +18465,7 @@
     "times_sent": 0
   },
   "b32fb058c2255182": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
     "last_score": 637,
     "ranks": {
@@ -18241,7 +18513,7 @@
   "b380127f8f95794c": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 212,
+    "last_score": 215,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -18397,7 +18669,7 @@
   "b50c89b4a0e7ebef": {
     "dismissed": null,
     "first_seen": "2026-10-27T17:30:27.716018+00:00",
-    "last_score": 1990,
+    "last_score": 2035,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18741,7 +19013,7 @@
   "b808d0a2879133da": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 166,
+    "last_score": 171,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -19022,7 +19294,7 @@
   "ba04ff4c5d96fad4": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 76,
+    "last_score": 78,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -19251,6 +19523,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 58,
         "summary": "A post titled 'Understanding the Impact of LLM Watermarking on AI Agent Behavior'."
+      }
+    },
+    "times_sent": 0
+  },
+  "bbe20fc105c3da8f": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 3,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A FlowingData post examining a Google Gemini ad that cited correlations between home runs and full moons, with analysis arguing the statistics are cherry-picked and have large error bars."
       }
     },
     "times_sent": 0
@@ -19769,7 +20057,7 @@
   "c14d1aee7a8cab5e": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
-    "last_score": 135,
+    "last_score": 138,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -19896,6 +20184,22 @@
         "rubric": "02189e2467e9",
         "source_score": 400,
         "summary": "A GitHub repository titled 'gryphonautocratmatch/StartAll-Back' advertising StartAll Back 2026 as a full working installer and desktop configuration utility."
+      }
+    },
+    "times_sent": 0
+  },
+  "c26c217a1db4cfbe": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a full installer for the DrFone Unlock 2026 mobile recovery tool."
       }
     },
     "times_sent": 0
@@ -20034,7 +20338,7 @@
   "c42b88e52dd1586a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 168,
+    "last_score": 189,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20089,7 +20393,7 @@
   "c48f2af7e5b6da76": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 1341,
+    "last_score": 1619,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20266,10 +20570,10 @@
   "c5f8a030d1d766b6": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 257,
+    "last_score": 258,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-11-03T11:38:31.517209+00:00",
         "ranked_at": "2026-11-01T14:45:27.144193+00:00",
         "relevance": 6,
         "rubric": "080b24af813c",
@@ -20334,6 +20638,22 @@
     },
     "times_sent": 0
   },
+  "c6b64c6f66589d18": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 305,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 305,
+        "summary": "Show HN for a New York Times-style front end for browsing Hacker News that updates hourly."
+      }
+    },
+    "times_sent": 0
+  },
   "c6e7b373f2474e0e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -20367,7 +20687,7 @@
   "c74913fb1896debd": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 248,
+    "last_score": 249,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -20577,7 +20897,7 @@
   "c99ede2d1aa61d73": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 467,
+    "last_score": 470,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20780,7 +21100,7 @@
   "cbd5fbf2a27d4b80": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 208,
+    "last_score": 207,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -21333,6 +21653,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "d0e3d3c85c8f7b5a": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a full installer for an Adobe InDesign 2026 layout tool."
+      }
+    },
+    "times_sent": 0
+  },
   "d0ee0bd9c8e2762e": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -21842,7 +22178,7 @@
   "d7f1e98252a76066": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 117,
+    "last_score": 120,
     "ranks": {
       "tooling": {
         "queued_at": "2026-10-29T14:57:39.758738+00:00",
@@ -21961,7 +22297,7 @@
   "d90e1031b9e75e95": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 99,
+    "last_score": 100,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -22407,7 +22743,7 @@
   "dc7eb9e8885fba44": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 92,
+    "last_score": 101,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -22606,7 +22942,7 @@
     "times_sent": 0
   },
   "de86940e9c842c4d": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-27T03:50:43.963159+00:00",
     "last_score": null,
     "ranks": {
@@ -22788,6 +23124,22 @@
     },
     "times_sent": 0
   },
+  "dfb9aead7436bb1e": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a standalone installer for an IMEI repair tool."
+      }
+    },
+    "times_sent": 0
+  },
   "dfc2d4a7522c7da1": {
     "dismissed": "expired",
     "first_seen": "2026-10-02T04:14:08.473534+00:00",
@@ -22844,15 +23196,15 @@
   "e044dd3dafb7cbb4": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 71,
+    "last_score": 211,
     "ranks": {
       "web-products": {
         "queued_at": null,
-        "ranked_at": "2026-11-03T02:00:31.757025+00:00",
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
         "relevance": 1,
         "rubric": "080b24af813c",
-        "source_score": 71,
-        "summary": "Intel\u2019s stock collapse is reported to be worsening as a $3.5T chip rout spreads."
+        "source_score": 211,
+        "summary": "A news item about Intel's stock collapse worsening as a $3.5T chip rout spreads."
       }
     },
     "times_sent": 0
@@ -22867,7 +23219,7 @@
   "e0560c89dba7252f": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 269,
+    "last_score": 270,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -23307,6 +23659,22 @@
     },
     "times_sent": 0
   },
+  "e424f9108045f45d": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a standalone setup for the PassFab Unlocker 2026 password recovery tool."
+      }
+    },
+    "times_sent": 0
+  },
   "e4378147452c1226": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
@@ -23436,7 +23804,7 @@
   "e5bc44dd26a81c3c": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 101,
+    "last_score": 102,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23602,7 +23970,7 @@
   "e6dd1b00becd3029": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 332,
+    "last_score": 337,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23890,15 +24258,23 @@
   "e9058888237a2649": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 59,
+    "last_score": 106,
     "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 106,
+        "summary": "A linter for rendered UI that catches overflowing text, low contrast, overlaps, broken responsive layouts, emoji icons, and more, built for AI coding agents."
+      },
       "web-products": {
         "queued_at": null,
-        "ranked_at": "2026-11-02T17:50:39.938442+00:00",
-        "relevance": 4,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 2,
         "rubric": "080b24af813c",
-        "source_score": 53,
-        "summary": "A GitHub repository for a linter that checks rendered UI for overflowing text, low contrast, overlaps, broken responsive layouts, emoji icons, and similar issues across web frameworks."
+        "source_score": 106,
+        "summary": "A GitHub project for renderlint, a linter that catches rendered-UI issues such as overflowing text, low contrast, overlaps, broken responsive layouts, and emoji icons in any web framework, built for AI coding agents."
       }
     },
     "times_sent": 0
@@ -24449,7 +24825,7 @@
   "ef006b6d1900eae3": {
     "dismissed": null,
     "first_seen": "2026-10-31T19:43:58.511876+00:00",
-    "last_score": 260,
+    "last_score": 261,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24502,7 +24878,7 @@
   "f00b165a7cee2cfd": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 90,
+    "last_score": 91,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -24851,7 +25227,7 @@
   "f2a1d614a2bbfbb8": {
     "dismissed": null,
     "first_seen": "2026-10-26T09:44:58.304763+00:00",
-    "last_score": 426,
+    "last_score": 428,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -24996,6 +25372,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "f39d517a0c9b8164": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a standalone installer for the FonePaw Unlocker 2026 mobile tool."
+      }
+    },
+    "times_sent": 0
+  },
   "f3cc35f9475b86c1": {
     "dismissed": "expired",
     "first_seen": "2026-10-25T15:36:22.052233+00:00",
@@ -25094,6 +25486,22 @@
     "first_seen": "2026-08-25T16:23:11.542280+00:00",
     "last_score": 53,
     "ranks": {},
+    "times_sent": 0
+  },
+  "f5522d64eef95cec": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a full installer for a 'Whale Tracker 2026' blockchain tracking desktop product."
+      }
+    },
     "times_sent": 0
   },
   "f5650bacb7dba05a": {
@@ -25210,6 +25618,30 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "f6a27acca830d5a6": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 41,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 41,
+        "summary": "Show HN for a small browser game that lets players practice Vim commands."
+      },
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "080b24af813c",
+        "source_score": 41,
+        "summary": "A Show HN post about a browser game the author built to practice Vim commands and help remember them."
+      }
+    },
     "times_sent": 0
   },
   "f6a301346a05e615": {
@@ -25446,9 +25878,9 @@
     "times_sent": 0
   },
   "f93d4d5cf699810a": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-26T23:35:19.926556+00:00",
-    "last_score": 178,
+    "last_score": 179,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-27T09:37:29.404663+00:00",
@@ -25525,7 +25957,7 @@
   "f9ecf66c18226a74": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 1953,
+    "last_score": 2723,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25617,7 +26049,7 @@
   "fad4660612e7a0c9": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 83,
+    "last_score": 86,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -25759,6 +26191,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "fe10ef82f55ab573": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 128,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 128,
+        "summary": "A GitHub project providing secure AI-powered remote computer access for ChatGPT, Claude, and compatible MCP clients."
+      }
+    },
+    "times_sent": 0
+  },
   "fe1c287f27160be8": {
     "dismissed": null,
     "first_seen": "2026-10-06T09:35:27.068303+00:00",
@@ -25778,7 +26226,7 @@
   "fe1d679e74709694": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 208,
+    "last_score": 222,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -25857,7 +26305,7 @@
   "fe96dae1a840cf5d": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 34,
+    "last_score": 36,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25892,6 +26340,22 @@
     "last_score": 95,
     "ranks": {},
     "times_sent": 1
+  },
+  "feb0f16f02538e9c": {
+    "dismissed": null,
+    "first_seen": "2026-11-03T11:38:31.517209+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-03T11:38:31.517209+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo advertising a pre-activated standalone installer for Aomei Backupper 2026 backup and disk software."
+      }
+    },
+    "times_sent": 0
   },
   "feb8ab8ab26f328d": {
     "dismissed": null,
