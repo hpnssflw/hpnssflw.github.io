@@ -4,9 +4,9 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 58,
+        "already_ranked": 54,
         "dismissed": 7,
-        "seen": 25
+        "seen": 28
       },
       "rank": {
         "below_relevance": 2,
@@ -15,167 +15,164 @@
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 80,
+        "already_ranked": 98,
         "dismissed": 5,
-        "seen": 17
+        "seen": 20
       },
       "rank": {
-        "below_relevance": 21,
-        "over_max_items": 13
+        "below_relevance": 3,
+        "over_max_items": 11
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 131
+        "outside_window": 129
       },
       "dedupe": {
-        "already_ranked": 28,
+        "already_ranked": 29,
         "dismissed": 2,
-        "seen": 17
+        "seen": 20
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
         "below_relevance": 2,
-        "over_max_items": 8
+        "over_max_items": 9
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 105,
-      "in_window": 105,
-      "kept": 4,
-      "new": 15
+      "collected": 100,
+      "in_window": 100,
+      "kept": 0,
+      "new": 11
     },
     "tooling": {
-      "collected": 139,
-      "in_window": 139,
-      "kept": 3,
-      "new": 37
+      "collected": 137,
+      "in_window": 137,
+      "kept": 0,
+      "new": 14
     },
     "web-products": {
-      "collected": 190,
-      "in_window": 59,
-      "kept": 2,
-      "new": 12
+      "collected": 191,
+      "in_window": 62,
+      "kept": 0,
+      "new": 11
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 70,
+  "pending_count": 69,
   "recent_events": [
-    {
-      "score": 8,
-      "source": "rss",
-      "title": "Election night mirages",
-      "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747124+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 9,
-      "source": "rss",
-      "title": "Modern CSS Might Make Your Front-End More Complex",
-      "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747115+00:00",
-      "verdict": "kept"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
-      "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747102+00:00",
-      "verdict": "drop"
-    },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747094+00:00",
+      "ts": "2026-11-04T00:24:27.817268+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Where the Musk money flows",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747086+00:00",
+      "ts": "2026-11-04T00:24:27.817259+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Early voting jumps",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747079+00:00",
+      "ts": "2026-11-04T00:24:27.817237+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
+      "topic": "web-products",
+      "ts": "2026-11-04T00:24:27.817229+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747070+00:00",
+      "ts": "2026-11-04T00:24:27.817219+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747061+00:00",
+      "ts": "2026-11-04T00:24:27.817210+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Which Types of Mentions Correlate the Strongest With AI Visibility? (260M AI Prompts Analyzed)",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.747034+00:00",
+      "ts": "2026-11-04T00:24:27.817201+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Every OpenAI Publisher Partnership, and How Often ChatGPT Cites Them",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:58.746983+00:00",
+      "ts": "2026-11-04T00:24:27.817189+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Safari introduces Adaptive Dark Mode in 27.3",
+      "topic": "web-products",
+      "ts": "2026-11-04T00:24:27.817172+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "10 Clearscope Alternatives (Compared on Price, API, and MCP Access)",
+      "title": "Multi-Column Different-Speed Scrolling",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:55.295353+00:00",
+      "ts": "2026-11-04T00:24:27.816923+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Show HN: HackerChurn \u2013 which SaaS tools HN wants to cancel",
+      "title": "US Hedge Funds Just Sold Every AI Stock They Bought Since 2025",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:55.295308+00:00",
+      "ts": "2026-11-04T00:24:27.816866+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:44.922692+00:00",
+      "ts": "2026-11-04T00:24:24.585678+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:44.922684+00:00",
+      "ts": "2026-11-04T00:24:24.585669+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-03T19:07:44.922670+00:00",
+      "ts": "2026-11-04T00:24:24.585661+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Policing protests in India",
+      "topic": "web-products",
+      "ts": "2026-11-04T00:24:24.585653+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-27T09:37:29.404663+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-27T17:30:27.716018+00:00"
@@ -267,28 +264,32 @@
     {
       "kept": 9,
       "ts": "2026-11-03T19:06:44.712669+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-04T00:23:49.033444+00:00"
     }
   ],
-  "streak": 353,
+  "streak": 354,
   "topics": [
     {
-      "collected": 105,
-      "kept": 4,
+      "collected": 100,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 139,
-      "kept": 3,
+      "collected": 137,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 190,
-      "kept": 2,
+      "collected": 191,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-03T19:06:44.712669+00:00"
+  "updated_at": "2026-11-04T00:23:49.033444+00:00"
 }
