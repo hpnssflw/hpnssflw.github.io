@@ -4,24 +4,24 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 54,
+        "already_ranked": 56,
         "dismissed": 7,
         "seen": 28
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 9
+        "below_relevance": 7,
+        "over_max_items": 11
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 98,
+        "already_ranked": 91,
         "dismissed": 5,
         "seen": 20
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 11
+        "below_relevance": 9,
+        "over_max_items": 13
       }
     },
     "web-products": {
@@ -29,154 +29,148 @@
         "outside_window": 129
       },
       "dedupe": {
-        "already_ranked": 29,
+        "already_ranked": 30,
         "dismissed": 2,
-        "seen": 20
-      },
-      "inbox": {
-        "expired": 1
+        "seen": 17
       },
       "rank": {
         "below_relevance": 2,
-        "over_max_items": 9
+        "over_max_items": 10
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 100,
-      "in_window": 100,
+      "collected": 109,
+      "in_window": 109,
       "kept": 0,
-      "new": 11
+      "new": 18
     },
     "tooling": {
-      "collected": 137,
-      "in_window": 137,
+      "collected": 138,
+      "in_window": 138,
       "kept": 0,
-      "new": 14
+      "new": 22
     },
     "web-products": {
       "collected": 191,
       "in_window": 62,
-      "kept": 0,
-      "new": 11
+      "kept": 1,
+      "new": 13
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 69,
+  "pending_count": 70,
   "recent_events": [
+    {
+      "score": 8,
+      "source": "hn",
+      "title": "Safari introduces Adaptive Dark Mode in 27.3",
+      "topic": "web-products",
+      "ts": "2026-11-04T11:53:05.580685+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "Worst Halloween candies, according to the data",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817268+00:00",
+      "ts": "2026-11-04T11:53:05.580671+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Where the Musk money flows",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817259+00:00",
+      "ts": "2026-11-04T11:53:05.580665+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Early voting jumps",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817237+00:00",
+      "ts": "2026-11-04T11:53:05.580660+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817229+00:00",
+      "ts": "2026-11-04T11:53:05.580654+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817219+00:00",
+      "ts": "2026-11-04T11:53:05.580632+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817210+00:00",
+      "ts": "2026-11-04T11:53:05.580626+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Needle of uncertainty is live for Midterms 2026",
+      "topic": "web-products",
+      "ts": "2026-11-04T11:53:05.580620+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Percentage of votes counted so far",
+      "topic": "web-products",
+      "ts": "2026-11-04T11:53:05.580612+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Which Types of Mentions Correlate the Strongest With AI Visibility? (260M AI Prompts Analyzed)",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817201+00:00",
+      "ts": "2026-11-04T11:53:05.580602+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Every OpenAI Publisher Partnership, and How Often ChatGPT Cites Them",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817189+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Safari introduces Adaptive Dark Mode in 27.3",
-      "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.817172+00:00",
+      "ts": "2026-11-04T11:53:05.580533+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Multi-Column Different-Speed Scrolling",
+      "title": "Benchmark chair",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.816923+00:00",
+      "ts": "2026-11-04T11:53:02.920146+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "US Hedge Funds Just Sold Every AI Stock They Bought Since 2025",
+      "title": "AI stocks slide as Texas governor result raises data center risks",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:27.816866+00:00",
+      "ts": "2026-11-04T11:53:02.920087+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:24.585678+00:00",
+      "ts": "2026-11-04T11:52:55.981448+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-11-04T00:24:24.585669+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Baking Brilliance: My DVS Mentee Experience",
-      "topic": "web-products",
-      "ts": "2026-11-04T00:24:24.585661+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Policing protests in India",
-      "topic": "web-products",
-      "ts": "2026-11-04T00:24:24.585653+00:00",
+      "ts": "2026-11-04T11:52:55.981442+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-27T17:30:27.716018+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-10-27T23:30:15.987292+00:00"
@@ -268,28 +262,32 @@
     {
       "kept": 0,
       "ts": "2026-11-04T00:23:49.033444+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-11-04T11:52:02.480884+00:00"
     }
   ],
-  "streak": 354,
+  "streak": 355,
   "topics": [
     {
-      "collected": 100,
+      "collected": 109,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 137,
+      "collected": 138,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 191,
-      "kept": 0,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-04T00:23:49.033444+00:00"
+  "updated_at": "2026-11-04T11:52:02.480884+00:00"
 }
