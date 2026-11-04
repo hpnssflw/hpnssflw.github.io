@@ -1,96 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "PageSift: a memory-bounded web scraping and extraction engine in one Rust binary for AI agents and LLM pipelines, turning sites, PDFs and archives into Markdown and structured data. Ships native SDKs plus Firecrawl v1/v2 and Jina Reader-compatible APIs, with benchmarks claiming large speed-ups over PDF, Office and layout-model tools.",
-      "title": "YOLOW92/pagesift",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/YOLOW92/pagesift"
-    },
-    {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 8,
-      "source": "hn",
-      "summary": "AllModels' abliterated model router: one OpenAI-compatible endpoint (chat completions and responses) federating abliterated models like DeepSeek and GLM 5.3 across multiple inference providers, now 5 for abliterated DeepSeek. Keeps text routes in a fallback pool, sends image requests only to providers that can read them, and hosts web search itself.",
-      "title": "There are now 5 inference providers for abliterated DeepSeek",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://allmodels.io/llm/abliterated"
-    },
-    {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 7,
-      "source": "hn",
-      "summary": "Survival LLM: a free, open-source offline AI assistant and emergency library that runs entirely on your own computer, answering from medical, FEMA/CDC, survival and repair references plus ~930,000 Wikipedia articles and citing the exact passage. It auto-selects a local model based on your machine's memory and needs no internet after setup.",
-      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://www.brangus.io/survival-llm"
-    },
-    {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 7,
-      "source": "github",
-      "summary": "DeepScient: a research workbench running on the DeepSeek Harness runtime that structures work into 12 visible stages and 55 checkable gates, with 36 science tools, 98 skills and an auditable evidence chain, reproducible experiment records, and self-contained Windows and Apple Silicon desktop installers.",
-      "title": "yzlin286-wq/Deepscient",
-      "topic": "ai-engineering",
-      "topic_name": "AI Engineering",
-      "url": "https://github.com/yzlin286-wq/Deepscient"
-    },
-    {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 9,
-      "source": "hn",
-      "summary": "JetBrains IDEs' built-in terminal now runs on libghostty, the emulation library behind Ghostty, replacing JediTerm from 2026.3. This adds modern protocols like Kitty keyboard and modifyOtherKeys so CLI AI agents, Neovim, tmux and fish get correct multi-line prompts and keybindings.",
-      "title": "JetBrains IDEs are now powered by libghostty",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://blog.jetbrains.com/platform/2026/10/jetbrains-terminal-now-uses-ghostty/"
-    },
-    {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 9,
-      "source": "github",
-      "summary": "sill is a drop-in bash.exe for coding agents on native Windows: a fork of brush plus a Windows adapter needing no Git, MSYS2 or WSL. It fixes argument mangling, path mixing, encoding mojibake, console flashes and missing tools, passing 85/85 conformance cases versus 64 for Git Bash.",
-      "title": "lemonadesaltbagel/sill",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/lemonadesaltbagel/sill"
-    },
-    {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 8,
-      "source": "github",
-      "summary": "Floorplan has Claude read your codebase and draw an interactive, plain-English map of every part, file and web request and how they connect, across repos. You can zoom from whole app to file, ask questions of the map, and see which parts Claude touched after each change.",
-      "title": "haydenschmitty/floorplan",
-      "topic": "tooling",
-      "topic_name": "Tooling",
-      "url": "https://github.com/haydenschmitty/floorplan"
-    },
-    {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 9,
-      "source": "rss",
-      "summary": "Ahrefs guide to Google AI Mode, Google's conversational search experience, covering its launch and global expansion, 1 billion monthly users, default Gemini models, and new capabilities like Generative UI and background agents for SEOs and content marketers.",
-      "title": "Google AI Mode: All You Need to Know",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://ahrefs.com/blog/google-ai-mode/"
-    },
-    {
-      "pending_since": "2026-10-28T14:52:13.974994+00:00",
-      "score": 8,
-      "source": "rss",
-      "summary": "FlowingData write-up on a Pudding visual essay by Owen Lacey that analyzes the Hollywood actor co-appearance network and uses average distance (remoteness) to identify the most connected actor, showing Kevin Bacon isn't the real center.",
-      "title": "Finding the real center actor of Hollywood",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://flowingdata.com/2026/10/28/finding-the-real-center-actor-of-hollywood/"
-    },
-    {
       "pending_since": "2026-10-29T04:31:55.013043+00:00",
       "score": 9,
       "source": "rss",
@@ -699,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "A blog post testing an example from the \u201cSparks of Weight-Space Programming\u201d paper reports that Qwen 3.8 27B running on a laptop can interpret raw model weights, extending the paper\u2019s weight-reading and weight-editing claims beyond frontier models.",
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "A hands-on article on dual-booting Linux on the Nvidia RTX Spark laptop finds GPU clocks locked near 780 MHz because of Windows-only encrypted power firmware, cutting GPT-OSS-120B inference from 65.4 to 13.9 tokens/s; WSL avoids the issue.",
+      "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 8,
+      "source": "github",
+      "summary": "A GitHub repository curating 309 self-hostable open-source AI projects across local LLMs, agents, MCP servers, RAG, speech and image generation; a weekly GitHub API check moves archived, deleted or year-silent projects to an unmaintained list.",
+      "title": "glincker/awesome-selfhosted-ai",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/glincker/awesome-selfhosted-ai"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "A README for EXZA Remote, a proprietary hosted MCP service that connects ChatGPT, Claude and other AI assistants to a user\u2019s Mac, Windows or Linux computer for owner-approved file inspection, process checks and terminal commands, with warnings against an unofficial npx install.",
+      "title": "exzade/EXZA-Remote",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/exzade/EXZA-Remote"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "Agent Autoloop is a lightweight automation kernel for command-line agents that schedules tasks, routes work to pluggable agents, and sends approval cards via Feishu, Slack, Discord or desktop notifications only when needed; runs locally on macOS/Linux.",
+      "title": "KKKKhazix/agent-autoloop",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/KKKKhazix/agent-autoloop"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "Code-review-skill is an evidence-backed, static-first code review skill for Claude Code and Codex, with English/Chinese packages, JSON-derived delivery summaries, auditable findings with locations, contracts and severity, plus gate decisions; no build or test run required.",
+      "title": "kyy-logs/code-review-skill",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/kyy-logs/code-review-skill"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 8,
+      "source": "hn",
+      "summary": "Codemap generates one HTML page mapping a Go module: packages, internal dependencies, and functions per file, with search, package usage views, and GitHub line jumps; it runs via go run or a GitHub Action, and tests are omitted.",
+      "title": "Show HN: Codemap \u2013 one-page interactive map of any Go repository",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/peterretief/codemap"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 7,
+      "source": "rss",
+      "summary": "An Ahrefs analysis of OpenAI publisher licensing deals and ChatGPT citations finds partner domains' share of top citations rose from 7.5% in March 2026 to 15.8% in July and 12.5% in late September; ten partners rank among ChatGPT's 50 most-cited sites.",
+      "title": "Every OpenAI Publisher Partnership, and How Often ChatGPT Cites Them",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://ahrefs.com/blog/openai-publisher-partnerships/"
+    },
+    {
+      "pending_since": "2026-11-04T19:24:33.246895+00:00",
+      "score": 7,
+      "source": "rss",
+      "summary": "An Ahrefs study of 10,000 brands and 260M non-branded AI prompts finds Reddit mentions correlate most strongly with AI visibility (~0.75), while press coverage (0.67) trails general webpage mentions (0.70); ChatGPT is least tied to off-site mentions.",
+      "title": "Which Types of Mentions Correlate the Strongest With AI Visibility? (260M AI Prompts Analyzed)",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://ahrefs.com/blog/mention-types-ai-visibility/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"
