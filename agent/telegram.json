@@ -1,10 +1,6 @@
 {
   "decisions": {},
   "messages": {
-    "https://ahrefs.com/blog/how-stable-are-ai-citations/": {
-      "message_id": 3530,
-      "shown": "waiting"
-    },
     "https://ahrefs.com/blog/mention-types-ai-visibility/": {
       "message_id": 3590,
       "shown": "waiting"
@@ -15,10 +11,6 @@
     },
     "https://ahrefs.com/blog/openai-publisher-partnerships/": {
       "message_id": 3589,
-      "shown": "waiting"
-    },
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/": {
-      "message_id": 3529,
       "shown": "waiting"
     },
     "https://blog.master.dev/overriding-heading-levels-with-the-headingoffset-html-attribute/": {
@@ -41,6 +33,10 @@
       "message_id": 3541,
       "shown": "waiting"
     },
+    "https://editsqlite.com/": {
+      "message_id": 3600,
+      "shown": "waiting"
+    },
     "https://elementary.codes": {
       "message_id": 3550,
       "shown": "waiting"
@@ -53,12 +49,12 @@
       "message_id": 3531,
       "shown": "waiting"
     },
-    "https://flowingdata.com/2026/10/29/process-412-roundup/": {
-      "message_id": 3528,
-      "shown": "waiting"
-    },
     "https://flowingdata.com/2026/11/03/election-night-mirages/": {
       "message_id": 3579,
+      "shown": "waiting"
+    },
+    "https://flowingdata.com/2026/11/04/mountain-peaks-to-show-the-shifts/": {
+      "message_id": 3599,
       "shown": "waiting"
     },
     "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce": {
@@ -67,10 +63,6 @@
     },
     "https://github.com/4yk5/Ghostman": {
       "message_id": 3559,
-      "shown": "waiting"
-    },
-    "https://github.com/AbadOrangeCat/TheALL": {
-      "message_id": 3527,
       "shown": "waiting"
     },
     "https://github.com/Balanov/skein": {
@@ -121,12 +113,12 @@
       "message_id": 3538,
       "shown": "waiting"
     },
-    "https://github.com/davemessew/AgentFlux": {
-      "message_id": 3526,
-      "shown": "waiting"
-    },
     "https://github.com/exzade/EXZA-Remote": {
       "message_id": 3587,
+      "shown": "waiting"
+    },
+    "https://github.com/gauge-sh/gauge-cli": {
+      "message_id": 3598,
       "shown": "waiting"
     },
     "https://github.com/gh9ko8y/graphmemory": {
@@ -149,10 +141,6 @@
       "message_id": 3537,
       "shown": "waiting"
     },
-    "https://github.com/konic-labs/kubic": {
-      "message_id": 3525,
-      "shown": "waiting"
-    },
     "https://github.com/kyy-logs/code-review-skill": {
       "message_id": 3585,
       "shown": "waiting"
@@ -161,16 +149,16 @@
       "message_id": 3565,
       "shown": "waiting"
     },
-    "https://github.com/onurozcan/omux": {
-      "message_id": 3524,
-      "shown": "waiting"
-    },
     "https://github.com/peterretief/codemap": {
       "message_id": 3584,
       "shown": "waiting"
     },
     "https://github.com/picocss/pico/discussions/754": {
       "message_id": 3546,
+      "shown": "waiting"
+    },
+    "https://github.com/rivet-dev/rivet": {
+      "message_id": 3597,
       "shown": "waiting"
     },
     "https://github.com/shipwords-dev/shipwords": {
@@ -205,6 +193,14 @@
       "message_id": 3564,
       "shown": "waiting"
     },
+    "https://github.com/zhouxingchi1017/v4revert": {
+      "message_id": 3596,
+      "shown": "waiting"
+    },
+    "https://kadhar.dev/blog/multi-agent-systems-from-scratch": {
+      "message_id": 3595,
+      "shown": "waiting"
+    },
     "https://kevin-wu.ca/blog/qwn/": {
       "message_id": 3534,
       "shown": "waiting"
@@ -215,10 +211,6 @@
     },
     "https://longcat.ai/blog/longcat-2.5/": {
       "message_id": 3563,
-      "shown": "waiting"
-    },
-    "https://mistral.ai/news/mistral-large-4-oss/": {
-      "message_id": 3523,
       "shown": "waiting"
     },
     "https://news.ycombinator.com/item?id=50337431": {
@@ -249,12 +241,16 @@
       "message_id": 3573,
       "shown": "waiting"
     },
-    "https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts": {
-      "message_id": 3562,
+    "https://streamvessel.com/blog/mcp-trusted-redirect-uris": {
+      "message_id": 3594,
       "shown": "waiting"
     },
-    "https://surgehq.ai/blog/dayjob-tax": {
-      "message_id": 3522,
+    "https://stripe.com/blog/analyze-your-stripe-data-directly-with-your-agent": {
+      "message_id": 3593,
+      "shown": "waiting"
+    },
+    "https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts": {
+      "message_id": 3562,
       "shown": "waiting"
     },
     "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/": {
@@ -279,6 +275,10 @@
     },
     "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop": {
       "message_id": 3582,
+      "shown": "waiting"
+    },
+    "https://www.ricursive.com/ripple": {
+      "message_id": 3592,
       "shown": "waiting"
     }
   },
