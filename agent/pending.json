@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "pending_since": "2026-10-29T04:31:55.013043+00:00",
-      "score": 9,
-      "source": "rss",
-      "summary": "A collection of reusable @custom-media presets for CSS media queries, noting Firefox 148 shipped the at-rule behind a flag while Chrome and Safari lack support, and offering alternate container-style syntax plus a PostCSS option.",
-      "title": "Useful @custom-media Presets",
-      "topic": "web-products",
-      "topic_name": "Web Products",
-      "url": "https://blog.master.dev/useful-custom-media-presets/"
-    },
-    {
       "pending_since": "2026-10-29T14:57:39.758738+00:00",
       "score": 9,
       "source": "hn",
@@ -699,6 +689,16 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://ahrefs.com/blog/mention-types-ai-visibility/"
+    },
+    {
+      "pending_since": "2026-11-05T11:52:56.900722+00:00",
+      "score": 8,
+      "source": "rss",
+      "summary": "Release notes for Safari Technology Preview 256, a WebKit build for macOS Golden Gate and macOS Tahoe, list fixes and new CSS support including text-combine-upright on ::marker, continue: collapse with line-clamp, and font-palette-mix() on Cocoa.",
+      "title": "Release Notes for Safari Technology Preview 256",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://webkit.org/blog/18602/release-notes-for-safari-technology-preview-256/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"

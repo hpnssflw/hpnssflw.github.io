@@ -4,24 +4,24 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 56,
-        "dismissed": 9,
+        "already_ranked": 55,
+        "dismissed": 7,
         "seen": 30
       },
       "rank": {
         "below_relevance": 2,
-        "over_max_items": 10
+        "over_max_items": 11
       }
     },
     "tooling": {
       "dedupe": {
         "already_ranked": 96,
-        "dismissed": 7,
+        "dismissed": 6,
         "seen": 19
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 12
+        "below_relevance": 2,
+        "over_max_items": 16
       }
     },
     "web-products": {
@@ -30,149 +30,150 @@
       },
       "dedupe": {
         "already_ranked": 33,
-        "dismissed": 3,
-        "seen": 19
+        "dismissed": 4,
+        "seen": 18
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
-        "over_max_items": 11
+        "below_relevance": 1,
+        "over_max_items": 10
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 107,
-      "in_window": 107,
+      "collected": 105,
+      "in_window": 105,
       "kept": 0,
-      "new": 12
+      "new": 13
     },
     "tooling": {
-      "collected": 137,
-      "in_window": 137,
+      "collected": 139,
+      "in_window": 139,
       "kept": 0,
-      "new": 15
+      "new": 18
     },
     "web-products": {
-      "collected": 190,
-      "in_window": 66,
-      "kept": 0,
-      "new": 11
+      "collected": 191,
+      "in_window": 67,
+      "kept": 1,
+      "new": 12
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
+      "score": 8,
+      "source": "rss",
+      "title": "Release Notes for Safari Technology Preview 256",
+      "topic": "web-products",
+      "ts": "2026-11-05T11:53:47.652243+00:00",
+      "verdict": "kept"
+    },
+    {
       "reason": "over_max_items",
       "title": "The Afterlife of Pi",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239606+00:00",
+      "ts": "2026-11-05T11:53:47.652218+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Where the Musk money flows",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239597+00:00",
+      "ts": "2026-11-05T11:53:47.652203+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Early voting jumps",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239588+00:00",
+      "ts": "2026-11-05T11:53:47.652188+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239579+00:00",
+      "ts": "2026-11-05T11:53:47.652173+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239569+00:00",
+      "ts": "2026-11-05T11:53:47.652158+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239559+00:00",
+      "ts": "2026-11-05T11:53:47.652144+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Needle of uncertainty is live for Midterms 2026",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239549+00:00",
+      "ts": "2026-11-05T11:53:47.652128+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Percentage of votes counted so far",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239539+00:00",
+      "ts": "2026-11-05T11:53:47.652111+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Shift in margins for Midterms 2026, by county",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239529+00:00",
+      "ts": "2026-11-05T11:53:47.652083+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Mountain peaks to show the shifts",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239512+00:00",
+      "ts": "2026-11-05T11:53:47.651977+00:00",
       "verdict": "drop"
     },
     {
-      "reason": "over_max_items",
-      "title": "Release Notes for Safari Technology Preview 256",
+      "reason": "below_relevance",
+      "title": "Lemmings CSS Animation",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:47.239450+00:00",
+      "ts": "2026-11-05T11:53:44.898940+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:45.394575+00:00",
+      "ts": "2026-11-05T11:53:43.005699+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:45.394567+00:00",
+      "ts": "2026-11-05T11:53:43.005689+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-11-05T00:44:45.394559+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Baking Brilliance: My DVS Mentee Experience",
-      "topic": "web-products",
-      "ts": "2026-11-05T00:44:45.394550+00:00",
+      "ts": "2026-11-05T11:53:43.005678+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-28T14:52:13.974994+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-28T20:47:22.461187+00:00"
@@ -264,28 +265,32 @@
     {
       "kept": 0,
       "ts": "2026-11-05T00:43:59.395694+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-11-05T11:52:56.900722+00:00"
     }
   ],
-  "streak": 357,
+  "streak": 358,
   "topics": [
     {
-      "collected": 107,
+      "collected": 105,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 137,
+      "collected": 139,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 190,
-      "kept": 0,
+      "collected": 191,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-05T00:43:59.395694+00:00"
+  "updated_at": "2026-11-05T11:52:56.900722+00:00"
 }
