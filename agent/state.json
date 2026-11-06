@@ -699,7 +699,7 @@
   "05cff87ec6ed50b1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 262,
+    "last_score": 266,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -2241,15 +2241,15 @@
   "13c6835917281a31": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 287,
+    "last_score": 300,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-01T04:34:29.717478+00:00",
-        "relevance": 1,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 2,
         "rubric": "3472af8a46e1",
-        "source_score": 150,
-        "summary": "A Claude Code MCP server and agentic-coding setup that uses Opus to plan and a cheaper model to write code, aiming to extend usage limits."
+        "source_score": 300,
+        "summary": "cheap-ag describes a dirt-cheap model writing code with tests deciding what ships and an MCP server for Claude Code and Codex to stretch plan usage."
       },
       "tooling": {
         "queued_at": null,
@@ -2368,7 +2368,7 @@
   "144a293a50f0da60": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 374,
+    "last_score": 390,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -2481,7 +2481,7 @@
   "15b07f7e71af672e": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
-    "last_score": 148,
+    "last_score": 149,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2596,7 +2596,7 @@
   "1692dbfc7287ca8b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 166,
+    "last_score": 175,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2605,6 +2605,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 144,
         "summary": "An Ars Technica article titled 'Basically no one is using AI agents for their DoorDash orders.'"
+      }
+    },
+    "times_sent": 0
+  },
+  "169c1d0215006e7a": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Chief Architect Premier 2026 is an automated deployment pipeline for professional desktop software utility configuration."
       }
     },
     "times_sent": 0
@@ -2918,23 +2934,23 @@
   "199af8aea5b61129": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 400,
+    "last_score": 1221,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-06T00:45:56.353156+00:00",
-        "relevance": 2,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
         "rubric": "3472af8a46e1",
-        "source_score": 397,
-        "summary": "A GitHub item reporting that Claude Code sends the user's email address to websites, a security/privacy finding about a coding agent."
+        "source_score": 1220,
+        "summary": "The item reports that Claude Code sends a user's email address to websites."
       },
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-06T00:45:56.353156+00:00",
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
         "relevance": 4,
         "rubric": "02189e2467e9",
-        "source_score": 400,
-        "summary": "A report claims Claude Code sends the user's email address to websites."
+        "source_score": 1221,
+        "summary": "The post reports that Claude Code sends your email address to websites."
       }
     },
     "times_sent": 0
@@ -2961,6 +2977,22 @@
     "last_score": 1209,
     "ranks": {},
     "times_sent": 1
+  },
+  "19b4c4b221d8c513": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Genesis Miner 2026 is an automated deployment pipeline for a desktop software utility."
+      }
+    },
+    "times_sent": 0
   },
   "1a1edc3721552e2e": {
     "dismissed": null,
@@ -3038,6 +3070,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 398,
         "summary": "An analysis of why OpenAI and Anthropic cut their LLM prices by up to 80% within a few months."
+      }
+    },
+    "times_sent": 0
+  },
+  "1af3fe1d5c8a78c9": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 50,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 50,
+        "summary": "rexmod turns Rex into a harness for coding agents, letting you see changes, review them in Neovim, and send comments back for Claude Code, Codex, OpenCode, and Pi."
       }
     },
     "times_sent": 0
@@ -3276,6 +3324,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "1d46f5554e230905": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Auto Withdraw Bot 2026 is an automated deployment pipeline for desktop software utility configuration."
+      }
+    },
+    "times_sent": 0
+  },
   "1d4f76206f8b1ae7": {
     "dismissed": null,
     "first_seen": "2026-09-19T21:52:36.261347+00:00",
@@ -3341,7 +3405,7 @@
   "1e03415a592fab86": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 7088,
+    "last_score": 7306,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -3568,7 +3632,7 @@
   "202b9d690f3a74b6": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 608,
+    "last_score": 610,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3930,7 +3994,7 @@
   "23d5cc8219ef6b65": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 609,
+    "last_score": 614,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -4073,23 +4137,23 @@
   "24e1aea537d2f659": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 67,
+    "last_score": 86,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-05T19:31:58.609871+00:00",
-        "relevance": 3,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 2,
         "rubric": "3472af8a46e1",
-        "source_score": 31,
-        "summary": "Show HN for Stroq, a tool that performs a local audit of what your coding agent did and why."
+        "source_score": 86,
+        "summary": "Stroq is a local audit tool for seeing what a coding agent did and why."
       },
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-05T19:31:58.609871+00:00",
-        "relevance": 7,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 8,
         "rubric": "02189e2467e9",
-        "source_score": 31,
-        "summary": "Stroq is a Show HN tool that performs a local audit of what a coding agent did and why."
+        "source_score": 86,
+        "summary": "Stroq provides a local audit of what your coding agent did and why."
       }
     },
     "times_sent": 0
@@ -4237,7 +4301,7 @@
   "270a3881dc5cbe05": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 241,
+    "last_score": 245,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4562,7 +4626,7 @@
   "29690e41bb1d9cd4": {
     "dismissed": null,
     "first_seen": "2026-11-04T00:23:49.033444+00:00",
-    "last_score": 479,
+    "last_score": 481,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4789,7 +4853,7 @@
   "2b6dc67e5ac6a764": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 115,
+    "last_score": 116,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5028,6 +5092,22 @@
     },
     "times_sent": 0
   },
+  "2d6e623c0d1fb52e": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Easy Worship 2023 is an automated deployment pipeline for a church presentation desktop utility."
+      }
+    },
+    "times_sent": 0
+  },
   "2d7458168c2cc9a9": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
@@ -5116,7 +5196,7 @@
   "2ed80828502bb32e": {
     "dismissed": null,
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
-    "last_score": 40,
+    "last_score": 42,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5253,6 +5333,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 132,
         "summary": "An unofficial skill that teaches coding agents to build with TypeSafe AI's Jev, tagged agent-skill and Claude Code."
+      }
+    },
+    "times_sent": 0
+  },
+  "2f8ad998d0fcb8e2": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 345,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 345,
+        "summary": "agentic-hacking-skills is a set of AI-powered web-security and automation bonus skills, agents, and MCP configs for an 'Agentic Hacking' ebook."
       }
     },
     "times_sent": 0
@@ -5463,7 +5559,7 @@
   "31229f01153710fb": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 524,
+    "last_score": 526,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5523,7 +5619,7 @@
   "322ef97c5b623537": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 809,
+    "last_score": 827,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5736,7 +5832,7 @@
   "333bc37d954c1d78": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 223,
+    "last_score": 235,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5759,7 +5855,7 @@
   "335e94a0914635a1": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 71,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -5925,7 +6021,7 @@
   "34333f558f70f948": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 139,
+    "last_score": 241,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5980,7 +6076,7 @@
   "34755f8225792455": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 355,
+    "last_score": 356,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -6122,7 +6218,7 @@
   "3574b4de3d18f1ba": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 81,
+    "last_score": 82,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6196,7 +6292,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-11-06T11:50:12.640883+00:00",
         "ranked_at": "2026-11-06T00:45:56.353156+00:00",
         "relevance": 8,
         "rubric": "080b24af813c",
@@ -7587,7 +7683,7 @@
   "4290700ebfe688c1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 193,
+    "last_score": 195,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -7681,7 +7777,7 @@
   "43862ef771dfba65": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 235,
+    "last_score": 238,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7697,15 +7793,15 @@
   "43b226d3f8c0e87c": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 258,
+    "last_score": 558,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-05T19:31:58.609871+00:00",
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
         "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 183,
-        "summary": "A GitHub repo for 3D modeling in Python, described as built for LLMs, covering procedural modeling and CAD topics."
+        "source_score": 558,
+        "summary": "Sandflow-ai/sand3d is a Python 3D-modeling project described as built for LLMs."
       }
     },
     "times_sent": 0
@@ -7727,7 +7823,7 @@
   "44cd1b0540a7c509": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 101,
+    "last_score": 107,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8224,6 +8320,30 @@
     "ranks": {},
     "times_sent": 0
   },
+  "4834572dd7c5f18e": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 427,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 427,
+        "summary": "roblox-studio-mcp is an open-source Model Context Protocol server for connecting AI assistants to Roblox Studio to read object trees, edit scripts, and run playtests."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 427,
+        "summary": "Roblox Studio MCP server connects AI assistants such as Claude and Cursor to read object trees, edit scripts, and run playtests."
+      }
+    },
+    "times_sent": 0
+  },
   "483ab5238e88e578": {
     "dismissed": null,
     "first_seen": "2026-10-21T09:08:25.960201+00:00",
@@ -8260,6 +8380,22 @@
         "rubric": "02189e2467e9",
         "source_score": 200,
         "summary": "A repo advertising a standalone installer for a DVD Creator 2026 utility."
+      }
+    },
+    "times_sent": 0
+  },
+  "48a26be0d0669fa5": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 31,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 2,
+        "rubric": "080b24af813c",
+        "source_score": 31,
+        "summary": "Global stocks tumbled as an AI panic gripped markets after Democrats' midterm success."
       }
     },
     "times_sent": 0
@@ -8369,7 +8505,7 @@
   "49d25f73538469d6": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 1820,
+    "last_score": 1832,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8411,6 +8547,22 @@
     "last_score": 193,
     "ranks": {},
     "times_sent": 1
+  },
+  "4a85adb5c8a0b9d6": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Dft Pro 2026 is a complete standalone pre-configured professional utility setup."
+      }
+    },
+    "times_sent": 0
   },
   "4aba63dcaad36686": {
     "dismissed": null,
@@ -8577,6 +8729,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 101,
         "summary": "An MCP-powered toolkit for black-box observation, clean-room reimplementation of software from observed behavior, and behavioral verification, using Playwright and model context protocol topics."
+      }
+    },
+    "times_sent": 0
+  },
+  "4d071d41e6881219": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Soundpad 2026 is a pre-configured environment for deploying a digital audio workstation."
       }
     },
     "times_sent": 0
@@ -8807,7 +8975,7 @@
   "4ed584eb2c672010": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 384,
+    "last_score": 403,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -8832,6 +9000,22 @@
         "rubric": "02189e2467e9",
         "source_score": 80,
         "summary": "The item reports a bug where border radius has infected the VSCode editor."
+      }
+    },
+    "times_sent": 0
+  },
+  "4ef879fb4863c59f": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Uttorent 2023 is an automated deployment pipeline for a secure, isolated desktop torrent utility."
       }
     },
     "times_sent": 0
@@ -8940,7 +9124,7 @@
   "4ff51e4e30dd0b36": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 1345,
+    "last_score": 1424,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -9574,7 +9758,7 @@
   "54e2bdb4495011dc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 500,
+    "last_score": 502,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -9670,6 +9854,22 @@
         "rubric": "080b24af813c",
         "source_score": null,
         "summary": "A security engineer describes building an isolated preview for AI-generated HTML and pasting model-written markup into an iframe that could see his session."
+      }
+    },
+    "times_sent": 0
+  },
+  "55a4f191a626cf2c": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "The New York Times produced a series of charts showing shifts in Texas over time, with a multi-line chart tracking changes for each county."
       }
     },
     "times_sent": 0
@@ -9834,7 +10034,7 @@
   "56d4ce6f2e9ac89a": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 324,
+    "last_score": 325,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10146,7 +10346,7 @@
   "58f115f562b50489": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 49,
+    "last_score": 55,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10375,7 +10575,7 @@
     "times_sent": 0
   },
   "5b61ecd627ec3998": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
     "last_score": null,
     "ranks": {
@@ -10903,6 +11103,22 @@
     },
     "times_sent": 0
   },
+  "5feeb0e5262da277": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "Archicad 2026 is described as a complete standalone pre-activated desktop setup."
+      }
+    },
+    "times_sent": 0
+  },
   "608eb672ebb7d160": {
     "dismissed": null,
     "first_seen": "2026-09-23T08:53:43.403564+00:00",
@@ -10949,6 +11165,22 @@
     },
     "times_sent": 0
   },
+  "60d6cab4ebcea702": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 44,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 44,
+        "summary": "The Reuters item reports investors wiping $2.5T off Nasdaq as a \"blue tsunami\" prompts AI fears."
+      }
+    },
+    "times_sent": 0
+  },
   "60db4cc2a1322c17": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -10961,6 +11193,22 @@
         "rubric": "02189e2467e9",
         "source_score": 66,
         "summary": "A mouse-operated, windowed desktop for microcontrollers drawn in the terminal, with Files, Editor, Shell, MQTT, and Modbus, tested on ESP32 and also running on Windows and Linux."
+      }
+    },
+    "times_sent": 0
+  },
+  "60eedccafd916a11": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Flash Crypto Generator 2026 is an automated deployment pipeline for secure desktop software execution."
       }
     },
     "times_sent": 0
@@ -10984,7 +11232,7 @@
   "61501f32d1f68b7a": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 30,
+    "last_score": 31,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11276,6 +11524,22 @@
     },
     "times_sent": 0
   },
+  "63b6aec752f28085": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 144,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 144,
+        "summary": "ork is a source-available, self-hosted AI assistant with persistent bots that share conversations and work on isolated computers, with web, desktop, and mobile apps."
+      }
+    },
+    "times_sent": 0
+  },
   "640f02bd9a6663d9": {
     "dismissed": "expired",
     "first_seen": "2026-10-05T16:49:37.554117+00:00",
@@ -11357,6 +11621,22 @@
         "rubric": "02189e2467e9",
         "source_score": 51,
         "summary": "Gluon is described as a control platform for coding agents, tagged with claude-code, cli, codex, and coding-agents."
+      }
+    },
+    "times_sent": 0
+  },
+  "65038ed33ac7ab86": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Honeypot Detector 2026 is an automated deployment pipeline for a blockchain security desktop utility."
       }
     },
     "times_sent": 0
@@ -11522,7 +11802,7 @@
   "6669707f3d1e3930": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 40,
+    "last_score": 41,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -11796,7 +12076,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 368,
+    "last_score": 375,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12168,7 +12448,7 @@
   "6af525c1604adec7": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 138,
+    "last_score": 139,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12433,7 +12713,7 @@
   "6ce3035ae4151033": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
-    "last_score": 265,
+    "last_score": 266,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-03T19:06:44.712669+00:00",
@@ -12645,7 +12925,7 @@
   "6eb3e27c3039e163": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 1956,
+    "last_score": 2034,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12843,6 +13123,30 @@
     },
     "times_sent": 0
   },
+  "70abf9b6f2133e56": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 30,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 9,
+        "rubric": "3472af8a46e1",
+        "source_score": 30,
+        "summary": "GPUWorks is a 40 MB GPU cluster manager for vLLM/SGLang that requires no Kubernetes."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 30,
+        "summary": "GPUWorks is a 40 MB GPU cluster manager for vLLM/SGLang that does not require Kubernetes."
+      }
+    },
+    "times_sent": 0
+  },
   "70c2480d2327e859": {
     "dismissed": null,
     "first_seen": "2026-10-15T08:53:31.348611+00:00",
@@ -13029,6 +13333,22 @@
         "rubric": "02189e2467e9",
         "source_score": 300,
         "summary": "A GitHub project described as a pre-activated standalone Microsoft Office 2026 installation setup."
+      }
+    },
+    "times_sent": 0
+  },
+  "724b3ca53a098aac": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 102,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 102,
+        "summary": "CodeRail is self-hosted remote control for Claude Code and Codex coding-agent chats, approvals, terminals, files, git, and dev-server previews."
       }
     },
     "times_sent": 0
@@ -13222,7 +13542,7 @@
   "7490cc27f825470b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 247,
+    "last_score": 249,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13653,7 +13973,7 @@
   "780b70023987f312": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 146,
+    "last_score": 149,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -13788,6 +14108,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "790a29191dcdd824": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 179,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 179,
+        "summary": "turkish-anti-ai-skill is an Agent Skill and humanizer package for removing AI traces from Turkish text."
+      }
+    },
+    "times_sent": 0
+  },
   "7925817ae90bb8d6": {
     "dismissed": null,
     "first_seen": "2026-09-24T08:49:08.300484+00:00",
@@ -13812,7 +14148,7 @@
   "7985eaa4d4b49f55": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 188,
+    "last_score": 193,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14572,7 +14908,7 @@
   "80e95c849406f883": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 199,
+    "last_score": 204,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14581,6 +14917,14 @@
         "rubric": "3472af8a46e1",
         "source_score": 121,
         "summary": "A 3D office for Claude Code sessions."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 204,
+        "summary": "my-office is a 3D office for Claude Code sessions."
       }
     },
     "times_sent": 0
@@ -14588,7 +14932,7 @@
   "80fe724ef6092964": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 234,
+    "last_score": 308,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14691,7 +15035,7 @@
   "825f78fa10e99699": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 51,
+    "last_score": 52,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14723,7 +15067,7 @@
   "833b856438416e75": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 1240,
+    "last_score": 1279,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -14803,6 +15147,22 @@
         "rubric": "080b24af813c",
         "source_score": null,
         "summary": "A monthly Smashing Magazine collection of free October and Halloween-themed desktop wallpapers in various screen resolutions."
+      }
+    },
+    "times_sent": 0
+  },
+  "83feecfcfa80c01a": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 201,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 201,
+        "summary": "Data Grip 2026 is described as a pre-configured local workstation environment for software catalog management."
       }
     },
     "times_sent": 0
@@ -15194,7 +15554,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 307,
+    "last_score": 310,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -15210,7 +15570,7 @@
   "88ab2eaf1c2eac1e": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 286,
+    "last_score": 329,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15637,7 +15997,7 @@
   "8d03fa8d0a82fc06": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
-    "last_score": 201,
+    "last_score": 301,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -16360,7 +16720,7 @@
   "9434ac3945d97bda": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 47,
+    "last_score": 54,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17322,7 +17682,7 @@
   "9be9d650a7db49c3": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 380,
+    "last_score": 405,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -17548,14 +17908,14 @@
   "9e2cdcf616b28fd0": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 851,
+    "last_score": 933,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-04T11:52:02.480884+00:00",
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
         "relevance": 2,
         "rubric": "02189e2467e9",
-        "source_score": 457,
+        "source_score": 933,
         "summary": "An uncensored AI API and browser chat for DeepSeek and GLM models with streaming and Python/TypeScript examples."
       }
     },
@@ -17617,7 +17977,7 @@
   "9ef9e546f2c548f4": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 111,
+    "last_score": 113,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -18002,6 +18362,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 419,
         "summary": "A report that Anthropic trained Claude on illegally obtained Stanford professors' books."
+      }
+    },
+    "times_sent": 0
+  },
+  "a1d9241634b29b22": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "AndroidUnlocker 2026 is described as a full working installer for a professional desktop software utility."
       }
     },
     "times_sent": 0
@@ -18696,6 +19072,22 @@
     },
     "times_sent": 0
   },
+  "a7a8ced8d74d3730": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 57,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 57,
+        "summary": "Axiom Trader Helper is a desktop helper for Axiom traders that launches backtests, counts fees, and checks a token in one paste."
+      }
+    },
+    "times_sent": 0
+  },
   "a7bcad213e7c9fac": {
     "dismissed": null,
     "first_seen": "2026-09-17T15:48:05.731542+00:00",
@@ -19000,7 +19392,7 @@
   "aae2e624d6dfcd5e": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 142,
+    "last_score": 213,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -19689,7 +20081,7 @@
   "b00f3c61979d2dea": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 836,
+    "last_score": 837,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -19746,6 +20138,22 @@
         "rubric": "02189e2467e9",
         "source_score": 300,
         "summary": "A GitHub repo claiming a standalone Microsoft Office 2026 installer with pre-activation."
+      }
+    },
+    "times_sent": 0
+  },
+  "b09bb44bfd32c55e": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 126,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 126,
+        "summary": "Firenook is a Rust-based replacement for the official Firebase Emulator Suite, claiming 40\u00d7 faster writes and 10\u00d7 less RAM."
       }
     },
     "times_sent": 0
@@ -20411,6 +20819,22 @@
     },
     "times_sent": 0
   },
+  "b6103e10a2a22d1e": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Aion 2 trainer tool is described as an AI-driven prompt engineering resource with a pre-configured environment for language model operations."
+      }
+    },
+    "times_sent": 0
+  },
   "b615dc09013e4987": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -20428,7 +20852,7 @@
   "b61b7d0004aa5f86": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 1036,
+    "last_score": 1038,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -21679,6 +22103,22 @@
     },
     "times_sent": 0
   },
+  "c13f42371e4bb9b1": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Catia Cad 2026 is a pre-activated standalone desktop edition with all features enabled."
+      }
+    },
+    "times_sent": 0
+  },
   "c149e010d20219ad": {
     "dismissed": null,
     "first_seen": "2026-08-31T02:03:09.257484+00:00",
@@ -21986,7 +22426,7 @@
   "c42b88e52dd1586a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 319,
+    "last_score": 335,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -22057,7 +22497,7 @@
   "c48f2af7e5b6da76": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 2481,
+    "last_score": 2679,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -22321,7 +22761,7 @@
   "c6b64c6f66589d18": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
-    "last_score": 473,
+    "last_score": 474,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -22830,7 +23270,7 @@
   "cb57fd0c933347b2": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 114,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -23519,7 +23959,7 @@
   "d14a1b8f436a0434": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 34,
+    "last_score": 35,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -23850,7 +24290,7 @@
   "d51d4d67577c8a7a": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 3233,
+    "last_score": 3474,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -23905,7 +24345,7 @@
   "d5c6c1442490d019": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 71,
+    "last_score": 92,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -23921,7 +24361,7 @@
   "d5eecd06151a7663": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 706,
+    "last_score": 718,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -23937,15 +24377,15 @@
   "d5f8ab1a0d4a222d": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 195,
+    "last_score": 341,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-05T19:31:58.609871+00:00",
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
         "relevance": 7,
         "rubric": "3472af8a46e1",
-        "source_score": 138,
-        "summary": "A GitHub repo for letting AI agents operate a real iPhone via a local MCP server and agent, with no jailbreak or extra hardware."
+        "source_score": 341,
+        "summary": "poki is a local MCP server and agent that lets AI agents operate a real iPhone without jailbreak or extra hardware."
       }
     },
     "times_sent": 0
@@ -24123,7 +24563,7 @@
   "d7d9a2a25df6ba53": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 503,
+    "last_score": 526,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24602,7 +25042,7 @@
   "db83d0eb2b26ea41": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 835,
+    "last_score": 836,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -25159,7 +25599,7 @@
   "dfa876a54a2df16b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 332,
+    "last_score": 336,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -25175,7 +25615,7 @@
   "dfb1d49114f0805e": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 101,
+    "last_score": 106,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25394,6 +25834,22 @@
         "rubric": "02189e2467e9",
         "source_score": 72,
         "summary": "A CLI toolkit that combines noisy service metrics into stable, explainable health signals for alerting and health checks."
+      }
+    },
+    "times_sent": 0
+  },
+  "e0e72d2e89920eb6": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "Chief Architect Premier 2026 is an automated deployment pipeline for professional desktop software utility configuration."
       }
     },
     "times_sent": 0
@@ -25861,7 +26317,7 @@
   "e5401facce608525": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 114,
+    "last_score": 157,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -26630,6 +27086,22 @@
     },
     "times_sent": 0
   },
+  "eb74bbbe1f02058d": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 115,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 115,
+        "summary": "mianstack is a programmer interview question bank covering Java, Python, databases, algorithms, large models, AI agents, and RAG."
+      }
+    },
+    "times_sent": 0
+  },
   "eb7b4293d4abd6bf": {
     "dismissed": "expired",
     "first_seen": "2026-10-08T21:02:42.379376+00:00",
@@ -26670,6 +27142,22 @@
     },
     "times_sent": 0
   },
+  "ebc95890f0c31f53": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 140,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 5,
+        "rubric": "3472af8a46e1",
+        "source_score": 140,
+        "summary": "best-agent-memory-mcp ranks and compares long-term memory MCP servers for Claude Code, Codex, Cursor, and any MCP client."
+      }
+    },
+    "times_sent": 0
+  },
   "ebce976dca651755": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
@@ -26696,7 +27184,7 @@
   "ebe97d0208a517eb": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 255,
+    "last_score": 309,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -26735,6 +27223,22 @@
         "rubric": "02189e2467e9",
         "source_score": 62,
         "summary": "Vesalius is an on-device code graph for Claude Code with an MCP server, a CLI, a Mac app, and a VS Code extension."
+      }
+    },
+    "times_sent": 0
+  },
+  "ecebd056b4dbf8e7": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T11:50:12.640883+00:00",
+    "last_score": 192,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T11:50:12.640883+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 192,
+        "summary": "Winc is a Rust-built editor with its own rendering engine that starts in 0.1 seconds and uses 52 MB of memory with 100,000 lines open, including multiple cursors, find and replace, and side-by-side diffs."
       }
     },
     "times_sent": 0
@@ -27319,7 +27823,7 @@
   "f1a111e72742f0df": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 735,
+    "last_score": 736,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -27522,7 +28026,7 @@
   "f30eda4c82dc6d09": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 411,
+    "last_score": 418,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -28245,7 +28749,7 @@
   "f9ecf66c18226a74": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 2951,
+    "last_score": 2953,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-03T19:06:44.712669+00:00",
@@ -28353,7 +28857,7 @@
   "fad4660612e7a0c9": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 89,
+    "last_score": 91,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -28491,7 +28995,7 @@
   "fd7ec4fb7829da74": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 56,
+    "last_score": 57,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,

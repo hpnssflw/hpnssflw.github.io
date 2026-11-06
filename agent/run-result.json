@@ -325,17 +325,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-30T04:32:17.655149+00:00",
-        "score": 9,
-        "source": "rss",
-        "summary": "An interactive update to the Wealth Inequality in America video, thirteen years later, uses a deliberately very tall chart to show how far the top 0.1% sits from everyone else, with the gap now larger.",
-        "title": "Cost of greed, as unbearably tall chart",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/10/29/cost-of-greed-as-unbearably-tall-chart/"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-30T14:51:05.460015+00:00",
         "score": 8,
         "source": "hn",
@@ -1092,12 +1081,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/11/04/mountain-peaks-to-show-the-shifts/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T11:50:12.640883+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "A Wall Street Journal election map combines county-level results and shifts into one visualization: spikes show victory margins and bend to show swing, styled like strands of hair.",
+        "title": "Hairy election margins map",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/11/05/hairy-election-margins-map/"
       }
     ]
   },
   "run": {
-    "at": "2026-11-06T00:45:56.353156+00:00",
-    "id": "2026-11-06T0045Z",
+    "at": "2026-11-06T11:50:12.640883+00:00",
+    "id": "2026-11-06T1150Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,13 +1108,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 112,
+          "out": 112
         },
         "tooling": {
           "drops": {},
-          "in": 140,
-          "out": 140
+          "in": 141,
+          "out": 141
         },
         "web-products": {
           "drops": {},
@@ -1129,20 +1129,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 112,
+          "out": 112
         },
         "tooling": {
           "drops": {},
-          "in": 140,
-          "out": 140
+          "in": 141,
+          "out": 141
         },
         "web-products": {
           "drops": {
-            "outside_window": 124
+            "outside_window": 125
           },
           "in": 187,
-          "out": 63
+          "out": 62
         }
       },
       "stage": "window"
@@ -1152,27 +1152,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 4,
+            "dismissed": 3,
             "seen": 27
           },
-          "in": 104,
-          "out": 73
+          "in": 112,
+          "out": 82
         },
         "tooling": {
           "drops": {
             "dismissed": 3,
             "seen": 19
           },
-          "in": 140,
-          "out": 118
+          "in": 141,
+          "out": 119
         },
         "web-products": {
           "drops": {
-            "dismissed": 4,
-            "seen": 21
+            "dismissed": 3,
+            "seen": 20
           },
-          "in": 63,
-          "out": 38
+          "in": 62,
+          "out": 39
         }
       },
       "stage": "dedupe"
@@ -1182,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 57
+            "already_ranked": 56
           },
-          "in": 73,
-          "out": 16
+          "in": 82,
+          "out": 26
         },
         "tooling": {
           "drops": {
-            "already_ranked": 101
+            "already_ranked": 80
           },
-          "in": 118,
-          "out": 17
+          "in": 119,
+          "out": 39
         },
         "web-products": {
           "drops": {
             "already_ranked": 27
           },
-          "in": 38,
-          "out": 11
+          "in": 39,
+          "out": 12
         }
       },
       "stage": "cache"
@@ -1209,13 +1209,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 14,
+          "out": 14
         },
         "tooling": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 25,
+          "out": 25
         },
         "web-products": {
           "drops": {},
@@ -1230,24 +1230,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 10
           },
-          "in": 16,
-          "out": 13
+          "in": 26,
+          "out": 16
         },
         "tooling": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 20
           },
-          "in": 17,
-          "out": 14
+          "in": 39,
+          "out": 19
         },
         "web-products": {
           "drops": {
             "below_relevance": 1
           },
-          "in": 11,
-          "out": 10
+          "in": 12,
+          "out": 11
         }
       },
       "stage": "rank"
@@ -1257,24 +1257,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 13
+            "over_max_items": 16
           },
-          "in": 13,
+          "in": 16,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 14
+            "over_max_items": 19
           },
-          "in": 14,
+          "in": 19,
           "out": 0
         },
         "web-products": {
           "drops": {
             "over_max_items": 10
           },
-          "in": 10,
-          "out": 0
+          "in": 11,
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1294,8 +1294,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1315,7 +1318,7 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
+          "in": 1,
           "out": 21
         }
       },
@@ -1335,9 +1338,14 @@
           "out": 21
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 21,
-          "out": 21
+          "notes": {
+            "asked": 1
+          },
+          "out": 20
         }
       },
       "stage": "review"
