@@ -715,7 +715,7 @@
   "05cff87ec6ed50b1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 269,
+    "last_score": 274,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -1095,6 +1095,22 @@
     },
     "times_sent": 0
   },
+  "09023d1cf8339464": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Honeypot Detector 2026, described as an automated deployment pipeline for desktop environment monitoring and threat detection."
+      }
+    },
+    "times_sent": 0
+  },
   "0926b6ce8328ded3": {
     "dismissed": "expired",
     "first_seen": "2026-10-15T03:21:15.589144+00:00",
@@ -1313,6 +1329,22 @@
         "rubric": "080b24af813c",
         "source_score": null,
         "summary": "A brief note that Jane Wickline impersonated Anthropic CEO Dario Amodei on Saturday Night Live's Weekend Update."
+      }
+    },
+    "times_sent": 0
+  },
+  "0a8c41404c8aaad3": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 111,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 111,
+        "summary": "A report that Ubuntu 26.04's Rust sudo is not compatible with standard sudo."
       }
     },
     "times_sent": 0
@@ -1678,7 +1710,7 @@
   "0e356c09eb849e6e": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 347,
+    "last_score": 348,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2696,6 +2728,22 @@
     },
     "times_sent": 0
   },
+  "16d98e3fe2b26ac8": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 267,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 267,
+        "summary": "A research-preview headless 3D and VFX engine aimed at agents."
+      }
+    },
+    "times_sent": 0
+  },
   "1700cf97ad63cf71": {
     "dismissed": null,
     "first_seen": "2026-08-15T16:10:52.886374+00:00",
@@ -2761,7 +2809,7 @@
   "172a7ca01af49b04": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 101,
+    "last_score": 109,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2982,7 +3030,7 @@
   "199af8aea5b61129": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 1516,
+    "last_score": 1545,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3038,6 +3086,22 @@
         "rubric": "02189e2467e9",
         "source_score": 200,
         "summary": "Genesis Miner 2026 is an automated deployment pipeline for a desktop software utility."
+      }
+    },
+    "times_sent": 0
+  },
+  "19ba753bb2109d9a": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Adobe InDesign 2026, described as an automated deployment pipeline for digital asset management."
       }
     },
     "times_sent": 0
@@ -3453,7 +3517,7 @@
   "1e03415a592fab86": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 7372,
+    "last_score": 7391,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -3524,6 +3588,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 120,
         "summary": "An article about fixing tool-call accuracy in vLLM."
+      }
+    },
+    "times_sent": 0
+  },
+  "1e8bed387810c0a4": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Soundpad 2023, described as a pre-configured environment for digital audio workstation setup and studio audio plugin deployment."
       }
     },
     "times_sent": 0
@@ -3817,6 +3897,22 @@
         "rubric": "02189e2467e9",
         "source_score": 51,
         "summary": "cinetty plays cinematic architecture animations in the terminal, with a coding agent filling in one YAML file."
+      }
+    },
+    "times_sent": 0
+  },
+  "2133eedfaeaec901": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 64,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 4,
+        "rubric": "080b24af813c",
+        "source_score": 64,
+        "summary": "A GitHub repository describing a UI/UX skill for coding agents to build distinctive, usable interfaces, tagged with accessibility, agent-skills, ai-agents, anti-slop, codex, and design-systems."
       }
     },
     "times_sent": 0
@@ -4167,6 +4263,22 @@
     },
     "times_sent": 0
   },
+  "24456aee8e9988c7": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Android Unlocker Utility 2023, described as a pre-configured environment for local workstation deployment."
+      }
+    },
+    "times_sent": 0
+  },
   "2461276fa3db9b49": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -4355,6 +4467,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "262f79e3f9dca3d9": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Aion 2 Trainer Tool, described as optimized package deployment for AI-driven prompt engineering tasks and local workstation execution."
+      }
+    },
+    "times_sent": 0
+  },
   "263050875f85e6ce": {
     "dismissed": "expired",
     "first_seen": "2026-10-15T16:22:31.699257+00:00",
@@ -4445,7 +4573,7 @@
   "270a3881dc5cbe05": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 255,
+    "last_score": 260,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4549,7 +4677,7 @@
   "27b87d65d3f99406": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 229,
+    "last_score": 289,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -4660,6 +4788,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 201,
         "summary": "A GitHub-linked item on HN titled \"Docker Agent\" with no accompanying text describing what it is or does."
+      }
+    },
+    "times_sent": 0
+  },
+  "287eab842bf09cbd": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Fonetrans 2026, described as an automated deployment pipeline for enterprise desktop software utility configuration."
       }
     },
     "times_sent": 0
@@ -4786,7 +4930,7 @@
   "29690e41bb1d9cd4": {
     "dismissed": null,
     "first_seen": "2026-11-04T00:23:49.033444+00:00",
-    "last_score": 483,
+    "last_score": 485,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5516,7 +5660,7 @@
   "2f8ad998d0fcb8e2": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 345,
+    "last_score": 344,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5795,7 +5939,7 @@
   "322ef97c5b623537": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 785,
+    "last_score": 786,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6008,7 +6152,7 @@
   "333bc37d954c1d78": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 247,
+    "last_score": 258,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6031,7 +6175,7 @@
   "335e94a0914635a1": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 117,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -6197,7 +6341,7 @@
   "34333f558f70f948": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 266,
+    "last_score": 270,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6394,7 +6538,7 @@
   "3574b4de3d18f1ba": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 84,
+    "last_score": 85,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6992,6 +7136,22 @@
     },
     "times_sent": 0
   },
+  "3a43fd48a7ec6ddc": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 101,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 2,
+        "rubric": "3472af8a46e1",
+        "source_score": 101,
+        "summary": "A GitHub project maps live vulnerabilities, exploits, and breaches on a globe with sources and one-click fixes."
+      }
+    },
+    "times_sent": 0
+  },
   "3a49d4fe88a87e48": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
@@ -7004,6 +7164,22 @@
         "rubric": "02189e2467e9",
         "source_score": 30,
         "summary": "A Wolfenstein 3D clone written from scratch in Python."
+      }
+    },
+    "times_sent": 0
+  },
+  "3a5779c00b2440aa": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Multiaccountmanager 2023, described as a pre-configured environment for automated deployment and multi-account management."
       }
     },
     "times_sent": 0
@@ -7263,6 +7439,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 37,
         "summary": "A builder describes using an iPhone as a second GPU for a MacBook, speeding up Qwen 3.8 27B prefills by 29-44%, a local inference optimization."
+      }
+    },
+    "times_sent": 0
+  },
+  "3c313e73202dbf08": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Genesis Miner 2023, described as a pre-configured environment for secure desktop software utility deployment."
       }
     },
     "times_sent": 0
@@ -7620,6 +7812,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "3fe71487af9c8a15": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Passfab Unlocker 2026, described as an automated deployment pipeline for secure desktop software utility configuration."
+      }
+    },
+    "times_sent": 0
+  },
   "400081d213b29d38": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -7888,6 +8096,22 @@
     },
     "times_sent": 0
   },
+  "4280bb93d180a01f": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 42,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 42,
+        "summary": "A GitHub project called PyLings for solving exercises and learning Python."
+      }
+    },
+    "times_sent": 0
+  },
   "428a60f974088086": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
@@ -7907,7 +8131,7 @@
   "4290700ebfe688c1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 194,
+    "last_score": 197,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -8017,7 +8241,7 @@
   "43b226d3f8c0e87c": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 722,
+    "last_score": 783,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8047,7 +8271,7 @@
   "44cd1b0540a7c509": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 108,
+    "last_score": 109,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8611,7 +8835,7 @@
   "48a26be0d0669fa5": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 34,
+    "last_score": 35,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8729,7 +8953,7 @@
   "49d25f73538469d6": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 1835,
+    "last_score": 1838,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9215,7 +9439,7 @@
   "4ed584eb2c672010": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 416,
+    "last_score": 418,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -9364,7 +9588,7 @@
   "4ff51e4e30dd0b36": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 1469,
+    "last_score": 1482,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -9641,6 +9865,22 @@
     },
     "times_sent": 0
   },
+  "51dc1d2f6b3bd6df": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 33,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 33,
+        "summary": "A GitHub blog post about GitHub's new Git storage architecture."
+      }
+    },
+    "times_sent": 0
+  },
   "51e4af8dc2088089": {
     "dismissed": "expired",
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
@@ -9825,7 +10065,7 @@
   "5385485570aa2630": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 338,
+    "last_score": 339,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -10606,6 +10846,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "5923c7d2e4a04b91": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Solidworks Cad 2026, described as a pre-configured environment for local workstation deployment with design and simulation capabilities."
+      }
+    },
+    "times_sent": 0
+  },
   "592746e2dc2c081d": {
     "dismissed": null,
     "first_seen": "2026-09-30T04:08:45.319706+00:00",
@@ -10771,6 +11027,22 @@
         "rubric": "02189e2467e9",
         "source_score": 69,
         "summary": "A project called Phloem that renders Git history as if grown like a slime mold, a Git history visualization rather than a build-time tool."
+      }
+    },
+    "times_sent": 0
+  },
+  "5afeaaa297f4d308": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Discord Quest Completer 2026, described as a pre-configured environment for local workstation deployment and Discord automation."
       }
     },
     "times_sent": 0
@@ -11018,7 +11290,7 @@
   "5d170095e9e79eb7": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 80,
+    "last_score": 81,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11408,7 +11680,7 @@
   "60d6cab4ebcea702": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 45,
+    "last_score": 46,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11433,6 +11705,22 @@
         "rubric": "02189e2467e9",
         "source_score": 66,
         "summary": "A mouse-operated, windowed desktop for microcontrollers drawn in the terminal, with Files, Editor, Shell, MQTT, and Modbus, tested on ESP32 and also running on Windows and Linux."
+      }
+    },
+    "times_sent": 0
+  },
+  "60ea66497b8dbe64": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 221,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 221,
+        "summary": "A GitHub repository for a pre-configured SP Flash Tool 2026 environment for automated deployment and desktop software utility configuration."
       }
     },
     "times_sent": 0
@@ -11799,7 +12087,7 @@
   "63b6aec752f28085": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 122,
+    "last_score": 123,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -12130,7 +12418,7 @@
   "66b1d8c95b1508c5": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 61,
+    "last_score": 62,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12364,7 +12652,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 381,
+    "last_score": 382,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12666,6 +12954,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "6a70b8ac549f7cff": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Uttorent 3.5.1, described as a pre-configured environment for automated desktop software utility deployment."
+      }
+    },
+    "times_sent": 0
+  },
   "6a79bd937fc16a1d": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -12736,7 +13040,7 @@
   "6af525c1604adec7": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 140,
+    "last_score": 141,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12793,6 +13097,22 @@
     "first_seen": "2026-09-23T08:53:43.403564+00:00",
     "last_score": 354,
     "ranks": {},
+    "times_sent": 0
+  },
+  "6b48daba76e26a4f": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 221,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 221,
+        "summary": "A GitHub repository for Slideshow Video Maker 2026, described as an automated deployment pipeline for video editing and screen-related software."
+      }
+    },
     "times_sent": 0
   },
   "6bc12f2b5da91214": {
@@ -13213,7 +13533,7 @@
   "6eb3e27c3039e163": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 2110,
+    "last_score": 2145,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13680,6 +14000,38 @@
     },
     "times_sent": 0
   },
+  "7280c07da4eb298f": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Discord Server Cloner 2023, described as a pre-configured environment for server backup and cloning."
+      }
+    },
+    "times_sent": 0
+  },
+  "72992f5e39dc89d3": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Ads Blocker, described as a utility configuration folder for desktop software deployment in isolated environments."
+      }
+    },
+    "times_sent": 0
+  },
   "729d3e6c7c9c9bad": {
     "dismissed": null,
     "first_seen": "2026-09-23T22:31:50.850872+00:00",
@@ -13862,7 +14214,7 @@
   "7490cc27f825470b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 253,
+    "last_score": 254,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14293,7 +14645,7 @@
   "780b70023987f312": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 152,
+    "last_score": 154,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -14431,7 +14783,7 @@
   "790a29191dcdd824": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 212,
+    "last_score": 228,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14461,7 +14813,7 @@
   "7951c5b8003d194f": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 74,
+    "last_score": 84,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14601,7 +14953,7 @@
   "7ace9bb51dd23355": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 119,
+    "last_score": 141,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15260,7 +15612,7 @@
   "80e95c849406f883": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 207,
+    "last_score": 208,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15284,7 +15636,7 @@
   "80fe724ef6092964": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 327,
+    "last_score": 330,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15419,7 +15771,7 @@
   "833b856438416e75": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 1307,
+    "last_score": 1316,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -15435,7 +15787,7 @@
   "834f867a45207691": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
-    "last_score": 289,
+    "last_score": 290,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15577,7 +15929,7 @@
   "84864f21844a6bae": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 109,
+    "last_score": 123,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15938,7 +16290,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 307,
+    "last_score": 308,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -15954,7 +16306,7 @@
   "88ab2eaf1c2eac1e": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 339,
+    "last_score": 340,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16585,6 +16937,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "8f8695aeec095456": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Musicmakerunlimited 2024, described as a pre-configured environment for desktop software utility configuration."
+      }
+    },
+    "times_sent": 0
+  },
   "8f877fdcae51712e": {
     "dismissed": null,
     "first_seen": "2026-08-27T05:29:52.224279+00:00",
@@ -17120,7 +17488,7 @@
   "94430ceaa839cbc6": {
     "dismissed": null,
     "first_seen": "2026-10-29T04:31:55.013043+00:00",
-    "last_score": 590,
+    "last_score": 591,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18066,7 +18434,7 @@
   "9be9d650a7db49c3": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 407,
+    "last_score": 409,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -18158,6 +18526,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 95,
         "summary": "A report that TV4 postponed a show after an AI agent erased edited material."
+      }
+    },
+    "times_sent": 0
+  },
+  "9cad6e012adf0a87": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 221,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 221,
+        "summary": "A GitHub repository for Axie Infinity Bot 1.3.7, described as an automated deployment pipeline for a desktop utility."
       }
     },
     "times_sent": 0
@@ -18361,7 +18745,7 @@
   "9ef9e546f2c548f4": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 113,
+    "last_score": 114,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -18493,7 +18877,7 @@
   "9fce3ad1ddcb529b": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 101,
+    "last_score": 104,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -19722,6 +20106,22 @@
     },
     "times_sent": 0
   },
+  "a98aca494959e4ce": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 5,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for CLion 2026, described as a pre-configured environment for local workstation deployment with cmake-ide and cpp-ide topics."
+      }
+    },
+    "times_sent": 0
+  },
   "a9a900e48de52ee5": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
@@ -19824,7 +20224,7 @@
   "aae2e624d6dfcd5e": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 230,
+    "last_score": 234,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20577,7 +20977,7 @@
   "b09bb44bfd32c55e": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 166,
+    "last_score": 168,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -20641,6 +21041,22 @@
     "first_seen": "2026-10-05T04:14:19.891077+00:00",
     "last_score": 3772,
     "ranks": {},
+    "times_sent": 0
+  },
+  "b11ca2330d27f1bc": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 221,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 221,
+        "summary": "A GitHub repository for Whale Tracker 2023, described as an automated deployment pipeline for professional desktop software utility configuration."
+      }
+    },
     "times_sent": 0
   },
   "b130dbfc8d0ff00e": {
@@ -21540,7 +21956,7 @@
   "b81ea0f95984f901": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 72,
+    "last_score": 143,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -21631,6 +22047,22 @@
     "last_score": 69,
     "ranks": {},
     "times_sent": 1
+  },
+  "b889830baf54dda7": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 31,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 31,
+        "summary": "A Show HN for Waymark, an open-source durable execution library and workflow engine that compiles jobs instead of replaying them, similar to Temporal or DBOS."
+      }
+    },
+    "times_sent": 0
   },
   "b89314bc132c8f07": {
     "dismissed": null,
@@ -22037,6 +22469,22 @@
     "last_score": 668,
     "ranks": {},
     "times_sent": 1
+  },
+  "bc00e1abe23c7a73": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 75,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 75,
+        "summary": "A paper titled 'Memorilla: Latent Semantic Memory for LLMs' is discussed on Hacker News."
+      }
+    },
+    "times_sent": 0
   },
   "bc34cbec3dd5a0fb": {
     "dismissed": "expired",
@@ -22883,7 +23331,7 @@
   "c3a3ede459e1ee1f": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 102,
+    "last_score": 111,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -22922,7 +23370,7 @@
   "c42b88e52dd1586a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 344,
+    "last_score": 347,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -22993,7 +23441,7 @@
   "c48f2af7e5b6da76": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 2739,
+    "last_score": 2747,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23427,6 +23875,22 @@
     },
     "times_sent": 0
   },
+  "c8403a475602be11": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 219,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 219,
+        "summary": "A GitHub repository for CATIA CAD 2026, described as a pre-configured production build for enterprise desktop software utility deployment."
+      }
+    },
+    "times_sent": 0
+  },
   "c851d13813897def": {
     "dismissed": null,
     "first_seen": "2026-09-24T08:49:08.300484+00:00",
@@ -23766,7 +24230,7 @@
   "cb57fd0c933347b2": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 124,
+    "last_score": 126,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24298,6 +24762,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "cfeca70a1437ab3b": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Chimera 2023, described as a pre-configured environment for desktop software utility deployment on professional workstations."
+      }
+    },
+    "times_sent": 0
+  },
   "cfee38c25797a9a1": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
@@ -24587,6 +25067,22 @@
     },
     "times_sent": 0
   },
+  "d2cf9ea98eff4e7c": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 58,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 3,
+        "rubric": "3472af8a46e1",
+        "source_score": 58,
+        "summary": "Perplexity launches AI agents for work, according to the title and source."
+      }
+    },
+    "times_sent": 0
+  },
   "d2d2e1d03abccb25": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
@@ -24786,7 +25282,7 @@
   "d51d4d67577c8a7a": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 3634,
+    "last_score": 3672,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24841,7 +25337,7 @@
   "d5c6c1442490d019": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 100,
+    "last_score": 101,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -24857,7 +25353,7 @@
   "d5eecd06151a7663": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 722,
+    "last_score": 724,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24873,7 +25369,7 @@
   "d5f8ab1a0d4a222d": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 385,
+    "last_score": 409,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25059,7 +25555,7 @@
   "d7d9a2a25df6ba53": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 537,
+    "last_score": 540,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25201,7 +25697,7 @@
   "d90e1031b9e75e95": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 117,
+    "last_score": 120,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -26095,7 +26591,7 @@
   "dfa876a54a2df16b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 337,
+    "last_score": 338,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -26707,6 +27203,22 @@
     },
     "times_sent": 0
   },
+  "e412edcd7df09888": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Metatrader 5 Bot, described as a configuration folder for automated deployment in a desktop software utility environment."
+      }
+    },
+    "times_sent": 0
+  },
   "e424f9108045f45d": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
@@ -26813,7 +27325,7 @@
   "e5401facce608525": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 161,
+    "last_score": 162,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -26940,6 +27452,22 @@
         "rubric": "02189e2467e9",
         "source_score": 100,
         "summary": "A pre-activated standalone BorisFX installer."
+      }
+    },
+    "times_sent": 0
+  },
+  "e6329b75d55484d5": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Archicad 2026, described as a pre-configured environment for desktop software utility configuration and deployment."
       }
     },
     "times_sent": 0
@@ -27417,6 +27945,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "ea31d72f346ece7b": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for iOS Unlocker 1.5.3, described as an automated deployment pipeline for local workstation environment setup and device management."
+      }
+    },
+    "times_sent": 0
+  },
   "ea41a986fe715307": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
@@ -27641,7 +28185,7 @@
   "ebc95890f0c31f53": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 146,
+    "last_score": 158,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -27680,7 +28224,7 @@
   "ebe97d0208a517eb": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 320,
+    "last_score": 328,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -27726,7 +28270,7 @@
   "ecebd056b4dbf8e7": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 200,
+    "last_score": 203,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -28070,7 +28614,7 @@
   "f00b165a7cee2cfd": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 92,
+    "last_score": 93,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -28126,6 +28670,22 @@
         "rubric": "02189e2467e9",
         "source_score": 84,
         "summary": "A post stating that there is no official XScreenSaver GitHub repository."
+      }
+    },
+    "times_sent": 0
+  },
+  "f0741fea596054ac": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T23:57:42.539221+00:00",
+    "last_score": 220,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 220,
+        "summary": "A GitHub repository for Microstation 2026, described as an automated deployment pipeline for local workstation setup."
       }
     },
     "times_sent": 0
@@ -29245,7 +29805,7 @@
   "f9ecf66c18226a74": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 2956,
+    "last_score": 2957,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-03T19:06:44.712669+00:00",
