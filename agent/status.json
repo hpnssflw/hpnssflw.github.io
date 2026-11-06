@@ -4,43 +4,34 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 54,
-        "dismissed": 6,
-        "seen": 26
-      },
-      "inbox": {
-        "expired": 4
+        "already_ranked": 57,
+        "dismissed": 4,
+        "seen": 27
       },
       "rank": {
-        "below_relevance": 5,
+        "below_relevance": 3,
         "over_max_items": 13
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 78,
-        "dismissed": 5,
-        "seen": 16
-      },
-      "inbox": {
-        "expired": 3
+        "already_ranked": 101,
+        "dismissed": 3,
+        "seen": 19
       },
       "rank": {
-        "below_relevance": 26,
-        "over_max_items": 13
+        "below_relevance": 3,
+        "over_max_items": 14
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 123
+        "outside_window": 124
       },
       "dedupe": {
-        "already_ranked": 30,
+        "already_ranked": 27,
         "dismissed": 4,
-        "seen": 19
-      },
-      "inbox": {
-        "expired": 2
+        "seen": 21
       },
       "rank": {
         "below_relevance": 1,
@@ -51,140 +42,134 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 108,
-      "in_window": 108,
-      "kept": 4,
-      "new": 22
+      "collected": 104,
+      "in_window": 104,
+      "kept": 0,
+      "new": 16
     },
     "tooling": {
-      "collected": 141,
-      "in_window": 141,
-      "kept": 3,
-      "new": 42
+      "collected": 140,
+      "in_window": 140,
+      "kept": 0,
+      "new": 17
     },
     "web-products": {
-      "collected": 189,
-      "in_window": 66,
-      "kept": 2,
-      "new": 13
+      "collected": 187,
+      "in_window": 63,
+      "kept": 0,
+      "new": 11
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 7,
-      "source": "rss",
-      "title": "Mountain peaks to show the shifts",
+      "reason": "over_max_items",
+      "title": "The Afterlife of Pi",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624389+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 8,
-      "source": "rss",
-      "title": "Analyze your Stripe data directly with your agent",
-      "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624378+00:00",
-      "verdict": "kept"
+      "ts": "2026-11-06T00:46:36.804355+00:00",
+      "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Shifting chart options",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624362+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "The Afterlife of Pi",
-      "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624353+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Early voting jumps",
-      "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624344+00:00",
+      "ts": "2026-11-06T00:46:36.804346+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624335+00:00",
+      "ts": "2026-11-06T00:46:36.804337+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624326+00:00",
+      "ts": "2026-11-06T00:46:36.804329+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624316+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Making Immersive LLM Chat Experiences More Accessible",
-      "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624305+00:00",
+      "ts": "2026-11-06T00:46:36.804319+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Needle of uncertainty is live for Midterms 2026",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624293+00:00",
+      "ts": "2026-11-06T00:46:36.804310+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Percentage of votes counted so far",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624273+00:00",
+      "ts": "2026-11-06T00:46:36.804301+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Shift in margins for Midterms 2026, by county",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:20.624169+00:00",
+      "ts": "2026-11-06T00:46:36.804290+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Making Immersive LLM Chat Experiences More Accessible",
+      "topic": "web-products",
+      "ts": "2026-11-06T00:46:36.804277+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Hairy election margins map",
+      "topic": "web-products",
+      "ts": "2026-11-06T00:46:36.804241+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Data exploration, manually and intentionally",
+      "title": "$2.5T has been wiped from US stocks",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:17.569352+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "How the fastest-growing enterprises on Stripe scale globally",
-      "topic": "web-products",
-      "ts": "2026-11-05T19:33:11.423555+00:00",
+      "ts": "2026-11-06T00:46:36.803930+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-05T19:33:11.423547+00:00",
+      "ts": "2026-11-06T00:46:35.017808+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
+      "topic": "web-products",
+      "ts": "2026-11-06T00:46:35.017799+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Baking Brilliance: My DVS Mentee Experience",
+      "topic": "web-products",
+      "ts": "2026-11-06T00:46:35.017792+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Google cherrypicks small data for Gemini ad",
+      "topic": "web-products",
+      "ts": "2026-11-06T00:46:35.017784+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-10-29T04:31:55.013043+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-10-29T14:57:39.758738+00:00"
@@ -276,28 +261,32 @@
     {
       "kept": 9,
       "ts": "2026-11-05T19:31:58.609871+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-06T00:45:56.353156+00:00"
     }
   ],
-  "streak": 359,
+  "streak": 360,
   "topics": [
     {
-      "collected": 108,
-      "kept": 4,
+      "collected": 104,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 141,
-      "kept": 3,
+      "collected": 140,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 189,
-      "kept": 2,
+      "collected": 187,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-05T19:31:58.609871+00:00"
+  "updated_at": "2026-11-06T00:45:56.353156+00:00"
 }
