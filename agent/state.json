@@ -70,6 +70,22 @@
     },
     "times_sent": 0
   },
+  "00c86c04cfb15c69": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 106,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 106,
+        "summary": "A repo described as an automated deployment pipeline and pre-configured environment for Pump Fun desktop software."
+      }
+    },
+    "times_sent": 0
+  },
   "00e3979c20114b20": {
     "dismissed": null,
     "first_seen": "2026-09-28T02:20:05.627542+00:00",
@@ -699,7 +715,7 @@
   "05cff87ec6ed50b1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 266,
+    "last_score": 269,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -827,6 +843,22 @@
     "first_seen": "2026-09-03T01:51:29.747593+00:00",
     "last_score": 105,
     "ranks": {},
+    "times_sent": 0
+  },
+  "070e8a119f5b60c2": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 163,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 163,
+        "summary": "A lightweight desktop tool for VS Code users offering extension management, performance optimization, recommendations and productivity helpers."
+      }
+    },
     "times_sent": 0
   },
   "07345344a830190e": {
@@ -2146,7 +2178,7 @@
   "12844ee7f8055ffe": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 1860,
+    "last_score": 1863,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2241,7 +2273,7 @@
   "13c6835917281a31": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 300,
+    "last_score": 306,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2368,7 +2400,7 @@
   "144a293a50f0da60": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 390,
+    "last_score": 395,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -2481,7 +2513,7 @@
   "15b07f7e71af672e": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
-    "last_score": 149,
+    "last_score": 151,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2596,7 +2628,7 @@
   "1692dbfc7287ca8b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 175,
+    "last_score": 178,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2726,6 +2758,22 @@
     },
     "times_sent": 0
   },
+  "172a7ca01af49b04": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 101,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 101,
+        "summary": "An iOS automation platform tagged with automation, iOS, and MCP."
+      }
+    },
+    "times_sent": 0
+  },
   "174b55a6fc6d0bfd": {
     "dismissed": null,
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
@@ -2743,7 +2791,7 @@
     "times_sent": 0
   },
   "17569cb46b958ffd": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
     "last_score": 31,
     "ranks": {
@@ -2934,7 +2982,7 @@
   "199af8aea5b61129": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 1221,
+    "last_score": 1516,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3077,7 +3125,7 @@
   "1af3fe1d5c8a78c9": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 50,
+    "last_score": 51,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -3405,7 +3453,7 @@
   "1e03415a592fab86": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 7306,
+    "last_score": 7372,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -3632,7 +3680,7 @@
   "202b9d690f3a74b6": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 610,
+    "last_score": 251,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3737,6 +3785,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 44,
         "summary": "A PDF describing use of Claude-enabled antibody design to develop an IgE disruptor for food allergy."
+      }
+    },
+    "times_sent": 0
+  },
+  "20cb879bc3646cd3": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 148,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 8,
+        "rubric": "02189e2467e9",
+        "source_score": 148,
+        "summary": "A native, lightweight Git client for macOS to manage repositories and worktrees, review diffs and commit changes in one window."
       }
     },
     "times_sent": 0
@@ -3881,6 +3945,54 @@
     "ranks": {},
     "times_sent": 0
   },
+  "22289357ea733b1e": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 103,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 103,
+        "summary": "A pre-configured deployment environment for the Serato DJ Pro desktop software."
+      }
+    },
+    "times_sent": 0
+  },
+  "226e12ba736220a6": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 116,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 6,
+        "rubric": "02189e2467e9",
+        "source_score": 116,
+        "summary": "A compatibility gateway and observability platform connecting the Claude Code CLI to Google Antigravity and Gemini models via the Anthropic Messages API."
+      }
+    },
+    "times_sent": 0
+  },
+  "22bb21cc3795b56a": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 32,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "080b24af813c",
+        "source_score": 32,
+        "summary": "Chip stocks fell sharply in what the title calls Wall Street's worst post-midterm day since 1896."
+      }
+    },
+    "times_sent": 0
+  },
   "22dbce1dd938b87d": {
     "dismissed": "expired",
     "first_seen": "2026-10-13T23:36:41.456320+00:00",
@@ -3917,6 +4029,22 @@
         "rubric": "02189e2467e9",
         "source_score": 300,
         "summary": "An Adobe InDesign listing billed as a secure digital asset deployment pipeline with a ready-to-run installer."
+      }
+    },
+    "times_sent": 0
+  },
+  "23069da7dd7cacc4": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 102,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 102,
+        "summary": "An offline asset bundle for the Kontakt 8 desktop software, packaged for automated deployment."
       }
     },
     "times_sent": 0
@@ -4137,7 +4265,7 @@
   "24e1aea537d2f659": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 86,
+    "last_score": 89,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4170,6 +4298,22 @@
         "rubric": "02189e2467e9",
         "source_score": 52,
         "summary": "konic-labs/kubic is described as agentic coding in your control and is tagged with agentic-coding, AI, CLI, coding-agent, and developer-tools topics."
+      }
+    },
+    "times_sent": 0
+  },
+  "250a84bbb1fa70c7": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 103,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 103,
+        "summary": "A pre-configured environment for Adobe Acrobat Pro described as a PDF document processor deployment pipeline."
       }
     },
     "times_sent": 0
@@ -4301,7 +4445,7 @@
   "270a3881dc5cbe05": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 245,
+    "last_score": 255,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4402,6 +4546,22 @@
     },
     "times_sent": 0
   },
+  "27b87d65d3f99406": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 229,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 8,
+        "rubric": "3472af8a46e1",
+        "source_score": 229,
+        "summary": "A Google blog post titled \"Gemini Omni 1.2 Flash.\""
+      }
+    },
+    "times_sent": 0
+  },
   "27b9450b14cebcbe": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -4421,7 +4581,7 @@
   "281f179371eea4b4": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 160,
+    "last_score": 154,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -4626,7 +4786,7 @@
   "29690e41bb1d9cd4": {
     "dismissed": null,
     "first_seen": "2026-11-04T00:23:49.033444+00:00",
-    "last_score": 481,
+    "last_score": 483,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5029,7 +5189,7 @@
     "times_sent": 0
   },
   "2cf1fb795ba0396c": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
     "last_score": 423,
     "ranks": {
@@ -5095,7 +5255,7 @@
   "2d6e623c0d1fb52e": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 200,
+    "last_score": 107,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5109,7 +5269,7 @@
     "times_sent": 0
   },
   "2d7458168c2cc9a9": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
     "last_score": 362,
     "ranks": {
@@ -5192,6 +5352,22 @@
     "last_score": 84,
     "ranks": {},
     "times_sent": 1
+  },
+  "2ebc89014d03e5af": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 102,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 102,
+        "summary": "A pre-configured environment for the Keyshot Pro desktop rendering software."
+      }
+    },
+    "times_sent": 0
   },
   "2ed80828502bb32e": {
     "dismissed": null,
@@ -5292,7 +5468,7 @@
   "2f4fedc992eca9fc": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 127,
+    "last_score": 128,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5559,7 +5735,7 @@
   "31229f01153710fb": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 526,
+    "last_score": 527,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5619,7 +5795,7 @@
   "322ef97c5b623537": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 827,
+    "last_score": 785,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5659,7 +5835,7 @@
   "32482028cfd1ba7c": {
     "dismissed": null,
     "first_seen": "2026-11-04T00:23:49.033444+00:00",
-    "last_score": 38,
+    "last_score": 39,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -5832,7 +6008,7 @@
   "333bc37d954c1d78": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 235,
+    "last_score": 247,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -5855,7 +6031,7 @@
   "335e94a0914635a1": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 102,
+    "last_score": 117,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -6021,7 +6197,7 @@
   "34333f558f70f948": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 241,
+    "last_score": 266,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6074,9 +6250,9 @@
     "times_sent": 0
   },
   "34755f8225792455": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 356,
+    "last_score": 357,
     "ranks": {
       "web-products": {
         "queued_at": "2026-10-30T14:51:05.460015+00:00",
@@ -6218,7 +6394,7 @@
   "3574b4de3d18f1ba": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 82,
+    "last_score": 84,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6642,7 +6818,7 @@
   "38937f7fd47a931a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 850,
+    "last_score": 852,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6766,6 +6942,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "39dcd101526371c5": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 104,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 104,
+        "summary": "An automated deployment pipeline for the Melodyne 5 desktop audio software."
+      }
+    },
     "times_sent": 0
   },
   "3a0f9678829920c2": {
@@ -6923,6 +7115,22 @@
     "last_score": 103,
     "ranks": {},
     "times_sent": 1
+  },
+  "3b2b19ef14de72c3": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 102,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 102,
+        "summary": "A pre-configured production build for deploying the Filmora 15 desktop video editor."
+      }
+    },
+    "times_sent": 0
   },
   "3b3507d83f0e90dc": {
     "dismissed": null,
@@ -7389,6 +7597,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "3f9849d5ae5c3e4e": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 8,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "The article explains that CSS has true and false keywords and boolean principles that can be used for programming logic and flags."
+      }
+    },
+    "times_sent": 0
+  },
   "3f9be69046a627db": {
     "dismissed": null,
     "first_seen": "2026-08-24T20:17:06.243950+00:00",
@@ -7683,7 +7907,7 @@
   "4290700ebfe688c1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 195,
+    "last_score": 194,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -7793,7 +8017,7 @@
   "43b226d3f8c0e87c": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 558,
+    "last_score": 722,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -7823,7 +8047,7 @@
   "44cd1b0540a7c509": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 107,
+    "last_score": 108,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -8387,7 +8611,7 @@
   "48a26be0d0669fa5": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 31,
+    "last_score": 34,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -8505,7 +8729,7 @@
   "49d25f73538469d6": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 1832,
+    "last_score": 1835,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8660,6 +8884,22 @@
         "rubric": "02189e2467e9",
         "source_score": 51,
         "summary": "A GitHub blog post about a bridge to agent-scale Git infrastructure."
+      }
+    },
+    "times_sent": 0
+  },
+  "4bae0b18f672347b": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 101,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 101,
+        "summary": "A pre-configured Windows environment for Easeus Partition Master desktop partitioning software."
       }
     },
     "times_sent": 0
@@ -8975,7 +9215,7 @@
   "4ed584eb2c672010": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 403,
+    "last_score": 416,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -9124,7 +9364,7 @@
   "4ff51e4e30dd0b36": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 1424,
+    "last_score": 1469,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -9156,7 +9396,7 @@
   "5009c314f8926076": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
-    "last_score": 52,
+    "last_score": 53,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -9537,7 +9777,7 @@
     "times_sent": 0
   },
   "52ed5fcd54e4c7b1": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
     "last_score": 7315,
     "ranks": {
@@ -9758,7 +9998,7 @@
   "54e2bdb4495011dc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 502,
+    "last_score": 503,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-10-31T14:19:13.393090+00:00",
@@ -10346,7 +10586,7 @@
   "58f115f562b50489": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 55,
+    "last_score": 58,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10778,7 +11018,7 @@
   "5d170095e9e79eb7": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 78,
+    "last_score": 80,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11168,7 +11408,7 @@
   "60d6cab4ebcea702": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 44,
+    "last_score": 45,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11216,7 +11456,7 @@
   "611650299311cfa0": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 101,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11257,6 +11497,22 @@
         "rubric": "02189e2467e9",
         "source_score": 55,
         "summary": "A fast native SSH client for macOS, Windows and Linux written in Rust with GPUI and libghostty-vt, covering SSH, port forwarding and SFTP."
+      }
+    },
+    "times_sent": 0
+  },
+  "61642dedb15ebd2a": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 163,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 163,
+        "summary": "An AI-assisted Java/Spring workflow covering requirements, implementation, testing, review and delivery with Graph/Loop/Workflow/Agent concepts plus worktree and Docker tooling."
       }
     },
     "times_sent": 0
@@ -11339,6 +11595,22 @@
     },
     "times_sent": 0
   },
+  "6244fe5acc3a5ff6": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 200,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 200,
+        "summary": "A repo described as a pre-configured CLion 2026 environment for an automated deployment pipeline in desktop software utilities."
+      }
+    },
+    "times_sent": 0
+  },
   "6256763adbf7df5f": {
     "dismissed": null,
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -11365,7 +11637,7 @@
   "62bd6f0dc0ed1ddc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 198,
+    "last_score": 194,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11527,10 +11799,10 @@
   "63b6aec752f28085": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 144,
+    "last_score": 122,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
         "ranked_at": "2026-11-06T11:50:12.640883+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -11705,6 +11977,22 @@
     },
     "times_sent": 0
   },
+  "6565c07c4b7ba62d": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 117,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 4,
+        "rubric": "02189e2467e9",
+        "source_score": 117,
+        "summary": "A tool that runs two live builds for one task in DeepSeek Harness to compare them after review."
+      }
+    },
+    "times_sent": 0
+  },
   "657277b65e04aeed": {
     "dismissed": null,
     "first_seen": "2026-09-27T19:24:46.293417+00:00",
@@ -11802,7 +12090,7 @@
   "6669707f3d1e3930": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 41,
+    "last_score": 42,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -12076,7 +12364,7 @@
   "68bb847c0aee0fbe": {
     "dismissed": null,
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
-    "last_score": 375,
+    "last_score": 381,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12448,7 +12736,7 @@
   "6af525c1604adec7": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 139,
+    "last_score": 140,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12925,7 +13213,7 @@
   "6eb3e27c3039e163": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 2034,
+    "last_score": 2110,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13129,7 +13417,7 @@
     "last_score": 30,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
         "ranked_at": "2026-11-06T11:50:12.640883+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
@@ -13321,6 +13609,22 @@
     },
     "times_sent": 0
   },
+  "72410105a78846b6": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 103,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 103,
+        "summary": "A pre-configured environment for Glary Utilities Pro desktop software management and optimization."
+      }
+    },
+    "times_sent": 0
+  },
   "72490505f859e3b7": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
@@ -13340,7 +13644,7 @@
   "724b3ca53a098aac": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 102,
+    "last_score": 101,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13463,6 +13767,22 @@
     },
     "times_sent": 0
   },
+  "73e1767c49d0102f": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 7,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "A classroom exercise about how the same chart can carry many titles and how framing data changes its meaning."
+      }
+    },
+    "times_sent": 0
+  },
   "73fddb6774391e5a": {
     "dismissed": "expired",
     "first_seen": "2026-09-30T14:38:26.953769+00:00",
@@ -13542,7 +13862,7 @@
   "7490cc27f825470b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 249,
+    "last_score": 253,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -13595,7 +13915,7 @@
     "times_sent": 0
   },
   "74d92a9254a44b5f": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
     "last_score": 65,
     "ranks": {
@@ -13973,7 +14293,7 @@
   "780b70023987f312": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 149,
+    "last_score": 152,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -14111,7 +14431,7 @@
   "790a29191dcdd824": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 179,
+    "last_score": 212,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14138,6 +14458,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "7951c5b8003d194f": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 74,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 74,
+        "summary": "An Anthropic post on how researchers use Claude for scientific discovery."
+      }
+    },
+    "times_sent": 0
+  },
   "795f34e8f4f3ea92": {
     "dismissed": null,
     "first_seen": "2026-08-31T18:20:45.097854+00:00",
@@ -14148,7 +14484,7 @@
   "7985eaa4d4b49f55": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 193,
+    "last_score": 195,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14258,6 +14594,22 @@
         "rubric": "080b24af813c",
         "source_score": 38,
         "summary": "Reports that Chrome can send copied content to Google's servers for scanning for unsafe material."
+      }
+    },
+    "times_sent": 0
+  },
+  "7ace9bb51dd23355": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 119,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 119,
+        "summary": "An open-source feature flag server that the team says it has built over 11 years."
       }
     },
     "times_sent": 0
@@ -14908,7 +15260,7 @@
   "80e95c849406f883": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 204,
+    "last_score": 207,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14932,7 +15284,7 @@
   "80fe724ef6092964": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 308,
+    "last_score": 327,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15067,7 +15419,7 @@
   "833b856438416e75": {
     "dismissed": null,
     "first_seen": "2026-10-30T20:25:26.609499+00:00",
-    "last_score": 1279,
+    "last_score": 1307,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -15092,6 +15444,22 @@
         "rubric": "02189e2467e9",
         "source_score": 247,
         "summary": "An Nvidia open-source 'auto-ontology' project."
+      }
+    },
+    "times_sent": 0
+  },
+  "835b39af7d51bff4": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 103,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 103,
+        "summary": "A Cellebrite UFED toolkit described as a pre-configured environment for digital forensics and hardware validation."
       }
     },
     "times_sent": 0
@@ -15202,6 +15570,22 @@
         "rubric": "080b24af813c",
         "source_score": 201,
         "summary": "Article on type-safe HTML templating in the Zig language."
+      }
+    },
+    "times_sent": 0
+  },
+  "84864f21844a6bae": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 109,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 2,
+        "rubric": "02189e2467e9",
+        "source_score": 109,
+        "summary": "A CBC report that university libraries are being swarmed by AI bots, putting public access at risk."
       }
     },
     "times_sent": 0
@@ -15554,7 +15938,7 @@
   "8880e235869ebfaa": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
-    "last_score": 310,
+    "last_score": 307,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -15570,7 +15954,7 @@
   "88ab2eaf1c2eac1e": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 329,
+    "last_score": 339,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16720,7 +17104,7 @@
   "9434ac3945d97bda": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 54,
+    "last_score": 60,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -17682,7 +18066,7 @@
   "9be9d650a7db49c3": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 405,
+    "last_score": 407,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -17892,7 +18276,7 @@
   "9e2b0c96b94622b6": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 138,
+    "last_score": 139,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -18102,6 +18486,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 342,
         "summary": "\u9ea6\u9ea6\u7701\u94b1\u52a9\u624b is a McDonald's MCP-based ordering cost-optimization Skill that computes the cheapest ordering plan for a store and flags add-on traps."
+      }
+    },
+    "times_sent": 0
+  },
+  "9fce3ad1ddcb529b": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 101,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 9,
+        "rubric": "3472af8a46e1",
+        "source_score": 101,
+        "summary": "A RAG system over GitHub issues with a hand-reviewed eval set and an audit of the judge itself, reporting an interval rather than just the best number."
       }
     },
     "times_sent": 0
@@ -19196,6 +19596,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "a8efac5d70239168": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 103,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 103,
+        "summary": "A pre-configured desktop deployment environment for Fabfilter Total audio plugins."
+      }
+    },
+    "times_sent": 0
+  },
   "a8f075e6856ea052": {
     "dismissed": null,
     "first_seen": "2026-08-22T16:10:36.164469+00:00",
@@ -19375,6 +19791,22 @@
     },
     "times_sent": 0
   },
+  "aa86d8831359831a": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": null,
+    "ranks": {
+      "web-products": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 3,
+        "rubric": "080b24af813c",
+        "source_score": null,
+        "summary": "The author announces a new community for in-house UX people launching in January with Smashing as partner."
+      }
+    },
+    "times_sent": 0
+  },
   "aac59927e545ab79": {
     "dismissed": null,
     "first_seen": "2026-09-27T22:38:48.330387+00:00",
@@ -19392,7 +19824,7 @@
   "aae2e624d6dfcd5e": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 213,
+    "last_score": 230,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20081,7 +20513,7 @@
   "b00f3c61979d2dea": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 837,
+    "last_score": 839,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20145,10 +20577,10 @@
   "b09bb44bfd32c55e": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 126,
+    "last_score": 166,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
         "ranked_at": "2026-11-06T11:50:12.640883+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -20457,7 +20889,7 @@
   "b380127f8f95794c": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 220,
+    "last_score": 212,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -21053,7 +21485,7 @@
   "b808d0a2879133da": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
-    "last_score": 173,
+    "last_score": 165,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -21101,6 +21533,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 31,
         "summary": "An AP News article saying OpenAI paused training of latest models after agents probed US Government sites."
+      }
+    },
+    "times_sent": 0
+  },
+  "b81ea0f95984f901": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 72,
+    "ranks": {
+      "tooling": {
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 9,
+        "rubric": "02189e2467e9",
+        "source_score": 72,
+        "summary": "A native GPU-rendered Rust UI framework targeting macOS, Windows, Linux and web."
       }
     },
     "times_sent": 0
@@ -21334,7 +21782,7 @@
   "ba04ff4c5d96fad4": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 94,
+    "last_score": 97,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -21625,6 +22073,22 @@
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
     "last_score": 191,
     "ranks": {},
+    "times_sent": 0
+  },
+  "bcf878e2f750f02b": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 104,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 104,
+        "summary": "A Fortnite skin swapper packaged as a pre-configured local workstation deployment."
+      }
+    },
     "times_sent": 0
   },
   "bd03e4a483646b85": {
@@ -22370,6 +22834,22 @@
     },
     "times_sent": 0
   },
+  "c31118acc9ad0e2b": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 52,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 52,
+        "summary": "A CLI that compresses any video to an exact size locally with FFmpeg and verifies quality with VMAF/SSIM, tagged as an agent skill."
+      }
+    },
+    "times_sent": 0
+  },
   "c323c9b581192b7e": {
     "dismissed": null,
     "first_seen": "2026-08-28T15:45:01.523799+00:00",
@@ -22400,6 +22880,22 @@
     },
     "times_sent": 0
   },
+  "c3a3ede459e1ee1f": {
+    "dismissed": null,
+    "first_seen": "2026-11-06T18:55:29.232426+00:00",
+    "last_score": 102,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-06T18:55:29.232426+00:00",
+        "relevance": 7,
+        "rubric": "3472af8a46e1",
+        "source_score": 102,
+        "summary": "A multimodal image retrieval practice covering intent recognition, prompt engineering, Qwen LoRA, EmbeddingGemma 2, InfoNCE contrastive learning, and a RAG retrieval component learning guide with training and evaluation."
+      }
+    },
+    "times_sent": 0
+  },
   "c3b293ba4737b211": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -22426,7 +22922,7 @@
   "c42b88e52dd1586a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 335,
+    "last_score": 344,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -22497,7 +22993,7 @@
   "c48f2af7e5b6da76": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 2679,
+    "last_score": 2739,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23270,7 +23766,7 @@
   "cb57fd0c933347b2": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 121,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24113,7 +24609,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
         "ranked_at": "2026-11-05T19:31:58.609871+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -24266,7 +24762,7 @@
   "d4cc251027d5ca95": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 101,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24290,7 +24786,7 @@
   "d51d4d67577c8a7a": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 3474,
+    "last_score": 3634,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24345,7 +24841,7 @@
   "d5c6c1442490d019": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 92,
+    "last_score": 100,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -24361,7 +24857,7 @@
   "d5eecd06151a7663": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 718,
+    "last_score": 722,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24377,7 +24873,7 @@
   "d5f8ab1a0d4a222d": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 341,
+    "last_score": 385,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24563,7 +25059,7 @@
   "d7d9a2a25df6ba53": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 526,
+    "last_score": 537,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25042,7 +25538,7 @@
   "db83d0eb2b26ea41": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 836,
+    "last_score": 839,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -25478,7 +25974,7 @@
     "times_sent": 0
   },
   "deea08fa2c3edd03": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
     "last_score": 81,
     "ranks": {
@@ -25583,7 +26079,7 @@
   "df8ca25721250f37": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 196,
+    "last_score": 187,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -25599,7 +26095,7 @@
   "dfa876a54a2df16b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 336,
+    "last_score": 337,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -25615,7 +26111,7 @@
   "dfb1d49114f0805e": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 106,
+    "last_score": 108,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25841,7 +26337,7 @@
   "e0e72d2e89920eb6": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 200,
+    "last_score": 107,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -26317,7 +26813,7 @@
   "e5401facce608525": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 157,
+    "last_score": 161,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -27089,7 +27585,7 @@
   "eb74bbbe1f02058d": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 115,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -27145,7 +27641,7 @@
   "ebc95890f0c31f53": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 140,
+    "last_score": 146,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -27184,7 +27680,7 @@
   "ebe97d0208a517eb": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 309,
+    "last_score": 320,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -27230,10 +27726,10 @@
   "ecebd056b4dbf8e7": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 192,
+    "last_score": 200,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-11-06T18:55:29.232426+00:00",
         "ranked_at": "2026-11-06T11:50:12.640883+00:00",
         "relevance": 9,
         "rubric": "02189e2467e9",
@@ -28026,7 +28522,7 @@
   "f30eda4c82dc6d09": {
     "dismissed": null,
     "first_seen": "2026-11-05T11:52:56.900722+00:00",
-    "last_score": 418,
+    "last_score": 395,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -28358,7 +28854,7 @@
     "times_sent": 0
   },
   "f663307c1e53d047": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-29T14:57:39.758738+00:00",
     "last_score": 74,
     "ranks": {
@@ -28530,7 +29026,7 @@
     "times_sent": 0
   },
   "f7e149c8b04e8777": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-30T14:51:05.460015+00:00",
     "last_score": null,
     "ranks": {
@@ -28749,7 +29245,7 @@
   "f9ecf66c18226a74": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 2953,
+    "last_score": 2956,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-03T19:06:44.712669+00:00",
@@ -29050,7 +29546,7 @@
   "fe1d679e74709694": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 237,
+    "last_score": 238,
     "ranks": {
       "tooling": {
         "queued_at": null,

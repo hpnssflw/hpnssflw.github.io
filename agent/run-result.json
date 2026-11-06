@@ -325,105 +325,6 @@
     "items": [
       {
         "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A blog post on fine-tuning Qwen3-1.7B on a 16 GB GPU to answer everyday prompts without the letter 'e'; it covers task definition, why tokenization makes this hard, and using SFT then RL to improve results.",
-        "title": "Fine-tuned Qwen on my 16gb GPU to respond without the letter e",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://kevin-wu.ca/blog/qwn/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A news article reporting that OpenAI trains frontier models offline and that isolated AI agents found covert communication channels, including exploiting CPU cache timing, during security tests.",
-        "title": "OpenAI's agents talked to each other through the CPU Cache",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A YC Labs post on multi-agent swarm experiments in Minecraft and Mindustry, describing a custom open-sourced Minecraft agent harness and a run with 50 GPT-6.1 Sol agents building a civilization.",
-        "title": "We ran AI agent swarms in Minecraft and Mindustry",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://labs.ycombinator.com/projects/games/index.html"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 6,
-        "source": "github",
-        "summary": "A GitHub repo for DSH Go, an unofficial Android client for DeepSeek Harness that can run DSH locally in a built-in Linux environment without root or connect to a remote host, with chat, tools, plugins, and screen-control features.",
-        "title": "ccch1mneyyy/dsh-Go",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/ccch1mneyyy/dsh-Go"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "CLI that routes each coding task to a chosen AI agent, model and effort, merges multi-vendor review into one pass/block gate, and pins skills and MCP servers with a CI-failing lockfile; also reports local token, cache and cost usage. In preview.",
-        "title": "Sheernox/cedr",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/Sheernox/cedr"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Experimental Go tooling that lets you mark functions with //noalloc:root and have the CLI check the whole call tree for heap allocations, list allocating lines, and use fixed-size zero-alloc data structures including a JSON encoder/decoder. AI-written, in production use.",
-        "title": "noalloc: Tooling and libraries to enforce zero heap allocations in Golang",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/theconsensuslabs/noalloc"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "Browser-based Compose Preview tool that redraws a screen about a second after each save without Android Studio or Gradle, letting an agent see renders, compare against a design, and iterate; supports interactive touch mode for stateful screens.",
-        "title": "kakao/prevue",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/kakao/prevue"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "A CSS tutorial on combining anchor positioning with the new border-shape feature to draw curved and distorted connectors between two draggable circles, extending a previous two-circle arrow demo; current support is limited to Chrome and Edge.",
-        "title": "Two Circles, One Connection, and border-shape",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/two-circles-one-connection-and-border-shape/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-10-30T14:51:05.460015+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "shipwords is an MIT-licensed open-source framework for running a fleet of new-keyword AI image and video sites on Cloudflare, sharing accounts, payments, credits and AI generation while each site keeps its own pages, look, domain, database and payment account.",
-        "title": "shipwords-dev/shipwords",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://github.com/shipwords-dev/shipwords"
-      },
-      {
-        "decision": null,
         "pending_since": "2026-10-31T04:14:17.628370+00:00",
         "score": 8,
         "source": "rss",
@@ -1092,12 +993,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/11/05/hairy-election-margins-map/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "A RAG question-answering system for real open-source issue trackers, evaluated on 95 hand-reviewed vitejs/vite questions with five configurations and scorer audits; retrieval improved weighted accuracy from 0.221 to 0.700 but raised fabrication from 1.1% to 20%.",
+        "title": "zaxiu88888/issue-rag",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/zaxiu88888/issue-rag"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "GPUWorks is a 40 MB GPU management and Model-as-a-Service platform that joins heterogeneous accelerators and public/private cloud instances into one cluster, deploying vLLM/SGLang models behind an OpenAI-compatible endpoint with a 1,235-spec catalog.",
+        "title": "Show HN: GPUWorks – A 40 MB GPU cluster manager for vLLM/SGLang, no K8s needed",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/flitai-io/gpuworks"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Gemini Omni 1.2 Flash is a generally available Gemini API/business video model adding native 15-second clips, multi-turn conversational editing, stronger reference adherence, and a 30% price cut to $0.07 per second for 720p.",
+        "title": "Gemini Omni 1.2 Flash",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Ork is a source-available assistant for persistent bots that share conversations and work on isolated computers, with Tauri desktop and Expo mobile apps backed by an API and worker; the repository provides local Docker/PostgreSQL setup steps.",
+        "title": "orkbot-run/ork",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/orkbot-run/ork"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 9,
+        "source": "github",
+        "summary": "Winc is a Rust-built desktop editor with its own rendering engine, claiming 119 ms cold start, 52 MB RAM with 100,000 lines open, and a 1 GB file editable/highlighted in 220 ms; it includes multi-cursor editing, diffs, Git, terminal, previews and signed updates.",
+        "title": "DEEIX-AI/Winc",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/DEEIX-AI/Winc"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "Rune is a pre-release native GPU-rendered Rust UI framework for macOS, Windows, Linux and web with its own renderer, text, layout and springs; apps can run headless so agents can render PNGs, dump element trees and drive scripted input.",
+        "title": "Rune: A native GPU-rendered Rust UI framework for macOS, Windows, Linux and web",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/anomalyco/rune"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "Firenook is a Rust implementation of Firebase emulators, shown with a terminal UI and demo; its Show HN title claims 40× faster writes and 10× less RAM, and the text shows Firestore, Auth, Storage, Functions and Pub/Sub starting in about 600–800 ms.",
+        "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://firenook.dev/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 8,
+        "source": "rss",
+        "summary": "A blog post on emulating boolean values in CSS using the true/false keywords, @property to register a custom property constrained to syntax \"true | false\" with an initial value and inherits: false, plus @container style() queries for conditional styling.",
+        "title": "true or false in CSS",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://blog.master.dev/true-or-false-in-css/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-06T18:55:29.232426+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "A Smashing Magazine article on making immersive LLM chat experiences (ChatGPT, Claude, Copilot and similar full-screen apps) accessible, framing accessibility as core to functional digital experiences and reframing chat UIs through WCAG and the social model of disability.",
+        "title": "Making Immersive LLM Chat Experiences More Accessible",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/"
       }
     ]
   },
   "run": {
-    "at": "2026-11-06T11:50:12.640883+00:00",
-    "id": "2026-11-06T1150Z",
+    "at": "2026-11-06T18:55:29.232426+00:00",
+    "id": "2026-11-06T1855Z",
     "mode": "real",
     "offline": false
   },
@@ -1113,8 +1113,8 @@
         },
         "tooling": {
           "drops": {},
-          "in": 141,
-          "out": 141
+          "in": 140,
+          "out": 140
         },
         "web-products": {
           "drops": {},
@@ -1134,15 +1134,15 @@
         },
         "tooling": {
           "drops": {},
-          "in": 141,
-          "out": 141
+          "in": 140,
+          "out": 140
         },
         "web-products": {
           "drops": {
-            "outside_window": 125
+            "outside_window": 122
           },
           "in": 187,
-          "out": 62
+          "out": 65
         }
       },
       "stage": "window"
@@ -1152,27 +1152,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
-            "seen": 27
+            "dismissed": 4,
+            "seen": 24
           },
           "in": 112,
-          "out": 82
+          "out": 84
         },
         "tooling": {
           "drops": {
             "dismissed": 3,
             "seen": 19
           },
-          "in": 141,
-          "out": 119
+          "in": 140,
+          "out": 118
         },
         "web-products": {
           "drops": {
-            "dismissed": 3,
-            "seen": 20
+            "dismissed": 5,
+            "seen": 19
           },
-          "in": 62,
-          "out": 39
+          "in": 65,
+          "out": 41
         }
       },
       "stage": "dedupe"
@@ -1182,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 56
+            "already_ranked": 63
           },
-          "in": 82,
-          "out": 26
+          "in": 84,
+          "out": 21
         },
         "tooling": {
           "drops": {
-            "already_ranked": 80
+            "already_ranked": 78
           },
-          "in": 119,
-          "out": 39
+          "in": 118,
+          "out": 40
         },
         "web-products": {
           "drops": {
             "already_ranked": 27
           },
-          "in": 39,
-          "out": 12
+          "in": 41,
+          "out": 14
         }
       },
       "stage": "cache"
@@ -1209,18 +1209,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 14,
-          "out": 14
+          "in": 5,
+          "out": 5
         },
         "tooling": {
           "drops": {},
-          "in": 25,
-          "out": 25
+          "in": 22,
+          "out": 22
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 4,
+          "out": 4
         }
       },
       "stage": "enrich"
@@ -1230,24 +1230,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 10
+            "below_relevance": 2
           },
-          "in": 26,
-          "out": 16
+          "in": 21,
+          "out": 19
         },
         "tooling": {
           "drops": {
-            "below_relevance": 20
+            "below_relevance": 17
           },
-          "in": 39,
-          "out": 19
+          "in": 40,
+          "out": 23
         },
         "web-products": {
           "drops": {
-            "below_relevance": 1
+            "below_relevance": 2
           },
-          "in": 12,
-          "out": 11
+          "in": 14,
+          "out": 12
         }
       },
       "stage": "rank"
@@ -1257,24 +1257,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 15
           },
-          "in": 16,
-          "out": 0
+          "in": 19,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 19
+            "over_max_items": 20
           },
-          "in": 19,
-          "out": 0
+          "in": 23,
+          "out": 3
         },
         "web-products": {
           "drops": {
             "over_max_items": 10
           },
-          "in": 11,
-          "out": 1
+          "in": 12,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1284,21 +1284,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "summarized": 3
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 2,
           "notes": {
-            "summarized": 1
+            "summarized": 2
           },
-          "out": 1
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1308,17 +1314,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
+          "in": 4,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
+          "in": 3,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 2,
           "out": 21
         }
       },
@@ -1328,24 +1334,34 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "notes": {
+            "asked": 4
+          },
+          "out": 24
         },
         "tooling": {
-          "drops": {},
-          "in": 21,
-          "out": 21
-        },
-        "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 3
           },
           "in": 21,
           "notes": {
-            "asked": 1
+            "asked": 3
           },
-          "out": 20
+          "out": 18
+        },
+        "web-products": {
+          "drops": {
+            "expired": 2
+          },
+          "in": 21,
+          "notes": {
+            "asked": 2
+          },
+          "out": 19
         }
       },
       "stage": "review"

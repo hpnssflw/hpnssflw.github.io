@@ -4,40 +4,46 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 56,
-        "dismissed": 3,
-        "seen": 27
+        "already_ranked": 63,
+        "dismissed": 4,
+        "seen": 24
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 10,
-        "over_max_items": 16
+        "below_relevance": 2,
+        "over_max_items": 15
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 80,
+        "already_ranked": 78,
         "dismissed": 3,
         "seen": 19
       },
+      "inbox": {
+        "expired": 3
+      },
       "rank": {
-        "below_relevance": 20,
-        "over_max_items": 19
+        "below_relevance": 17,
+        "over_max_items": 20
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 125
+        "outside_window": 122
       },
       "dedupe": {
         "already_ranked": 27,
-        "dismissed": 3,
-        "seen": 20
+        "dismissed": 5,
+        "seen": 19
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 1,
+        "below_relevance": 2,
         "over_max_items": 10
       }
     }
@@ -47,137 +53,134 @@
     "ai-engineering": {
       "collected": 112,
       "in_window": 112,
-      "kept": 0,
-      "new": 26
+      "kept": 4,
+      "new": 21
     },
     "tooling": {
-      "collected": 141,
-      "in_window": 141,
-      "kept": 0,
-      "new": 39
+      "collected": 140,
+      "in_window": 140,
+      "kept": 3,
+      "new": 40
     },
     "web-products": {
       "collected": 187,
-      "in_window": 62,
-      "kept": 1,
-      "new": 12
+      "in_window": 65,
+      "kept": 2,
+      "new": 14
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
+      "score": 7,
+      "source": "rss",
+      "title": "Making Immersive LLM Chat Experiences More Accessible",
+      "topic": "web-products",
+      "ts": "2026-11-06T18:56:45.062810+00:00",
+      "verdict": "kept"
+    },
+    {
       "score": 8,
       "source": "rss",
-      "title": "Hairy election margins map",
+      "title": "true or false in CSS",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322302+00:00",
+      "ts": "2026-11-06T18:56:45.062798+00:00",
       "verdict": "kept"
     },
     {
       "reason": "over_max_items",
       "title": "The Afterlife of Pi",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322269+00:00",
+      "ts": "2026-11-06T18:56:45.062780+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Shifting chart options",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322260+00:00",
+      "ts": "2026-11-06T18:56:45.062768+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322251+00:00",
+      "ts": "2026-11-06T18:56:45.062756+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322243+00:00",
+      "ts": "2026-11-06T18:56:45.062729+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322234+00:00",
+      "ts": "2026-11-06T18:56:45.062717+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
-      "title": "Swings in Texas over the years",
+      "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322225+00:00",
+      "ts": "2026-11-06T18:56:45.062705+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Needle of uncertainty is live for Midterms 2026",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322215+00:00",
+      "ts": "2026-11-06T18:56:45.062693+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Percentage of votes counted so far",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322205+00:00",
+      "ts": "2026-11-06T18:56:45.062680+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Shift in margins for Midterms 2026, by county",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322190+00:00",
+      "ts": "2026-11-06T18:56:45.062662+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
-      "title": "Making Immersive LLM Chat Experiences More Accessible",
+      "title": "Swings in Texas over the years",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:27.322123+00:00",
+      "ts": "2026-11-06T18:56:45.062592+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "Global stocks tumble as AI panic grips markets after Democrats' midterm success",
+      "title": "A New Community For In-House UX People",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:25.045654+00:00",
+      "ts": "2026-11-06T18:56:42.329958+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Chip stocks get slaughtered as Wall Street in worst post-midterm day since 1896",
+      "topic": "web-products",
+      "ts": "2026-11-06T18:56:42.329900+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-06T11:51:23.217855+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
-      "topic": "web-products",
-      "ts": "2026-11-06T11:51:23.217846+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Baking Brilliance: My DVS Mentee Experience",
-      "topic": "web-products",
-      "ts": "2026-11-06T11:51:23.217836+00:00",
+      "ts": "2026-11-06T18:56:38.347773+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-29T20:52:50.908704+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-10-30T04:32:17.655149+00:00"
@@ -269,28 +272,32 @@
     {
       "kept": 1,
       "ts": "2026-11-06T11:50:12.640883+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-11-06T18:55:29.232426+00:00"
     }
   ],
-  "streak": 361,
+  "streak": 362,
   "topics": [
     {
       "collected": 112,
-      "kept": 0,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 141,
-      "kept": 0,
+      "collected": 140,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 187,
-      "kept": 1,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-06T11:50:12.640883+00:00"
+  "updated_at": "2026-11-06T18:55:29.232426+00:00"
 }
