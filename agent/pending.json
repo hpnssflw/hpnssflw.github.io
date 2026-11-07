@@ -609,6 +609,96 @@
       "topic": "web-products",
       "topic_name": "Web Products",
       "url": "https://flowingdata.com/2026/11/06/swings-in-texas-over-the-years/"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Anthropic post laying out how it thinks about agent memory: knowledge Claude keeps between sessions as readable notes, plus \"dreaming\" \u2014 reflecting on logs in idle time, borrowed from sleep-time compute \u2014 with evaluations showing what each component contributes.",
+      "title": "The Components of Agent Memory",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 7,
+      "source": "hn",
+      "summary": "Ask HN thread asking readers to describe their current AI agentic setup: paid subscriptions and tiers, pay-as-you-go or local models, coding harnesses, orchestration/swarm tools and agent platforms, as a snapshot of how workflows changed over a year.",
+      "title": "Ask HN: What's your current AI agentic setup?",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://news.ycombinator.com/item?id=50366117"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "GitHub repo for Poki, a macOS-only MCP server plus standalone terminal agent that plugs into Claude Code, Codex or other MCP clients so an agent can handle phone tasks; ships a native bridge and idevice tools, requires Xcode, Rust and Node 24.",
+      "title": "JosssphZhou/poki",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/JosssphZhou/poki"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 7,
+      "source": "github",
+      "summary": "GitHub repo for a Node/TypeScript MCP server bridging Roblox Studio and AI assistants (Claude, Cursor, Cline, ChatGPT), with tools to read the object tree, create and update Lua scripts, inspect properties and run playtests, plus a read-only mode.",
+      "title": "HerdBuilderEstimate/roblox-studio-mcp",
+      "topic": "ai-engineering",
+      "topic_name": "AI Engineering",
+      "url": "https://github.com/HerdBuilderEstimate/roblox-studio-mcp"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "Asm is a package registry and command-line tool for assembly projects; version 0.6.0 supports Linux x86-64, Linux ARM64, and Apple Silicon macOS 15+, with commands to create, build, test, inspect, and update projects.",
+      "title": "stubbi/asm",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/stubbi/asm"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 9,
+      "source": "github",
+      "summary": "devvm is an isolated development sandbox that creates a VM with your project's detected toolchains and chosen coding agents; running devvm in a project folder opens a shell in that VM, and later runs reuse it.",
+      "title": "devvmhq/devvm",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/devvmhq/devvm"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 9,
+      "source": "hn",
+      "summary": "Spindle is a type-safe OCaml 5 web framework with its own RFC-strict HTTP/1.1 engine, Eio-native multicore handlers, type-derived JSON, generated OpenAPI docs, WebSockets, SSE, sessions, and SQLite/Postgres support.",
+      "title": "Show HN: Spindle \u2013 a full-featured, type-safe web framework for OCaml 5",
+      "topic": "tooling",
+      "topic_name": "Tooling",
+      "url": "https://github.com/hyphatech/spindle"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 7,
+      "source": "rss",
+      "summary": "New York Times visualization maps county-level shifts in 2026 midterm voting margins versus 2024 presidential margins using angled arrows, showing mostly blue Democratic shifts except a few small red ones in Maine and Minnesota.",
+      "title": "Shift in margins for Midterms 2026, by county",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://flowingdata.com/2026/11/04/shift-in-margins-for-midterms-2026-by-county/"
+    },
+    {
+      "pending_since": "2026-11-07T19:53:44.909976+00:00",
+      "score": 7,
+      "source": "rss",
+      "summary": "Washington Post live tracker by Dylan Moriarty shows the percentage of votes counted so far, with counting still underway.",
+      "title": "Percentage of votes counted so far",
+      "topic": "web-products",
+      "topic_name": "Web Products",
+      "url": "https://flowingdata.com/2026/11/03/percentage-of-votes-counted-so-far/"
     }
   ],
   "last_email_at": "2026-10-14T05:57:17.734583+00:00"
