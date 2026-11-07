@@ -4,34 +4,37 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 62,
+        "already_ranked": 58,
         "dismissed": 3,
-        "seen": 28
+        "seen": 27
       },
       "rank": {
-        "below_relevance": 3,
-        "over_max_items": 16
+        "below_relevance": 1,
+        "over_max_items": 15
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 73,
+        "already_ranked": 99,
         "dismissed": 2,
-        "seen": 22
+        "seen": 21
       },
       "rank": {
-        "below_relevance": 28,
-        "over_max_items": 19
+        "below_relevance": 1,
+        "over_max_items": 18
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 122
+        "outside_window": 123
       },
       "dedupe": {
         "already_ranked": 29,
         "dismissed": 5,
-        "seen": 21
+        "seen": 20
+      },
+      "inbox": {
+        "expired": 1
       },
       "rank": {
         "below_relevance": 1,
@@ -42,138 +45,134 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 112,
-      "in_window": 112,
+      "collected": 104,
+      "in_window": 104,
+      "kept": 0,
+      "new": 16
+    },
+    "tooling": {
+      "collected": 141,
+      "in_window": 141,
       "kept": 0,
       "new": 19
     },
-    "tooling": {
-      "collected": 144,
-      "in_window": 144,
-      "kept": 0,
-      "new": 47
-    },
     "web-products": {
       "collected": 188,
-      "in_window": 66,
+      "in_window": 65,
       "kept": 0,
       "new": 11
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 70,
+  "pending_count": 69,
   "recent_events": [
     {
       "reason": "over_max_items",
       "title": "The Afterlife of Pi",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137349+00:00",
+      "ts": "2026-11-07T05:30:47.695822+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Shifting chart options",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137340+00:00",
+      "ts": "2026-11-07T05:30:47.695812+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137332+00:00",
+      "ts": "2026-11-07T05:30:47.695803+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137324+00:00",
+      "ts": "2026-11-07T05:30:47.695776+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137315+00:00",
+      "ts": "2026-11-07T05:30:47.695767+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137306+00:00",
+      "ts": "2026-11-07T05:30:47.695757+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Needle of uncertainty is live for Midterms 2026",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137282+00:00",
+      "ts": "2026-11-07T05:30:47.695748+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Percentage of votes counted so far",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137272+00:00",
+      "ts": "2026-11-07T05:30:47.695738+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Shift in margins for Midterms 2026, by county",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137261+00:00",
+      "ts": "2026-11-07T05:30:47.695725+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Swings in Texas over the years",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.137243+00:00",
+      "ts": "2026-11-07T05:30:47.695704+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "smokeeaasd/flawless-ui-ux",
+      "title": "The AI sell-off compared to well-known stock market crashes",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:58.136934+00:00",
+      "ts": "2026-11-07T05:30:47.695191+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:54.831403+00:00",
+      "ts": "2026-11-07T05:30:45.061145+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:54.831394+00:00",
+      "ts": "2026-11-07T05:30:45.061137+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:54.831386+00:00",
+      "ts": "2026-11-07T05:30:45.061128+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Benchmark chair",
       "topic": "web-products",
-      "ts": "2026-11-06T23:58:54.831378+00:00",
+      "ts": "2026-11-07T05:30:45.061120+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-30T14:51:05.460015+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-30T20:25:26.609499+00:00"
@@ -265,18 +264,22 @@
     {
       "kept": 0,
       "ts": "2026-11-06T23:57:42.539221+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-07T05:29:38.520383+00:00"
     }
   ],
-  "streak": 363,
+  "streak": 364,
   "topics": [
     {
-      "collected": 112,
+      "collected": 104,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 144,
+      "collected": 141,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
@@ -288,5 +291,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-06T23:57:42.539221+00:00"
+  "updated_at": "2026-11-07T05:29:38.520383+00:00"
 }

@@ -319,21 +319,10 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 21
+      "web-products": 20
     },
-    "count": 70,
+    "count": 69,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-10-31T04:14:17.628370+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Google plans to support a shared AI training control in robots.txt: a single 'policy token' letting sites opt out across participating AI providers, based on IETF AIPREF work and running alongside Google-Extended.",
-        "title": "Supporting a shared AI training control for websites",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://developers.google.com/search/blog/2026/10/ai-training-control"
-      },
       {
         "decision": null,
         "pending_since": "2026-10-31T14:19:13.393090+00:00",
@@ -1096,8 +1085,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-06T23:57:42.539221+00:00",
-    "id": "2026-11-06T2357Z",
+    "at": "2026-11-07T05:29:38.520383+00:00",
+    "id": "2026-11-07T0529Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,13 +1097,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 112,
-          "out": 112
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 144,
-          "out": 144
+          "in": 141,
+          "out": 141
         },
         "web-products": {
           "drops": {},
@@ -1129,20 +1118,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 112,
-          "out": 112
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 144,
-          "out": 144
+          "in": 141,
+          "out": 141
         },
         "web-products": {
           "drops": {
-            "outside_window": 122
+            "outside_window": 123
           },
           "in": 188,
-          "out": 66
+          "out": 65
         }
       },
       "stage": "window"
@@ -1153,25 +1142,25 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 3,
-            "seen": 28
+            "seen": 27
           },
-          "in": 112,
-          "out": 81
+          "in": 104,
+          "out": 74
         },
         "tooling": {
           "drops": {
             "dismissed": 2,
-            "seen": 22
+            "seen": 21
           },
-          "in": 144,
-          "out": 120
+          "in": 141,
+          "out": 118
         },
         "web-products": {
           "drops": {
             "dismissed": 5,
-            "seen": 21
+            "seen": 20
           },
-          "in": 66,
+          "in": 65,
           "out": 40
         }
       },
@@ -1182,17 +1171,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 62
+            "already_ranked": 58
           },
-          "in": 81,
-          "out": 19
+          "in": 74,
+          "out": 16
         },
         "tooling": {
           "drops": {
-            "already_ranked": 73
+            "already_ranked": 99
           },
-          "in": 120,
-          "out": 47
+          "in": 118,
+          "out": 19
         },
         "web-products": {
           "drops": {
@@ -1209,13 +1198,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 1,
+          "out": 1
         },
         "tooling": {
           "drops": {},
-          "in": 30,
-          "out": 30
+          "in": 3,
+          "out": 3
         },
         "web-products": {
           "drops": {},
@@ -1230,17 +1219,17 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 3
+            "below_relevance": 1
           },
-          "in": 19,
-          "out": 16
+          "in": 16,
+          "out": 15
         },
         "tooling": {
           "drops": {
-            "below_relevance": 28
+            "below_relevance": 1
           },
-          "in": 47,
-          "out": 19
+          "in": 19,
+          "out": 18
         },
         "web-products": {
           "drops": {
@@ -1257,16 +1246,16 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 15
           },
-          "in": 16,
+          "in": 15,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 19
+            "over_max_items": 18
           },
-          "in": 19,
+          "in": 18,
           "out": 0
         },
         "web-products": {
@@ -1316,7 +1305,7 @@
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 21
+          "out": 20
         }
       },
       "stage": "queue"
@@ -1335,9 +1324,11 @@
           "out": 21
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 21,
-          "out": 21
+          "out": 20
         }
       },
       "stage": "review"
