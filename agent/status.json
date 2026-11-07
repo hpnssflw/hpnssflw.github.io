@@ -6,22 +6,22 @@
       "dedupe": {
         "already_ranked": 60,
         "dismissed": 3,
-        "seen": 25
+        "seen": 29
       },
       "rank": {
         "below_relevance": 1,
-        "over_max_items": 14
+        "over_max_items": 16
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 93,
+        "already_ranked": 99,
         "dismissed": 4,
-        "seen": 19
+        "seen": 22
       },
       "rank": {
-        "below_relevance": 6,
-        "over_max_items": 22
+        "below_relevance": 1,
+        "over_max_items": 23
       }
     },
     "web-products": {
@@ -29,12 +29,11 @@
         "outside_window": 126
       },
       "dedupe": {
-        "already_ranked": 29,
+        "already_ranked": 32,
         "dismissed": 6,
-        "seen": 18
+        "seen": 20
       },
       "rank": {
-        "below_relevance": 3,
         "over_max_items": 8
       }
     }
@@ -42,140 +41,134 @@
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 107,
-      "in_window": 107,
-      "kept": 4,
-      "new": 19
+      "collected": 109,
+      "in_window": 109,
+      "kept": 0,
+      "new": 17
     },
     "tooling": {
-      "collected": 147,
-      "in_window": 147,
-      "kept": 3,
-      "new": 31
+      "collected": 149,
+      "in_window": 149,
+      "kept": 0,
+      "new": 24
     },
     "web-products": {
       "collected": 192,
       "in_window": 66,
-      "kept": 2,
-      "new": 13
+      "kept": 0,
+      "new": 8
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
   "pending_count": 70,
   "recent_events": [
     {
-      "score": 7,
-      "source": "rss",
-      "title": "Percentage of votes counted so far",
-      "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184658+00:00",
-      "verdict": "kept"
-    },
-    {
-      "score": 7,
-      "source": "rss",
-      "title": "Shift in margins for Midterms 2026, by county",
-      "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184648+00:00",
-      "verdict": "kept"
-    },
-    {
       "reason": "over_max_items",
       "title": "The Afterlife of Pi",
       "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184632+00:00",
+      "ts": "2026-11-07T23:27:08.167011+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Shifting chart options",
       "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184623+00:00",
+      "ts": "2026-11-07T23:27:08.167000+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184615+00:00",
+      "ts": "2026-11-07T23:27:08.166989+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184606+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Text.js: Build full-stack React apps that render inside console.log",
-      "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184597+00:00",
+      "ts": "2026-11-07T23:27:08.166974+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "albertirgi/replica",
       "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184587+00:00",
+      "ts": "2026-11-07T23:27:08.166963+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "over_max_items",
+      "title": "Text.js: Build full-stack React apps that render inside console.log",
+      "topic": "web-products",
+      "ts": "2026-11-07T23:27:08.166952+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184574+00:00",
+      "ts": "2026-11-07T23:27:08.166939+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Needle of uncertainty is live for Midterms 2026",
       "topic": "web-products",
-      "ts": "2026-11-07T19:55:11.184494+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Vesperlightspirit/PokeMMO-Atlas-AIO-Soft",
-      "topic": "web-products",
-      "ts": "2026-11-07T19:55:08.256521+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Vespermagnet/jet-reports-skill-rpocket",
-      "topic": "web-products",
-      "ts": "2026-11-07T19:55:08.256508+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "Need for Speed Underground 2 online in the browser",
-      "topic": "web-products",
-      "ts": "2026-11-07T19:55:08.256456+00:00",
+      "ts": "2026-11-07T23:27:08.166922+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-07T19:54:59.026850+00:00",
+      "ts": "2026-11-07T23:27:08.166666+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-07T19:54:59.026842+00:00",
+      "ts": "2026-11-07T23:27:08.166656+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Benchmark chair",
+      "topic": "web-products",
+      "ts": "2026-11-07T23:27:08.166645+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Data exploration, manually and intentionally",
+      "topic": "web-products",
+      "ts": "2026-11-07T23:27:08.166635+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "Search Central Live in Zurich is back!",
+      "topic": "web-products",
+      "ts": "2026-11-07T23:27:08.166625+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "What Is BLUF? How to Write Bottom Line Up Front (+ Free Rewriter Tool)",
+      "topic": "web-products",
+      "ts": "2026-11-07T23:27:08.166614+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "10 Clearscope Alternatives (Compared on Price, API, and MCP Access)",
+      "topic": "web-products",
+      "ts": "2026-11-07T23:27:08.166604+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 9,
-      "ts": "2026-10-31T14:19:13.393090+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-10-31T19:43:58.511876+00:00"
@@ -267,28 +260,32 @@
     {
       "kept": 9,
       "ts": "2026-11-07T19:53:44.909976+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-07T23:26:28.750756+00:00"
     }
   ],
-  "streak": 366,
+  "streak": 367,
   "topics": [
     {
-      "collected": 107,
-      "kept": 4,
+      "collected": 109,
+      "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 147,
-      "kept": 3,
+      "collected": 149,
+      "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 192,
-      "kept": 2,
+      "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-07T19:53:44.909976+00:00"
+  "updated_at": "2026-11-07T23:26:28.750756+00:00"
 }
