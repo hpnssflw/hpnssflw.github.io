@@ -4,179 +4,182 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 58,
-        "dismissed": 3,
-        "seen": 27
+        "already_ranked": 56,
+        "dismissed": 5,
+        "seen": 25
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 15
+        "below_relevance": 4,
+        "over_max_items": 17
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 99,
-        "dismissed": 2,
-        "seen": 21
+        "already_ranked": 93,
+        "dismissed": 5,
+        "seen": 18
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 18
+        "below_relevance": 5,
+        "over_max_items": 22
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 123
+        "outside_window": 126
       },
       "dedupe": {
         "already_ranked": 29,
-        "dismissed": 5,
-        "seen": 20
+        "dismissed": 6,
+        "seen": 17
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 10
+        "below_relevance": 2,
+        "over_max_items": 9
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 104,
-      "in_window": 104,
+      "collected": 107,
+      "in_window": 107,
       "kept": 0,
-      "new": 16
+      "new": 21
     },
     "tooling": {
-      "collected": 141,
-      "in_window": 141,
+      "collected": 143,
+      "in_window": 143,
       "kept": 0,
-      "new": 19
+      "new": 27
     },
     "web-products": {
-      "collected": 188,
-      "in_window": 65,
-      "kept": 0,
-      "new": 11
+      "collected": 190,
+      "in_window": 64,
+      "kept": 1,
+      "new": 12
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 69,
+  "pending_count": 61,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "Swings in Texas over the years",
+      "topic": "web-products",
+      "ts": "2026-11-07T14:42:09.519138+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "The Afterlife of Pi",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695822+00:00",
+      "ts": "2026-11-07T14:42:09.519121+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Shifting chart options",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695812+00:00",
+      "ts": "2026-11-07T14:42:09.519111+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695803+00:00",
+      "ts": "2026-11-07T14:42:09.519102+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695776+00:00",
+      "ts": "2026-11-07T14:42:09.519093+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
-      "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
+      "title": "albertirgi/replica",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695767+00:00",
+      "ts": "2026-11-07T14:42:09.519084+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695757+00:00",
+      "ts": "2026-11-07T14:42:09.519074+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Needle of uncertainty is live for Midterms 2026",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695748+00:00",
+      "ts": "2026-11-07T14:42:09.519063+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Percentage of votes counted so far",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695738+00:00",
+      "ts": "2026-11-07T14:42:09.519049+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Shift in margins for Midterms 2026, by county",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695725+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Swings in Texas over the years",
-      "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695704+00:00",
+      "ts": "2026-11-07T14:42:09.518968+00:00",
       "verdict": "drop"
     },
     {
       "reason": "below_relevance",
-      "title": "The AI sell-off compared to well-known stock market crashes",
+      "title": "BenjiNgei/real-time-operations-intelligence-accelerator",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:47.695191+00:00",
+      "ts": "2026-11-07T14:42:06.657902+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "below_relevance",
+      "title": "Need for Speed Underground 2 online in the browser",
+      "topic": "web-products",
+      "ts": "2026-11-07T14:42:06.657850+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:45.061145+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Capturing No-Tech AI Mental Models with Craft Supplies: An AI Literacy Workshop",
-      "topic": "web-products",
-      "ts": "2026-11-07T05:30:45.061137+00:00",
+      "ts": "2026-11-07T14:42:03.421605+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:45.061128+00:00",
+      "ts": "2026-11-07T14:42:03.421597+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Benchmark chair",
       "topic": "web-products",
-      "ts": "2026-11-07T05:30:45.061120+00:00",
+      "ts": "2026-11-07T14:42:03.421589+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-30T20:25:26.609499+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-10-31T04:14:17.628370+00:00"
@@ -268,28 +271,32 @@
     {
       "kept": 0,
       "ts": "2026-11-07T05:29:38.520383+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-11-07T14:41:22.844434+00:00"
     }
   ],
-  "streak": 364,
+  "streak": 365,
   "topics": [
     {
-      "collected": 104,
+      "collected": 107,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 141,
+      "collected": 143,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 188,
-      "kept": 0,
+      "collected": 190,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-07T05:29:38.520383+00:00"
+  "updated_at": "2026-11-07T14:41:22.844434+00:00"
 }
