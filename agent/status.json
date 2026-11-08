@@ -4,30 +4,24 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 55,
+        "already_ranked": 54,
         "dismissed": 6,
         "seen": 22
       },
-      "inbox": {
-        "expired": 4
-      },
       "rank": {
         "below_relevance": 4,
-        "over_max_items": 19
+        "over_max_items": 14
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 70,
+        "already_ranked": 92,
         "dismissed": 6,
-        "seen": 15
-      },
-      "inbox": {
-        "expired": 3
+        "seen": 16
       },
       "rank": {
-        "below_relevance": 33,
-        "over_max_items": 22
+        "below_relevance": 10,
+        "over_max_items": 19
       }
     },
     "web-products": {
@@ -37,152 +31,146 @@
       "dedupe": {
         "already_ranked": 29,
         "dismissed": 6,
-        "seen": 18
-      },
-      "inbox": {
-        "expired": 2
+        "seen": 19
       },
       "rank": {
-        "over_max_items": 7
+        "over_max_items": 5
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 106,
-      "in_window": 106,
-      "kept": 0,
-      "new": 23
+      "collected": 104,
+      "in_window": 104,
+      "kept": 4,
+      "new": 22
     },
     "tooling": {
       "collected": 146,
       "in_window": 146,
-      "kept": 0,
-      "new": 55
+      "kept": 3,
+      "new": 32
     },
     "web-products": {
       "collected": 189,
       "in_window": 61,
-      "kept": 1,
-      "new": 8
+      "kept": 2,
+      "new": 7
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 61,
+  "pending_count": 70,
   "recent_events": [
+    {
+      "score": 6,
+      "source": "hn",
+      "title": "Text.js: Build full-stack React apps that render inside console.log",
+      "topic": "web-products",
+      "ts": "2026-11-08T20:13:57.085503+00:00",
+      "verdict": "kept"
+    },
     {
       "score": 7,
       "source": "rss",
-      "title": "Needle of uncertainty is live for Midterms 2026",
+      "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:28.116622+00:00",
+      "ts": "2026-11-08T20:13:57.085488+00:00",
       "verdict": "kept"
     },
     {
       "reason": "over_max_items",
       "title": "The Afterlife of Pi",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:28.116601+00:00",
+      "ts": "2026-11-08T20:13:57.085468+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Shifting chart options",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:28.116589+00:00",
+      "ts": "2026-11-08T20:13:57.085454+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:28.116576+00:00",
+      "ts": "2026-11-08T20:13:57.085440+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:28.116564+00:00",
+      "ts": "2026-11-08T20:13:57.085420+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "albertirgi/replica",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:28.116549+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Text.js: Build full-stack React apps that render inside console.log",
-      "topic": "web-products",
-      "ts": "2026-11-08T14:47:28.116530+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
-      "topic": "web-products",
-      "ts": "2026-11-08T14:47:28.116471+00:00",
+      "ts": "2026-11-08T20:13:57.085350+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:26.293062+00:00",
+      "ts": "2026-11-08T20:13:51.379482+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:26.293051+00:00",
+      "ts": "2026-11-08T20:13:51.379471+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Benchmark chair",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:26.293037+00:00",
+      "ts": "2026-11-08T20:13:51.379457+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Data exploration, manually and intentionally",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:26.293026+00:00",
+      "ts": "2026-11-08T20:13:51.379446+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Search Central Live in Zurich is back!",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:26.293016+00:00",
+      "ts": "2026-11-08T20:13:51.379436+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "What Is BLUF? How to Write Bottom Line Up Front (+ Free Rewriter Tool)",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:26.293006+00:00",
+      "ts": "2026-11-08T20:13:51.379425+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "10 Clearscope Alternatives (Compared on Price, API, and MCP Access)",
       "topic": "web-products",
-      "ts": "2026-11-08T14:47:26.292996+00:00",
+      "ts": "2026-11-08T20:13:51.379415+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "A Spark Of Color In November\u2019s Gray (2026 Wallpapers Edition)",
+      "topic": "web-products",
+      "ts": "2026-11-08T20:13:51.379404+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-11-01T04:34:29.717478+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-11-01T14:45:27.144193+00:00"
@@ -274,28 +262,32 @@
     {
       "kept": 1,
       "ts": "2026-11-08T14:46:38.327802+00:00"
+    },
+    {
+      "kept": 9,
+      "ts": "2026-11-08T20:12:56.257796+00:00"
     }
   ],
-  "streak": 369,
+  "streak": 370,
   "topics": [
     {
-      "collected": 106,
-      "kept": 0,
+      "collected": 104,
+      "kept": 4,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
       "collected": 146,
-      "kept": 0,
+      "kept": 3,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
       "collected": 189,
-      "kept": 1,
+      "kept": 2,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-08T14:46:38.327802+00:00"
+  "updated_at": "2026-11-08T20:12:56.257796+00:00"
 }

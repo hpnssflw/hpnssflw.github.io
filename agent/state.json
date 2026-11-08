@@ -715,7 +715,7 @@
   "05cff87ec6ed50b1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 301,
+    "last_score": 306,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -813,6 +813,22 @@
     "first_seen": "2026-09-10T22:01:49.684171+00:00",
     "last_score": 41,
     "ranks": {},
+    "times_sent": 0
+  },
+  "06968dded6b4af97": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A repository described as a pre-configured Touch Copy 2026 environment for desktop utility deployment and integration."
+      }
+    },
     "times_sent": 0
   },
   "06ad16d2ad8d8bef": {
@@ -1430,7 +1446,7 @@
   "0bd6337427b89b8d": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 306,
+    "last_score": 329,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1641,7 +1657,7 @@
   "0d2aa7d21102e3b6": {
     "dismissed": null,
     "first_seen": "2026-11-08T04:38:04.339283+00:00",
-    "last_score": 47,
+    "last_score": 53,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2099,23 +2115,23 @@
   "10bdc73097cfd238": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 466,
+    "last_score": 531,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
         "relevance": 1,
         "rubric": "3472af8a46e1",
-        "source_score": 260,
-        "summary": "Reports that Claude Code's \"Don't Ask Again\" option exposed passwords in 1,122 public GitHub files."
+        "source_score": 531,
+        "summary": "Reports that Claude Code's \"Don't Ask Again\" setting exposed passwords in 1,122 public GitHub files."
       },
       "tooling": {
-        "queued_at": null,
-        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
-        "source_score": 260,
-        "summary": "A report that Claude Code's \"Don't Ask Again\" permission option has exposed passwords in 1,122 public GitHub files."
+        "source_score": 531,
+        "summary": "A Hacker News discussion of how Claude Code's \"Don't Ask Again\" setting exposed passwords in 1,122 public GitHub files."
       }
     },
     "times_sent": 0
@@ -2504,7 +2520,7 @@
   "144a293a50f0da60": {
     "dismissed": "expired",
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 433,
+    "last_score": 436,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -2534,7 +2550,7 @@
   "149c124f7b07d2a1": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 458,
+    "last_score": 615,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2835,7 +2851,7 @@
   "16d98e3fe2b26ac8": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 1040,
+    "last_score": 1094,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3150,7 +3166,7 @@
   "199af8aea5b61129": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 1596,
+    "last_score": 1599,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3222,6 +3238,22 @@
         "rubric": "02189e2467e9",
         "source_score": 220,
         "summary": "A GitHub repository for Adobe InDesign 2026, described as an automated deployment pipeline for digital asset management."
+      }
+    },
+    "times_sent": 0
+  },
+  "19bb875381a128eb": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 86,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 86,
+        "summary": "A Show HN post titled Vegetable Gardening for Engineers."
       }
     },
     "times_sent": 0
@@ -3496,7 +3528,7 @@
   "1c17d85584486521": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 112,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4072,7 +4104,7 @@
   "2133eedfaeaec901": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 101,
+    "last_score": 118,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4394,7 +4426,7 @@
   "23d5cc8219ef6b65": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 616,
+    "last_score": 617,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -4553,7 +4585,7 @@
   "24e1aea537d2f659": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 92,
+    "last_score": 93,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4869,7 +4901,7 @@
   "27b87d65d3f99406": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 365,
+    "last_score": 366,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -5019,7 +5051,7 @@
   "28d1f4c29ec3f5a3": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 100,
+    "last_score": 139,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5559,7 +5591,7 @@
   "2d0f77b80e409429": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 36,
+    "last_score": 37,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6135,7 +6167,7 @@
   "30f305e8ada3c28b": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 77,
+    "last_score": 96,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6151,7 +6183,7 @@
   "31229f01153710fb": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 531,
+    "last_score": 533,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6167,7 +6199,7 @@
   "3152ee38f18a8fd5": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 594,
+    "last_score": 586,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -6227,7 +6259,7 @@
   "322ef97c5b623537": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 790,
+    "last_score": 788,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6440,7 +6472,7 @@
   "333bc37d954c1d78": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 325,
+    "last_score": 329,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6590,10 +6622,10 @@
   "33f53407c37ce3e3": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 110,
+    "last_score": 116,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
         "ranked_at": "2026-11-07T19:53:44.909976+00:00",
         "relevance": 6,
         "rubric": "080b24af813c",
@@ -6645,7 +6677,7 @@
   "34333f558f70f948": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 283,
+    "last_score": 284,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6890,7 +6922,7 @@
   "35ce1c89db01f45f": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 89,
+    "last_score": 111,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7507,7 +7539,7 @@
   "3a43fd48a7ec6ddc": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 129,
+    "last_score": 132,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8625,7 +8657,7 @@
   "43b226d3f8c0e87c": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 1273,
+    "last_score": 1352,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9385,10 +9417,10 @@
   "49cf97a4dd7c71bd": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 116,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
         "ranked_at": "2026-11-07T23:26:28.750756+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -9967,7 +9999,7 @@
   "4ed584eb2c672010": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 488,
+    "last_score": 493,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -10116,7 +10148,7 @@
   "4ff51e4e30dd0b36": {
     "dismissed": "expired",
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 1561,
+    "last_score": 1616,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -10396,10 +10428,10 @@
   "51dc1d2f6b3bd6df": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 230,
+    "last_score": 234,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
         "ranked_at": "2026-11-07T19:53:44.909976+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -10837,15 +10869,15 @@
   "55858f2b4ca73bde": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 77,
+    "last_score": 289,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
-        "ranked_at": "2026-11-08T14:46:38.327802+00:00",
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
         "relevance": 9,
         "rubric": "3472af8a46e1",
-        "source_score": 77,
-        "summary": "A GitHub project for running 284B DeepSeek on 64GB RAM with no GPU."
+        "source_score": 289,
+        "summary": "Describes running a 284B DeepSeek model on 64GB of RAM with no GPU."
       }
     },
     "times_sent": 0
@@ -10901,7 +10933,7 @@
   "55aa1dc18cbb251b": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 258,
+    "last_score": 271,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11282,7 +11314,7 @@
   "582b1aae1f561d55": {
     "dismissed": null,
     "first_seen": "2026-11-08T04:38:04.339283+00:00",
-    "last_score": 244,
+    "last_score": 261,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11418,7 +11450,7 @@
   "58f115f562b50489": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 59,
+    "last_score": 60,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -11745,15 +11777,15 @@
   "5b5b6da01dd0f826": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 219,
+    "last_score": 244,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-07T14:41:22.844434+00:00",
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
         "relevance": 4,
         "rubric": "3472af8a46e1",
-        "source_score": 115,
-        "summary": "A collection of skills for human-led AI teams covering task delegation, evidence verification, clear explanation and reuse of cases."
+        "source_score": 244,
+        "summary": "Describes skills for human-led AI teams to delegate tasks, verify evidence, explain steps, and learn from real cases."
       }
     },
     "times_sent": 0
@@ -11994,7 +12026,7 @@
   "5d170095e9e79eb7": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 81,
+    "last_score": 82,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12448,7 +12480,7 @@
   "611650299311cfa0": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 142,
+    "last_score": 190,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12629,7 +12661,7 @@
   "62bcbf2fb4b3a672": {
     "dismissed": null,
     "first_seen": "2026-11-08T04:38:04.339283+00:00",
-    "last_score": 157,
+    "last_score": 172,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12807,7 +12839,7 @@
   "63b6aec752f28085": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 123,
+    "last_score": 102,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -13098,7 +13130,7 @@
   "65ecf9337812d596": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 187,
+    "last_score": 201,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -14285,7 +14317,7 @@
   "6eb3e27c3039e163": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 2347,
+    "last_score": 2371,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14787,7 +14819,7 @@
   "728790b9a3090b55": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 60,
+    "last_score": 61,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -14909,7 +14941,7 @@
     "last_score": null,
     "ranks": {
       "web-products": {
-        "queued_at": null,
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
         "ranked_at": "2026-11-06T18:55:29.232426+00:00",
         "relevance": 7,
         "rubric": "080b24af813c",
@@ -15435,6 +15467,22 @@
     },
     "times_sent": 0
   },
+  "77fe39d4597a61e1": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A repository described as an AI-driven LLM prompt engineering resource and Aion 2 game trainer tool with a pre-configured local workstation environment."
+      }
+    },
+    "times_sent": 0
+  },
   "77fec485b17b1214": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -15583,7 +15631,7 @@
   "790a29191dcdd824": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 266,
+    "last_score": 269,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -15613,7 +15661,7 @@
   "7951c5b8003d194f": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 101,
+    "last_score": 103,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16503,7 +16551,7 @@
     "last_score": 343,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
         "ranked_at": "2026-11-05T19:31:58.609871+00:00",
         "relevance": 7,
         "rubric": "3472af8a46e1",
@@ -17103,6 +17151,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "87e167a21c3687df": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A repository described as a pre-configured Cinema 4D 2026 environment for professional desktop software configuration and automated deployment pipelines."
+      }
+    },
+    "times_sent": 0
+  },
   "8854d78214dd6150": {
     "dismissed": null,
     "first_seen": "2026-10-13T18:55:04.409772+00:00",
@@ -17645,7 +17709,7 @@
   "8d08f7ef0bad6031": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 31,
+    "last_score": 32,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -18050,7 +18114,7 @@
   "9110d51efd4e82f3": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 300,
+    "last_score": 301,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -18817,7 +18881,7 @@
   "9648bd36246b3271": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 94,
+    "last_score": 95,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -18833,10 +18897,10 @@
   "96571aa39f8d3b2f": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 90,
+    "last_score": 150,
     "ranks": {
       "ai-engineering": {
-        "queued_at": null,
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
         "ranked_at": "2026-11-08T14:46:38.327802+00:00",
         "relevance": 8,
         "rubric": "3472af8a46e1",
@@ -19005,7 +19069,7 @@
   "973a8c35e1bfba5a": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 1050,
+    "last_score": 1100,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -19389,7 +19453,7 @@
   "9a6cfc6ad0dfbe2c": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 92,
+    "last_score": 97,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -19865,7 +19929,7 @@
   "9ef9e546f2c548f4": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 115,
+    "last_score": 117,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-04T19:24:33.246895+00:00",
@@ -19997,7 +20061,7 @@
   "9fce3ad1ddcb529b": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 141,
+    "last_score": 146,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -21932,7 +21996,7 @@
   "af32b6413837bf46": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 57,
+    "last_score": 80,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -22379,7 +22443,7 @@
   "b228101c3e9d88f9": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 72,
+    "last_score": 74,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -22478,6 +22542,22 @@
     "last_score": 112,
     "ranks": {},
     "times_sent": 1
+  },
+  "b35629f305eb7f50": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A repository described as a local environment suite for Claude AI pipeline management and custom automation workflows, tagged with claude-jailbreak topics."
+      }
+    },
+    "times_sent": 0
   },
   "b3615add02cfa21d": {
     "dismissed": null,
@@ -23251,7 +23331,7 @@
   "b889830baf54dda7": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 82,
+    "last_score": 83,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23681,7 +23761,7 @@
   "bc00e1abe23c7a73": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 116,
+    "last_score": 121,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -23729,6 +23809,22 @@
     "first_seen": "2026-10-04T19:12:38.830179+00:00",
     "last_score": 191,
     "ranks": {},
+    "times_sent": 0
+  },
+  "bcb1c049a8ce9a46": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 279,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 279,
+        "summary": "An agent skill for drawing animated icons in a consistent style for Claude Code, Codex, and other coding agents, with 2,600+ icons for React, Vue, and SVG."
+      }
+    },
     "times_sent": 0
   },
   "bcd6592a5bbe5ae4": {
@@ -23869,7 +23965,7 @@
   "bd95b63d46d959af": {
     "dismissed": null,
     "first_seen": "2026-11-07T05:29:38.520383+00:00",
-    "last_score": 96,
+    "last_score": 98,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -24589,7 +24685,7 @@
   "c31118acc9ad0e2b": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 64,
+    "last_score": 66,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -24635,7 +24731,7 @@
   "c3a3ede459e1ee1f": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 126,
+    "last_score": 127,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24674,7 +24770,7 @@
   "c42b88e52dd1586a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 392,
+    "last_score": 393,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24745,7 +24841,7 @@
   "c48f2af7e5b6da76": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 3061,
+    "last_score": 3083,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -25128,6 +25224,22 @@
         "rubric": "02189e2467e9",
         "source_score": 200,
         "summary": "A Fishing Planet Cheat repository advertised as a standalone desktop utility."
+      }
+    },
+    "times_sent": 0
+  },
+  "c7aa9e435f02c624": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 31,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 31,
+        "summary": "Dux is described as a free, open-source Wayland desktop shell with a file manager and theming."
       }
     },
     "times_sent": 0
@@ -25566,7 +25678,7 @@
   "cb57fd0c933347b2": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 139,
+    "last_score": 140,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -26634,7 +26746,7 @@
   "d51d4d67577c8a7a": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 4064,
+    "last_score": 4087,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -26721,7 +26833,7 @@
   "d5eecd06151a7663": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 730,
+    "last_score": 734,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -26737,7 +26849,7 @@
   "d5f8ab1a0d4a222d": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 572,
+    "last_score": 593,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -26923,7 +27035,7 @@
   "d7d9a2a25df6ba53": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 559,
+    "last_score": 561,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -26987,6 +27099,22 @@
         "rubric": "080b24af813c",
         "source_score": 119,
         "summary": "A GitHub project that provides animated, explorable diagrams for Claude and other coding agents from a short JSON spec."
+      }
+    },
+    "times_sent": 0
+  },
+  "d81299809363f46d": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A repository described as optimized package deployment for a desktop software utility (Reason 14) with local workstation environment setup for 2026."
       }
     },
     "times_sent": 0
@@ -27065,7 +27193,7 @@
   "d90e1031b9e75e95": {
     "dismissed": "expired",
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 125,
+    "last_score": 126,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -27276,7 +27404,7 @@
   "da77c4bc03296150": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 63,
+    "last_score": 64,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -27434,7 +27562,7 @@
   "db83d0eb2b26ea41": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 842,
+    "last_score": 843,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -27750,6 +27878,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "dda8d7f79910f21a": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A repository described as a secure PDF document processor 2026 production build for isolated local workstation deployment."
+      }
+    },
+    "times_sent": 0
+  },
   "ddfcf559a678f9d6": {
     "dismissed": null,
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
@@ -27840,7 +27984,7 @@
   "de96767156cbefd4": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 109,
+    "last_score": 117,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -27888,10 +28032,10 @@
   "ded5e63286c42460": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 132,
+    "last_score": 177,
     "ranks": {
       "tooling": {
-        "queued_at": null,
+        "queued_at": "2026-11-08T20:12:56.257796+00:00",
         "ranked_at": "2026-11-08T14:46:38.327802+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
@@ -28055,7 +28199,7 @@
   "dfa876a54a2df16b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 340,
+    "last_score": 341,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -28071,7 +28215,7 @@
   "dfb1d49114f0805e": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 111,
+    "last_score": 112,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -28156,7 +28300,7 @@
   "e044dd3dafb7cbb4": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 235,
+    "last_score": 236,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -29681,7 +29825,7 @@
   "eb74bbbe1f02058d": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 136,
+    "last_score": 137,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -29737,7 +29881,7 @@
   "ebc95890f0c31f53": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 262,
+    "last_score": 228,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -29792,7 +29936,7 @@
   "ebf5cdbd3272cd87": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 43,
+    "last_score": 65,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -29838,7 +29982,7 @@
   "ecebd056b4dbf8e7": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 235,
+    "last_score": 236,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -30222,7 +30366,7 @@
   "f0247d2be6d23fda": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 160,
+    "last_score": 172,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -30392,7 +30536,7 @@
   "f135712f91f710c6": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 61,
+    "last_score": 62,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -30667,7 +30811,7 @@
   "f2d5ef0080ec13e2": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 144,
+    "last_score": 145,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -30754,7 +30898,7 @@
   "f3149cebb3fc766a": {
     "dismissed": null,
     "first_seen": "2026-11-07T05:29:38.520383+00:00",
-    "last_score": 394,
+    "last_score": 403,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -31633,7 +31777,7 @@
   "fad4660612e7a0c9": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 91,
+    "last_score": 92,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -31766,6 +31910,22 @@
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
     "last_score": null,
     "ranks": {},
+    "times_sent": 0
+  },
+  "fd6bff1e78552b86": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 300,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 300,
+        "summary": "A repository described as a professional desktop toolkit (Dft Pro 2023) pre-configured for local workstation deployment and automated pipeline setup."
+      }
+    },
     "times_sent": 0
   },
   "fd7ec4fb7829da74": {
@@ -31917,6 +32077,30 @@
     "last_score": 1532,
     "ranks": {},
     "times_sent": 1
+  },
+  "fe5fdb83e1ea95f1": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T20:12:56.257796+00:00",
+    "last_score": 247,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 1,
+        "rubric": "3472af8a46e1",
+        "source_score": 246,
+        "summary": "Reports that Goldman Sachs is pulling Claude Code from its bankers and traders."
+      },
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T20:12:56.257796+00:00",
+        "relevance": 3,
+        "rubric": "02189e2467e9",
+        "source_score": 247,
+        "summary": "A report that Goldman Sachs is pulling Claude Code from its bankers and traders."
+      }
+    },
+    "times_sent": 0
   },
   "fe8200cd67f0ba20": {
     "dismissed": null,

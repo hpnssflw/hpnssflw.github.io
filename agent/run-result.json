@@ -317,11 +317,11 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 24,
-      "tooling": 18,
-      "web-products": 19
+      "ai-engineering": 28,
+      "tooling": 21,
+      "web-products": 21
     },
-    "count": 61,
+    "count": 70,
     "items": [
       {
         "decision": null,
@@ -993,12 +993,111 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/11/03/needle-of-uncertainty-is-live-for-midterms-2026/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 9,
+        "source": "hn",
+        "summary": "llama-modchip: ggml/llama.cpp kernel patches, quantization transcoders and runtime tools that run sparse MoE checkpoints entirely in system RAM with zero GPUs. It shrinks 284B DeepSeek-V4-Flash to 56.56 GiB at 1.71 bpw so it fits 64 GB with a 256K KV cache, reporting up to ~44 tok/s prefill and 111 tok/s on 8-channel workstations.",
+        "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/synchopate/llama-modchip"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "An essay arguing agent memory needs an OpenTelemetry-style shared spec, touring today's incompatible formats (AGENTS.md, .cursor/rules, /memories, GitHub-side facts, memory MCP JSONL graphs) and existing proposals. Author builds LoreKit, which he says is one proposal among several, not a solution.",
+        "title": "Agent memory needs its OpenTelemetry moment",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://www.lorekit.io/blog/open-agent-memory-format"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "WebsiteBench: a benchmark where agents explore a live site in a browser and reverse-engineer a full-stack clone. 70 websites, 46,916 hidden test cases (302–2,016 each); a case passes only if functional checks pass and every visual checkpoint hits 0.99 SSIM. Runnable via pip package and harbor; code Apache-2.0.",
+        "title": "TIGER-AI-Lab/WebsiteBench",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://github.com/TIGER-AI-Lab/WebsiteBench"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 7,
+        "source": "hn",
+        "summary": "A reference explainer of the Model Context Protocol: hosts, servers and models, with servers advertising capabilities the app relays to the model. Notes MCP is JSON-RPC over stdin/stdout or one HTTP endpoint (not REST), plus methods, capability negotiation, transports and auth, with spec and tools links.",
+        "title": "MCP Explained",
+        "topic": "ai-engineering",
+        "topic_name": "AI Engineering",
+        "url": "https://mcp-explained.com/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "A Hacker News discussion of how Claude Code's \"Don't Ask Again\" setting exposed passwords in 1,122 public GitHub files.",
+        "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 8,
+        "source": "hn",
+        "summary": "GitHub blog post detailing its new Git storage architecture, which decouples storage from compute and only orders reference updates, letting it test 5,000 concurrent agents and 7,200 pushes per second to one repo with low-latency reads.",
+        "title": "GitHub's new Git storage architecture",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 8,
+        "source": "github",
+        "summary": "Finallyshell: an open-source SSH client in Go that recreates FinalShell's layout with vertical, reorderable session tabs, libghostty-vt terminal engine, and passwords stored in the system keychain instead of a file.",
+        "title": "TooonyChen/finallyshell",
+        "topic": "tooling",
+        "topic_name": "Tooling",
+        "url": "https://github.com/TooonyChen/finallyshell"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "A Nightingale article presents a classroom/workshop exercise on equitable data visualization, using Alexandra Bell’s “Counternarratives” to show how titles and editorial framing shape what readers take from charts; it starts with a non-chart warm-up.",
+        "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://nightingaledvs.com/same-chart-many-titles/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T20:12:56.257796+00:00",
+        "score": 6,
+        "source": "hn",
+        "summary": "Text.js is a framework for building full-stack React apps that render inside console.log, with React 19, App Router routes/layouts, keyboard input, server rendering, and a custom reconciler/Yoga/RLE pipeline that emits only changed frames as console.log calls.",
+        "title": "Text.js: Build full-stack React apps that render inside console.log",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://textjs.org/"
       }
     ]
   },
   "run": {
-    "at": "2026-11-08T14:46:38.327802+00:00",
-    "id": "2026-11-08T1446Z",
+    "at": "2026-11-08T20:12:56.257796+00:00",
+    "id": "2026-11-08T2012Z",
     "mode": "real",
     "offline": false
   },
@@ -1009,8 +1108,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 106,
-          "out": 106
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
@@ -1030,8 +1129,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 106,
-          "out": 106
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
@@ -1056,24 +1155,24 @@
             "dismissed": 6,
             "seen": 22
           },
-          "in": 106,
-          "out": 78
+          "in": 104,
+          "out": 76
         },
         "tooling": {
           "drops": {
             "dismissed": 6,
-            "seen": 15
+            "seen": 16
           },
           "in": 146,
-          "out": 125
+          "out": 124
         },
         "web-products": {
           "drops": {
             "dismissed": 6,
-            "seen": 18
+            "seen": 19
           },
           "in": 61,
-          "out": 37
+          "out": 36
         }
       },
       "stage": "dedupe"
@@ -1083,24 +1182,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 55
+            "already_ranked": 54
           },
-          "in": 78,
-          "out": 23
+          "in": 76,
+          "out": 22
         },
         "tooling": {
           "drops": {
-            "already_ranked": 70
+            "already_ranked": 92
           },
-          "in": 125,
-          "out": 55
+          "in": 124,
+          "out": 32
         },
         "web-products": {
           "drops": {
             "already_ranked": 29
           },
-          "in": 37,
-          "out": 8
+          "in": 36,
+          "out": 7
         }
       },
       "stage": "cache"
@@ -1110,13 +1209,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 5,
+          "out": 5
         },
         "tooling": {
           "drops": {},
-          "in": 35,
-          "out": 35
+          "in": 11,
+          "out": 11
         },
         "web-products": {
           "drops": {},
@@ -1133,20 +1232,20 @@
           "drops": {
             "below_relevance": 4
           },
-          "in": 23,
-          "out": 19
+          "in": 22,
+          "out": 18
         },
         "tooling": {
           "drops": {
-            "below_relevance": 33
+            "below_relevance": 10
           },
-          "in": 55,
+          "in": 32,
           "out": 22
         },
         "web-products": {
           "drops": {},
-          "in": 8,
-          "out": 8
+          "in": 7,
+          "out": 7
         }
       },
       "stage": "rank"
@@ -1156,24 +1255,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 19
+            "over_max_items": 14
           },
-          "in": 19,
-          "out": 0
+          "in": 18,
+          "out": 4
         },
         "tooling": {
           "drops": {
-            "over_max_items": 22
+            "over_max_items": 19
           },
           "in": 22,
-          "out": 0
+          "out": 3
         },
         "web-products": {
           "drops": {
-            "over_max_items": 7
+            "over_max_items": 5
           },
-          "in": 8,
-          "out": 1
+          "in": 7,
+          "out": 2
         }
       },
       "stage": "cap"
@@ -1183,21 +1282,28 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 4,
+          "notes": {
+            "summarized": 4
+          },
+          "out": 4
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 3,
+          "notes": {
+            "kept_rank_summary": 1,
+            "summarized": 2
+          },
+          "out": 3
         },
         "web-products": {
           "drops": {},
-          "in": 1,
+          "in": 2,
           "notes": {
-            "summarized": 1
+            "summarized": 2
           },
-          "out": 1
+          "out": 2
         }
       },
       "stage": "summarize"
@@ -1207,18 +1313,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 0,
-          "out": 24
+          "in": 4,
+          "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 0,
-          "out": 18
+          "in": 3,
+          "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 19
+          "in": 2,
+          "out": 21
         }
       },
       "stage": "queue"
@@ -1227,28 +1333,28 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "expired": 4
+          "drops": {},
+          "in": 24,
+          "notes": {
+            "asked": 4
           },
-          "in": 28,
           "out": 24
         },
         "tooling": {
-          "drops": {
-            "expired": 3
+          "drops": {},
+          "in": 18,
+          "notes": {
+            "asked": 3
           },
-          "in": 21,
           "out": 18
         },
         "web-products": {
-          "drops": {
-            "expired": 2
-          },
-          "in": 20,
+          "drops": {},
+          "in": 19,
           "notes": {
-            "asked": 1
+            "asked": 2
           },
-          "out": 18
+          "out": 19
         }
       },
       "stage": "review"
