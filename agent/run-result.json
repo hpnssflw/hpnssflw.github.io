@@ -317,111 +317,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 28,
-      "tooling": 21,
-      "web-products": 20
+      "ai-engineering": 24,
+      "tooling": 18,
+      "web-products": 19
     },
-    "count": 69,
+    "count": 61,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "NamiAgent is a Chinese-language tutorial and runnable local AI agent that builds an agent from a minimal while loop through tools, permissions, context, skills, MCP, subagents, planning and memory, with a web UI and per-lesson code snapshots.",
-        "title": "aa1143/NamiAgent",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/aa1143/NamiAgent"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "graphmemory is a bitemporal memory service for AI agents with valid-time and record-time axes, six-variable decay, TTL expiry, deduplication and competitive retrieval, built on Graphiti, PostgreSQL/pgvector and Redis, and exposed via MCP tools and a web GUI.",
-        "title": "gh9ko8y/graphmemory",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/gh9ko8y/graphmemory"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "sapper-v2 is a legion-style multi-agent AI system for authorized penetration testing that won the 3rd Tencent Cloud Intelligent Attack-Defense Challenge qualifier, using a commander, parallel generals/soldiers and a layered fact graph, framed by the Nüwa Test.",
-        "title": "N1nEmAn/sapper-v2",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/N1nEmAn/sapper-v2"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "persona-ai-sdk is a TypeScript SDK for AI characters that combines a persona catalog with a provider-neutral memory and response runtime, separating personas, memory, model, persistence and interface, and published on npm.",
-        "title": "tavern-labs-ai/persona-ai-sdk",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/tavern-labs-ai/persona-ai-sdk"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "GitHub repo for pursr, a Node.js package bundling browser visual QA: one CLI for capture, diff, sweep and audit, an MCP stdio server built on the official SDK with persistent tabs and actions, and a library API with 25 subpath modules. The page also fronts an admin-rights, password-protected loader.",
-        "title": "Venomsphinx/pursr-rpocket",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/Venomsphinx/pursr-rpocket"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Ghostman, a keyboard-driven terminal API client and webhook inspector pitched as a local-first Postman alternative: ~30MB RAM, ~150ms cold boot, collections saved as plain JSON/YAML in ~/.ghostman/, and a built-in webhook listener on port 9090.",
-        "title": "Show HN: Ghostman – A fast, keyboard-driven TUI API client and webhook inspector",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/4yk5/Ghostman"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A Bun --preload script (no-agent-summary.js) that stops Claude Code from re-sending each background agent's full transcript to its model roughly every 30 seconds just to fill status lines, without modifying the binary; the author's telemetry put agent_summary at 16.4% of spend.",
-        "title": "Claude Code regularly sends each background agent’s transcript to its model",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A benchmark of the AI cost of JavaScript frameworks has agents build a small Pokémon app with frameworks such as Next.js, Nuxt, and SvelteKit, then tests outputs against a spec conformance suite and evaluates development time, tokens spent, and lines.",
-        "title": "The AI cost of JavaScript frameworks",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-01T14:45:27.144193+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "An MIT Press Reader article arguing, via a 1580 map, that data visualization is never neutral.",
-        "title": "A 1580 Map Shows Why Data Visualization Is Never Neutral",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://thereader.mitpress.mit.edu/a-1580-map-shows-why-data-visualization-is-never-neutral/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-02T04:37:08.045127+00:00",
@@ -1081,12 +982,23 @@
         "topic": "web-products",
         "topic_name": "Web Products",
         "url": "https://flowingdata.com/2026/11/03/percentage-of-votes-counted-so-far/"
+      },
+      {
+        "decision": null,
+        "pending_since": "2026-11-08T14:46:38.327802+00:00",
+        "score": 7,
+        "source": "rss",
+        "summary": "A FlowingData post noting that the New York Times' election Needle is live for the 2026 midterms, showing each party's chances of winning Senate and House control plus views for individual races.",
+        "title": "Needle of uncertainty is live for Midterms 2026",
+        "topic": "web-products",
+        "topic_name": "Web Products",
+        "url": "https://flowingdata.com/2026/11/03/needle-of-uncertainty-is-live-for-midterms-2026/"
       }
     ]
   },
   "run": {
-    "at": "2026-11-08T04:38:04.339283+00:00",
-    "id": "2026-11-08T0438Z",
+    "at": "2026-11-08T14:46:38.327802+00:00",
+    "id": "2026-11-08T1446Z",
     "mode": "real",
     "offline": false
   },
@@ -1097,18 +1009,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 106,
+          "out": 106
         },
         "tooling": {
           "drops": {},
-          "in": 147,
-          "out": 147
+          "in": 146,
+          "out": 146
         },
         "web-products": {
           "drops": {},
-          "in": 191,
-          "out": 191
+          "in": 189,
+          "out": 189
         }
       },
       "stage": "collect"
@@ -1118,20 +1030,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 106,
+          "out": 106
         },
         "tooling": {
           "drops": {},
-          "in": 147,
-          "out": 147
+          "in": 146,
+          "out": 146
         },
         "web-products": {
           "drops": {
-            "outside_window": 127
+            "outside_window": 128
           },
-          "in": 191,
-          "out": 64
+          "in": 189,
+          "out": 61
         }
       },
       "stage": "window"
@@ -1141,27 +1053,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 2,
-            "seen": 27
+            "dismissed": 6,
+            "seen": 22
           },
-          "in": 104,
-          "out": 75
+          "in": 106,
+          "out": 78
         },
         "tooling": {
           "drops": {
-            "dismissed": 3,
-            "seen": 20
+            "dismissed": 6,
+            "seen": 15
           },
-          "in": 147,
-          "out": 124
+          "in": 146,
+          "out": 125
         },
         "web-products": {
           "drops": {
-            "dismissed": 5,
-            "seen": 20
+            "dismissed": 6,
+            "seen": 18
           },
-          "in": 64,
-          "out": 39
+          "in": 61,
+          "out": 37
         }
       },
       "stage": "dedupe"
@@ -1171,24 +1083,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 57
+            "already_ranked": 55
           },
-          "in": 75,
-          "out": 18
+          "in": 78,
+          "out": 23
         },
         "tooling": {
           "drops": {
-            "already_ranked": 72
+            "already_ranked": 70
           },
-          "in": 124,
-          "out": 52
+          "in": 125,
+          "out": 55
         },
         "web-products": {
           "drops": {
-            "already_ranked": 30
+            "already_ranked": 29
           },
-          "in": 39,
-          "out": 9
+          "in": 37,
+          "out": 8
         }
       },
       "stage": "cache"
@@ -1198,18 +1110,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 2,
-          "out": 2
+          "in": 7,
+          "out": 7
         },
         "tooling": {
           "drops": {},
-          "in": 32,
-          "out": 32
+          "in": 35,
+          "out": 35
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "enrich"
@@ -1219,23 +1131,21 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 2
+            "below_relevance": 4
           },
-          "in": 18,
-          "out": 16
+          "in": 23,
+          "out": 19
         },
         "tooling": {
           "drops": {
-            "below_relevance": 29
+            "below_relevance": 33
           },
-          "in": 52,
-          "out": 23
+          "in": 55,
+          "out": 22
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 9,
+          "drops": {},
+          "in": 8,
           "out": 8
         }
       },
@@ -1246,24 +1156,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 16
+            "over_max_items": 19
           },
-          "in": 16,
+          "in": 19,
           "out": 0
         },
         "tooling": {
           "drops": {
-            "over_max_items": 23
+            "over_max_items": 22
           },
-          "in": 23,
+          "in": 22,
           "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 8
+            "over_max_items": 7
           },
           "in": 8,
-          "out": 0
+          "out": 1
         }
       },
       "stage": "cap"
@@ -1283,8 +1193,11 @@
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "notes": {
+            "summarized": 1
+          },
+          "out": 1
         }
       },
       "stage": "summarize"
@@ -1295,17 +1208,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 28
+          "out": 24
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 21
+          "out": 18
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 20
+          "in": 1,
+          "out": 19
         }
       },
       "stage": "queue"
@@ -1314,21 +1227,28 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "out": 24
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 21,
-          "out": 21
+          "out": 18
         },
         "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 2
           },
-          "in": 21,
-          "out": 20
+          "in": 20,
+          "notes": {
+            "asked": 1
+          },
+          "out": 18
         }
       },
       "stage": "review"

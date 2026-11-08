@@ -4,179 +4,181 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 57,
-        "dismissed": 2,
-        "seen": 27
+        "already_ranked": 55,
+        "dismissed": 6,
+        "seen": 22
+      },
+      "inbox": {
+        "expired": 4
       },
       "rank": {
-        "below_relevance": 2,
-        "over_max_items": 16
+        "below_relevance": 4,
+        "over_max_items": 19
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 72,
-        "dismissed": 3,
-        "seen": 20
+        "already_ranked": 70,
+        "dismissed": 6,
+        "seen": 15
+      },
+      "inbox": {
+        "expired": 3
       },
       "rank": {
-        "below_relevance": 29,
-        "over_max_items": 23
+        "below_relevance": 33,
+        "over_max_items": 22
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 127
+        "outside_window": 128
       },
       "dedupe": {
-        "already_ranked": 30,
-        "dismissed": 5,
-        "seen": 20
+        "already_ranked": 29,
+        "dismissed": 6,
+        "seen": 18
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       },
       "rank": {
-        "below_relevance": 1,
-        "over_max_items": 8
+        "over_max_items": 7
       }
     }
   },
   "failures": [],
   "funnel": {
     "ai-engineering": {
-      "collected": 104,
-      "in_window": 104,
+      "collected": 106,
+      "in_window": 106,
       "kept": 0,
-      "new": 18
+      "new": 23
     },
     "tooling": {
-      "collected": 147,
-      "in_window": 147,
+      "collected": 146,
+      "in_window": 146,
       "kept": 0,
-      "new": 52
+      "new": 55
     },
     "web-products": {
-      "collected": 191,
-      "in_window": 64,
-      "kept": 0,
-      "new": 9
+      "collected": 189,
+      "in_window": 61,
+      "kept": 1,
+      "new": 8
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 69,
+  "pending_count": 61,
   "recent_events": [
+    {
+      "score": 7,
+      "source": "rss",
+      "title": "Needle of uncertainty is live for Midterms 2026",
+      "topic": "web-products",
+      "ts": "2026-11-08T14:47:28.116622+00:00",
+      "verdict": "kept"
+    },
     {
       "reason": "over_max_items",
       "title": "The Afterlife of Pi",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076810+00:00",
+      "ts": "2026-11-08T14:47:28.116601+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "\u271a Shifting chart options",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076803+00:00",
+      "ts": "2026-11-08T14:47:28.116589+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "The 25 Best AEO/GEO Experts to Follow in 2026",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076797+00:00",
+      "ts": "2026-11-08T14:47:28.116576+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Tor Browser 16.0",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076791+00:00",
+      "ts": "2026-11-08T14:47:28.116564+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "albertirgi/replica",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076785+00:00",
+      "ts": "2026-11-08T14:47:28.116549+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Text.js: Build full-stack React apps that render inside console.log",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076777+00:00",
+      "ts": "2026-11-08T14:47:28.116530+00:00",
       "verdict": "drop"
     },
     {
       "reason": "over_max_items",
       "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076770+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "over_max_items",
-      "title": "Needle of uncertainty is live for Midterms 2026",
-      "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076757+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "below_relevance",
-      "title": "The AI sell-off compared to well-known stock market crashes",
-      "topic": "web-products",
-      "ts": "2026-11-08T04:38:53.076471+00:00",
+      "ts": "2026-11-08T14:47:28.116471+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:51.373527+00:00",
+      "ts": "2026-11-08T14:47:26.293062+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:51.373521+00:00",
+      "ts": "2026-11-08T14:47:26.293051+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Benchmark chair",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:51.373515+00:00",
+      "ts": "2026-11-08T14:47:26.293037+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Data exploration, manually and intentionally",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:51.373509+00:00",
+      "ts": "2026-11-08T14:47:26.293026+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Search Central Live in Zurich is back!",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:51.373503+00:00",
+      "ts": "2026-11-08T14:47:26.293016+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "What Is BLUF? How to Write Bottom Line Up Front (+ Free Rewriter Tool)",
       "topic": "web-products",
-      "ts": "2026-11-08T04:38:51.373498+00:00",
+      "ts": "2026-11-08T14:47:26.293006+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "already_ranked",
+      "title": "10 Clearscope Alternatives (Compared on Price, API, and MCP Access)",
+      "topic": "web-products",
+      "ts": "2026-11-08T14:47:26.292996+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-10-31T23:06:14.387243+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-11-01T04:34:29.717478+00:00"
@@ -268,28 +270,32 @@
     {
       "kept": 0,
       "ts": "2026-11-08T04:38:04.339283+00:00"
+    },
+    {
+      "kept": 1,
+      "ts": "2026-11-08T14:46:38.327802+00:00"
     }
   ],
-  "streak": 368,
+  "streak": 369,
   "topics": [
     {
-      "collected": 104,
+      "collected": 106,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 147,
+      "collected": 146,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 191,
-      "kept": 0,
+      "collected": 189,
+      "kept": 1,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-08T04:38:04.339283+00:00"
+  "updated_at": "2026-11-08T14:46:38.327802+00:00"
 }
