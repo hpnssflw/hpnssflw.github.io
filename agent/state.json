@@ -715,7 +715,7 @@
   "05cff87ec6ed50b1": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 287,
+    "last_score": 288,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -1336,7 +1336,7 @@
   "0a8c41404c8aaad3": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 202,
+    "last_score": 204,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -1414,7 +1414,7 @@
   "0bd6337427b89b8d": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 253,
+    "last_score": 282,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1620,6 +1620,22 @@
     "first_seen": "2026-09-03T18:57:53.147814+00:00",
     "last_score": 34,
     "ranks": {},
+    "times_sent": 0
+  },
+  "0d2aa7d21102e3b6": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 34,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 34,
+        "summary": "A web game for making uploaded vacation photos, geolocated and dated via EXIF, into a shareable game as an anniversary present."
+      }
+    },
     "times_sent": 0
   },
   "0d2b759c8ff8305d": {
@@ -2067,23 +2083,23 @@
   "10bdc73097cfd238": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 79,
+    "last_score": 260,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
-        "ranked_at": "2026-11-07T23:26:28.750756+00:00",
-        "relevance": 2,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
         "rubric": "3472af8a46e1",
-        "source_score": 79,
-        "summary": "A security report claiming Claude Code's \"Don't Ask Again\" permission option exposes passwords in 1,122 public GitHub files."
+        "source_score": 260,
+        "summary": "Reports that Claude Code's \"Don't Ask Again\" option exposed passwords in 1,122 public GitHub files."
       },
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-07T23:26:28.750756+00:00",
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
-        "source_score": 79,
-        "summary": "Claude Code's \"Don't Ask Again\" feature is reported to expose passwords in 1,122 public GitHub files."
+        "source_score": 260,
+        "summary": "A report that Claude Code's \"Don't Ask Again\" permission option has exposed passwords in 1,122 public GitHub files."
       }
     },
     "times_sent": 0
@@ -2250,7 +2266,7 @@
   "12844ee7f8055ffe": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 1865,
+    "last_score": 1867,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -2472,7 +2488,7 @@
   "144a293a50f0da60": {
     "dismissed": null,
     "first_seen": "2026-11-01T04:34:29.717478+00:00",
-    "last_score": 411,
+    "last_score": 413,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -2771,7 +2787,7 @@
   "16d98e3fe2b26ac8": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 860,
+    "last_score": 923,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3086,7 +3102,7 @@
   "199af8aea5b61129": {
     "dismissed": null,
     "first_seen": "2026-11-06T00:45:56.353156+00:00",
-    "last_score": 1590,
+    "last_score": 1592,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3297,6 +3313,22 @@
     },
     "times_sent": 0
   },
+  "1b38a9540775fdb8": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a Cellebrite UFED 2026 standalone desktop setup with a pre-configured feature set."
+      }
+    },
+    "times_sent": 0
+  },
   "1b56c634ba1577d7": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
@@ -3416,7 +3448,7 @@
   "1c17d85584486521": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 102,
+    "last_score": 105,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3432,7 +3464,7 @@
   "1c2c00360e1569ed": {
     "dismissed": null,
     "first_seen": "2026-11-01T20:12:39.431989+00:00",
-    "last_score": 320,
+    "last_score": 321,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -3465,6 +3497,22 @@
         "rubric": "02189e2467e9",
         "source_score": 206,
         "summary": "A Cockroach Labs post describes five months of treating bugs like patients and coding agents like a medical team."
+      }
+    },
+    "times_sent": 0
+  },
+  "1c7acb45be0810e7": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 229,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 229,
+        "summary": "A repository presented as an Ashampoo WinOptimizer 2026 standalone setup with the full feature set enabled."
       }
     },
     "times_sent": 0
@@ -3976,7 +4024,7 @@
   "2133eedfaeaec901": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 91,
+    "last_score": 94,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -4765,7 +4813,7 @@
   "27b87d65d3f99406": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 359,
+    "last_score": 361,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -5245,7 +5293,7 @@
   "2b6dc67e5ac6a764": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 118,
+    "last_score": 119,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -5764,7 +5812,7 @@
   "2f8ad998d0fcb8e2": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 346,
+    "last_score": 347,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6272,7 +6320,7 @@
   "333bc37d954c1d78": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 311,
+    "last_score": 314,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -6422,7 +6470,7 @@
   "33f53407c37ce3e3": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 78,
+    "last_score": 87,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -6674,7 +6722,7 @@
   "3574b4de3d18f1ba": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 92,
+    "last_score": 93,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6706,7 +6754,7 @@
   "35ce1c89db01f45f": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 71,
+    "last_score": 79,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -6919,6 +6967,22 @@
     "first_seen": "2026-09-16T15:41:52.087909+00:00",
     "last_score": 691,
     "ranks": {},
+    "times_sent": 0
+  },
+  "374a20438330762b": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a complete DVD Creator 2026 standalone setup with all features enabled."
+      }
+    },
     "times_sent": 0
   },
   "376b124027d721d8": {
@@ -7291,7 +7355,7 @@
   "3a43fd48a7ec6ddc": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 121,
+    "last_score": 124,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8393,7 +8457,7 @@
   "43b226d3f8c0e87c": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 1042,
+    "last_score": 1085,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -8747,6 +8811,22 @@
     },
     "times_sent": 1
   },
+  "46e2b200e3463afd": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 226,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 226,
+        "summary": "A repository presented as an IObit Driver Booster 2026 standalone setup with all features enabled."
+      }
+    },
+    "times_sent": 0
+  },
   "46e33ff44224f9eb": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
@@ -8939,7 +9019,7 @@
   "4834572dd7c5f18e": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 427,
+    "last_score": 428,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -9121,7 +9201,7 @@
   "49cf97a4dd7c71bd": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 101,
+    "last_score": 103,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9146,6 +9226,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 1734,
         "summary": "A project presenting the law of every country as one Git history, with each country's record as a submodule and each commit a law taking effect."
+      }
+    },
+    "times_sent": 0
+  },
+  "49d61477563e12ed": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 228,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 228,
+        "summary": "A repository presented as a DFT-Pro 2026 standalone desktop setup with all features included."
       }
     },
     "times_sent": 0
@@ -9639,7 +9735,7 @@
   "4ed584eb2c672010": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 462,
+    "last_score": 470,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-02T17:50:39.938442+00:00",
@@ -9788,7 +9884,7 @@
   "4ff51e4e30dd0b36": {
     "dismissed": null,
     "first_seen": "2026-10-31T04:14:17.628370+00:00",
-    "last_score": 1527,
+    "last_score": 1534,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -10068,7 +10164,7 @@
   "51dc1d2f6b3bd6df": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 219,
+    "last_score": 221,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -10557,15 +10653,15 @@
   "55aa1dc18cbb251b": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 172,
+    "last_score": 207,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-07T19:53:44.909976+00:00",
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
         "relevance": 3,
         "rubric": "02189e2467e9",
-        "source_score": 102,
-        "summary": "Coldframe is a honeypot that pretends to be a supermarket refrigeration controller."
+        "source_score": 207,
+        "summary": "Coldframe is a honeypot that poses as a supermarket refrigeration controller to see what attackers try against a convincing fake."
       }
     },
     "times_sent": 0
@@ -10670,6 +10766,22 @@
     "first_seen": "2026-08-15T16:10:52.886374+00:00",
     "last_score": 322,
     "ranks": {},
+    "times_sent": 0
+  },
+  "566d7d37b9600e94": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 228,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 228,
+        "summary": "A repository presented as an AnyDesk remote desktop installer with a complete feature set."
+      }
+    },
     "times_sent": 0
   },
   "56a957508973dcd6": {
@@ -10918,6 +11030,22 @@
     "last_score": 50,
     "ranks": {},
     "times_sent": 1
+  },
+  "582b1aae1f561d55": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 225,
+    "ranks": {
+      "ai-engineering": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 4,
+        "rubric": "3472af8a46e1",
+        "source_score": 225,
+        "summary": "A GitHub project for a YouTube AI video-editing system that combines an Eyeline teleprompter with editing agents and a JSON-driven animation and motion-graphics workflow."
+      }
+    },
+    "times_sent": 0
   },
   "5831c667660a690e": {
     "dismissed": null,
@@ -11187,6 +11315,22 @@
     },
     "times_sent": 0
   },
+  "59f5097b9e941367": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as an Autodesk Revit 2026 standalone desktop setup."
+      }
+    },
+    "times_sent": 0
+  },
   "5a20474e7b0de6cc": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -11321,7 +11465,7 @@
   "5b5b6da01dd0f826": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 130,
+    "last_score": 143,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11487,6 +11631,22 @@
         "rubric": "080b24af813c",
         "source_score": null,
         "summary": "A Pudding visualization by Alvin Chang that maps people's beliefs in an afterlife by age and response using a scrollable dot plot with music and narration."
+      }
+    },
+    "times_sent": 0
+  },
+  "5c5871e49904a87c": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 226,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 226,
+        "summary": "A repository presented as a standalone desktop setup for an Aion 2 cheat."
       }
     },
     "times_sent": 0
@@ -12186,6 +12346,22 @@
     "ranks": {},
     "times_sent": 1
   },
+  "62bcbf2fb4b3a672": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 94,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 7,
+        "rubric": "02189e2467e9",
+        "source_score": 94,
+        "summary": "GitHub announces a new pull request overview page that is now in public preview."
+      }
+    },
+    "times_sent": 0
+  },
   "62bd6f0dc0ed1ddc": {
     "dismissed": null,
     "first_seen": "2026-10-31T14:19:13.393090+00:00",
@@ -12532,7 +12708,7 @@
   "6565c07c4b7ba62d": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 222,
+    "last_score": 227,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12626,7 +12802,7 @@
   "65ecf9337812d596": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 114,
+    "last_score": 137,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13813,7 +13989,7 @@
   "6eb3e27c3039e163": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 2240,
+    "last_score": 2271,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -14299,7 +14475,7 @@
   "728790b9a3090b55": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 54,
+    "last_score": 57,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -15348,6 +15524,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "7bb777ae48b33d00": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 228,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 228,
+        "summary": "A repository presented as a Cinebench 2026 standalone desktop setup with pre-configured components."
+      }
+    },
+    "times_sent": 0
+  },
   "7bba052852d5265f": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
@@ -15475,6 +15667,22 @@
         "rubric": "080b24af813c",
         "source_score": 164,
         "summary": "An argument that every SaaS business will become a harness around a model."
+      }
+    },
+    "times_sent": 0
+  },
+  "7d823f54c2a49f9b": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a pre-configured, ready-to-run Archicad 2026 desktop setup."
       }
     },
     "times_sent": 0
@@ -15948,7 +16156,7 @@
   "80fe724ef6092964": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 340,
+    "last_score": 343,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -16903,6 +17111,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "8b72cc4b594279c6": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as an Adobe InDesign installer with enhanced security protocols for digital asset deployment."
+      }
+    },
+    "times_sent": 0
+  },
   "8b7eafda898be1bd": {
     "dismissed": "expired",
     "first_seen": "2026-10-05T18:22:24.720121+00:00",
@@ -17268,7 +17492,7 @@
     "times_sent": 0
   },
   "8f0651999aee2e03": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
     "last_score": null,
     "ranks": {
@@ -17443,6 +17667,22 @@
         "rubric": "02189e2467e9",
         "source_score": 93,
         "summary": "Show HN project for finding native plants for your location, based on the founder's experience replacing parts of a yard."
+      }
+    },
+    "times_sent": 0
+  },
+  "913297be31d810c2": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a Music Maker Unlimited 2026 desktop installer with a complete toolset."
       }
     },
     "times_sent": 0
@@ -17666,6 +17906,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 53,
         "summary": "A report that an agent erased a full season of \"The Challenge Swe,\" losing hundreds of days of work."
+      }
+    },
+    "times_sent": 0
+  },
+  "923b6ba152a4e0b6": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a Windows optimizer offering system tweaks and performance enhancements."
       }
     },
     "times_sent": 0
@@ -18169,7 +18425,7 @@
   "9648bd36246b3271": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 67,
+    "last_score": 78,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -18260,6 +18516,22 @@
     "ranks": {},
     "times_sent": 0
   },
+  "96ac48586e0d126f": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 226,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 226,
+        "summary": "A repository presented as an Adobe InDesign desktop build for a secure digital asset deployment pipeline."
+      }
+    },
+    "times_sent": 0
+  },
   "96d307df56097d10": {
     "dismissed": "expired",
     "first_seen": "2026-10-07T21:01:09.362592+00:00",
@@ -18325,7 +18597,7 @@
   "973a8c35e1bfba5a": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 759,
+    "last_score": 866,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -18954,6 +19226,22 @@
     },
     "times_sent": 0
   },
+  "9cd0bd586ed82fde": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 228,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 228,
+        "summary": "A repository presented as an AIDA 64 Extreme 2026 standalone desktop setup with full feature configuration."
+      }
+    },
+    "times_sent": 0
+  },
   "9ce1d661b5d81c14": {
     "dismissed": null,
     "first_seen": "2026-10-18T03:10:34.980556+00:00",
@@ -19285,7 +19573,7 @@
   "9fce3ad1ddcb529b": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 132,
+    "last_score": 136,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -20026,6 +20314,22 @@
         "rubric": "02189e2467e9",
         "source_score": 97,
         "summary": "A repo advertising an EaseUS Partition Master 2026 installer for disk management."
+      }
+    },
+    "times_sent": 0
+  },
+  "a5acb431e626c636": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a Serato DJ Pro 2026 standalone setup with a full feature set."
       }
     },
     "times_sent": 0
@@ -20894,6 +21198,22 @@
     },
     "times_sent": 0
   },
+  "ad1d362bd8642a19": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 226,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 226,
+        "summary": "A repository presented as a Designcenter-NX full-feature desktop installer for immediate deployment."
+      }
+    },
+    "times_sent": 0
+  },
   "ad20f77da757ddf9": {
     "dismissed": null,
     "first_seen": "2026-10-29T20:52:50.908704+00:00",
@@ -21337,7 +21657,7 @@
   "b00f3c61979d2dea": {
     "dismissed": null,
     "first_seen": "2026-11-03T02:00:31.757025+00:00",
-    "last_score": 841,
+    "last_score": 842,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -21619,7 +21939,7 @@
   "b228101c3e9d88f9": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 52,
+    "last_score": 59,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -22140,7 +22460,7 @@
   "b61b7d0004aa5f86": {
     "dismissed": null,
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
-    "last_score": 1039,
+    "last_score": 1040,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -22491,15 +22811,15 @@
   "b889830baf54dda7": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 79,
+    "last_score": 81,
     "ranks": {
       "tooling": {
         "queued_at": null,
-        "ranked_at": "2026-11-06T23:57:42.539221+00:00",
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
         "relevance": 8,
         "rubric": "02189e2467e9",
-        "source_score": 31,
-        "summary": "A Show HN for Waymark, an open-source durable execution library and workflow engine that compiles jobs instead of replaying them, similar to Temporal or DBOS."
+        "source_score": 81,
+        "summary": "Waymark is an open-source durable execution library, similar to Temporal or DBOS, that compiles jobs instead of replaying them."
       }
     },
     "times_sent": 0
@@ -22995,6 +23315,22 @@
     },
     "times_sent": 0
   },
+  "bd129d2ff33d17a3": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a Crash Plan 2026 standalone setup with all features ready to run."
+      }
+    },
+    "times_sent": 0
+  },
   "bd41449f24c71495": {
     "dismissed": null,
     "first_seen": "2026-10-07T04:58:06.518389+00:00",
@@ -23069,14 +23405,14 @@
   "bd95b63d46d959af": {
     "dismissed": null,
     "first_seen": "2026-11-07T05:29:38.520383+00:00",
-    "last_score": 84,
+    "last_score": 88,
     "ranks": {
       "web-products": {
         "queued_at": null,
-        "ranked_at": "2026-11-07T05:29:38.520383+00:00",
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
         "relevance": 1,
         "rubric": "080b24af813c",
-        "source_score": 35,
+        "source_score": 88,
         "summary": "An article comparing the AI sell-off to well-known stock market crashes."
       }
     },
@@ -23117,6 +23453,22 @@
         "rubric": "02189e2467e9",
         "source_score": 52,
         "summary": "pullboard is a local-first work board for teams of coding agents where nothing ships until a second agent verifies it."
+      }
+    },
+    "times_sent": 0
+  },
+  "be1c6f7d3388221a": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 228,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 228,
+        "summary": "A repository presented as an Easy-Worship 2026 standalone desktop setup with all features enabled."
       }
     },
     "times_sent": 0
@@ -23628,6 +23980,22 @@
     },
     "times_sent": 0
   },
+  "c265f91b6e061a0e": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a complete standalone DxO PhotoLab 10 configuration ready to run."
+      }
+    },
+    "times_sent": 0
+  },
   "c26c217a1db4cfbe": {
     "dismissed": null,
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
@@ -23686,7 +24054,7 @@
   "c2bfd9cfee1195c9": {
     "dismissed": null,
     "first_seen": "2026-10-30T04:32:17.655149+00:00",
-    "last_score": 114,
+    "last_score": 115,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23741,7 +24109,7 @@
   "c31118acc9ad0e2b": {
     "dismissed": null,
     "first_seen": "2026-11-06T18:55:29.232426+00:00",
-    "last_score": 60,
+    "last_score": 61,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -23826,7 +24194,7 @@
   "c42b88e52dd1586a": {
     "dismissed": null,
     "first_seen": "2026-11-02T04:37:08.045127+00:00",
-    "last_score": 379,
+    "last_score": 384,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -23897,7 +24265,7 @@
   "c48f2af7e5b6da76": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
-    "last_score": 2902,
+    "last_score": 2991,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -24581,6 +24949,22 @@
     },
     "times_sent": 0
   },
+  "ca6fcdd285d1db90": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a Microsoft Office 2026 standalone desktop setup with all features pre-activated."
+      }
+    },
+    "times_sent": 0
+  },
   "caa03cc38739079c": {
     "dismissed": null,
     "first_seen": "2026-09-19T21:52:36.261347+00:00",
@@ -24626,6 +25010,22 @@
     "last_score": 171,
     "ranks": {},
     "times_sent": 1
+  },
+  "cae59e862b989838": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 226,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 226,
+        "summary": "A repository presented as a Filmora-15 standalone desktop setup with all features enabled."
+      }
+    },
+    "times_sent": 0
   },
   "cafe6b22bc85ec0b": {
     "dismissed": null,
@@ -24686,7 +25086,7 @@
   "cb57fd0c933347b2": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 135,
+    "last_score": 138,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25526,7 +25926,7 @@
   "d2cf9ea98eff4e7c": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 62,
+    "last_score": 64,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25738,7 +26138,7 @@
   "d51d4d67577c8a7a": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 3950,
+    "last_score": 3986,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25783,6 +26183,22 @@
     },
     "times_sent": 0
   },
+  "d576a48be3613283": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 226,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 226,
+        "summary": "A repository presented as an Avid Media Composer 2026 standalone editing workflow setup."
+      }
+    },
+    "times_sent": 0
+  },
   "d5878edb592e55f0": {
     "dismissed": null,
     "first_seen": "2026-09-08T15:33:13.824552+00:00",
@@ -25793,7 +26209,7 @@
   "d5c6c1442490d019": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 103,
+    "last_score": 104,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -25809,7 +26225,7 @@
   "d5eecd06151a7663": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 729,
+    "last_score": 730,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -25825,7 +26241,7 @@
   "d5f8ab1a0d4a222d": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 497,
+    "last_score": 525,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -26011,7 +26427,7 @@
   "d7d9a2a25df6ba53": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 553,
+    "last_score": 555,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -26153,7 +26569,7 @@
   "d90e1031b9e75e95": {
     "dismissed": null,
     "first_seen": "2026-10-31T23:06:14.387243+00:00",
-    "last_score": 124,
+    "last_score": 125,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-01T14:45:27.144193+00:00",
@@ -26348,7 +26764,7 @@
   "da77c4bc03296150": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 58,
+    "last_score": 62,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -27079,7 +27495,7 @@
   "dfa82168d930d9fd": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 100,
+    "last_score": 103,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -27095,7 +27511,7 @@
   "dfa876a54a2df16b": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 339,
+    "last_score": 340,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -27111,7 +27527,7 @@
   "dfb1d49114f0805e": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 110,
+    "last_score": 111,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -27515,7 +27931,7 @@
   "e2409b820589fd43": {
     "dismissed": null,
     "first_seen": "2026-11-07T05:29:38.520383+00:00",
-    "last_score": 109,
+    "last_score": 110,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -27626,6 +28042,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 118,
         "summary": "BrewReel uses cheap models like DeepSeek to pick shots and write copy for vertical promotional videos from a product brief, with the listing also tagged claude-code and agent-skills."
+      }
+    },
+    "times_sent": 0
+  },
+  "e2b076b122fa8c6c": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 228,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 228,
+        "summary": "A repository presented as a Cubase Studio 2026 desktop setup with a full plugin suite."
       }
     },
     "times_sent": 0
@@ -28673,7 +29105,7 @@
   "eb74bbbe1f02058d": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 126,
+    "last_score": 127,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -28729,7 +29161,7 @@
   "ebc95890f0c31f53": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 217,
+    "last_score": 228,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -28814,7 +29246,7 @@
   "ecebd056b4dbf8e7": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 225,
+    "last_score": 230,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -29198,7 +29630,7 @@
   "f0247d2be6d23fda": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 146,
+    "last_score": 154,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -29368,7 +29800,7 @@
   "f135712f91f710c6": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 52,
+    "last_score": 53,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -29643,7 +30075,7 @@
   "f2d5ef0080ec13e2": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 113,
+    "last_score": 128,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -29652,6 +30084,22 @@
         "rubric": "3472af8a46e1",
         "source_score": 107,
         "summary": "This repository compiles organizational policy into verifiable decision training data, with topics including ai-agents, fine-tuning, and llm."
+      }
+    },
+    "times_sent": 0
+  },
+  "f2db40b7722506e0": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a Display Fusion 2026 standalone desktop setup with complete feature configuration."
       }
     },
     "times_sent": 0
@@ -29714,7 +30162,7 @@
   "f3149cebb3fc766a": {
     "dismissed": null,
     "first_seen": "2026-11-07T05:29:38.520383+00:00",
-    "last_score": 356,
+    "last_score": 369,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -29816,6 +30264,22 @@
         "rubric": "02189e2467e9",
         "source_score": 200,
         "summary": "A repo advertising a standalone installer for the FonePaw Unlocker 2026 mobile tool."
+      }
+    },
+    "times_sent": 0
+  },
+  "f3c53b0e5a50b041": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as an Ozone 12 Advanced desktop utility with enhanced configurations."
       }
     },
     "times_sent": 0
@@ -30282,6 +30746,22 @@
         "rubric": "02189e2467e9",
         "source_score": 31,
         "summary": "A Brotli vulnerability affects curl and Git."
+      }
+    },
+    "times_sent": 0
+  },
+  "f8b47b508ff55e0a": {
+    "dismissed": null,
+    "first_seen": "2026-11-08T04:38:04.339283+00:00",
+    "last_score": 227,
+    "ranks": {
+      "tooling": {
+        "queued_at": null,
+        "ranked_at": "2026-11-08T04:38:04.339283+00:00",
+        "relevance": 1,
+        "rubric": "02189e2467e9",
+        "source_score": 227,
+        "summary": "A repository presented as a Cellebrite UFED 2026 standalone installer with a pre-configured forensic toolset."
       }
     },
     "times_sent": 0
