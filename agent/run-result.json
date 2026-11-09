@@ -319,21 +319,10 @@
     "by_topic": {
       "ai-engineering": 28,
       "tooling": 21,
-      "web-products": 21
+      "web-products": 20
     },
-    "count": 70,
+    "count": 69,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T04:37:08.045127+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "Charts of median graduate income by college and major, based on Department of Education data and an HEA Group analysis, show how school and major affect earnings. The article includes a searchable college-and-major comparison and links to downloadable data.",
-        "title": "Cost of college versus the return on investement",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/10/29/cost-of-college-versus-the-return-on-investement/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-02T17:50:39.938442+00:00",
@@ -1096,8 +1085,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-08T20:12:56.257796+00:00",
-    "id": "2026-11-08T2012Z",
+    "at": "2026-11-09T04:48:18.410013+00:00",
+    "id": "2026-11-09T0448Z",
     "mode": "real",
     "offline": false
   },
@@ -1108,18 +1097,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 96,
+          "out": 96
         },
         "tooling": {
           "drops": {},
-          "in": 146,
-          "out": 146
+          "in": 137,
+          "out": 137
         },
         "web-products": {
           "drops": {},
-          "in": 189,
-          "out": 189
+          "in": 186,
+          "out": 186
         }
       },
       "stage": "collect"
@@ -1129,20 +1118,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 96,
+          "out": 96
         },
         "tooling": {
           "drops": {},
-          "in": 146,
-          "out": 146
+          "in": 137,
+          "out": 137
         },
         "web-products": {
           "drops": {
-            "outside_window": 128
+            "outside_window": 130
           },
-          "in": 189,
-          "out": 61
+          "in": 186,
+          "out": 56
         }
       },
       "stage": "window"
@@ -1152,27 +1141,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 6,
-            "seen": 22
+            "dismissed": 2,
+            "seen": 27
           },
-          "in": 104,
-          "out": 76
+          "in": 96,
+          "out": 67
         },
         "tooling": {
           "drops": {
-            "dismissed": 6,
-            "seen": 16
+            "dismissed": 4,
+            "seen": 19
           },
-          "in": 146,
-          "out": 124
+          "in": 137,
+          "out": 114
         },
         "web-products": {
           "drops": {
-            "dismissed": 6,
-            "seen": 19
+            "dismissed": 3,
+            "seen": 20
           },
-          "in": 61,
-          "out": 36
+          "in": 56,
+          "out": 33
         }
       },
       "stage": "dedupe"
@@ -1184,22 +1173,22 @@
           "drops": {
             "already_ranked": 54
           },
-          "in": 76,
-          "out": 22
+          "in": 67,
+          "out": 13
         },
         "tooling": {
           "drops": {
-            "already_ranked": 92
+            "already_ranked": 82
           },
-          "in": 124,
+          "in": 114,
           "out": 32
         },
         "web-products": {
           "drops": {
-            "already_ranked": 29
+            "already_ranked": 28
           },
-          "in": 36,
-          "out": 7
+          "in": 33,
+          "out": 5
         }
       },
       "stage": "cache"
@@ -1209,18 +1198,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 5,
-          "out": 5
+          "in": 3,
+          "out": 3
         },
         "tooling": {
           "drops": {},
-          "in": 11,
-          "out": 11
+          "in": 14,
+          "out": 14
         },
         "web-products": {
           "drops": {},
-          "in": 0,
-          "out": 0
+          "in": 1,
+          "out": 1
         }
       },
       "stage": "enrich"
@@ -1230,22 +1219,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "below_relevance": 4
+            "below_relevance": 2
           },
-          "in": 22,
-          "out": 18
+          "in": 13,
+          "out": 11
         },
         "tooling": {
           "drops": {
-            "below_relevance": 10
+            "below_relevance": 13
           },
           "in": 32,
-          "out": 22
+          "out": 19
         },
         "web-products": {
-          "drops": {},
-          "in": 7,
-          "out": 7
+          "drops": {
+            "below_relevance": 1
+          },
+          "in": 5,
+          "out": 4
         }
       },
       "stage": "rank"
@@ -1255,24 +1246,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "over_max_items": 14
+            "over_max_items": 11
           },
-          "in": 18,
-          "out": 4
+          "in": 11,
+          "out": 0
         },
         "tooling": {
           "drops": {
             "over_max_items": 19
           },
-          "in": 22,
-          "out": 3
+          "in": 19,
+          "out": 0
         },
         "web-products": {
           "drops": {
-            "over_max_items": 5
+            "over_max_items": 4
           },
-          "in": 7,
-          "out": 2
+          "in": 4,
+          "out": 0
         }
       },
       "stage": "cap"
@@ -1282,28 +1273,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
-          "notes": {
-            "summarized": 4
-          },
-          "out": 4
+          "in": 0,
+          "out": 0
         },
         "tooling": {
           "drops": {},
-          "in": 3,
-          "notes": {
-            "kept_rank_summary": 1,
-            "summarized": 2
-          },
-          "out": 3
+          "in": 0,
+          "out": 0
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "notes": {
-            "summarized": 2
-          },
-          "out": 2
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "summarize"
@@ -1313,18 +1294,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 4,
+          "in": 0,
           "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 3,
+          "in": 0,
           "out": 21
         },
         "web-products": {
           "drops": {},
-          "in": 2,
-          "out": 21
+          "in": 0,
+          "out": 20
         }
       },
       "stage": "queue"
@@ -1334,27 +1315,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 24,
-          "notes": {
-            "asked": 4
-          },
-          "out": 24
+          "in": 28,
+          "out": 28
         },
         "tooling": {
           "drops": {},
-          "in": 18,
-          "notes": {
-            "asked": 3
-          },
-          "out": 18
+          "in": 21,
+          "out": 21
         },
         "web-products": {
-          "drops": {},
-          "in": 19,
-          "notes": {
-            "asked": 2
+          "drops": {
+            "expired": 1
           },
-          "out": 19
+          "in": 21,
+          "out": 20
         }
       },
       "stage": "review"
