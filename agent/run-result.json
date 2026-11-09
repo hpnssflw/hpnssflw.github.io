@@ -309,7 +309,26 @@
     "sent_items": 0,
     "target": "telegram"
   },
-  "failures": [],
+  "failures": [
+    {
+      "error_type": "AuthenticationError",
+      "scope": "ai-engineering",
+      "source": null,
+      "stage": "rank"
+    },
+    {
+      "error_type": "AuthenticationError",
+      "scope": "tooling",
+      "source": null,
+      "stage": "rank"
+    },
+    {
+      "error_type": "AuthenticationError",
+      "scope": "web-products",
+      "source": null,
+      "stage": "rank"
+    }
+  ],
   "preset": {
     "language": "en",
     "name": "Tony Scraponi",
@@ -317,111 +336,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 28,
-      "tooling": 21,
-      "web-products": 20
+      "ai-engineering": 24,
+      "tooling": 18,
+      "web-products": 18
     },
-    "count": 69,
+    "count": 60,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "A harness for running LLM agents that play Minecraft via Mineflayer, with pluggable models (Claude, GPT, Gemini, OpenRouter or OpenAI-compatible endpoints), restart-surviving sessions, per-agent sandboxed shells, JSON-defined teams, and experimental vision. It ships a dev Paper server and was tested with 50 agents and Bed Wars matches.",
-        "title": "yc-software/minecraft-agent-harness",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/yc-software/minecraft-agent-harness"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "AnyModelBot is a local-first, MIT-licensed AI agent app for Windows, macOS and Linux, where each bot has its own persona, default model, workspace and memory, reachable via WeChat, Feishu, Telegram, Slack and Discord. All models come through Modelflare, billed per token with routing across 70+ models and cache-hit compensation.",
-        "title": "modelflare-ai/AnyModelBot",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/modelflare-ai/AnyModelBot"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "A real-time vision plugin for DSH that captures your screen, camera or video, scores each frame's change (0-255 HSV diff on a 64x36 grid) and only sends frames that changed, tiling 4-8 of them into one image to cut token cost. Published on npm, installed via dsh plugin, Apache-2.0 licensed.",
-        "title": "SAOS-3624/dsh-see-now",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/SAOS-3624/dsh-see-now"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A post announcing LongCat-2.5, described in the title as offering native multimodality for agentic tasks.",
-        "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://longcat.ai/blog/longcat-2.5/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "OmniDiff is an open-source content-aware Git difftool written in Rust that selects diff algorithms by file type and claims sub-100ms speed, robust coverage, and high accuracy across code, images, fonts, archives, PDFs, and message catalogs; prebuilt binaries and package installs are provided.",
-        "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/ivankovic/omnidiff"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "Uncut is a lossless, headless coding-agent harness: one 7 MB static Go binary, four tools, plain stdin/stdout, no TUI or telemetry. It sends the full conversation every model call, never truncates context, and exits on provider output cuts instead of returning partial answers.",
-        "title": "Balanov/uncut",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/Balanov/uncut"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "Pi-Remote is a companion tool for the pi terminal coding agent that uses pi’s official extension API to mirror a live local session in the browser and allow remote messages and commands, including model/thinking changes and session navigation, across multiple devices.",
-        "title": "Xpropel/Pi-Remote",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/Xpropel/Pi-Remote"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 9,
-        "source": "rss",
-        "summary": "Explainer of the headingoffset HTML attribute, which adjusts heading levels by adding an offset and cascades through nested elements. Notes Firefox Nightly 153 shipped it behind a flag, so cross-browser support is still needed before use.",
-        "title": "Overriding Heading Levels With the headingoffset HTML Attribute",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/overriding-heading-levels-with-the-headingoffset-html-attribute/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-02T17:50:39.938442+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "Stripe case study on moving its own vendor payments to Global Payouts. It says over $1B went to 3,400+ vendors by October 2026, new-market setup dropped from six weeks to one, and payouts held a 99.9% success rate.",
-        "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-03T11:38:31.517209+00:00",
@@ -1085,8 +1005,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-09T04:48:18.410013+00:00",
-    "id": "2026-11-09T0448Z",
+    "at": "2026-11-09T18:21:22.281908+00:00",
+    "id": "2026-11-09T1821Z",
     "mode": "real",
     "offline": false
   },
@@ -1097,8 +1017,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 95,
+          "out": 95
         },
         "tooling": {
           "drops": {},
@@ -1118,8 +1038,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 96,
-          "out": 96
+          "in": 95,
+          "out": 95
         },
         "tooling": {
           "drops": {},
@@ -1128,10 +1048,10 @@
         },
         "web-products": {
           "drops": {
-            "outside_window": 130
+            "outside_window": 131
           },
           "in": 186,
-          "out": 56
+          "out": 55
         }
       },
       "stage": "window"
@@ -1141,27 +1061,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 2,
-            "seen": 27
+            "dismissed": 4,
+            "seen": 23
           },
-          "in": 96,
-          "out": 67
+          "in": 95,
+          "out": 68
         },
         "tooling": {
           "drops": {
             "dismissed": 4,
-            "seen": 19
+            "seen": 16
           },
           "in": 137,
-          "out": 114
+          "out": 117
         },
         "web-products": {
           "drops": {
-            "dismissed": 3,
-            "seen": 20
+            "dismissed": 2,
+            "seen": 17
           },
-          "in": 56,
-          "out": 33
+          "in": 55,
+          "out": 36
         }
       },
       "stage": "dedupe"
@@ -1171,24 +1091,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 54
+            "already_ranked": 51
           },
-          "in": 67,
-          "out": 13
+          "in": 68,
+          "out": 17
         },
         "tooling": {
           "drops": {
             "already_ranked": 82
           },
-          "in": 114,
-          "out": 32
+          "in": 117,
+          "out": 35
         },
         "web-products": {
           "drops": {
-            "already_ranked": 28
+            "already_ranked": 29
           },
-          "in": 33,
-          "out": 5
+          "in": 36,
+          "out": 7
         }
       },
       "stage": "cache"
@@ -1198,18 +1118,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 3,
-          "out": 3
+          "in": 7,
+          "out": 7
         },
         "tooling": {
           "drops": {},
-          "in": 14,
-          "out": 14
+          "in": 16,
+          "out": 16
         },
         "web-products": {
           "drops": {},
-          "in": 1,
-          "out": 1
+          "in": 3,
+          "out": 3
         }
       },
       "stage": "enrich"
@@ -1218,25 +1138,19 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "below_relevance": 2
-          },
-          "in": 13,
-          "out": 11
+          "drops": {},
+          "in": 0,
+          "out": 0
         },
         "tooling": {
-          "drops": {
-            "below_relevance": 13
-          },
-          "in": 32,
-          "out": 19
+          "drops": {},
+          "in": 0,
+          "out": 0
         },
         "web-products": {
-          "drops": {
-            "below_relevance": 1
-          },
-          "in": 5,
-          "out": 4
+          "drops": {},
+          "in": 0,
+          "out": 0
         }
       },
       "stage": "rank"
@@ -1245,24 +1159,18 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "over_max_items": 11
-          },
-          "in": 11,
+          "drops": {},
+          "in": 0,
           "out": 0
         },
         "tooling": {
-          "drops": {
-            "over_max_items": 19
-          },
-          "in": 19,
+          "drops": {},
+          "in": 0,
           "out": 0
         },
         "web-products": {
-          "drops": {
-            "over_max_items": 4
-          },
-          "in": 4,
+          "drops": {},
+          "in": 0,
           "out": 0
         }
       },
@@ -1295,17 +1203,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 28
+          "out": 24
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 21
+          "out": 18
         },
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 20
+          "out": 18
         }
       },
       "stage": "queue"
@@ -1314,21 +1222,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 28,
-          "out": 28
+          "out": 24
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 21,
-          "out": 21
+          "out": 18
         },
         "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 2
           },
-          "in": 21,
-          "out": 20
+          "in": 20,
+          "out": 18
         }
       },
       "stage": "review"
