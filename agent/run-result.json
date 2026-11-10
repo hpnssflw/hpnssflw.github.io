@@ -336,111 +336,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 24,
-      "tooling": 18,
-      "web-products": 17
+      "ai-engineering": 20,
+      "tooling": 15,
+      "web-products": 15
     },
-    "count": 59,
+    "count": 50,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Blog post reporting that GPT-6 Astra can natively read and write neural network weights, a capability the authors call Weight-Space Programming. Without gradient training it edited 0.016% of Qwen3.5-0.8B's weights, lifting MATH-500 from 7.9% to 48.1% and tripling IFEval.",
-        "title": "Astra can read and write weights to improve Qwen",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://rikiyat.github.io/blog/weight-space-programming/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "Skein, an open-source execution control plane for local agent swarms that runs explicit task graphs with bounded concurrency and a persistent epoch fence, so an emergency stop invalidates queued work and rejects late completions. Version 0.2.0 is an early release installed as a static Go binary.",
-        "title": "Balanov/skein",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/Balanov/skein"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Ask HN thread asking what hardware people use to run local LLMs day to day, with 42 comments sharing setups such as a single RTX 5090, clustered ASUS GX10 systems running DeepSeek, and Qwen models around 30B.",
-        "title": "Ask HN: What hardware are you using to run local LLMs?",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://news.ycombinator.com/item?id=50337431"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Interactive notes covering RLHF, attention, LoRA, and LLM evals.",
-        "title": "Show HN: Interactive notes on RLHF, attention, LoRA and LLM evals",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://concepts.laxmena.com/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "OpenAI's post on Pando, a new horizontally scalable backend for its monorepo's Git repositories that keeps Git protocol and client compatibility. It cut median push latency nearly 5x and now serves nearly a petabyte of Git data daily.",
-        "title": "Scaling Git at OpenAI",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://openai.com/index/scaling-git-at-openai/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "readme-visual-kit, a local SVG renderer plus portable Agent Skill that turns source-cited project descriptions into three README diagrams (flow, architecture, quickstart) with no API key or third-party runtime dependencies. v0.1.0 is an offline MVP.",
-        "title": "tianfuzhibuyuci/readme-visual-kit",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/tianfuzhibuyuci/readme-visual-kit"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "Firezone introduces sanstun, a sans-IO Rust implementation of the WireGuard state machine with a parallel-friendly, idiomatic API aimed at ease of use, security and performance. It recounts moving off a heavily patched boringtun fork.",
-        "title": "Sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://www.firezone.dev/blog/introducing-sanstun"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 9,
-        "source": "rss",
-        "summary": "A Smashing Magazine article argues modern CSS can trade local simplicity for system complexity: smaller diffs may introduce bugs through interactions with JavaScript, layout, the cascade, and rendering, and it examines debugging split CSS/JS logic.",
-        "title": "Modern CSS Might Make Your Front-End More Complex",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T19:06:44.712669+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "A FlowingData item highlights Christine Zhang’s New York Times piece on election-night “mirages,” explaining why percentage shifts can seem to favor a candidate artificially without context.",
-        "title": "Election night mirages",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/11/03/election-night-mirages/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-04T11:52:02.480884+00:00",
@@ -994,8 +895,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-10T12:08:29.079892+00:00",
-    "id": "2026-11-10T1208Z",
+    "at": "2026-11-10T21:39:28.523437+00:00",
+    "id": "2026-11-10T2139Z",
     "mode": "real",
     "offline": false
   },
@@ -1006,13 +907,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 103,
-          "out": 103
+          "in": 105,
+          "out": 105
         },
         "tooling": {
           "drops": {},
-          "in": 138,
-          "out": 138
+          "in": 139,
+          "out": 139
         },
         "web-products": {
           "drops": {},
@@ -1027,20 +928,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 103,
-          "out": 103
+          "in": 105,
+          "out": 105
         },
         "tooling": {
           "drops": {},
-          "in": 138,
-          "out": 138
+          "in": 139,
+          "out": 139
         },
         "web-products": {
           "drops": {
-            "outside_window": 132
+            "outside_window": 130
           },
           "in": 187,
-          "out": 55
+          "out": 57
         }
       },
       "stage": "window"
@@ -1050,27 +951,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 3,
-            "seen": 23
+            "dismissed": 6,
+            "seen": 20
           },
-          "in": 103,
-          "out": 77
+          "in": 105,
+          "out": 79
         },
         "tooling": {
           "drops": {
-            "dismissed": 4,
-            "seen": 15
+            "dismissed": 6,
+            "seen": 12
           },
-          "in": 138,
-          "out": 119
+          "in": 139,
+          "out": 121
         },
         "web-products": {
           "drops": {
-            "dismissed": 2,
-            "seen": 15
+            "dismissed": 3,
+            "seen": 14
           },
-          "in": 55,
-          "out": 38
+          "in": 57,
+          "out": 40
         }
       },
       "stage": "dedupe"
@@ -1080,24 +981,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 46
+            "already_ranked": 40
           },
-          "in": 77,
-          "out": 31
+          "in": 79,
+          "out": 39
         },
         "tooling": {
           "drops": {
-            "already_ranked": 54
+            "already_ranked": 50
           },
-          "in": 119,
-          "out": 65
+          "in": 121,
+          "out": 71
         },
         "web-products": {
           "drops": {
-            "already_ranked": 27
+            "already_ranked": 25
           },
-          "in": 38,
-          "out": 11
+          "in": 40,
+          "out": 15
         }
       },
       "stage": "cache"
@@ -1107,18 +1008,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 22,
-          "out": 22
+          "in": 30,
+          "out": 30
         },
         "tooling": {
           "drops": {},
-          "in": 48,
-          "out": 48
+          "in": 54,
+          "out": 54
         },
         "web-products": {
           "drops": {},
-          "in": 7,
-          "out": 7
+          "in": 11,
+          "out": 11
         }
       },
       "stage": "enrich"
@@ -1192,17 +1093,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 24
+          "out": 20
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 18
+          "out": 15
         },
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 17
+          "out": 15
         }
       },
       "stage": "queue"
@@ -1211,21 +1112,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 24,
-          "out": 24
+          "out": 20
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 18,
-          "out": 18
+          "out": 15
         },
         "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 2
           },
-          "in": 18,
-          "out": 17
+          "in": 17,
+          "out": 15
         }
       },
       "stage": "review"
