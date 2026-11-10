@@ -338,21 +338,10 @@
     "by_topic": {
       "ai-engineering": 24,
       "tooling": 18,
-      "web-products": 18
+      "web-products": 17
     },
-    "count": 60,
+    "count": 59,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-03T11:38:31.517209+00:00",
-        "score": 6,
-        "source": "hn",
-        "summary": "A 20-year retrospective on Zamzar, a bootstrapped file-conversion SaaS run by two brothers, recounting milestones such as 766M files converted, 2,128 conversion types, and over 1M API requests per day.",
-        "title": "Running a bootstrapped SaaS for 20 years with my brother",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.zamzar.com/2026/10/30/20-years-766-million-files-two-chameleons/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-03T19:06:44.712669+00:00",
@@ -1005,8 +994,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-10T02:33:38.163093+00:00",
-    "id": "2026-11-10T0233Z",
+    "at": "2026-11-10T12:08:29.079892+00:00",
+    "id": "2026-11-10T1208Z",
     "mode": "real",
     "offline": false
   },
@@ -1017,18 +1006,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 103,
+          "out": 103
         },
         "tooling": {
           "drops": {},
-          "in": 136,
-          "out": 136
+          "in": 138,
+          "out": 138
         },
         "web-products": {
           "drops": {},
-          "in": 185,
-          "out": 185
+          "in": 187,
+          "out": 187
         }
       },
       "stage": "collect"
@@ -1038,20 +1027,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 99,
-          "out": 99
+          "in": 103,
+          "out": 103
         },
         "tooling": {
           "drops": {},
-          "in": 136,
-          "out": 136
+          "in": 138,
+          "out": 138
         },
         "web-products": {
           "drops": {
-            "outside_window": 131
+            "outside_window": 132
           },
-          "in": 185,
-          "out": 54
+          "in": 187,
+          "out": 55
         }
       },
       "stage": "window"
@@ -1064,24 +1053,24 @@
             "dismissed": 3,
             "seen": 23
           },
-          "in": 99,
-          "out": 73
+          "in": 103,
+          "out": 77
         },
         "tooling": {
           "drops": {
             "dismissed": 4,
             "seen": 15
           },
-          "in": 136,
-          "out": 117
+          "in": 138,
+          "out": 119
         },
         "web-products": {
           "drops": {
             "dismissed": 2,
-            "seen": 16
+            "seen": 15
           },
-          "in": 54,
-          "out": 36
+          "in": 55,
+          "out": 38
         }
       },
       "stage": "dedupe"
@@ -1091,24 +1080,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 47
+            "already_ranked": 46
           },
-          "in": 73,
-          "out": 26
+          "in": 77,
+          "out": 31
         },
         "tooling": {
           "drops": {
-            "already_ranked": 55
+            "already_ranked": 54
           },
-          "in": 117,
-          "out": 62
+          "in": 119,
+          "out": 65
         },
         "web-products": {
           "drops": {
-            "already_ranked": 28
+            "already_ranked": 27
           },
-          "in": 36,
-          "out": 8
+          "in": 38,
+          "out": 11
         }
       },
       "stage": "cache"
@@ -1118,18 +1107,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 17,
-          "out": 17
+          "in": 22,
+          "out": 22
         },
         "tooling": {
           "drops": {},
-          "in": 44,
-          "out": 44
+          "in": 48,
+          "out": 48
         },
         "web-products": {
           "drops": {},
-          "in": 4,
-          "out": 4
+          "in": 7,
+          "out": 7
         }
       },
       "stage": "enrich"
@@ -1213,7 +1202,7 @@
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 18
+          "out": 17
         }
       },
       "stage": "queue"
@@ -1232,9 +1221,11 @@
           "out": 18
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 18,
-          "out": 18
+          "out": 17
         }
       },
       "stage": "review"
