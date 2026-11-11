@@ -18,7 +18,7 @@
   "001cd33c965241bc": {
     "dismissed": null,
     "first_seen": "2026-11-10T21:39:28.523437+00:00",
-    "last_score": 266,
+    "last_score": 279,
     "ranks": {},
     "times_sent": 0
   },
@@ -181,7 +181,7 @@
   "015aa8dcc892639e": {
     "dismissed": null,
     "first_seen": "2026-11-11T04:51:10.073381+00:00",
-    "last_score": 250,
+    "last_score": 369,
     "ranks": {},
     "times_sent": 0
   },
@@ -518,7 +518,7 @@
   "03e4f5ccb5797f2c": {
     "dismissed": null,
     "first_seen": "2026-11-10T12:08:29.079892+00:00",
-    "last_score": 773,
+    "last_score": 1200,
     "ranks": {},
     "times_sent": 0
   },
@@ -604,6 +604,13 @@
     "last_score": 121,
     "ranks": {},
     "times_sent": 1
+  },
+  "04f1f74e8fe83520": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 39,
+    "ranks": {},
+    "times_sent": 0
   },
   "0504cb6dc0b8cf0b": {
     "dismissed": "expired",
@@ -1483,7 +1490,7 @@
   "0bd6337427b89b8d": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 409,
+    "last_score": 411,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -1555,7 +1562,7 @@
   "0c0db19f6b955f42": {
     "dismissed": null,
     "first_seen": "2026-11-09T18:21:22.281908+00:00",
-    "last_score": 74,
+    "last_score": 73,
     "ranks": {},
     "times_sent": 0
   },
@@ -2636,7 +2643,7 @@
   "149c124f7b07d2a1": {
     "dismissed": null,
     "first_seen": "2026-11-08T14:46:38.327802+00:00",
-    "last_score": 818,
+    "last_score": 821,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -2944,7 +2951,7 @@
   "16d98e3fe2b26ac8": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 1395,
+    "last_score": 1432,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -3959,7 +3966,7 @@
   "1eed19afa11f8e8d": {
     "dismissed": null,
     "first_seen": "2026-11-10T12:08:29.079892+00:00",
-    "last_score": 148,
+    "last_score": 152,
     "ranks": {},
     "times_sent": 0
   },
@@ -4227,7 +4234,7 @@
   "2133eedfaeaec901": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 219,
+    "last_score": 220,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -4554,7 +4561,7 @@
     "times_sent": 0
   },
   "23d5cc8219ef6b65": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
     "last_score": 617,
     "ranks": {
@@ -4604,7 +4611,7 @@
   "244448d54c578ad4": {
     "dismissed": null,
     "first_seen": "2026-11-10T02:33:38.163093+00:00",
-    "last_score": 117,
+    "last_score": 125,
     "ranks": {},
     "times_sent": 0
   },
@@ -5614,6 +5621,13 @@
     },
     "times_sent": 0
   },
+  "2c0e804c1cdf420d": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 93,
+    "ranks": {},
+    "times_sent": 0
+  },
   "2c10954cc99447f4": {
     "dismissed": null,
     "first_seen": "2026-10-28T20:47:22.461187+00:00",
@@ -6343,6 +6357,13 @@
     },
     "times_sent": 0
   },
+  "309fee028c8b1fe0": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 130,
+    "ranks": {},
+    "times_sent": 0
+  },
   "30bbbfd21a734e09": {
     "dismissed": null,
     "first_seen": "2026-10-28T14:52:13.974994+00:00",
@@ -6391,6 +6412,13 @@
     },
     "times_sent": 0
   },
+  "312cc2672ec7b827": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 70,
+    "ranks": {},
+    "times_sent": 0
+  },
   "3152ee38f18a8fd5": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
@@ -6424,7 +6452,7 @@
   "318d8bb697266b95": {
     "dismissed": null,
     "first_seen": "2026-11-10T12:08:29.079892+00:00",
-    "last_score": 234,
+    "last_score": 252,
     "ranks": {},
     "times_sent": 0
   },
@@ -7121,10 +7149,17 @@
     },
     "times_sent": 0
   },
+  "359bb99c45677a93": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 67,
+    "ranks": {},
+    "times_sent": 0
+  },
   "35ce1c89db01f45f": {
     "dismissed": null,
     "first_seen": "2026-11-07T19:53:44.909976+00:00",
-    "last_score": 218,
+    "last_score": 219,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -7213,6 +7248,13 @@
         "summary": "Liquid AI announces the LFM2.5-24B-A2B model presented as built for fast on-device agents."
       }
     },
+    "times_sent": 0
+  },
+  "368b7f5af1ed95d3": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 43,
+    "ranks": {},
     "times_sent": 0
   },
   "368c7c9afc54349c": {
@@ -7911,7 +7953,7 @@
   "3b0d1dcb5cae97f7": {
     "dismissed": null,
     "first_seen": "2026-11-09T18:21:22.281908+00:00",
-    "last_score": 216,
+    "last_score": 217,
     "ranks": {},
     "times_sent": 0
   },
@@ -8161,7 +8203,7 @@
   "3cf93dc8eeca82ba": {
     "dismissed": null,
     "first_seen": "2026-11-11T04:51:10.073381+00:00",
-    "last_score": 122,
+    "last_score": 134,
     "ranks": {},
     "times_sent": 0
   },
@@ -8929,7 +8971,7 @@
   "43b226d3f8c0e87c": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 1836,
+    "last_score": 1847,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -9470,7 +9512,7 @@
   "47e21bf6c9c49127": {
     "dismissed": null,
     "first_seen": "2026-11-10T02:33:38.163093+00:00",
-    "last_score": 476,
+    "last_score": 480,
     "ranks": {},
     "times_sent": 0
   },
@@ -9717,7 +9759,7 @@
   "49cf97a4dd7c71bd": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 220,
+    "last_score": 238,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-08T20:12:56.257796+00:00",
@@ -10595,7 +10637,7 @@
   "508bbba5107c73fa": {
     "dismissed": null,
     "first_seen": "2026-11-11T15:52:27.909875+00:00",
-    "last_score": 1208,
+    "last_score": 1210,
     "ranks": {},
     "times_sent": 0
   },
@@ -10772,7 +10814,7 @@
   "51dc1d2f6b3bd6df": {
     "dismissed": null,
     "first_seen": "2026-11-06T23:57:42.539221+00:00",
-    "last_score": 240,
+    "last_score": 241,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-08T20:12:56.257796+00:00",
@@ -11208,6 +11250,13 @@
     },
     "times_sent": 0
   },
+  "5518ef5f75c82c68": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 123,
+    "ranks": {},
+    "times_sent": 0
+  },
   "555ab4c06c5b0a35": {
     "dismissed": null,
     "first_seen": "2026-11-01T14:45:27.144193+00:00",
@@ -11616,6 +11665,13 @@
     },
     "times_sent": 0
   },
+  "579a115bfd9bf64f": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 30,
+    "ranks": {},
+    "times_sent": 0
+  },
   "57b9a9818428775f": {
     "dismissed": null,
     "first_seen": "2026-09-25T02:14:58.818007+00:00",
@@ -11679,7 +11735,7 @@
   "582b1aae1f561d55": {
     "dismissed": null,
     "first_seen": "2026-11-08T04:38:04.339283+00:00",
-    "last_score": 482,
+    "last_score": 483,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11743,7 +11799,7 @@
   "5850722246144950": {
     "dismissed": null,
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
-    "last_score": 31,
+    "last_score": 32,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -11822,7 +11878,7 @@
   "58f115f562b50489": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 60,
+    "last_score": 61,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12078,7 +12134,7 @@
   "5a786529aaee4f4c": {
     "dismissed": null,
     "first_seen": "2026-11-09T04:48:18.410013+00:00",
-    "last_score": 766,
+    "last_score": 769,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12179,7 +12235,7 @@
   "5b5b6da01dd0f826": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 642,
+    "last_score": 648,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -12428,7 +12484,7 @@
   "5d170095e9e79eb7": {
     "dismissed": null,
     "first_seen": "2026-11-05T00:43:59.395694+00:00",
-    "last_score": 81,
+    "last_score": 82,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -12460,7 +12516,7 @@
   "5d3f1a46c035f064": {
     "dismissed": null,
     "first_seen": "2026-11-10T21:39:28.523437+00:00",
-    "last_score": 288,
+    "last_score": 291,
     "ranks": {},
     "times_sent": 0
   },
@@ -12621,7 +12677,7 @@
     "times_sent": 0
   },
   "5e93a68709678d7c": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-04T19:24:33.246895+00:00",
     "last_score": 45,
     "ranks": {
@@ -13354,7 +13410,7 @@
   "64c65c510d530b1f": {
     "dismissed": null,
     "first_seen": "2026-11-10T21:39:28.523437+00:00",
-    "last_score": 91,
+    "last_score": 92,
     "ranks": {},
     "times_sent": 0
   },
@@ -13517,7 +13573,7 @@
     "times_sent": 0
   },
   "65a80a1e46c98a80": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
     "last_score": null,
     "ranks": {
@@ -13574,7 +13630,7 @@
   "65ecf9337812d596": {
     "dismissed": null,
     "first_seen": "2026-11-07T23:26:28.750756+00:00",
-    "last_score": 359,
+    "last_score": 366,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -13733,7 +13789,7 @@
   "67806ee36982c5d9": {
     "dismissed": null,
     "first_seen": "2026-11-11T15:52:27.909875+00:00",
-    "last_score": 46,
+    "last_score": 115,
     "ranks": {},
     "times_sent": 0
   },
@@ -14089,7 +14145,7 @@
   "6a1b51b3e148c43c": {
     "dismissed": null,
     "first_seen": "2026-11-10T02:33:38.163093+00:00",
-    "last_score": 133,
+    "last_score": 134,
     "ranks": {},
     "times_sent": 0
   },
@@ -14782,7 +14838,7 @@
   "6eb3e27c3039e163": {
     "dismissed": null,
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 2592,
+    "last_score": 2602,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -15821,7 +15877,7 @@
   "76a08ecdf5a73fba": {
     "dismissed": null,
     "first_seen": "2026-11-11T15:52:27.909875+00:00",
-    "last_score": 85,
+    "last_score": 90,
     "ranks": {},
     "times_sent": 0
   },
@@ -15835,7 +15891,7 @@
   "76b63de81604035c": {
     "dismissed": null,
     "first_seen": "2026-11-10T21:39:28.523437+00:00",
-    "last_score": 435,
+    "last_score": 438,
     "ranks": {},
     "times_sent": 0
   },
@@ -15858,7 +15914,7 @@
   "77068b22f0531f21": {
     "dismissed": null,
     "first_seen": "2026-11-10T12:08:29.079892+00:00",
-    "last_score": 127,
+    "last_score": 129,
     "ranks": {},
     "times_sent": 0
   },
@@ -16416,6 +16472,13 @@
     "dismissed": null,
     "first_seen": "2026-08-15T20:09:09.351673+00:00",
     "last_score": 35,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "7bb2b33d98fdda09": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 55,
     "ranks": {},
     "times_sent": 0
   },
@@ -17097,7 +17160,7 @@
   "80fe724ef6092964": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 347,
+    "last_score": 348,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-08T20:12:56.257796+00:00",
@@ -17838,7 +17901,7 @@
   "893277f83528c29b": {
     "dismissed": null,
     "first_seen": "2026-11-11T04:51:10.073381+00:00",
-    "last_score": 41,
+    "last_score": 45,
     "ranks": {},
     "times_sent": 0
   },
@@ -17863,6 +17926,13 @@
         "summary": "A small project providing a Proton Drive client for Linux, born from the lack of an official Linux version."
       }
     },
+    "times_sent": 0
+  },
+  "89406ff327c7989a": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 104,
+    "ranks": {},
     "times_sent": 0
   },
   "89663db9c3dc6e52": {
@@ -18217,7 +18287,7 @@
   "8c23f1fb8f0b0d2e": {
     "dismissed": null,
     "first_seen": "2026-11-10T21:39:28.523437+00:00",
-    "last_score": 108,
+    "last_score": 142,
     "ranks": {},
     "times_sent": 0
   },
@@ -19244,7 +19314,7 @@
   "947a8a12ae713dfa": {
     "dismissed": null,
     "first_seen": "2026-11-09T18:21:22.281908+00:00",
-    "last_score": 71,
+    "last_score": 72,
     "ranks": {},
     "times_sent": 0
   },
@@ -19532,7 +19602,7 @@
   "9648bd36246b3271": {
     "dismissed": null,
     "first_seen": "2026-11-07T14:41:22.844434+00:00",
-    "last_score": 104,
+    "last_score": 103,
     "ranks": {
       "web-products": {
         "queued_at": null,
@@ -19658,7 +19728,7 @@
   "96c1ae3e287342a4": {
     "dismissed": null,
     "first_seen": "2026-11-11T15:52:27.909875+00:00",
-    "last_score": 1295,
+    "last_score": 1296,
     "ranks": {},
     "times_sent": 0
   },
@@ -20405,7 +20475,7 @@
   "9cd0bd586ed82fde": {
     "dismissed": null,
     "first_seen": "2026-11-08T04:38:04.339283+00:00",
-    "last_score": 1302,
+    "last_score": 1304,
     "ranks": {
       "tooling": {
         "queued_at": null,
@@ -20448,6 +20518,13 @@
         "summary": "A data visualization showing net worth by age based on the 2025 Survey of Consumer Finances."
       }
     },
+    "times_sent": 0
+  },
+  "9d48d871130811be": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 116,
+    "ranks": {},
     "times_sent": 0
   },
   "9d4b9e1fe5ab5819": {
@@ -20601,7 +20678,7 @@
   "9e8a6cc08fde12e1": {
     "dismissed": null,
     "first_seen": "2026-11-02T17:50:39.938442+00:00",
-    "last_score": 143,
+    "last_score": 144,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -20622,7 +20699,7 @@
     "times_sent": 0
   },
   "9ef9e546f2c548f4": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
     "last_score": 118,
     "ranks": {
@@ -21330,7 +21407,7 @@
   "a4978faa7e166cdb": {
     "dismissed": null,
     "first_seen": "2026-11-10T21:39:28.523437+00:00",
-    "last_score": 414,
+    "last_score": 423,
     "ranks": {},
     "times_sent": 0
   },
@@ -22032,14 +22109,14 @@
   "a98326b09f6ff516": {
     "dismissed": null,
     "first_seen": "2026-11-10T02:33:38.163093+00:00",
-    "last_score": 723,
+    "last_score": 733,
     "ranks": {},
     "times_sent": 0
   },
   "a989f1582084d0cf": {
     "dismissed": null,
     "first_seen": "2026-11-10T02:33:38.163093+00:00",
-    "last_score": 905,
+    "last_score": 909,
     "ranks": {},
     "times_sent": 0
   },
@@ -23006,7 +23083,7 @@
   "b077c84bdcb18646": {
     "dismissed": null,
     "first_seen": "2026-11-10T12:08:29.079892+00:00",
-    "last_score": 281,
+    "last_score": 296,
     "ranks": {},
     "times_sent": 0
   },
@@ -23105,7 +23182,7 @@
   "b11ec2306a1ea77c": {
     "dismissed": null,
     "first_seen": "2026-11-11T15:52:27.909875+00:00",
-    "last_score": 124,
+    "last_score": 125,
     "ranks": {},
     "times_sent": 0
   },
@@ -23233,6 +23310,13 @@
         "summary": "A trusted AI relay-station benchmark and service directory comparing model availability, response speed, price, privacy, and operational evidence."
       }
     },
+    "times_sent": 0
+  },
+  "b21fa54b837dba6b": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 120,
+    "ranks": {},
     "times_sent": 0
   },
   "b2274efa5ee2cb37": {
@@ -24522,7 +24606,7 @@
   "bb9967ceb20d77fc": {
     "dismissed": null,
     "first_seen": "2026-11-09T18:21:22.281908+00:00",
-    "last_score": 236,
+    "last_score": 245,
     "ranks": {},
     "times_sent": 0
   },
@@ -24630,7 +24714,7 @@
   "bc7799c9ed5f2531": {
     "dismissed": null,
     "first_seen": "2026-11-10T21:39:28.523437+00:00",
-    "last_score": 122,
+    "last_score": 128,
     "ranks": {},
     "times_sent": 0
   },
@@ -24644,7 +24728,7 @@
   "bcb1c049a8ce9a46": {
     "dismissed": null,
     "first_seen": "2026-11-08T20:12:56.257796+00:00",
-    "last_score": 723,
+    "last_score": 734,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -24925,7 +25009,7 @@
     "times_sent": 0
   },
   "beef19b74126bb51": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
     "last_score": null,
     "ranks": {
@@ -25093,6 +25177,13 @@
         "summary": "A Voicemod 2026 installer described as a ready-to-run desktop edition with enhanced audio processing and UI improvements."
       }
     },
+    "times_sent": 0
+  },
+  "c06fca3b9549fb95": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 165,
+    "ranks": {},
     "times_sent": 0
   },
   "c0a0a5f5affd2692": {
@@ -26259,6 +26350,13 @@
     },
     "times_sent": 0
   },
+  "c8dde4086f9ad8bc": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 890,
+    "ranks": {},
+    "times_sent": 0
+  },
   "c8ee1866031b1320": {
     "dismissed": null,
     "first_seen": "2026-10-22T16:41:13.530082+00:00",
@@ -26561,7 +26659,7 @@
   "cb87df8631a7cdfc": {
     "dismissed": null,
     "first_seen": "2026-11-10T02:33:38.163093+00:00",
-    "last_score": 1303,
+    "last_score": 1304,
     "ranks": {},
     "times_sent": 0
   },
@@ -27048,7 +27146,7 @@
   "cebc6ff5285087a8": {
     "dismissed": null,
     "first_seen": "2026-11-10T12:08:29.079892+00:00",
-    "last_score": 205,
+    "last_score": 208,
     "ranks": {},
     "times_sent": 0
   },
@@ -27225,6 +27323,13 @@
         "summary": "A repo advertising a full installer for an Adobe InDesign 2026 layout tool."
       }
     },
+    "times_sent": 0
+  },
+  "d0e5cfeb79c6e585": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 32,
+    "ranks": {},
     "times_sent": 0
   },
   "d0ee0bd9c8e2762e": {
@@ -27498,7 +27603,7 @@
   "d3934e8550a65100": {
     "dismissed": null,
     "first_seen": "2026-11-10T21:39:28.523437+00:00",
-    "last_score": 241,
+    "last_score": 244,
     "ranks": {},
     "times_sent": 0
   },
@@ -27653,9 +27758,9 @@
     "times_sent": 0
   },
   "d51d4d67577c8a7a": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
-    "last_score": 4518,
+    "last_score": 4525,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -27733,7 +27838,7 @@
   "d5c6c1442490d019": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 105,
+    "last_score": 106,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-05T19:31:58.609871+00:00",
@@ -27765,7 +27870,7 @@
   "d5f8ab1a0d4a222d": {
     "dismissed": null,
     "first_seen": "2026-11-05T19:31:58.609871+00:00",
-    "last_score": 963,
+    "last_score": 971,
     "ranks": {
       "ai-engineering": {
         "queued_at": "2026-11-07T19:53:44.909976+00:00",
@@ -27910,7 +28015,7 @@
   "d7608f1b23b7d603": {
     "dismissed": null,
     "first_seen": "2026-11-11T15:52:27.909875+00:00",
-    "last_score": 97,
+    "last_score": 134,
     "ranks": {},
     "times_sent": 0
   },
@@ -29318,7 +29423,7 @@
   "e06ee448d8d7fe26": {
     "dismissed": null,
     "first_seen": "2026-11-11T15:52:27.909875+00:00",
-    "last_score": 37,
+    "last_score": 174,
     "ranks": {},
     "times_sent": 0
   },
@@ -29605,7 +29710,7 @@
   "e2409b820589fd43": {
     "dismissed": null,
     "first_seen": "2026-11-07T05:29:38.520383+00:00",
-    "last_score": 136,
+    "last_score": 138,
     "ranks": {
       "ai-engineering": {
         "queued_at": null,
@@ -29803,6 +29908,13 @@
         "summary": "A repo claiming an automated deployment pipeline for a Discord server cloner."
       }
     },
+    "times_sent": 0
+  },
+  "e40297c9b5a8aa90": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 134,
+    "ranks": {},
     "times_sent": 0
   },
   "e402bd002c0d3604": {
@@ -30244,7 +30356,7 @@
   "e6a316b7a288ed6e": {
     "dismissed": null,
     "first_seen": "2026-11-11T15:52:27.909875+00:00",
-    "last_score": 81,
+    "last_score": 160,
     "ranks": {},
     "times_sent": 0
   },
@@ -30488,6 +30600,13 @@
         "summary": "A news item about Linus Torvalds's first patch series produced with LLM assistance."
       }
     },
+    "times_sent": 0
+  },
+  "e869f96790107481": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 108,
+    "ranks": {},
     "times_sent": 0
   },
   "e879e3ba88272bff": {
@@ -30939,7 +31058,7 @@
     "times_sent": 1
   },
   "ebe97d0208a517eb": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-04T11:52:02.480884+00:00",
     "last_score": 393,
     "ranks": {
@@ -31003,7 +31122,7 @@
   "ecebd056b4dbf8e7": {
     "dismissed": null,
     "first_seen": "2026-11-06T11:50:12.640883+00:00",
-    "last_score": 442,
+    "last_score": 448,
     "ranks": {
       "tooling": {
         "queued_at": "2026-11-06T18:55:29.232426+00:00",
@@ -31300,7 +31419,7 @@
   "eee402332b6dfec3": {
     "dismissed": null,
     "first_seen": "2026-11-10T02:33:38.163093+00:00",
-    "last_score": 109,
+    "last_score": 111,
     "ranks": {},
     "times_sent": 0
   },
@@ -31694,7 +31813,7 @@
     "times_sent": 0
   },
   "f1a111e72742f0df": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-03T19:06:44.712669+00:00",
     "last_score": 740,
     "ranks": {
@@ -31758,6 +31877,13 @@
   "f2112bb108fc5c0b": {
     "dismissed": null,
     "first_seen": "2026-09-15T15:50:04.627470+00:00",
+    "last_score": 30,
+    "ranks": {},
+    "times_sent": 0
+  },
+  "f215fcadba1e14ab": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
     "last_score": 30,
     "ranks": {},
     "times_sent": 0
@@ -32789,6 +32915,13 @@
     "ranks": {},
     "times_sent": 0
   },
+  "fa21daf7971f59e3": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 38,
+    "ranks": {},
+    "times_sent": 0
+  },
   "fa35849781166026": {
     "dismissed": null,
     "first_seen": "2026-10-06T23:34:58.463501+00:00",
@@ -32907,7 +33040,7 @@
   "fbdf36c6d0b0b031": {
     "dismissed": null,
     "first_seen": "2026-11-10T02:33:38.163093+00:00",
-    "last_score": 376,
+    "last_score": 379,
     "ranks": {},
     "times_sent": 0
   },
@@ -33052,7 +33185,7 @@
     "times_sent": 1
   },
   "fe10ef82f55ab573": {
-    "dismissed": null,
+    "dismissed": "expired",
     "first_seen": "2026-11-03T11:38:31.517209+00:00",
     "last_score": 114,
     "ranks": {
@@ -33271,6 +33404,13 @@
         "summary": "A repo advertising a pre-activated standalone installer for Aomei Backupper 2026 backup and disk software."
       }
     },
+    "times_sent": 0
+  },
+  "feb2d68f3882dfc3": {
+    "dismissed": null,
+    "first_seen": "2026-11-11T22:29:13.361287+00:00",
+    "last_score": 43,
+    "ranks": {},
     "times_sent": 0
   },
   "feb8ab8ab26f328d": {

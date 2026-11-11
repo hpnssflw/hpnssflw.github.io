@@ -336,111 +336,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 20,
-      "tooling": 15,
-      "web-products": 14
+      "ai-engineering": 16,
+      "tooling": 12,
+      "web-products": 12
     },
-    "count": 49,
+    "count": 40,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "A blog post testing an example from the “Sparks of Weight-Space Programming” paper reports that Qwen 3.8 27B running on a laptop can interpret raw model weights, extending the paper’s weight-reading and weight-editing claims beyond frontier models.",
-        "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A hands-on article on dual-booting Linux on the Nvidia RTX Spark laptop finds GPU clocks locked near 780 MHz because of Windows-only encrypted power firmware, cutting GPT-OSS-120B inference from 65.4 to 13.9 tokens/s; WSL avoids the issue.",
-        "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "A GitHub repository curating 309 self-hostable open-source AI projects across local LLMs, agents, MCP servers, RAG, speech and image generation; a weekly GitHub API check moves archived, deleted or year-silent projects to an unmaintained list.",
-        "title": "glincker/awesome-selfhosted-ai",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/glincker/awesome-selfhosted-ai"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "A README for EXZA Remote, a proprietary hosted MCP service that connects ChatGPT, Claude and other AI assistants to a user’s Mac, Windows or Linux computer for owner-approved file inspection, process checks and terminal commands, with warnings against an unofficial npx install.",
-        "title": "exzade/EXZA-Remote",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/exzade/EXZA-Remote"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "Agent Autoloop is a lightweight automation kernel for command-line agents that schedules tasks, routes work to pluggable agents, and sends approval cards via Feishu, Slack, Discord or desktop notifications only when needed; runs locally on macOS/Linux.",
-        "title": "KKKKhazix/agent-autoloop",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/KKKKhazix/agent-autoloop"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "Code-review-skill is an evidence-backed, static-first code review skill for Claude Code and Codex, with English/Chinese packages, JSON-derived delivery summaries, auditable findings with locations, contracts and severity, plus gate decisions; no build or test run required.",
-        "title": "kyy-logs/code-review-skill",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/kyy-logs/code-review-skill"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Codemap generates one HTML page mapping a Go module: packages, internal dependencies, and functions per file, with search, package usage views, and GitHub line jumps; it runs via go run or a GitHub Action, and tests are omitted.",
-        "title": "Show HN: Codemap – one-page interactive map of any Go repository",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/peterretief/codemap"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "An Ahrefs analysis of OpenAI publisher licensing deals and ChatGPT citations finds partner domains' share of top citations rose from 7.5% in March 2026 to 15.8% in July and 12.5% in late September; ten partners rank among ChatGPT's 50 most-cited sites.",
-        "title": "Every OpenAI Publisher Partnership, and How Often ChatGPT Cites Them",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://ahrefs.com/blog/openai-publisher-partnerships/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T19:24:33.246895+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "An Ahrefs study of 10,000 brands and 260M non-branded AI prompts finds Reddit mentions correlate most strongly with AI visibility (~0.75), while press coverage (0.67) trails general webpage mentions (0.70); ChatGPT is least tied to off-site mentions.",
-        "title": "Which Types of Mentions Correlate the Strongest With AI Visibility? (260M AI Prompts Analyzed)",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://ahrefs.com/blog/mention-types-ai-visibility/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-05T11:52:56.900722+00:00",
@@ -884,8 +785,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-11T15:52:27.909875+00:00",
-    "id": "2026-11-11T1552Z",
+    "at": "2026-11-11T22:29:13.361287+00:00",
+    "id": "2026-11-11T2229Z",
     "mode": "real",
     "offline": false
   },
@@ -896,18 +797,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 114,
+          "out": 114
         },
         "tooling": {
           "drops": {},
-          "in": 133,
-          "out": 133
+          "in": 137,
+          "out": 137
         },
         "web-products": {
           "drops": {},
-          "in": 189,
-          "out": 189
+          "in": 191,
+          "out": 191
         }
       },
       "stage": "collect"
@@ -917,20 +818,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 104,
-          "out": 104
+          "in": 114,
+          "out": 114
         },
         "tooling": {
           "drops": {},
-          "in": 133,
-          "out": 133
+          "in": 137,
+          "out": 137
         },
         "web-products": {
           "drops": {
             "outside_window": 127
           },
-          "in": 189,
-          "out": 62
+          "in": 191,
+          "out": 64
         }
       },
       "stage": "window"
@@ -940,27 +841,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 4,
-            "seen": 19
+            "dismissed": 7,
+            "seen": 16
           },
-          "in": 104,
-          "out": 81
+          "in": 114,
+          "out": 91
         },
         "tooling": {
           "drops": {
-            "dismissed": 2,
-            "seen": 12
+            "dismissed": 4,
+            "seen": 9
           },
-          "in": 133,
-          "out": 119
+          "in": 137,
+          "out": 124
         },
         "web-products": {
           "drops": {
-            "dismissed": 4,
-            "seen": 11
+            "dismissed": 6,
+            "seen": 9
           },
-          "in": 62,
-          "out": 47
+          "in": 64,
+          "out": 49
         }
       },
       "stage": "dedupe"
@@ -970,24 +871,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 32
+            "already_ranked": 30
           },
-          "in": 81,
-          "out": 49
+          "in": 91,
+          "out": 61
         },
         "tooling": {
           "drops": {
-            "already_ranked": 47
+            "already_ranked": 45
           },
-          "in": 119,
-          "out": 72
+          "in": 124,
+          "out": 79
         },
         "web-products": {
           "drops": {
             "already_ranked": 24
           },
-          "in": 47,
-          "out": 23
+          "in": 49,
+          "out": 25
         }
       },
       "stage": "cache"
@@ -997,18 +898,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 40,
-          "out": 40
+          "in": 52,
+          "out": 52
         },
         "tooling": {
           "drops": {},
-          "in": 56,
-          "out": 56
+          "in": 63,
+          "out": 63
         },
         "web-products": {
           "drops": {},
-          "in": 20,
-          "out": 20
+          "in": 22,
+          "out": 22
         }
       },
       "stage": "enrich"
@@ -1082,17 +983,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 20
+          "out": 16
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 15
+          "out": 12
         },
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 14
+          "out": 12
         }
       },
       "stage": "queue"
@@ -1101,21 +1002,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 20,
-          "out": 20
+          "out": 16
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 15,
-          "out": 15
+          "out": 12
         },
         "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 2
           },
-          "in": 15,
-          "out": 14
+          "in": 14,
+          "out": 12
         }
       },
       "stage": "review"
