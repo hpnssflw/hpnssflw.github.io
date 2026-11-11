@@ -338,21 +338,10 @@
     "by_topic": {
       "ai-engineering": 20,
       "tooling": 15,
-      "web-products": 15
+      "web-products": 14
     },
-    "count": 50,
+    "count": 49,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-04T11:52:02.480884+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Safari 27.3 beta adds Adaptive Dark Mode, which automatically converts light websites to dark when enabled by a user, using a color matrix that preserves hue and targets WCAG 4.5:1 contrast; sites signaling color-scheme support are left unchanged.",
-        "title": "Safari introduces Adaptive Dark Mode in 27.3",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-04T19:24:33.246895+00:00",
@@ -895,8 +884,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-11T04:51:10.073381+00:00",
-    "id": "2026-11-11T0451Z",
+    "at": "2026-11-11T15:52:27.909875+00:00",
+    "id": "2026-11-11T1552Z",
     "mode": "real",
     "offline": false
   },
@@ -907,18 +896,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 101,
-          "out": 101
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 136,
-          "out": 136
+          "in": 133,
+          "out": 133
         },
         "web-products": {
           "drops": {},
-          "in": 188,
-          "out": 188
+          "in": 189,
+          "out": 189
         }
       },
       "stage": "collect"
@@ -928,20 +917,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 101,
-          "out": 101
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 136,
-          "out": 136
+          "in": 133,
+          "out": 133
         },
         "web-products": {
           "drops": {
-            "outside_window": 130
+            "outside_window": 127
           },
-          "in": 188,
-          "out": 58
+          "in": 189,
+          "out": 62
         }
       },
       "stage": "window"
@@ -954,24 +943,24 @@
             "dismissed": 4,
             "seen": 19
           },
-          "in": 101,
-          "out": 78
+          "in": 104,
+          "out": 81
         },
         "tooling": {
           "drops": {
-            "dismissed": 5,
+            "dismissed": 2,
             "seen": 12
           },
-          "in": 136,
+          "in": 133,
           "out": 119
         },
         "web-products": {
           "drops": {
-            "dismissed": 3,
-            "seen": 14
+            "dismissed": 4,
+            "seen": 11
           },
-          "in": 58,
-          "out": 41
+          "in": 62,
+          "out": 47
         }
       },
       "stage": "dedupe"
@@ -981,10 +970,10 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 35
+            "already_ranked": 32
           },
-          "in": 78,
-          "out": 43
+          "in": 81,
+          "out": 49
         },
         "tooling": {
           "drops": {
@@ -995,10 +984,10 @@
         },
         "web-products": {
           "drops": {
-            "already_ranked": 25
+            "already_ranked": 24
           },
-          "in": 41,
-          "out": 16
+          "in": 47,
+          "out": 23
         }
       },
       "stage": "cache"
@@ -1008,18 +997,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 34,
-          "out": 34
+          "in": 40,
+          "out": 40
         },
         "tooling": {
           "drops": {},
-          "in": 55,
-          "out": 55
+          "in": 56,
+          "out": 56
         },
         "web-products": {
           "drops": {},
-          "in": 13,
-          "out": 13
+          "in": 20,
+          "out": 20
         }
       },
       "stage": "enrich"
@@ -1103,7 +1092,7 @@
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 15
+          "out": 14
         }
       },
       "stage": "queue"
@@ -1122,9 +1111,11 @@
           "out": 15
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 15,
-          "out": 15
+          "out": 14
         }
       },
       "stage": "review"
