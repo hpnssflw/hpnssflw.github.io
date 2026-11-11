@@ -4,22 +4,16 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 40,
-        "dismissed": 6,
-        "seen": 20
-      },
-      "inbox": {
-        "expired": 4
+        "already_ranked": 35,
+        "dismissed": 4,
+        "seen": 19
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 50,
-        "dismissed": 6,
+        "already_ranked": 47,
+        "dismissed": 5,
         "seen": 12
-      },
-      "inbox": {
-        "expired": 3
       }
     },
     "web-products": {
@@ -30,9 +24,6 @@
         "already_ranked": 25,
         "dismissed": 3,
         "seen": 14
-      },
-      "inbox": {
-        "expired": 2
       }
     }
   },
@@ -55,22 +46,22 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 105,
-      "in_window": 105,
+      "collected": 101,
+      "in_window": 101,
       "kept": 0,
-      "new": 39
+      "new": 43
     },
     "tooling": {
-      "collected": 139,
-      "in_window": 139,
+      "collected": 136,
+      "in_window": 136,
       "kept": 0,
-      "new": 71
+      "new": 72
     },
     "web-products": {
-      "collected": 187,
-      "in_window": 57,
+      "collected": 188,
+      "in_window": 58,
       "kept": 0,
-      "new": 15
+      "new": 16
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
@@ -80,113 +71,109 @@
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496763+00:00",
+      "ts": "2026-11-11T04:51:43.488298+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496755+00:00",
+      "ts": "2026-11-11T04:51:43.488289+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Benchmark chair",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496747+00:00",
+      "ts": "2026-11-11T04:51:43.488281+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Data exploration, manually and intentionally",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496739+00:00",
+      "ts": "2026-11-11T04:51:43.488273+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Search Central Live in Zurich is back!",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496732+00:00",
+      "ts": "2026-11-11T04:51:43.488265+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "10 Clearscope Alternatives (Compared on Price, API, and MCP Access)",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496724+00:00",
+      "ts": "2026-11-11T04:51:43.488257+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "A New Community For In-House UX People",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496716+00:00",
+      "ts": "2026-11-11T04:51:43.488249+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Multi-Column Different-Speed Scrolling",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496708+00:00",
+      "ts": "2026-11-11T04:51:43.488241+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Data Access Testing With @testcontainers",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496700+00:00",
+      "ts": "2026-11-11T04:51:43.488232+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Vesperlightspirit/PokeMMO-Atlas-AIO-Soft",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496690+00:00",
+      "ts": "2026-11-11T04:51:43.488224+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "smokeeaasd/flawless-ui-ux",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496683+00:00",
+      "ts": "2026-11-11T04:51:43.488216+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Vespermagnet/jet-reports-skill-rpocket",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496675+00:00",
+      "ts": "2026-11-11T04:51:43.488208+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "BenjiNgei/real-time-operations-intelligence-accelerator",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496667+00:00",
+      "ts": "2026-11-11T04:51:43.488197+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Show HN: HackerChurn \u2013 which SaaS tools HN wants to cancel",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496659+00:00",
+      "ts": "2026-11-11T04:51:43.488189+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Chip stocks get slaughtered as Wall Street in worst post-midterm day since 1896",
       "topic": "web-products",
-      "ts": "2026-11-10T21:40:02.496651+00:00",
+      "ts": "2026-11-11T04:51:43.488180+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-11-03T11:38:31.517209+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-11-03T19:06:44.712669+00:00"
@@ -278,28 +265,32 @@
     {
       "kept": 0,
       "ts": "2026-11-10T21:39:28.523437+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-11T04:51:10.073381+00:00"
     }
   ],
-  "streak": 375,
+  "streak": 376,
   "topics": [
     {
-      "collected": 105,
+      "collected": 101,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 139,
+      "collected": 136,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 187,
+      "collected": 188,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-10T21:39:28.523437+00:00"
+  "updated_at": "2026-11-11T04:51:10.073381+00:00"
 }
