@@ -4,22 +4,16 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 30,
+        "already_ranked": 26,
         "dismissed": 7,
-        "seen": 16
-      },
-      "inbox": {
-        "expired": 4
+        "seen": 17
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 45,
+        "already_ranked": 44,
         "dismissed": 4,
         "seen": 9
-      },
-      "inbox": {
-        "expired": 3
       }
     },
     "web-products": {
@@ -30,9 +24,6 @@
         "already_ranked": 24,
         "dismissed": 6,
         "seen": 9
-      },
-      "inbox": {
-        "expired": 2
       }
     }
   },
@@ -55,16 +46,16 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 114,
-      "in_window": 114,
+      "collected": 110,
+      "in_window": 110,
       "kept": 0,
-      "new": 61
+      "new": 60
     },
     "tooling": {
-      "collected": 137,
-      "in_window": 137,
+      "collected": 139,
+      "in_window": 139,
       "kept": 0,
-      "new": 79
+      "new": 82
     },
     "web-products": {
       "collected": 191,
@@ -80,113 +71,109 @@
       "reason": "already_ranked",
       "title": "lo-pi radio",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193621+00:00",
+      "ts": "2026-11-12T05:53:44.661029+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Baking Brilliance: My DVS Mentee Experience",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193612+00:00",
+      "ts": "2026-11-12T05:53:44.661019+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Data exploration, manually and intentionally",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193607+00:00",
+      "ts": "2026-11-12T05:53:44.661012+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Search Central Live in Zurich is back!",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193601+00:00",
+      "ts": "2026-11-12T05:53:44.661004+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "10 Clearscope Alternatives (Compared on Price, API, and MCP Access)",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193596+00:00",
+      "ts": "2026-11-12T05:53:44.660996+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "A New Community For In-House UX People",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193590+00:00",
+      "ts": "2026-11-12T05:53:44.660988+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Multi-Column Different-Speed Scrolling",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193585+00:00",
+      "ts": "2026-11-12T05:53:44.660981+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Data Access Testing With @testcontainers",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193580+00:00",
+      "ts": "2026-11-12T05:53:44.660973+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Vesperlightspirit/PokeMMO-Atlas-AIO-Soft",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193574+00:00",
+      "ts": "2026-11-12T05:53:44.660965+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "smokeeaasd/flawless-ui-ux",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193569+00:00",
+      "ts": "2026-11-12T05:53:44.660958+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Vespermagnet/jet-reports-skill-rpocket",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193563+00:00",
+      "ts": "2026-11-12T05:53:44.660950+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "BenjiNgei/real-time-operations-intelligence-accelerator",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193557+00:00",
+      "ts": "2026-11-12T05:53:44.660942+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Show HN: HackerChurn \u2013 which SaaS tools HN wants to cancel",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193552+00:00",
+      "ts": "2026-11-12T05:53:44.660934+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Chip stocks get slaughtered as Wall Street in worst post-midterm day since 1896",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193546+00:00",
+      "ts": "2026-11-12T05:53:44.660926+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Global stocks tumble as AI panic grips markets after Democrats' midterm success",
       "topic": "web-products",
-      "ts": "2026-11-11T22:29:45.193540+00:00",
+      "ts": "2026-11-12T05:53:44.660915+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 1,
-      "ts": "2026-11-04T11:52:02.480884+00:00"
-    },
     {
       "kept": 9,
       "ts": "2026-11-04T19:24:33.246895+00:00"
@@ -278,18 +265,22 @@
     {
       "kept": 0,
       "ts": "2026-11-11T22:29:13.361287+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-12T05:53:13.045739+00:00"
     }
   ],
-  "streak": 378,
+  "streak": 379,
   "topics": [
     {
-      "collected": 114,
+      "collected": 110,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 137,
+      "collected": 139,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
@@ -301,5 +292,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-11T22:29:13.361287+00:00"
+  "updated_at": "2026-11-12T05:53:13.045739+00:00"
 }
