@@ -336,111 +336,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 12,
-      "tooling": 9,
-      "web-products": 8
+      "ai-engineering": 8,
+      "tooling": 6,
+      "web-products": 6
     },
-    "count": 29,
+    "count": 20,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "A RAG question-answering system for real open-source issue trackers, evaluated on 95 hand-reviewed vitejs/vite questions with five configurations and scorer audits; retrieval improved weighted accuracy from 0.221 to 0.700 but raised fabrication from 1.1% to 20%.",
-        "title": "zaxiu88888/issue-rag",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/zaxiu88888/issue-rag"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "GPUWorks is a 40 MB GPU management and Model-as-a-Service platform that joins heterogeneous accelerators and public/private cloud instances into one cluster, deploying vLLM/SGLang models behind an OpenAI-compatible endpoint with a 1,235-spec catalog.",
-        "title": "Show HN: GPUWorks – A 40 MB GPU cluster manager for vLLM/SGLang, no K8s needed",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/flitai-io/gpuworks"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Gemini Omni 1.2 Flash is a generally available Gemini API/business video model adding native 15-second clips, multi-turn conversational editing, stronger reference adherence, and a 30% price cut to $0.07 per second for 720p.",
-        "title": "Gemini Omni 1.2 Flash",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "Ork is a source-available assistant for persistent bots that share conversations and work on isolated computers, with Tauri desktop and Expo mobile apps backed by an API and worker; the repository provides local Docker/PostgreSQL setup steps.",
-        "title": "orkbot-run/ork",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/orkbot-run/ork"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 9,
-        "source": "github",
-        "summary": "Winc is a Rust-built desktop editor with its own rendering engine, claiming 119 ms cold start, 52 MB RAM with 100,000 lines open, and a 1 GB file editable/highlighted in 220 ms; it includes multi-cursor editing, diffs, Git, terminal, previews and signed updates.",
-        "title": "DEEIX-AI/Winc",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/DEEIX-AI/Winc"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "Rune is a pre-release native GPU-rendered Rust UI framework for macOS, Windows, Linux and web with its own renderer, text, layout and springs; apps can run headless so agents can render PNGs, dump element trees and drive scripted input.",
-        "title": "Rune: A native GPU-rendered Rust UI framework for macOS, Windows, Linux and web",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/anomalyco/rune"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Firenook is a Rust implementation of Firebase emulators, shown with a terminal UI and demo; its Show HN title claims 40× faster writes and 10× less RAM, and the text shows Firestore, Auth, Storage, Functions and Pub/Sub starting in about 600–800 ms.",
-        "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://firenook.dev/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "A blog post on emulating boolean values in CSS using the true/false keywords, @property to register a custom property constrained to syntax \"true | false\" with an initial value and inherits: false, plus @container style() queries for conditional styling.",
-        "title": "true or false in CSS",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://blog.master.dev/true-or-false-in-css/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-06T18:55:29.232426+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "A Smashing Magazine article on making immersive LLM chat experiences (ChatGPT, Claude, Copilot and similar full-screen apps) accessible, framing accessibility as core to functional digital experiences and reframing chat UIs through WCAG and the social model of disability.",
-        "title": "Making Immersive LLM Chat Experiences More Accessible",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-07T14:41:22.844434+00:00",
@@ -664,8 +565,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-13T11:52:27.944328+00:00",
-    "id": "2026-11-13T1152Z",
+    "at": "2026-11-13T19:14:38.722101+00:00",
+    "id": "2026-11-13T1914Z",
     "mode": "real",
     "offline": false
   },
@@ -676,18 +577,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 112,
-          "out": 112
+          "in": 145,
+          "out": 145
         },
         "tooling": {
           "drops": {},
-          "in": 142,
-          "out": 142
+          "in": 137,
+          "out": 137
         },
         "web-products": {
           "drops": {},
-          "in": 190,
-          "out": 190
+          "in": 188,
+          "out": 188
         }
       },
       "stage": "collect"
@@ -697,20 +598,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 112,
-          "out": 112
+          "in": 145,
+          "out": 145
         },
         "tooling": {
           "drops": {},
-          "in": 142,
-          "out": 142
+          "in": 137,
+          "out": 137
         },
         "web-products": {
           "drops": {
-            "outside_window": 131
+            "outside_window": 135
           },
-          "in": 190,
-          "out": 59
+          "in": 188,
+          "out": 53
         }
       },
       "stage": "window"
@@ -721,26 +622,26 @@
         "ai-engineering": {
           "drops": {
             "dismissed": 7,
-            "seen": 13
+            "seen": 10
           },
-          "in": 112,
-          "out": 92
+          "in": 145,
+          "out": 128
         },
         "tooling": {
           "drops": {
-            "dismissed": 4,
-            "seen": 8
+            "dismissed": 7,
+            "seen": 4
           },
-          "in": 142,
-          "out": 130
+          "in": 137,
+          "out": 126
         },
         "web-products": {
           "drops": {
-            "dismissed": 7,
-            "seen": 5
+            "dismissed": 6,
+            "seen": 3
           },
-          "in": 59,
-          "out": 47
+          "in": 53,
+          "out": 44
         }
       },
       "stage": "dedupe"
@@ -750,24 +651,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 21
+            "already_ranked": 18
           },
-          "in": 92,
-          "out": 71
+          "in": 128,
+          "out": 110
         },
         "tooling": {
           "drops": {
-            "already_ranked": 30
+            "already_ranked": 24
           },
-          "in": 130,
-          "out": 100
+          "in": 126,
+          "out": 102
         },
         "web-products": {
           "drops": {
-            "already_ranked": 16
+            "already_ranked": 14
           },
-          "in": 47,
-          "out": 31
+          "in": 44,
+          "out": 30
         }
       },
       "stage": "cache"
@@ -777,13 +678,13 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 66,
-          "out": 66
+          "in": 106,
+          "out": 106
         },
         "tooling": {
           "drops": {},
-          "in": 86,
-          "out": 86
+          "in": 90,
+          "out": 90
         },
         "web-products": {
           "drops": {},
@@ -862,17 +763,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 12
+          "out": 8
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 9
+          "out": 6
         },
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 8
+          "out": 6
         }
       },
       "stage": "queue"
@@ -881,21 +782,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 12,
-          "out": 12
+          "out": 8
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 9,
-          "out": 9
+          "out": 6
         },
         "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 2
           },
-          "in": 9,
-          "out": 8
+          "in": 8,
+          "out": 6
         }
       },
       "stage": "review"
