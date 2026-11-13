@@ -336,111 +336,12 @@
   },
   "queue": {
     "by_topic": {
-      "ai-engineering": 16,
-      "tooling": 12,
-      "web-products": 11
+      "ai-engineering": 12,
+      "tooling": 9,
+      "web-products": 9
     },
-    "count": 39,
+    "count": 30,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Ricursive's Ripple-65B Preview: a dense open-weight model pretrained on 12T tokens with 1M context, claiming U.S. open-weight SOTA on TerminalBench 2.1 (80.52) and trained for $32M — about one-tenth the prior cost — and served via Hugging Face, Together, OpenRouter and others.",
-        "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://www.ricursive.com/ripple"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Post laying out three architecture patterns for multi-agent systems — orchestrator-worker, blackboard, and pipeline — plus the coordination failure modes that surface only after a single-agent demo goes into unattended production.",
-        "title": "Building a Multi-Agent System from Scratch: Architecture Patterns",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://kadhar.dev/blog/multi-agent-systems-from-scratch"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Post on the MCP OAuth redirect-URI allowlist dilemma: servers either reject self-hosted clients or, per a 2026 study of 119 servers, accept arbitrary redirect URIs and open a one-click phishing hole into users' storage.",
-        "title": "Letting users trust their own MCP clients, without opening a phishing hole",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://streamvessel.com/blog/mcp-trusted-redirect-uris"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Rivet, a YC W23 actor-model orchestrator for agentic workloads: 72 KB per actor, 4.99 ms p99 cold starts, per-actor SQLite on S3 at SSD-like latency, idle hibernation, and a rivetkit TypeScript example.",
-        "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/rivet-dev/rivet"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "Gauge, an open-source CLI for \"hillclimbing Agent Experience\": it runs real coding agents (Claude Code, Codex, Pi, OpenCode) against your docs, Skills, CLIs, SDKs or MCPs, captures where they get stuck, and lets your agent validate fixes locally via Docker before release.",
-        "title": "Show HN: Gauge – Open-Source CLI to recursively improve your docs",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/gauge-sh/gauge-cli"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "Browser-based SQLite editor that opens .sqlite/.db files, .sql dumps or CSV, lets you edit in a grid or with SQL, then exports a freshly rebuilt file; nothing is uploaded, and files are rebuilt on save rather than edited in place.",
-        "title": "Edit an SQLite database in your browser",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://editsqlite.com/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 7,
-        "source": "github",
-        "summary": "Zero-dependency CLI that decodes Uniswap v4 revert data, unwrapping WrappedError from PoolManager and Universal Router's ExecutionFailed to show the hook selector, reason and errors; supports custom error signatures via --sig.",
-        "title": "zhouxingchi1017/v4revert",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/zhouxingchi1017/v4revert"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 8,
-        "source": "rss",
-        "summary": "Stripe now lets compatible AI agents like Claude and Cursor access users' Stripe analytics data via its MCP or the Queries and Reports APIs, so natural-language prompts can build dashboards or decks. The Queries API is free through Jan 31, 2027, then credit-based.",
-        "title": "Analyze your Stripe data directly with your agent",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://stripe.com/blog/analyze-your-stripe-data-directly-with-your-agent"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-05T19:31:58.609871+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "FlowingData post on a Bloomberg map that uses mountain peaks—taller for bigger shifts, blue and red for party—to show movement toward Democrats and Republicans, which the author prefers to the NYT's arrow-based map for spotting the few Republican shifts.",
-        "title": "Mountain peaks to show the shifts",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/11/04/mountain-peaks-to-show-the-shifts/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-06T11:50:12.640883+00:00",
@@ -774,8 +675,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-12T16:35:53.571426+00:00",
-    "id": "2026-11-12T1635Z",
+    "at": "2026-11-13T00:54:13.756679+00:00",
+    "id": "2026-11-13T0054Z",
     "mode": "real",
     "offline": false
   },
@@ -786,18 +687,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 110,
-          "out": 110
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 135,
-          "out": 135
+          "in": 141,
+          "out": 141
         },
         "web-products": {
           "drops": {},
-          "in": 189,
-          "out": 189
+          "in": 191,
+          "out": 191
         }
       },
       "stage": "collect"
@@ -807,20 +708,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 110,
-          "out": 110
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 135,
-          "out": 135
+          "in": 141,
+          "out": 141
         },
         "web-products": {
           "drops": {
-            "outside_window": 128
+            "outside_window": 127
           },
-          "in": 189,
-          "out": 61
+          "in": 191,
+          "out": 64
         }
       },
       "stage": "window"
@@ -830,27 +731,27 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 5,
-            "seen": 17
+            "dismissed": 7,
+            "seen": 13
           },
-          "in": 110,
-          "out": 88
+          "in": 104,
+          "out": 84
         },
         "tooling": {
           "drops": {
             "dismissed": 4,
-            "seen": 10
+            "seen": 7
           },
-          "in": 135,
-          "out": 121
+          "in": 141,
+          "out": 130
         },
         "web-products": {
           "drops": {
-            "dismissed": 6,
-            "seen": 7
+            "dismissed": 7,
+            "seen": 6
           },
-          "in": 61,
-          "out": 48
+          "in": 64,
+          "out": 51
         }
       },
       "stage": "dedupe"
@@ -860,24 +761,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 23
+            "already_ranked": 21
           },
-          "in": 88,
-          "out": 65
+          "in": 84,
+          "out": 63
         },
         "tooling": {
           "drops": {
-            "already_ranked": 38
+            "already_ranked": 35
           },
-          "in": 121,
-          "out": 83
+          "in": 130,
+          "out": 95
         },
         "web-products": {
           "drops": {
-            "already_ranked": 21
+            "already_ranked": 20
           },
-          "in": 48,
-          "out": 27
+          "in": 51,
+          "out": 31
         }
       },
       "stage": "cache"
@@ -892,13 +793,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 71,
-          "out": 71
+          "in": 81,
+          "out": 81
         },
         "web-products": {
           "drops": {},
-          "in": 24,
-          "out": 24
+          "in": 29,
+          "out": 29
         }
       },
       "stage": "enrich"
@@ -972,17 +873,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 16
+          "out": 12
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 12
+          "out": 9
         },
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 11
+          "out": 9
         }
       },
       "stage": "queue"
@@ -991,21 +892,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 16,
-          "out": 16
+          "out": 12
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 12,
-          "out": 12
+          "out": 9
         },
         "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 2
           },
-          "in": 12,
-          "out": 11
+          "in": 11,
+          "out": 9
         }
       },
       "stage": "review"
