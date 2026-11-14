@@ -5,15 +5,21 @@
     "ai-engineering": {
       "dedupe": {
         "already_ranked": 15,
-        "dismissed": 4,
-        "seen": 7
+        "dismissed": 5,
+        "seen": 5
+      },
+      "inbox": {
+        "expired": 4
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 17,
+        "already_ranked": 16,
         "dismissed": 4,
-        "seen": 4
+        "seen": 3
+      },
+      "inbox": {
+        "expired": 3
       }
     },
     "web-products": {
@@ -26,7 +32,7 @@
         "seen": 1
       },
       "inbox": {
-        "expired": 1
+        "expired": 2
       }
     }
   },
@@ -49,16 +55,16 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 133,
-      "in_window": 133,
+      "collected": 136,
+      "in_window": 136,
       "kept": 0,
-      "new": 107
+      "new": 111
     },
     "tooling": {
-      "collected": 135,
-      "in_window": 135,
+      "collected": 136,
+      "in_window": 136,
       "kept": 0,
-      "new": 110
+      "new": 113
     },
     "web-products": {
       "collected": 188,
@@ -68,119 +74,115 @@
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
-  "pending_count": 19,
+  "pending_count": 10,
   "recent_events": [
     {
       "reason": "already_ranked",
       "title": "A New Community For In-House UX People",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.811043+00:00",
+      "ts": "2026-11-14T23:39:08.729218+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Vesperlightspirit/PokeMMO-Atlas-AIO-Soft",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.811038+00:00",
+      "ts": "2026-11-14T23:39:08.729210+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Vespermagnet/jet-reports-skill-rpocket",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.811030+00:00",
+      "ts": "2026-11-14T23:39:08.729202+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "BenjiNgei/real-time-operations-intelligence-accelerator",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.811024+00:00",
+      "ts": "2026-11-14T23:39:08.729193+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Chip stocks get slaughtered as Wall Street in worst post-midterm day since 1896",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.811018+00:00",
+      "ts": "2026-11-14T23:39:08.729174+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Global stocks tumble as AI panic grips markets after Democrats' midterm success",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.811011+00:00",
+      "ts": "2026-11-14T23:39:08.729166+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "The AI sell-off compared to well-known stock market crashes",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.811005+00:00",
+      "ts": "2026-11-14T23:39:08.729158+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "$2.5T has been wiped from US stocks",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.810999+00:00",
+      "ts": "2026-11-14T23:39:08.729150+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Lemmings CSS Animation",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.810993+00:00",
+      "ts": "2026-11-14T23:39:08.729141+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Need for Speed Underground 2 online in the browser",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.810985+00:00",
+      "ts": "2026-11-14T23:39:08.729130+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.810905+00:00",
+      "ts": "2026-11-14T23:39:08.729040+00:00",
       "verdict": "drop"
     },
     {
       "reason": "dismissed",
       "title": "Analyze your Stripe data directly with your agent",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.810887+00:00",
+      "ts": "2026-11-14T23:39:08.729019+00:00",
       "verdict": "drop"
     },
     {
       "reason": "dismissed",
       "title": "Hairy election margins map",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.810881+00:00",
+      "ts": "2026-11-14T23:39:08.729011+00:00",
       "verdict": "drop"
     },
     {
       "reason": "dismissed",
       "title": "Swings in Texas over the years",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.810875+00:00",
+      "ts": "2026-11-14T23:39:08.729003+00:00",
       "verdict": "drop"
     },
     {
       "reason": "dismissed",
       "title": "Release Notes for Safari Technology Preview 256",
       "topic": "web-products",
-      "ts": "2026-11-14T17:41:37.810868+00:00",
+      "ts": "2026-11-14T23:39:08.728994+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-11-06T23:57:42.539221+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-11-07T05:29:38.520383+00:00"
@@ -272,18 +274,22 @@
     {
       "kept": 0,
       "ts": "2026-11-14T17:41:03.179611+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-14T23:38:35.644755+00:00"
     }
   ],
-  "streak": 386,
+  "streak": 387,
   "topics": [
     {
-      "collected": 133,
+      "collected": 136,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 135,
+      "collected": 136,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
@@ -295,5 +301,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-14T17:41:03.179611+00:00"
+  "updated_at": "2026-11-14T23:38:35.644755+00:00"
 }
