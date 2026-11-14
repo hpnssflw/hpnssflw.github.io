@@ -4,35 +4,26 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 18,
+        "already_ranked": 17,
         "dismissed": 7,
-        "seen": 10
-      },
-      "inbox": {
-        "expired": 4
+        "seen": 9
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 24,
-        "dismissed": 7,
+        "already_ranked": 22,
+        "dismissed": 6,
         "seen": 4
-      },
-      "inbox": {
-        "expired": 3
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 135
+        "outside_window": 136
       },
       "dedupe": {
-        "already_ranked": 14,
-        "dismissed": 6,
+        "already_ranked": 12,
+        "dismissed": 5,
         "seen": 3
-      },
-      "inbox": {
-        "expired": 2
       }
     }
   },
@@ -55,22 +46,22 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 145,
-      "in_window": 145,
+      "collected": 141,
+      "in_window": 141,
       "kept": 0,
-      "new": 110
+      "new": 108
     },
     "tooling": {
-      "collected": 137,
-      "in_window": 137,
+      "collected": 136,
+      "in_window": 136,
       "kept": 0,
-      "new": 102
+      "new": 104
     },
     "web-products": {
       "collected": 188,
-      "in_window": 53,
+      "in_window": 52,
       "kept": 0,
-      "new": 30
+      "new": 32
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
@@ -78,115 +69,111 @@
   "recent_events": [
     {
       "reason": "already_ranked",
-      "title": "Search Central Live in Zurich is back!",
-      "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168223+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
       "title": "A New Community For In-House UX People",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168218+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Multi-Column Different-Speed Scrolling",
-      "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168212+00:00",
+      "ts": "2026-11-14T00:41:02.022828+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Data Access Testing With @testcontainers",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168204+00:00",
+      "ts": "2026-11-14T00:41:02.022816+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Vesperlightspirit/PokeMMO-Atlas-AIO-Soft",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168198+00:00",
+      "ts": "2026-11-14T00:41:02.022804+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Vespermagnet/jet-reports-skill-rpocket",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168193+00:00",
+      "ts": "2026-11-14T00:41:02.022792+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "BenjiNgei/real-time-operations-intelligence-accelerator",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168187+00:00",
+      "ts": "2026-11-14T00:41:02.022780+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Chip stocks get slaughtered as Wall Street in worst post-midterm day since 1896",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168181+00:00",
+      "ts": "2026-11-14T00:41:02.022767+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Global stocks tumble as AI panic grips markets after Democrats' midterm success",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168175+00:00",
+      "ts": "2026-11-14T00:41:02.022755+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "AI stocks slide as Texas governor result raises data center risks",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168169+00:00",
+      "ts": "2026-11-14T00:41:02.022742+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "The AI sell-off compared to well-known stock market crashes",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168163+00:00",
+      "ts": "2026-11-14T00:41:02.022730+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "$2.5T has been wiped from US stocks",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168157+00:00",
+      "ts": "2026-11-14T00:41:02.022717+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Lemmings CSS Animation",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168151+00:00",
+      "ts": "2026-11-14T00:41:02.022699+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Need for Speed Underground 2 online in the browser",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168143+00:00",
+      "ts": "2026-11-14T00:41:02.022683+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-13T19:15:30.168063+00:00",
+      "ts": "2026-11-14T00:41:02.022548+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "Swings in Texas over the years",
+      "topic": "web-products",
+      "ts": "2026-11-14T00:41:02.022535+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "seen",
+      "title": "Text.js: Build full-stack React apps that render inside console.log",
+      "topic": "web-products",
+      "ts": "2026-11-14T00:41:02.022522+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-11-06T00:45:56.353156+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-11-06T11:50:12.640883+00:00"
@@ -278,18 +265,22 @@
     {
       "kept": 0,
       "ts": "2026-11-13T19:14:38.722101+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-14T00:40:27.123312+00:00"
     }
   ],
-  "streak": 383,
+  "streak": 384,
   "topics": [
     {
-      "collected": 145,
+      "collected": 141,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 137,
+      "collected": 136,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
@@ -301,5 +292,5 @@
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-13T19:14:38.722101+00:00"
+  "updated_at": "2026-11-14T00:40:27.123312+00:00"
 }
