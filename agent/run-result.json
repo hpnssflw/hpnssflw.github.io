@@ -338,21 +338,10 @@
     "by_topic": {
       "ai-engineering": 8,
       "tooling": 6,
-      "web-products": 6
+      "web-products": 5
     },
-    "count": 20,
+    "count": 19,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-07T14:41:22.844434+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "A FlowingData post highlighting New York Times charts that track shifts in Texas counties over time, using a multi-line chart for each county, with all lines moving sharply left at the bottom.",
-        "title": "Swings in Texas over the years",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/11/06/swings-in-texas-over-the-years/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-07T19:53:44.909976+00:00",
@@ -565,8 +554,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-14T11:13:44.140018+00:00",
-    "id": "2026-11-14T1113Z",
+    "at": "2026-11-14T17:41:03.179611+00:00",
+    "id": "2026-11-14T1741Z",
     "mode": "real",
     "offline": false
   },
@@ -577,18 +566,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 139,
-          "out": 139
+          "in": 133,
+          "out": 133
         },
         "tooling": {
           "drops": {},
-          "in": 138,
-          "out": 138
+          "in": 135,
+          "out": 135
         },
         "web-products": {
           "drops": {},
-          "in": 187,
-          "out": 187
+          "in": 188,
+          "out": 188
         }
       },
       "stage": "collect"
@@ -598,19 +587,19 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 139,
-          "out": 139
+          "in": 133,
+          "out": 133
         },
         "tooling": {
           "drops": {},
-          "in": 138,
-          "out": 138
+          "in": 135,
+          "out": 135
         },
         "web-products": {
           "drops": {
-            "outside_window": 136
+            "outside_window": 137
           },
-          "in": 187,
+          "in": 188,
           "out": 51
         }
       },
@@ -621,24 +610,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 6,
-            "seen": 8
+            "dismissed": 4,
+            "seen": 7
           },
-          "in": 139,
-          "out": 125
+          "in": 133,
+          "out": 122
         },
         "tooling": {
           "drops": {
-            "dismissed": 6,
+            "dismissed": 4,
             "seen": 4
           },
-          "in": 138,
-          "out": 128
+          "in": 135,
+          "out": 127
         },
         "web-products": {
           "drops": {
-            "dismissed": 5,
-            "seen": 2
+            "dismissed": 6,
+            "seen": 1
           },
           "in": 51,
           "out": 44
@@ -651,24 +640,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 16
+            "already_ranked": 15
           },
-          "in": 125,
-          "out": 109
+          "in": 122,
+          "out": 107
         },
         "tooling": {
           "drops": {
-            "already_ranked": 20
+            "already_ranked": 17
           },
-          "in": 128,
-          "out": 108
+          "in": 127,
+          "out": 110
         },
         "web-products": {
           "drops": {
-            "already_ranked": 11
+            "already_ranked": 10
           },
           "in": 44,
-          "out": 33
+          "out": 34
         }
       },
       "stage": "cache"
@@ -678,18 +667,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 105,
-          "out": 105
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
-          "in": 97,
-          "out": 97
+          "in": 100,
+          "out": 100
         },
         "web-products": {
           "drops": {},
-          "in": 33,
-          "out": 33
+          "in": 34,
+          "out": 34
         }
       },
       "stage": "enrich"
@@ -773,7 +762,7 @@
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 6
+          "out": 5
         }
       },
       "stage": "queue"
@@ -792,9 +781,11 @@
           "out": 6
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 6,
-          "out": 6
+          "out": 5
         }
       },
       "stage": "review"
