@@ -4,35 +4,26 @@
   "drops": {
     "ai-engineering": {
       "dedupe": {
-        "already_ranked": 15,
-        "dismissed": 5,
+        "already_ranked": 12,
+        "dismissed": 4,
         "seen": 5
-      },
-      "inbox": {
-        "expired": 4
       }
     },
     "tooling": {
       "dedupe": {
-        "already_ranked": 16,
-        "dismissed": 4,
+        "already_ranked": 15,
+        "dismissed": 3,
         "seen": 3
-      },
-      "inbox": {
-        "expired": 3
       }
     },
     "web-products": {
       "date_guard": {
-        "outside_window": 137
+        "outside_window": 139
       },
       "dedupe": {
-        "already_ranked": 10,
-        "dismissed": 6,
+        "already_ranked": 7,
+        "dismissed": 4,
         "seen": 1
-      },
-      "inbox": {
-        "expired": 2
       }
     }
   },
@@ -55,22 +46,22 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 136,
-      "in_window": 136,
+      "collected": 130,
+      "in_window": 130,
+      "kept": 0,
+      "new": 109
+    },
+    "tooling": {
+      "collected": 132,
+      "in_window": 132,
       "kept": 0,
       "new": 111
     },
-    "tooling": {
-      "collected": 136,
-      "in_window": 136,
-      "kept": 0,
-      "new": 113
-    },
     "web-products": {
-      "collected": 188,
-      "in_window": 51,
+      "collected": 184,
+      "in_window": 45,
       "kept": 0,
-      "new": 34
+      "new": 33
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
@@ -80,113 +71,109 @@
       "reason": "already_ranked",
       "title": "A New Community For In-House UX People",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729218+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Vesperlightspirit/PokeMMO-Atlas-AIO-Soft",
-      "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729210+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Vespermagnet/jet-reports-skill-rpocket",
-      "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729202+00:00",
+      "ts": "2026-11-15T04:57:32.557583+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "BenjiNgei/real-time-operations-intelligence-accelerator",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729193+00:00",
+      "ts": "2026-11-15T04:57:32.557572+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Chip stocks get slaughtered as Wall Street in worst post-midterm day since 1896",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729174+00:00",
+      "ts": "2026-11-15T04:57:32.557561+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Global stocks tumble as AI panic grips markets after Democrats' midterm success",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729166+00:00",
+      "ts": "2026-11-15T04:57:32.557549+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "The AI sell-off compared to well-known stock market crashes",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729158+00:00",
+      "ts": "2026-11-15T04:57:32.557538+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "$2.5T has been wiped from US stocks",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729150+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "already_ranked",
-      "title": "Lemmings CSS Animation",
-      "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729141+00:00",
+      "ts": "2026-11-15T04:57:32.557527+00:00",
       "verdict": "drop"
     },
     {
       "reason": "already_ranked",
       "title": "Need for Speed Underground 2 online in the browser",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729130+00:00",
+      "ts": "2026-11-15T04:57:32.557510+00:00",
       "verdict": "drop"
     },
     {
       "reason": "seen",
       "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729040+00:00",
-      "verdict": "drop"
-    },
-    {
-      "reason": "dismissed",
-      "title": "Analyze your Stripe data directly with your agent",
-      "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729019+00:00",
+      "ts": "2026-11-15T04:57:32.557400+00:00",
       "verdict": "drop"
     },
     {
       "reason": "dismissed",
       "title": "Hairy election margins map",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729011+00:00",
+      "ts": "2026-11-15T04:57:32.557376+00:00",
       "verdict": "drop"
     },
     {
       "reason": "dismissed",
       "title": "Swings in Texas over the years",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.729003+00:00",
+      "ts": "2026-11-15T04:57:32.557364+00:00",
       "verdict": "drop"
     },
     {
       "reason": "dismissed",
-      "title": "Release Notes for Safari Technology Preview 256",
+      "title": "Making Immersive LLM Chat Experiences More Accessible",
       "topic": "web-products",
-      "ts": "2026-11-14T23:39:08.728994+00:00",
+      "ts": "2026-11-15T04:57:32.557347+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "dismissed",
+      "title": "true or false in CSS",
+      "topic": "web-products",
+      "ts": "2026-11-15T04:57:32.557328+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "outside_window",
+      "title": "OUSD is now the default stablecoin on Stripe",
+      "topic": "web-products",
+      "ts": "2026-11-15T04:57:32.557192+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "outside_window",
+      "title": "Why I tried to kill token billing (and why we kept it)",
+      "topic": "web-products",
+      "ts": "2026-11-15T04:57:32.557181+00:00",
+      "verdict": "drop"
+    },
+    {
+      "reason": "outside_window",
+      "title": "The \u201calien\u201d economics of AI monetization",
+      "topic": "web-products",
+      "ts": "2026-11-15T04:57:32.557171+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-11-07T05:29:38.520383+00:00"
-    },
     {
       "kept": 1,
       "ts": "2026-11-07T14:41:22.844434+00:00"
@@ -278,28 +265,32 @@
     {
       "kept": 0,
       "ts": "2026-11-14T23:38:35.644755+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-15T04:57:04.792872+00:00"
     }
   ],
-  "streak": 387,
+  "streak": 388,
   "topics": [
     {
-      "collected": 136,
+      "collected": 130,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 136,
+      "collected": 132,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 188,
+      "collected": 184,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-14T23:38:35.644755+00:00"
+  "updated_at": "2026-11-15T04:57:04.792872+00:00"
 }
