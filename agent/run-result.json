@@ -335,117 +335,13 @@
     "slug": "tony"
   },
   "queue": {
-    "by_topic": {
-      "ai-engineering": 4,
-      "tooling": 3,
-      "web-products": 2
-    },
-    "count": 9,
-    "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 9,
-        "source": "hn",
-        "summary": "llama-modchip: ggml/llama.cpp kernel patches, quantization transcoders and runtime tools that run sparse MoE checkpoints entirely in system RAM with zero GPUs. It shrinks 284B DeepSeek-V4-Flash to 56.56 GiB at 1.71 bpw so it fits 64 GB with a 256K KV cache, reporting up to ~44 tok/s prefill and 111 tok/s on 8-channel workstations.",
-        "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/synchopate/llama-modchip"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "An essay arguing agent memory needs an OpenTelemetry-style shared spec, touring today's incompatible formats (AGENTS.md, .cursor/rules, /memories, GitHub-side facts, memory MCP JSONL graphs) and existing proposals. Author builds LoreKit, which he says is one proposal among several, not a solution.",
-        "title": "Agent memory needs its OpenTelemetry moment",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://www.lorekit.io/blog/open-agent-memory-format"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "WebsiteBench: a benchmark where agents explore a live site in a browser and reverse-engineer a full-stack clone. 70 websites, 46,916 hidden test cases (302–2,016 each); a case passes only if functional checks pass and every visual checkpoint hits 0.99 SSIM. Runnable via pip package and harbor; code Apache-2.0.",
-        "title": "TIGER-AI-Lab/WebsiteBench",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://github.com/TIGER-AI-Lab/WebsiteBench"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 7,
-        "source": "hn",
-        "summary": "A reference explainer of the Model Context Protocol: hosts, servers and models, with servers advertising capabilities the app relays to the model. Notes MCP is JSON-RPC over stdin/stdout or one HTTP endpoint (not REST), plus methods, capability negotiation, transports and auth, with spec and tools links.",
-        "title": "MCP Explained",
-        "topic": "ai-engineering",
-        "topic_name": "AI Engineering",
-        "url": "https://mcp-explained.com/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "A Hacker News discussion of how Claude Code's \"Don't Ask Again\" setting exposed passwords in 1,122 public GitHub files.",
-        "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 8,
-        "source": "hn",
-        "summary": "GitHub blog post detailing its new Git storage architecture, which decouples storage from compute and only orders reference updates, letting it test 5,000 concurrent agents and 7,200 pushes per second to one repo with low-latency reads.",
-        "title": "GitHub's new Git storage architecture",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 8,
-        "source": "github",
-        "summary": "Finallyshell: an open-source SSH client in Go that recreates FinalShell's layout with vertical, reorderable session tabs, libghostty-vt terminal engine, and passwords stored in the system keychain instead of a file.",
-        "title": "TooonyChen/finallyshell",
-        "topic": "tooling",
-        "topic_name": "Tooling",
-        "url": "https://github.com/TooonyChen/finallyshell"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "A Nightingale article presents a classroom/workshop exercise on equitable data visualization, using Alexandra Bell’s “Counternarratives” to show how titles and editorial framing shape what readers take from charts; it starts with a non-chart warm-up.",
-        "title": "Same Chart, Many Titles: A Classroom Exercise in Framing Data",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://nightingaledvs.com/same-chart-many-titles/"
-      },
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T20:12:56.257796+00:00",
-        "score": 6,
-        "source": "hn",
-        "summary": "Text.js is a framework for building full-stack React apps that render inside console.log, with React 19, App Router routes/layouts, keyboard input, server rendering, and a custom reconciler/Yoga/RLE pipeline that emits only changed frames as console.log calls.",
-        "title": "Text.js: Build full-stack React apps that render inside console.log",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://textjs.org/"
-      }
-    ]
+    "by_topic": {},
+    "count": 0,
+    "items": []
   },
   "run": {
-    "at": "2026-11-15T15:22:41.547346+00:00",
-    "id": "2026-11-15T1522Z",
+    "at": "2026-11-15T20:49:58.781979+00:00",
+    "id": "2026-11-15T2049Z",
     "mode": "real",
     "offline": false
   },
@@ -456,18 +352,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 133,
-          "out": 133
+          "in": 142,
+          "out": 142
         },
         "tooling": {
           "drops": {},
-          "in": 132,
-          "out": 132
+          "in": 156,
+          "out": 156
         },
         "web-products": {
           "drops": {},
-          "in": 185,
-          "out": 185
+          "in": 188,
+          "out": 188
         }
       },
       "stage": "collect"
@@ -477,20 +373,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 133,
-          "out": 133
+          "in": 142,
+          "out": 142
         },
         "tooling": {
           "drops": {},
-          "in": 132,
-          "out": 132
+          "in": 156,
+          "out": 156
         },
         "web-products": {
           "drops": {
-            "outside_window": 140
+            "outside_window": 141
           },
-          "in": 185,
-          "out": 45
+          "in": 188,
+          "out": 47
         }
       },
       "stage": "window"
@@ -500,27 +396,25 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 4,
-            "seen": 5
+            "dismissed": 5,
+            "seen": 1
           },
-          "in": 133,
-          "out": 124
+          "in": 142,
+          "out": 136
         },
         "tooling": {
           "drops": {
-            "dismissed": 1,
-            "seen": 3
+            "dismissed": 4
           },
-          "in": 132,
-          "out": 128
+          "in": 156,
+          "out": 152
         },
         "web-products": {
           "drops": {
-            "dismissed": 3,
-            "seen": 1
+            "dismissed": 3
           },
-          "in": 45,
-          "out": 41
+          "in": 47,
+          "out": 44
         }
       },
       "stage": "dedupe"
@@ -530,24 +424,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 11
+            "already_ranked": 9
           },
-          "in": 124,
-          "out": 113
+          "in": 136,
+          "out": 127
         },
         "tooling": {
           "drops": {
             "already_ranked": 13
           },
-          "in": 128,
-          "out": 115
+          "in": 152,
+          "out": 139
         },
         "web-products": {
           "drops": {
             "already_ranked": 7
           },
-          "in": 41,
-          "out": 34
+          "in": 44,
+          "out": 37
         }
       },
       "stage": "cache"
@@ -557,18 +451,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 110,
-          "out": 110
+          "in": 125,
+          "out": 125
         },
         "tooling": {
           "drops": {},
-          "in": 110,
-          "out": 110
+          "in": 135,
+          "out": 135
         },
         "web-products": {
           "drops": {},
-          "in": 34,
-          "out": 34
+          "in": 37,
+          "out": 37
         }
       },
       "stage": "enrich"
@@ -642,17 +536,17 @@
         "ai-engineering": {
           "drops": {},
           "in": 0,
-          "out": 4
+          "out": 0
         },
         "tooling": {
           "drops": {},
           "in": 0,
-          "out": 3
+          "out": 0
         },
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 2
+          "out": 0
         }
       },
       "stage": "queue"
@@ -661,21 +555,25 @@
       "group": "approval",
       "scopes": {
         "ai-engineering": {
-          "drops": {},
+          "drops": {
+            "expired": 4
+          },
           "in": 4,
-          "out": 4
+          "out": 0
         },
         "tooling": {
-          "drops": {},
+          "drops": {
+            "expired": 3
+          },
           "in": 3,
-          "out": 3
+          "out": 0
         },
         "web-products": {
           "drops": {
-            "expired": 1
+            "expired": 2
           },
-          "in": 3,
-          "out": 2
+          "in": 2,
+          "out": 0
         }
       },
       "stage": "review"
