@@ -338,21 +338,10 @@
     "by_topic": {
       "ai-engineering": 4,
       "tooling": 3,
-      "web-products": 3
+      "web-products": 2
     },
-    "count": 10,
+    "count": 9,
     "items": [
-      {
-        "decision": null,
-        "pending_since": "2026-11-08T14:46:38.327802+00:00",
-        "score": 7,
-        "source": "rss",
-        "summary": "A FlowingData post noting that the New York Times' election Needle is live for the 2026 midterms, showing each party's chances of winning Senate and House control plus views for individual races.",
-        "title": "Needle of uncertainty is live for Midterms 2026",
-        "topic": "web-products",
-        "topic_name": "Web Products",
-        "url": "https://flowingdata.com/2026/11/03/needle-of-uncertainty-is-live-for-midterms-2026/"
-      },
       {
         "decision": null,
         "pending_since": "2026-11-08T20:12:56.257796+00:00",
@@ -455,8 +444,8 @@
     ]
   },
   "run": {
-    "at": "2026-11-15T04:57:04.792872+00:00",
-    "id": "2026-11-15T0457Z",
+    "at": "2026-11-15T15:22:41.547346+00:00",
+    "id": "2026-11-15T1522Z",
     "mode": "real",
     "offline": false
   },
@@ -467,8 +456,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 130,
-          "out": 130
+          "in": 133,
+          "out": 133
         },
         "tooling": {
           "drops": {},
@@ -477,8 +466,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 184,
-          "out": 184
+          "in": 185,
+          "out": 185
         }
       },
       "stage": "collect"
@@ -488,8 +477,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 130,
-          "out": 130
+          "in": 133,
+          "out": 133
         },
         "tooling": {
           "drops": {},
@@ -498,9 +487,9 @@
         },
         "web-products": {
           "drops": {
-            "outside_window": 139
+            "outside_window": 140
           },
-          "in": 184,
+          "in": 185,
           "out": 45
         }
       },
@@ -514,24 +503,24 @@
             "dismissed": 4,
             "seen": 5
           },
-          "in": 130,
-          "out": 121
+          "in": 133,
+          "out": 124
         },
         "tooling": {
           "drops": {
-            "dismissed": 3,
+            "dismissed": 1,
             "seen": 3
           },
           "in": 132,
-          "out": 126
+          "out": 128
         },
         "web-products": {
           "drops": {
-            "dismissed": 4,
+            "dismissed": 3,
             "seen": 1
           },
           "in": 45,
-          "out": 40
+          "out": 41
         }
       },
       "stage": "dedupe"
@@ -541,24 +530,24 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "already_ranked": 12
+            "already_ranked": 11
           },
-          "in": 121,
-          "out": 109
+          "in": 124,
+          "out": 113
         },
         "tooling": {
           "drops": {
-            "already_ranked": 15
+            "already_ranked": 13
           },
-          "in": 126,
-          "out": 111
+          "in": 128,
+          "out": 115
         },
         "web-products": {
           "drops": {
             "already_ranked": 7
           },
-          "in": 40,
-          "out": 33
+          "in": 41,
+          "out": 34
         }
       },
       "stage": "cache"
@@ -568,18 +557,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 106,
-          "out": 106
+          "in": 110,
+          "out": 110
         },
         "tooling": {
           "drops": {},
-          "in": 105,
-          "out": 105
+          "in": 110,
+          "out": 110
         },
         "web-products": {
           "drops": {},
-          "in": 33,
-          "out": 33
+          "in": 34,
+          "out": 34
         }
       },
       "stage": "enrich"
@@ -663,7 +652,7 @@
         "web-products": {
           "drops": {},
           "in": 0,
-          "out": 3
+          "out": 2
         }
       },
       "stage": "queue"
@@ -682,9 +671,11 @@
           "out": 3
         },
         "web-products": {
-          "drops": {},
+          "drops": {
+            "expired": 1
+          },
           "in": 3,
-          "out": 3
+          "out": 2
         }
       },
       "stage": "review"
