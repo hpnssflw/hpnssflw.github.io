@@ -340,8 +340,8 @@
     "items": []
   },
   "run": {
-    "at": "2026-11-17T23:20:53.600051+00:00",
-    "id": "2026-11-17T2320Z",
+    "at": "2026-11-18T06:00:25.555635+00:00",
+    "id": "2026-11-18T0600Z",
     "mode": "real",
     "offline": false
   },
@@ -352,18 +352,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 153,
-          "out": 153
+          "in": 81,
+          "out": 81
         },
         "tooling": {
           "drops": {},
-          "in": 161,
-          "out": 161
+          "in": 160,
+          "out": 160
         },
         "web-products": {
           "drops": {},
-          "in": 186,
-          "out": 186
+          "in": 187,
+          "out": 187
         }
       },
       "stage": "collect"
@@ -373,20 +373,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 153,
-          "out": 153
+          "in": 81,
+          "out": 81
         },
         "tooling": {
           "drops": {},
-          "in": 161,
-          "out": 161
+          "in": 160,
+          "out": 160
         },
         "web-products": {
           "drops": {
             "outside_window": 135
           },
-          "in": 186,
-          "out": 51
+          "in": 187,
+          "out": 52
         }
       },
       "stage": "window"
@@ -396,21 +396,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "dismissed": 2,
-            "seen": 2
+            "dismissed": 1
           },
-          "in": 153,
-          "out": 149
+          "in": 81,
+          "out": 80
         },
         "tooling": {
           "drops": {},
-          "in": 161,
-          "out": 161
+          "in": 160,
+          "out": 160
         },
         "web-products": {
           "drops": {},
-          "in": 51,
-          "out": 51
+          "in": 52,
+          "out": 52
         }
       },
       "stage": "dedupe"
@@ -419,23 +418,21 @@
       "group": "processing",
       "scopes": {
         "ai-engineering": {
-          "drops": {
-            "already_ranked": 3
-          },
-          "in": 149,
-          "out": 146
+          "drops": {},
+          "in": 80,
+          "out": 80
         },
         "tooling": {
           "drops": {
-            "already_ranked": 4
+            "already_ranked": 3
           },
-          "in": 161,
+          "in": 160,
           "out": 157
         },
         "web-products": {
           "drops": {},
-          "in": 51,
-          "out": 51
+          "in": 52,
+          "out": 52
         }
       },
       "stage": "cache"
@@ -445,8 +442,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 146,
-          "out": 146
+          "in": 80,
+          "out": 80
         },
         "tooling": {
           "drops": {},
@@ -455,8 +452,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 51,
-          "out": 51
+          "in": 52,
+          "out": 52
         }
       },
       "stage": "enrich"
