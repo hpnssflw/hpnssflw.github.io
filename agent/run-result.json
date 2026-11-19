@@ -340,8 +340,8 @@
     "items": []
   },
   "run": {
-    "at": "2026-11-19T01:43:50.840123+00:00",
-    "id": "2026-11-19T0143Z",
+    "at": "2026-11-19T12:30:45.949103+00:00",
+    "id": "2026-11-19T1230Z",
     "mode": "real",
     "offline": false
   },
@@ -352,18 +352,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 152,
-          "out": 152
+          "in": 153,
+          "out": 153
         },
         "tooling": {
           "drops": {},
-          "in": 155,
-          "out": 155
+          "in": 158,
+          "out": 158
         },
         "web-products": {
           "drops": {},
-          "in": 186,
-          "out": 186
+          "in": 188,
+          "out": 188
         }
       },
       "stage": "collect"
@@ -373,20 +373,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 152,
-          "out": 152
+          "in": 153,
+          "out": 153
         },
         "tooling": {
           "drops": {},
-          "in": 155,
-          "out": 155
+          "in": 158,
+          "out": 158
         },
         "web-products": {
           "drops": {
             "outside_window": 130
           },
-          "in": 186,
-          "out": 56
+          "in": 188,
+          "out": 58
         }
       },
       "stage": "window"
@@ -396,20 +396,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "seen": 2
+            "seen": 3
           },
-          "in": 152,
+          "in": 153,
           "out": 150
         },
         "tooling": {
           "drops": {},
-          "in": 155,
-          "out": 155
+          "in": 158,
+          "out": 158
         },
         "web-products": {
           "drops": {},
-          "in": 56,
-          "out": 56
+          "in": 58,
+          "out": 58
         }
       },
       "stage": "dedupe"
@@ -424,13 +424,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 155,
-          "out": 155
+          "in": 158,
+          "out": 158
         },
         "web-products": {
           "drops": {},
-          "in": 56,
-          "out": 56
+          "in": 58,
+          "out": 58
         }
       },
       "stage": "cache"
@@ -445,13 +445,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 155,
-          "out": 155
+          "in": 158,
+          "out": 158
         },
         "web-products": {
           "drops": {},
-          "in": 56,
-          "out": 56
+          "in": 58,
+          "out": 58
         }
       },
       "stage": "enrich"
