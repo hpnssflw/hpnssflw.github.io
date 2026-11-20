@@ -340,8 +340,8 @@
     "items": []
   },
   "run": {
-    "at": "2026-11-19T22:54:42.042424+00:00",
-    "id": "2026-11-19T2254Z",
+    "at": "2026-11-20T05:50:28.448472+00:00",
+    "id": "2026-11-20T0550Z",
     "mode": "real",
     "offline": false
   },
@@ -352,8 +352,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 145,
-          "out": 145
+          "in": 144,
+          "out": 144
         },
         "tooling": {
           "drops": {},
@@ -373,8 +373,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 145,
-          "out": 145
+          "in": 144,
+          "out": 144
         },
         "tooling": {
           "drops": {},
@@ -396,9 +396,9 @@
       "scopes": {
         "ai-engineering": {
           "drops": {
-            "seen": 2
+            "seen": 1
           },
-          "in": 145,
+          "in": 144,
           "out": 143
         },
         "tooling": {
