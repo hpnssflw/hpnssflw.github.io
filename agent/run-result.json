@@ -340,8 +340,8 @@
     "items": []
   },
   "run": {
-    "at": "2026-11-21T21:27:27.921325+00:00",
-    "id": "2026-11-21T2127Z",
+    "at": "2026-11-22T05:15:56.511693+00:00",
+    "id": "2026-11-22T0515Z",
     "mode": "real",
     "offline": false
   },
@@ -352,18 +352,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 146,
-          "out": 146
+          "in": 132,
+          "out": 132
         },
         "tooling": {
           "drops": {},
-          "in": 164,
-          "out": 164
+          "in": 170,
+          "out": 170
         },
         "web-products": {
           "drops": {},
-          "in": 195,
-          "out": 195
+          "in": 199,
+          "out": 199
         }
       },
       "stage": "collect"
@@ -373,20 +373,20 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 146,
-          "out": 146
+          "in": 132,
+          "out": 132
         },
         "tooling": {
           "drops": {},
-          "in": 164,
-          "out": 164
+          "in": 170,
+          "out": 170
         },
         "web-products": {
           "drops": {
-            "outside_window": 132
+            "outside_window": 133
           },
-          "in": 195,
-          "out": 63
+          "in": 199,
+          "out": 66
         }
       },
       "stage": "window"
@@ -398,18 +398,18 @@
           "drops": {
             "seen": 1
           },
-          "in": 146,
-          "out": 145
+          "in": 132,
+          "out": 131
         },
         "tooling": {
           "drops": {},
-          "in": 164,
-          "out": 164
+          "in": 170,
+          "out": 170
         },
         "web-products": {
           "drops": {},
-          "in": 63,
-          "out": 63
+          "in": 66,
+          "out": 66
         }
       },
       "stage": "dedupe"
@@ -419,18 +419,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 145,
-          "out": 145
+          "in": 131,
+          "out": 131
         },
         "tooling": {
           "drops": {},
-          "in": 164,
-          "out": 164
+          "in": 170,
+          "out": 170
         },
         "web-products": {
           "drops": {},
-          "in": 63,
-          "out": 63
+          "in": 66,
+          "out": 66
         }
       },
       "stage": "cache"
@@ -440,18 +440,18 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 145,
-          "out": 145
+          "in": 131,
+          "out": 131
         },
         "tooling": {
           "drops": {},
-          "in": 164,
-          "out": 164
+          "in": 170,
+          "out": 170
         },
         "web-products": {
           "drops": {},
-          "in": 63,
-          "out": 63
+          "in": 66,
+          "out": 66
         }
       },
       "stage": "enrich"
