@@ -340,8 +340,8 @@
     "items": []
   },
   "run": {
-    "at": "2026-11-22T05:15:56.511693+00:00",
-    "id": "2026-11-22T0515Z",
+    "at": "2026-11-22T15:56:38.569282+00:00",
+    "id": "2026-11-22T1556Z",
     "mode": "real",
     "offline": false
   },
@@ -357,8 +357,8 @@
         },
         "tooling": {
           "drops": {},
-          "in": 170,
-          "out": 170
+          "in": 173,
+          "out": 173
         },
         "web-products": {
           "drops": {},
@@ -378,15 +378,15 @@
         },
         "tooling": {
           "drops": {},
-          "in": 170,
-          "out": 170
+          "in": 173,
+          "out": 173
         },
         "web-products": {
           "drops": {
-            "outside_window": 133
+            "outside_window": 134
           },
           "in": 199,
-          "out": 66
+          "out": 65
         }
       },
       "stage": "window"
@@ -402,14 +402,16 @@
           "out": 131
         },
         "tooling": {
-          "drops": {},
-          "in": 170,
-          "out": 170
+          "drops": {
+            "seen": 1
+          },
+          "in": 173,
+          "out": 172
         },
         "web-products": {
           "drops": {},
-          "in": 66,
-          "out": 66
+          "in": 65,
+          "out": 65
         }
       },
       "stage": "dedupe"
@@ -424,13 +426,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 170,
-          "out": 170
+          "in": 172,
+          "out": 172
         },
         "web-products": {
           "drops": {},
-          "in": 66,
-          "out": 66
+          "in": 65,
+          "out": 65
         }
       },
       "stage": "cache"
@@ -445,13 +447,13 @@
         },
         "tooling": {
           "drops": {},
-          "in": 170,
-          "out": 170
+          "in": 172,
+          "out": 172
         },
         "web-products": {
           "drops": {},
-          "in": 66,
-          "out": 66
+          "in": 65,
+          "out": 65
         }
       },
       "stage": "enrich"
