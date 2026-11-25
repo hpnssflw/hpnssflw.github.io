@@ -33,22 +33,22 @@
   ],
   "funnel": {
     "ai-engineering": {
-      "collected": 109,
-      "in_window": 109,
+      "collected": 87,
+      "in_window": 87,
       "kept": 0,
-      "new": 109
+      "new": 87
     },
     "tooling": {
-      "collected": 148,
-      "in_window": 148,
+      "collected": 132,
+      "in_window": 132,
       "kept": 0,
-      "new": 147
+      "new": 131
     },
     "web-products": {
-      "collected": 192,
-      "in_window": 61,
+      "collected": 189,
+      "in_window": 58,
       "kept": 0,
-      "new": 61
+      "new": 58
     }
   },
   "last_sent_at": "2026-10-14T05:57:17.734583+00:00",
@@ -58,113 +58,109 @@
       "reason": "outside_window",
       "title": "The \u201calien\u201d economics of AI monetization",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604225+00:00",
+      "ts": "2026-11-25T03:23:10.923174+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604215+00:00",
+      "ts": "2026-11-25T03:23:10.923168+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "New ways for fintechs to move money and expand globally",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604204+00:00",
+      "ts": "2026-11-25T03:23:10.923162+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Stripe survey: Four trends reshaping how SaaS platforms compete in the AI era",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604193+00:00",
+      "ts": "2026-11-25T03:23:10.923156+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Trends from Money20/20 2026: The rise of \u201chidden\u201d financial services",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604180+00:00",
+      "ts": "2026-11-25T03:23:10.923150+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "How the fastest-growing enterprises on Stripe scale globally",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604169+00:00",
+      "ts": "2026-11-25T03:23:10.923144+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604158+00:00",
+      "ts": "2026-11-25T03:23:10.923138+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Analyze your Stripe data directly with your agent",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604148+00:00",
+      "ts": "2026-11-25T03:23:10.923132+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Dicing an Onion, the Mathematically Optimal Way",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604137+00:00",
+      "ts": "2026-11-25T03:23:10.923127+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "What it\u2019s like to walk across Massachusetts",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604127+00:00",
+      "ts": "2026-11-25T03:23:10.923119+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "In pursuit of democracy",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604116+00:00",
+      "ts": "2026-11-25T03:23:10.923113+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Common Threads",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604106+00:00",
+      "ts": "2026-11-25T03:23:10.923107+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Sizing Chaos",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604095+00:00",
+      "ts": "2026-11-25T03:23:10.923101+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "Happy Map",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604085+00:00",
+      "ts": "2026-11-25T03:23:10.923095+00:00",
       "verdict": "drop"
     },
     {
       "reason": "outside_window",
       "title": "A Journey Through Infertility",
       "topic": "web-products",
-      "ts": "2026-11-24T19:21:35.604075+00:00",
+      "ts": "2026-11-25T03:23:10.923090+00:00",
       "verdict": "drop"
     }
   ],
   "run_history": [
-    {
-      "kept": 0,
-      "ts": "2026-11-15T15:22:41.547346+00:00"
-    },
     {
       "kept": 0,
       "ts": "2026-11-15T20:49:58.781979+00:00"
@@ -256,28 +252,32 @@
     {
       "kept": 0,
       "ts": "2026-11-24T19:20:59.094114+00:00"
+    },
+    {
+      "kept": 0,
+      "ts": "2026-11-25T03:22:36.630752+00:00"
     }
   ],
-  "streak": 412,
+  "streak": 413,
   "topics": [
     {
-      "collected": 109,
+      "collected": 87,
       "kept": 0,
       "name": "AI Engineering",
       "slug": "ai-engineering"
     },
     {
-      "collected": 148,
+      "collected": 132,
       "kept": 0,
       "name": "Tooling",
       "slug": "tooling"
     },
     {
-      "collected": 192,
+      "collected": 189,
       "kept": 0,
       "name": "Web Products",
       "slug": "web-products"
     }
   ],
-  "updated_at": "2026-11-24T19:20:59.094114+00:00"
+  "updated_at": "2026-11-25T03:22:36.630752+00:00"
 }
