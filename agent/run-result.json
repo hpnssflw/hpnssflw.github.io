@@ -340,8 +340,8 @@
     "items": []
   },
   "run": {
-    "at": "2026-11-27T23:54:43.740222+00:00",
-    "id": "2026-11-27T2354Z",
+    "at": "2026-11-28T06:27:08.834234+00:00",
+    "id": "2026-11-28T0627Z",
     "mode": "real",
     "offline": false
   },
@@ -352,8 +352,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 101,
-          "out": 101
+          "in": 105,
+          "out": 105
         },
         "tooling": {
           "drops": {},
@@ -362,8 +362,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 190,
-          "out": 190
+          "in": 191,
+          "out": 191
         }
       },
       "stage": "collect"
@@ -373,8 +373,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 101,
-          "out": 101
+          "in": 105,
+          "out": 105
         },
         "tooling": {
           "drops": {},
@@ -385,8 +385,8 @@
           "drops": {
             "outside_window": 133
           },
-          "in": 190,
-          "out": 57
+          "in": 191,
+          "out": 58
         }
       },
       "stage": "window"
@@ -398,8 +398,8 @@
           "drops": {
             "seen": 1
           },
-          "in": 101,
-          "out": 100
+          "in": 105,
+          "out": 104
         },
         "tooling": {
           "drops": {
@@ -410,8 +410,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 57,
-          "out": 57
+          "in": 58,
+          "out": 58
         }
       },
       "stage": "dedupe"
@@ -421,8 +421,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 100,
-          "out": 100
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
@@ -431,8 +431,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 57,
-          "out": 57
+          "in": 58,
+          "out": 58
         }
       },
       "stage": "cache"
@@ -442,8 +442,8 @@
       "scopes": {
         "ai-engineering": {
           "drops": {},
-          "in": 100,
-          "out": 100
+          "in": 104,
+          "out": 104
         },
         "tooling": {
           "drops": {},
@@ -452,8 +452,8 @@
         },
         "web-products": {
           "drops": {},
-          "in": 57,
-          "out": 57
+          "in": 58,
+          "out": 58
         }
       },
       "stage": "enrich"
